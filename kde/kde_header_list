@@ -247,6 +247,7 @@ kpreferencesmodule.h
 kpreviewwidgetbase.h
 kprintaction.h
 kprinter.h
+kdeprint/kpreloadobject.h
 kprocctrl.h
 kprocess.h
 kprocio.h
@@ -428,3 +429,5 @@ kio/uiserver.h
 kio/uiserver_stub.h
 netwm_def.h
 netwm.h
+
+
