@@ -15,7 +15,7 @@ while (<MAKEFILE>) {
 	if (/^libsmokeqt_la_SOURCES/)
 	{
 		$found = 1;
-		$makeFileData .= "libsmokeqt_la_SOURCES = xdata.cpp";
+		$makeFileData .= "libsmokeqt_la_SOURCES = smokedata.cpp";
 	}
 	$makeFileData .= $_ if (!$found);
 }
