@@ -43,14 +43,15 @@ foreach $filename (readdir(QT)) {
         && ( ! -d _ ) )                     # Not a symlink to a dir though
     {
         push(@headers, $entry)
-          if ( !defined $excludes{$filename} ); # Not excluded
+          if ( !defined $excludes{$filename} # Not excluded
+	      && $filename =~ /\.h/ ); # Not a backup file etc. Only headers.
     }
 }
 closedir QT;
 
 
 # Launch kalyptus
-system "perl kalyptus @ARGV -fsmoke --outputdir=$outdir @headers";
+system "perl kalyptus @ARGV -fsmoke --name=qt --outputdir=$outdir @headers";
 my $exit = $? >> 8;
 exit $exit if ($exit);
 
@@ -74,7 +75,7 @@ foreach $filename (readdir(OUT)) {
 closedir OUT;
 
 # Delete outdir
-system "rm -rf $outdir"
+system "rm -rf $outdir";
 
 # Update list of source files in $outdir/Makefile.am
 chdir $finaloutdir;
