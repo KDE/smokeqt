@@ -14,9 +14,17 @@ public:
     union StackItem; // defined below
     typedef StackItem* Stack;
 
+    enum EnumOperation {
+	EnumNew,
+	EnumDelete,
+	EnumFromLong,
+	EnumToLong
+    };
+
     typedef short Index;
     typedef void (*ClassFn)(Index method, void* obj, Stack args); // was Stack * (DF)
     typedef void* (*CastFn)(void* obj, Index from, Index to);
+    typedef void (*EnumFn)(EnumOperation, Index, void*&, long&);
 
     /**
      * Describe one class.
@@ -25,6 +33,7 @@ public:
 	const char *className;	// Name of the class
 	Index parents;		// Index into inheritanceList
 	ClassFn classFn;	// Calls any method in the class
+	EnumFn enumFn;		// Handles enum pointers
     };
 
     enum MethodFlags {
