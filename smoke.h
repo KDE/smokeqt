@@ -7,6 +7,8 @@
  *   Copyright (C) 2002, Ashley Winters <qaqortog@nwlink.com>
  */
 
+class SmokeBinding;
+
 class Smoke {
 public:
     union StackItem; // defined below
@@ -15,8 +17,6 @@ public:
     typedef short Index;
     typedef void (*ClassFn)(Index method, void* obj, Stack args); // was Stack * (DF)
     typedef void* (*CastFn)(void* obj, Index from, Index to);
-    typedef void (*DestructorCallbackFn)(Smoke*, Index classId, void* obj);
-    typedef bool (*CallMethodFn)(Smoke*, Index method, void* obj, Stack args, bool isAbstract);
 
     /**
      * Describe one class.
@@ -172,8 +172,7 @@ public:
     CastFn castFn;
 
     // Not passed to constructor
-    CallMethodFn callMethodFn;
-    DestructorCallbackFn destructorCallbackFn;
+    SmokeBinding *binding;
 
     /**
      * Constructor
@@ -197,13 +196,17 @@ public:
 		ambiguousMethodList(_ambiguousMethodList),
 		castFn(_castFn),
 
-		callMethodFn(0),
-		destructorCallbackFn(0)
+		binding(0)
 		{}
 
     inline void *cast(void *ptr, Index from, Index to) {
 	if(!castFn) return ptr;
 	return (*castFn)(ptr, from, to);
+    }
+
+    // return classname directly
+    inline const char *className(Index classId) {
+	return classes[classId].className;
     }
 
     inline int leg(Index a, Index b) {  // ala Perl's <=>
@@ -291,24 +294,17 @@ public:
 	Index idname = idMethodName(name);
 	return findMethod(idc, idname);
     }
+};
 
-    /**
-     * Called for each virtual method, allowing language binding to override
-     * the default method.
-     *
-     * Returns true when method has been overridden and its replacement
-     * called, false when original method should be called as normal.
-     */
-    inline bool callMethod(Index method, void* obj, Stack args, bool isAbstract = false) {
-	if(callMethodFn)
-	    return (*callMethodFn)(this, method, obj, args, isAbstract);
-	return false;
-    }
-
-    inline void destructorCallback(Index classId, void* obj) {
-	if(destructorCallbackFn)
-	    (*destructorCallbackFn)(this, classId, obj);
-    }
+class SmokeBinding {
+protected:
+    Smoke *smoke;
+public:
+    SmokeBinding(Smoke *s) : smoke(s) {}
+    virtual void deleted(Smoke::Index classId, void *obj) = 0;
+    virtual bool callMethod(Smoke::Index method, void *obj, Smoke::Stack args, bool isAbstract = false) = 0;
+    virtual char* className(Smoke::Index classId) = 0;
+    virtual ~SmokeBinding() {}
 };
 
 #endif
