@@ -51,6 +51,7 @@ my %excludes = (
     'qassistantclient.h' => 1,  # Part of assistant lib, not of qt
     'qsharedmemory.h' => 1, # "not part of the Qt API" they say
     'qwindowsstyle.h' => 1, # Qt windowsstlye, plugin
+    'qcompactstyle.h' => 1, # Qt windowsstlye, plugin
     'qmotifstyle.h' => 1,
     'qmotifplusstyle.h' => 1,
     'qsgistyle.h' => 1,
