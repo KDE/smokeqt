@@ -240,6 +240,7 @@ kpixmapio.h
 kpixmapprovider.h
 kpixmapsplitter.h
 kpluginselector.h
+kplugininfo.h
 kpopupmenu.h
 kpreferencesdialog.h
 kpreferencesmodule.h
