@@ -130,7 +130,6 @@ my %kdeexcludes = (
 	'kpropertiesdialog.h' => 1,
 	'krun.h' => 1,
 	'knotifydialog.h' => 1,
-	'kautoconfigdialog.h' => 1,
 	'ksockaddr.h' => 1
 );
 
