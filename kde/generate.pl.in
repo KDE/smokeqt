@@ -114,6 +114,7 @@ my %kdeexcludes = (
 	'kpropertiesdialog.h' => 1,
 	'knotifydialog.h' => 1,
 	'ksockaddr.h' => 1,
+	'knotifywidgetbase.h' => 1,
 );
 
 # Some systems have a QTDIR = KDEDIR = PREFIX
