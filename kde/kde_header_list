@@ -397,7 +397,6 @@ kio/davjob.h
 kio/defaultprogress.h
 kio/file.h
 kio/global.h
-kio/http.h
 kio/http_slave_defaults.h
 kio/ioslave_defaults.h
 kio/jobclasses.h
