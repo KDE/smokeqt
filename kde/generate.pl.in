@@ -8,6 +8,7 @@ my $kalyptusdir = "../../kalyptus";
 use File::Basename;
 use File::Copy qw|cp|;
 use File::Compare;
+use File::Find;
 use Cwd;
 
 my $here = getcwd;
@@ -71,7 +72,7 @@ my %excludes = (
 
 my %includes;
 open(HEADERS, $headerlistpath) or die "Couldn't open $headerlistpath: $!\n";
-map { chomp ; $includes{$_} = 1 } <HEADERS>;
+map { chomp ; $includes{$_} = 1 unless /^\s*#/ } <HEADERS>;
 close HEADERS;
 
 # Find out which header files we need to parse
@@ -80,7 +81,7 @@ my %kdeexcludes = (
 	'kxmlguifactory.h' => 1,
 	'kxmlguibuilder.h' => 1,
 	'kallocator.h' => 1,
-	'klibloader.h' => 1,
+#	'klibloader.h' => 1,
 	'kled.h' => 1,
 	'kicontheme.h' => 1,
 	'kglobal.h' => 1,
@@ -118,7 +119,7 @@ my %kdeexcludes = (
 
 my %kdeincludes;
 open(HEADERS, $kdeheaderlistpath) or die "Couldn't open $kdeheaderlistpath: $!\n";
-map { chomp ; $kdeincludes{$_} = 1 } <HEADERS>;
+map { chomp ; $kdeincludes{$_} = 1 unless /^\s*#/ } <HEADERS>;
 close HEADERS;
 
 # Can we compile the OpenGl module ?
@@ -159,20 +160,23 @@ closedir QT;
 
 my @kdeheaders = ();
 $kdeinc= '@kde_includes@';
-opendir (KDE, $kdeinc) or die "Couldn't find $kdeinc";
-foreach $filename (readdir(KDE)) {
-    $entry = $kdeinc."/".$filename;
-    if ( ( -e $entry or -l $entry )         # A real file or a symlink
-        && ( ! -d _ ) )                     # Not a symlink to a dir though
-    {
-        push(@kdeheaders, $entry)
-          if ( !defined $kdeexcludes{$filename} # Not excluded
-              && $kdeincludes{$filename}        # Known header
-	      && $filename =~ /\.h$/ ); # Not a backup file etc. Only headers.
-        undef $kdeincludes{$filename}
-    }
-}
-closedir KDE;
+-d $kdeinc or die "Couldn't process $kdeinc: $!\n";
+
+find(
+    {   wanted => sub {
+	    (-e || -l and !-d) and do {
+	        $f = substr($_, 1 + length $kdeinc);
+                push ( @kdeheaders, $_ )
+	    	  if( !defined $kdeexcludes{$f} # Not excluded
+	    	     && $kdeincludes{$f}        # Known header
+	    	     && /\.h$/);     # Not a backup file etc. Only headers.
+	    	undef $kdeincludes{$f}   
+	     };
+	},
+	follow => 1,
+	no_chdir => 1
+    }, $kdeinc
+ );
 
 # Launch kalyptus
 system "perl kalyptus @ARGV --globspace -fsmoke --name=qt $macros --no-cache --allow_k_dcop_accessors --outputdir=$outdir @headers @kdeheaders";
