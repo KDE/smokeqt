@@ -90,8 +90,7 @@ my %kdeexcludes = (
 	'kde_terminal_interface.h' => 1,
 	'kdirnotify_stub.h' => 1,
 
-#	These headers currently give problems	
-	'kicontheme.h' => 1,
+#	These headers currently give problems
 	'kscreensaver.h' => 1,
 	'kdirnotify_stub.h' => 1,
 	'kio/uiserver_stub.h' => 1,
