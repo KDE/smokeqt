@@ -43,7 +43,7 @@ public:
 	x[2].s_enum = x2;
 	x[3].s_enum = x3;
 	x[4].s_enum = x4;
-	if(qt_Smoke->binding->callMethod(4413, (void*)this, x)) return (QPixmap*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(4410, (void*)this, x)) return (QPixmap*)x[0].s_class;
 	return this->QIconFactory::createPixmap(x1, x2, x3, x4);
     }
     ~x_QIconFactory() { qt_Smoke->binding->deleted(157, (void*)this); }

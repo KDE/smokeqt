@@ -115,13 +115,13 @@ public:
     }
     virtual int majorVersion() const {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(4295, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(4292, (void*)this, x, true /*pure virtual*/);
 	return (int)x[0].s_int;
 	// ABSTRACT
     }
     virtual int minorVersion() const {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(4296, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(4293, (void*)this, x, true /*pure virtual*/);
 	return (int)x[0].s_int;
 	// ABSTRACT
     }
@@ -129,12 +129,12 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_int = x2;
-	if(qt_Smoke->binding->callMethod(4297, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(4294, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QHttpHeader::parseLine(x1, x2);
     }
     virtual QString toString() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(4293, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(4290, (void*)this, x)) {
 	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;

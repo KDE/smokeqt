@@ -150,7 +150,7 @@ public:
     }
     virtual QIODevice::Offset at() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(3006, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(3003, (void*)this, x)) {
 	    QIODevice::Offset *xptr = (QIODevice::Offset *)x[0].s_class;
 	    QIODevice::Offset xret(*xptr);
 	    delete xptr;
@@ -161,44 +161,44 @@ public:
     virtual bool at(QIODevice::Offset x1) {
 	Smoke::StackItem x[2];
 	x[1].s_ulong = x1;
-	if(qt_Smoke->binding->callMethod(3007, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(3004, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QFile::at(x1);
     }
     virtual bool atEnd() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(3008, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(3005, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QFile::atEnd();
     }
     virtual void close() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(3003, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(3000, (void*)this, x)) return;
 	this->QFile::close();
     }
     virtual void flush() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(3004, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(3001, (void*)this, x)) return;
 	this->QFile::flush();
     }
     virtual int getch() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(3014, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(3011, (void*)this, x)) return (int)x[0].s_int;
 	return this->QFile::getch();
     }
     virtual bool open(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(3001, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(2998, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QFile::open(x1);
     }
     virtual int putch(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(3015, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(3012, (void*)this, x)) return (int)x[0].s_int;
 	return this->QFile::putch(x1);
     }
     virtual QByteArray readAll() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(4369, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(4366, (void*)this, x)) {
 	    QByteArray *xptr = (QByteArray *)x[0].s_class;
 	    QByteArray xret(*xptr);
 	    delete xptr;
@@ -210,7 +210,7 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)x1;
 	x[2].s_long = x2;
-	if(qt_Smoke->binding->callMethod(3009, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(3006, (void*)this, x)) {
 	    Q_LONG *xptr = (Q_LONG *)x[0].s_class;
 	    Q_LONG xret(*xptr);
 	    delete xptr;
@@ -222,7 +222,7 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)x1;
 	x[2].s_long = x2;
-	if(qt_Smoke->binding->callMethod(3012, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(3009, (void*)this, x)) {
 	    Q_LONG *xptr = (Q_LONG *)x[0].s_class;
 	    Q_LONG xret(*xptr);
 	    delete xptr;
@@ -232,7 +232,7 @@ public:
     }
     virtual QIODevice::Offset size() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(3005, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(3002, (void*)this, x)) {
 	    QIODevice::Offset *xptr = (QIODevice::Offset *)x[0].s_class;
 	    QIODevice::Offset xret(*xptr);
 	    delete xptr;
@@ -243,14 +243,14 @@ public:
     virtual int ungetch(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(3016, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(3013, (void*)this, x)) return (int)x[0].s_int;
 	return this->QFile::ungetch(x1);
     }
     virtual Q_LONG writeBlock(const char* x1, Q_ULONG x2) {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)x1;
 	x[2].s_long = x2;
-	if(qt_Smoke->binding->callMethod(3010, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(3007, (void*)this, x)) {
 	    Q_LONG *xptr = (Q_LONG *)x[0].s_class;
 	    Q_LONG xret(*xptr);
 	    delete xptr;

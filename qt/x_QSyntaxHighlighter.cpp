@@ -51,7 +51,7 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_int = x2;
-	qt_Smoke->binding->callMethod(9868, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(9865, (void*)this, x, true /*pure virtual*/);
 	return (int)x[0].s_int;
 	// ABSTRACT
     }

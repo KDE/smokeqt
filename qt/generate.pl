@@ -60,7 +60,7 @@ my %excludes = (
 
 # List Qt headers, and exclude the ones listed above
 my @headers = ();
-$qtinc=$ENV{"QTDIR"} . "/include/qt";
+$qtinc=$ENV{"QTDIR"} . "/include";
 opendir (QT, $qtinc) or die "Couldn't find $qtinc";
 foreach $filename (readdir(QT)) {
     $entry = $qtinc."/".$filename;

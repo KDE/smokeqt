@@ -103,29 +103,29 @@ public:
     virtual void setName(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(9110, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9107, (void*)this, x)) return;
 	this->QSqlField::setName(x1);
     }
     virtual void setNull() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(9112, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9109, (void*)this, x)) return;
 	this->QSqlField::setNull();
     }
     virtual void setReadOnly(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(9114, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9111, (void*)this, x)) return;
 	this->QSqlField::setReadOnly(x1);
     }
     virtual void setValue(const QVariant& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(9108, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9105, (void*)this, x)) return;
 	this->QSqlField::setValue(x1);
     }
     virtual QVariant value() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(9109, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(9106, (void*)this, x)) {
 	    QVariant *xptr = (QVariant *)x[0].s_class;
 	    QVariant xret(*xptr);
 	    delete xptr;

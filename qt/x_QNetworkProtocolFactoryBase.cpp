@@ -21,7 +21,7 @@ public:
     }
     virtual QNetworkProtocol* createObject() {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(6629, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(6626, (void*)this, x, true /*pure virtual*/);
 	return (QNetworkProtocol*)x[0].s_class;
 	// ABSTRACT
     }

@@ -47,29 +47,29 @@ public:
     virtual void enableRewind(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(4384, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(4381, (void*)this, x)) return;
 	this->QIODeviceSource::enableRewind(x1);
     }
     virtual int readyToSend() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(4381, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(4378, (void*)this, x)) return (int)x[0].s_int;
 	return this->QIODeviceSource::readyToSend();
     }
     virtual void rewind() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(4385, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(4382, (void*)this, x)) return;
 	this->QIODeviceSource::rewind();
     }
     virtual bool rewindable() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(4383, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(4380, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QIODeviceSource::rewindable();
     }
     virtual void sendTo(QDataSink* x1, int x2) {
 	Smoke::StackItem x[3];
 	x[1].s_class = (void*)x1;
 	x[2].s_int = x2;
-	if(qt_Smoke->binding->callMethod(4382, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(4379, (void*)this, x)) return;
 	this->QIODeviceSource::sendTo(x1, x2);
     }
     ~x_QIODeviceSource() { qt_Smoke->binding->deleted(154, (void*)this); }

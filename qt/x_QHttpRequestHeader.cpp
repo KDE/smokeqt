@@ -95,24 +95,24 @@ public:
     }
     virtual int majorVersion() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(4311, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(4308, (void*)this, x)) return (int)x[0].s_int;
 	return this->QHttpRequestHeader::majorVersion();
     }
     virtual int minorVersion() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(4312, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(4309, (void*)this, x)) return (int)x[0].s_int;
 	return this->QHttpRequestHeader::minorVersion();
     }
     virtual bool parseLine(const QString& x1, int x2) {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_int = x2;
-	if(qt_Smoke->binding->callMethod(4315, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(4312, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QHttpRequestHeader::parseLine(x1, x2);
     }
     virtual QString toString() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(4313, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(4310, (void*)this, x)) {
 	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;

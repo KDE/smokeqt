@@ -24,7 +24,7 @@ public:
     virtual QByteArray encodedData(const char* x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(2825, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(2822, (void*)this, x)) {
 	    QByteArray *xptr = (QByteArray *)x[0].s_class;
 	    QByteArray xret(*xptr);
 	    delete xptr;
@@ -35,13 +35,13 @@ public:
     virtual const char* format(int x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(2823, (void*)this, x)) return (const char*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(2820, (void*)this, x)) return (const char*)x[0].s_class;
 	return this->QDropEvent::format(x1);
     }
     virtual bool provides(const char* x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(2826, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(2823, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QDropEvent::provides(x1);
     }
     ~x_QDragEnterEvent() { qt_Smoke->binding->deleted(94, (void*)this); }

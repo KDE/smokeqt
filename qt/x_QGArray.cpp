@@ -172,17 +172,17 @@ public:
     virtual void deleteData(QGArray::array_data* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(3668, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(3665, (void*)this, x)) return;
 	this->QGArray::deleteData(x1);
     }
     virtual void detach() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(3644, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(3641, (void*)this, x)) return;
 	this->QGArray::detach();
     }
     virtual QGArray::array_data* newData() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(3667, (void*)this, x)) return (QGArray::array_data*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(3664, (void*)this, x)) return (QGArray::array_data*)x[0].s_class;
 	return this->QGArray::newData();
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {

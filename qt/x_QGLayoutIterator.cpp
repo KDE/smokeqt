@@ -21,19 +21,19 @@ public:
     }
     virtual QLayoutItem* current() {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(3743, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(3740, (void*)this, x, true /*pure virtual*/);
 	return (QLayoutItem*)x[0].s_class;
 	// ABSTRACT
     }
     virtual QLayoutItem* next() {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(3742, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(3739, (void*)this, x, true /*pure virtual*/);
 	return (QLayoutItem*)x[0].s_class;
 	// ABSTRACT
     }
     virtual QLayoutItem* takeCurrent() {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(3744, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(3741, (void*)this, x, true /*pure virtual*/);
 	return (QLayoutItem*)x[0].s_class;
 	// ABSTRACT
     }

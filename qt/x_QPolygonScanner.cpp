@@ -62,7 +62,7 @@ public:
 	x[1].s_int = x1;
 	x[2].s_class = (void*)x2;
 	x[3].s_voidp = (void*)x3;
-	qt_Smoke->binding->callMethod(7289, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(7286, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }
