@@ -84,7 +84,7 @@ sub grab_qglobal_symbols
 	my $symbols = `$cmd`;
 	if( check_exit_status($?) )
 	{
-		while( $symbols =~/^#\s*define\s*(QT_NO_\S+)/gm )
+		while( $symbols =~/^#\s*define\s*(QT_\S+)/gm )
 		{
 			$qtdefs{$1} = 1;
 		}
