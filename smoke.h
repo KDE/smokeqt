@@ -12,6 +12,9 @@ class SmokeBinding;
 class Smoke {
 public:
     union StackItem; // defined below
+    /**
+     * A stack is an array of arguments, passed to a method when calling it.
+     */
     typedef StackItem* Stack;
 
     enum EnumOperation {
@@ -22,10 +25,16 @@ public:
     };
 
     typedef short Index;
-    typedef void (*ClassFn)(Index method, void* obj, Stack args); // was Stack * (DF)
+    typedef void (*ClassFn)(Index method, void* obj, Stack args);
     typedef void* (*CastFn)(void* obj, Index from, Index to);
     typedef void (*EnumFn)(EnumOperation, Index, void*&, long&);
 
+    enum ClassFlags {
+        cf_constructor = 0x01,  // has a constructor
+        cf_deepcopy = 0x02,     // has copy constructor
+        cf_virtual = 0x04,      // has virtual destructor
+        cf_undefined = 0x10     // defined elsewhere
+    };
     /**
      * Describe one class.
      */
@@ -34,6 +43,7 @@ public:
 	Index parents;		// Index into inheritanceList
 	ClassFn classFn;	// Calls any method in the class
 	EnumFn enumFn;		// Handles enum pointers
+        unsigned short flags;   // ClassFlags
     };
 
     enum MethodFlags {
