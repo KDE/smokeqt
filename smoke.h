@@ -223,6 +223,29 @@ public:
 	return (a > b) ? 1 : -1;
     }
 
+    inline Index idType(const char *t) {
+	if(!t) return 0;
+	Index imax = numTypes;
+	Index imin = 0;
+	Index icur = -1;
+	int icmp = -1;
+
+	while(imax >= imin) {
+	    icur = (imin + imax) / 2;
+	    if(icur > 0)
+		icmp = strcmp(types[icur].name, t);
+	    else
+		icmp = -1;
+	    if(!icmp) break;
+	    if(icmp > 0)
+		imax = icur - 1;
+	    else
+		imin = icur + 1;
+	}
+
+	return (!icmp) ? icur : 0;
+    }
+
     inline Index idClass(const char *c) {
 	if(!c) return 0;
 	Index imax = numClasses;
@@ -252,7 +275,6 @@ public:
 	Index imin = 0;
 	Index icur = -1;
 	int icmp = -1;
-
 	while(imax >= imin) {
 	    icur = (imin + imax) / 2;
 	    icmp = strcmp(methodNames[icur], m);
@@ -271,7 +293,6 @@ public:
 	Index imin = 0;
 	Index icur = -1;
 	int icmp = -1;
-
 	while(imax >= imin) {
 	    icur = (imin + imax) / 2;
 	    icmp = leg(methodMaps[icur].classId, c);
