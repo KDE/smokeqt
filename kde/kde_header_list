@@ -224,7 +224,6 @@ kmultipledrag.h
 kmultitabbar.h
 knotifyclient.h
 knotifydialog.h
-knotifywidgetbase.h
 knuminput.h
 knumvalidator.h
 kopenssl.h
