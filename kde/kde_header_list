@@ -196,6 +196,7 @@ klineeditdlg.h
 klineedit.h
 klistbox.h
 klistview.h
+klistviewsearchline.h
 klocale.h
 kmacroexpander.h
 kmainwindow.h
