@@ -139,7 +139,7 @@ sub perform_all_tests
 		$tests{$_}->[2] < $treshold and next;
 		($qtdefs{$_} || $qtundefs{$_}) and do
 		{
-			print "\rSkipping $_ (in qglobal.h)".( " " x (($nspaces-14) - length($_)) ).($qtundefs{$_}?"*Undefined*":" [Defined]").($opt_q?"":"\n");
+			print "\rSkipping $_ (in qglobal.h)".( " " x (($nspaces-16) - length($_)) ).($qtundefs{$_}?"*Undefined*":" [Defined]").($opt_q?"":"\n");
 			next
 		};
 		print "\rTesting $_".( " " x ($nspaces - length($_)) );
@@ -225,10 +225,6 @@ our %tests = (
 	"QT_NO_BUTTON" =>		["qbutton.h", "QButton foo( (QWidget*)NULL );", 10],
  	"QT_NO_BUTTONGROUP" =>		["qbuttongroup.h", "QButtonGroup foo( (QWidget*)NULL );", 12],
  	"QT_NO_CANVAS" =>		["qcanvas.h", "QCanvas foo( (QObject*)NULL );", 10],
-	"QT_NO_CAST_ASCII" =>		["qstring.h", q£
-						QString foo;
-						foo += "bar";
-					£, 0],
  	"QT_NO_CHECKBOX" =>		["qcheckbox.h", "QCheckBox( (QWidget*)NULL );", 10],
 	"QT_NO_CLIPBOARD" => 		["qapplication.h, qclipboard.h", q£
 						QApplication foo( argc, argv );
@@ -431,12 +427,42 @@ our %tests = (
 	"QT_NO_STYLE_MOTIFPLUS" =>	["qmotifplusstyle.h", "QMotifPlusStyle foo;", 16],
 	"QT_NO_STYLE_SGI" =>		["qsgistyle.h", "QSGIStyle foo;", 16],
 	"QT_NO_STYLE_WINDOWS" =>	["qwindowsstyle.h", "QWindowsStyle foo;", 16],
-
-	"QT_NO_TEXTEDIT" =>		["qtextedit.h", "QTextEdit foo;", 13],
+        "QT_NO_TABBAR" =>               ["qtabbar.h", "QTabBar foo;", 10],
+        "QT_NO_TABDIALOG" =>            ["qtabdialog.h", "QTabDialog foo;", 12],
+        "QT_NO_TABLE" =>                ["qtable.h", "QTable foo;", 10],
+        "QT_NO_TABWIDGET" =>            ["qtabwidget.h", "QTabWidget foo;", 10],
+        "QT_NO_TEXTBROWSER" =>          ["qtextbrowser.h", "QTextBrowser foo;", 14],
+        "QT_NO_TEXTCODEC" =>            ["qtextcodec.h", "QTextCodec::codecForIndex(1);", 5],
+        "QT_NO_TEXTCODECPLUGIN" =>      ["qtextcodecplugin.h, qstringlist.h, qvaluelist.h, qtextcodec.h", "QFoo foo;", 6, q£ 
+	
+						class QFoo: public QTextCodecPlugin
+						{
+						public:
+						    QFoo() {};
+						    ~QFoo() {};
+                                                    QStringList names() const {return QStringList();}
+                                                    QValueList<int>mibEnums() const {return QValueList<int>();}
+                                                    QTextCodec *createForName( const QString & name ) {return (QTextCodec *)NULL;}
+                                                    QTextCodec *createForMib( int mib ) {return (QTextCodec *)NULL;}
+						};
+						Q_EXPORT_PLUGIN( QFoo )
+					£],
+ 	"QT_NO_TEXTEDIT" =>		["qtextedit.h", "QTextEdit foo;", 13], 
+        "QT_NO_TEXTSTREAM" =>           ["qtextstream.h", "QTextStream foo;", 5],
+        "QT_NO_TEXTVIEW" =>             ["qtextview.h", "QTextView foo;", 14], #Obsolete
+        "QT_NO_TOOLBAR" =>              ["qtoolbar.h", "QToolBar foo;", 10],
+        "QT_NO_TOOLBUTTON" =>           ["qtoolbutton.h", "QToolButton foo((QWidget *) NULL );", 12],
+        "QT_NO_TOOLTIP" =>              ["qtooltip.h", "QToolTip::hide();", 10],
+        
 	"QT_NO_TRANSFORMATIONS" =>	["qpainter.h", q£
 						QPainter *foo= new QPainter();
 						foo->setViewXForm( true );£, 5],
+        "QT_NO_VARIANT" =>              ["qvariant.h", "QVariant foo;", 0],
+        "QT_NO_WHATSTHIS" =>            ["qwhatsthis.h", "QWhatsThis::inWhatsThisMode();", 10],
 	"QT_NO_WHEELEVENT" =>		["qevent.h", "QWheelEvent foo( QPoint(1,1), 1, 1 );", 5],
+        "QT_NO_WIDGET_TOPEXTRA" =>      ["qwidget.h", "QWidget foo; foo.caption();", 9],
+        "QT_NO_WIDGETSTACK" =>          ["qwidgetstack.h", "QWidgetStack foo;", 13],
+        "QT_NO_WIZARD" =>               ["qwizard.h", "QWizard foo;", 13],
 	"QT_NO_WMATRIX" =>		["qwmatrix.h", "QWMatrix foo;", 0],
 	"QT_NO_XML" =>			["qxml.h", "QXmlNamespaceSupport foo;", 5],
 	);
