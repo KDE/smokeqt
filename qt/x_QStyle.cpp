@@ -148,7 +148,7 @@ public:
 	x[0].s_enum = (long)QStyle::PE_WindowFrame;
     }
     static void x_45(Smoke::Stack x) {
-	x[0].s_enum = (long)QStyle::PE_PopupMenuScroller;
+	x[0].s_enum = (long)QStyle::CE_PopupMenuScroller;
     }
     static void x_46(Smoke::Stack x) {
 	x[0].s_enum = (long)QStyle::PE_CustomBase;
