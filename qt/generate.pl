@@ -45,6 +45,7 @@ my %excludes = (
     'qglcolormap.h' => 1, # OpenGL
     'qnp.h' => 1, # NSPlugin
     'qdns.h' => 1, # internal
+    'qvfbhdr.h' => 1, # internal
     'qttableview.h' => 1,  # Not in Qt anymore...
     'qtmultilineedit.h' => 1,  # Not in Qt anymore...
     'qwidgetfactory.h' => 1,  # Part of designer uilib, not of qt
