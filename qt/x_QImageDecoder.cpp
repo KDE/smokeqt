@@ -25,11 +25,11 @@ public:
 	x[0].s_int = xret;
     }
     static void x_3(Smoke::Stack x) {
-	// QImageDecoder(QImageDecoder&)
-	x_QImageDecoder* xret = new x_QImageDecoder(*(QImageDecoder *)x[1].s_class);
+	// QImageDecoder(const QImageDecoder&)
+	x_QImageDecoder* xret = new x_QImageDecoder(*(const QImageDecoder *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QImageDecoder(QImageDecoder& x1) : QImageDecoder(x1) {
+    x_QImageDecoder(const QImageDecoder& x1) : QImageDecoder(x1) {
     }
     static void x_4(Smoke::Stack x) {
 	// formatName(const uchar*, int)
@@ -56,7 +56,7 @@ public:
 	QImageDecoder::unregisterDecoderFactory((QImageFormatType*)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    ~x_QImageDecoder() { qt_Smoke->binding->deleted(156, (void*)this); }
+    ~x_QImageDecoder() { qt_Smoke->binding->deleted(158, (void*)this); }
 };
 void xcall_QImageDecoder(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QImageDecoder *xself = (x_QImageDecoder*)obj;

@@ -13,13 +13,13 @@ public:
     x_QDropSite(QWidget* x1) : QDropSite(x1) {
     }
     static void x_1(Smoke::Stack x) {
-	// QDropSite(QDropSite&)
-	x_QDropSite* xret = new x_QDropSite(*(QDropSite *)x[1].s_class);
+	// QDropSite(const QDropSite&)
+	x_QDropSite* xret = new x_QDropSite(*(const QDropSite *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QDropSite(QDropSite& x1) : QDropSite(x1) {
+    x_QDropSite(const QDropSite& x1) : QDropSite(x1) {
     }
-    ~x_QDropSite() { qt_Smoke->binding->deleted(103, (void*)this); }
+    ~x_QDropSite() { qt_Smoke->binding->deleted(105, (void*)this); }
 };
 void xcall_QDropSite(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QDropSite *xself = (x_QDropSite*)obj;

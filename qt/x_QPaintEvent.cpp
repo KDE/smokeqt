@@ -51,13 +51,13 @@ public:
 	x[0].s_bool = xret;
     }
     static void x_7(Smoke::Stack x) {
-	// QPaintEvent(QPaintEvent&)
-	x_QPaintEvent* xret = new x_QPaintEvent(*(QPaintEvent *)x[1].s_class);
+	// QPaintEvent(const QPaintEvent&)
+	x_QPaintEvent* xret = new x_QPaintEvent(*(const QPaintEvent *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QPaintEvent(QPaintEvent& x1) : QPaintEvent(x1) {
+    x_QPaintEvent(const QPaintEvent& x1) : QPaintEvent(x1) {
     }
-    ~x_QPaintEvent() { qt_Smoke->binding->deleted(219, (void*)this); }
+    ~x_QPaintEvent() { qt_Smoke->binding->deleted(222, (void*)this); }
 };
 void xcall_QPaintEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QPaintEvent *xself = (x_QPaintEvent*)obj;

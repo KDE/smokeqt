@@ -13,19 +13,19 @@ public:
     x_QSqlDriverCreatorBase() : QSqlDriverCreatorBase() {
     }
     static void x_1(Smoke::Stack x) {
-	// QSqlDriverCreatorBase(QSqlDriverCreatorBase&)
-	x_QSqlDriverCreatorBase* xret = new x_QSqlDriverCreatorBase(*(QSqlDriverCreatorBase *)x[1].s_class);
+	// QSqlDriverCreatorBase(const QSqlDriverCreatorBase&)
+	x_QSqlDriverCreatorBase* xret = new x_QSqlDriverCreatorBase(*(const QSqlDriverCreatorBase *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QSqlDriverCreatorBase(QSqlDriverCreatorBase& x1) : QSqlDriverCreatorBase(x1) {
+    x_QSqlDriverCreatorBase(const QSqlDriverCreatorBase& x1) : QSqlDriverCreatorBase(x1) {
     }
     virtual QSqlDriver* createObject() {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(8814, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(8848, (void*)this, x, true /*pure virtual*/);
 	return (QSqlDriver*)x[0].s_class;
 	// ABSTRACT
     }
-    ~x_QSqlDriverCreatorBase() { qt_Smoke->binding->deleted(277, (void*)this); }
+    ~x_QSqlDriverCreatorBase() { qt_Smoke->binding->deleted(280, (void*)this); }
 };
 void xcall_QSqlDriverCreatorBase(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QSqlDriverCreatorBase *xself = (x_QSqlDriverCreatorBase*)obj;

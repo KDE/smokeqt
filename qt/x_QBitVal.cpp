@@ -28,11 +28,11 @@ public:
 	x[0].s_class = (void*)&xret;
     }
     static void x_4(Smoke::Stack x) {
-	// QBitVal(QBitVal&)
-	x_QBitVal* xret = new x_QBitVal(*(QBitVal *)x[1].s_class);
+	// QBitVal(const QBitVal&)
+	x_QBitVal* xret = new x_QBitVal(*(const QBitVal *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QBitVal(QBitVal& x1) : QBitVal(x1) {
+    x_QBitVal(const QBitVal& x1) : QBitVal(x1) {
     }
     ~x_QBitVal() { qt_Smoke->binding->deleted(11, (void*)this); }
 };

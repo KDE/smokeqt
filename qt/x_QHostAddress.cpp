@@ -75,7 +75,7 @@ public:
 	bool xret = this->QHostAddress::operator==(*(const QHostAddress *)x[1].s_class);
 	x[0].s_bool = xret;
     }
-    ~x_QHostAddress() { qt_Smoke->binding->deleted(144, (void*)this); }
+    ~x_QHostAddress() { qt_Smoke->binding->deleted(146, (void*)this); }
 };
 void xcall_QHostAddress(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QHostAddress *xself = (x_QHostAddress*)obj;

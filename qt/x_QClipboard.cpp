@@ -147,7 +147,7 @@ public:
 	QString xret = QClipboard::trUtf8((const char*)x[1].s_voidp);
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    ~x_QClipboard() { qt_Smoke->binding->deleted(39, (void*)this); }
+    ~x_QClipboard() { qt_Smoke->binding->deleted(40, (void*)this); }
 };
 void xcall_QClipboard(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QClipboard xtmp(obj), *xself = &xtmp;

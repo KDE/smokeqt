@@ -69,7 +69,7 @@ public:
 	QString xret = QDragManager::trUtf8((const char*)x[1].s_voidp);
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    ~x_QDragManager() { qt_Smoke->binding->deleted(98, (void*)this); }
+    ~x_QDragManager() { qt_Smoke->binding->deleted(100, (void*)this); }
 };
 void xcall_QDragManager(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QDragManager xtmp(obj), *xself = &xtmp;

@@ -88,11 +88,11 @@ public:
 	x[0].s_ushort = xret;
     }
     static void x_16(Smoke::Stack x) {
-	// QTextCodec(QTextCodec&)
-	x_QTextCodec* xret = new x_QTextCodec(*(QTextCodec *)x[1].s_class);
+	// QTextCodec(const QTextCodec&)
+	x_QTextCodec* xret = new x_QTextCodec(*(const QTextCodec *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QTextCodec(QTextCodec& x1) : QTextCodec(x1) {
+    x_QTextCodec(const QTextCodec& x1) : QTextCodec(x1) {
     }
     static void x_17(Smoke::Stack x) {
 	// loadCharmap(QIODevice*)
@@ -164,20 +164,20 @@ public:
     virtual bool canEncode(QChar x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(10116, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(10151, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QTextCodec::canEncode(x1);
     }
     virtual bool canEncode(const QString& x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(10117, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(10152, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QTextCodec::canEncode(x1);
     }
     virtual unsigned short characterFromUnicode(const QString& x1, int x2) const {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_int = x2;
-	if(qt_Smoke->binding->callMethod(10121, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(10156, (void*)this, x)) {
 	    unsigned short *xptr = (unsigned short *)x[0].s_class;
 	    unsigned short xret(*xptr);
 	    delete xptr;
@@ -189,7 +189,7 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_voidp = (void*)&x2;
-	if(qt_Smoke->binding->callMethod(10109, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(10144, (void*)this, x)) {
 	    QCString *xptr = (QCString *)x[0].s_class;
 	    QCString xret(*xptr);
 	    delete xptr;
@@ -202,7 +202,7 @@ public:
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_int = x2;
 	x[3].s_int = x3;
-	if(qt_Smoke->binding->callMethod(10120, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(10155, (void*)this, x)) {
 	    QByteArray *xptr = (QByteArray *)x[0].s_class;
 	    QByteArray xret(*xptr);
 	    delete xptr;
@@ -214,40 +214,40 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)x1;
 	x[2].s_int = x2;
-	qt_Smoke->binding->callMethod(10118, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(10153, (void*)this, x, true /*pure virtual*/);
 	return (int)x[0].s_int;
 	// ABSTRACT
     }
     virtual int heuristicNameMatch(const char* x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(10119, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(10154, (void*)this, x)) return (int)x[0].s_int;
 	return this->QTextCodec::heuristicNameMatch(x1);
     }
     virtual QTextDecoder* makeDecoder() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(10106, (void*)this, x)) return (QTextDecoder*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(10141, (void*)this, x)) return (QTextDecoder*)x[0].s_class;
 	return this->QTextCodec::makeDecoder();
     }
     virtual QTextEncoder* makeEncoder() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(10107, (void*)this, x)) return (QTextEncoder*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(10142, (void*)this, x)) return (QTextEncoder*)x[0].s_class;
 	return this->QTextCodec::makeEncoder();
     }
     virtual int mibEnum() const {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(10105, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(10140, (void*)this, x, true /*pure virtual*/);
 	return (int)x[0].s_int;
 	// ABSTRACT
     }
     virtual const char* mimeName() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(10104, (void*)this, x)) return (const char*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(10139, (void*)this, x)) return (const char*)x[0].s_class;
 	return this->QTextCodec::mimeName();
     }
     virtual const char* name() const {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(10103, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(10138, (void*)this, x, true /*pure virtual*/);
 	return (const char*)x[0].s_class;
 	// ABSTRACT
     }
@@ -255,7 +255,7 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)x1;
 	x[2].s_int = x2;
-	if(qt_Smoke->binding->callMethod(10108, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(10143, (void*)this, x)) {
 	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;
@@ -263,7 +263,7 @@ public:
 	}
 	return this->QTextCodec::toUnicode(x1, x2);
     }
-    ~x_QTextCodec() { qt_Smoke->binding->deleted(316, (void*)this); }
+    ~x_QTextCodec() { qt_Smoke->binding->deleted(319, (void*)this); }
 };
 void xcall_QTextCodec(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QTextCodec *xself = (x_QTextCodec*)obj;

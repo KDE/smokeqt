@@ -14,15 +14,15 @@ public:
     x_QXmlEntityResolver() : QXmlEntityResolver() {
     }
     static void x_1(Smoke::Stack x) {
-	// QXmlEntityResolver(QXmlEntityResolver&)
-	x_QXmlEntityResolver* xret = new x_QXmlEntityResolver(*(QXmlEntityResolver *)x[1].s_class);
+	// QXmlEntityResolver(const QXmlEntityResolver&)
+	x_QXmlEntityResolver* xret = new x_QXmlEntityResolver(*(const QXmlEntityResolver *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QXmlEntityResolver(QXmlEntityResolver& x1) : QXmlEntityResolver(x1) {
+    x_QXmlEntityResolver(const QXmlEntityResolver& x1) : QXmlEntityResolver(x1) {
     }
     virtual QString errorString() {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(11936, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(11980, (void*)this, x, true /*pure virtual*/);
 	QString *xptr = (QString *)x[0].s_class;
 	QString xret(*xptr);
 	delete xptr;
@@ -34,11 +34,11 @@ public:
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_voidp = (void*)&x2;
 	x[3].s_voidp = (void*)&x3;
-	qt_Smoke->binding->callMethod(11935, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(11979, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
-    ~x_QXmlEntityResolver() { qt_Smoke->binding->deleted(371, (void*)this); }
+    ~x_QXmlEntityResolver() { qt_Smoke->binding->deleted(376, (void*)this); }
 };
 void xcall_QXmlEntityResolver(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QXmlEntityResolver *xself = (x_QXmlEntityResolver*)obj;

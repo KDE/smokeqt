@@ -169,13 +169,13 @@ public:
 	x[0].s_class = (void*)new QPointArray(xret);
     }
     static void x_31(Smoke::Stack x) {
-	// QWMatrix(QWMatrix&)
-	x_QWMatrix* xret = new x_QWMatrix(*(QWMatrix *)x[1].s_class);
+	// QWMatrix(const QWMatrix&)
+	x_QWMatrix* xret = new x_QWMatrix(*(const QWMatrix *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QWMatrix(QWMatrix& x1) : QWMatrix(x1) {
+    x_QWMatrix(const QWMatrix& x1) : QWMatrix(x1) {
     }
-    ~x_QWMatrix() { qt_Smoke->binding->deleted(352, (void*)this); }
+    ~x_QWMatrix() { qt_Smoke->binding->deleted(357, (void*)this); }
 };
 void xcall_QWMatrix(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QWMatrix *xself = (x_QWMatrix*)obj;

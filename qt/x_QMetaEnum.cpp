@@ -13,13 +13,13 @@ public:
     x_QMetaEnum() : QMetaEnum() {
     }
     static void x_1(Smoke::Stack x) {
-	// QMetaEnum(QMetaEnum&)
-	x_QMetaEnum* xret = new x_QMetaEnum(*(QMetaEnum *)x[1].s_class);
+	// QMetaEnum(const QMetaEnum&)
+	x_QMetaEnum* xret = new x_QMetaEnum(*(const QMetaEnum *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QMetaEnum(QMetaEnum& x1) : QMetaEnum(x1) {
+    x_QMetaEnum(const QMetaEnum& x1) : QMetaEnum(x1) {
     }
-    ~x_QMetaEnum() { qt_Smoke->binding->deleted(195, (void*)this); }
+    ~x_QMetaEnum() { qt_Smoke->binding->deleted(197, (void*)this); }
 };
 void xcall_QMetaEnum(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QMetaEnum *xself = (x_QMetaEnum*)obj;

@@ -148,15 +148,15 @@ public:
 	x[0].s_enum = xret;
     }
     static void x_24(Smoke::Stack x) {
-	// QStyleOption(QStyleOption&)
-	x_QStyleOption* xret = new x_QStyleOption(*(QStyleOption *)x[1].s_class);
+	// QStyleOption(const QStyleOption&)
+	x_QStyleOption* xret = new x_QStyleOption(*(const QStyleOption *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QStyleOption(QStyleOption& x1) : QStyleOption(x1) {
+    x_QStyleOption(const QStyleOption& x1) : QStyleOption(x1) {
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {
-	  case 679: //QStyleOption::StyleOptionDefault
+	  case 603: //QStyleOption::StyleOptionDefault
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QStyleOption::StyleOptionDefault;
@@ -174,7 +174,7 @@ public:
 	    break;
 	}
     }
-    ~x_QStyleOption() { qt_Smoke->binding->deleted(301, (void*)this); }
+    ~x_QStyleOption() { qt_Smoke->binding->deleted(304, (void*)this); }
 };
 void xenum_QStyleOption(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
     x_QStyleOption::xenum_operation(xop, xtype, xdata, xvalue);

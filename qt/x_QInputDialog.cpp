@@ -211,7 +211,7 @@ public:
 	QString xret = QInputDialog::getItem(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,*(const QStringList *)x[3].s_class);
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    ~x_QInputDialog() { qt_Smoke->binding->deleted(163, (void*)this); }
+    ~x_QInputDialog() { qt_Smoke->binding->deleted(165, (void*)this); }
 };
 void xcall_QInputDialog(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QInputDialog xtmp(obj), *xself = &xtmp;

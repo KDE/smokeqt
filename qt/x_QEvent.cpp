@@ -215,15 +215,15 @@ public:
 	x[0].s_bool = xret;
     }
     static void x_67(Smoke::Stack x) {
-	// QEvent(QEvent&)
-	x_QEvent* xret = new x_QEvent(*(QEvent *)x[1].s_class);
+	// QEvent(const QEvent&)
+	x_QEvent* xret = new x_QEvent(*(const QEvent *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QEvent(QEvent& x1) : QEvent(x1) {
+    x_QEvent(const QEvent& x1) : QEvent(x1) {
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {
-	  case 236: //QEvent::Type
+	  case 209: //QEvent::Type
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QEvent::Type;
@@ -241,7 +241,7 @@ public:
 	    break;
 	}
     }
-    ~x_QEvent() { qt_Smoke->binding->deleted(108, (void*)this); }
+    ~x_QEvent() { qt_Smoke->binding->deleted(110, (void*)this); }
 };
 void xenum_QEvent(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
     x_QEvent::xenum_operation(xop, xtype, xdata, xvalue);

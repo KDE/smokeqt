@@ -24,13 +24,13 @@ public:
 	x[0].s_class = (void*)&xret;
     }
     static void x_3(Smoke::Stack x) {
-	// QResizeEvent(QResizeEvent&)
-	x_QResizeEvent* xret = new x_QResizeEvent(*(QResizeEvent *)x[1].s_class);
+	// QResizeEvent(const QResizeEvent&)
+	x_QResizeEvent* xret = new x_QResizeEvent(*(const QResizeEvent *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QResizeEvent(QResizeEvent& x1) : QResizeEvent(x1) {
+    x_QResizeEvent(const QResizeEvent& x1) : QResizeEvent(x1) {
     }
-    ~x_QResizeEvent() { qt_Smoke->binding->deleted(245, (void*)this); }
+    ~x_QResizeEvent() { qt_Smoke->binding->deleted(248, (void*)this); }
 };
 void xcall_QResizeEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QResizeEvent *xself = (x_QResizeEvent*)obj;

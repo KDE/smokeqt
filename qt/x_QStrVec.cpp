@@ -26,7 +26,7 @@ public:
     }
     x_QStrVec(uint x1) : QStrVec(x1) {
     }
-    ~x_QStrVec() { qt_Smoke->binding->deleted(295, (void*)this); }
+    ~x_QStrVec() { qt_Smoke->binding->deleted(298, (void*)this); }
 };
 void xcall_QStrVec(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QStrVec *xself = (x_QStrVec*)obj;

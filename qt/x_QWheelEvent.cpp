@@ -96,13 +96,13 @@ public:
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     static void x_16(Smoke::Stack x) {
-	// QWheelEvent(QWheelEvent&)
-	x_QWheelEvent* xret = new x_QWheelEvent(*(QWheelEvent *)x[1].s_class);
+	// QWheelEvent(const QWheelEvent&)
+	x_QWheelEvent* xret = new x_QWheelEvent(*(const QWheelEvent *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QWheelEvent(QWheelEvent& x1) : QWheelEvent(x1) {
+    x_QWheelEvent(const QWheelEvent& x1) : QWheelEvent(x1) {
     }
-    ~x_QWheelEvent() { qt_Smoke->binding->deleted(354, (void*)this); }
+    ~x_QWheelEvent() { qt_Smoke->binding->deleted(359, (void*)this); }
 };
 void xcall_QWheelEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QWheelEvent *xself = (x_QWheelEvent*)obj;

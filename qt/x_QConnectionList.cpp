@@ -24,7 +24,7 @@ public:
 	QConnectionList& xret = this->QConnectionList::operator=(*(const QConnectionList *)x[1].s_class);
 	x[0].s_class = (void*)&xret;
     }
-    ~x_QConnectionList() { qt_Smoke->binding->deleted(49, (void*)this); }
+    ~x_QConnectionList() { qt_Smoke->binding->deleted(50, (void*)this); }
 };
 void xcall_QConnectionList(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QConnectionList *xself = (x_QConnectionList*)obj;

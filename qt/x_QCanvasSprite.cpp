@@ -14,168 +14,171 @@ public:
 	x[0].s_enum = (long)QCanvasSprite::Oscillate;
     }
     static void x_2(Smoke::Stack x) {
+	x[0].s_class = (void*)new int(QCanvasSprite::RTTI);
+    }
+    static void x_3(Smoke::Stack x) {
 	// QCanvasSprite(QCanvasPixmapArray*, QCanvas*)
 	x_QCanvasSprite* xret = new x_QCanvasSprite((QCanvasPixmapArray*)x[1].s_class,(QCanvas*)x[2].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QCanvasSprite(QCanvasPixmapArray* x1, QCanvas* x2) : QCanvasSprite(x1, x2) {
     }
-    void x_3(Smoke::Stack x) {
+    void x_4(Smoke::Stack x) {
 	// setSequence(QCanvasPixmapArray*)
 	this->QCanvasSprite::setSequence((QCanvasPixmapArray*)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_4(Smoke::Stack x) {
+    void x_5(Smoke::Stack x) {
 	// move(double, double)
 	this->QCanvasSprite::move((double)x[1].s_double,(double)x[2].s_double);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_5(Smoke::Stack x) {
+    void x_6(Smoke::Stack x) {
 	// move(double, double, int)
 	this->QCanvasSprite::move((double)x[1].s_double,(double)x[2].s_double,(int)x[3].s_int);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_6(Smoke::Stack x) {
+    void x_7(Smoke::Stack x) {
 	// setFrame(int)
 	this->QCanvasSprite::setFrame((int)x[1].s_int);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_7(Smoke::Stack x) {
+    void x_8(Smoke::Stack x) {
 	// setFrameAnimation(QCanvasSprite::FrameAnimationType, int, int)
 	this->QCanvasSprite::setFrameAnimation((QCanvasSprite::FrameAnimationType)x[1].s_enum,(int)x[2].s_int,(int)x[3].s_int);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_8(Smoke::Stack x) {
+    void x_9(Smoke::Stack x) {
 	// setFrameAnimation(QCanvasSprite::FrameAnimationType, int)
 	this->QCanvasSprite::setFrameAnimation((QCanvasSprite::FrameAnimationType)x[1].s_enum,(int)x[2].s_int);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_9(Smoke::Stack x) {
+    void x_10(Smoke::Stack x) {
 	// setFrameAnimation(QCanvasSprite::FrameAnimationType)
 	this->QCanvasSprite::setFrameAnimation((QCanvasSprite::FrameAnimationType)x[1].s_enum);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_10(Smoke::Stack x) {
+    void x_11(Smoke::Stack x) {
 	// setFrameAnimation()
 	this->QCanvasSprite::setFrameAnimation();
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_11(Smoke::Stack x) const {
+    void x_12(Smoke::Stack x) const {
 	// frame()
 	int xret = this->QCanvasSprite::frame();
 	x[0].s_int = xret;
     }
-    void x_12(Smoke::Stack x) const {
+    void x_13(Smoke::Stack x) const {
 	// frameCount()
 	int xret = this->QCanvasSprite::frameCount();
 	x[0].s_int = xret;
     }
-    void x_13(Smoke::Stack x) const {
+    void x_14(Smoke::Stack x) const {
 	// rtti()
 	int xret = this->QCanvasSprite::rtti();
 	x[0].s_int = xret;
     }
-    void x_14(Smoke::Stack x) const {
+    void x_15(Smoke::Stack x) const {
 	// collidesWith(const QCanvasItem*)
 	bool xret = this->QCanvasSprite::collidesWith((const QCanvasItem*)x[1].s_class);
 	x[0].s_bool = xret;
     }
-    void x_15(Smoke::Stack x) const {
+    void x_16(Smoke::Stack x) const {
 	// boundingRect()
 	QRect xret = this->QCanvasSprite::boundingRect();
 	x[0].s_class = (void*)new QRect(xret);
     }
-    void x_16(Smoke::Stack x) const {
+    void x_17(Smoke::Stack x) const {
 	// width()
 	int xret = this->QCanvasSprite::width();
 	x[0].s_int = xret;
     }
-    void x_17(Smoke::Stack x) const {
+    void x_18(Smoke::Stack x) const {
 	// height()
 	int xret = this->QCanvasSprite::height();
 	x[0].s_int = xret;
     }
-    void x_18(Smoke::Stack x) const {
+    void x_19(Smoke::Stack x) const {
 	// leftEdge()
 	int xret = this->QCanvasSprite::leftEdge();
 	x[0].s_int = xret;
     }
-    void x_19(Smoke::Stack x) const {
+    void x_20(Smoke::Stack x) const {
 	// topEdge()
 	int xret = this->QCanvasSprite::topEdge();
 	x[0].s_int = xret;
     }
-    void x_20(Smoke::Stack x) const {
+    void x_21(Smoke::Stack x) const {
 	// rightEdge()
 	int xret = this->QCanvasSprite::rightEdge();
 	x[0].s_int = xret;
     }
-    void x_21(Smoke::Stack x) const {
+    void x_22(Smoke::Stack x) const {
 	// bottomEdge()
 	int xret = this->QCanvasSprite::bottomEdge();
 	x[0].s_int = xret;
     }
-    void x_22(Smoke::Stack x) const {
+    void x_23(Smoke::Stack x) const {
 	// leftEdge(int)
 	int xret = this->QCanvasSprite::leftEdge((int)x[1].s_int);
 	x[0].s_int = xret;
     }
-    void x_23(Smoke::Stack x) const {
+    void x_24(Smoke::Stack x) const {
 	// topEdge(int)
 	int xret = this->QCanvasSprite::topEdge((int)x[1].s_int);
 	x[0].s_int = xret;
     }
-    void x_24(Smoke::Stack x) const {
+    void x_25(Smoke::Stack x) const {
 	// rightEdge(int)
 	int xret = this->QCanvasSprite::rightEdge((int)x[1].s_int);
 	x[0].s_int = xret;
     }
-    void x_25(Smoke::Stack x) const {
+    void x_26(Smoke::Stack x) const {
 	// bottomEdge(int)
 	int xret = this->QCanvasSprite::bottomEdge((int)x[1].s_int);
 	x[0].s_int = xret;
     }
-    void x_26(Smoke::Stack x) const {
+    void x_27(Smoke::Stack x) const {
 	// image()
 	QCanvasPixmap* xret = this->QCanvasSprite::image();
 	x[0].s_class = (void*)xret;
     }
-    void x_27(Smoke::Stack x) const {
+    void x_28(Smoke::Stack x) const {
 	// imageAdvanced()
 	QCanvasPixmap* xret = this->QCanvasSprite::imageAdvanced();
 	x[0].s_class = (void*)xret;
     }
-    void x_28(Smoke::Stack x) const {
+    void x_29(Smoke::Stack x) const {
 	// image(int)
 	QCanvasPixmap* xret = this->QCanvasSprite::image((int)x[1].s_int);
 	x[0].s_class = (void*)xret;
     }
-    void x_29(Smoke::Stack x) {
+    void x_30(Smoke::Stack x) {
 	// advance(int)
 	this->QCanvasSprite::advance((int)x[1].s_int);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_30(Smoke::Stack x) {
+    void x_31(Smoke::Stack x) {
 	// draw(QPainter&)
 	this->QCanvasSprite::draw(*(QPainter *)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    static void x_31(Smoke::Stack x) {
-	// QCanvasSprite(QCanvasSprite&)
-	x_QCanvasSprite* xret = new x_QCanvasSprite(*(QCanvasSprite *)x[1].s_class);
+    static void x_32(Smoke::Stack x) {
+	// QCanvasSprite(const QCanvasSprite&)
+	x_QCanvasSprite* xret = new x_QCanvasSprite(*(const QCanvasSprite *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QCanvasSprite(QCanvasSprite& x1) : QCanvasSprite(x1) {
+    x_QCanvasSprite(const QCanvasSprite& x1) : QCanvasSprite(x1) {
     }
     virtual void advance(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(816, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(823, (void*)this, x)) return;
 	this->QCanvasSprite::advance(x1);
     }
     virtual QRect boundingRect() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(802, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(809, (void*)this, x)) {
 	    QRect *xptr = (QRect *)x[0].s_class;
 	    QRect xret(*xptr);
 	    delete xptr;
@@ -185,7 +188,7 @@ public:
     }
     virtual QRect boundingRectAdvanced() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(698, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(699, (void*)this, x)) {
 	    QRect *xptr = (QRect *)x[0].s_class;
 	    QRect xret(*xptr);
 	    delete xptr;
@@ -196,18 +199,18 @@ public:
     virtual bool collidesWith(const QCanvasItem* x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(801, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(808, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QCanvasSprite::collidesWith(x1);
     }
     virtual void draw(QPainter& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(817, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(824, (void*)this, x)) return;
 	this->QCanvasSprite::draw(x1);
     }
     virtual QCanvasPixmap* imageAdvanced() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(814, (void*)this, x)) return (QCanvasPixmap*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(821, (void*)this, x)) return (QCanvasPixmap*)x[0].s_class;
 	return this->QCanvasSprite::imageAdvanced();
     }
     virtual void move(double x1, double x2, int x3) {
@@ -215,43 +218,43 @@ public:
 	x[1].s_double = x1;
 	x[2].s_double = x2;
 	x[3].s_int = x3;
-	if(qt_Smoke->binding->callMethod(792, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(799, (void*)this, x)) return;
 	this->QCanvasSprite::move(x1, x2, x3);
     }
     virtual void moveBy(double x1, double x2) {
 	Smoke::StackItem x[3];
 	x[1].s_double = x1;
 	x[2].s_double = x2;
-	if(qt_Smoke->binding->callMethod(665, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(666, (void*)this, x)) return;
 	this->QCanvasItem::moveBy(x1, x2);
     }
     virtual int rtti() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(800, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(807, (void*)this, x)) return (int)x[0].s_int;
 	return this->QCanvasSprite::rtti();
     }
     virtual void setActive(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(690, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(691, (void*)this, x)) return;
 	this->QCanvasItem::setActive(x1);
     }
     virtual void setAnimated(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(671, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(672, (void*)this, x)) return;
 	this->QCanvasItem::setAnimated(x1);
     }
     virtual void setCanvas(QCanvas* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(680, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(681, (void*)this, x)) return;
 	this->QCanvasItem::setCanvas(x1);
     }
     virtual void setEnabled(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(688, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(689, (void*)this, x)) return;
 	this->QCanvasItem::setEnabled(x1);
     }
     virtual void setFrameAnimation(QCanvasSprite::FrameAnimationType x1, int x2, int x3) {
@@ -259,31 +262,31 @@ public:
 	x[1].s_enum = x1;
 	x[2].s_int = x2;
 	x[3].s_int = x3;
-	if(qt_Smoke->binding->callMethod(794, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(801, (void*)this, x)) return;
 	this->QCanvasSprite::setFrameAnimation(x1, x2, x3);
     }
     virtual void setSelected(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(686, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(687, (void*)this, x)) return;
 	this->QCanvasItem::setSelected(x1);
     }
     virtual void setVelocity(double x1, double x2) {
 	Smoke::StackItem x[3];
 	x[1].s_double = x1;
 	x[2].s_double = x2;
-	if(qt_Smoke->binding->callMethod(672, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(673, (void*)this, x)) return;
 	this->QCanvasItem::setVelocity(x1, x2);
     }
     virtual void setVisible(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(684, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(685, (void*)this, x)) return;
 	this->QCanvasItem::setVisible(x1);
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {
-	  case 66: //QCanvasSprite::FrameAnimationType
+	  case 54: //QCanvasSprite::FrameAnimationType
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QCanvasSprite::FrameAnimationType;
@@ -312,7 +315,7 @@ void xcall_QCanvasSprite(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 0: x_QCanvasSprite::x_0(args);	break;
 	case 1: x_QCanvasSprite::x_1(args);	break;
 	case 2: x_QCanvasSprite::x_2(args);	break;
-	case 3: xself->x_3(args);	break;
+	case 3: x_QCanvasSprite::x_3(args);	break;
 	case 4: xself->x_4(args);	break;
 	case 5: xself->x_5(args);	break;
 	case 6: xself->x_6(args);	break;
@@ -340,7 +343,8 @@ void xcall_QCanvasSprite(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 28: xself->x_28(args);	break;
 	case 29: xself->x_29(args);	break;
 	case 30: xself->x_30(args);	break;
-	case 31: x_QCanvasSprite::x_31(args);	break;
-	case 32: delete (QCanvasSprite*)xself;	break;
+	case 31: xself->x_31(args);	break;
+	case 32: x_QCanvasSprite::x_32(args);	break;
+	case 33: delete (QCanvasSprite*)xself;	break;
     }
 }

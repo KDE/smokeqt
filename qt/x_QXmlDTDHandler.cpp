@@ -14,15 +14,15 @@ public:
     x_QXmlDTDHandler() : QXmlDTDHandler() {
     }
     static void x_1(Smoke::Stack x) {
-	// QXmlDTDHandler(QXmlDTDHandler&)
-	x_QXmlDTDHandler* xret = new x_QXmlDTDHandler(*(QXmlDTDHandler *)x[1].s_class);
+	// QXmlDTDHandler(const QXmlDTDHandler&)
+	x_QXmlDTDHandler* xret = new x_QXmlDTDHandler(*(const QXmlDTDHandler *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QXmlDTDHandler(QXmlDTDHandler& x1) : QXmlDTDHandler(x1) {
+    x_QXmlDTDHandler(const QXmlDTDHandler& x1) : QXmlDTDHandler(x1) {
     }
     virtual QString errorString() {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(11893, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(11937, (void*)this, x, true /*pure virtual*/);
 	QString *xptr = (QString *)x[0].s_class;
 	QString xret(*xptr);
 	delete xptr;
@@ -34,7 +34,7 @@ public:
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_voidp = (void*)&x2;
 	x[3].s_voidp = (void*)&x3;
-	qt_Smoke->binding->callMethod(11891, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(11935, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
@@ -44,11 +44,11 @@ public:
 	x[2].s_voidp = (void*)&x2;
 	x[3].s_voidp = (void*)&x3;
 	x[4].s_voidp = (void*)&x4;
-	qt_Smoke->binding->callMethod(11892, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(11936, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
-    ~x_QXmlDTDHandler() { qt_Smoke->binding->deleted(368, (void*)this); }
+    ~x_QXmlDTDHandler() { qt_Smoke->binding->deleted(373, (void*)this); }
 };
 void xcall_QXmlDTDHandler(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QXmlDTDHandler *xself = (x_QXmlDTDHandler*)obj;

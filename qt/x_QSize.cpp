@@ -111,13 +111,13 @@ public:
 	x[0].s_class = (void*)&xret;
     }
     static void x_20(Smoke::Stack x) {
-	// QSize(QSize&)
-	x_QSize* xret = new x_QSize(*(QSize *)x[1].s_class);
+	// QSize(const QSize&)
+	x_QSize* xret = new x_QSize(*(const QSize *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QSize(QSize& x1) : QSize(x1) {
+    x_QSize(const QSize& x1) : QSize(x1) {
     }
-    ~x_QSize() { qt_Smoke->binding->deleted(260, (void*)this); }
+    ~x_QSize() { qt_Smoke->binding->deleted(263, (void*)this); }
 };
 void xcall_QSize(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QSize *xself = (x_QSize*)obj;

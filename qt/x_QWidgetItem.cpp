@@ -66,15 +66,15 @@ public:
 	x[0].s_int = xret;
     }
     static void x_11(Smoke::Stack x) {
-	// QWidgetItem(QWidgetItem&)
-	x_QWidgetItem* xret = new x_QWidgetItem(*(QWidgetItem *)x[1].s_class);
+	// QWidgetItem(const QWidgetItem&)
+	x_QWidgetItem* xret = new x_QWidgetItem(*(const QWidgetItem *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QWidgetItem(QWidgetItem& x1) : QWidgetItem(x1) {
+    x_QWidgetItem(const QWidgetItem& x1) : QWidgetItem(x1) {
     }
     virtual QSizePolicy::ExpandData expanding() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(11663, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(11707, (void*)this, x)) {
 	    QSizePolicy::ExpandData *xptr = (QSizePolicy::ExpandData *)x[0].s_class;
 	    QSizePolicy::ExpandData xret(*xptr);
 	    delete xptr;
@@ -84,7 +84,7 @@ public:
     }
     virtual QRect geometry() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(11666, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(11710, (void*)this, x)) {
 	    QRect *xptr = (QRect *)x[0].s_class;
 	    QRect xret(*xptr);
 	    delete xptr;
@@ -94,28 +94,28 @@ public:
     }
     virtual bool hasHeightForWidth() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(11668, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(11712, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QWidgetItem::hasHeightForWidth();
     }
     virtual int heightForWidth(int x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(11669, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(11713, (void*)this, x)) return (int)x[0].s_int;
 	return this->QWidgetItem::heightForWidth(x1);
     }
     virtual void invalidate() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(4966, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(4990, (void*)this, x)) return;
 	this->QLayoutItem::invalidate();
     }
     virtual bool isEmpty() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(11664, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(11708, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QWidgetItem::isEmpty();
     }
     virtual QLayoutIterator iterator() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(4968, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(4992, (void*)this, x)) {
 	    QLayoutIterator *xptr = (QLayoutIterator *)x[0].s_class;
 	    QLayoutIterator xret(*xptr);
 	    delete xptr;
@@ -125,12 +125,12 @@ public:
     }
     virtual QLayout* layout() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(4969, (void*)this, x)) return (QLayout*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(4993, (void*)this, x)) return (QLayout*)x[0].s_class;
 	return this->QLayoutItem::layout();
     }
     virtual QSize maximumSize() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(11662, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(11706, (void*)this, x)) {
 	    QSize *xptr = (QSize *)x[0].s_class;
 	    QSize xret(*xptr);
 	    delete xptr;
@@ -140,7 +140,7 @@ public:
     }
     virtual QSize minimumSize() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(11661, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(11705, (void*)this, x)) {
 	    QSize *xptr = (QSize *)x[0].s_class;
 	    QSize xret(*xptr);
 	    delete xptr;
@@ -151,18 +151,18 @@ public:
     virtual void setAlignment(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(4972, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(4996, (void*)this, x)) return;
 	this->QLayoutItem::setAlignment(x1);
     }
     virtual void setGeometry(const QRect& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(11665, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11709, (void*)this, x)) return;
 	this->QWidgetItem::setGeometry(x1);
     }
     virtual QSize sizeHint() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(11660, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(11704, (void*)this, x)) {
 	    QSize *xptr = (QSize *)x[0].s_class;
 	    QSize xret(*xptr);
 	    delete xptr;
@@ -172,15 +172,15 @@ public:
     }
     virtual QSpacerItem* spacerItem() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(4970, (void*)this, x)) return (QSpacerItem*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(4994, (void*)this, x)) return (QSpacerItem*)x[0].s_class;
 	return this->QLayoutItem::spacerItem();
     }
     virtual QWidget* widget() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(11667, (void*)this, x)) return (QWidget*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(11711, (void*)this, x)) return (QWidget*)x[0].s_class;
 	return this->QWidgetItem::widget();
     }
-    ~x_QWidgetItem() { qt_Smoke->binding->deleted(358, (void*)this); }
+    ~x_QWidgetItem() { qt_Smoke->binding->deleted(363, (void*)this); }
 };
 void xcall_QWidgetItem(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QWidgetItem *xself = (x_QWidgetItem*)obj;

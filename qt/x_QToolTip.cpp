@@ -35,11 +35,11 @@ public:
 	x[0].s_class = (void*)xret;
     }
     static void x_4(Smoke::Stack x) {
-	// QToolTip(QToolTip&)
-	x_QToolTip* xret = new x_QToolTip(*(QToolTip *)x[1].s_class);
+	// QToolTip(const QToolTip&)
+	x_QToolTip* xret = new x_QToolTip(*(const QToolTip *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QToolTip(QToolTip& x1) : QToolTip(x1) {
+    x_QToolTip(const QToolTip& x1) : QToolTip(x1) {
     }
     static void x_5(Smoke::Stack x) {
 	// add(QWidget*, const QString&)
@@ -144,11 +144,11 @@ public:
     virtual void maybeTip(const QPoint& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	qt_Smoke->binding->callMethod(10738, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(10776, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }
-    ~x_QToolTip() { qt_Smoke->binding->deleted(333, (void*)this); }
+    ~x_QToolTip() { qt_Smoke->binding->deleted(336, (void*)this); }
 };
 void xcall_QToolTip(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QToolTip *xself = (x_QToolTip*)obj;

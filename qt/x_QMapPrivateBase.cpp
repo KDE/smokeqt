@@ -40,13 +40,13 @@ public:
 	x[0].s_class = (void*)xret;
     }
     static void x_6(Smoke::Stack x) {
-	// QMapPrivateBase(QMapPrivateBase&)
-	x_QMapPrivateBase* xret = new x_QMapPrivateBase(*(QMapPrivateBase *)x[1].s_class);
+	// QMapPrivateBase(const QMapPrivateBase&)
+	x_QMapPrivateBase* xret = new x_QMapPrivateBase(*(const QMapPrivateBase *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QMapPrivateBase(QMapPrivateBase& x1) : QMapPrivateBase(x1) {
+    x_QMapPrivateBase(const QMapPrivateBase& x1) : QMapPrivateBase(x1) {
     }
-    ~x_QMapPrivateBase() { qt_Smoke->binding->deleted(189, (void*)this); }
+    ~x_QMapPrivateBase() { qt_Smoke->binding->deleted(191, (void*)this); }
 };
 void xcall_QMapPrivateBase(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QMapPrivateBase *xself = (x_QMapPrivateBase*)obj;

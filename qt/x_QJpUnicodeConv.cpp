@@ -179,11 +179,11 @@ public:
 	x[0].s_uint = xret;
     }
     static void x_39(Smoke::Stack x) {
-	// QJpUnicodeConv(QJpUnicodeConv&)
-	x_QJpUnicodeConv* xret = new x_QJpUnicodeConv(*(QJpUnicodeConv *)x[1].s_class);
+	// QJpUnicodeConv(const QJpUnicodeConv&)
+	x_QJpUnicodeConv* xret = new x_QJpUnicodeConv(*(const QJpUnicodeConv *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QJpUnicodeConv(QJpUnicodeConv& x1) : QJpUnicodeConv(x1) {
+    x_QJpUnicodeConv(const QJpUnicodeConv& x1) : QJpUnicodeConv(x1) {
     }
     static void x_40(Smoke::Stack x) {
 	// newConverter(int)
@@ -201,61 +201,61 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_uint = x1;
 	x[2].s_uint = x2;
-	if(qt_Smoke->binding->callMethod(4724, (void*)this, x)) return (uint)x[0].s_uint;
+	if(qt_Smoke->binding->callMethod(4748, (void*)this, x)) return (uint)x[0].s_uint;
 	return this->QJpUnicodeConv::asciiToUnicode(x1, x2);
     }
     virtual uint jisx0201LatinToUnicode(uint x1, uint x2) const {
 	Smoke::StackItem x[3];
 	x[1].s_uint = x1;
 	x[2].s_uint = x2;
-	if(qt_Smoke->binding->callMethod(4726, (void*)this, x)) return (uint)x[0].s_uint;
+	if(qt_Smoke->binding->callMethod(4750, (void*)this, x)) return (uint)x[0].s_uint;
 	return this->QJpUnicodeConv::jisx0201LatinToUnicode(x1, x2);
     }
     virtual uint jisx0208ToUnicode(uint x1, uint x2) const {
 	Smoke::StackItem x[3];
 	x[1].s_uint = x1;
 	x[2].s_uint = x2;
-	if(qt_Smoke->binding->callMethod(4728, (void*)this, x)) return (uint)x[0].s_uint;
+	if(qt_Smoke->binding->callMethod(4752, (void*)this, x)) return (uint)x[0].s_uint;
 	return this->QJpUnicodeConv::jisx0208ToUnicode(x1, x2);
     }
     virtual uint jisx0212ToUnicode(uint x1, uint x2) const {
 	Smoke::StackItem x[3];
 	x[1].s_uint = x1;
 	x[2].s_uint = x2;
-	if(qt_Smoke->binding->callMethod(4729, (void*)this, x)) return (uint)x[0].s_uint;
+	if(qt_Smoke->binding->callMethod(4753, (void*)this, x)) return (uint)x[0].s_uint;
 	return this->QJpUnicodeConv::jisx0212ToUnicode(x1, x2);
     }
     virtual uint unicodeToAscii(uint x1, uint x2) const {
 	Smoke::StackItem x[3];
 	x[1].s_uint = x1;
 	x[2].s_uint = x2;
-	if(qt_Smoke->binding->callMethod(4736, (void*)this, x)) return (uint)x[0].s_uint;
+	if(qt_Smoke->binding->callMethod(4760, (void*)this, x)) return (uint)x[0].s_uint;
 	return this->QJpUnicodeConv::unicodeToAscii(x1, x2);
     }
     virtual uint unicodeToJisx0201Latin(uint x1, uint x2) const {
 	Smoke::StackItem x[3];
 	x[1].s_uint = x1;
 	x[2].s_uint = x2;
-	if(qt_Smoke->binding->callMethod(4738, (void*)this, x)) return (uint)x[0].s_uint;
+	if(qt_Smoke->binding->callMethod(4762, (void*)this, x)) return (uint)x[0].s_uint;
 	return this->QJpUnicodeConv::unicodeToJisx0201Latin(x1, x2);
     }
     virtual uint unicodeToJisx0208(uint x1, uint x2) const {
 	Smoke::StackItem x[3];
 	x[1].s_uint = x1;
 	x[2].s_uint = x2;
-	if(qt_Smoke->binding->callMethod(4740, (void*)this, x)) return (uint)x[0].s_uint;
+	if(qt_Smoke->binding->callMethod(4764, (void*)this, x)) return (uint)x[0].s_uint;
 	return this->QJpUnicodeConv::unicodeToJisx0208(x1, x2);
     }
     virtual uint unicodeToJisx0212(uint x1, uint x2) const {
 	Smoke::StackItem x[3];
 	x[1].s_uint = x1;
 	x[2].s_uint = x2;
-	if(qt_Smoke->binding->callMethod(4741, (void*)this, x)) return (uint)x[0].s_uint;
+	if(qt_Smoke->binding->callMethod(4765, (void*)this, x)) return (uint)x[0].s_uint;
 	return this->QJpUnicodeConv::unicodeToJisx0212(x1, x2);
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {
-	  case 360: //QJpUnicodeConv::Rules
+	  case 315: //QJpUnicodeConv::Rules
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QJpUnicodeConv::Rules;
@@ -273,7 +273,7 @@ public:
 	    break;
 	}
     }
-    ~x_QJpUnicodeConv() { qt_Smoke->binding->deleted(168, (void*)this); }
+    ~x_QJpUnicodeConv() { qt_Smoke->binding->deleted(170, (void*)this); }
 };
 void xenum_QJpUnicodeConv(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
     x_QJpUnicodeConv::xenum_operation(xop, xtype, xdata, xvalue);

@@ -43,7 +43,7 @@ public:
 	QSqlRecord xret = this->QSqlRecordInfo::toRecord();
 	x[0].s_class = (void*)new QSqlRecord(xret);
     }
-    ~x_QSqlRecordInfo() { qt_Smoke->binding->deleted(288, (void*)this); }
+    ~x_QSqlRecordInfo() { qt_Smoke->binding->deleted(291, (void*)this); }
 };
 void xcall_QSqlRecordInfo(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QSqlRecordInfo *xself = (x_QSqlRecordInfo*)obj;

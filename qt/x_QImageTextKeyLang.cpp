@@ -30,13 +30,13 @@ public:
 	x[0].s_bool = xret;
     }
     static void x_4(Smoke::Stack x) {
-	// QImageTextKeyLang(QImageTextKeyLang&)
-	x_QImageTextKeyLang* xret = new x_QImageTextKeyLang(*(QImageTextKeyLang *)x[1].s_class);
+	// QImageTextKeyLang(const QImageTextKeyLang&)
+	x_QImageTextKeyLang* xret = new x_QImageTextKeyLang(*(const QImageTextKeyLang *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QImageTextKeyLang(QImageTextKeyLang& x1) : QImageTextKeyLang(x1) {
+    x_QImageTextKeyLang(const QImageTextKeyLang& x1) : QImageTextKeyLang(x1) {
     }
-    ~x_QImageTextKeyLang() { qt_Smoke->binding->deleted(162, (void*)this); }
+    ~x_QImageTextKeyLang() { qt_Smoke->binding->deleted(164, (void*)this); }
 };
 void xcall_QImageTextKeyLang(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QImageTextKeyLang *xself = (x_QImageTextKeyLang*)obj;

@@ -20,13 +20,13 @@ public:
 	x[0].s_voidp = (void*)&xret;
     }
     static void x_2(Smoke::Stack x) {
-	// QStringBucket(QStringBucket&)
-	x_QStringBucket* xret = new x_QStringBucket(*(QStringBucket *)x[1].s_class);
+	// QStringBucket(const QStringBucket&)
+	x_QStringBucket* xret = new x_QStringBucket(*(const QStringBucket *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QStringBucket(QStringBucket& x1) : QStringBucket(x1) {
+    x_QStringBucket(const QStringBucket& x1) : QStringBucket(x1) {
     }
-    ~x_QStringBucket() { qt_Smoke->binding->deleted(296, (void*)this); }
+    ~x_QStringBucket() { qt_Smoke->binding->deleted(299, (void*)this); }
 };
 void xcall_QStringBucket(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QStringBucket *xself = (x_QStringBucket*)obj;

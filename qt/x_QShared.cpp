@@ -23,13 +23,13 @@ public:
 	x[0].s_bool = xret;
     }
     static void x_3(Smoke::Stack x) {
-	// QShared(QShared&)
-	x_QShared* xret = new x_QShared(*(QShared *)x[1].s_class);
+	// QShared(const QShared&)
+	x_QShared* xret = new x_QShared(*(const QShared *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QShared(QShared& x1) : QShared(x1) {
+    x_QShared(const QShared& x1) : QShared(x1) {
     }
-    ~x_QShared() { qt_Smoke->binding->deleted(254, (void*)this); }
+    ~x_QShared() { qt_Smoke->binding->deleted(257, (void*)this); }
 };
 void xcall_QShared(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QShared *xself = (x_QShared*)obj;

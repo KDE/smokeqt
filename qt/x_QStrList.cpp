@@ -31,7 +31,7 @@ public:
 	QStrList& xret = this->QStrList::operator=(*(const QStrList *)x[1].s_class);
 	x[0].s_class = (void*)&xret;
     }
-    ~x_QStrList() { qt_Smoke->binding->deleted(294, (void*)this); }
+    ~x_QStrList() { qt_Smoke->binding->deleted(297, (void*)this); }
 };
 void xcall_QStrList(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QStrList *xself = (x_QStrList*)obj;

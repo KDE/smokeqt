@@ -14,22 +14,22 @@ public:
     x_QXmlContentHandler() : QXmlContentHandler() {
     }
     static void x_1(Smoke::Stack x) {
-	// QXmlContentHandler(QXmlContentHandler&)
-	x_QXmlContentHandler* xret = new x_QXmlContentHandler(*(QXmlContentHandler *)x[1].s_class);
+	// QXmlContentHandler(const QXmlContentHandler&)
+	x_QXmlContentHandler* xret = new x_QXmlContentHandler(*(const QXmlContentHandler *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QXmlContentHandler(QXmlContentHandler& x1) : QXmlContentHandler(x1) {
+    x_QXmlContentHandler(const QXmlContentHandler& x1) : QXmlContentHandler(x1) {
     }
     virtual bool characters(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	qt_Smoke->binding->callMethod(11883, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(11927, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
     virtual bool endDocument() {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(11878, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(11922, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
@@ -38,20 +38,20 @@ public:
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_voidp = (void*)&x2;
 	x[3].s_voidp = (void*)&x3;
-	qt_Smoke->binding->callMethod(11882, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(11926, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
     virtual bool endPrefixMapping(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	qt_Smoke->binding->callMethod(11880, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(11924, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
     virtual QString errorString() {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(11887, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(11931, (void*)this, x, true /*pure virtual*/);
 	QString *xptr = (QString *)x[0].s_class;
 	QString xret(*xptr);
 	delete xptr;
@@ -61,7 +61,7 @@ public:
     virtual bool ignorableWhitespace(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	qt_Smoke->binding->callMethod(11884, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(11928, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
@@ -69,27 +69,27 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_voidp = (void*)&x2;
-	qt_Smoke->binding->callMethod(11885, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(11929, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
     virtual void setDocumentLocator(QXmlLocator* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	qt_Smoke->binding->callMethod(11876, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(11920, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }
     virtual bool skippedEntity(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	qt_Smoke->binding->callMethod(11886, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(11930, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
     virtual bool startDocument() {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(11877, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(11921, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
@@ -99,7 +99,7 @@ public:
 	x[2].s_voidp = (void*)&x2;
 	x[3].s_voidp = (void*)&x3;
 	x[4].s_class = (void*)&x4;
-	qt_Smoke->binding->callMethod(11881, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(11925, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
@@ -107,11 +107,11 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_voidp = (void*)&x2;
-	qt_Smoke->binding->callMethod(11879, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(11923, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
-    ~x_QXmlContentHandler() { qt_Smoke->binding->deleted(367, (void*)this); }
+    ~x_QXmlContentHandler() { qt_Smoke->binding->deleted(372, (void*)this); }
 };
 void xcall_QXmlContentHandler(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QXmlContentHandler *xself = (x_QXmlContentHandler*)obj;

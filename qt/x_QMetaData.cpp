@@ -22,15 +22,15 @@ public:
     x_QMetaData() : QMetaData() {
     }
     static void x_4(Smoke::Stack x) {
-	// QMetaData(QMetaData&)
-	x_QMetaData* xret = new x_QMetaData(*(QMetaData *)x[1].s_class);
+	// QMetaData(const QMetaData&)
+	x_QMetaData* xret = new x_QMetaData(*(const QMetaData *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QMetaData(QMetaData& x1) : QMetaData(x1) {
+    x_QMetaData(const QMetaData& x1) : QMetaData(x1) {
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {
-	  case 418: //QMetaData::Access
+	  case 367: //QMetaData::Access
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QMetaData::Access;
@@ -48,7 +48,7 @@ public:
 	    break;
 	}
     }
-    ~x_QMetaData() { qt_Smoke->binding->deleted(194, (void*)this); }
+    ~x_QMetaData() { qt_Smoke->binding->deleted(196, (void*)this); }
 };
 void xenum_QMetaData(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
     x_QMetaData::xenum_operation(xop, xtype, xdata, xvalue);

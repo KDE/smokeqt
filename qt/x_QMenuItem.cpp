@@ -99,7 +99,7 @@ public:
 	this->QMenuItem::setWhatsThis(*(const QString *)x[1].s_voidp);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    ~x_QMenuItem() { qt_Smoke->binding->deleted(192, (void*)this); }
+    ~x_QMenuItem() { qt_Smoke->binding->deleted(194, (void*)this); }
 };
 void xcall_QMenuItem(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QMenuItem *xself = (x_QMenuItem*)obj;

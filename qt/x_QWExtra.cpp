@@ -13,13 +13,13 @@ public:
     x_QWExtra() : QWExtra() {
     }
     static void x_1(Smoke::Stack x) {
-	// QWExtra(QWExtra&)
-	x_QWExtra* xret = new x_QWExtra(*(QWExtra *)x[1].s_class);
+	// QWExtra(const QWExtra&)
+	x_QWExtra* xret = new x_QWExtra(*(const QWExtra *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QWExtra(QWExtra& x1) : QWExtra(x1) {
+    x_QWExtra(const QWExtra& x1) : QWExtra(x1) {
     }
-    ~x_QWExtra() { qt_Smoke->binding->deleted(351, (void*)this); }
+    ~x_QWExtra() { qt_Smoke->binding->deleted(356, (void*)this); }
 };
 void xcall_QWExtra(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QWExtra *xself = (x_QWExtra*)obj;

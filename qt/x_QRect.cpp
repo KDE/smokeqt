@@ -312,13 +312,13 @@ public:
 	x[0].s_bool = xret;
     }
     static void x_59(Smoke::Stack x) {
-	// QRect(QRect&)
-	x_QRect* xret = new x_QRect(*(QRect *)x[1].s_class);
+	// QRect(const QRect&)
+	x_QRect* xret = new x_QRect(*(const QRect *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QRect(QRect& x1) : QRect(x1) {
+    x_QRect(const QRect& x1) : QRect(x1) {
     }
-    ~x_QRect() { qt_Smoke->binding->deleted(241, (void*)this); }
+    ~x_QRect() { qt_Smoke->binding->deleted(244, (void*)this); }
 };
 void xcall_QRect(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QRect *xself = (x_QRect*)obj;

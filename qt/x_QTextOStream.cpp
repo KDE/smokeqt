@@ -20,7 +20,7 @@ public:
     }
     x_QTextOStream(QByteArray x1) : QTextOStream(x1) {
     }
-    ~x_QTextOStream() { qt_Smoke->binding->deleted(324, (void*)this); }
+    ~x_QTextOStream() { qt_Smoke->binding->deleted(327, (void*)this); }
 };
 void xcall_QTextOStream(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QTextOStream *xself = (x_QTextOStream*)obj;

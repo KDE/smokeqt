@@ -19,11 +19,11 @@ public:
 	x[0].s_voidp = (void*)xret;
     }
     static void x_2(Smoke::Stack x) {
-	// QAsciiBucket(QAsciiBucket&)
-	x_QAsciiBucket* xret = new x_QAsciiBucket(*(QAsciiBucket *)x[1].s_class);
+	// QAsciiBucket(const QAsciiBucket&)
+	x_QAsciiBucket* xret = new x_QAsciiBucket(*(const QAsciiBucket *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QAsciiBucket(QAsciiBucket& x1) : QAsciiBucket(x1) {
+    x_QAsciiBucket(const QAsciiBucket& x1) : QAsciiBucket(x1) {
     }
     ~x_QAsciiBucket() { qt_Smoke->binding->deleted(5, (void*)this); }
 };

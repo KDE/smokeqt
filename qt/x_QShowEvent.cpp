@@ -13,13 +13,13 @@ public:
     x_QShowEvent() : QShowEvent() {
     }
     static void x_1(Smoke::Stack x) {
-	// QShowEvent(QShowEvent&)
-	x_QShowEvent* xret = new x_QShowEvent(*(QShowEvent *)x[1].s_class);
+	// QShowEvent(const QShowEvent&)
+	x_QShowEvent* xret = new x_QShowEvent(*(const QShowEvent *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QShowEvent(QShowEvent& x1) : QShowEvent(x1) {
+    x_QShowEvent(const QShowEvent& x1) : QShowEvent(x1) {
     }
-    ~x_QShowEvent() { qt_Smoke->binding->deleted(255, (void*)this); }
+    ~x_QShowEvent() { qt_Smoke->binding->deleted(258, (void*)this); }
 };
 void xcall_QShowEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QShowEvent *xself = (x_QShowEvent*)obj;

@@ -13,13 +13,13 @@ public:
     x_QGArray__array_data() : QGArray::array_data() {
     }
     static void x_1(Smoke::Stack x) {
-	// array_data(array_data&)
-	x_QGArray__array_data* xret = new x_QGArray__array_data(*(array_data *)x[1].s_voidp);
+	// array_data(const QGArray::array_data&)
+	x_QGArray__array_data* xret = new x_QGArray__array_data(*(const QGArray::array_data *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QGArray__array_data(array_data& x1) : QGArray::array_data(x1) {
+    x_QGArray__array_data(const QGArray::array_data& x1) : QGArray::array_data(x1) {
     }
-    ~x_QGArray__array_data() { qt_Smoke->binding->deleted(124, (void*)this); }
+    ~x_QGArray__array_data() { qt_Smoke->binding->deleted(126, (void*)this); }
 };
 void xcall_QGArray__array_data(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QGArray__array_data *xself = (x_QGArray__array_data*)obj;

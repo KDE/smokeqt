@@ -19,13 +19,13 @@ public:
 	x[0].s_voidp = (void*)xret;
     }
     static void x_2(Smoke::Stack x) {
-	// QPtrBucket(QPtrBucket&)
-	x_QPtrBucket* xret = new x_QPtrBucket(*(QPtrBucket *)x[1].s_class);
+	// QPtrBucket(const QPtrBucket&)
+	x_QPtrBucket* xret = new x_QPtrBucket(*(const QPtrBucket *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QPtrBucket(QPtrBucket& x1) : QPtrBucket(x1) {
+    x_QPtrBucket(const QPtrBucket& x1) : QPtrBucket(x1) {
     }
-    ~x_QPtrBucket() { qt_Smoke->binding->deleted(236, (void*)this); }
+    ~x_QPtrBucket() { qt_Smoke->binding->deleted(239, (void*)this); }
 };
 void xcall_QPtrBucket(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QPtrBucket *xself = (x_QPtrBucket*)obj;

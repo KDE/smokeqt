@@ -82,13 +82,13 @@ public:
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     static void x_14(Smoke::Stack x) {
-	// QMouseEvent(QMouseEvent&)
-	x_QMouseEvent* xret = new x_QMouseEvent(*(QMouseEvent *)x[1].s_class);
+	// QMouseEvent(const QMouseEvent&)
+	x_QMouseEvent* xret = new x_QMouseEvent(*(const QMouseEvent *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QMouseEvent(QMouseEvent& x1) : QMouseEvent(x1) {
+    x_QMouseEvent(const QMouseEvent& x1) : QMouseEvent(x1) {
     }
-    ~x_QMouseEvent() { qt_Smoke->binding->deleted(203, (void*)this); }
+    ~x_QMouseEvent() { qt_Smoke->binding->deleted(206, (void*)this); }
 };
 void xcall_QMouseEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QMouseEvent *xself = (x_QMouseEvent*)obj;

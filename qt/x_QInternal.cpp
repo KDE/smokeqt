@@ -40,15 +40,15 @@ public:
     x_QInternal() : QInternal() {
     }
     static void x_10(Smoke::Stack x) {
-	// QInternal(QInternal&)
-	x_QInternal* xret = new x_QInternal(*(QInternal *)x[1].s_class);
+	// QInternal(const QInternal&)
+	x_QInternal* xret = new x_QInternal(*(const QInternal *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QInternal(QInternal& x1) : QInternal(x1) {
+    x_QInternal(const QInternal& x1) : QInternal(x1) {
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {
-	  case 355: //QInternal::PaintDeviceFlags
+	  case 312: //QInternal::PaintDeviceFlags
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QInternal::PaintDeviceFlags;
@@ -66,7 +66,7 @@ public:
 	    break;
 	}
     }
-    ~x_QInternal() { qt_Smoke->binding->deleted(166, (void*)this); }
+    ~x_QInternal() { qt_Smoke->binding->deleted(168, (void*)this); }
 };
 void xenum_QInternal(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
     x_QInternal::xenum_operation(xop, xtype, xdata, xvalue);

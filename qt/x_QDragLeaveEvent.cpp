@@ -13,13 +13,13 @@ public:
     x_QDragLeaveEvent() : QDragLeaveEvent() {
     }
     static void x_1(Smoke::Stack x) {
-	// QDragLeaveEvent(QDragLeaveEvent&)
-	x_QDragLeaveEvent* xret = new x_QDragLeaveEvent(*(QDragLeaveEvent *)x[1].s_class);
+	// QDragLeaveEvent(const QDragLeaveEvent&)
+	x_QDragLeaveEvent* xret = new x_QDragLeaveEvent(*(const QDragLeaveEvent *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QDragLeaveEvent(QDragLeaveEvent& x1) : QDragLeaveEvent(x1) {
+    x_QDragLeaveEvent(const QDragLeaveEvent& x1) : QDragLeaveEvent(x1) {
     }
-    ~x_QDragLeaveEvent() { qt_Smoke->binding->deleted(97, (void*)this); }
+    ~x_QDragLeaveEvent() { qt_Smoke->binding->deleted(99, (void*)this); }
 };
 void xcall_QDragLeaveEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QDragLeaveEvent *xself = (x_QDragLeaveEvent*)obj;

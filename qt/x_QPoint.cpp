@@ -91,13 +91,13 @@ public:
 	x[0].s_class = (void*)&xret;
     }
     static void x_16(Smoke::Stack x) {
-	// QPoint(QPoint&)
-	x_QPoint* xret = new x_QPoint(*(QPoint *)x[1].s_class);
+	// QPoint(const QPoint&)
+	x_QPoint* xret = new x_QPoint(*(const QPoint *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QPoint(QPoint& x1) : QPoint(x1) {
+    x_QPoint(const QPoint& x1) : QPoint(x1) {
     }
-    ~x_QPoint() { qt_Smoke->binding->deleted(227, (void*)this); }
+    ~x_QPoint() { qt_Smoke->binding->deleted(230, (void*)this); }
 };
 void xcall_QPoint(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QPoint *xself = (x_QPoint*)obj;

@@ -75,7 +75,7 @@ public:
 	QPtrCollection::Item xret = this->QGListIterator::operator-=((uint)x[1].s_uint);
 	x[0].s_voidp = (void*)new QPtrCollection::Item(xret);
     }
-    ~x_QGListIterator() { qt_Smoke->binding->deleted(130, (void*)this); }
+    ~x_QGListIterator() { qt_Smoke->binding->deleted(132, (void*)this); }
 };
 void xcall_QGListIterator(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QGListIterator *xself = (x_QGListIterator*)obj;

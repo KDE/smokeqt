@@ -137,11 +137,11 @@ public:
 	x[0].s_bool = xret;
     }
     static void x_25(Smoke::Stack x) {
-	// QDate(QDate&)
-	x_QDate* xret = new x_QDate(*(QDate *)x[1].s_class);
+	// QDate(const QDate&)
+	x_QDate* xret = new x_QDate(*(const QDate *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QDate(QDate& x1) : QDate(x1) {
+    x_QDate(const QDate& x1) : QDate(x1) {
     }
     static void x_26(Smoke::Stack x) {
 	// monthName(int)
@@ -208,7 +208,7 @@ public:
 	QDate::julianToGregorian((uint)x[1].s_uint,*(int *)x[2].s_voidp,*(int *)x[3].s_voidp,*(int *)x[4].s_voidp);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    ~x_QDate() { qt_Smoke->binding->deleted(62, (void*)this); }
+    ~x_QDate() { qt_Smoke->binding->deleted(63, (void*)this); }
 };
 void xcall_QDate(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QDate *xself = (x_QDate*)obj;

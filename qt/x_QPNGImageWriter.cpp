@@ -76,15 +76,15 @@ public:
 	x[0].s_class = (void*)xret;
     }
     static void x_15(Smoke::Stack x) {
-	// QPNGImageWriter(QPNGImageWriter&)
-	x_QPNGImageWriter* xret = new x_QPNGImageWriter(*(QPNGImageWriter *)x[1].s_class);
+	// QPNGImageWriter(const QPNGImageWriter&)
+	x_QPNGImageWriter* xret = new x_QPNGImageWriter(*(const QPNGImageWriter *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QPNGImageWriter(QPNGImageWriter& x1) : QPNGImageWriter(x1) {
+    x_QPNGImageWriter(const QPNGImageWriter& x1) : QPNGImageWriter(x1) {
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {
-	  case 464: //QPNGImageWriter::DisposalMethod
+	  case 404: //QPNGImageWriter::DisposalMethod
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QPNGImageWriter::DisposalMethod;
@@ -102,7 +102,7 @@ public:
 	    break;
 	}
     }
-    ~x_QPNGImageWriter() { qt_Smoke->binding->deleted(216, (void*)this); }
+    ~x_QPNGImageWriter() { qt_Smoke->binding->deleted(219, (void*)this); }
 };
 void xenum_QPNGImageWriter(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
     x_QPNGImageWriter::xenum_operation(xop, xtype, xdata, xvalue);

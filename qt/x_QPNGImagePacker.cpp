@@ -24,13 +24,13 @@ public:
 	x[0].s_bool = xret;
     }
     static void x_3(Smoke::Stack x) {
-	// QPNGImagePacker(QPNGImagePacker&)
-	x_QPNGImagePacker* xret = new x_QPNGImagePacker(*(QPNGImagePacker *)x[1].s_class);
+	// QPNGImagePacker(const QPNGImagePacker&)
+	x_QPNGImagePacker* xret = new x_QPNGImagePacker(*(const QPNGImagePacker *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QPNGImagePacker(QPNGImagePacker& x1) : QPNGImagePacker(x1) {
+    x_QPNGImagePacker(const QPNGImagePacker& x1) : QPNGImagePacker(x1) {
     }
-    ~x_QPNGImagePacker() { qt_Smoke->binding->deleted(215, (void*)this); }
+    ~x_QPNGImagePacker() { qt_Smoke->binding->deleted(218, (void*)this); }
 };
 void xcall_QPNGImagePacker(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QPNGImagePacker *xself = (x_QPNGImagePacker*)obj;

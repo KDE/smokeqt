@@ -9,148 +9,154 @@
 class x_QPointArray : public QPointArray {
 public:
     static void x_0(Smoke::Stack x) {
+	x[0].s_class = (void*)new uint(QPointArray::splen);
+    }
+    static void x_1(Smoke::Stack x) {
+	x[0].s_class = (void*)new void*(QPointArray::sp);
+    }
+    static void x_2(Smoke::Stack x) {
 	// QPointArray()
 	x_QPointArray* xret = new x_QPointArray();
 	x[0].s_class = (void*)xret;
     }
     x_QPointArray() : QPointArray() {
     }
-    static void x_1(Smoke::Stack x) {
+    static void x_3(Smoke::Stack x) {
 	// QPointArray(int)
 	x_QPointArray* xret = new x_QPointArray((int)x[1].s_int);
 	x[0].s_class = (void*)xret;
     }
     x_QPointArray(int x1) : QPointArray(x1) {
     }
-    static void x_2(Smoke::Stack x) {
+    static void x_4(Smoke::Stack x) {
 	// QPointArray(const QPointArray&)
 	x_QPointArray* xret = new x_QPointArray(*(const QPointArray *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QPointArray(const QPointArray& x1) : QPointArray(x1) {
     }
-    static void x_3(Smoke::Stack x) {
+    static void x_5(Smoke::Stack x) {
 	// QPointArray(const QRect&, bool)
 	x_QPointArray* xret = new x_QPointArray(*(const QRect *)x[1].s_class,(bool)x[2].s_bool);
 	x[0].s_class = (void*)xret;
     }
     x_QPointArray(const QRect& x1, bool x2) : QPointArray(x1, x2) {
     }
-    static void x_4(Smoke::Stack x) {
+    static void x_6(Smoke::Stack x) {
 	// QPointArray(const QRect&)
 	x_QPointArray* xret = new x_QPointArray(*(const QRect *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QPointArray(const QRect& x1) : QPointArray(x1) {
     }
-    static void x_5(Smoke::Stack x) {
+    static void x_7(Smoke::Stack x) {
 	// QPointArray(int, const QCOORD*)
 	x_QPointArray* xret = new x_QPointArray((int)x[1].s_int,(const QCOORD*)x[2].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QPointArray(int x1, const QCOORD* x2) : QPointArray(x1, x2) {
     }
-    void x_6(Smoke::Stack x) {
+    void x_8(Smoke::Stack x) {
 	// operator=(const QPointArray&)
 	QPointArray& xret = this->QPointArray::operator=(*(const QPointArray *)x[1].s_class);
 	x[0].s_class = (void*)&xret;
     }
-    void x_7(Smoke::Stack x) const {
+    void x_9(Smoke::Stack x) const {
 	// copy()
 	QPointArray xret = this->QPointArray::copy();
 	x[0].s_class = (void*)new QPointArray(xret);
     }
-    void x_8(Smoke::Stack x) {
+    void x_10(Smoke::Stack x) {
 	// translate(int, int)
 	this->QPointArray::translate((int)x[1].s_int,(int)x[2].s_int);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_9(Smoke::Stack x) const {
+    void x_11(Smoke::Stack x) const {
 	// boundingRect()
 	QRect xret = this->QPointArray::boundingRect();
 	x[0].s_class = (void*)new QRect(xret);
     }
-    void x_10(Smoke::Stack x) const {
+    void x_12(Smoke::Stack x) const {
 	// point(uint, int*, int*)
 	this->QPointArray::point((uint)x[1].s_uint,(int*)x[2].s_voidp,(int*)x[3].s_voidp);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_11(Smoke::Stack x) const {
+    void x_13(Smoke::Stack x) const {
 	// point(uint)
 	QPoint xret = this->QPointArray::point((uint)x[1].s_uint);
 	x[0].s_class = (void*)new QPoint(xret);
     }
-    void x_12(Smoke::Stack x) {
+    void x_14(Smoke::Stack x) {
 	// setPoint(uint, int, int)
 	this->QPointArray::setPoint((uint)x[1].s_uint,(int)x[2].s_int,(int)x[3].s_int);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_13(Smoke::Stack x) {
+    void x_15(Smoke::Stack x) {
 	// setPoint(uint, const QPoint&)
 	this->QPointArray::setPoint((uint)x[1].s_uint,*(const QPoint *)x[2].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_14(Smoke::Stack x) {
+    void x_16(Smoke::Stack x) {
 	// setPoints(int, const QCOORD*)
 	bool xret = this->QPointArray::setPoints((int)x[1].s_int,(const QCOORD*)x[2].s_voidp);
 	x[0].s_bool = xret;
     }
-    void x_15(Smoke::Stack x) {
+    void x_17(Smoke::Stack x) {
 	// putPoints(int, int, const QCOORD*)
 	bool xret = this->QPointArray::putPoints((int)x[1].s_int,(int)x[2].s_int,(const QCOORD*)x[3].s_voidp);
 	x[0].s_bool = xret;
     }
-    void x_16(Smoke::Stack x) {
+    void x_18(Smoke::Stack x) {
 	// putPoints(int, int, const QPointArray&, int)
 	bool xret = this->QPointArray::putPoints((int)x[1].s_int,(int)x[2].s_int,*(const QPointArray *)x[3].s_class,(int)x[4].s_int);
 	x[0].s_bool = xret;
     }
-    void x_17(Smoke::Stack x) {
+    void x_19(Smoke::Stack x) {
 	// putPoints(int, int, const QPointArray&)
 	bool xret = this->QPointArray::putPoints((int)x[1].s_int,(int)x[2].s_int,*(const QPointArray *)x[3].s_class);
 	x[0].s_bool = xret;
     }
-    void x_18(Smoke::Stack x) {
+    void x_20(Smoke::Stack x) {
 	// makeArc(int, int, int, int, int, int)
 	this->QPointArray::makeArc((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int,(int)x[6].s_int);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_19(Smoke::Stack x) {
+    void x_21(Smoke::Stack x) {
 	// makeEllipse(int, int, int, int)
 	this->QPointArray::makeEllipse((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_20(Smoke::Stack x) {
+    void x_22(Smoke::Stack x) {
 	// makeArc(int, int, int, int, int, int, const QWMatrix&)
 	this->QPointArray::makeArc((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int,(int)x[6].s_int,*(const QWMatrix *)x[7].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_21(Smoke::Stack x) const {
+    void x_23(Smoke::Stack x) const {
 	// cubicBezier()
 	QPointArray xret = this->QPointArray::cubicBezier();
 	x[0].s_class = (void*)new QPointArray(xret);
     }
-    void x_22(Smoke::Stack x) const {
+    void x_24(Smoke::Stack x) const {
 	// shortPoints(int, int)
 	void* xret = this->QPointArray::shortPoints((int)x[1].s_int,(int)x[2].s_int);
 	x[0].s_voidp = (void*)xret;
     }
-    void x_23(Smoke::Stack x) const {
+    void x_25(Smoke::Stack x) const {
 	// shortPoints(int)
 	void* xret = this->QPointArray::shortPoints((int)x[1].s_int);
 	x[0].s_voidp = (void*)xret;
     }
-    void x_24(Smoke::Stack x) const {
+    void x_26(Smoke::Stack x) const {
 	// shortPoints()
 	void* xret = this->QPointArray::shortPoints();
 	x[0].s_voidp = (void*)xret;
     }
-    static void x_25(Smoke::Stack x) {
+    static void x_27(Smoke::Stack x) {
 	// cleanBuffers()
 	QPointArray::cleanBuffers();
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    ~x_QPointArray() { qt_Smoke->binding->deleted(228, (void*)this); }
+    ~x_QPointArray() { qt_Smoke->binding->deleted(231, (void*)this); }
 };
 void xcall_QPointArray(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QPointArray *xself = (x_QPointArray*)obj;
@@ -161,8 +167,8 @@ void xcall_QPointArray(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 3: x_QPointArray::x_3(args);	break;
 	case 4: x_QPointArray::x_4(args);	break;
 	case 5: x_QPointArray::x_5(args);	break;
-	case 6: xself->x_6(args);	break;
-	case 7: xself->x_7(args);	break;
+	case 6: x_QPointArray::x_6(args);	break;
+	case 7: x_QPointArray::x_7(args);	break;
 	case 8: xself->x_8(args);	break;
 	case 9: xself->x_9(args);	break;
 	case 10: xself->x_10(args);	break;
@@ -180,7 +186,9 @@ void xcall_QPointArray(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 22: xself->x_22(args);	break;
 	case 23: xself->x_23(args);	break;
 	case 24: xself->x_24(args);	break;
-	case 25: x_QPointArray::x_25(args);	break;
-	case 26: delete (QPointArray*)xself;	break;
+	case 25: xself->x_25(args);	break;
+	case 26: xself->x_26(args);	break;
+	case 27: x_QPointArray::x_27(args);	break;
+	case 28: delete (QPointArray*)xself;	break;
     }
 }

@@ -182,7 +182,7 @@ public:
 	int xret = this->QRegExp::pos();
 	x[0].s_int = xret;
     }
-    ~x_QRegExp() { qt_Smoke->binding->deleted(242, (void*)this); }
+    ~x_QRegExp() { qt_Smoke->binding->deleted(245, (void*)this); }
 };
 void xcall_QRegExp(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QRegExp *xself = (x_QRegExp*)obj;

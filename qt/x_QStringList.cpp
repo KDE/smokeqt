@@ -103,7 +103,7 @@ public:
 	QStringList xret = QStringList::split(*(const QRegExp *)x[1].s_class,*(const QString *)x[2].s_voidp);
 	x[0].s_class = (void*)new QStringList(xret);
     }
-    ~x_QStringList() { qt_Smoke->binding->deleted(298, (void*)this); }
+    ~x_QStringList() { qt_Smoke->binding->deleted(301, (void*)this); }
 };
 void xcall_QStringList(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QStringList *xself = (x_QStringList*)obj;

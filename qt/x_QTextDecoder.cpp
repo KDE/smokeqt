@@ -14,24 +14,24 @@ public:
     x_QTextDecoder() : QTextDecoder() {
     }
     static void x_1(Smoke::Stack x) {
-	// QTextDecoder(QTextDecoder&)
-	x_QTextDecoder* xret = new x_QTextDecoder(*(QTextDecoder *)x[1].s_class);
+	// QTextDecoder(const QTextDecoder&)
+	x_QTextDecoder* xret = new x_QTextDecoder(*(const QTextDecoder *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QTextDecoder(QTextDecoder& x1) : QTextDecoder(x1) {
+    x_QTextDecoder(const QTextDecoder& x1) : QTextDecoder(x1) {
     }
     virtual QString toUnicode(const char* x1, int x2) {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)x1;
 	x[2].s_int = x2;
-	qt_Smoke->binding->callMethod(10160, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(10195, (void*)this, x, true /*pure virtual*/);
 	QString *xptr = (QString *)x[0].s_class;
 	QString xret(*xptr);
 	delete xptr;
 	return xret;
 	// ABSTRACT
     }
-    ~x_QTextDecoder() { qt_Smoke->binding->deleted(319, (void*)this); }
+    ~x_QTextDecoder() { qt_Smoke->binding->deleted(322, (void*)this); }
 };
 void xcall_QTextDecoder(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QTextDecoder *xself = (x_QTextDecoder*)obj;

@@ -125,27 +125,27 @@ public:
     }
     virtual void clear() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(3571, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(3594, (void*)this, x)) return;
 	this->QGCache::clear();
     }
     virtual uint count() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(3566, (void*)this, x)) return (uint)x[0].s_uint;
+	if(qt_Smoke->binding->callMethod(3589, (void*)this, x)) return (uint)x[0].s_uint;
 	return this->QGCache::count();
     }
-    virtual void deleteItem(QPtrCollection::Item x1) {
+    virtual void deleteItem(Item x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	qt_Smoke->binding->callMethod(7452, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(7485, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }
-    virtual QPtrCollection::Item newItem(QPtrCollection::Item x1) {
+    virtual Item newItem(Item x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(7451, (void*)this, x)) {
-	    QPtrCollection::Item *xptr = (QPtrCollection::Item *)x[0].s_class;
-	    QPtrCollection::Item xret(*xptr);
+	if(qt_Smoke->binding->callMethod(7484, (void*)this, x)) {
+	    Item *xptr = (Item *)x[0].s_class;
+	    Item xret(*xptr);
 	    delete xptr;
 	    return xret;
 	}
@@ -153,7 +153,7 @@ public:
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {
-	  case 278: //QGCache::KeyType
+	  case 248: //QGCache::KeyType
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QGCache::KeyType;
@@ -171,7 +171,7 @@ public:
 	    break;
 	}
     }
-    ~x_QGCache() { qt_Smoke->binding->deleted(125, (void*)this); }
+    ~x_QGCache() { qt_Smoke->binding->deleted(127, (void*)this); }
 };
 void xenum_QGCache(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
     x_QGCache::xenum_operation(xop, xtype, xdata, xvalue);

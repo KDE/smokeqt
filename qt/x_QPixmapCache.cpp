@@ -15,11 +15,11 @@ public:
     x_QPixmapCache() : QPixmapCache() {
     }
     static void x_1(Smoke::Stack x) {
-	// QPixmapCache(QPixmapCache&)
-	x_QPixmapCache* xret = new x_QPixmapCache(*(QPixmapCache *)x[1].s_class);
+	// QPixmapCache(const QPixmapCache&)
+	x_QPixmapCache* xret = new x_QPixmapCache(*(const QPixmapCache *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QPixmapCache(QPixmapCache& x1) : QPixmapCache(x1) {
+    x_QPixmapCache(const QPixmapCache& x1) : QPixmapCache(x1) {
     }
     static void x_2(Smoke::Stack x) {
 	// cacheLimit()
@@ -56,7 +56,7 @@ public:
 	QPixmapCache::clear();
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    ~x_QPixmapCache() { qt_Smoke->binding->deleted(225, (void*)this); }
+    ~x_QPixmapCache() { qt_Smoke->binding->deleted(228, (void*)this); }
 };
 void xcall_QPixmapCache(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QPixmapCache *xself = (x_QPixmapCache*)obj;

@@ -52,7 +52,7 @@ public:
     virtual QDomNode item(int x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(2690, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(2713, (void*)this, x)) {
 	    QDomNode *xptr = (QDomNode *)x[0].s_class;
 	    QDomNode xret(*xptr);
 	    delete xptr;
@@ -62,10 +62,10 @@ public:
     }
     virtual uint length() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(2691, (void*)this, x)) return (uint)x[0].s_uint;
+	if(qt_Smoke->binding->callMethod(2714, (void*)this, x)) return (uint)x[0].s_uint;
 	return this->QDomNodeList::length();
     }
-    ~x_QDomNodeList() { qt_Smoke->binding->deleted(91, (void*)this); }
+    ~x_QDomNodeList() { qt_Smoke->binding->deleted(93, (void*)this); }
 };
 void xcall_QDomNodeList(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QDomNodeList *xself = (x_QDomNodeList*)obj;

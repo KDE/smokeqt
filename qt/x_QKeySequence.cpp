@@ -59,7 +59,7 @@ public:
 	bool xret = this->QKeySequence::operator!=(*(const QKeySequence *)x[1].s_class);
 	x[0].s_bool = xret;
     }
-    ~x_QKeySequence() { qt_Smoke->binding->deleted(170, (void*)this); }
+    ~x_QKeySequence() { qt_Smoke->binding->deleted(172, (void*)this); }
 };
 void xcall_QKeySequence(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QKeySequence *xself = (x_QKeySequence*)obj;

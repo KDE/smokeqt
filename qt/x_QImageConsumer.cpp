@@ -15,28 +15,28 @@ public:
     x_QImageConsumer() : QImageConsumer() {
     }
     static void x_1(Smoke::Stack x) {
-	// QImageConsumer(QImageConsumer&)
-	x_QImageConsumer* xret = new x_QImageConsumer(*(QImageConsumer *)x[1].s_class);
+	// QImageConsumer(const QImageConsumer&)
+	x_QImageConsumer* xret = new x_QImageConsumer(*(const QImageConsumer *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QImageConsumer(QImageConsumer& x1) : QImageConsumer(x1) {
+    x_QImageConsumer(const QImageConsumer& x1) : QImageConsumer(x1) {
     }
     virtual void changed(const QRect& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	qt_Smoke->binding->callMethod(4518, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(4542, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }
     virtual void end() {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(4517, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(4541, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }
     virtual void frameDone() {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(4519, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(4543, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }
@@ -44,21 +44,21 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_class = (void*)&x1;
 	x[2].s_class = (void*)&x2;
-	qt_Smoke->binding->callMethod(4520, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(4544, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }
     virtual void setFramePeriod(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	qt_Smoke->binding->callMethod(4522, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(4546, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }
     virtual void setLooping(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	qt_Smoke->binding->callMethod(4521, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(4545, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }
@@ -66,11 +66,11 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_int = x2;
-	qt_Smoke->binding->callMethod(4523, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(4547, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }
-    ~x_QImageConsumer() { qt_Smoke->binding->deleted(155, (void*)this); }
+    ~x_QImageConsumer() { qt_Smoke->binding->deleted(157, (void*)this); }
 };
 void xcall_QImageConsumer(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QImageConsumer *xself = (x_QImageConsumer*)obj;

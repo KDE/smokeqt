@@ -12,276 +12,279 @@
 
 class x_QSqlDatabase : public QSqlDatabase {
 public:
-    void x_0(Smoke::Stack x) const {
+    static void x_0(Smoke::Stack x) {
+	x[0].s_class = (void*)new const char * const(QSqlDatabase::defaultConnection);
+    }
+    void x_1(Smoke::Stack x) const {
 	// metaObject()
 	QMetaObject* xret = this->QSqlDatabase::metaObject();
 	x[0].s_class = (void*)xret;
     }
-    void x_1(Smoke::Stack x) const {
+    void x_2(Smoke::Stack x) const {
 	// className()
 	const char* xret = this->QSqlDatabase::className();
 	x[0].s_voidp = (void*)xret;
     }
-    void x_2(Smoke::Stack x) {
+    void x_3(Smoke::Stack x) {
 	// qt_cast(const char*)
 	void* xret = this->QSqlDatabase::qt_cast((const char*)x[1].s_voidp);
 	x[0].s_voidp = (void*)xret;
     }
-    void x_3(Smoke::Stack x) {
+    void x_4(Smoke::Stack x) {
 	// qt_invoke(int, QUObject*)
 	bool xret = this->QSqlDatabase::qt_invoke((int)x[1].s_int,(QUObject*)x[2].s_voidp);
 	x[0].s_bool = xret;
     }
-    void x_4(Smoke::Stack x) {
+    void x_5(Smoke::Stack x) {
 	// qt_emit(int, QUObject*)
 	bool xret = this->QSqlDatabase::qt_emit((int)x[1].s_int,(QUObject*)x[2].s_voidp);
 	x[0].s_bool = xret;
     }
-    void x_5(Smoke::Stack x) {
+    void x_6(Smoke::Stack x) {
 	// qt_property(int, int, QVariant*)
 	bool xret = this->QSqlDatabase::qt_property((int)x[1].s_int,(int)x[2].s_int,(QVariant*)x[3].s_class);
 	x[0].s_bool = xret;
     }
-    void x_6(Smoke::Stack x) {
+    void x_7(Smoke::Stack x) {
 	// qObject()
 	QObject* xret = this->QSqlDatabase::qObject();
 	x[0].s_class = (void*)xret;
     }
-    void x_7(Smoke::Stack x) {
+    void x_8(Smoke::Stack x) {
 	// open()
 	bool xret = this->QSqlDatabase::open();
 	x[0].s_bool = xret;
     }
-    void x_8(Smoke::Stack x) {
+    void x_9(Smoke::Stack x) {
 	// open(const QString&, const QString&)
 	bool xret = this->QSqlDatabase::open(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
 	x[0].s_bool = xret;
     }
-    void x_9(Smoke::Stack x) {
+    void x_10(Smoke::Stack x) {
 	// close()
 	this->QSqlDatabase::close();
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_10(Smoke::Stack x) const {
+    void x_11(Smoke::Stack x) const {
 	// isOpen()
 	bool xret = this->QSqlDatabase::isOpen();
 	x[0].s_bool = xret;
     }
-    void x_11(Smoke::Stack x) const {
+    void x_12(Smoke::Stack x) const {
 	// isOpenError()
 	bool xret = this->QSqlDatabase::isOpenError();
 	x[0].s_bool = xret;
     }
-    void x_12(Smoke::Stack x) const {
+    void x_13(Smoke::Stack x) const {
 	// tables()
 	QStringList xret = this->QSqlDatabase::tables();
 	x[0].s_class = (void*)new QStringList(xret);
     }
-    void x_13(Smoke::Stack x) const {
+    void x_14(Smoke::Stack x) const {
 	// primaryIndex(const QString&)
 	QSqlIndex xret = this->QSqlDatabase::primaryIndex(*(const QString *)x[1].s_voidp);
 	x[0].s_class = (void*)new QSqlIndex(xret);
     }
-    void x_14(Smoke::Stack x) const {
+    void x_15(Smoke::Stack x) const {
 	// record(const QString&)
 	QSqlRecord xret = this->QSqlDatabase::record(*(const QString *)x[1].s_voidp);
 	x[0].s_class = (void*)new QSqlRecord(xret);
     }
-    void x_15(Smoke::Stack x) const {
+    void x_16(Smoke::Stack x) const {
 	// record(const QSqlQuery&)
 	QSqlRecord xret = this->QSqlDatabase::record(*(const QSqlQuery *)x[1].s_class);
 	x[0].s_class = (void*)new QSqlRecord(xret);
     }
-    void x_16(Smoke::Stack x) const {
+    void x_17(Smoke::Stack x) const {
 	// recordInfo(const QString&)
 	QSqlRecordInfo xret = this->QSqlDatabase::recordInfo(*(const QString *)x[1].s_voidp);
 	x[0].s_class = (void*)new QSqlRecordInfo(xret);
     }
-    void x_17(Smoke::Stack x) const {
+    void x_18(Smoke::Stack x) const {
 	// recordInfo(const QSqlQuery&)
 	QSqlRecordInfo xret = this->QSqlDatabase::recordInfo(*(const QSqlQuery *)x[1].s_class);
 	x[0].s_class = (void*)new QSqlRecordInfo(xret);
     }
-    void x_18(Smoke::Stack x) const {
+    void x_19(Smoke::Stack x) const {
 	// exec(const QString&)
 	QSqlQuery xret = this->QSqlDatabase::exec(*(const QString *)x[1].s_voidp);
 	x[0].s_class = (void*)new QSqlQuery(xret);
     }
-    void x_19(Smoke::Stack x) const {
+    void x_20(Smoke::Stack x) const {
 	// exec()
 	QSqlQuery xret = this->QSqlDatabase::exec();
 	x[0].s_class = (void*)new QSqlQuery(xret);
     }
-    void x_20(Smoke::Stack x) const {
+    void x_21(Smoke::Stack x) const {
 	// lastError()
 	QSqlError xret = this->QSqlDatabase::lastError();
 	x[0].s_class = (void*)new QSqlError(xret);
     }
-    void x_21(Smoke::Stack x) {
+    void x_22(Smoke::Stack x) {
 	// transaction()
 	bool xret = this->QSqlDatabase::transaction();
 	x[0].s_bool = xret;
     }
-    void x_22(Smoke::Stack x) {
+    void x_23(Smoke::Stack x) {
 	// commit()
 	bool xret = this->QSqlDatabase::commit();
 	x[0].s_bool = xret;
     }
-    void x_23(Smoke::Stack x) {
+    void x_24(Smoke::Stack x) {
 	// rollback()
 	bool xret = this->QSqlDatabase::rollback();
 	x[0].s_bool = xret;
     }
-    void x_24(Smoke::Stack x) {
+    void x_25(Smoke::Stack x) {
 	// setDatabaseName(const QString&)
 	this->QSqlDatabase::setDatabaseName(*(const QString *)x[1].s_voidp);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_25(Smoke::Stack x) {
+    void x_26(Smoke::Stack x) {
 	// setUserName(const QString&)
 	this->QSqlDatabase::setUserName(*(const QString *)x[1].s_voidp);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_26(Smoke::Stack x) {
+    void x_27(Smoke::Stack x) {
 	// setPassword(const QString&)
 	this->QSqlDatabase::setPassword(*(const QString *)x[1].s_voidp);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_27(Smoke::Stack x) {
+    void x_28(Smoke::Stack x) {
 	// setHostName(const QString&)
 	this->QSqlDatabase::setHostName(*(const QString *)x[1].s_voidp);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_28(Smoke::Stack x) {
+    void x_29(Smoke::Stack x) {
 	// setPort(int)
 	this->QSqlDatabase::setPort((int)x[1].s_int);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_29(Smoke::Stack x) const {
+    void x_30(Smoke::Stack x) const {
 	// databaseName()
 	QString xret = this->QSqlDatabase::databaseName();
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    void x_30(Smoke::Stack x) const {
+    void x_31(Smoke::Stack x) const {
 	// userName()
 	QString xret = this->QSqlDatabase::userName();
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    void x_31(Smoke::Stack x) const {
+    void x_32(Smoke::Stack x) const {
 	// password()
 	QString xret = this->QSqlDatabase::password();
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    void x_32(Smoke::Stack x) const {
+    void x_33(Smoke::Stack x) const {
 	// hostName()
 	QString xret = this->QSqlDatabase::hostName();
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    void x_33(Smoke::Stack x) const {
+    void x_34(Smoke::Stack x) const {
 	// driverName()
 	QString xret = this->QSqlDatabase::driverName();
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    void x_34(Smoke::Stack x) const {
+    void x_35(Smoke::Stack x) const {
 	// port()
 	int xret = this->QSqlDatabase::port();
 	x[0].s_int = xret;
     }
-    void x_35(Smoke::Stack x) const {
+    void x_36(Smoke::Stack x) const {
 	// driver()
 	QSqlDriver* xret = this->QSqlDatabase::driver();
 	x[0].s_class = (void*)xret;
     }
-    static void x_36(Smoke::Stack x) {
+    static void x_37(Smoke::Stack x) {
 	// staticMetaObject()
 	QMetaObject* xret = QSqlDatabase::staticMetaObject();
 	x[0].s_class = (void*)xret;
     }
-    static void x_37(Smoke::Stack x) {
+    static void x_38(Smoke::Stack x) {
 	// tr(const char*, const char*)
 	QString xret = QSqlDatabase::tr((const char*)x[1].s_voidp,(const char*)x[2].s_voidp);
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    static void x_38(Smoke::Stack x) {
+    static void x_39(Smoke::Stack x) {
 	// tr(const char*)
 	QString xret = QSqlDatabase::tr((const char*)x[1].s_voidp);
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    static void x_39(Smoke::Stack x) {
+    static void x_40(Smoke::Stack x) {
 	// trUtf8(const char*, const char*)
 	QString xret = QSqlDatabase::trUtf8((const char*)x[1].s_voidp,(const char*)x[2].s_voidp);
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    static void x_40(Smoke::Stack x) {
+    static void x_41(Smoke::Stack x) {
 	// trUtf8(const char*)
 	QString xret = QSqlDatabase::trUtf8((const char*)x[1].s_voidp);
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    static void x_41(Smoke::Stack x) {
+    static void x_42(Smoke::Stack x) {
 	// addDatabase(const QString&, const QString&)
 	QSqlDatabase* xret = QSqlDatabase::addDatabase(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
 	x[0].s_class = (void*)xret;
     }
-    static void x_42(Smoke::Stack x) {
+    static void x_43(Smoke::Stack x) {
 	// addDatabase(const QString&)
 	QSqlDatabase* xret = QSqlDatabase::addDatabase(*(const QString *)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
-    static void x_43(Smoke::Stack x) {
+    static void x_44(Smoke::Stack x) {
 	// database(const QString&, bool)
 	QSqlDatabase* xret = QSqlDatabase::database(*(const QString *)x[1].s_voidp,(bool)x[2].s_bool);
 	x[0].s_class = (void*)xret;
     }
-    static void x_44(Smoke::Stack x) {
+    static void x_45(Smoke::Stack x) {
 	// database(const QString&)
 	QSqlDatabase* xret = QSqlDatabase::database(*(const QString *)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
-    static void x_45(Smoke::Stack x) {
+    static void x_46(Smoke::Stack x) {
 	// database()
 	QSqlDatabase* xret = QSqlDatabase::database();
 	x[0].s_class = (void*)xret;
     }
-    static void x_46(Smoke::Stack x) {
+    static void x_47(Smoke::Stack x) {
 	// removeDatabase(const QString&)
 	QSqlDatabase::removeDatabase(*(const QString *)x[1].s_voidp);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    static void x_47(Smoke::Stack x) {
+    static void x_48(Smoke::Stack x) {
 	// contains(const QString&)
 	bool xret = QSqlDatabase::contains(*(const QString *)x[1].s_voidp);
 	x[0].s_bool = xret;
     }
-    static void x_48(Smoke::Stack x) {
+    static void x_49(Smoke::Stack x) {
 	// contains()
 	bool xret = QSqlDatabase::contains();
 	x[0].s_bool = xret;
     }
-    static void x_49(Smoke::Stack x) {
+    static void x_50(Smoke::Stack x) {
 	// drivers()
 	QStringList xret = QSqlDatabase::drivers();
 	x[0].s_class = (void*)new QStringList(xret);
     }
-    static void x_50(Smoke::Stack x) {
+    static void x_51(Smoke::Stack x) {
 	// registerSqlDriver(const QString&, const QSqlDriverCreatorBase*)
 	QSqlDatabase::registerSqlDriver(*(const QString *)x[1].s_voidp,(const QSqlDriverCreatorBase*)x[2].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    static void x_51(Smoke::Stack x) {
+    static void x_52(Smoke::Stack x) {
 	// QSqlDatabase(const QString&, const QString&, QObject*, const char*)
 	x_QSqlDatabase* xret = new x_QSqlDatabase(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,(QObject*)x[3].s_class,(const char*)x[4].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QSqlDatabase(const QString& x1, const QString& x2, QObject* x3, const char* x4) : QSqlDatabase(x1, x2, x3, x4) {
     }
-    static void x_52(Smoke::Stack x) {
+    static void x_53(Smoke::Stack x) {
 	// QSqlDatabase(const QString&, const QString&, QObject*)
 	x_QSqlDatabase* xret = new x_QSqlDatabase(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,(QObject*)x[3].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QSqlDatabase(const QString& x1, const QString& x2, QObject* x3) : QSqlDatabase(x1, x2, x3) {
     }
-    static void x_53(Smoke::Stack x) {
+    static void x_54(Smoke::Stack x) {
 	// QSqlDatabase(const QString&, const QString&)
 	x_QSqlDatabase* xret = new x_QSqlDatabase(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
 	x[0].s_class = (void*)xret;
@@ -293,66 +296,66 @@ public:
 	x[1].s_voidp = (void*)x1;
 	x[2].s_class = (void*)x2;
 	x[3].s_voidp = (void*)x3;
-	if(qt_Smoke->binding->callMethod(6496, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(6527, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QObject::checkConnectArgs(x1, x2, x3);
     }
     virtual void childEvent(QChildEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(6492, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6523, (void*)this, x)) return;
 	this->QObject::childEvent(x1);
     }
     virtual const char* className() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(8715, (void*)this, x)) return (const char*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(8748, (void*)this, x)) return (const char*)x[0].s_class;
 	return this->QSqlDatabase::className();
     }
     virtual void connectNotify(const char* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(6494, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6525, (void*)this, x)) return;
 	this->QObject::connectNotify(x1);
     }
     virtual void customEvent(QCustomEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(6493, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6524, (void*)this, x)) return;
 	this->QObject::customEvent(x1);
     }
     virtual void disconnectNotify(const char* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(6495, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6526, (void*)this, x)) return;
 	this->QObject::disconnectNotify(x1);
     }
     virtual bool event(QEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(6426, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(6457, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QObject::event(x1);
     }
     virtual bool eventFilter(QObject* x1, QEvent* x2) {
 	Smoke::StackItem x[3];
 	x[1].s_class = (void*)x1;
 	x[2].s_class = (void*)x2;
-	if(qt_Smoke->binding->callMethod(6427, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(6458, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QObject::eventFilter(x1, x2);
     }
     virtual void insertChild(QObject* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(6449, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6480, (void*)this, x)) return;
 	this->QObject::insertChild(x1);
     }
     virtual QMetaObject* metaObject() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(8714, (void*)this, x)) return (QMetaObject*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(8747, (void*)this, x)) return (QMetaObject*)x[0].s_class;
 	return this->QSqlDatabase::metaObject();
     }
     virtual QVariant property(const char* x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(6463, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(6494, (void*)this, x)) {
 	    QVariant *xptr = (QVariant *)x[0].s_class;
 	    QVariant xret(*xptr);
 	    delete xptr;
@@ -363,21 +366,21 @@ public:
     virtual void* qt_cast(const char* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(8716, (void*)this, x)) return (void*)x[0].s_voidp;
+	if(qt_Smoke->binding->callMethod(8749, (void*)this, x)) return (void*)x[0].s_voidp;
 	return this->QSqlDatabase::qt_cast(x1);
     }
     virtual bool qt_emit(int x1, QUObject* x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_voidp = (void*)x2;
-	if(qt_Smoke->binding->callMethod(8718, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(8751, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QSqlDatabase::qt_emit(x1, x2);
     }
     virtual bool qt_invoke(int x1, QUObject* x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_voidp = (void*)x2;
-	if(qt_Smoke->binding->callMethod(8717, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(8750, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QSqlDatabase::qt_invoke(x1, x2);
     }
     virtual bool qt_property(int x1, int x2, QVariant* x3) {
@@ -385,70 +388,70 @@ public:
 	x[1].s_int = x1;
 	x[2].s_int = x2;
 	x[3].s_class = (void*)x3;
-	if(qt_Smoke->binding->callMethod(8719, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(8752, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QSqlDatabase::qt_property(x1, x2, x3);
     }
     virtual void removeChild(QObject* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(6450, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6481, (void*)this, x)) return;
 	this->QObject::removeChild(x1);
     }
     virtual void setDatabaseName(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(8739, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8772, (void*)this, x)) return;
 	this->QSqlDatabase::setDatabaseName(x1);
     }
     virtual void setHostName(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(8742, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8775, (void*)this, x)) return;
 	this->QSqlDatabase::setHostName(x1);
     }
     virtual void setName(const char* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(6432, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6463, (void*)this, x)) return;
 	this->QObject::setName(x1);
     }
     virtual void setPassword(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(8741, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8774, (void*)this, x)) return;
 	this->QSqlDatabase::setPassword(x1);
     }
     virtual void setPort(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(8743, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8776, (void*)this, x)) return;
 	this->QSqlDatabase::setPort(x1);
     }
     virtual bool setProperty(const char* x1, const QVariant& x2) {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)x1;
 	x[2].s_class = (void*)&x2;
-	if(qt_Smoke->binding->callMethod(6462, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(6493, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QObject::setProperty(x1, x2);
     }
     virtual void setUserName(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(8740, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8773, (void*)this, x)) return;
 	this->QSqlDatabase::setUserName(x1);
     }
     virtual void timerEvent(QTimerEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(6491, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6522, (void*)this, x)) return;
 	this->QObject::timerEvent(x1);
     }
-    ~x_QSqlDatabase() { qt_Smoke->binding->deleted(275, (void*)this); }
+    ~x_QSqlDatabase() { qt_Smoke->binding->deleted(278, (void*)this); }
 };
 void xcall_QSqlDatabase(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QSqlDatabase *xself = (x_QSqlDatabase*)obj;
     switch(xi) {
-	case 0: xself->x_0(args);	break;
+	case 0: x_QSqlDatabase::x_0(args);	break;
 	case 1: xself->x_1(args);	break;
 	case 2: xself->x_2(args);	break;
 	case 3: xself->x_3(args);	break;
@@ -484,7 +487,7 @@ void xcall_QSqlDatabase(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 33: xself->x_33(args);	break;
 	case 34: xself->x_34(args);	break;
 	case 35: xself->x_35(args);	break;
-	case 36: x_QSqlDatabase::x_36(args);	break;
+	case 36: xself->x_36(args);	break;
 	case 37: x_QSqlDatabase::x_37(args);	break;
 	case 38: x_QSqlDatabase::x_38(args);	break;
 	case 39: x_QSqlDatabase::x_39(args);	break;
@@ -502,6 +505,7 @@ void xcall_QSqlDatabase(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 51: x_QSqlDatabase::x_51(args);	break;
 	case 52: x_QSqlDatabase::x_52(args);	break;
 	case 53: x_QSqlDatabase::x_53(args);	break;
-	case 54: delete (QSqlDatabase*)xself;	break;
+	case 54: x_QSqlDatabase::x_54(args);	break;
+	case 55: delete (QSqlDatabase*)xself;	break;
     }
 }

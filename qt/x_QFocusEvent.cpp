@@ -44,11 +44,11 @@ public:
 	x[0].s_bool = xret;
     }
     static void x_10(Smoke::Stack x) {
-	// QFocusEvent(QFocusEvent&)
-	x_QFocusEvent* xret = new x_QFocusEvent(*(QFocusEvent *)x[1].s_class);
+	// QFocusEvent(const QFocusEvent&)
+	x_QFocusEvent* xret = new x_QFocusEvent(*(const QFocusEvent *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QFocusEvent(QFocusEvent& x1) : QFocusEvent(x1) {
+    x_QFocusEvent(const QFocusEvent& x1) : QFocusEvent(x1) {
     }
     static void x_11(Smoke::Stack x) {
 	// reason()
@@ -67,7 +67,7 @@ public:
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {
-	  case 253: //QFocusEvent::Reason
+	  case 224: //QFocusEvent::Reason
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QFocusEvent::Reason;
@@ -85,7 +85,7 @@ public:
 	    break;
 	}
     }
-    ~x_QFocusEvent() { qt_Smoke->binding->deleted(115, (void*)this); }
+    ~x_QFocusEvent() { qt_Smoke->binding->deleted(117, (void*)this); }
 };
 void xenum_QFocusEvent(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
     x_QFocusEvent::xenum_operation(xop, xtype, xdata, xvalue);

@@ -221,7 +221,7 @@ public:
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {
-	  case 125: //QDataStream::ByteOrder
+	  case 106: //QDataStream::ByteOrder
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QDataStream::ByteOrder;
@@ -239,7 +239,7 @@ public:
 	    break;
 	}
     }
-    ~x_QDataStream() { qt_Smoke->binding->deleted(59, (void*)this); }
+    ~x_QDataStream() { qt_Smoke->binding->deleted(60, (void*)this); }
 };
 void xenum_QDataStream(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
     x_QDataStream::xenum_operation(xop, xtype, xdata, xvalue);

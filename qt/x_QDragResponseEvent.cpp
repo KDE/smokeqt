@@ -18,13 +18,13 @@ public:
 	x[0].s_bool = xret;
     }
     static void x_2(Smoke::Stack x) {
-	// QDragResponseEvent(QDragResponseEvent&)
-	x_QDragResponseEvent* xret = new x_QDragResponseEvent(*(QDragResponseEvent *)x[1].s_class);
+	// QDragResponseEvent(const QDragResponseEvent&)
+	x_QDragResponseEvent* xret = new x_QDragResponseEvent(*(const QDragResponseEvent *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QDragResponseEvent(QDragResponseEvent& x1) : QDragResponseEvent(x1) {
+    x_QDragResponseEvent(const QDragResponseEvent& x1) : QDragResponseEvent(x1) {
     }
-    ~x_QDragResponseEvent() { qt_Smoke->binding->deleted(101, (void*)this); }
+    ~x_QDragResponseEvent() { qt_Smoke->binding->deleted(103, (void*)this); }
 };
 void xcall_QDragResponseEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QDragResponseEvent *xself = (x_QDragResponseEvent*)obj;

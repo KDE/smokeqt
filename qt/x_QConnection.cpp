@@ -42,7 +42,7 @@ public:
 	int xret = this->QConnection::numArgs();
 	x[0].s_int = xret;
     }
-    ~x_QConnection() { qt_Smoke->binding->deleted(48, (void*)this); }
+    ~x_QConnection() { qt_Smoke->binding->deleted(49, (void*)this); }
 };
 void xcall_QConnection(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QConnection *xself = (x_QConnection*)obj;

@@ -39,13 +39,13 @@ public:
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     static void x_6(Smoke::Stack x) {
-	// QIMEvent(QIMEvent&)
-	x_QIMEvent* xret = new x_QIMEvent(*(QIMEvent *)x[1].s_class);
+	// QIMEvent(const QIMEvent&)
+	x_QIMEvent* xret = new x_QIMEvent(*(const QIMEvent *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QIMEvent(QIMEvent& x1) : QIMEvent(x1) {
+    x_QIMEvent(const QIMEvent& x1) : QIMEvent(x1) {
     }
-    ~x_QIMEvent() { qt_Smoke->binding->deleted(146, (void*)this); }
+    ~x_QIMEvent() { qt_Smoke->binding->deleted(148, (void*)this); }
 };
 void xcall_QIMEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QIMEvent *xself = (x_QIMEvent*)obj;

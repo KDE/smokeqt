@@ -122,16 +122,16 @@ public:
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     static void x_24(Smoke::Stack x) {
-	// QDropEvent(QDropEvent&)
-	x_QDropEvent* xret = new x_QDropEvent(*(QDropEvent *)x[1].s_class);
+	// QDropEvent(const QDropEvent&)
+	x_QDropEvent* xret = new x_QDropEvent(*(const QDropEvent *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QDropEvent(QDropEvent& x1) : QDropEvent(x1) {
+    x_QDropEvent(const QDropEvent& x1) : QDropEvent(x1) {
     }
     virtual QByteArray encodedData(const char* x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(2828, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(2851, (void*)this, x)) {
 	    QByteArray *xptr = (QByteArray *)x[0].s_class;
 	    QByteArray xret(*xptr);
 	    delete xptr;
@@ -142,18 +142,18 @@ public:
     virtual const char* format(int x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(2826, (void*)this, x)) return (const char*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(2849, (void*)this, x)) return (const char*)x[0].s_class;
 	return this->QDropEvent::format(x1);
     }
     virtual bool provides(const char* x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(2829, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(2852, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QDropEvent::provides(x1);
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {
-	  case 225: //QDropEvent::Action
+	  case 202: //QDropEvent::Action
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QDropEvent::Action;
@@ -171,7 +171,7 @@ public:
 	    break;
 	}
     }
-    ~x_QDropEvent() { qt_Smoke->binding->deleted(102, (void*)this); }
+    ~x_QDropEvent() { qt_Smoke->binding->deleted(104, (void*)this); }
 };
 void xenum_QDropEvent(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
     x_QDropEvent::xenum_operation(xop, xtype, xdata, xvalue);

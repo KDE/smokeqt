@@ -89,13 +89,13 @@ public:
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     static void x_16(Smoke::Stack x) {
-	// QXmlAttributes(QXmlAttributes&)
-	x_QXmlAttributes* xret = new x_QXmlAttributes(*(QXmlAttributes *)x[1].s_class);
+	// QXmlAttributes(const QXmlAttributes&)
+	x_QXmlAttributes* xret = new x_QXmlAttributes(*(const QXmlAttributes *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QXmlAttributes(QXmlAttributes& x1) : QXmlAttributes(x1) {
+    x_QXmlAttributes(const QXmlAttributes& x1) : QXmlAttributes(x1) {
     }
-    ~x_QXmlAttributes() { qt_Smoke->binding->deleted(366, (void*)this); }
+    ~x_QXmlAttributes() { qt_Smoke->binding->deleted(371, (void*)this); }
 };
 void xcall_QXmlAttributes(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QXmlAttributes *xself = (x_QXmlAttributes*)obj;

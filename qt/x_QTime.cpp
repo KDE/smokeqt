@@ -156,11 +156,11 @@ public:
 	x[0].s_int = xret;
     }
     static void x_28(Smoke::Stack x) {
-	// QTime(QTime&)
-	x_QTime* xret = new x_QTime(*(QTime *)x[1].s_class);
+	// QTime(const QTime&)
+	x_QTime* xret = new x_QTime(*(const QTime *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QTime(QTime& x1) : QTime(x1) {
+    x_QTime(const QTime& x1) : QTime(x1) {
     }
     static void x_29(Smoke::Stack x) {
 	// currentTime()
@@ -187,7 +187,7 @@ public:
 	bool xret = QTime::isValid((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int);
 	x[0].s_bool = xret;
     }
-    ~x_QTime() { qt_Smoke->binding->deleted(327, (void*)this); }
+    ~x_QTime() { qt_Smoke->binding->deleted(330, (void*)this); }
 };
 void xcall_QTime(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QTime *xself = (x_QTime*)obj;

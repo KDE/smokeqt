@@ -139,11 +139,11 @@ public:
 	x[0].s_bool = xret;
     }
     static void x_25(Smoke::Stack x) {
-	// QDateTime(QDateTime&)
-	x_QDateTime* xret = new x_QDateTime(*(QDateTime *)x[1].s_class);
+	// QDateTime(const QDateTime&)
+	x_QDateTime* xret = new x_QDateTime(*(const QDateTime *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QDateTime(QDateTime& x1) : QDateTime(x1) {
+    x_QDateTime(const QDateTime& x1) : QDateTime(x1) {
     }
     static void x_26(Smoke::Stack x) {
 	// currentDateTime()
@@ -160,7 +160,7 @@ public:
 	QDateTime xret = QDateTime::fromString(*(const QString *)x[1].s_voidp);
 	x[0].s_class = (void*)new QDateTime(xret);
     }
-    ~x_QDateTime() { qt_Smoke->binding->deleted(64, (void*)this); }
+    ~x_QDateTime() { qt_Smoke->binding->deleted(65, (void*)this); }
 };
 void xcall_QDateTime(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QDateTime *xself = (x_QDateTime*)obj;

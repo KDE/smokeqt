@@ -29,13 +29,13 @@ public:
     x_QDns__MailServer() : QDns::MailServer() {
     }
     static void x_3(Smoke::Stack x) {
-	// MailServer(MailServer&)
-	x_QDns__MailServer* xret = new x_QDns__MailServer(*(MailServer *)x[1].s_voidp);
+	// MailServer(const QDns::MailServer&)
+	x_QDns__MailServer* xret = new x_QDns__MailServer(*(const QDns::MailServer *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QDns__MailServer(MailServer& x1) : QDns::MailServer(x1) {
+    x_QDns__MailServer(const QDns::MailServer& x1) : QDns::MailServer(x1) {
     }
-    ~x_QDns__MailServer() { qt_Smoke->binding->deleted(72, (void*)this); }
+    ~x_QDns__MailServer() { qt_Smoke->binding->deleted(74, (void*)this); }
 };
 void xcall_QDns__MailServer(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QDns__MailServer *xself = (x_QDns__MailServer*)obj;

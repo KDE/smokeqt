@@ -601,7 +601,7 @@ public:
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {
-	  case 334: //QImage::Endian
+	  case 298: //QImage::Endian
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QImage::Endian;
@@ -617,7 +617,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 335: //QImage::ScaleMode
+	  case 299: //QImage::ScaleMode
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QImage::ScaleMode;
@@ -635,7 +635,7 @@ public:
 	    break;
 	}
     }
-    ~x_QImage() { qt_Smoke->binding->deleted(154, (void*)this); }
+    ~x_QImage() { qt_Smoke->binding->deleted(156, (void*)this); }
 };
 void xenum_QImage(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
     x_QImage::xenum_operation(xop, xtype, xdata, xvalue);

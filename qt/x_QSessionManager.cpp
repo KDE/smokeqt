@@ -159,7 +159,7 @@ public:
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {
-	  case 557: //QSessionManager::RestartHint
+	  case 491: //QSessionManager::RestartHint
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QSessionManager::RestartHint;
@@ -177,7 +177,7 @@ public:
 	    break;
 	}
     }
-    ~x_QSessionManager() { qt_Smoke->binding->deleted(252, (void*)this); }
+    ~x_QSessionManager() { qt_Smoke->binding->deleted(255, (void*)this); }
 };
 void xenum_QSessionManager(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
     x_QSessionManager::xenum_operation(xop, xtype, xdata, xvalue);

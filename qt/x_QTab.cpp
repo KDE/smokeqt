@@ -87,13 +87,13 @@ public:
 	x[0].s_int = xret;
     }
     static void x_14(Smoke::Stack x) {
-	// QTab(QTab&)
-	x_QTab* xret = new x_QTab(*(QTab *)x[1].s_class);
+	// QTab(const QTab&)
+	x_QTab* xret = new x_QTab(*(const QTab *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QTab(QTab& x1) : QTab(x1) {
+    x_QTab(const QTab& x1) : QTab(x1) {
     }
-    ~x_QTab() { qt_Smoke->binding->deleted(307, (void*)this); }
+    ~x_QTab() { qt_Smoke->binding->deleted(310, (void*)this); }
 };
 void xcall_QTab(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QTab *xself = (x_QTab*)obj;

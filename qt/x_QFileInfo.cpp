@@ -258,7 +258,7 @@ public:
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {
-	  case 247: //QFileInfo::PermissionSpec
+	  case 220: //QFileInfo::PermissionSpec
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QFileInfo::PermissionSpec;
@@ -276,7 +276,7 @@ public:
 	    break;
 	}
     }
-    ~x_QFileInfo() { qt_Smoke->binding->deleted(112, (void*)this); }
+    ~x_QFileInfo() { qt_Smoke->binding->deleted(114, (void*)this); }
 };
 void xenum_QFileInfo(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
     x_QFileInfo::xenum_operation(xop, xtype, xdata, xvalue);

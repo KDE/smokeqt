@@ -17,7 +17,7 @@ public:
 	QObjectListIt& xret = this->QObjectListIt::operator=(*(const QObjectListIt *)x[1].s_class);
 	x[0].s_class = (void*)&xret;
     }
-    ~x_QObjectListIt() { qt_Smoke->binding->deleted(214, (void*)this); }
+    ~x_QObjectListIt() { qt_Smoke->binding->deleted(217, (void*)this); }
 };
 void xcall_QObjectListIt(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QObjectListIt *xself = (x_QObjectListIt*)obj;

@@ -18,13 +18,13 @@ public:
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     static void x_2(Smoke::Stack x) {
-	// QTSManip(QTSManip&)
-	x_QTSManip* xret = new x_QTSManip(*(QTSManip *)x[1].s_class);
+	// QTSManip(const QTSManip&)
+	x_QTSManip* xret = new x_QTSManip(*(const QTSManip *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QTSManip(QTSManip& x1) : QTSManip(x1) {
+    x_QTSManip(const QTSManip& x1) : QTSManip(x1) {
     }
-    ~x_QTSManip() { qt_Smoke->binding->deleted(306, (void*)this); }
+    ~x_QTSManip() { qt_Smoke->binding->deleted(309, (void*)this); }
 };
 void xcall_QTSManip(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QTSManip *xself = (x_QTSManip*)obj;

@@ -103,15 +103,15 @@ public:
 	x[0].s_voidp = (void*)new QPair<int,int>(xret);
     }
     static void x_20(Smoke::Stack x) {
-	// QTabletEvent(QTabletEvent&)
-	x_QTabletEvent* xret = new x_QTabletEvent(*(QTabletEvent *)x[1].s_class);
+	// QTabletEvent(const QTabletEvent&)
+	x_QTabletEvent* xret = new x_QTabletEvent(*(const QTabletEvent *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QTabletEvent(QTabletEvent& x1) : QTabletEvent(x1) {
+    x_QTabletEvent(const QTabletEvent& x1) : QTabletEvent(x1) {
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {
-	  case 716: //QTabletEvent::TabletDevice
+	  case 634: //QTabletEvent::TabletDevice
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QTabletEvent::TabletDevice;
@@ -129,7 +129,7 @@ public:
 	    break;
 	}
     }
-    ~x_QTabletEvent() { qt_Smoke->binding->deleted(314, (void*)this); }
+    ~x_QTabletEvent() { qt_Smoke->binding->deleted(317, (void*)this); }
 };
 void xenum_QTabletEvent(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
     x_QTabletEvent::xenum_operation(xop, xtype, xdata, xvalue);

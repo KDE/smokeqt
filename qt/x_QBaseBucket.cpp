@@ -27,11 +27,11 @@ public:
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     static void x_4(Smoke::Stack x) {
-	// QBaseBucket(QBaseBucket&)
-	x_QBaseBucket* xret = new x_QBaseBucket(*(QBaseBucket *)x[1].s_class);
+	// QBaseBucket(const QBaseBucket&)
+	x_QBaseBucket* xret = new x_QBaseBucket(*(const QBaseBucket *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QBaseBucket(QBaseBucket& x1) : QBaseBucket(x1) {
+    x_QBaseBucket(const QBaseBucket& x1) : QBaseBucket(x1) {
     }
     static void x_5(Smoke::Stack x) {
 	// QBaseBucket(QPtrCollection::Item, QBaseBucket*)

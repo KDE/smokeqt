@@ -41,7 +41,7 @@ public:
 	bool xret = this->QSignalVec::insert((uint)x[1].s_uint,(const QConnectionList*)x[2].s_class);
 	x[0].s_bool = xret;
     }
-    ~x_QSignalVec() { qt_Smoke->binding->deleted(258, (void*)this); }
+    ~x_QSignalVec() { qt_Smoke->binding->deleted(261, (void*)this); }
 };
 void xcall_QSignalVec(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QSignalVec *xself = (x_QSignalVec*)obj;

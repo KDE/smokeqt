@@ -85,7 +85,7 @@ public:
 	bool xret = this->QDomNamedNodeMap::contains(*(const QString *)x[1].s_voidp);
 	x[0].s_bool = xret;
     }
-    ~x_QDomNamedNodeMap() { qt_Smoke->binding->deleted(89, (void*)this); }
+    ~x_QDomNamedNodeMap() { qt_Smoke->binding->deleted(91, (void*)this); }
 };
 void xcall_QDomNamedNodeMap(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QDomNamedNodeMap *xself = (x_QDomNamedNodeMap*)obj;

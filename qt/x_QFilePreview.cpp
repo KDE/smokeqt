@@ -14,20 +14,20 @@ public:
     x_QFilePreview() : QFilePreview() {
     }
     static void x_1(Smoke::Stack x) {
-	// QFilePreview(QFilePreview&)
-	x_QFilePreview* xret = new x_QFilePreview(*(QFilePreview *)x[1].s_class);
+	// QFilePreview(const QFilePreview&)
+	x_QFilePreview* xret = new x_QFilePreview(*(const QFilePreview *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QFilePreview(QFilePreview& x1) : QFilePreview(x1) {
+    x_QFilePreview(const QFilePreview& x1) : QFilePreview(x1) {
     }
     virtual void previewUrl(const QUrl& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	qt_Smoke->binding->callMethod(3164, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(3187, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }
-    ~x_QFilePreview() { qt_Smoke->binding->deleted(113, (void*)this); }
+    ~x_QFilePreview() { qt_Smoke->binding->deleted(115, (void*)this); }
 };
 void xcall_QFilePreview(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QFilePreview *xself = (x_QFilePreview*)obj;

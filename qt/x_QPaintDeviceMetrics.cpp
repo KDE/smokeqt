@@ -93,13 +93,13 @@ public:
 	x[0].s_int = xret;
     }
     static void x_21(Smoke::Stack x) {
-	// QPaintDeviceMetrics(QPaintDeviceMetrics&)
-	x_QPaintDeviceMetrics* xret = new x_QPaintDeviceMetrics(*(QPaintDeviceMetrics *)x[1].s_class);
+	// QPaintDeviceMetrics(const QPaintDeviceMetrics&)
+	x_QPaintDeviceMetrics* xret = new x_QPaintDeviceMetrics(*(const QPaintDeviceMetrics *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QPaintDeviceMetrics(QPaintDeviceMetrics& x1) : QPaintDeviceMetrics(x1) {
+    x_QPaintDeviceMetrics(const QPaintDeviceMetrics& x1) : QPaintDeviceMetrics(x1) {
     }
-    ~x_QPaintDeviceMetrics() { qt_Smoke->binding->deleted(218, (void*)this); }
+    ~x_QPaintDeviceMetrics() { qt_Smoke->binding->deleted(221, (void*)this); }
 };
 void xcall_QPaintDeviceMetrics(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QPaintDeviceMetrics *xself = (x_QPaintDeviceMetrics*)obj;

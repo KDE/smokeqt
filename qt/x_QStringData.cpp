@@ -30,13 +30,13 @@ public:
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     static void x_4(Smoke::Stack x) {
-	// QStringData(QStringData&)
-	x_QStringData* xret = new x_QStringData(*(QStringData *)x[1].s_class);
+	// QStringData(const QStringData&)
+	x_QStringData* xret = new x_QStringData(*(const QStringData *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QStringData(QStringData& x1) : QStringData(x1) {
+    x_QStringData(const QStringData& x1) : QStringData(x1) {
     }
-    ~x_QStringData() { qt_Smoke->binding->deleted(297, (void*)this); }
+    ~x_QStringData() { qt_Smoke->binding->deleted(300, (void*)this); }
 };
 void xcall_QStringData(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QStringData *xself = (x_QStringData*)obj;

@@ -24,13 +24,13 @@ public:
 	x[0].s_class = (void*)&xret;
     }
     static void x_3(Smoke::Stack x) {
-	// QMoveEvent(QMoveEvent&)
-	x_QMoveEvent* xret = new x_QMoveEvent(*(QMoveEvent *)x[1].s_class);
+	// QMoveEvent(const QMoveEvent&)
+	x_QMoveEvent* xret = new x_QMoveEvent(*(const QMoveEvent *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QMoveEvent(QMoveEvent& x1) : QMoveEvent(x1) {
+    x_QMoveEvent(const QMoveEvent& x1) : QMoveEvent(x1) {
     }
-    ~x_QMoveEvent() { qt_Smoke->binding->deleted(204, (void*)this); }
+    ~x_QMoveEvent() { qt_Smoke->binding->deleted(207, (void*)this); }
 };
 void xcall_QMoveEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QMoveEvent *xself = (x_QMoveEvent*)obj;

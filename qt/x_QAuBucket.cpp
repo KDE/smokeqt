@@ -13,11 +13,11 @@ public:
     x_QAuBucket() : QAuBucket() {
     }
     static void x_1(Smoke::Stack x) {
-	// QAuBucket(QAuBucket&)
-	x_QAuBucket* xret = new x_QAuBucket(*(QAuBucket *)x[1].s_class);
+	// QAuBucket(const QAuBucket&)
+	x_QAuBucket* xret = new x_QAuBucket(*(const QAuBucket *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QAuBucket(QAuBucket& x1) : QAuBucket(x1) {
+    x_QAuBucket(const QAuBucket& x1) : QAuBucket(x1) {
     }
     ~x_QAuBucket() { qt_Smoke->binding->deleted(7, (void*)this); }
 };

@@ -96,15 +96,15 @@ public:
 	x[0].s_enum = xret;
     }
     static void x_18(Smoke::Stack x) {
-	// QContextMenuEvent(QContextMenuEvent&)
-	x_QContextMenuEvent* xret = new x_QContextMenuEvent(*(QContextMenuEvent *)x[1].s_class);
+	// QContextMenuEvent(const QContextMenuEvent&)
+	x_QContextMenuEvent* xret = new x_QContextMenuEvent(*(const QContextMenuEvent *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QContextMenuEvent(QContextMenuEvent& x1) : QContextMenuEvent(x1) {
+    x_QContextMenuEvent(const QContextMenuEvent& x1) : QContextMenuEvent(x1) {
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {
-	  case 111: //QContextMenuEvent::Reason
+	  case 93: //QContextMenuEvent::Reason
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QContextMenuEvent::Reason;
@@ -122,7 +122,7 @@ public:
 	    break;
 	}
     }
-    ~x_QContextMenuEvent() { qt_Smoke->binding->deleted(51, (void*)this); }
+    ~x_QContextMenuEvent() { qt_Smoke->binding->deleted(52, (void*)this); }
 };
 void xenum_QContextMenuEvent(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
     x_QContextMenuEvent::xenum_operation(xop, xtype, xdata, xvalue);

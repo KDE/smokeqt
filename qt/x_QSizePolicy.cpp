@@ -165,15 +165,15 @@ public:
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     static void x_35(Smoke::Stack x) {
-	// QSizePolicy(QSizePolicy&)
-	x_QSizePolicy* xret = new x_QSizePolicy(*(QSizePolicy *)x[1].s_class);
+	// QSizePolicy(const QSizePolicy&)
+	x_QSizePolicy* xret = new x_QSizePolicy(*(const QSizePolicy *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QSizePolicy(QSizePolicy& x1) : QSizePolicy(x1) {
+    x_QSizePolicy(const QSizePolicy& x1) : QSizePolicy(x1) {
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {
-	  case 577: //QSizePolicy::ExpandData
+	  case 509: //QSizePolicy::ExpandData
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QSizePolicy::ExpandData;
@@ -189,7 +189,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 578: //QSizePolicy::SizeType
+	  case 510: //QSizePolicy::SizeType
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QSizePolicy::SizeType;
@@ -207,7 +207,7 @@ public:
 	    break;
 	}
     }
-    ~x_QSizePolicy() { qt_Smoke->binding->deleted(262, (void*)this); }
+    ~x_QSizePolicy() { qt_Smoke->binding->deleted(265, (void*)this); }
 };
 void xenum_QSizePolicy(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
     x_QSizePolicy::xenum_operation(xop, xtype, xdata, xvalue);

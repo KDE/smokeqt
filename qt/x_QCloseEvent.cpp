@@ -28,13 +28,13 @@ public:
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     static void x_4(Smoke::Stack x) {
-	// QCloseEvent(QCloseEvent&)
-	x_QCloseEvent* xret = new x_QCloseEvent(*(QCloseEvent *)x[1].s_class);
+	// QCloseEvent(const QCloseEvent&)
+	x_QCloseEvent* xret = new x_QCloseEvent(*(const QCloseEvent *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QCloseEvent(QCloseEvent& x1) : QCloseEvent(x1) {
+    x_QCloseEvent(const QCloseEvent& x1) : QCloseEvent(x1) {
     }
-    ~x_QCloseEvent() { qt_Smoke->binding->deleted(40, (void*)this); }
+    ~x_QCloseEvent() { qt_Smoke->binding->deleted(41, (void*)this); }
 };
 void xcall_QCloseEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QCloseEvent *xself = (x_QCloseEvent*)obj;

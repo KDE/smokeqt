@@ -28,11 +28,11 @@ public:
 	x[0].s_bool = xret;
     }
     static void x_4(Smoke::Stack x) {
-	// QChildEvent(QChildEvent&)
-	x_QChildEvent* xret = new x_QChildEvent(*(QChildEvent *)x[1].s_class);
+	// QChildEvent(const QChildEvent&)
+	x_QChildEvent* xret = new x_QChildEvent(*(const QChildEvent *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QChildEvent(QChildEvent& x1) : QChildEvent(x1) {
+    x_QChildEvent(const QChildEvent& x1) : QChildEvent(x1) {
     }
     ~x_QChildEvent() { qt_Smoke->binding->deleted(38, (void*)this); }
 };

@@ -30,41 +30,41 @@ public:
     x_QPtrCollection(const QPtrCollection& x1) : QPtrCollection(x1) {
     }
     void x_4(Smoke::Stack x) {
-	// newItem(QPtrCollection::Item)
-	QPtrCollection::Item xret = this->QPtrCollection::newItem(*(QPtrCollection::Item *)x[1].s_voidp);
-	x[0].s_voidp = (void*)new QPtrCollection::Item(xret);
+	// newItem(Item)
+	Item xret = this->QPtrCollection::newItem(*(Item *)x[1].s_voidp);
+	x[0].s_voidp = (void*)new Item(xret);
     }
     virtual void clear() {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(7448, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(7481, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }
     virtual uint count() const {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(7447, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(7480, (void*)this, x, true /*pure virtual*/);
 	return (uint)x[0].s_uint;
 	// ABSTRACT
     }
-    virtual void deleteItem(QPtrCollection::Item x1) {
+    virtual void deleteItem(Item x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	qt_Smoke->binding->callMethod(7452, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(7485, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }
-    virtual QPtrCollection::Item newItem(QPtrCollection::Item x1) {
+    virtual Item newItem(Item x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(7451, (void*)this, x)) {
-	    QPtrCollection::Item *xptr = (QPtrCollection::Item *)x[0].s_class;
-	    QPtrCollection::Item xret(*xptr);
+	if(qt_Smoke->binding->callMethod(7484, (void*)this, x)) {
+	    Item *xptr = (Item *)x[0].s_class;
+	    Item xret(*xptr);
 	    delete xptr;
 	    return xret;
 	}
 	return this->QPtrCollection::newItem(x1);
     }
-    ~x_QPtrCollection() { qt_Smoke->binding->deleted(237, (void*)this); }
+    ~x_QPtrCollection() { qt_Smoke->binding->deleted(240, (void*)this); }
 };
 void xcall_QPtrCollection(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QPtrCollection *xself = (x_QPtrCollection*)obj;

@@ -14,11 +14,11 @@ public:
     x_QImageFormat() : QImageFormat() {
     }
     static void x_1(Smoke::Stack x) {
-	// QImageFormat(QImageFormat&)
-	x_QImageFormat* xret = new x_QImageFormat(*(QImageFormat *)x[1].s_class);
+	// QImageFormat(const QImageFormat&)
+	x_QImageFormat* xret = new x_QImageFormat(*(const QImageFormat *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QImageFormat(QImageFormat& x1) : QImageFormat(x1) {
+    x_QImageFormat(const QImageFormat& x1) : QImageFormat(x1) {
     }
     virtual int decode(QImage& x1, QImageConsumer* x2, const uchar* x3, int x4) {
 	Smoke::StackItem x[5];
@@ -26,11 +26,11 @@ public:
 	x[2].s_class = (void*)x2;
 	x[3].s_voidp = (void*)x3;
 	x[4].s_int = x4;
-	qt_Smoke->binding->callMethod(4563, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(4587, (void*)this, x, true /*pure virtual*/);
 	return (int)x[0].s_int;
 	// ABSTRACT
     }
-    ~x_QImageFormat() { qt_Smoke->binding->deleted(158, (void*)this); }
+    ~x_QImageFormat() { qt_Smoke->binding->deleted(160, (void*)this); }
 };
 void xcall_QImageFormat(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QImageFormat *xself = (x_QImageFormat*)obj;

@@ -68,13 +68,13 @@ public:
 	x[0].s_bool = xret;
     }
     static void x_12(Smoke::Stack x) {
-	// QTableSelection(QTableSelection&)
-	x_QTableSelection* xret = new x_QTableSelection(*(QTableSelection *)x[1].s_class);
+	// QTableSelection(const QTableSelection&)
+	x_QTableSelection* xret = new x_QTableSelection(*(const QTableSelection *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QTableSelection(QTableSelection& x1) : QTableSelection(x1) {
+    x_QTableSelection(const QTableSelection& x1) : QTableSelection(x1) {
     }
-    ~x_QTableSelection() { qt_Smoke->binding->deleted(313, (void*)this); }
+    ~x_QTableSelection() { qt_Smoke->binding->deleted(316, (void*)this); }
 };
 void xcall_QTableSelection(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QTableSelection *xself = (x_QTableSelection*)obj;

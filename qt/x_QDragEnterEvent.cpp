@@ -15,16 +15,16 @@ public:
     x_QDragEnterEvent(const QPoint& x1) : QDragEnterEvent(x1) {
     }
     static void x_1(Smoke::Stack x) {
-	// QDragEnterEvent(QDragEnterEvent&)
-	x_QDragEnterEvent* xret = new x_QDragEnterEvent(*(QDragEnterEvent *)x[1].s_class);
+	// QDragEnterEvent(const QDragEnterEvent&)
+	x_QDragEnterEvent* xret = new x_QDragEnterEvent(*(const QDragEnterEvent *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QDragEnterEvent(QDragEnterEvent& x1) : QDragEnterEvent(x1) {
+    x_QDragEnterEvent(const QDragEnterEvent& x1) : QDragEnterEvent(x1) {
     }
     virtual QByteArray encodedData(const char* x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(2828, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(2851, (void*)this, x)) {
 	    QByteArray *xptr = (QByteArray *)x[0].s_class;
 	    QByteArray xret(*xptr);
 	    delete xptr;
@@ -35,16 +35,16 @@ public:
     virtual const char* format(int x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(2826, (void*)this, x)) return (const char*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(2849, (void*)this, x)) return (const char*)x[0].s_class;
 	return this->QDropEvent::format(x1);
     }
     virtual bool provides(const char* x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(2829, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(2852, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QDropEvent::provides(x1);
     }
-    ~x_QDragEnterEvent() { qt_Smoke->binding->deleted(96, (void*)this); }
+    ~x_QDragEnterEvent() { qt_Smoke->binding->deleted(98, (void*)this); }
 };
 void xcall_QDragEnterEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QDragEnterEvent *xself = (x_QDragEnterEvent*)obj;

@@ -14,22 +14,22 @@ public:
     x_QXmlErrorHandler() : QXmlErrorHandler() {
     }
     static void x_1(Smoke::Stack x) {
-	// QXmlErrorHandler(QXmlErrorHandler&)
-	x_QXmlErrorHandler* xret = new x_QXmlErrorHandler(*(QXmlErrorHandler *)x[1].s_class);
+	// QXmlErrorHandler(const QXmlErrorHandler&)
+	x_QXmlErrorHandler* xret = new x_QXmlErrorHandler(*(const QXmlErrorHandler *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    x_QXmlErrorHandler(QXmlErrorHandler& x1) : QXmlErrorHandler(x1) {
+    x_QXmlErrorHandler(const QXmlErrorHandler& x1) : QXmlErrorHandler(x1) {
     }
     virtual bool error(const QXmlParseException& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	qt_Smoke->binding->callMethod(11941, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(11985, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
     virtual QString errorString() {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(11943, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(11987, (void*)this, x, true /*pure virtual*/);
 	QString *xptr = (QString *)x[0].s_class;
 	QString xret(*xptr);
 	delete xptr;
@@ -39,18 +39,18 @@ public:
     virtual bool fatalError(const QXmlParseException& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	qt_Smoke->binding->callMethod(11942, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(11986, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
     virtual bool warning(const QXmlParseException& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	qt_Smoke->binding->callMethod(11940, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(11984, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
-    ~x_QXmlErrorHandler() { qt_Smoke->binding->deleted(372, (void*)this); }
+    ~x_QXmlErrorHandler() { qt_Smoke->binding->deleted(377, (void*)this); }
 };
 void xcall_QXmlErrorHandler(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QXmlErrorHandler *xself = (x_QXmlErrorHandler*)obj;

@@ -55,10 +55,10 @@ public:
     }
     virtual bool unload() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(4986, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(5010, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QLibrary::unload();
     }
-    ~x_QLibrary() { qt_Smoke->binding->deleted(177, (void*)this); }
+    ~x_QLibrary() { qt_Smoke->binding->deleted(179, (void*)this); }
 };
 void xcall_QLibrary(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QLibrary *xself = (x_QLibrary*)obj;
