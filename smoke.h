@@ -15,7 +15,7 @@ public:
     typedef short Index;
     typedef void (*ClassFn)(Index method, void* obj, Stack args); // was Stack * (DF)
     typedef void* (*CastFn)(void* obj, Index from, Index to);
-    typedef void (*DestructorCallbackFn)(void* obj);
+    typedef void (*DestructorCallbackFn)(Smoke*, Index classId, void* obj);
     typedef bool (*CallMethodFn)(Smoke*, Index method, void* obj, Stack args, bool isAbstract);
 
     /**
@@ -71,7 +71,8 @@ public:
 	tf_ptr = 0x20,   	// Pointer, 'type*'
 	tf_ref = 0x30,   	// Reference, 'type&'
 	// Can | whatever ones of these apply
-	tf_copy = 0x10   	// use new allocated copy (pass by value)
+	tf_copy = 0x40,   	// deprecated, FIXME
+	tf_const = 0x40		// const argument
     };
     /**
      * One Type entry is one argument type needed by a method.
@@ -172,8 +173,8 @@ public:
     CastFn castFn;
 
     // Not passed to constructor
-    DestructorCallbackFn destructorCallbackFn;
     CallMethodFn callMethodFn;
+    DestructorCallbackFn destructorCallbackFn;
 
     /**
      * Constructor
@@ -201,14 +202,13 @@ public:
 		destructorCallbackFn(0)
 		{}
 
-    // TODO: Come up with semi-consistent error codes
-
     inline int leg(Index a, Index b) {  // ala Perl's <=>
 	if(a == b) return 0;
 	return (a > b) ? 1 : -1;
     }
 
-    inline Index idClass(const char *m) {
+    inline Index idClass(const char *c) {
+	if(!c) return 0;
 	Index imax = numClasses;
 	Index imin = 0;
 	Index icur = -1;
@@ -216,7 +216,7 @@ public:
 
 	while(imax >= imin) {
 	    icur = (imin + imax) / 2;
-	    icmp = strcmp(classes[icur].className, m);
+	    icmp = strcmp(classes[icur].className, c);
 	    if(!icmp) break;
 	    if(icmp > 0)
 		imax = icur - 1;
@@ -228,6 +228,7 @@ public:
     }
 
     inline Index idMethodName(const char *m) {
+	if(!m) return 0;
 	Index imax = numMethodNames;
 	Index imin = 0;
 	Index icur = -1;
@@ -243,12 +244,11 @@ public:
 		imin = icur + 1;
 	}
 
-	return (!icmp) ? icur : -1;
+	return (!icmp) ? icur : 0;
     }
 
     inline Index idMethod(Index c, Index name) {
-	if(c == 0 || name < 0) return -1;
-	Index imax = numMethods;
+	Index imax = numMethodMaps;
 	Index imin = 0;
 	Index icur = -1;
 	int icmp = -1;
@@ -266,24 +266,23 @@ public:
 		imin = icur + 1;
 	}
 
-	return (!icmp) ? icur : -1;
+	return (!icmp) ? icur : 0;
     }
 
     inline Index findMethod(Index c, Index name) {
 	// TODO: If method is in a parent module, forward the call from here
-	if(c == 0 || name < 0) return -1;
+	if(!c || !name) return 0;
 	Index mid = idMethod(c, name);
-	if(mid != -1) return mid;
-	if(classes[c].parents == -1) return -1;
-	for(int p = classes[c].parents; inheritanceList[p] >= 0; p++) {
+	if(mid) return mid;
+	if(!classes[c].parents) return 0;
+	for(int p = classes[c].parents; inheritanceList[p]; p++) {
 	    mid = findMethod(inheritanceList[p], name);
-	    if(mid != -1) return mid;
+	    if(mid) return mid;
 	}
-	return -1;
+	return 0;
     }
 
     inline Index findMethod(const char *c, const char *name) {
-	if(!c || !name) return -1;
 	Index idc = idClass(c);
 	Index idname = idMethodName(name);
 	return findMethod(idc, idname);
@@ -300,6 +299,11 @@ public:
 	if(callMethodFn)
 	    return (*callMethodFn)(this, method, obj, args, isAbstract);
 	return false;
+    }
+
+    inline void destructorCallback(Index classId, void* obj) {
+	if(destructorCallbackFn)
+	    (*destructorCallbackFn)(this, classId, obj);
     }
 };
 
