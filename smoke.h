@@ -66,7 +66,7 @@ public:
 	// Can | whatever ones of these apply
 	tf_class = 0x04, 	// is class
 	tf_enum = 0x08,  	// is enum
-	tf_copy = 0x10,   	// use new allocated copy (pass by value)
+	tf_copy = 0x10   	// use new allocated copy (pass by value)
     };
     /**
      * One Type entry is one argument type needed by a method.
@@ -107,7 +107,7 @@ public:
 	t_ulong,
 	t_float,
 	t_double,
-	t_last,		// number of pre-defined types
+	t_last		// number of pre-defined types
     };
 
     // Passed to constructor
@@ -131,6 +131,12 @@ public:
     Index numMethodMaps;
 
     /**
+     * Array of method names, for Method.name and MethodMap.name
+     */
+    const char **methodNames;
+    Index numMethodNames;
+
+    /**
      * List of all types needed by the methods (arguments and return values)
      */
     Type *types;
@@ -152,11 +158,6 @@ public:
      */
     Index *ambiguousMethodList;
     /**
-     * Array of method names, for Method.name and MethodMap.name
-     */
-    const char **methodNames;
-
-    /**
      * Function used for casting from/to the classes defined by this module.
      */
     CastFn castFn;
@@ -170,24 +171,112 @@ public:
     Smoke(Class *_classes, Index _numClasses,
 	  Method *_methods, Index _numMethods,
 	  MethodMap *_methodMaps, Index _numMethodMaps,
+	  const char **_methodNames, Index _numMethodNames,
 	  Type *_types, Index _numTypes,
 	  Index *_inheritanceList,
 	  Index *_argumentList,
 	  Index *_ambiguousMethodList,
-	  const char **_methodNames,
 	  CastFn _castFn) :
 		classes(_classes), numClasses(_numClasses),
 		methods(_methods), numMethods(_numMethods),
 		methodMaps(_methodMaps), numMethodMaps(_numMethodMaps),
+		methodNames(_methodNames), numMethodNames(_numMethodNames),
 		types(_types), numTypes(_numTypes),
 		inheritanceList(_inheritanceList),
 		argumentList(_argumentList),
 		ambiguousMethodList(_ambiguousMethodList),
-		methodNames(_methodNames),
 		castFn(_castFn),
 
 		destructorCallbackFn(0)
 		{}
+
+    // TODO: Come up with semi-consistent error codes
+
+    inline int leg(Index a, Index b) {  // ala Perl's <=>
+	if(a == b) return 0;
+	return (a > b) ? 1 : -1;
+    }
+
+    inline Index idClass(const char *m) {
+	Index imax = numClasses;
+	Index imin = 0;
+	Index icur = -1;
+	int icmp = -1;
+
+	while(imax >= imin) {
+	    icur = (imin + imax) / 2;
+	    icmp = strcmp(classes[icur].className, m);
+	    if(!icmp) break;
+	    if(icmp > 0)
+		imax = icur - 1;
+	    else
+		imin = icur + 1;
+	}
+
+	return (!icmp) ? icur : 0;
+    }
+    
+    inline Index idMethodName(const char *m) {
+	Index imax = numMethodNames;
+	Index imin = 0;
+	Index icur = -1;
+	int icmp = -1;
+
+	while(imax >= imin) {
+	    icur = (imin + imax) / 2;
+	    icmp = strcmp(methodNames[icur], m);
+	    if(!icmp) break;
+	    if(icmp > 0)
+		imax = icur - 1;
+	    else
+		imin = icur + 1;
+	}
+
+	return (!icmp) ? icur : -1;
+    }
+ 
+    inline Index idMethod(Index c, Index name) {
+	if(c == 0 || name < 0) return -1;
+	Index imax = numMethods;
+	Index imin = 0;
+	Index icur = -1;
+	int icmp = -1;
+
+	while(imax >= imin) {
+	    icur = (imin + imax) / 2;
+	    icmp = leg(methodMaps[icur].classId, c);
+	    if(!icmp) {
+		icmp = leg(methodMaps[icur].name, name);
+		if(!icmp) break;
+	    }
+	    if(icmp > 0)
+		imax = icur - 1;
+	    else
+		imin = icur + 1;
+	}
+
+	return (!icmp) ? icur : -1;
+    }
+
+    inline Index findMethod(Index c, Index name) {
+	// TODO: If method is in a parent module, forward the call from here
+	if(c == 0 || name < 0) return -1;
+	Index mid = idMethod(c, name);
+	if(mid != -1) return mid;
+	if(classes[c].parents == -1) return -1;
+	for(int p = classes[c].parents; inheritanceList[p] >= 0; p++) {
+	    mid = findMethod(inheritanceList[p], name);
+	    if(mid != -1) return mid;
+	}
+	return -1;
+    }
+
+    inline Index findMethod(const char *c, const char *name) {
+	if(!c || !name) return -1;
+	Index idc = idClass(c);
+	Index idname = idMethodName(name);
+	return findMethod(idc, idname);
+    }
 };
 
 //// TODO
