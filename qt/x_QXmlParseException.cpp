@@ -80,7 +80,7 @@ public:
     }
     x_QXmlParseException(const QXmlParseException& x1) : QXmlParseException(x1) {
     }
-    ~x_QXmlParseException() { qt_Smoke->binding->deleted(388, (void*)this); }
+    ~x_QXmlParseException() { qt_Smoke->binding->deleted(387, (void*)this); }
 };
 void xcall_QXmlParseException(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QXmlParseException *xself = (x_QXmlParseException*)obj;

@@ -95,7 +95,7 @@ public:
     }
     x_QXmlAttributes(const QXmlAttributes& x1) : QXmlAttributes(x1) {
     }
-    ~x_QXmlAttributes() { qt_Smoke->binding->deleted(377, (void*)this); }
+    ~x_QXmlAttributes() { qt_Smoke->binding->deleted(376, (void*)this); }
 };
 void xcall_QXmlAttributes(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QXmlAttributes *xself = (x_QXmlAttributes*)obj;

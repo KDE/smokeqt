@@ -102,7 +102,7 @@ public:
     }
     x_QWheelEvent(const QWheelEvent& x1) : QWheelEvent(x1) {
     }
-    ~x_QWheelEvent() { qt_Smoke->binding->deleted(365, (void*)this); }
+    ~x_QWheelEvent() { qt_Smoke->binding->deleted(364, (void*)this); }
 };
 void xcall_QWheelEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QWheelEvent *xself = (x_QWheelEvent*)obj;

@@ -114,7 +114,7 @@ public:
     }
     virtual const char* className() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(11626, (void*)this, x)) return (const char*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(11622, (void*)this, x)) return (const char*)x[0].s_class;
 	return this->QValidator::className();
     }
     virtual void connectNotify(const char* x1) {
@@ -151,7 +151,7 @@ public:
     virtual void fixup(QString& x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(11636, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11632, (void*)this, x)) return;
 	this->QValidator::fixup(x1);
     }
     virtual void insertChild(QObject* x1) {
@@ -162,7 +162,7 @@ public:
     }
     virtual QMetaObject* metaObject() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(11625, (void*)this, x)) return (QMetaObject*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(11621, (void*)this, x)) return (QMetaObject*)x[0].s_class;
 	return this->QValidator::metaObject();
     }
     virtual QVariant property(const char* x1) const {
@@ -179,21 +179,21 @@ public:
     virtual void* qt_cast(const char* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(11627, (void*)this, x)) return (void*)x[0].s_voidp;
+	if(qt_Smoke->binding->callMethod(11623, (void*)this, x)) return (void*)x[0].s_voidp;
 	return this->QValidator::qt_cast(x1);
     }
     virtual bool qt_emit(int x1, QUObject* x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_voidp = (void*)x2;
-	if(qt_Smoke->binding->callMethod(11629, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(11625, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QValidator::qt_emit(x1, x2);
     }
     virtual bool qt_invoke(int x1, QUObject* x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_voidp = (void*)x2;
-	if(qt_Smoke->binding->callMethod(11628, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(11624, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QValidator::qt_invoke(x1, x2);
     }
     virtual bool qt_property(int x1, int x2, QVariant* x3) {
@@ -201,7 +201,7 @@ public:
 	x[1].s_int = x1;
 	x[2].s_int = x2;
 	x[3].s_class = (void*)x3;
-	if(qt_Smoke->binding->callMethod(11630, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(11626, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QValidator::qt_property(x1, x2, x3);
     }
     virtual void removeChild(QObject* x1) {
@@ -233,7 +233,7 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_voidp = (void*)&x2;
-	qt_Smoke->binding->callMethod(11635, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(11631, (void*)this, x, true /*pure virtual*/);
 	QValidator::State *xptr = (QValidator::State *)x[0].s_class;
 	QValidator::State xret(*xptr);
 	delete xptr;
@@ -242,7 +242,7 @@ public:
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {
-	  case 729: //QValidator::State
+	  case 727: //QValidator::State
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QValidator::State;
@@ -260,7 +260,7 @@ public:
 	    break;
 	}
     }
-    ~x_QValidator() { qt_Smoke->binding->deleted(360, (void*)this); }
+    ~x_QValidator() { qt_Smoke->binding->deleted(359, (void*)this); }
 };
 void xenum_QValidator(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
     x_QValidator::xenum_operation(xop, xtype, xdata, xvalue);

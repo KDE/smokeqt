@@ -93,7 +93,7 @@ public:
     }
     x_QTab(const QTab& x1) : QTab(x1) {
     }
-    ~x_QTab() { qt_Smoke->binding->deleted(316, (void*)this); }
+    ~x_QTab() { qt_Smoke->binding->deleted(315, (void*)this); }
 };
 void xcall_QTab(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QTab *xself = (x_QTab*)obj;

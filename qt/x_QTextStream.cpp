@@ -376,7 +376,7 @@ public:
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {
-	  case 685: //QTextStream::Encoding
+	  case 683: //QTextStream::Encoding
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QTextStream::Encoding;
@@ -394,7 +394,7 @@ public:
 	    break;
 	}
     }
-    ~x_QTextStream() { qt_Smoke->binding->deleted(334, (void*)this); }
+    ~x_QTextStream() { qt_Smoke->binding->deleted(333, (void*)this); }
 };
 void xenum_QTextStream(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
     x_QTextStream::xenum_operation(xop, xtype, xdata, xvalue);

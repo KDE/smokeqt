@@ -71,7 +71,7 @@ public:
 	bool xret = this->QUuid::operator!=(*(const QUuid *)x[1].s_class);
 	x[0].s_bool = xret;
     }
-    ~x_QUuid() { qt_Smoke->binding->deleted(353, (void*)this); }
+    ~x_QUuid() { qt_Smoke->binding->deleted(352, (void*)this); }
 };
 void xcall_QUuid(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QUuid *xself = (x_QUuid*)obj;

@@ -213,7 +213,7 @@ public:
     }
     virtual const char* className() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(11260, (void*)this, x)) return (const char*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(11256, (void*)this, x)) return (const char*)x[0].s_class;
 	return this->QTranslator::className();
     }
     virtual void connectNotify(const char* x1) {
@@ -252,7 +252,7 @@ public:
 	x[1].s_voidp = (void*)x1;
 	x[2].s_voidp = (void*)x2;
 	x[3].s_voidp = (void*)x3;
-	if(qt_Smoke->binding->callMethod(11271, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(11267, (void*)this, x)) {
 	    QTranslatorMessage *xptr = (QTranslatorMessage *)x[0].s_class;
 	    QTranslatorMessage xret(*xptr);
 	    delete xptr;
@@ -268,7 +268,7 @@ public:
     }
     virtual QMetaObject* metaObject() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(11259, (void*)this, x)) return (QMetaObject*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(11255, (void*)this, x)) return (QMetaObject*)x[0].s_class;
 	return this->QTranslator::metaObject();
     }
     virtual QVariant property(const char* x1) const {
@@ -285,21 +285,21 @@ public:
     virtual void* qt_cast(const char* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(11261, (void*)this, x)) return (void*)x[0].s_voidp;
+	if(qt_Smoke->binding->callMethod(11257, (void*)this, x)) return (void*)x[0].s_voidp;
 	return this->QTranslator::qt_cast(x1);
     }
     virtual bool qt_emit(int x1, QUObject* x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_voidp = (void*)x2;
-	if(qt_Smoke->binding->callMethod(11263, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(11259, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QTranslator::qt_emit(x1, x2);
     }
     virtual bool qt_invoke(int x1, QUObject* x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_voidp = (void*)x2;
-	if(qt_Smoke->binding->callMethod(11262, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(11258, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QTranslator::qt_invoke(x1, x2);
     }
     virtual bool qt_property(int x1, int x2, QVariant* x3) {
@@ -307,7 +307,7 @@ public:
 	x[1].s_int = x1;
 	x[2].s_int = x2;
 	x[3].s_class = (void*)x3;
-	if(qt_Smoke->binding->callMethod(11264, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(11260, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QTranslator::qt_property(x1, x2, x3);
     }
     virtual void removeChild(QObject* x1) {
@@ -337,7 +337,7 @@ public:
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {
-	  case 700: //QTranslator::SaveMode
+	  case 698: //QTranslator::SaveMode
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QTranslator::SaveMode;
@@ -355,7 +355,7 @@ public:
 	    break;
 	}
     }
-    ~x_QTranslator() { qt_Smoke->binding->deleted(344, (void*)this); }
+    ~x_QTranslator() { qt_Smoke->binding->deleted(343, (void*)this); }
 };
 void xenum_QTranslator(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
     x_QTranslator::xenum_operation(xop, xtype, xdata, xvalue);

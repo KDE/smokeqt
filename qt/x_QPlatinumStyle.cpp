@@ -348,7 +348,7 @@ public:
     virtual void polishPopupMenu(QPopupMenu* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(12277, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12273, (void*)this, x)) return;
 	this->QWindowsStyle::polishPopupMenu(x1);
     }
     virtual QVariant property(const char* x1) const {
@@ -443,7 +443,7 @@ public:
 	x[2].s_class = (void*)x2;
 	x[3].s_class = (void*)&x3;
 	x[4].s_class = (void*)&x4;
-	if(qt_Smoke->binding->callMethod(12291, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(12287, (void*)this, x)) {
 	    QSize *xptr = (QSize *)x[0].s_class;
 	    QSize xret(*xptr);
 	    delete xptr;
@@ -457,7 +457,7 @@ public:
 	x[2].s_class = (void*)x2;
 	x[3].s_class = (void*)&x3;
 	x[4].s_voidp = (void*)x4;
-	if(qt_Smoke->binding->callMethod(12293, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(12289, (void*)this, x)) return (int)x[0].s_int;
 	return this->QWindowsStyle::styleHint(x1, x2, x3, x4);
     }
     virtual QPixmap stylePixmap(QStyle::StylePixmap x1, const QWidget* x2, const QStyleOption& x3) const {
@@ -465,7 +465,7 @@ public:
 	x[1].s_enum = x1;
 	x[2].s_class = (void*)x2;
 	x[3].s_class = (void*)&x3;
-	if(qt_Smoke->binding->callMethod(12296, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(12292, (void*)this, x)) {
 	    QPixmap *xptr = (QPixmap *)x[0].s_class;
 	    QPixmap xret(*xptr);
 	    delete xptr;

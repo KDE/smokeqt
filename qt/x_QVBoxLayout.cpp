@@ -162,7 +162,7 @@ public:
     }
     virtual const char* className() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(11555, (void*)this, x)) return (const char*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(11551, (void*)this, x)) return (const char*)x[0].s_class;
 	return this->QVBoxLayout::className();
     }
     virtual void connectNotify(const char* x1) {
@@ -270,7 +270,7 @@ public:
     }
     virtual QMetaObject* metaObject() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(11554, (void*)this, x)) return (QMetaObject*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(11550, (void*)this, x)) return (QMetaObject*)x[0].s_class;
 	return this->QVBoxLayout::metaObject();
     }
     virtual QSize minimumSize() const {
@@ -297,21 +297,21 @@ public:
     virtual void* qt_cast(const char* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(11556, (void*)this, x)) return (void*)x[0].s_voidp;
+	if(qt_Smoke->binding->callMethod(11552, (void*)this, x)) return (void*)x[0].s_voidp;
 	return this->QVBoxLayout::qt_cast(x1);
     }
     virtual bool qt_emit(int x1, QUObject* x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_voidp = (void*)x2;
-	if(qt_Smoke->binding->callMethod(11558, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(11554, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QVBoxLayout::qt_emit(x1, x2);
     }
     virtual bool qt_invoke(int x1, QUObject* x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_voidp = (void*)x2;
-	if(qt_Smoke->binding->callMethod(11557, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(11553, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QVBoxLayout::qt_invoke(x1, x2);
     }
     virtual bool qt_property(int x1, int x2, QVariant* x3) {
@@ -319,7 +319,7 @@ public:
 	x[1].s_int = x1;
 	x[2].s_int = x2;
 	x[3].s_class = (void*)x3;
-	if(qt_Smoke->binding->callMethod(11559, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(11555, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QVBoxLayout::qt_property(x1, x2, x3);
     }
     virtual void removeChild(QObject* x1) {
@@ -403,7 +403,7 @@ public:
 	if(qt_Smoke->binding->callMethod(5267, (void*)this, x)) return (QWidget*)x[0].s_class;
 	return this->QLayoutItem::widget();
     }
-    ~x_QVBoxLayout() { qt_Smoke->binding->deleted(355, (void*)this); }
+    ~x_QVBoxLayout() { qt_Smoke->binding->deleted(354, (void*)this); }
 };
 void xcall_QVBoxLayout(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QVBoxLayout *xself = (x_QVBoxLayout*)obj;

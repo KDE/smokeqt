@@ -107,7 +107,7 @@ public:
     }
     virtual int alignment() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(10462, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(10458, (void*)this, x)) return (int)x[0].s_int;
 	return this->QTableItem::alignment();
     }
     virtual QWidget* createEditor() const {
@@ -117,7 +117,7 @@ public:
     }
     virtual QString key() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(10470, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(10466, (void*)this, x)) {
 	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;
@@ -136,7 +136,7 @@ public:
     }
     virtual QPixmap pixmap() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(10457, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(10453, (void*)this, x)) {
 	    QPixmap *xptr = (QPixmap *)x[0].s_class;
 	    QPixmap xret(*xptr);
 	    delete xptr;
@@ -152,7 +152,7 @@ public:
     virtual void setCol(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(10476, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10472, (void*)this, x)) return;
 	this->QTableItem::setCol(x1);
     }
     virtual void setContentFromEditor(QWidget* x1) {
@@ -182,32 +182,32 @@ public:
     virtual void setEnabled(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(10481, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10477, (void*)this, x)) return;
 	this->QTableItem::setEnabled(x1);
     }
     virtual void setPixmap(const QPixmap& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(10459, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10455, (void*)this, x)) return;
 	this->QTableItem::setPixmap(x1);
     }
     virtual void setReplaceable(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(10468, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10464, (void*)this, x)) return;
 	this->QTableItem::setReplaceable(x1);
     }
     virtual void setRow(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(10475, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10471, (void*)this, x)) return;
 	this->QTableItem::setRow(x1);
     }
     virtual void setSpan(int x1, int x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_int = x2;
-	if(qt_Smoke->binding->callMethod(10472, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10468, (void*)this, x)) return;
 	this->QTableItem::setSpan(x1, x2);
     }
     virtual void setStringList(const QStringList& x1) {
@@ -219,13 +219,13 @@ public:
     virtual void setText(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(10460, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10456, (void*)this, x)) return;
 	this->QTableItem::setText(x1);
     }
     virtual void setWordWrap(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(10463, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10459, (void*)this, x)) return;
 	this->QTableItem::setWordWrap(x1);
     }
     virtual QSize sizeHint() const {
@@ -240,7 +240,7 @@ public:
     }
     virtual QString text() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(10458, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(10454, (void*)this, x)) {
 	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;

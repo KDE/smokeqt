@@ -127,7 +127,7 @@ public:
     }
     virtual const char* className() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(11237, (void*)this, x)) return (const char*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(11233, (void*)this, x)) return (const char*)x[0].s_class;
 	return this->QToolTipGroup::className();
     }
     virtual void connectNotify(const char* x1) {
@@ -169,7 +169,7 @@ public:
     }
     virtual QMetaObject* metaObject() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(11236, (void*)this, x)) return (QMetaObject*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(11232, (void*)this, x)) return (QMetaObject*)x[0].s_class;
 	return this->QToolTipGroup::metaObject();
     }
     virtual QVariant property(const char* x1) const {
@@ -186,21 +186,21 @@ public:
     virtual void* qt_cast(const char* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(11238, (void*)this, x)) return (void*)x[0].s_voidp;
+	if(qt_Smoke->binding->callMethod(11234, (void*)this, x)) return (void*)x[0].s_voidp;
 	return this->QToolTipGroup::qt_cast(x1);
     }
     virtual bool qt_emit(int x1, QUObject* x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_voidp = (void*)x2;
-	if(qt_Smoke->binding->callMethod(11240, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(11236, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QToolTipGroup::qt_emit(x1, x2);
     }
     virtual bool qt_invoke(int x1, QUObject* x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_voidp = (void*)x2;
-	if(qt_Smoke->binding->callMethod(11239, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(11235, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QToolTipGroup::qt_invoke(x1, x2);
     }
     virtual bool qt_property(int x1, int x2, QVariant* x3) {
@@ -208,7 +208,7 @@ public:
 	x[1].s_int = x1;
 	x[2].s_int = x2;
 	x[3].s_class = (void*)x3;
-	if(qt_Smoke->binding->callMethod(11241, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(11237, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QToolTipGroup::qt_property(x1, x2, x3);
     }
     virtual void removeChild(QObject* x1) {
@@ -236,7 +236,7 @@ public:
 	if(qt_Smoke->binding->callMethod(6814, (void*)this, x)) return;
 	this->QObject::timerEvent(x1);
     }
-    ~x_QToolTipGroup() { qt_Smoke->binding->deleted(343, (void*)this); }
+    ~x_QToolTipGroup() { qt_Smoke->binding->deleted(342, (void*)this); }
 };
 void xcall_QToolTipGroup(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QToolTipGroup *xself = (x_QToolTipGroup*)obj;

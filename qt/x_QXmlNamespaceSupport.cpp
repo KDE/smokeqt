@@ -71,7 +71,7 @@ public:
     }
     x_QXmlNamespaceSupport(const QXmlNamespaceSupport& x1) : QXmlNamespaceSupport(x1) {
     }
-    ~x_QXmlNamespaceSupport() { qt_Smoke->binding->deleted(387, (void*)this); }
+    ~x_QXmlNamespaceSupport() { qt_Smoke->binding->deleted(386, (void*)this); }
 };
 void xcall_QXmlNamespaceSupport(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QXmlNamespaceSupport *xself = (x_QXmlNamespaceSupport*)obj;

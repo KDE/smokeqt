@@ -22,7 +22,7 @@ public:
     }
     virtual QString errorString() {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(12468, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(12464, (void*)this, x, true /*pure virtual*/);
 	QString *xptr = (QString *)x[0].s_class;
 	QString xret(*xptr);
 	delete xptr;
@@ -34,11 +34,11 @@ public:
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_voidp = (void*)&x2;
 	x[3].s_voidp = (void*)&x3;
-	qt_Smoke->binding->callMethod(12467, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(12463, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
-    ~x_QXmlEntityResolver() { qt_Smoke->binding->deleted(382, (void*)this); }
+    ~x_QXmlEntityResolver() { qt_Smoke->binding->deleted(381, (void*)this); }
 };
 void xcall_QXmlEntityResolver(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QXmlEntityResolver *xself = (x_QXmlEntityResolver*)obj;

@@ -211,7 +211,7 @@ public:
     }
     virtual const char* className() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(12269, (void*)this, x)) return (const char*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(12265, (void*)this, x)) return (const char*)x[0].s_class;
 	return this->QWindowsStyle::className();
     }
     virtual void connectNotify(const char* x1) {
@@ -243,7 +243,7 @@ public:
 	x[7].s_int = x7;
 	x[8].s_int = x8;
 	x[9].s_class = (void*)&x9;
-	if(qt_Smoke->binding->callMethod(12284, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12280, (void*)this, x)) return;
 	this->QWindowsStyle::drawComplexControl(x1, x2, x3, x4, x5, x6, x7, x8, x9);
     }
     virtual void drawComplexControlMask(QStyle::ComplexControl x1, QPainter* x2, const QWidget* x3, const QRect& x4, const QStyleOption& x5) const {
@@ -265,7 +265,7 @@ public:
 	x[5].s_class = (void*)&x5;
 	x[6].s_int = x6;
 	x[7].s_class = (void*)&x7;
-	if(qt_Smoke->binding->callMethod(12281, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12277, (void*)this, x)) return;
 	this->QWindowsStyle::drawControl(x1, x2, x3, x4, x5, x6, x7);
     }
     virtual void drawControlMask(QStyle::ControlElement x1, QPainter* x2, const QWidget* x3, const QRect& x4, const QStyleOption& x5) const {
@@ -300,7 +300,7 @@ public:
 	x[4].s_class = (void*)&x4;
 	x[5].s_int = x5;
 	x[6].s_class = (void*)&x6;
-	if(qt_Smoke->binding->callMethod(12278, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12274, (void*)this, x)) return;
 	this->QWindowsStyle::drawPrimitive(x1, x2, x3, x4, x5, x6);
     }
     virtual bool event(QEvent* x1) {
@@ -341,14 +341,14 @@ public:
     }
     virtual QMetaObject* metaObject() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(12268, (void*)this, x)) return (QMetaObject*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(12264, (void*)this, x)) return (QMetaObject*)x[0].s_class;
 	return this->QWindowsStyle::metaObject();
     }
     virtual int pixelMetric(QStyle::PixelMetric x1, const QWidget* x2) const {
 	Smoke::StackItem x[3];
 	x[1].s_enum = x1;
 	x[2].s_class = (void*)x2;
-	if(qt_Smoke->binding->callMethod(12289, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(12285, (void*)this, x)) return (int)x[0].s_int;
 	return this->QWindowsStyle::pixelMetric(x1, x2);
     }
     virtual void polish(QApplication* x1) {
@@ -372,7 +372,7 @@ public:
     virtual void polishPopupMenu(QPopupMenu* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(12277, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12273, (void*)this, x)) return;
 	this->QWindowsStyle::polishPopupMenu(x1);
     }
     virtual QVariant property(const char* x1) const {
@@ -389,21 +389,21 @@ public:
     virtual void* qt_cast(const char* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(12270, (void*)this, x)) return (void*)x[0].s_voidp;
+	if(qt_Smoke->binding->callMethod(12266, (void*)this, x)) return (void*)x[0].s_voidp;
 	return this->QWindowsStyle::qt_cast(x1);
     }
     virtual bool qt_emit(int x1, QUObject* x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_voidp = (void*)x2;
-	if(qt_Smoke->binding->callMethod(12272, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(12268, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QWindowsStyle::qt_emit(x1, x2);
     }
     virtual bool qt_invoke(int x1, QUObject* x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_voidp = (void*)x2;
-	if(qt_Smoke->binding->callMethod(12271, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(12267, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QWindowsStyle::qt_invoke(x1, x2);
     }
     virtual bool qt_property(int x1, int x2, QVariant* x3) {
@@ -411,7 +411,7 @@ public:
 	x[1].s_int = x1;
 	x[2].s_int = x2;
 	x[3].s_class = (void*)x3;
-	if(qt_Smoke->binding->callMethod(12273, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(12269, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QWindowsStyle::qt_property(x1, x2, x3);
     }
     virtual QStyle::SubControl querySubControl(QStyle::ComplexControl x1, const QWidget* x2, const QPoint& x3, const QStyleOption& x4) const {
@@ -467,7 +467,7 @@ public:
 	x[2].s_class = (void*)x2;
 	x[3].s_class = (void*)&x3;
 	x[4].s_class = (void*)&x4;
-	if(qt_Smoke->binding->callMethod(12291, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(12287, (void*)this, x)) {
 	    QSize *xptr = (QSize *)x[0].s_class;
 	    QSize xret(*xptr);
 	    delete xptr;
@@ -481,7 +481,7 @@ public:
 	x[2].s_class = (void*)x2;
 	x[3].s_class = (void*)&x3;
 	x[4].s_voidp = (void*)x4;
-	if(qt_Smoke->binding->callMethod(12293, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(12289, (void*)this, x)) return (int)x[0].s_int;
 	return this->QWindowsStyle::styleHint(x1, x2, x3, x4);
     }
     virtual QPixmap stylePixmap(QStyle::StylePixmap x1, const QWidget* x2, const QStyleOption& x3) const {
@@ -489,7 +489,7 @@ public:
 	x[1].s_enum = x1;
 	x[2].s_class = (void*)x2;
 	x[3].s_class = (void*)&x3;
-	if(qt_Smoke->binding->callMethod(12296, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(12292, (void*)this, x)) {
 	    QPixmap *xptr = (QPixmap *)x[0].s_class;
 	    QPixmap xret(*xptr);
 	    delete xptr;
@@ -501,7 +501,7 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_enum = x1;
 	x[2].s_class = (void*)x2;
-	if(qt_Smoke->binding->callMethod(12299, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(12295, (void*)this, x)) {
 	    QRect *xptr = (QRect *)x[0].s_class;
 	    QRect xret(*xptr);
 	    delete xptr;
@@ -527,7 +527,7 @@ public:
 	if(qt_Smoke->binding->callMethod(9833, (void*)this, x)) return;
 	this->QStyle::unPolish(x1);
     }
-    ~x_QWindowsStyle() { qt_Smoke->binding->deleted(374, (void*)this); }
+    ~x_QWindowsStyle() { qt_Smoke->binding->deleted(373, (void*)this); }
 };
 void xcall_QWindowsStyle(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QWindowsStyle *xself = (x_QWindowsStyle*)obj;

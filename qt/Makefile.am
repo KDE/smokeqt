@@ -42,21 +42,21 @@ libsmokeqt_la_SOURCES = smokedata.cpp x_QTextDrag.cpp x_QLCDNumber.cpp x_QDockAr
  x_QDataSource.cpp x_QAccel.cpp x_QTime.cpp x_QDropSite.cpp x_QStrVec.cpp x_QListViewItem.cpp x_QToolTipGroup.cpp x_QImageIO.cpp \
  x_QXmlDTDHandler.cpp x_QDragResponseEvent.cpp x_QCanvasItemList.cpp x_QMainWindow.cpp x_QCustomMenuItem.cpp x_QDragLeaveEvent.cpp x_QTextBrowser.cpp x_QTextView.cpp \
  x_QImageFormatType.cpp x_QFtp.cpp x_QValidator.cpp x_QIconView.cpp x_QSizePolicy.cpp x_QSyntaxHighlighter.cpp x_QEucJpCodec.cpp x_QSizeGrip.cpp \
- x_QSemiModal.cpp x_QTimerEvent.cpp x_QObjectDictionary.cpp x_QMetaData.cpp x_QPtrBucket.cpp x_QSqlField.cpp x_QTSManip.cpp x_QStyleSheet.cpp \
- x_QBig5hkscsCodec.cpp x_QMapPrivateBase.cpp x_QSqlResultShared.cpp x_QMenuBar.cpp x_QCommonStyle.cpp x_QCanvasPolygonalItem.cpp x_QDateTime.cpp x_QSignalVec.cpp \
- x_QSocket.cpp x_QErrorMessage.cpp x_QFileDialog.cpp x_QTextEdit.cpp x_QSimpleRichText.cpp x_QSettings.cpp x_QHBox.cpp x_QRect.cpp \
- x_QHGroupBox.cpp x_QFileInfo.cpp x_QAuBucket.cpp x_QHostAddress.cpp x_QGb18030Codec.cpp x_QBig5Codec.cpp x_QWExtra.cpp x_QWidgetIntDictIt.cpp \
- x_QFocusEvent.cpp x_QEvent.cpp x_QScrollView.cpp x_QLayoutItem.cpp x_QDataBrowser.cpp x_QGListIterator.cpp x_QBoxLayout.cpp x_QListViewItemIterator.cpp \
- x_QTextIStream.cpp x_QSqlDriver.cpp x_QCanvasItem.cpp x_QDomNotation.cpp x_QSplitter.cpp x_QUrl.cpp x_QDataPump.cpp x_QAsciiBucket.cpp \
- x_QObjectListIterator.cpp x_QClassInfo.cpp x_QXmlReader.cpp x_QPNGImagePacker.cpp x_QCanvas.cpp x_QDial.cpp x_QSqlFieldInfo.cpp x_QTabWidget.cpp \
- x_QListBoxText.cpp x_QConnection.cpp x_QWizard.cpp x_QImageDrag.cpp x_QSqlEditorFactory.cpp x_QTextCodecPlugin.cpp x_QProgressBar.cpp x_QCanvasEllipse.cpp \
- x_QXmlLexicalHandler.cpp x_QSpinWidget.cpp x_QTextStream.cpp x_QSound.cpp x_QTsciiCodec.cpp x_QLNode.cpp x_QDataStream.cpp x_QCanvasPolygon.cpp \
- x_QCDEStyle.cpp x_QUrlOperator.cpp x_QDataSink.cpp x_QMessageBox.cpp x_QImage.cpp x_QWidgetStack.cpp x_QHebrewCodec.cpp x_QSpinBox.cpp \
- x_QRegExpValidator.cpp x_QRegExp.cpp x_QDomNodeList.cpp x_QXmlSimpleReader.cpp x_QSqlResult.cpp x_QDateEdit.cpp x_QDockArea.cpp x_QEucKrCodec.cpp \
- x_QImageConsumer.cpp x_QTextEncoder.cpp x_QDate.cpp x_QDoubleValidator.cpp x_QFontDatabase.cpp x_QXmlDeclHandler.cpp x_QPen.cpp x_QPrintDialog.cpp \
- x_QJisCodec.cpp x_QHideEvent.cpp x_QLocalFs.cpp x_QUuid.cpp x_QWidgetItem.cpp x_QGridLayout.cpp x_QTextDecoder.cpp x_QAsyncIO.cpp \
- x_QWMatrix.cpp x_QNetworkProtocol.cpp x_QToolButton.cpp x_QDomDocument.cpp x_QVButtonGroup.cpp x_QStyleFactory.cpp x_QImageFormat.cpp x_QFontMetrics.cpp \
- x_QWidgetListIt.cpp x_QPointArray.cpp x_QDomNamedNodeMap.cpp x_QXmlContentHandler.cpp x_QImageDecoder.cpp x_QLayout.cpp x_QDomNode.cpp x_QBuffer.cpp \
- x_QMoveEvent.cpp x_QComboBox.cpp x_QXmlNamespaceSupport.cpp x_QPaintDeviceMetrics.cpp x_QPainter.cpp x_QMotifPlusStyle.cpp x_QListView.cpp x_QVariant.cpp \
- x_QHeader.cpp x_QMimeSource.cpp x_QIMEvent.cpp x_QRegion.cpp x_QWorkspace.cpp x_QIconFactory.cpp x_QHButtonGroup.cpp x_QDomEntityReference.cpp \
- x_QCheckBox.cpp x_QGLColormap.cpp x_QIODeviceSource.cpp x_QGrid.cpp x_QMotifStyle.cpp x_QToolTip.cpp x_QMetaProperty.cpp x_QFilePreview.cpp
+ x_QSemiModal.cpp x_QTimerEvent.cpp x_QObjectDictionary.cpp x_QMetaData.cpp x_QPtrBucket.cpp x_QSqlField.cpp x_QStyleSheet.cpp x_QBig5hkscsCodec.cpp \
+ x_QMapPrivateBase.cpp x_QSqlResultShared.cpp x_QMenuBar.cpp x_QCommonStyle.cpp x_QCanvasPolygonalItem.cpp x_QDateTime.cpp x_QSignalVec.cpp x_QSocket.cpp \
+ x_QErrorMessage.cpp x_QFileDialog.cpp x_QTextEdit.cpp x_QSimpleRichText.cpp x_QSettings.cpp x_QHBox.cpp x_QRect.cpp x_QHGroupBox.cpp \
+ x_QFileInfo.cpp x_QAuBucket.cpp x_QHostAddress.cpp x_QGb18030Codec.cpp x_QBig5Codec.cpp x_QWExtra.cpp x_QWidgetIntDictIt.cpp x_QFocusEvent.cpp \
+ x_QEvent.cpp x_QScrollView.cpp x_QLayoutItem.cpp x_QDataBrowser.cpp x_QGListIterator.cpp x_QBoxLayout.cpp x_QListViewItemIterator.cpp x_QTextIStream.cpp \
+ x_QSqlDriver.cpp x_QCanvasItem.cpp x_QDomNotation.cpp x_QSplitter.cpp x_QUrl.cpp x_QDataPump.cpp x_QAsciiBucket.cpp x_QObjectListIterator.cpp \
+ x_QClassInfo.cpp x_QXmlReader.cpp x_QPNGImagePacker.cpp x_QCanvas.cpp x_QDial.cpp x_QSqlFieldInfo.cpp x_QTabWidget.cpp x_QListBoxText.cpp \
+ x_QConnection.cpp x_QWizard.cpp x_QImageDrag.cpp x_QSqlEditorFactory.cpp x_QTextCodecPlugin.cpp x_QProgressBar.cpp x_QCanvasEllipse.cpp x_QXmlLexicalHandler.cpp \
+ x_QSpinWidget.cpp x_QTextStream.cpp x_QSound.cpp x_QTsciiCodec.cpp x_QLNode.cpp x_QDataStream.cpp x_QCanvasPolygon.cpp x_QCDEStyle.cpp \
+ x_QUrlOperator.cpp x_QDataSink.cpp x_QMessageBox.cpp x_QImage.cpp x_QWidgetStack.cpp x_QHebrewCodec.cpp x_QSpinBox.cpp x_QRegExpValidator.cpp \
+ x_QRegExp.cpp x_QDomNodeList.cpp x_QXmlSimpleReader.cpp x_QSqlResult.cpp x_QDateEdit.cpp x_QDockArea.cpp x_QEucKrCodec.cpp x_QImageConsumer.cpp \
+ x_QTextEncoder.cpp x_QDate.cpp x_QDoubleValidator.cpp x_QFontDatabase.cpp x_QXmlDeclHandler.cpp x_QPen.cpp x_QPrintDialog.cpp x_QJisCodec.cpp \
+ x_QHideEvent.cpp x_QLocalFs.cpp x_QUuid.cpp x_QWidgetItem.cpp x_QGridLayout.cpp x_QTextDecoder.cpp x_QAsyncIO.cpp x_QWMatrix.cpp \
+ x_QNetworkProtocol.cpp x_QToolButton.cpp x_QDomDocument.cpp x_QVButtonGroup.cpp x_QStyleFactory.cpp x_QImageFormat.cpp x_QFontMetrics.cpp x_QWidgetListIt.cpp \
+ x_QPointArray.cpp x_QDomNamedNodeMap.cpp x_QXmlContentHandler.cpp x_QImageDecoder.cpp x_QLayout.cpp x_QDomNode.cpp x_QBuffer.cpp x_QMoveEvent.cpp \
+ x_QComboBox.cpp x_QXmlNamespaceSupport.cpp x_QPaintDeviceMetrics.cpp x_QPainter.cpp x_QMotifPlusStyle.cpp x_QListView.cpp x_QVariant.cpp x_QHeader.cpp \
+ x_QMimeSource.cpp x_QIMEvent.cpp x_QRegion.cpp x_QWorkspace.cpp x_QIconFactory.cpp x_QHButtonGroup.cpp x_QDomEntityReference.cpp x_QCheckBox.cpp \
+ x_QGLColormap.cpp x_QIODeviceSource.cpp x_QGrid.cpp x_QMotifStyle.cpp x_QToolTip.cpp x_QMetaProperty.cpp x_QFilePreview.cpp
