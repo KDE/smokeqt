@@ -1,12 +1,17 @@
+#ifndef SMOKE_H
+#define SMOKE_H
+
 /*
  *   Copyright (C) 2002, Ashley Winters <qaqortog@nwlink.com>
  */
 
 class Smoke {
 public:
-    class Stack;		// To be written
+    union StackItem; // defined below
+    typedef StackItem* Stack;
+
     typedef short Index;
-    typedef void (*ClassFn)(Index method, void* obj, Stack* args);
+    typedef void (*ClassFn)(Index method, void* obj, Stack args); // was Stack * (DF)
     typedef void* (*CastFn)(void* obj, Index from, Index to);
     typedef void (*DestructorCallbackFn)(void* obj);
 
@@ -104,7 +109,6 @@ public:
 	t_double,
 	t_last,		// number of pre-defined types
     };
- 
 
     // Passed to constructor
     /**
@@ -154,13 +158,13 @@ public:
 
     /**
      * Function used for casting from/to the classes defined by this module.
-     */ 
+     */
     CastFn castFn;
 
     // Not passed to constructor
     DestructorCallbackFn destructorCallbackFn;
 
-    /** 
+    /**
      * Constructor
      */
     Smoke(Class *_classes, Index _numClasses,
@@ -185,3 +189,10 @@ public:
 		destructorCallbackFn(0)
 		{}
 };
+
+//// TODO
+bool call_method(void*, int, Smoke::Stack);
+void call_method_abstract(void*, int, Smoke::Stack);
+
+
+#endif
