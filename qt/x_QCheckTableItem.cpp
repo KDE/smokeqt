@@ -12,7 +12,7 @@ class x_QCheckTableItem : public QCheckTableItem {
 public:
     static void x_0(Smoke::Stack x) {
 	// QCheckTableItem(QTable*, const QString&)
-	x_QCheckTableItem* xret = new x_QCheckTableItem((QTable*)x[1].s_class,*(const QString *)x[2].s_class);
+	x_QCheckTableItem* xret = new x_QCheckTableItem((QTable*)x[1].s_voidp,*(const QString *)x[2].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QCheckTableItem(QTable* x1, const QString& x2) : QCheckTableItem(x1, x2) {
@@ -20,32 +20,32 @@ public:
     void x_1(Smoke::Stack x) const {
 	// createEditor()
 	QWidget* xret = this->QCheckTableItem::createEditor();
-	x[0].s_class = (void*)xret;
+	x[0].s_voidp = (void*)xret;
     }
     void x_2(Smoke::Stack x) {
 	// setContentFromEditor(QWidget*)
-	this->QCheckTableItem::setContentFromEditor((QWidget*)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QCheckTableItem::setContentFromEditor((QWidget*)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_3(Smoke::Stack x) {
 	// paint(QPainter*, const QColorGroup&, const QRect&, bool)
-	this->QCheckTableItem::paint((QPainter*)x[1].s_class,*(const QColorGroup *)x[2].s_class,*(const QRect *)x[3].s_class,(bool)x[4].s_bool);
-	x[0].s_int = x[0].s_int; // noop
+	this->QCheckTableItem::paint((QPainter*)x[1].s_voidp,*(const QColorGroup *)x[2].s_voidp,*(const QRect *)x[3].s_voidp,(bool)x[4].s_bool);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_4(Smoke::Stack x) {
 	// setChecked(bool)
 	this->QCheckTableItem::setChecked((bool)x[1].s_bool);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_5(Smoke::Stack x) const {
 	// isChecked()
 	bool xret = this->QCheckTableItem::isChecked();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_6(Smoke::Stack x) const {
 	// rtti()
 	int xret = this->QCheckTableItem::rtti();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     virtual int alignment() const {
 	Smoke::StackItem x[1];
@@ -69,10 +69,10 @@ public:
     }
     virtual void paint(QPainter* x1, const QColorGroup& x2, const QRect& x3, bool x4) {
 	Smoke::StackItem x[5];
-	x[1].s_class = (void*)x1;
-	x[2].s_class = (void*)&x2;
-	x[3].s_class = (void*)&x3;
-	x[4].s_bool = (bool)x4;
+	x[1].s_voidp = (void*)x1;
+	x[2].s_voidp = (void*)&x2;
+	x[3].s_voidp = (void*)&x3;
+	x[4].s_bool = x4;
 	if(qt_Smoke->callMethod(920, (void*)this, x)) return;
 	this->QCheckTableItem::paint(x1, x2, x3, x4);
     }
@@ -93,62 +93,62 @@ public:
     }
     virtual void setChecked(bool x1) {
 	Smoke::StackItem x[2];
-	x[1].s_bool = (bool)x1;
+	x[1].s_bool = x1;
 	if(qt_Smoke->callMethod(921, (void*)this, x)) return;
 	this->QCheckTableItem::setChecked(x1);
     }
     virtual void setCol(int x1) {
 	Smoke::StackItem x[2];
-	x[1].s_int = (int)x1;
+	x[1].s_int = x1;
 	if(qt_Smoke->callMethod(8467, (void*)this, x)) return;
 	this->QTableItem::setCol(x1);
     }
     virtual void setContentFromEditor(QWidget* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(919, (void*)this, x)) return;
 	this->QCheckTableItem::setContentFromEditor(x1);
     }
     virtual void setEnabled(bool x1) {
 	Smoke::StackItem x[2];
-	x[1].s_bool = (bool)x1;
+	x[1].s_bool = x1;
 	if(qt_Smoke->callMethod(8472, (void*)this, x)) return;
 	this->QTableItem::setEnabled(x1);
     }
     virtual void setPixmap(const QPixmap& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)&x1;
+	x[1].s_voidp = (void*)&x1;
 	if(qt_Smoke->callMethod(8450, (void*)this, x)) return;
 	this->QTableItem::setPixmap(x1);
     }
     virtual void setReplaceable(bool x1) {
 	Smoke::StackItem x[2];
-	x[1].s_bool = (bool)x1;
+	x[1].s_bool = x1;
 	if(qt_Smoke->callMethod(8459, (void*)this, x)) return;
 	this->QTableItem::setReplaceable(x1);
     }
     virtual void setRow(int x1) {
 	Smoke::StackItem x[2];
-	x[1].s_int = (int)x1;
+	x[1].s_int = x1;
 	if(qt_Smoke->callMethod(8466, (void*)this, x)) return;
 	this->QTableItem::setRow(x1);
     }
     virtual void setSpan(int x1, int x2) {
 	Smoke::StackItem x[3];
-	x[1].s_int = (int)x1;
-	x[2].s_int = (int)x2;
+	x[1].s_int = x1;
+	x[2].s_int = x2;
 	if(qt_Smoke->callMethod(8463, (void*)this, x)) return;
 	this->QTableItem::setSpan(x1, x2);
     }
     virtual void setText(const QString& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)&x1;
+	x[1].s_voidp = (void*)&x1;
 	if(qt_Smoke->callMethod(8451, (void*)this, x)) return;
 	this->QTableItem::setText(x1);
     }
     virtual void setWordWrap(bool x1) {
 	Smoke::StackItem x[2];
-	x[1].s_bool = (bool)x1;
+	x[1].s_bool = x1;
 	if(qt_Smoke->callMethod(8454, (void*)this, x)) return;
 	this->QTableItem::setWordWrap(x1);
     }

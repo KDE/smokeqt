@@ -84,14 +84,14 @@ public:
     }
     static void x_25(Smoke::Stack x) {
 	// QStyleSheetItem(QStyleSheet*, const QString&)
-	x_QStyleSheetItem* xret = new x_QStyleSheetItem((QStyleSheet*)x[1].s_class,*(const QString *)x[2].s_class);
+	x_QStyleSheetItem* xret = new x_QStyleSheetItem((QStyleSheet*)x[1].s_voidp,*(const QString *)x[2].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QStyleSheetItem(QStyleSheet* x1, const QString& x2) : QStyleSheetItem(x1, x2) {
     }
     static void x_26(Smoke::Stack x) {
 	// QStyleSheetItem(const QStyleSheetItem&)
-	x_QStyleSheetItem* xret = new x_QStyleSheetItem(*(const QStyleSheetItem *)x[1].s_class);
+	x_QStyleSheetItem* xret = new x_QStyleSheetItem(*(const QStyleSheetItem *)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QStyleSheetItem(const QStyleSheetItem& x1) : QStyleSheetItem(x1) {
@@ -99,107 +99,107 @@ public:
     void x_27(Smoke::Stack x) const {
 	// name()
 	QString xret = this->QStyleSheetItem::name();
-	x[0].s_class = (void*)new QString(xret);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     void x_28(Smoke::Stack x) {
 	// styleSheet()
 	QStyleSheet* xret = this->QStyleSheetItem::styleSheet();
-	x[0].s_class = (void*)xret;
+	x[0].s_voidp = (void*)xret;
     }
     void x_29(Smoke::Stack x) const {
 	// styleSheet()
 	const QStyleSheet* xret = this->QStyleSheetItem::styleSheet();
-	x[0].s_class = (void*)xret;
+	x[0].s_voidp = (void*)xret;
     }
     void x_30(Smoke::Stack x) const {
 	// displayMode()
 	QStyleSheetItem::DisplayMode xret = this->QStyleSheetItem::displayMode();
-	x[0].s_class = (void*)new QStyleSheetItem::DisplayMode(xret);
+	x[0].s_enum = xret;
     }
     void x_31(Smoke::Stack x) {
 	// setDisplayMode(QStyleSheetItem::DisplayMode)
-	this->QStyleSheetItem::setDisplayMode(*(QStyleSheetItem::DisplayMode *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QStyleSheetItem::setDisplayMode((QStyleSheetItem::DisplayMode)x[1].s_enum);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_32(Smoke::Stack x) const {
 	// alignment()
 	int xret = this->QStyleSheetItem::alignment();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_33(Smoke::Stack x) {
 	// setAlignment(int)
 	this->QStyleSheetItem::setAlignment((int)x[1].s_int);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_34(Smoke::Stack x) const {
 	// verticalAlignment()
 	QStyleSheetItem::VerticalAlignment xret = this->QStyleSheetItem::verticalAlignment();
-	x[0].s_class = (void*)new QStyleSheetItem::VerticalAlignment(xret);
+	x[0].s_enum = xret;
     }
     void x_35(Smoke::Stack x) {
 	// setVerticalAlignment(QStyleSheetItem::VerticalAlignment)
-	this->QStyleSheetItem::setVerticalAlignment(*(QStyleSheetItem::VerticalAlignment *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QStyleSheetItem::setVerticalAlignment((QStyleSheetItem::VerticalAlignment)x[1].s_enum);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_36(Smoke::Stack x) const {
 	// fontWeight()
 	int xret = this->QStyleSheetItem::fontWeight();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_37(Smoke::Stack x) {
 	// setFontWeight(int)
 	this->QStyleSheetItem::setFontWeight((int)x[1].s_int);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_38(Smoke::Stack x) const {
 	// logicalFontSize()
 	int xret = this->QStyleSheetItem::logicalFontSize();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_39(Smoke::Stack x) {
 	// setLogicalFontSize(int)
 	this->QStyleSheetItem::setLogicalFontSize((int)x[1].s_int);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_40(Smoke::Stack x) const {
 	// logicalFontSizeStep()
 	int xret = this->QStyleSheetItem::logicalFontSizeStep();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_41(Smoke::Stack x) {
 	// setLogicalFontSizeStep(int)
 	this->QStyleSheetItem::setLogicalFontSizeStep((int)x[1].s_int);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_42(Smoke::Stack x) const {
 	// fontSize()
 	int xret = this->QStyleSheetItem::fontSize();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_43(Smoke::Stack x) {
 	// setFontSize(int)
 	this->QStyleSheetItem::setFontSize((int)x[1].s_int);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_44(Smoke::Stack x) const {
 	// fontFamily()
 	QString xret = this->QStyleSheetItem::fontFamily();
-	x[0].s_class = (void*)new QString(xret);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     void x_45(Smoke::Stack x) {
 	// setFontFamily(const QString&)
-	this->QStyleSheetItem::setFontFamily(*(const QString *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QStyleSheetItem::setFontFamily(*(const QString *)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_46(Smoke::Stack x) const {
 	// numberOfColumns()
 	int xret = this->QStyleSheetItem::numberOfColumns();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_47(Smoke::Stack x) {
 	// setNumberOfColumns(int)
 	this->QStyleSheetItem::setNumberOfColumns((int)x[1].s_int);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_48(Smoke::Stack x) const {
 	// color()
@@ -208,113 +208,113 @@ public:
     }
     void x_49(Smoke::Stack x) {
 	// setColor(const QColor&)
-	this->QStyleSheetItem::setColor(*(const QColor *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QStyleSheetItem::setColor(*(const QColor *)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_50(Smoke::Stack x) const {
 	// fontItalic()
 	bool xret = this->QStyleSheetItem::fontItalic();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_51(Smoke::Stack x) {
 	// setFontItalic(bool)
 	this->QStyleSheetItem::setFontItalic((bool)x[1].s_bool);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_52(Smoke::Stack x) const {
 	// definesFontItalic()
 	bool xret = this->QStyleSheetItem::definesFontItalic();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_53(Smoke::Stack x) const {
 	// fontUnderline()
 	bool xret = this->QStyleSheetItem::fontUnderline();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_54(Smoke::Stack x) {
 	// setFontUnderline(bool)
 	this->QStyleSheetItem::setFontUnderline((bool)x[1].s_bool);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_55(Smoke::Stack x) const {
 	// definesFontUnderline()
 	bool xret = this->QStyleSheetItem::definesFontUnderline();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_56(Smoke::Stack x) const {
 	// isAnchor()
 	bool xret = this->QStyleSheetItem::isAnchor();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_57(Smoke::Stack x) {
 	// setAnchor(bool)
 	this->QStyleSheetItem::setAnchor((bool)x[1].s_bool);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_58(Smoke::Stack x) const {
 	// whiteSpaceMode()
 	QStyleSheetItem::WhiteSpaceMode xret = this->QStyleSheetItem::whiteSpaceMode();
-	x[0].s_class = (void*)new QStyleSheetItem::WhiteSpaceMode(xret);
+	x[0].s_enum = xret;
     }
     void x_59(Smoke::Stack x) {
 	// setWhiteSpaceMode(QStyleSheetItem::WhiteSpaceMode)
-	this->QStyleSheetItem::setWhiteSpaceMode(*(QStyleSheetItem::WhiteSpaceMode *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QStyleSheetItem::setWhiteSpaceMode((QStyleSheetItem::WhiteSpaceMode)x[1].s_enum);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_60(Smoke::Stack x) const {
 	// margin(QStyleSheetItem::Margin)
-	int xret = this->QStyleSheetItem::margin(*(QStyleSheetItem::Margin *)x[1].s_class);
-	x[0].s_int = (int)xret;
+	int xret = this->QStyleSheetItem::margin((QStyleSheetItem::Margin)x[1].s_enum);
+	x[0].s_int = xret;
     }
     void x_61(Smoke::Stack x) {
 	// setMargin(QStyleSheetItem::Margin, int)
-	this->QStyleSheetItem::setMargin(*(QStyleSheetItem::Margin *)x[1].s_class,(int)x[2].s_int);
-	x[0].s_int = x[0].s_int; // noop
+	this->QStyleSheetItem::setMargin((QStyleSheetItem::Margin)x[1].s_enum,(int)x[2].s_int);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_62(Smoke::Stack x) const {
 	// listStyle()
 	QStyleSheetItem::ListStyle xret = this->QStyleSheetItem::listStyle();
-	x[0].s_class = (void*)new QStyleSheetItem::ListStyle(xret);
+	x[0].s_enum = xret;
     }
     void x_63(Smoke::Stack x) {
 	// setListStyle(QStyleSheetItem::ListStyle)
-	this->QStyleSheetItem::setListStyle(*(QStyleSheetItem::ListStyle *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QStyleSheetItem::setListStyle((QStyleSheetItem::ListStyle)x[1].s_enum);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_64(Smoke::Stack x) const {
 	// contexts()
 	QString xret = this->QStyleSheetItem::contexts();
-	x[0].s_class = (void*)new QString(xret);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     void x_65(Smoke::Stack x) {
 	// setContexts(const QString&)
-	this->QStyleSheetItem::setContexts(*(const QString *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QStyleSheetItem::setContexts(*(const QString *)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_66(Smoke::Stack x) const {
 	// allowedInContext(const QStyleSheetItem*)
-	bool xret = this->QStyleSheetItem::allowedInContext((const QStyleSheetItem*)x[1].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QStyleSheetItem::allowedInContext((const QStyleSheetItem*)x[1].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_67(Smoke::Stack x) const {
 	// selfNesting()
 	bool xret = this->QStyleSheetItem::selfNesting();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_68(Smoke::Stack x) {
 	// setSelfNesting(bool)
 	this->QStyleSheetItem::setSelfNesting((bool)x[1].s_bool);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_69(Smoke::Stack x) {
 	// setLineSpacing(int)
 	this->QStyleSheetItem::setLineSpacing((int)x[1].s_int);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_70(Smoke::Stack x) const {
 	// lineSpacing()
 	int xret = this->QStyleSheetItem::lineSpacing();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     ~x_QStyleSheetItem() {}
 };

@@ -15,28 +15,28 @@ public:
     }
     static void x_1(Smoke::Stack x) {
 	// QUrl(const QString&)
-	x_QUrl* xret = new x_QUrl(*(const QString *)x[1].s_class);
+	x_QUrl* xret = new x_QUrl(*(const QString *)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QUrl(const QString& x1) : QUrl(x1) {
     }
     static void x_2(Smoke::Stack x) {
 	// QUrl(const QUrl&)
-	x_QUrl* xret = new x_QUrl(*(const QUrl *)x[1].s_class);
+	x_QUrl* xret = new x_QUrl(*(const QUrl *)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QUrl(const QUrl& x1) : QUrl(x1) {
     }
     static void x_3(Smoke::Stack x) {
 	// QUrl(const QUrl&, const QString&, bool)
-	x_QUrl* xret = new x_QUrl(*(const QUrl *)x[1].s_class,*(const QString *)x[2].s_class,(bool)x[3].s_bool);
+	x_QUrl* xret = new x_QUrl(*(const QUrl *)x[1].s_voidp,*(const QString *)x[2].s_voidp,(bool)x[3].s_bool);
 	x[0].s_class = (void*)xret;
     }
     x_QUrl(const QUrl& x1, const QString& x2, bool x3) : QUrl(x1, x2, x3) {
     }
     static void x_4(Smoke::Stack x) {
 	// QUrl(const QUrl&, const QString&)
-	x_QUrl* xret = new x_QUrl(*(const QUrl *)x[1].s_class,*(const QString *)x[2].s_class);
+	x_QUrl* xret = new x_QUrl(*(const QUrl *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QUrl(const QUrl& x1, const QString& x2) : QUrl(x1, x2) {
@@ -44,231 +44,231 @@ public:
     void x_5(Smoke::Stack x) const {
 	// protocol()
 	QString xret = this->QUrl::protocol();
-	x[0].s_class = (void*)new QString(xret);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     void x_6(Smoke::Stack x) {
 	// setProtocol(const QString&)
-	this->QUrl::setProtocol(*(const QString *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QUrl::setProtocol(*(const QString *)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_7(Smoke::Stack x) const {
 	// user()
 	QString xret = this->QUrl::user();
-	x[0].s_class = (void*)new QString(xret);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     void x_8(Smoke::Stack x) {
 	// setUser(const QString&)
-	this->QUrl::setUser(*(const QString *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QUrl::setUser(*(const QString *)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_9(Smoke::Stack x) const {
 	// hasUser()
 	bool xret = this->QUrl::hasUser();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_10(Smoke::Stack x) const {
 	// password()
 	QString xret = this->QUrl::password();
-	x[0].s_class = (void*)new QString(xret);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     void x_11(Smoke::Stack x) {
 	// setPassword(const QString&)
-	this->QUrl::setPassword(*(const QString *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QUrl::setPassword(*(const QString *)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_12(Smoke::Stack x) const {
 	// hasPassword()
 	bool xret = this->QUrl::hasPassword();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_13(Smoke::Stack x) const {
 	// host()
 	QString xret = this->QUrl::host();
-	x[0].s_class = (void*)new QString(xret);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     void x_14(Smoke::Stack x) {
 	// setHost(const QString&)
-	this->QUrl::setHost(*(const QString *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QUrl::setHost(*(const QString *)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_15(Smoke::Stack x) const {
 	// hasHost()
 	bool xret = this->QUrl::hasHost();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_16(Smoke::Stack x) const {
 	// port()
 	int xret = this->QUrl::port();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_17(Smoke::Stack x) {
 	// setPort(int)
 	this->QUrl::setPort((int)x[1].s_int);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_18(Smoke::Stack x) const {
 	// hasPort()
 	bool xret = this->QUrl::hasPort();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_19(Smoke::Stack x) const {
 	// path(bool)
 	QString xret = this->QUrl::path((bool)x[1].s_bool);
-	x[0].s_class = (void*)new QString(xret);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     void x_20(Smoke::Stack x) const {
 	// path()
 	QString xret = this->QUrl::path();
-	x[0].s_class = (void*)new QString(xret);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     void x_21(Smoke::Stack x) {
 	// setPath(const QString&)
-	this->QUrl::setPath(*(const QString *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QUrl::setPath(*(const QString *)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_22(Smoke::Stack x) const {
 	// hasPath()
 	bool xret = this->QUrl::hasPath();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_23(Smoke::Stack x) {
 	// setEncodedPathAndQuery(const QString&)
-	this->QUrl::setEncodedPathAndQuery(*(const QString *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QUrl::setEncodedPathAndQuery(*(const QString *)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_24(Smoke::Stack x) {
 	// encodedPathAndQuery()
 	QString xret = this->QUrl::encodedPathAndQuery();
-	x[0].s_class = (void*)new QString(xret);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     void x_25(Smoke::Stack x) {
 	// setQuery(const QString&)
-	this->QUrl::setQuery(*(const QString *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QUrl::setQuery(*(const QString *)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_26(Smoke::Stack x) const {
 	// query()
 	QString xret = this->QUrl::query();
-	x[0].s_class = (void*)new QString(xret);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     void x_27(Smoke::Stack x) const {
 	// ref()
 	QString xret = this->QUrl::ref();
-	x[0].s_class = (void*)new QString(xret);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     void x_28(Smoke::Stack x) {
 	// setRef(const QString&)
-	this->QUrl::setRef(*(const QString *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QUrl::setRef(*(const QString *)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_29(Smoke::Stack x) const {
 	// hasRef()
 	bool xret = this->QUrl::hasRef();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_30(Smoke::Stack x) const {
 	// isValid()
 	bool xret = this->QUrl::isValid();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_31(Smoke::Stack x) const {
 	// isLocalFile()
 	bool xret = this->QUrl::isLocalFile();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_32(Smoke::Stack x) {
 	// addPath(const QString&)
-	this->QUrl::addPath(*(const QString *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QUrl::addPath(*(const QString *)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_33(Smoke::Stack x) {
 	// setFileName(const QString&)
-	this->QUrl::setFileName(*(const QString *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QUrl::setFileName(*(const QString *)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_34(Smoke::Stack x) const {
 	// fileName()
 	QString xret = this->QUrl::fileName();
-	x[0].s_class = (void*)new QString(xret);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     void x_35(Smoke::Stack x) const {
 	// dirPath()
 	QString xret = this->QUrl::dirPath();
-	x[0].s_class = (void*)new QString(xret);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     void x_36(Smoke::Stack x) {
 	// operator=(const QUrl&)
-	QUrl& xret = this->QUrl::operator=(*(const QUrl *)x[1].s_class);
-	x[0].s_class = (void*)&xret;
+	QUrl& xret = this->QUrl::operator=(*(const QUrl *)x[1].s_voidp);
+	x[0].s_voidp = (void*)&xret;
     }
     void x_37(Smoke::Stack x) {
 	// operator=(const QString&)
-	QUrl& xret = this->QUrl::operator=(*(const QString *)x[1].s_class);
-	x[0].s_class = (void*)&xret;
+	QUrl& xret = this->QUrl::operator=(*(const QString *)x[1].s_voidp);
+	x[0].s_voidp = (void*)&xret;
     }
     void x_38(Smoke::Stack x) const {
 	// operator==(const QUrl&)
-	bool xret = this->QUrl::operator==(*(const QUrl *)x[1].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QUrl::operator==(*(const QUrl *)x[1].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_39(Smoke::Stack x) const {
 	// operator==(const QString&)
-	bool xret = this->QUrl::operator==(*(const QString *)x[1].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QUrl::operator==(*(const QString *)x[1].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_40(Smoke::Stack x) const {
 	// operator QString()
 	this->QUrl::operator QString();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_41(Smoke::Stack x) const {
 	// toString(bool, bool)
 	QString xret = this->QUrl::toString((bool)x[1].s_bool,(bool)x[2].s_bool);
-	x[0].s_class = (void*)new QString(xret);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     void x_42(Smoke::Stack x) const {
 	// toString(bool)
 	QString xret = this->QUrl::toString((bool)x[1].s_bool);
-	x[0].s_class = (void*)new QString(xret);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     void x_43(Smoke::Stack x) const {
 	// toString()
 	QString xret = this->QUrl::toString();
-	x[0].s_class = (void*)new QString(xret);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     void x_44(Smoke::Stack x) {
 	// cdUp()
 	bool xret = this->QUrl::cdUp();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     static void x_45(Smoke::Stack x) {
 	// decode(QString&)
-	QUrl::decode(*(QString *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	QUrl::decode(*(QString *)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     static void x_46(Smoke::Stack x) {
 	// encode(QString&)
-	QUrl::encode(*(QString *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	QUrl::encode(*(QString *)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     static void x_47(Smoke::Stack x) {
 	// isRelativeUrl(const QString&)
-	bool xret = QUrl::isRelativeUrl(*(const QString *)x[1].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = QUrl::isRelativeUrl(*(const QString *)x[1].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_48(Smoke::Stack x) {
 	// reset()
 	this->QUrl::reset();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_49(Smoke::Stack x) {
 	// parse(const QString&)
-	bool xret = this->QUrl::parse(*(const QString *)x[1].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QUrl::parse(*(const QString *)x[1].s_voidp);
+	x[0].s_bool = xret;
     }
     virtual void addPath(const QString& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)&x1;
+	x[1].s_voidp = (void*)&x1;
 	if(qt_Smoke->callMethod(9175, (void*)this, x)) return;
 	this->QUrl::addPath(x1);
     }
@@ -279,7 +279,7 @@ public:
     }
     virtual bool parse(const QString& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)&x1;
+	x[1].s_voidp = (void*)&x1;
 	if(qt_Smoke->callMethod(9192, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QUrl::parse(x1);
     }
@@ -290,68 +290,68 @@ public:
     }
     virtual void setEncodedPathAndQuery(const QString& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)&x1;
+	x[1].s_voidp = (void*)&x1;
 	if(qt_Smoke->callMethod(9166, (void*)this, x)) return;
 	this->QUrl::setEncodedPathAndQuery(x1);
     }
     virtual void setFileName(const QString& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)&x1;
+	x[1].s_voidp = (void*)&x1;
 	if(qt_Smoke->callMethod(9176, (void*)this, x)) return;
 	this->QUrl::setFileName(x1);
     }
     virtual void setHost(const QString& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)&x1;
+	x[1].s_voidp = (void*)&x1;
 	if(qt_Smoke->callMethod(9157, (void*)this, x)) return;
 	this->QUrl::setHost(x1);
     }
     virtual void setPassword(const QString& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)&x1;
+	x[1].s_voidp = (void*)&x1;
 	if(qt_Smoke->callMethod(9154, (void*)this, x)) return;
 	this->QUrl::setPassword(x1);
     }
     virtual void setPath(const QString& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)&x1;
+	x[1].s_voidp = (void*)&x1;
 	if(qt_Smoke->callMethod(9164, (void*)this, x)) return;
 	this->QUrl::setPath(x1);
     }
     virtual void setPort(int x1) {
 	Smoke::StackItem x[2];
-	x[1].s_int = (int)x1;
+	x[1].s_int = x1;
 	if(qt_Smoke->callMethod(9160, (void*)this, x)) return;
 	this->QUrl::setPort(x1);
     }
     virtual void setProtocol(const QString& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)&x1;
+	x[1].s_voidp = (void*)&x1;
 	if(qt_Smoke->callMethod(9149, (void*)this, x)) return;
 	this->QUrl::setProtocol(x1);
     }
     virtual void setQuery(const QString& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)&x1;
+	x[1].s_voidp = (void*)&x1;
 	if(qt_Smoke->callMethod(9168, (void*)this, x)) return;
 	this->QUrl::setQuery(x1);
     }
     virtual void setRef(const QString& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)&x1;
+	x[1].s_voidp = (void*)&x1;
 	if(qt_Smoke->callMethod(9171, (void*)this, x)) return;
 	this->QUrl::setRef(x1);
     }
     virtual void setUser(const QString& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)&x1;
+	x[1].s_voidp = (void*)&x1;
 	if(qt_Smoke->callMethod(9151, (void*)this, x)) return;
 	this->QUrl::setUser(x1);
     }
     virtual QString toString(bool x1, bool x2) const {
 	Smoke::StackItem x[3];
-	x[1].s_bool = (bool)x1;
-	x[2].s_bool = (bool)x2;
+	x[1].s_bool = x1;
+	x[2].s_bool = x2;
 	if(qt_Smoke->callMethod(9184, (void*)this, x)) {
 	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);

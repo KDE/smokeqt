@@ -7,7 +7,7 @@ class x_QConnection : public QConnection {
 public:
     static void x_0(Smoke::Stack x) {
 	// QConnection(const QObject*, int, const char*, int)
-	x_QConnection* xret = new x_QConnection((const QObject*)x[1].s_class,(int)x[2].s_int,(const char*)x[3].s_class,(int)x[4].s_int);
+	x_QConnection* xret = new x_QConnection((const QObject*)x[1].s_voidp,(int)x[2].s_int,(const char*)x[3].s_voidp,(int)x[4].s_int);
 	x[0].s_class = (void*)xret;
     }
     x_QConnection(const QObject* x1, int x2, const char* x3, int x4) : QConnection(x1, x2, x3, x4) {
@@ -15,32 +15,32 @@ public:
     void x_1(Smoke::Stack x) const {
 	// isConnected()
 	bool xret = this->QConnection::isConnected();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_2(Smoke::Stack x) const {
 	// object()
 	QObject* xret = this->QConnection::object();
-	x[0].s_class = (void*)xret;
+	x[0].s_voidp = (void*)xret;
     }
     void x_3(Smoke::Stack x) const {
 	// member()
 	int xret = this->QConnection::member();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_4(Smoke::Stack x) const {
 	// memberName()
 	const char* xret = this->QConnection::memberName();
-	x[0].s_class = (void*)xret;
+	x[0].s_voidp = (void*)xret;
     }
     void x_5(Smoke::Stack x) const {
 	// memberType()
 	int xret = this->QConnection::memberType();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_6(Smoke::Stack x) const {
 	// numArgs()
 	int xret = this->QConnection::numArgs();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     ~x_QConnection() {}
 };

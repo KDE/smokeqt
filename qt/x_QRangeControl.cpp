@@ -22,112 +22,112 @@ public:
     void x_2(Smoke::Stack x) const {
 	// value()
 	int xret = this->QRangeControl::value();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_3(Smoke::Stack x) {
 	// setValue(int)
 	this->QRangeControl::setValue((int)x[1].s_int);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_4(Smoke::Stack x) {
 	// addPage()
 	this->QRangeControl::addPage();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_5(Smoke::Stack x) {
 	// subtractPage()
 	this->QRangeControl::subtractPage();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_6(Smoke::Stack x) {
 	// addLine()
 	this->QRangeControl::addLine();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_7(Smoke::Stack x) {
 	// subtractLine()
 	this->QRangeControl::subtractLine();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_8(Smoke::Stack x) const {
 	// minValue()
 	int xret = this->QRangeControl::minValue();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_9(Smoke::Stack x) const {
 	// maxValue()
 	int xret = this->QRangeControl::maxValue();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_10(Smoke::Stack x) {
 	// setRange(int, int)
 	this->QRangeControl::setRange((int)x[1].s_int,(int)x[2].s_int);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_11(Smoke::Stack x) {
 	// setMinValue(int)
 	this->QRangeControl::setMinValue((int)x[1].s_int);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_12(Smoke::Stack x) {
 	// setMaxValue(int)
 	this->QRangeControl::setMaxValue((int)x[1].s_int);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_13(Smoke::Stack x) const {
 	// lineStep()
 	int xret = this->QRangeControl::lineStep();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_14(Smoke::Stack x) const {
 	// pageStep()
 	int xret = this->QRangeControl::pageStep();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_15(Smoke::Stack x) {
 	// setSteps(int, int)
 	this->QRangeControl::setSteps((int)x[1].s_int,(int)x[2].s_int);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_16(Smoke::Stack x) const {
 	// bound(int)
 	int xret = this->QRangeControl::bound((int)x[1].s_int);
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_17(Smoke::Stack x) const {
 	// positionFromValue(int, int)
 	int xret = this->QRangeControl::positionFromValue((int)x[1].s_int,(int)x[2].s_int);
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_18(Smoke::Stack x) const {
 	// valueFromPosition(int, int)
 	int xret = this->QRangeControl::valueFromPosition((int)x[1].s_int,(int)x[2].s_int);
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_19(Smoke::Stack x) {
 	// directSetValue(int)
 	this->QRangeControl::directSetValue((int)x[1].s_int);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_20(Smoke::Stack x) const {
 	// prevValue()
 	int xret = this->QRangeControl::prevValue();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_21(Smoke::Stack x) {
 	// valueChange()
 	this->QRangeControl::valueChange();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_22(Smoke::Stack x) {
 	// rangeChange()
 	this->QRangeControl::rangeChange();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_23(Smoke::Stack x) {
 	// stepChange()
 	this->QRangeControl::stepChange();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     virtual void rangeChange() {
 	Smoke::StackItem x[1];

@@ -14,12 +14,12 @@ public:
     void x_2(Smoke::Stack x) {
 	// minimum()
 	QMapNodeBase* xret = this->QMapNodeBase::minimum();
-	x[0].s_class = (void*)xret;
+	x[0].s_voidp = (void*)xret;
     }
     void x_3(Smoke::Stack x) {
 	// maximum()
 	QMapNodeBase* xret = this->QMapNodeBase::maximum();
-	x[0].s_class = (void*)xret;
+	x[0].s_voidp = (void*)xret;
     }
     static void x_4(Smoke::Stack x) {
 	// QMapNodeBase()

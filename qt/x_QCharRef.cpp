@@ -11,12 +11,12 @@ public:
     void x_0(Smoke::Stack x) const {
 	// unicode()
 	ushort xret = xthis->QCharRef::unicode();
-	x[0].s_ushort = (ushort)xret;
+	x[0].s_ushort = xret;
     }
     void x_1(Smoke::Stack x) const {
 	// latin1()
 	char xret = xthis->QCharRef::latin1();
-	x[0].s_char = (char)xret;
+	x[0].s_char = xret;
     }
     void x_2(Smoke::Stack x) {
 	// operator=(char)
@@ -35,7 +35,7 @@ public:
     }
     void x_5(Smoke::Stack x) {
 	// operator=(const QCharRef&)
-	QCharRef xret = xthis->QCharRef::operator=(*(const QCharRef *)x[1].s_class);
+	QCharRef xret = xthis->QCharRef::operator=(*(const QCharRef *)x[1].s_voidp);
 	x[0].s_class = (void*)new QCharRef(xret);
     }
     void x_6(Smoke::Stack x) {
@@ -61,57 +61,57 @@ public:
     void x_10(Smoke::Stack x) const {
 	// operator QChar()
 	xthis->QCharRef::operator QChar();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_11(Smoke::Stack x) const {
 	// isNull()
 	bool xret = xthis->QCharRef::isNull();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_12(Smoke::Stack x) const {
 	// isPrint()
 	bool xret = xthis->QCharRef::isPrint();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_13(Smoke::Stack x) const {
 	// isPunct()
 	bool xret = xthis->QCharRef::isPunct();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_14(Smoke::Stack x) const {
 	// isSpace()
 	bool xret = xthis->QCharRef::isSpace();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_15(Smoke::Stack x) const {
 	// isMark()
 	bool xret = xthis->QCharRef::isMark();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_16(Smoke::Stack x) const {
 	// isLetter()
 	bool xret = xthis->QCharRef::isLetter();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_17(Smoke::Stack x) const {
 	// isNumber()
 	bool xret = xthis->QCharRef::isNumber();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_18(Smoke::Stack x) {
 	// isLetterOrNumber()
 	bool xret = xthis->QCharRef::isLetterOrNumber();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_19(Smoke::Stack x) const {
 	// isDigit()
 	bool xret = xthis->QCharRef::isDigit();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_20(Smoke::Stack x) const {
 	// digitValue()
 	int xret = xthis->QCharRef::digitValue();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_21(Smoke::Stack x) const {
 	// lower()
@@ -126,22 +126,22 @@ public:
     void x_23(Smoke::Stack x) const {
 	// category()
 	QChar::Category xret = xthis->QCharRef::category();
-	x[0].s_class = (void*)new QChar::Category(xret);
+	x[0].s_enum = xret;
     }
     void x_24(Smoke::Stack x) const {
 	// direction()
 	QChar::Direction xret = xthis->QCharRef::direction();
-	x[0].s_class = (void*)new QChar::Direction(xret);
+	x[0].s_enum = xret;
     }
     void x_25(Smoke::Stack x) const {
 	// joining()
 	QChar::Joining xret = xthis->QCharRef::joining();
-	x[0].s_class = (void*)new QChar::Joining(xret);
+	x[0].s_enum = xret;
     }
     void x_26(Smoke::Stack x) const {
 	// mirrored()
 	bool xret = xthis->QCharRef::mirrored();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_27(Smoke::Stack x) const {
 	// mirroredChar()
@@ -151,27 +151,27 @@ public:
     void x_28(Smoke::Stack x) const {
 	// decomposition()
 	const QString& xret = xthis->QCharRef::decomposition();
-	x[0].s_class = (void*)&xret;
+	x[0].s_voidp = (void*)&xret;
     }
     void x_29(Smoke::Stack x) const {
 	// decompositionTag()
 	QChar::Decomposition xret = xthis->QCharRef::decompositionTag();
-	x[0].s_class = (void*)new QChar::Decomposition(xret);
+	x[0].s_enum = xret;
     }
     void x_30(Smoke::Stack x) const {
 	// combiningClass()
 	unsigned char xret = xthis->QCharRef::combiningClass();
-	x[0].s_class = (void*)new unsigned char(xret);
+	x[0].s_uchar = xret;
     }
     void x_31(Smoke::Stack x) const {
 	// cell()
 	uchar xret = xthis->QCharRef::cell();
-	x[0].s_uchar = (uchar)xret;
+	x[0].s_uchar = xret;
     }
     void x_32(Smoke::Stack x) const {
 	// row()
 	uchar xret = xthis->QCharRef::row();
-	x[0].s_uchar = (uchar)xret;
+	x[0].s_uchar = xret;
     }
     ~x_QCharRef() {}
 };

@@ -16,14 +16,14 @@ public:
     }
     static void x_1(Smoke::Stack x) {
 	// QDateTime(const QDate&)
-	x_QDateTime* xret = new x_QDateTime(*(const QDate *)x[1].s_class);
+	x_QDateTime* xret = new x_QDateTime(*(const QDate *)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QDateTime(const QDate& x1) : QDateTime(x1) {
     }
     static void x_2(Smoke::Stack x) {
 	// QDateTime(const QDate&, const QTime&)
-	x_QDateTime* xret = new x_QDateTime(*(const QDate *)x[1].s_class,*(const QTime *)x[2].s_class);
+	x_QDateTime* xret = new x_QDateTime(*(const QDate *)x[1].s_voidp,*(const QTime *)x[2].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QDateTime(const QDate& x1, const QTime& x2) : QDateTime(x1, x2) {
@@ -31,12 +31,12 @@ public:
     void x_3(Smoke::Stack x) const {
 	// isNull()
 	bool xret = this->QDateTime::isNull();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_4(Smoke::Stack x) const {
 	// isValid()
 	bool xret = this->QDateTime::isValid();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_5(Smoke::Stack x) const {
 	// date()
@@ -50,33 +50,33 @@ public:
     }
     void x_7(Smoke::Stack x) {
 	// setDate(const QDate&)
-	this->QDateTime::setDate(*(const QDate *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QDateTime::setDate(*(const QDate *)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_8(Smoke::Stack x) {
 	// setTime(const QTime&)
-	this->QDateTime::setTime(*(const QTime *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QDateTime::setTime(*(const QTime *)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_9(Smoke::Stack x) {
 	// setTime_t(uint)
 	this->QDateTime::setTime_t((uint)x[1].s_uint);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_10(Smoke::Stack x) const {
 	// toString(Qt::DateFormat)
-	QString xret = this->QDateTime::toString(*(Qt::DateFormat *)x[1].s_class);
-	x[0].s_class = (void*)new QString(xret);
+	QString xret = this->QDateTime::toString((Qt::DateFormat)x[1].s_enum);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     void x_11(Smoke::Stack x) const {
 	// toString()
 	QString xret = this->QDateTime::toString();
-	x[0].s_class = (void*)new QString(xret);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     void x_12(Smoke::Stack x) const {
 	// toString(const QString&)
-	QString xret = this->QDateTime::toString(*(const QString *)x[1].s_class);
-	x[0].s_class = (void*)new QString(xret);
+	QString xret = this->QDateTime::toString(*(const QString *)x[1].s_voidp);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     void x_13(Smoke::Stack x) const {
 	// addDays(int)
@@ -100,43 +100,43 @@ public:
     }
     void x_17(Smoke::Stack x) const {
 	// daysTo(const QDateTime&)
-	int xret = this->QDateTime::daysTo(*(const QDateTime *)x[1].s_class);
-	x[0].s_int = (int)xret;
+	int xret = this->QDateTime::daysTo(*(const QDateTime *)x[1].s_voidp);
+	x[0].s_int = xret;
     }
     void x_18(Smoke::Stack x) const {
 	// secsTo(const QDateTime&)
-	int xret = this->QDateTime::secsTo(*(const QDateTime *)x[1].s_class);
-	x[0].s_int = (int)xret;
+	int xret = this->QDateTime::secsTo(*(const QDateTime *)x[1].s_voidp);
+	x[0].s_int = xret;
     }
     void x_19(Smoke::Stack x) const {
 	// operator==(const QDateTime&)
-	bool xret = this->QDateTime::operator==(*(const QDateTime *)x[1].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QDateTime::operator==(*(const QDateTime *)x[1].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_20(Smoke::Stack x) const {
 	// operator!=(const QDateTime&)
-	bool xret = this->QDateTime::operator!=(*(const QDateTime *)x[1].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QDateTime::operator!=(*(const QDateTime *)x[1].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_21(Smoke::Stack x) const {
 	// operator<(const QDateTime&)
-	bool xret = this->QDateTime::operator<(*(const QDateTime *)x[1].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QDateTime::operator<(*(const QDateTime *)x[1].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_22(Smoke::Stack x) const {
 	// operator<=(const QDateTime&)
-	bool xret = this->QDateTime::operator<=(*(const QDateTime *)x[1].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QDateTime::operator<=(*(const QDateTime *)x[1].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_23(Smoke::Stack x) const {
 	// operator>(const QDateTime&)
-	bool xret = this->QDateTime::operator>(*(const QDateTime *)x[1].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QDateTime::operator>(*(const QDateTime *)x[1].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_24(Smoke::Stack x) const {
 	// operator>=(const QDateTime&)
-	bool xret = this->QDateTime::operator>=(*(const QDateTime *)x[1].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QDateTime::operator>=(*(const QDateTime *)x[1].s_voidp);
+	x[0].s_bool = xret;
     }
     static void x_25(Smoke::Stack x) {
 	// currentDateTime()
@@ -145,12 +145,12 @@ public:
     }
     static void x_26(Smoke::Stack x) {
 	// fromString(const QString&, Qt::DateFormat)
-	QDateTime xret = QDateTime::fromString(*(const QString *)x[1].s_class,*(Qt::DateFormat *)x[2].s_class);
+	QDateTime xret = QDateTime::fromString(*(const QString *)x[1].s_voidp,(Qt::DateFormat)x[2].s_enum);
 	x[0].s_class = (void*)new QDateTime(xret);
     }
     static void x_27(Smoke::Stack x) {
 	// fromString(const QString&)
-	QDateTime xret = QDateTime::fromString(*(const QString *)x[1].s_class);
+	QDateTime xret = QDateTime::fromString(*(const QString *)x[1].s_voidp);
 	x[0].s_class = (void*)new QDateTime(xret);
     }
     ~x_QDateTime() {}

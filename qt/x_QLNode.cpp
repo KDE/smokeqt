@@ -12,7 +12,7 @@ public:
     void x_0(Smoke::Stack x) {
 	// getData()
 	QPtrCollection::Item xret = xthis->QLNode::getData();
-	x[0].s_class = (void*)new QPtrCollection::Item(xret);
+	x[0].s_voidp = (void*)new QPtrCollection::Item(xret);
     }
     ~x_QLNode() {}
 };

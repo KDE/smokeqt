@@ -47,7 +47,7 @@ public:
     }
     static void x_12(Smoke::Stack x) {
 	// QSocketDevice(QSocketDevice::Type)
-	x_QSocketDevice* xret = new x_QSocketDevice(*(QSocketDevice::Type *)x[1].s_class);
+	x_QSocketDevice* xret = new x_QSocketDevice((QSocketDevice::Type)x[1].s_enum);
 	x[0].s_class = (void*)xret;
     }
     x_QSocketDevice(QSocketDevice::Type x1) : QSocketDevice(x1) {
@@ -61,7 +61,7 @@ public:
     }
     static void x_14(Smoke::Stack x) {
 	// QSocketDevice(int, QSocketDevice::Type)
-	x_QSocketDevice* xret = new x_QSocketDevice((int)x[1].s_int,*(QSocketDevice::Type *)x[2].s_class);
+	x_QSocketDevice* xret = new x_QSocketDevice((int)x[1].s_int,(QSocketDevice::Type)x[2].s_enum);
 	x[0].s_class = (void*)xret;
     }
     x_QSocketDevice(int x1, QSocketDevice::Type x2) : QSocketDevice(x1, x2) {
@@ -69,172 +69,172 @@ public:
     void x_15(Smoke::Stack x) const {
 	// isValid()
 	bool xret = this->QSocketDevice::isValid();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_16(Smoke::Stack x) const {
 	// type()
 	QSocketDevice::Type xret = this->QSocketDevice::type();
-	x[0].s_class = (void*)new QSocketDevice::Type(xret);
+	x[0].s_enum = xret;
     }
     void x_17(Smoke::Stack x) const {
 	// socket()
 	int xret = this->QSocketDevice::socket();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_18(Smoke::Stack x) {
 	// setSocket(int, QSocketDevice::Type)
-	this->QSocketDevice::setSocket((int)x[1].s_int,*(QSocketDevice::Type *)x[2].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QSocketDevice::setSocket((int)x[1].s_int,(QSocketDevice::Type)x[2].s_enum);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_19(Smoke::Stack x) {
 	// open(int)
 	bool xret = this->QSocketDevice::open((int)x[1].s_int);
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_20(Smoke::Stack x) {
 	// close()
 	this->QSocketDevice::close();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_21(Smoke::Stack x) {
 	// flush()
 	this->QSocketDevice::flush();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_22(Smoke::Stack x) const {
 	// size()
 	QIODevice::Offset xret = this->QSocketDevice::size();
-	x[0].s_class = (void*)new QIODevice::Offset(xret);
+	x[0].s_ulong = xret;
     }
     void x_23(Smoke::Stack x) const {
 	// at()
 	QIODevice::Offset xret = this->QSocketDevice::at();
-	x[0].s_class = (void*)new QIODevice::Offset(xret);
+	x[0].s_ulong = xret;
     }
     void x_24(Smoke::Stack x) {
 	// at(QIODevice::Offset)
-	bool xret = this->QSocketDevice::at(*(QIODevice::Offset *)x[1].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QSocketDevice::at((QIODevice::Offset)x[1].s_ulong);
+	x[0].s_bool = xret;
     }
     void x_25(Smoke::Stack x) const {
 	// atEnd()
 	bool xret = this->QSocketDevice::atEnd();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_26(Smoke::Stack x) const {
 	// blocking()
 	bool xret = this->QSocketDevice::blocking();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_27(Smoke::Stack x) {
 	// setBlocking(bool)
 	this->QSocketDevice::setBlocking((bool)x[1].s_bool);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_28(Smoke::Stack x) const {
 	// addressReusable()
 	bool xret = this->QSocketDevice::addressReusable();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_29(Smoke::Stack x) {
 	// setAddressReusable(bool)
 	this->QSocketDevice::setAddressReusable((bool)x[1].s_bool);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_30(Smoke::Stack x) const {
 	// receiveBufferSize()
 	int xret = this->QSocketDevice::receiveBufferSize();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_31(Smoke::Stack x) {
 	// setReceiveBufferSize(uint)
 	this->QSocketDevice::setReceiveBufferSize((uint)x[1].s_uint);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_32(Smoke::Stack x) const {
 	// sendBufferSize()
 	int xret = this->QSocketDevice::sendBufferSize();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_33(Smoke::Stack x) {
 	// setSendBufferSize(uint)
 	this->QSocketDevice::setSendBufferSize((uint)x[1].s_uint);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_34(Smoke::Stack x) {
 	// connect(const QHostAddress&, Q_UINT16)
-	bool xret = this->QSocketDevice::connect(*(const QHostAddress *)x[1].s_class,*(Q_UINT16 *)x[2].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QSocketDevice::connect(*(const QHostAddress *)x[1].s_voidp,(Q_UINT16)x[2].s_ushort);
+	x[0].s_bool = xret;
     }
     void x_35(Smoke::Stack x) {
 	// bind(const QHostAddress&, Q_UINT16)
-	bool xret = this->QSocketDevice::bind(*(const QHostAddress *)x[1].s_class,*(Q_UINT16 *)x[2].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QSocketDevice::bind(*(const QHostAddress *)x[1].s_voidp,(Q_UINT16)x[2].s_ushort);
+	x[0].s_bool = xret;
     }
     void x_36(Smoke::Stack x) {
 	// listen(int)
 	bool xret = this->QSocketDevice::listen((int)x[1].s_int);
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_37(Smoke::Stack x) {
 	// accept()
 	int xret = this->QSocketDevice::accept();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_38(Smoke::Stack x) const {
 	// bytesAvailable()
 	Q_LONG xret = this->QSocketDevice::bytesAvailable();
-	x[0].s_class = (void*)new Q_LONG(xret);
+	x[0].s_long = xret;
     }
     void x_39(Smoke::Stack x) const {
 	// waitForMore(int, bool*)
-	Q_LONG xret = this->QSocketDevice::waitForMore((int)x[1].s_int,(bool*)x[2].s_class);
-	x[0].s_class = (void*)new Q_LONG(xret);
+	Q_LONG xret = this->QSocketDevice::waitForMore((int)x[1].s_int,(bool*)x[2].s_voidp);
+	x[0].s_long = xret;
     }
     void x_40(Smoke::Stack x) const {
 	// waitForMore(int)
 	Q_LONG xret = this->QSocketDevice::waitForMore((int)x[1].s_int);
-	x[0].s_class = (void*)new Q_LONG(xret);
+	x[0].s_long = xret;
     }
     void x_41(Smoke::Stack x) {
 	// readBlock(char*, Q_ULONG)
-	Q_LONG xret = this->QSocketDevice::readBlock((char*)x[1].s_class,*(Q_ULONG *)x[2].s_class);
-	x[0].s_class = (void*)new Q_LONG(xret);
+	Q_LONG xret = this->QSocketDevice::readBlock((char*)x[1].s_voidp,(Q_ULONG)x[2].s_long);
+	x[0].s_long = xret;
     }
     void x_42(Smoke::Stack x) {
 	// writeBlock(const char*, Q_ULONG)
-	Q_LONG xret = this->QSocketDevice::writeBlock((const char*)x[1].s_class,*(Q_ULONG *)x[2].s_class);
-	x[0].s_class = (void*)new Q_LONG(xret);
+	Q_LONG xret = this->QSocketDevice::writeBlock((const char*)x[1].s_voidp,(Q_ULONG)x[2].s_long);
+	x[0].s_long = xret;
     }
     void x_43(Smoke::Stack x) {
 	// writeBlock(const char*, Q_ULONG, const QHostAddress&, Q_UINT16)
-	Q_LONG xret = this->QSocketDevice::writeBlock((const char*)x[1].s_class,*(Q_ULONG *)x[2].s_class,*(const QHostAddress *)x[3].s_class,*(Q_UINT16 *)x[4].s_class);
-	x[0].s_class = (void*)new Q_LONG(xret);
+	Q_LONG xret = this->QSocketDevice::writeBlock((const char*)x[1].s_voidp,(Q_ULONG)x[2].s_long,*(const QHostAddress *)x[3].s_voidp,(Q_UINT16)x[4].s_ushort);
+	x[0].s_long = xret;
     }
     void x_44(Smoke::Stack x) {
 	// getch()
 	int xret = this->QSocketDevice::getch();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_45(Smoke::Stack x) {
 	// putch(int)
 	int xret = this->QSocketDevice::putch((int)x[1].s_int);
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_46(Smoke::Stack x) {
 	// ungetch(int)
 	int xret = this->QSocketDevice::ungetch((int)x[1].s_int);
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_47(Smoke::Stack x) const {
 	// port()
 	Q_UINT16 xret = this->QSocketDevice::port();
-	x[0].s_class = (void*)new Q_UINT16(xret);
+	x[0].s_ushort = xret;
     }
     void x_48(Smoke::Stack x) const {
 	// peerPort()
 	Q_UINT16 xret = this->QSocketDevice::peerPort();
-	x[0].s_class = (void*)new Q_UINT16(xret);
+	x[0].s_ushort = xret;
     }
     void x_49(Smoke::Stack x) const {
 	// address()
@@ -249,12 +249,12 @@ public:
     void x_51(Smoke::Stack x) const {
 	// error()
 	QSocketDevice::Error xret = this->QSocketDevice::error();
-	x[0].s_class = (void*)new QSocketDevice::Error(xret);
+	x[0].s_enum = xret;
     }
     void x_52(Smoke::Stack x) {
 	// setError(QSocketDevice::Error)
-	this->QSocketDevice::setError(*(QSocketDevice::Error *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QSocketDevice::setError((QSocketDevice::Error)x[1].s_enum);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     virtual int accept() {
 	Smoke::StackItem x[1];
@@ -273,7 +273,7 @@ public:
     }
     virtual bool at(QIODevice::Offset x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)&x1;
+	x[1].s_ulong = x1;
 	if(qt_Smoke->callMethod(7067, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QSocketDevice::at(x1);
     }
@@ -284,8 +284,8 @@ public:
     }
     virtual bool bind(const QHostAddress& x1, Q_UINT16 x2) {
 	Smoke::StackItem x[3];
-	x[1].s_class = (void*)&x1;
-	x[2].s_class = (void*)&x2;
+	x[1].s_voidp = (void*)&x1;
+	x[2].s_ushort = x2;
 	if(qt_Smoke->callMethod(7078, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QSocketDevice::bind(x1, x2);
     }
@@ -296,8 +296,8 @@ public:
     }
     virtual bool connect(const QHostAddress& x1, Q_UINT16 x2) {
 	Smoke::StackItem x[3];
-	x[1].s_class = (void*)&x1;
-	x[2].s_class = (void*)&x2;
+	x[1].s_voidp = (void*)&x1;
+	x[2].s_ushort = x2;
 	if(qt_Smoke->callMethod(7077, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QSocketDevice::connect(x1, x2);
     }
@@ -313,19 +313,19 @@ public:
     }
     virtual bool listen(int x1) {
 	Smoke::StackItem x[2];
-	x[1].s_int = (int)x1;
+	x[1].s_int = x1;
 	if(qt_Smoke->callMethod(7079, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QSocketDevice::listen(x1);
     }
     virtual bool open(int x1) {
 	Smoke::StackItem x[2];
-	x[1].s_int = (int)x1;
+	x[1].s_int = x1;
 	if(qt_Smoke->callMethod(7062, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QSocketDevice::open(x1);
     }
     virtual int putch(int x1) {
 	Smoke::StackItem x[2];
-	x[1].s_int = (int)x1;
+	x[1].s_int = x1;
 	if(qt_Smoke->callMethod(7088, (void*)this, x)) return (int)x[0].s_int;
 	return this->QSocketDevice::putch(x1);
     }
@@ -341,8 +341,8 @@ public:
     }
     virtual Q_LONG readBlock(char* x1, Q_ULONG x2) {
 	Smoke::StackItem x[3];
-	x[1].s_class = (void*)x1;
-	x[2].s_class = (void*)&x2;
+	x[1].s_voidp = (void*)x1;
+	x[2].s_long = x2;
 	if(qt_Smoke->callMethod(7084, (void*)this, x)) {
 	    Q_LONG *xptr = (Q_LONG *)x[0].s_class;
 	    Q_LONG xret(*xptr);
@@ -353,8 +353,8 @@ public:
     }
     virtual Q_LONG readLine(char* x1, Q_ULONG x2) {
 	Smoke::StackItem x[3];
-	x[1].s_class = (void*)x1;
-	x[2].s_class = (void*)&x2;
+	x[1].s_voidp = (void*)x1;
+	x[2].s_long = x2;
 	if(qt_Smoke->callMethod(3386, (void*)this, x)) {
 	    Q_LONG *xptr = (Q_LONG *)x[0].s_class;
 	    Q_LONG xret(*xptr);
@@ -365,32 +365,32 @@ public:
     }
     virtual void setAddressReusable(bool x1) {
 	Smoke::StackItem x[2];
-	x[1].s_bool = (bool)x1;
+	x[1].s_bool = x1;
 	if(qt_Smoke->callMethod(7072, (void*)this, x)) return;
 	this->QSocketDevice::setAddressReusable(x1);
     }
     virtual void setBlocking(bool x1) {
 	Smoke::StackItem x[2];
-	x[1].s_bool = (bool)x1;
+	x[1].s_bool = x1;
 	if(qt_Smoke->callMethod(7070, (void*)this, x)) return;
 	this->QSocketDevice::setBlocking(x1);
     }
     virtual void setReceiveBufferSize(uint x1) {
 	Smoke::StackItem x[2];
-	x[1].s_uint = (uint)x1;
+	x[1].s_uint = x1;
 	if(qt_Smoke->callMethod(7074, (void*)this, x)) return;
 	this->QSocketDevice::setReceiveBufferSize(x1);
     }
     virtual void setSendBufferSize(uint x1) {
 	Smoke::StackItem x[2];
-	x[1].s_uint = (uint)x1;
+	x[1].s_uint = x1;
 	if(qt_Smoke->callMethod(7076, (void*)this, x)) return;
 	this->QSocketDevice::setSendBufferSize(x1);
     }
     virtual void setSocket(int x1, QSocketDevice::Type x2) {
 	Smoke::StackItem x[3];
-	x[1].s_int = (int)x1;
-	x[2].s_class = (void*)&x2;
+	x[1].s_int = x1;
+	x[2].s_enum = x2;
 	if(qt_Smoke->callMethod(7061, (void*)this, x)) return;
 	this->QSocketDevice::setSocket(x1, x2);
     }
@@ -406,14 +406,14 @@ public:
     }
     virtual int ungetch(int x1) {
 	Smoke::StackItem x[2];
-	x[1].s_int = (int)x1;
+	x[1].s_int = x1;
 	if(qt_Smoke->callMethod(7089, (void*)this, x)) return (int)x[0].s_int;
 	return this->QSocketDevice::ungetch(x1);
     }
     virtual Q_LONG writeBlock(const char* x1, Q_ULONG x2) {
 	Smoke::StackItem x[3];
-	x[1].s_class = (void*)x1;
-	x[2].s_class = (void*)&x2;
+	x[1].s_voidp = (void*)x1;
+	x[2].s_long = x2;
 	if(qt_Smoke->callMethod(7085, (void*)this, x)) {
 	    Q_LONG *xptr = (Q_LONG *)x[0].s_class;
 	    Q_LONG xret(*xptr);
@@ -424,10 +424,10 @@ public:
     }
     virtual Q_LONG writeBlock(const char* x1, Q_ULONG x2, const QHostAddress& x3, Q_UINT16 x4) {
 	Smoke::StackItem x[5];
-	x[1].s_class = (void*)x1;
-	x[2].s_class = (void*)&x2;
-	x[3].s_class = (void*)&x3;
-	x[4].s_class = (void*)&x4;
+	x[1].s_voidp = (void*)x1;
+	x[2].s_long = x2;
+	x[3].s_voidp = (void*)&x3;
+	x[4].s_ushort = x4;
 	if(qt_Smoke->callMethod(7086, (void*)this, x)) {
 	    Q_LONG *xptr = (Q_LONG *)x[0].s_class;
 	    Q_LONG xret(*xptr);

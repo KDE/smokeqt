@@ -15,17 +15,17 @@ public:
     void x_1(Smoke::Stack x) const {
 	// isAccepted()
 	bool xret = this->QCloseEvent::isAccepted();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_2(Smoke::Stack x) {
 	// accept()
 	this->QCloseEvent::accept();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_3(Smoke::Stack x) {
 	// ignore()
 	this->QCloseEvent::ignore();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     ~x_QCloseEvent() {}
 };

@@ -18,7 +18,7 @@ public:
     }
     static void x_1(Smoke::Stack x) {
 	// QFile(const QString&)
-	x_QFile* xret = new x_QFile(*(const QString *)x[1].s_class);
+	x_QFile* xret = new x_QFile(*(const QString *)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QFile(const QString& x1) : QFile(x1) {
@@ -26,127 +26,127 @@ public:
     void x_2(Smoke::Stack x) const {
 	// name()
 	QString xret = this->QFile::name();
-	x[0].s_class = (void*)new QString(xret);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     void x_3(Smoke::Stack x) {
 	// setName(const QString&)
-	this->QFile::setName(*(const QString *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QFile::setName(*(const QString *)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_4(Smoke::Stack x) const {
 	// exists()
 	bool xret = this->QFile::exists();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_5(Smoke::Stack x) {
 	// remove()
 	bool xret = this->QFile::remove();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_6(Smoke::Stack x) {
 	// open(int)
 	bool xret = this->QFile::open((int)x[1].s_int);
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_7(Smoke::Stack x) {
 	// open(int, int)
 	bool xret = this->QFile::open((int)x[1].s_int,(int)x[2].s_int);
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_8(Smoke::Stack x) {
 	// close()
 	this->QFile::close();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_9(Smoke::Stack x) {
 	// flush()
 	this->QFile::flush();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_10(Smoke::Stack x) const {
 	// size()
 	QIODevice::Offset xret = this->QFile::size();
-	x[0].s_class = (void*)new QIODevice::Offset(xret);
+	x[0].s_ulong = xret;
     }
     void x_11(Smoke::Stack x) const {
 	// at()
 	QIODevice::Offset xret = this->QFile::at();
-	x[0].s_class = (void*)new QIODevice::Offset(xret);
+	x[0].s_ulong = xret;
     }
     void x_12(Smoke::Stack x) {
 	// at(QIODevice::Offset)
-	bool xret = this->QFile::at(*(QIODevice::Offset *)x[1].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QFile::at((QIODevice::Offset)x[1].s_ulong);
+	x[0].s_bool = xret;
     }
     void x_13(Smoke::Stack x) const {
 	// atEnd()
 	bool xret = this->QFile::atEnd();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_14(Smoke::Stack x) {
 	// readBlock(char*, Q_ULONG)
-	Q_LONG xret = this->QFile::readBlock((char*)x[1].s_class,*(Q_ULONG *)x[2].s_class);
-	x[0].s_class = (void*)new Q_LONG(xret);
+	Q_LONG xret = this->QFile::readBlock((char*)x[1].s_voidp,(Q_ULONG)x[2].s_long);
+	x[0].s_long = xret;
     }
     void x_15(Smoke::Stack x) {
 	// writeBlock(const char*, Q_ULONG)
-	Q_LONG xret = this->QFile::writeBlock((const char*)x[1].s_class,*(Q_ULONG *)x[2].s_class);
-	x[0].s_class = (void*)new Q_LONG(xret);
+	Q_LONG xret = this->QFile::writeBlock((const char*)x[1].s_voidp,(Q_ULONG)x[2].s_long);
+	x[0].s_long = xret;
     }
     void x_16(Smoke::Stack x) {
 	// writeBlock(const QByteArray&)
-	Q_LONG xret = this->QFile::writeBlock(*(const QByteArray *)x[1].s_class);
-	x[0].s_class = (void*)new Q_LONG(xret);
+	Q_LONG xret = this->QFile::writeBlock(*(const QByteArray *)x[1].s_voidp);
+	x[0].s_long = xret;
     }
     void x_17(Smoke::Stack x) {
 	// readLine(char*, Q_ULONG)
-	Q_LONG xret = this->QFile::readLine((char*)x[1].s_class,*(Q_ULONG *)x[2].s_class);
-	x[0].s_class = (void*)new Q_LONG(xret);
+	Q_LONG xret = this->QFile::readLine((char*)x[1].s_voidp,(Q_ULONG)x[2].s_long);
+	x[0].s_long = xret;
     }
     void x_18(Smoke::Stack x) {
 	// readLine(QString&, Q_ULONG)
-	Q_LONG xret = this->QFile::readLine(*(QString *)x[1].s_class,*(Q_ULONG *)x[2].s_class);
-	x[0].s_class = (void*)new Q_LONG(xret);
+	Q_LONG xret = this->QFile::readLine(*(QString *)x[1].s_voidp,(Q_ULONG)x[2].s_long);
+	x[0].s_long = xret;
     }
     void x_19(Smoke::Stack x) {
 	// getch()
 	int xret = this->QFile::getch();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_20(Smoke::Stack x) {
 	// putch(int)
 	int xret = this->QFile::putch((int)x[1].s_int);
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_21(Smoke::Stack x) {
 	// ungetch(int)
 	int xret = this->QFile::ungetch((int)x[1].s_int);
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_22(Smoke::Stack x) const {
 	// handle()
 	int xret = this->QFile::handle();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     static void x_23(Smoke::Stack x) {
 	// encodeName(const QString&)
-	QCString xret = QFile::encodeName(*(const QString *)x[1].s_class);
-	x[0].s_class = (void*)new QCString(xret);
+	QCString xret = QFile::encodeName(*(const QString *)x[1].s_voidp);
+	x[0].s_voidp = (void*)new QCString(xret);
     }
     static void x_24(Smoke::Stack x) {
 	// decodeName(const QCString&)
-	QString xret = QFile::decodeName(*(const QCString *)x[1].s_class);
-	x[0].s_class = (void*)new QString(xret);
+	QString xret = QFile::decodeName(*(const QCString *)x[1].s_voidp);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     static void x_25(Smoke::Stack x) {
 	// exists(const QString&)
-	bool xret = QFile::exists(*(const QString *)x[1].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = QFile::exists(*(const QString *)x[1].s_voidp);
+	x[0].s_bool = xret;
     }
     static void x_26(Smoke::Stack x) {
 	// remove(const QString&)
-	bool xret = QFile::remove(*(const QString *)x[1].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = QFile::remove(*(const QString *)x[1].s_voidp);
+	x[0].s_bool = xret;
     }
     virtual QIODevice::Offset at() const {
 	Smoke::StackItem x[1];
@@ -160,7 +160,7 @@ public:
     }
     virtual bool at(QIODevice::Offset x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)&x1;
+	x[1].s_ulong = x1;
 	if(qt_Smoke->callMethod(2468, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QFile::at(x1);
     }
@@ -186,13 +186,13 @@ public:
     }
     virtual bool open(int x1) {
 	Smoke::StackItem x[2];
-	x[1].s_int = (int)x1;
+	x[1].s_int = x1;
 	if(qt_Smoke->callMethod(2462, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QFile::open(x1);
     }
     virtual int putch(int x1) {
 	Smoke::StackItem x[2];
-	x[1].s_int = (int)x1;
+	x[1].s_int = x1;
 	if(qt_Smoke->callMethod(2476, (void*)this, x)) return (int)x[0].s_int;
 	return this->QFile::putch(x1);
     }
@@ -208,8 +208,8 @@ public:
     }
     virtual Q_LONG readBlock(char* x1, Q_ULONG x2) {
 	Smoke::StackItem x[3];
-	x[1].s_class = (void*)x1;
-	x[2].s_class = (void*)&x2;
+	x[1].s_voidp = (void*)x1;
+	x[2].s_long = x2;
 	if(qt_Smoke->callMethod(2470, (void*)this, x)) {
 	    Q_LONG *xptr = (Q_LONG *)x[0].s_class;
 	    Q_LONG xret(*xptr);
@@ -220,8 +220,8 @@ public:
     }
     virtual Q_LONG readLine(char* x1, Q_ULONG x2) {
 	Smoke::StackItem x[3];
-	x[1].s_class = (void*)x1;
-	x[2].s_class = (void*)&x2;
+	x[1].s_voidp = (void*)x1;
+	x[2].s_long = x2;
 	if(qt_Smoke->callMethod(2473, (void*)this, x)) {
 	    Q_LONG *xptr = (Q_LONG *)x[0].s_class;
 	    Q_LONG xret(*xptr);
@@ -242,14 +242,14 @@ public:
     }
     virtual int ungetch(int x1) {
 	Smoke::StackItem x[2];
-	x[1].s_int = (int)x1;
+	x[1].s_int = x1;
 	if(qt_Smoke->callMethod(2477, (void*)this, x)) return (int)x[0].s_int;
 	return this->QFile::ungetch(x1);
     }
     virtual Q_LONG writeBlock(const char* x1, Q_ULONG x2) {
 	Smoke::StackItem x[3];
-	x[1].s_class = (void*)x1;
-	x[2].s_class = (void*)&x2;
+	x[1].s_voidp = (void*)x1;
+	x[2].s_long = x2;
 	if(qt_Smoke->callMethod(2471, (void*)this, x)) {
 	    Q_LONG *xptr = (Q_LONG *)x[0].s_class;
 	    Q_LONG xret(*xptr);

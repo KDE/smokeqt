@@ -17,37 +17,37 @@ public:
     static void x_1(Smoke::Stack x) {
 	// cacheLimit()
 	int xret = QPixmapCache::cacheLimit();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     static void x_2(Smoke::Stack x) {
 	// setCacheLimit(int)
 	QPixmapCache::setCacheLimit((int)x[1].s_int);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     static void x_3(Smoke::Stack x) {
 	// find(const QString&)
-	QPixmap* xret = QPixmapCache::find(*(const QString *)x[1].s_class);
-	x[0].s_class = (void*)xret;
+	QPixmap* xret = QPixmapCache::find(*(const QString *)x[1].s_voidp);
+	x[0].s_voidp = (void*)xret;
     }
     static void x_4(Smoke::Stack x) {
 	// find(const QString&, QPixmap&)
-	bool xret = QPixmapCache::find(*(const QString *)x[1].s_class,*(QPixmap *)x[2].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = QPixmapCache::find(*(const QString *)x[1].s_voidp,*(QPixmap *)x[2].s_voidp);
+	x[0].s_bool = xret;
     }
     static void x_5(Smoke::Stack x) {
 	// insert(const QString&, QPixmap*)
-	bool xret = QPixmapCache::insert(*(const QString *)x[1].s_class,(QPixmap*)x[2].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = QPixmapCache::insert(*(const QString *)x[1].s_voidp,(QPixmap*)x[2].s_voidp);
+	x[0].s_bool = xret;
     }
     static void x_6(Smoke::Stack x) {
 	// insert(const QString&, const QPixmap&)
-	bool xret = QPixmapCache::insert(*(const QString *)x[1].s_class,*(const QPixmap *)x[2].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = QPixmapCache::insert(*(const QString *)x[1].s_voidp,*(const QPixmap *)x[2].s_voidp);
+	x[0].s_bool = xret;
     }
     static void x_7(Smoke::Stack x) {
 	// clear()
 	QPixmapCache::clear();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     ~x_QPixmapCache() {}
 };

@@ -15,12 +15,12 @@ public:
     void x_1(Smoke::Stack x) {
 	// ref()
 	this->QShared::ref();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_2(Smoke::Stack x) {
 	// deref()
 	bool xret = this->QShared::deref();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     ~x_QShared() {}
 };

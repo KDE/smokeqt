@@ -22,14 +22,14 @@ public:
     }
     static void x_3(Smoke::Stack x) {
 	// QDataStream(QIODevice*)
-	x_QDataStream* xret = new x_QDataStream((QIODevice*)x[1].s_class);
+	x_QDataStream* xret = new x_QDataStream((QIODevice*)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QDataStream(QIODevice* x1) : QDataStream(x1) {
     }
     static void x_4(Smoke::Stack x) {
 	// QDataStream(QByteArray, int)
-	x_QDataStream* xret = new x_QDataStream(*(QByteArray *)x[1].s_class,(int)x[2].s_int);
+	x_QDataStream* xret = new x_QDataStream(*(QByteArray *)x[1].s_voidp,(int)x[2].s_int);
 	x[0].s_class = (void*)xret;
     }
     x_QDataStream(QByteArray x1, int x2) : QDataStream(x1, x2) {
@@ -37,187 +37,187 @@ public:
     void x_5(Smoke::Stack x) const {
 	// device()
 	QIODevice* xret = this->QDataStream::device();
-	x[0].s_class = (void*)xret;
+	x[0].s_voidp = (void*)xret;
     }
     void x_6(Smoke::Stack x) {
 	// setDevice(QIODevice*)
-	this->QDataStream::setDevice((QIODevice*)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QDataStream::setDevice((QIODevice*)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_7(Smoke::Stack x) {
 	// unsetDevice()
 	this->QDataStream::unsetDevice();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_8(Smoke::Stack x) const {
 	// atEnd()
 	bool xret = this->QDataStream::atEnd();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_9(Smoke::Stack x) const {
 	// eof()
 	bool xret = this->QDataStream::eof();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_10(Smoke::Stack x) const {
 	// byteOrder()
 	int xret = this->QDataStream::byteOrder();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_11(Smoke::Stack x) {
 	// setByteOrder(int)
 	this->QDataStream::setByteOrder((int)x[1].s_int);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_12(Smoke::Stack x) const {
 	// isPrintableData()
 	bool xret = this->QDataStream::isPrintableData();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_13(Smoke::Stack x) {
 	// setPrintableData(bool)
 	this->QDataStream::setPrintableData((bool)x[1].s_bool);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_14(Smoke::Stack x) const {
 	// version()
 	int xret = this->QDataStream::version();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_15(Smoke::Stack x) {
 	// setVersion(int)
 	this->QDataStream::setVersion((int)x[1].s_int);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_16(Smoke::Stack x) {
 	// operator>>(Q_INT8&)
-	QDataStream& xret = this->QDataStream::operator>>(*(Q_INT8 *)x[1].s_class);
-	x[0].s_class = (void*)&xret;
+	QDataStream& xret = this->QDataStream::operator>>(*(Q_INT8 *)x[1].s_voidp);
+	x[0].s_voidp = (void*)&xret;
     }
     void x_17(Smoke::Stack x) {
 	// operator>>(Q_UINT8&)
-	QDataStream& xret = this->QDataStream::operator>>(*(Q_UINT8 *)x[1].s_class);
-	x[0].s_class = (void*)&xret;
+	QDataStream& xret = this->QDataStream::operator>>(*(Q_UINT8 *)x[1].s_voidp);
+	x[0].s_voidp = (void*)&xret;
     }
     void x_18(Smoke::Stack x) {
 	// operator>>(Q_INT16&)
-	QDataStream& xret = this->QDataStream::operator>>(*(Q_INT16 *)x[1].s_class);
-	x[0].s_class = (void*)&xret;
+	QDataStream& xret = this->QDataStream::operator>>(*(Q_INT16 *)x[1].s_voidp);
+	x[0].s_voidp = (void*)&xret;
     }
     void x_19(Smoke::Stack x) {
 	// operator>>(Q_UINT16&)
-	QDataStream& xret = this->QDataStream::operator>>(*(Q_UINT16 *)x[1].s_class);
-	x[0].s_class = (void*)&xret;
+	QDataStream& xret = this->QDataStream::operator>>(*(Q_UINT16 *)x[1].s_voidp);
+	x[0].s_voidp = (void*)&xret;
     }
     void x_20(Smoke::Stack x) {
 	// operator>>(Q_INT32&)
-	QDataStream& xret = this->QDataStream::operator>>(*(Q_INT32 *)x[1].s_class);
-	x[0].s_class = (void*)&xret;
+	QDataStream& xret = this->QDataStream::operator>>(*(Q_INT32 *)x[1].s_voidp);
+	x[0].s_voidp = (void*)&xret;
     }
     void x_21(Smoke::Stack x) {
 	// operator>>(Q_UINT32&)
-	QDataStream& xret = this->QDataStream::operator>>(*(Q_UINT32 *)x[1].s_class);
-	x[0].s_class = (void*)&xret;
+	QDataStream& xret = this->QDataStream::operator>>(*(Q_UINT32 *)x[1].s_voidp);
+	x[0].s_voidp = (void*)&xret;
     }
     void x_22(Smoke::Stack x) {
 	// operator>>(Q_LONG&)
-	QDataStream& xret = this->QDataStream::operator>>(*(Q_LONG *)x[1].s_class);
-	x[0].s_class = (void*)&xret;
+	QDataStream& xret = this->QDataStream::operator>>(*(Q_LONG *)x[1].s_voidp);
+	x[0].s_voidp = (void*)&xret;
     }
     void x_23(Smoke::Stack x) {
 	// operator>>(Q_ULONG&)
-	QDataStream& xret = this->QDataStream::operator>>(*(Q_ULONG *)x[1].s_class);
-	x[0].s_class = (void*)&xret;
+	QDataStream& xret = this->QDataStream::operator>>(*(Q_ULONG *)x[1].s_voidp);
+	x[0].s_voidp = (void*)&xret;
     }
     void x_24(Smoke::Stack x) {
 	// operator>>(float&)
-	QDataStream& xret = this->QDataStream::operator>>(*(float *)x[1].s_class);
-	x[0].s_class = (void*)&xret;
+	QDataStream& xret = this->QDataStream::operator>>(*(float *)x[1].s_voidp);
+	x[0].s_voidp = (void*)&xret;
     }
     void x_25(Smoke::Stack x) {
 	// operator>>(double&)
-	QDataStream& xret = this->QDataStream::operator>>(*(double *)x[1].s_class);
-	x[0].s_class = (void*)&xret;
+	QDataStream& xret = this->QDataStream::operator>>(*(double *)x[1].s_voidp);
+	x[0].s_voidp = (void*)&xret;
     }
     void x_26(Smoke::Stack x) {
 	// operator>>(char*&)
-	QDataStream& xret = this->QDataStream::operator>>(*(char* *)x[1].s_class);
-	x[0].s_class = (void*)&xret;
+	QDataStream& xret = this->QDataStream::operator>>(*(char* *)x[1].s_voidp);
+	x[0].s_voidp = (void*)&xret;
     }
     void x_27(Smoke::Stack x) {
 	// operator<<(Q_INT8)
-	QDataStream& xret = this->QDataStream::operator<<(*(Q_INT8 *)x[1].s_class);
-	x[0].s_class = (void*)&xret;
+	QDataStream& xret = this->QDataStream::operator<<((Q_INT8)x[1].s_char);
+	x[0].s_voidp = (void*)&xret;
     }
     void x_28(Smoke::Stack x) {
 	// operator<<(Q_UINT8)
-	QDataStream& xret = this->QDataStream::operator<<(*(Q_UINT8 *)x[1].s_class);
-	x[0].s_class = (void*)&xret;
+	QDataStream& xret = this->QDataStream::operator<<((Q_UINT8)x[1].s_uchar);
+	x[0].s_voidp = (void*)&xret;
     }
     void x_29(Smoke::Stack x) {
 	// operator<<(Q_INT16)
-	QDataStream& xret = this->QDataStream::operator<<(*(Q_INT16 *)x[1].s_class);
-	x[0].s_class = (void*)&xret;
+	QDataStream& xret = this->QDataStream::operator<<((Q_INT16)x[1].s_short);
+	x[0].s_voidp = (void*)&xret;
     }
     void x_30(Smoke::Stack x) {
 	// operator<<(Q_UINT16)
-	QDataStream& xret = this->QDataStream::operator<<(*(Q_UINT16 *)x[1].s_class);
-	x[0].s_class = (void*)&xret;
+	QDataStream& xret = this->QDataStream::operator<<((Q_UINT16)x[1].s_ushort);
+	x[0].s_voidp = (void*)&xret;
     }
     void x_31(Smoke::Stack x) {
 	// operator<<(Q_INT32)
-	QDataStream& xret = this->QDataStream::operator<<(*(Q_INT32 *)x[1].s_class);
-	x[0].s_class = (void*)&xret;
+	QDataStream& xret = this->QDataStream::operator<<((Q_INT32)x[1].s_int);
+	x[0].s_voidp = (void*)&xret;
     }
     void x_32(Smoke::Stack x) {
 	// operator<<(Q_UINT32)
-	QDataStream& xret = this->QDataStream::operator<<(*(Q_UINT32 *)x[1].s_class);
-	x[0].s_class = (void*)&xret;
+	QDataStream& xret = this->QDataStream::operator<<((Q_UINT32)x[1].s_uint);
+	x[0].s_voidp = (void*)&xret;
     }
     void x_33(Smoke::Stack x) {
 	// operator<<(Q_LONG)
-	QDataStream& xret = this->QDataStream::operator<<(*(Q_LONG *)x[1].s_class);
-	x[0].s_class = (void*)&xret;
+	QDataStream& xret = this->QDataStream::operator<<((Q_LONG)x[1].s_long);
+	x[0].s_voidp = (void*)&xret;
     }
     void x_34(Smoke::Stack x) {
 	// operator<<(Q_ULONG)
-	QDataStream& xret = this->QDataStream::operator<<(*(Q_ULONG *)x[1].s_class);
-	x[0].s_class = (void*)&xret;
+	QDataStream& xret = this->QDataStream::operator<<((Q_ULONG)x[1].s_long);
+	x[0].s_voidp = (void*)&xret;
     }
     void x_35(Smoke::Stack x) {
 	// operator<<(float)
 	QDataStream& xret = this->QDataStream::operator<<((float)x[1].s_float);
-	x[0].s_class = (void*)&xret;
+	x[0].s_voidp = (void*)&xret;
     }
     void x_36(Smoke::Stack x) {
 	// operator<<(double)
 	QDataStream& xret = this->QDataStream::operator<<((double)x[1].s_double);
-	x[0].s_class = (void*)&xret;
+	x[0].s_voidp = (void*)&xret;
     }
     void x_37(Smoke::Stack x) {
 	// operator<<(const char*)
-	QDataStream& xret = this->QDataStream::operator<<((const char*)x[1].s_class);
-	x[0].s_class = (void*)&xret;
+	QDataStream& xret = this->QDataStream::operator<<((const char*)x[1].s_voidp);
+	x[0].s_voidp = (void*)&xret;
     }
     void x_38(Smoke::Stack x) {
 	// readBytes(char*&, uint&)
-	QDataStream& xret = this->QDataStream::readBytes(*(char* *)x[1].s_class,*(uint *)x[2].s_class);
-	x[0].s_class = (void*)&xret;
+	QDataStream& xret = this->QDataStream::readBytes(*(char* *)x[1].s_voidp,*(uint *)x[2].s_voidp);
+	x[0].s_voidp = (void*)&xret;
     }
     void x_39(Smoke::Stack x) {
 	// readRawBytes(char*, uint)
-	QDataStream& xret = this->QDataStream::readRawBytes((char*)x[1].s_class,(uint)x[2].s_uint);
-	x[0].s_class = (void*)&xret;
+	QDataStream& xret = this->QDataStream::readRawBytes((char*)x[1].s_voidp,(uint)x[2].s_uint);
+	x[0].s_voidp = (void*)&xret;
     }
     void x_40(Smoke::Stack x) {
 	// writeBytes(const char*, uint)
-	QDataStream& xret = this->QDataStream::writeBytes((const char*)x[1].s_class,(uint)x[2].s_uint);
-	x[0].s_class = (void*)&xret;
+	QDataStream& xret = this->QDataStream::writeBytes((const char*)x[1].s_voidp,(uint)x[2].s_uint);
+	x[0].s_voidp = (void*)&xret;
     }
     void x_41(Smoke::Stack x) {
 	// writeRawBytes(const char*, uint)
-	QDataStream& xret = this->QDataStream::writeRawBytes((const char*)x[1].s_class,(uint)x[2].s_uint);
-	x[0].s_class = (void*)&xret;
+	QDataStream& xret = this->QDataStream::writeRawBytes((const char*)x[1].s_voidp,(uint)x[2].s_uint);
+	x[0].s_voidp = (void*)&xret;
     }
     ~x_QDataStream() {}
 };

@@ -8,7 +8,7 @@ class x_QMoveEvent : public QMoveEvent {
 public:
     static void x_0(Smoke::Stack x) {
 	// QMoveEvent(const QPoint&, const QPoint&)
-	x_QMoveEvent* xret = new x_QMoveEvent(*(const QPoint *)x[1].s_class,*(const QPoint *)x[2].s_class);
+	x_QMoveEvent* xret = new x_QMoveEvent(*(const QPoint *)x[1].s_voidp,*(const QPoint *)x[2].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QMoveEvent(const QPoint& x1, const QPoint& x2) : QMoveEvent(x1, x2) {
@@ -16,12 +16,12 @@ public:
     void x_1(Smoke::Stack x) const {
 	// pos()
 	const QPoint& xret = this->QMoveEvent::pos();
-	x[0].s_class = (void*)&xret;
+	x[0].s_voidp = (void*)&xret;
     }
     void x_2(Smoke::Stack x) const {
 	// oldPos()
 	const QPoint& xret = this->QMoveEvent::oldPos();
-	x[0].s_class = (void*)&xret;
+	x[0].s_voidp = (void*)&xret;
     }
     ~x_QMoveEvent() {}
 };

@@ -9,7 +9,7 @@ class x_QImageDecoder : public QImageDecoder {
 public:
     static void x_0(Smoke::Stack x) {
 	// QImageDecoder(QImageConsumer*)
-	x_QImageDecoder* xret = new x_QImageDecoder((QImageConsumer*)x[1].s_class);
+	x_QImageDecoder* xret = new x_QImageDecoder((QImageConsumer*)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QImageDecoder(QImageConsumer* x1) : QImageDecoder(x1) {
@@ -17,22 +17,22 @@ public:
     void x_1(Smoke::Stack x) {
 	// image()
 	const QImage& xret = this->QImageDecoder::image();
-	x[0].s_class = (void*)&xret;
+	x[0].s_voidp = (void*)&xret;
     }
     void x_2(Smoke::Stack x) {
 	// decode(const uchar*, int)
-	int xret = this->QImageDecoder::decode((const uchar*)x[1].s_class,(int)x[2].s_int);
-	x[0].s_int = (int)xret;
+	int xret = this->QImageDecoder::decode((const uchar*)x[1].s_voidp,(int)x[2].s_int);
+	x[0].s_int = xret;
     }
     static void x_3(Smoke::Stack x) {
 	// formatName(const uchar*, int)
-	const char* xret = QImageDecoder::formatName((const uchar*)x[1].s_class,(int)x[2].s_int);
-	x[0].s_class = (void*)xret;
+	const char* xret = QImageDecoder::formatName((const uchar*)x[1].s_voidp,(int)x[2].s_int);
+	x[0].s_voidp = (void*)xret;
     }
     static void x_4(Smoke::Stack x) {
 	// format(const char*)
-	QImageFormatType* xret = QImageDecoder::format((const char*)x[1].s_class);
-	x[0].s_class = (void*)xret;
+	QImageFormatType* xret = QImageDecoder::format((const char*)x[1].s_voidp);
+	x[0].s_voidp = (void*)xret;
     }
     static void x_5(Smoke::Stack x) {
 	// inputFormats()
@@ -41,13 +41,13 @@ public:
     }
     static void x_6(Smoke::Stack x) {
 	// registerDecoderFactory(QImageFormatType*)
-	QImageDecoder::registerDecoderFactory((QImageFormatType*)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	QImageDecoder::registerDecoderFactory((QImageFormatType*)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     static void x_7(Smoke::Stack x) {
 	// unregisterDecoderFactory(QImageFormatType*)
-	QImageDecoder::unregisterDecoderFactory((QImageFormatType*)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	QImageDecoder::unregisterDecoderFactory((QImageFormatType*)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     ~x_QImageDecoder() {}
 };

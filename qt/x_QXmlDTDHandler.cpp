@@ -24,19 +24,19 @@ public:
     }
     virtual bool notationDecl(const QString& x1, const QString& x2, const QString& x3) {
 	Smoke::StackItem x[4];
-	x[1].s_class = (void*)&x1;
-	x[2].s_class = (void*)&x2;
-	x[3].s_class = (void*)&x3;
+	x[1].s_voidp = (void*)&x1;
+	x[2].s_voidp = (void*)&x2;
+	x[3].s_voidp = (void*)&x3;
 	qt_Smoke->callMethod(10001, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
     virtual bool unparsedEntityDecl(const QString& x1, const QString& x2, const QString& x3, const QString& x4) {
 	Smoke::StackItem x[5];
-	x[1].s_class = (void*)&x1;
-	x[2].s_class = (void*)&x2;
-	x[3].s_class = (void*)&x3;
-	x[4].s_class = (void*)&x4;
+	x[1].s_voidp = (void*)&x1;
+	x[2].s_voidp = (void*)&x2;
+	x[3].s_voidp = (void*)&x3;
+	x[4].s_voidp = (void*)&x4;
 	qt_Smoke->callMethod(10002, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT

@@ -15,57 +15,57 @@ public:
     void x_0(Smoke::Stack x) {
 	// clear()
 	xthis->QClipboard::clear();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_1(Smoke::Stack x) const {
 	// supportsSelection()
 	bool xret = xthis->QClipboard::supportsSelection();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_2(Smoke::Stack x) const {
 	// ownsSelection()
 	bool xret = xthis->QClipboard::ownsSelection();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_3(Smoke::Stack x) const {
 	// ownsClipboard()
 	bool xret = xthis->QClipboard::ownsClipboard();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_4(Smoke::Stack x) {
 	// setSelectionMode(bool)
 	xthis->QClipboard::setSelectionMode((bool)x[1].s_bool);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_5(Smoke::Stack x) const {
 	// selectionModeEnabled()
 	bool xret = xthis->QClipboard::selectionModeEnabled();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_6(Smoke::Stack x) const {
 	// data()
 	QMimeSource* xret = xthis->QClipboard::data();
-	x[0].s_class = (void*)xret;
+	x[0].s_voidp = (void*)xret;
     }
     void x_7(Smoke::Stack x) {
 	// setData(QMimeSource*)
-	xthis->QClipboard::setData((QMimeSource*)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	xthis->QClipboard::setData((QMimeSource*)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_8(Smoke::Stack x) const {
 	// text()
 	QString xret = xthis->QClipboard::text();
-	x[0].s_class = (void*)new QString(xret);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     void x_9(Smoke::Stack x) const {
 	// text(QCString&)
-	QString xret = xthis->QClipboard::text(*(QCString *)x[1].s_class);
-	x[0].s_class = (void*)new QString(xret);
+	QString xret = xthis->QClipboard::text(*(QCString *)x[1].s_voidp);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     void x_10(Smoke::Stack x) {
 	// setText(const QString&)
-	xthis->QClipboard::setText(*(const QString *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	xthis->QClipboard::setText(*(const QString *)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_11(Smoke::Stack x) const {
 	// image()
@@ -79,13 +79,13 @@ public:
     }
     void x_13(Smoke::Stack x) {
 	// setImage(const QImage&)
-	xthis->QClipboard::setImage(*(const QImage *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	xthis->QClipboard::setImage(*(const QImage *)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_14(Smoke::Stack x) {
 	// setPixmap(const QPixmap&)
-	xthis->QClipboard::setPixmap(*(const QPixmap *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	xthis->QClipboard::setPixmap(*(const QPixmap *)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     ~x_QClipboard() {}
 };

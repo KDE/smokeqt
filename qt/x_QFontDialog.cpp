@@ -11,32 +11,32 @@ public:
     x_QFontDialog(void *x) : xthis((QFontDialog*)x) {}
     static void x_0(Smoke::Stack x) {
 	// getFont(bool*, const QFont&, QWidget*, const char*)
-	QFont xret = QFontDialog::getFont((bool*)x[1].s_class,*(const QFont *)x[2].s_class,(QWidget*)x[3].s_class,(const char*)x[4].s_class);
+	QFont xret = QFontDialog::getFont((bool*)x[1].s_voidp,*(const QFont *)x[2].s_voidp,(QWidget*)x[3].s_voidp,(const char*)x[4].s_voidp);
 	x[0].s_class = (void*)new QFont(xret);
     }
     static void x_1(Smoke::Stack x) {
 	// getFont(bool*, const QFont&, QWidget*)
-	QFont xret = QFontDialog::getFont((bool*)x[1].s_class,*(const QFont *)x[2].s_class,(QWidget*)x[3].s_class);
+	QFont xret = QFontDialog::getFont((bool*)x[1].s_voidp,*(const QFont *)x[2].s_voidp,(QWidget*)x[3].s_voidp);
 	x[0].s_class = (void*)new QFont(xret);
     }
     static void x_2(Smoke::Stack x) {
 	// getFont(bool*, const QFont&)
-	QFont xret = QFontDialog::getFont((bool*)x[1].s_class,*(const QFont *)x[2].s_class);
+	QFont xret = QFontDialog::getFont((bool*)x[1].s_voidp,*(const QFont *)x[2].s_voidp);
 	x[0].s_class = (void*)new QFont(xret);
     }
     static void x_3(Smoke::Stack x) {
 	// getFont(bool*, QWidget*, const char*)
-	QFont xret = QFontDialog::getFont((bool*)x[1].s_class,(QWidget*)x[2].s_class,(const char*)x[3].s_class);
+	QFont xret = QFontDialog::getFont((bool*)x[1].s_voidp,(QWidget*)x[2].s_voidp,(const char*)x[3].s_voidp);
 	x[0].s_class = (void*)new QFont(xret);
     }
     static void x_4(Smoke::Stack x) {
 	// getFont(bool*, QWidget*)
-	QFont xret = QFontDialog::getFont((bool*)x[1].s_class,(QWidget*)x[2].s_class);
+	QFont xret = QFontDialog::getFont((bool*)x[1].s_voidp,(QWidget*)x[2].s_voidp);
 	x[0].s_class = (void*)new QFont(xret);
     }
     static void x_5(Smoke::Stack x) {
 	// getFont(bool*)
-	QFont xret = QFontDialog::getFont((bool*)x[1].s_class);
+	QFont xret = QFontDialog::getFont((bool*)x[1].s_voidp);
 	x[0].s_class = (void*)new QFont(xret);
     }
     ~x_QFontDialog() {}

@@ -16,33 +16,33 @@ public:
     }
     static void x_1(Smoke::Stack x) {
 	// QDomDocument(const QString&)
-	x_QDomDocument* xret = new x_QDomDocument(*(const QString *)x[1].s_class);
+	x_QDomDocument* xret = new x_QDomDocument(*(const QString *)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QDomDocument(const QString& x1) : QDomDocument(x1) {
     }
     static void x_2(Smoke::Stack x) {
 	// QDomDocument(const QDomDocumentType&)
-	x_QDomDocument* xret = new x_QDomDocument(*(const QDomDocumentType *)x[1].s_class);
+	x_QDomDocument* xret = new x_QDomDocument(*(const QDomDocumentType *)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QDomDocument(const QDomDocumentType& x1) : QDomDocument(x1) {
     }
     static void x_3(Smoke::Stack x) {
 	// QDomDocument(const QDomDocument&)
-	x_QDomDocument* xret = new x_QDomDocument(*(const QDomDocument *)x[1].s_class);
+	x_QDomDocument* xret = new x_QDomDocument(*(const QDomDocument *)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QDomDocument(const QDomDocument& x1) : QDomDocument(x1) {
     }
     void x_4(Smoke::Stack x) {
 	// operator=(const QDomDocument&)
-	QDomDocument& xret = this->QDomDocument::operator=(*(const QDomDocument *)x[1].s_class);
-	x[0].s_class = (void*)&xret;
+	QDomDocument& xret = this->QDomDocument::operator=(*(const QDomDocument *)x[1].s_voidp);
+	x[0].s_voidp = (void*)&xret;
     }
     void x_5(Smoke::Stack x) {
 	// createElement(const QString&)
-	QDomElement xret = this->QDomDocument::createElement(*(const QString *)x[1].s_class);
+	QDomElement xret = this->QDomDocument::createElement(*(const QString *)x[1].s_voidp);
 	x[0].s_class = (void*)new QDomElement(xret);
     }
     void x_6(Smoke::Stack x) {
@@ -52,62 +52,62 @@ public:
     }
     void x_7(Smoke::Stack x) {
 	// createTextNode(const QString&)
-	QDomText xret = this->QDomDocument::createTextNode(*(const QString *)x[1].s_class);
+	QDomText xret = this->QDomDocument::createTextNode(*(const QString *)x[1].s_voidp);
 	x[0].s_class = (void*)new QDomText(xret);
     }
     void x_8(Smoke::Stack x) {
 	// createComment(const QString&)
-	QDomComment xret = this->QDomDocument::createComment(*(const QString *)x[1].s_class);
+	QDomComment xret = this->QDomDocument::createComment(*(const QString *)x[1].s_voidp);
 	x[0].s_class = (void*)new QDomComment(xret);
     }
     void x_9(Smoke::Stack x) {
 	// createCDATASection(const QString&)
-	QDomCDATASection xret = this->QDomDocument::createCDATASection(*(const QString *)x[1].s_class);
+	QDomCDATASection xret = this->QDomDocument::createCDATASection(*(const QString *)x[1].s_voidp);
 	x[0].s_class = (void*)new QDomCDATASection(xret);
     }
     void x_10(Smoke::Stack x) {
 	// createProcessingInstruction(const QString&, const QString&)
-	QDomProcessingInstruction xret = this->QDomDocument::createProcessingInstruction(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class);
+	QDomProcessingInstruction xret = this->QDomDocument::createProcessingInstruction(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
 	x[0].s_class = (void*)new QDomProcessingInstruction(xret);
     }
     void x_11(Smoke::Stack x) {
 	// createAttribute(const QString&)
-	QDomAttr xret = this->QDomDocument::createAttribute(*(const QString *)x[1].s_class);
+	QDomAttr xret = this->QDomDocument::createAttribute(*(const QString *)x[1].s_voidp);
 	x[0].s_class = (void*)new QDomAttr(xret);
     }
     void x_12(Smoke::Stack x) {
 	// createEntityReference(const QString&)
-	QDomEntityReference xret = this->QDomDocument::createEntityReference(*(const QString *)x[1].s_class);
+	QDomEntityReference xret = this->QDomDocument::createEntityReference(*(const QString *)x[1].s_voidp);
 	x[0].s_class = (void*)new QDomEntityReference(xret);
     }
     void x_13(Smoke::Stack x) const {
 	// elementsByTagName(const QString&)
-	QDomNodeList xret = this->QDomDocument::elementsByTagName(*(const QString *)x[1].s_class);
+	QDomNodeList xret = this->QDomDocument::elementsByTagName(*(const QString *)x[1].s_voidp);
 	x[0].s_class = (void*)new QDomNodeList(xret);
     }
     void x_14(Smoke::Stack x) {
 	// importNode(const QDomNode&, bool)
-	QDomNode xret = this->QDomDocument::importNode(*(const QDomNode *)x[1].s_class,(bool)x[2].s_bool);
+	QDomNode xret = this->QDomDocument::importNode(*(const QDomNode *)x[1].s_voidp,(bool)x[2].s_bool);
 	x[0].s_class = (void*)new QDomNode(xret);
     }
     void x_15(Smoke::Stack x) {
 	// createElementNS(const QString&, const QString&)
-	QDomElement xret = this->QDomDocument::createElementNS(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class);
+	QDomElement xret = this->QDomDocument::createElementNS(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
 	x[0].s_class = (void*)new QDomElement(xret);
     }
     void x_16(Smoke::Stack x) {
 	// createAttributeNS(const QString&, const QString&)
-	QDomAttr xret = this->QDomDocument::createAttributeNS(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class);
+	QDomAttr xret = this->QDomDocument::createAttributeNS(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
 	x[0].s_class = (void*)new QDomAttr(xret);
     }
     void x_17(Smoke::Stack x) {
 	// elementsByTagNameNS(const QString&, const QString&)
-	QDomNodeList xret = this->QDomDocument::elementsByTagNameNS(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class);
+	QDomNodeList xret = this->QDomDocument::elementsByTagNameNS(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
 	x[0].s_class = (void*)new QDomNodeList(xret);
     }
     void x_18(Smoke::Stack x) {
 	// elementById(const QString&)
-	QDomElement xret = this->QDomDocument::elementById(*(const QString *)x[1].s_class);
+	QDomElement xret = this->QDomDocument::elementById(*(const QString *)x[1].s_voidp);
 	x[0].s_class = (void*)new QDomElement(xret);
     }
     void x_19(Smoke::Stack x) const {
@@ -127,187 +127,187 @@ public:
     }
     void x_22(Smoke::Stack x) {
 	// setContent(const QCString&, bool, QString*, int*, int*)
-	bool xret = this->QDomDocument::setContent(*(const QCString *)x[1].s_class,(bool)x[2].s_bool,(QString*)x[3].s_class,(int*)x[4].s_class,(int*)x[5].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QDomDocument::setContent(*(const QCString *)x[1].s_voidp,(bool)x[2].s_bool,(QString*)x[3].s_voidp,(int*)x[4].s_voidp,(int*)x[5].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_23(Smoke::Stack x) {
 	// setContent(const QCString&, bool, QString*, int*)
-	bool xret = this->QDomDocument::setContent(*(const QCString *)x[1].s_class,(bool)x[2].s_bool,(QString*)x[3].s_class,(int*)x[4].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QDomDocument::setContent(*(const QCString *)x[1].s_voidp,(bool)x[2].s_bool,(QString*)x[3].s_voidp,(int*)x[4].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_24(Smoke::Stack x) {
 	// setContent(const QCString&, bool, QString*)
-	bool xret = this->QDomDocument::setContent(*(const QCString *)x[1].s_class,(bool)x[2].s_bool,(QString*)x[3].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QDomDocument::setContent(*(const QCString *)x[1].s_voidp,(bool)x[2].s_bool,(QString*)x[3].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_25(Smoke::Stack x) {
 	// setContent(const QCString&, bool)
-	bool xret = this->QDomDocument::setContent(*(const QCString *)x[1].s_class,(bool)x[2].s_bool);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QDomDocument::setContent(*(const QCString *)x[1].s_voidp,(bool)x[2].s_bool);
+	x[0].s_bool = xret;
     }
     void x_26(Smoke::Stack x) {
 	// setContent(const QByteArray&, bool, QString*, int*, int*)
-	bool xret = this->QDomDocument::setContent(*(const QByteArray *)x[1].s_class,(bool)x[2].s_bool,(QString*)x[3].s_class,(int*)x[4].s_class,(int*)x[5].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QDomDocument::setContent(*(const QByteArray *)x[1].s_voidp,(bool)x[2].s_bool,(QString*)x[3].s_voidp,(int*)x[4].s_voidp,(int*)x[5].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_27(Smoke::Stack x) {
 	// setContent(const QByteArray&, bool, QString*, int*)
-	bool xret = this->QDomDocument::setContent(*(const QByteArray *)x[1].s_class,(bool)x[2].s_bool,(QString*)x[3].s_class,(int*)x[4].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QDomDocument::setContent(*(const QByteArray *)x[1].s_voidp,(bool)x[2].s_bool,(QString*)x[3].s_voidp,(int*)x[4].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_28(Smoke::Stack x) {
 	// setContent(const QByteArray&, bool, QString*)
-	bool xret = this->QDomDocument::setContent(*(const QByteArray *)x[1].s_class,(bool)x[2].s_bool,(QString*)x[3].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QDomDocument::setContent(*(const QByteArray *)x[1].s_voidp,(bool)x[2].s_bool,(QString*)x[3].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_29(Smoke::Stack x) {
 	// setContent(const QByteArray&, bool)
-	bool xret = this->QDomDocument::setContent(*(const QByteArray *)x[1].s_class,(bool)x[2].s_bool);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QDomDocument::setContent(*(const QByteArray *)x[1].s_voidp,(bool)x[2].s_bool);
+	x[0].s_bool = xret;
     }
     void x_30(Smoke::Stack x) {
 	// setContent(const QString&, bool, QString*, int*, int*)
-	bool xret = this->QDomDocument::setContent(*(const QString *)x[1].s_class,(bool)x[2].s_bool,(QString*)x[3].s_class,(int*)x[4].s_class,(int*)x[5].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QDomDocument::setContent(*(const QString *)x[1].s_voidp,(bool)x[2].s_bool,(QString*)x[3].s_voidp,(int*)x[4].s_voidp,(int*)x[5].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_31(Smoke::Stack x) {
 	// setContent(const QString&, bool, QString*, int*)
-	bool xret = this->QDomDocument::setContent(*(const QString *)x[1].s_class,(bool)x[2].s_bool,(QString*)x[3].s_class,(int*)x[4].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QDomDocument::setContent(*(const QString *)x[1].s_voidp,(bool)x[2].s_bool,(QString*)x[3].s_voidp,(int*)x[4].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_32(Smoke::Stack x) {
 	// setContent(const QString&, bool, QString*)
-	bool xret = this->QDomDocument::setContent(*(const QString *)x[1].s_class,(bool)x[2].s_bool,(QString*)x[3].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QDomDocument::setContent(*(const QString *)x[1].s_voidp,(bool)x[2].s_bool,(QString*)x[3].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_33(Smoke::Stack x) {
 	// setContent(const QString&, bool)
-	bool xret = this->QDomDocument::setContent(*(const QString *)x[1].s_class,(bool)x[2].s_bool);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QDomDocument::setContent(*(const QString *)x[1].s_voidp,(bool)x[2].s_bool);
+	x[0].s_bool = xret;
     }
     void x_34(Smoke::Stack x) {
 	// setContent(QIODevice*, bool, QString*, int*, int*)
-	bool xret = this->QDomDocument::setContent((QIODevice*)x[1].s_class,(bool)x[2].s_bool,(QString*)x[3].s_class,(int*)x[4].s_class,(int*)x[5].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QDomDocument::setContent((QIODevice*)x[1].s_voidp,(bool)x[2].s_bool,(QString*)x[3].s_voidp,(int*)x[4].s_voidp,(int*)x[5].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_35(Smoke::Stack x) {
 	// setContent(QIODevice*, bool, QString*, int*)
-	bool xret = this->QDomDocument::setContent((QIODevice*)x[1].s_class,(bool)x[2].s_bool,(QString*)x[3].s_class,(int*)x[4].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QDomDocument::setContent((QIODevice*)x[1].s_voidp,(bool)x[2].s_bool,(QString*)x[3].s_voidp,(int*)x[4].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_36(Smoke::Stack x) {
 	// setContent(QIODevice*, bool, QString*)
-	bool xret = this->QDomDocument::setContent((QIODevice*)x[1].s_class,(bool)x[2].s_bool,(QString*)x[3].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QDomDocument::setContent((QIODevice*)x[1].s_voidp,(bool)x[2].s_bool,(QString*)x[3].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_37(Smoke::Stack x) {
 	// setContent(QIODevice*, bool)
-	bool xret = this->QDomDocument::setContent((QIODevice*)x[1].s_class,(bool)x[2].s_bool);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QDomDocument::setContent((QIODevice*)x[1].s_voidp,(bool)x[2].s_bool);
+	x[0].s_bool = xret;
     }
     void x_38(Smoke::Stack x) {
 	// setContent(const QCString&, QString*, int*, int*)
-	bool xret = this->QDomDocument::setContent(*(const QCString *)x[1].s_class,(QString*)x[2].s_class,(int*)x[3].s_class,(int*)x[4].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QDomDocument::setContent(*(const QCString *)x[1].s_voidp,(QString*)x[2].s_voidp,(int*)x[3].s_voidp,(int*)x[4].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_39(Smoke::Stack x) {
 	// setContent(const QCString&, QString*, int*)
-	bool xret = this->QDomDocument::setContent(*(const QCString *)x[1].s_class,(QString*)x[2].s_class,(int*)x[3].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QDomDocument::setContent(*(const QCString *)x[1].s_voidp,(QString*)x[2].s_voidp,(int*)x[3].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_40(Smoke::Stack x) {
 	// setContent(const QCString&, QString*)
-	bool xret = this->QDomDocument::setContent(*(const QCString *)x[1].s_class,(QString*)x[2].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QDomDocument::setContent(*(const QCString *)x[1].s_voidp,(QString*)x[2].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_41(Smoke::Stack x) {
 	// setContent(const QCString&)
-	bool xret = this->QDomDocument::setContent(*(const QCString *)x[1].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QDomDocument::setContent(*(const QCString *)x[1].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_42(Smoke::Stack x) {
 	// setContent(const QByteArray&, QString*, int*, int*)
-	bool xret = this->QDomDocument::setContent(*(const QByteArray *)x[1].s_class,(QString*)x[2].s_class,(int*)x[3].s_class,(int*)x[4].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QDomDocument::setContent(*(const QByteArray *)x[1].s_voidp,(QString*)x[2].s_voidp,(int*)x[3].s_voidp,(int*)x[4].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_43(Smoke::Stack x) {
 	// setContent(const QByteArray&, QString*, int*)
-	bool xret = this->QDomDocument::setContent(*(const QByteArray *)x[1].s_class,(QString*)x[2].s_class,(int*)x[3].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QDomDocument::setContent(*(const QByteArray *)x[1].s_voidp,(QString*)x[2].s_voidp,(int*)x[3].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_44(Smoke::Stack x) {
 	// setContent(const QByteArray&, QString*)
-	bool xret = this->QDomDocument::setContent(*(const QByteArray *)x[1].s_class,(QString*)x[2].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QDomDocument::setContent(*(const QByteArray *)x[1].s_voidp,(QString*)x[2].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_45(Smoke::Stack x) {
 	// setContent(const QByteArray&)
-	bool xret = this->QDomDocument::setContent(*(const QByteArray *)x[1].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QDomDocument::setContent(*(const QByteArray *)x[1].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_46(Smoke::Stack x) {
 	// setContent(const QString&, QString*, int*, int*)
-	bool xret = this->QDomDocument::setContent(*(const QString *)x[1].s_class,(QString*)x[2].s_class,(int*)x[3].s_class,(int*)x[4].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QDomDocument::setContent(*(const QString *)x[1].s_voidp,(QString*)x[2].s_voidp,(int*)x[3].s_voidp,(int*)x[4].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_47(Smoke::Stack x) {
 	// setContent(const QString&, QString*, int*)
-	bool xret = this->QDomDocument::setContent(*(const QString *)x[1].s_class,(QString*)x[2].s_class,(int*)x[3].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QDomDocument::setContent(*(const QString *)x[1].s_voidp,(QString*)x[2].s_voidp,(int*)x[3].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_48(Smoke::Stack x) {
 	// setContent(const QString&, QString*)
-	bool xret = this->QDomDocument::setContent(*(const QString *)x[1].s_class,(QString*)x[2].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QDomDocument::setContent(*(const QString *)x[1].s_voidp,(QString*)x[2].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_49(Smoke::Stack x) {
 	// setContent(const QString&)
-	bool xret = this->QDomDocument::setContent(*(const QString *)x[1].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QDomDocument::setContent(*(const QString *)x[1].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_50(Smoke::Stack x) {
 	// setContent(QIODevice*, QString*, int*, int*)
-	bool xret = this->QDomDocument::setContent((QIODevice*)x[1].s_class,(QString*)x[2].s_class,(int*)x[3].s_class,(int*)x[4].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QDomDocument::setContent((QIODevice*)x[1].s_voidp,(QString*)x[2].s_voidp,(int*)x[3].s_voidp,(int*)x[4].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_51(Smoke::Stack x) {
 	// setContent(QIODevice*, QString*, int*)
-	bool xret = this->QDomDocument::setContent((QIODevice*)x[1].s_class,(QString*)x[2].s_class,(int*)x[3].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QDomDocument::setContent((QIODevice*)x[1].s_voidp,(QString*)x[2].s_voidp,(int*)x[3].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_52(Smoke::Stack x) {
 	// setContent(QIODevice*, QString*)
-	bool xret = this->QDomDocument::setContent((QIODevice*)x[1].s_class,(QString*)x[2].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QDomDocument::setContent((QIODevice*)x[1].s_voidp,(QString*)x[2].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_53(Smoke::Stack x) {
 	// setContent(QIODevice*)
-	bool xret = this->QDomDocument::setContent((QIODevice*)x[1].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QDomDocument::setContent((QIODevice*)x[1].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_54(Smoke::Stack x) const {
 	// nodeType()
 	QDomNode::NodeType xret = this->QDomDocument::nodeType();
-	x[0].s_class = (void*)new QDomNode::NodeType(xret);
+	x[0].s_enum = xret;
     }
     void x_55(Smoke::Stack x) const {
 	// isDocument()
 	bool xret = this->QDomDocument::isDocument();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_56(Smoke::Stack x) const {
 	// toString()
 	QString xret = this->QDomDocument::toString();
-	x[0].s_class = (void*)new QString(xret);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     void x_57(Smoke::Stack x) const {
 	// toCString()
 	QCString xret = this->QDomDocument::toCString();
-	x[0].s_class = (void*)new QCString(xret);
+	x[0].s_voidp = (void*)new QCString(xret);
     }
     virtual QDomNode appendChild(const QDomNode& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)&x1;
+	x[1].s_voidp = (void*)&x1;
 	if(qt_Smoke->callMethod(2195, (void*)this, x)) {
 	    QDomNode *xptr = (QDomNode *)x[0].s_class;
 	    QDomNode xret(*xptr);
@@ -338,7 +338,7 @@ public:
     }
     virtual QDomNode cloneNode(bool x1) const {
 	Smoke::StackItem x[2];
-	x[1].s_bool = (bool)x1;
+	x[1].s_bool = x1;
 	if(qt_Smoke->callMethod(2197, (void*)this, x)) {
 	    QDomNode *xptr = (QDomNode *)x[0].s_class;
 	    QDomNode xret(*xptr);
@@ -369,8 +369,8 @@ public:
     }
     virtual QDomNode insertAfter(const QDomNode& x1, const QDomNode& x2) {
 	Smoke::StackItem x[3];
-	x[1].s_class = (void*)&x1;
-	x[2].s_class = (void*)&x2;
+	x[1].s_voidp = (void*)&x1;
+	x[2].s_voidp = (void*)&x2;
 	if(qt_Smoke->callMethod(2192, (void*)this, x)) {
 	    QDomNode *xptr = (QDomNode *)x[0].s_class;
 	    QDomNode xret(*xptr);
@@ -381,8 +381,8 @@ public:
     }
     virtual QDomNode insertBefore(const QDomNode& x1, const QDomNode& x2) {
 	Smoke::StackItem x[3];
-	x[1].s_class = (void*)&x1;
-	x[2].s_class = (void*)&x2;
+	x[1].s_voidp = (void*)&x1;
+	x[2].s_voidp = (void*)&x2;
 	if(qt_Smoke->callMethod(2191, (void*)this, x)) {
 	    QDomNode *xptr = (QDomNode *)x[0].s_class;
 	    QDomNode xret(*xptr);
@@ -453,8 +453,8 @@ public:
     }
     virtual bool isSupported(const QString& x1, const QString& x2) const {
 	Smoke::StackItem x[3];
-	x[1].s_class = (void*)&x1;
-	x[2].s_class = (void*)&x2;
+	x[1].s_voidp = (void*)&x1;
+	x[2].s_voidp = (void*)&x2;
 	if(qt_Smoke->callMethod(2200, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QDomNode::isSupported(x1, x2);
     }
@@ -580,7 +580,7 @@ public:
     }
     virtual QDomNode removeChild(const QDomNode& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)&x1;
+	x[1].s_voidp = (void*)&x1;
 	if(qt_Smoke->callMethod(2194, (void*)this, x)) {
 	    QDomNode *xptr = (QDomNode *)x[0].s_class;
 	    QDomNode xret(*xptr);
@@ -591,8 +591,8 @@ public:
     }
     virtual QDomNode replaceChild(const QDomNode& x1, const QDomNode& x2) {
 	Smoke::StackItem x[3];
-	x[1].s_class = (void*)&x1;
-	x[2].s_class = (void*)&x2;
+	x[1].s_voidp = (void*)&x1;
+	x[2].s_voidp = (void*)&x2;
 	if(qt_Smoke->callMethod(2193, (void*)this, x)) {
 	    QDomNode *xptr = (QDomNode *)x[0].s_class;
 	    QDomNode xret(*xptr);
@@ -603,13 +603,13 @@ public:
     }
     virtual void setNodeValue(const QString& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)&x1;
+	x[1].s_voidp = (void*)&x1;
 	if(qt_Smoke->callMethod(2215, (void*)this, x)) return;
 	this->QDomNode::setNodeValue(x1);
     }
     virtual void setPrefix(const QString& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)&x1;
+	x[1].s_voidp = (void*)&x1;
 	if(qt_Smoke->callMethod(2217, (void*)this, x)) return;
 	this->QDomNode::setPrefix(x1);
     }

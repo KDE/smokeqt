@@ -23,92 +23,92 @@ public:
     void x_2(Smoke::Stack x) const {
 	// isNull()
 	bool xret = this->QSize::isNull();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_3(Smoke::Stack x) const {
 	// isEmpty()
 	bool xret = this->QSize::isEmpty();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_4(Smoke::Stack x) const {
 	// isValid()
 	bool xret = this->QSize::isValid();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_5(Smoke::Stack x) const {
 	// width()
 	int xret = this->QSize::width();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_6(Smoke::Stack x) const {
 	// height()
 	int xret = this->QSize::height();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_7(Smoke::Stack x) {
 	// setWidth(int)
 	this->QSize::setWidth((int)x[1].s_int);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_8(Smoke::Stack x) {
 	// setHeight(int)
 	this->QSize::setHeight((int)x[1].s_int);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_9(Smoke::Stack x) {
 	// transpose()
 	this->QSize::transpose();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_10(Smoke::Stack x) const {
 	// expandedTo(const QSize&)
-	QSize xret = this->QSize::expandedTo(*(const QSize *)x[1].s_class);
+	QSize xret = this->QSize::expandedTo(*(const QSize *)x[1].s_voidp);
 	x[0].s_class = (void*)new QSize(xret);
     }
     void x_11(Smoke::Stack x) const {
 	// boundedTo(const QSize&)
-	QSize xret = this->QSize::boundedTo(*(const QSize *)x[1].s_class);
+	QSize xret = this->QSize::boundedTo(*(const QSize *)x[1].s_voidp);
 	x[0].s_class = (void*)new QSize(xret);
     }
     void x_12(Smoke::Stack x) {
 	// rwidth()
 	QCOORD& xret = this->QSize::rwidth();
-	x[0].s_class = (void*)&xret;
+	x[0].s_voidp = (void*)&xret;
     }
     void x_13(Smoke::Stack x) {
 	// rheight()
 	QCOORD& xret = this->QSize::rheight();
-	x[0].s_class = (void*)&xret;
+	x[0].s_voidp = (void*)&xret;
     }
     void x_14(Smoke::Stack x) {
 	// operator+=(const QSize&)
-	QSize& xret = this->QSize::operator+=(*(const QSize *)x[1].s_class);
-	x[0].s_class = (void*)&xret;
+	QSize& xret = this->QSize::operator+=(*(const QSize *)x[1].s_voidp);
+	x[0].s_voidp = (void*)&xret;
     }
     void x_15(Smoke::Stack x) {
 	// operator-=(const QSize&)
-	QSize& xret = this->QSize::operator-=(*(const QSize *)x[1].s_class);
-	x[0].s_class = (void*)&xret;
+	QSize& xret = this->QSize::operator-=(*(const QSize *)x[1].s_voidp);
+	x[0].s_voidp = (void*)&xret;
     }
     void x_16(Smoke::Stack x) {
 	// operator*=(int)
 	QSize& xret = this->QSize::operator*=((int)x[1].s_int);
-	x[0].s_class = (void*)&xret;
+	x[0].s_voidp = (void*)&xret;
     }
     void x_17(Smoke::Stack x) {
 	// operator*=(double)
 	QSize& xret = this->QSize::operator*=((double)x[1].s_double);
-	x[0].s_class = (void*)&xret;
+	x[0].s_voidp = (void*)&xret;
     }
     void x_18(Smoke::Stack x) {
 	// operator/=(int)
 	QSize& xret = this->QSize::operator/=((int)x[1].s_int);
-	x[0].s_class = (void*)&xret;
+	x[0].s_voidp = (void*)&xret;
     }
     void x_19(Smoke::Stack x) {
 	// operator/=(double)
 	QSize& xret = this->QSize::operator/=((double)x[1].s_double);
-	x[0].s_class = (void*)&xret;
+	x[0].s_voidp = (void*)&xret;
     }
     ~x_QSize() {}
 };

@@ -8,7 +8,7 @@ public:
     void x_0(Smoke::Stack x) {
 	// maybeReady()
 	this->QDataSink::maybeReady();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     static void x_1(Smoke::Stack x) {
 	// QDataSink()
@@ -31,8 +31,8 @@ public:
     }
     virtual void receive(const uchar* x1, int x2) {
 	Smoke::StackItem x[3];
-	x[1].s_class = (void*)x1;
-	x[2].s_int = (int)x2;
+	x[1].s_voidp = (void*)x1;
+	x[2].s_int = x2;
 	qt_Smoke->callMethod(1324, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT

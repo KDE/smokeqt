@@ -17,7 +17,7 @@ public:
     }
     static void x_1(Smoke::Stack x) {
 	// QBuffer(QByteArray)
-	x_QBuffer* xret = new x_QBuffer(*(QByteArray *)x[1].s_class);
+	x_QBuffer* xret = new x_QBuffer(*(QByteArray *)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QBuffer(QByteArray x1) : QBuffer(x1) {
@@ -25,77 +25,77 @@ public:
     void x_2(Smoke::Stack x) const {
 	// buffer()
 	QByteArray xret = this->QBuffer::buffer();
-	x[0].s_class = (void*)new QByteArray(xret);
+	x[0].s_voidp = (void*)new QByteArray(xret);
     }
     void x_3(Smoke::Stack x) {
 	// setBuffer(QByteArray)
-	bool xret = this->QBuffer::setBuffer(*(QByteArray *)x[1].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QBuffer::setBuffer(*(QByteArray *)x[1].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_4(Smoke::Stack x) {
 	// open(int)
 	bool xret = this->QBuffer::open((int)x[1].s_int);
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_5(Smoke::Stack x) {
 	// close()
 	this->QBuffer::close();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_6(Smoke::Stack x) {
 	// flush()
 	this->QBuffer::flush();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_7(Smoke::Stack x) const {
 	// size()
 	QIODevice::Offset xret = this->QBuffer::size();
-	x[0].s_class = (void*)new QIODevice::Offset(xret);
+	x[0].s_ulong = xret;
     }
     void x_8(Smoke::Stack x) const {
 	// at()
 	QIODevice::Offset xret = this->QBuffer::at();
-	x[0].s_class = (void*)new QIODevice::Offset(xret);
+	x[0].s_ulong = xret;
     }
     void x_9(Smoke::Stack x) {
 	// at(QIODevice::Offset)
-	bool xret = this->QBuffer::at(*(QIODevice::Offset *)x[1].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QBuffer::at((QIODevice::Offset)x[1].s_ulong);
+	x[0].s_bool = xret;
     }
     void x_10(Smoke::Stack x) {
 	// readBlock(char*, Q_ULONG)
-	Q_LONG xret = this->QBuffer::readBlock((char*)x[1].s_class,*(Q_ULONG *)x[2].s_class);
-	x[0].s_class = (void*)new Q_LONG(xret);
+	Q_LONG xret = this->QBuffer::readBlock((char*)x[1].s_voidp,(Q_ULONG)x[2].s_long);
+	x[0].s_long = xret;
     }
     void x_11(Smoke::Stack x) {
 	// writeBlock(const char*, Q_ULONG)
-	Q_LONG xret = this->QBuffer::writeBlock((const char*)x[1].s_class,*(Q_ULONG *)x[2].s_class);
-	x[0].s_class = (void*)new Q_LONG(xret);
+	Q_LONG xret = this->QBuffer::writeBlock((const char*)x[1].s_voidp,(Q_ULONG)x[2].s_long);
+	x[0].s_long = xret;
     }
     void x_12(Smoke::Stack x) {
 	// writeBlock(const QByteArray&)
-	Q_LONG xret = this->QBuffer::writeBlock(*(const QByteArray *)x[1].s_class);
-	x[0].s_class = (void*)new Q_LONG(xret);
+	Q_LONG xret = this->QBuffer::writeBlock(*(const QByteArray *)x[1].s_voidp);
+	x[0].s_long = xret;
     }
     void x_13(Smoke::Stack x) {
 	// readLine(char*, Q_ULONG)
-	Q_LONG xret = this->QBuffer::readLine((char*)x[1].s_class,*(Q_ULONG *)x[2].s_class);
-	x[0].s_class = (void*)new Q_LONG(xret);
+	Q_LONG xret = this->QBuffer::readLine((char*)x[1].s_voidp,(Q_ULONG)x[2].s_long);
+	x[0].s_long = xret;
     }
     void x_14(Smoke::Stack x) {
 	// getch()
 	int xret = this->QBuffer::getch();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_15(Smoke::Stack x) {
 	// putch(int)
 	int xret = this->QBuffer::putch((int)x[1].s_int);
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_16(Smoke::Stack x) {
 	// ungetch(int)
 	int xret = this->QBuffer::ungetch((int)x[1].s_int);
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     virtual QIODevice::Offset at() const {
 	Smoke::StackItem x[1];
@@ -109,7 +109,7 @@ public:
     }
     virtual bool at(QIODevice::Offset x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)&x1;
+	x[1].s_ulong = x1;
 	if(qt_Smoke->callMethod(340, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QBuffer::at(x1);
     }
@@ -135,13 +135,13 @@ public:
     }
     virtual bool open(int x1) {
 	Smoke::StackItem x[2];
-	x[1].s_int = (int)x1;
+	x[1].s_int = x1;
 	if(qt_Smoke->callMethod(335, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QBuffer::open(x1);
     }
     virtual int putch(int x1) {
 	Smoke::StackItem x[2];
-	x[1].s_int = (int)x1;
+	x[1].s_int = x1;
 	if(qt_Smoke->callMethod(346, (void*)this, x)) return (int)x[0].s_int;
 	return this->QBuffer::putch(x1);
     }
@@ -157,8 +157,8 @@ public:
     }
     virtual Q_LONG readBlock(char* x1, Q_ULONG x2) {
 	Smoke::StackItem x[3];
-	x[1].s_class = (void*)x1;
-	x[2].s_class = (void*)&x2;
+	x[1].s_voidp = (void*)x1;
+	x[2].s_long = x2;
 	if(qt_Smoke->callMethod(341, (void*)this, x)) {
 	    Q_LONG *xptr = (Q_LONG *)x[0].s_class;
 	    Q_LONG xret(*xptr);
@@ -169,8 +169,8 @@ public:
     }
     virtual Q_LONG readLine(char* x1, Q_ULONG x2) {
 	Smoke::StackItem x[3];
-	x[1].s_class = (void*)x1;
-	x[2].s_class = (void*)&x2;
+	x[1].s_voidp = (void*)x1;
+	x[2].s_long = x2;
 	if(qt_Smoke->callMethod(344, (void*)this, x)) {
 	    Q_LONG *xptr = (Q_LONG *)x[0].s_class;
 	    Q_LONG xret(*xptr);
@@ -191,14 +191,14 @@ public:
     }
     virtual int ungetch(int x1) {
 	Smoke::StackItem x[2];
-	x[1].s_int = (int)x1;
+	x[1].s_int = x1;
 	if(qt_Smoke->callMethod(347, (void*)this, x)) return (int)x[0].s_int;
 	return this->QBuffer::ungetch(x1);
     }
     virtual Q_LONG writeBlock(const char* x1, Q_ULONG x2) {
 	Smoke::StackItem x[3];
-	x[1].s_class = (void*)x1;
-	x[2].s_class = (void*)&x2;
+	x[1].s_voidp = (void*)x1;
+	x[2].s_long = x2;
 	if(qt_Smoke->callMethod(342, (void*)this, x)) {
 	    Q_LONG *xptr = (Q_LONG *)x[0].s_class;
 	    Q_LONG xret(*xptr);

@@ -14,30 +14,30 @@ public:
     }
     static void x_1(Smoke::Stack x) {
 	// QMapPrivateBase(const QMapPrivateBase*)
-	x_QMapPrivateBase* xret = new x_QMapPrivateBase((const QMapPrivateBase*)x[1].s_class);
+	x_QMapPrivateBase* xret = new x_QMapPrivateBase((const QMapPrivateBase*)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QMapPrivateBase(const QMapPrivateBase* x1) : QMapPrivateBase(x1) {
     }
     void x_2(Smoke::Stack x) {
 	// rotateLeft(QMapNodeBase*, QMapNodeBase*&)
-	this->QMapPrivateBase::rotateLeft((QMapNodeBase*)x[1].s_class,*(QMapNodeBase* *)x[2].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QMapPrivateBase::rotateLeft((QMapNodeBase*)x[1].s_voidp,*(QMapNodeBase* *)x[2].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_3(Smoke::Stack x) {
 	// rotateRight(QMapNodeBase*, QMapNodeBase*&)
-	this->QMapPrivateBase::rotateRight((QMapNodeBase*)x[1].s_class,*(QMapNodeBase* *)x[2].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QMapPrivateBase::rotateRight((QMapNodeBase*)x[1].s_voidp,*(QMapNodeBase* *)x[2].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_4(Smoke::Stack x) {
 	// rebalance(QMapNodeBase*, QMapNodeBase*&)
-	this->QMapPrivateBase::rebalance((QMapNodeBase*)x[1].s_class,*(QMapNodeBase* *)x[2].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QMapPrivateBase::rebalance((QMapNodeBase*)x[1].s_voidp,*(QMapNodeBase* *)x[2].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_5(Smoke::Stack x) {
 	// removeAndRebalance(QMapNodeBase*, QMapNodeBase*&, QMapNodeBase*&, QMapNodeBase*&)
-	QMapNodeBase* xret = this->QMapPrivateBase::removeAndRebalance((QMapNodeBase*)x[1].s_class,*(QMapNodeBase* *)x[2].s_class,*(QMapNodeBase* *)x[3].s_class,*(QMapNodeBase* *)x[4].s_class);
-	x[0].s_class = (void*)xret;
+	QMapNodeBase* xret = this->QMapPrivateBase::removeAndRebalance((QMapNodeBase*)x[1].s_voidp,*(QMapNodeBase* *)x[2].s_voidp,*(QMapNodeBase* *)x[3].s_voidp,*(QMapNodeBase* *)x[4].s_voidp);
+	x[0].s_voidp = (void*)xret;
     }
     ~x_QMapPrivateBase() {}
 };

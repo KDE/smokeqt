@@ -15,7 +15,7 @@ public:
     void x_1(Smoke::Stack x) const {
 	// timerId()
 	int xret = this->QTimerEvent::timerId();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     ~x_QTimerEvent() {}
 };

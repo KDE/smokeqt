@@ -37,7 +37,7 @@ public:
     }
     static void x_10(Smoke::Stack x) {
 	// QPaintDeviceMetrics(const QPaintDevice*)
-	x_QPaintDeviceMetrics* xret = new x_QPaintDeviceMetrics((const QPaintDevice*)x[1].s_class);
+	x_QPaintDeviceMetrics* xret = new x_QPaintDeviceMetrics((const QPaintDevice*)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QPaintDeviceMetrics(const QPaintDevice* x1) : QPaintDeviceMetrics(x1) {
@@ -45,52 +45,52 @@ public:
     void x_11(Smoke::Stack x) const {
 	// width()
 	int xret = this->QPaintDeviceMetrics::width();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_12(Smoke::Stack x) const {
 	// height()
 	int xret = this->QPaintDeviceMetrics::height();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_13(Smoke::Stack x) const {
 	// widthMM()
 	int xret = this->QPaintDeviceMetrics::widthMM();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_14(Smoke::Stack x) const {
 	// heightMM()
 	int xret = this->QPaintDeviceMetrics::heightMM();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_15(Smoke::Stack x) const {
 	// logicalDpiX()
 	int xret = this->QPaintDeviceMetrics::logicalDpiX();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_16(Smoke::Stack x) const {
 	// logicalDpiY()
 	int xret = this->QPaintDeviceMetrics::logicalDpiY();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_17(Smoke::Stack x) const {
 	// physicalDpiX()
 	int xret = this->QPaintDeviceMetrics::physicalDpiX();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_18(Smoke::Stack x) const {
 	// physicalDpiY()
 	int xret = this->QPaintDeviceMetrics::physicalDpiY();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_19(Smoke::Stack x) const {
 	// numColors()
 	int xret = this->QPaintDeviceMetrics::numColors();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_20(Smoke::Stack x) const {
 	// depth()
 	int xret = this->QPaintDeviceMetrics::depth();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     ~x_QPaintDeviceMetrics() {}
 };

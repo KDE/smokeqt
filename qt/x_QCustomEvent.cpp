@@ -14,7 +14,7 @@ public:
     }
     static void x_1(Smoke::Stack x) {
 	// QCustomEvent(QEvent::Type, void*)
-	x_QCustomEvent* xret = new x_QCustomEvent(*(QEvent::Type *)x[1].s_class,(void*)x[2].s_voidp);
+	x_QCustomEvent* xret = new x_QCustomEvent((QEvent::Type)x[1].s_enum,(void*)x[2].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QCustomEvent(QEvent::Type x1, void* x2) : QCustomEvent(x1, x2) {
@@ -27,7 +27,7 @@ public:
     void x_3(Smoke::Stack x) {
 	// setData(void*)
 	this->QCustomEvent::setData((void*)x[1].s_voidp);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     ~x_QCustomEvent() {}
 };

@@ -15,11 +15,11 @@ public:
     }
     virtual bool attributeDecl(const QString& x1, const QString& x2, const QString& x3, const QString& x4, const QString& x5) {
 	Smoke::StackItem x[6];
-	x[1].s_class = (void*)&x1;
-	x[2].s_class = (void*)&x2;
-	x[3].s_class = (void*)&x3;
-	x[4].s_class = (void*)&x4;
-	x[5].s_class = (void*)&x5;
+	x[1].s_voidp = (void*)&x1;
+	x[2].s_voidp = (void*)&x2;
+	x[3].s_voidp = (void*)&x3;
+	x[4].s_voidp = (void*)&x4;
+	x[5].s_voidp = (void*)&x5;
 	qt_Smoke->callMethod(10005, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT
@@ -35,17 +35,17 @@ public:
     }
     virtual bool externalEntityDecl(const QString& x1, const QString& x2, const QString& x3) {
 	Smoke::StackItem x[4];
-	x[1].s_class = (void*)&x1;
-	x[2].s_class = (void*)&x2;
-	x[3].s_class = (void*)&x3;
+	x[1].s_voidp = (void*)&x1;
+	x[2].s_voidp = (void*)&x2;
+	x[3].s_voidp = (void*)&x3;
 	qt_Smoke->callMethod(10007, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
     virtual bool internalEntityDecl(const QString& x1, const QString& x2) {
 	Smoke::StackItem x[3];
-	x[1].s_class = (void*)&x1;
-	x[2].s_class = (void*)&x2;
+	x[1].s_voidp = (void*)&x1;
+	x[2].s_voidp = (void*)&x2;
 	qt_Smoke->callMethod(10006, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT

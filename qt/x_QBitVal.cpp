@@ -7,7 +7,7 @@ class x_QBitVal : public QBitVal {
 public:
     static void x_0(Smoke::Stack x) {
 	// QBitVal(QBitArray*, uint)
-	x_QBitVal* xret = new x_QBitVal((QBitArray*)x[1].s_class,(uint)x[2].s_uint);
+	x_QBitVal* xret = new x_QBitVal((QBitArray*)x[1].s_voidp,(uint)x[2].s_uint);
 	x[0].s_class = (void*)xret;
     }
     x_QBitVal(QBitArray* x1, uint x2) : QBitVal(x1, x2) {
@@ -15,17 +15,17 @@ public:
     void x_1(Smoke::Stack x) {
 	// operator int()
 	this->QBitVal::operator int();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_2(Smoke::Stack x) {
 	// operator=(const QBitVal&)
-	QBitVal& xret = this->QBitVal::operator=(*(const QBitVal *)x[1].s_class);
-	x[0].s_class = (void*)&xret;
+	QBitVal& xret = this->QBitVal::operator=(*(const QBitVal *)x[1].s_voidp);
+	x[0].s_voidp = (void*)&xret;
     }
     void x_3(Smoke::Stack x) {
 	// operator=(bool)
 	QBitVal& xret = this->QBitVal::operator=((bool)x[1].s_bool);
-	x[0].s_class = (void*)&xret;
+	x[0].s_voidp = (void*)&xret;
     }
     ~x_QBitVal() {}
 };

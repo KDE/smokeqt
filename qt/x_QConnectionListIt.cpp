@@ -7,15 +7,15 @@ class x_QConnectionListIt : public QConnectionListIt {
 public:
     static void x_0(Smoke::Stack x) {
 	// QConnectionListIt(const QConnectionList&)
-	x_QConnectionListIt* xret = new x_QConnectionListIt(*(const QConnectionList *)x[1].s_class);
+	x_QConnectionListIt* xret = new x_QConnectionListIt(*(const QConnectionList *)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QConnectionListIt(const QConnectionList& x1) : QConnectionListIt(x1) {
     }
     void x_1(Smoke::Stack x) {
 	// operator=(const QConnectionListIt&)
-	QConnectionListIt& xret = this->QConnectionListIt::operator=(*(const QConnectionListIt *)x[1].s_class);
-	x[0].s_class = (void*)&xret;
+	QConnectionListIt& xret = this->QConnectionListIt::operator=(*(const QConnectionListIt *)x[1].s_voidp);
+	x[0].s_voidp = (void*)&xret;
     }
     ~x_QConnectionListIt() {}
 };

@@ -9,42 +9,42 @@ class x_QListBoxPixmap : public QListBoxPixmap {
 public:
     static void x_0(Smoke::Stack x) {
 	// QListBoxPixmap(QListBox*, const QPixmap&)
-	x_QListBoxPixmap* xret = new x_QListBoxPixmap((QListBox*)x[1].s_class,*(const QPixmap *)x[2].s_class);
+	x_QListBoxPixmap* xret = new x_QListBoxPixmap((QListBox*)x[1].s_voidp,*(const QPixmap *)x[2].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QListBoxPixmap(QListBox* x1, const QPixmap& x2) : QListBoxPixmap(x1, x2) {
     }
     static void x_1(Smoke::Stack x) {
 	// QListBoxPixmap(const QPixmap&)
-	x_QListBoxPixmap* xret = new x_QListBoxPixmap(*(const QPixmap *)x[1].s_class);
+	x_QListBoxPixmap* xret = new x_QListBoxPixmap(*(const QPixmap *)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QListBoxPixmap(const QPixmap& x1) : QListBoxPixmap(x1) {
     }
     static void x_2(Smoke::Stack x) {
 	// QListBoxPixmap(QListBox*, const QPixmap&, QListBoxItem*)
-	x_QListBoxPixmap* xret = new x_QListBoxPixmap((QListBox*)x[1].s_class,*(const QPixmap *)x[2].s_class,(QListBoxItem*)x[3].s_class);
+	x_QListBoxPixmap* xret = new x_QListBoxPixmap((QListBox*)x[1].s_voidp,*(const QPixmap *)x[2].s_voidp,(QListBoxItem*)x[3].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QListBoxPixmap(QListBox* x1, const QPixmap& x2, QListBoxItem* x3) : QListBoxPixmap(x1, x2, x3) {
     }
     static void x_3(Smoke::Stack x) {
 	// QListBoxPixmap(QListBox*, const QPixmap&, const QString&)
-	x_QListBoxPixmap* xret = new x_QListBoxPixmap((QListBox*)x[1].s_class,*(const QPixmap *)x[2].s_class,*(const QString *)x[3].s_class);
+	x_QListBoxPixmap* xret = new x_QListBoxPixmap((QListBox*)x[1].s_voidp,*(const QPixmap *)x[2].s_voidp,*(const QString *)x[3].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QListBoxPixmap(QListBox* x1, const QPixmap& x2, const QString& x3) : QListBoxPixmap(x1, x2, x3) {
     }
     static void x_4(Smoke::Stack x) {
 	// QListBoxPixmap(const QPixmap&, const QString&)
-	x_QListBoxPixmap* xret = new x_QListBoxPixmap(*(const QPixmap *)x[1].s_class,*(const QString *)x[2].s_class);
+	x_QListBoxPixmap* xret = new x_QListBoxPixmap(*(const QPixmap *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QListBoxPixmap(const QPixmap& x1, const QString& x2) : QListBoxPixmap(x1, x2) {
     }
     static void x_5(Smoke::Stack x) {
 	// QListBoxPixmap(QListBox*, const QPixmap&, const QString&, QListBoxItem*)
-	x_QListBoxPixmap* xret = new x_QListBoxPixmap((QListBox*)x[1].s_class,*(const QPixmap *)x[2].s_class,*(const QString *)x[3].s_class,(QListBoxItem*)x[4].s_class);
+	x_QListBoxPixmap* xret = new x_QListBoxPixmap((QListBox*)x[1].s_voidp,*(const QPixmap *)x[2].s_voidp,*(const QString *)x[3].s_voidp,(QListBoxItem*)x[4].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QListBoxPixmap(QListBox* x1, const QPixmap& x2, const QString& x3, QListBoxItem* x4) : QListBoxPixmap(x1, x2, x3, x4) {
@@ -52,37 +52,37 @@ public:
     void x_6(Smoke::Stack x) const {
 	// pixmap()
 	const QPixmap* xret = this->QListBoxPixmap::pixmap();
-	x[0].s_class = (void*)xret;
+	x[0].s_voidp = (void*)xret;
     }
     void x_7(Smoke::Stack x) const {
 	// height(const QListBox*)
-	int xret = this->QListBoxPixmap::height((const QListBox*)x[1].s_class);
-	x[0].s_int = (int)xret;
+	int xret = this->QListBoxPixmap::height((const QListBox*)x[1].s_voidp);
+	x[0].s_int = xret;
     }
     void x_8(Smoke::Stack x) const {
 	// width(const QListBox*)
-	int xret = this->QListBoxPixmap::width((const QListBox*)x[1].s_class);
-	x[0].s_int = (int)xret;
+	int xret = this->QListBoxPixmap::width((const QListBox*)x[1].s_voidp);
+	x[0].s_int = xret;
     }
     void x_9(Smoke::Stack x) const {
 	// rtti()
 	int xret = this->QListBoxPixmap::rtti();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_10(Smoke::Stack x) {
 	// paint(QPainter*)
-	this->QListBoxPixmap::paint((QPainter*)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QListBoxPixmap::paint((QPainter*)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     virtual int height(const QListBox* x1) const {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(4426, (void*)this, x)) return (int)x[0].s_int;
 	return this->QListBoxPixmap::height(x1);
     }
     virtual void paint(QPainter* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(4429, (void*)this, x)) return;
 	this->QListBoxPixmap::paint(x1);
     }
@@ -98,7 +98,7 @@ public:
     }
     virtual void setText(const QString& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)&x1;
+	x[1].s_voidp = (void*)&x1;
 	if(qt_Smoke->callMethod(4416, (void*)this, x)) return;
 	this->QListBoxItem::setText(x1);
     }
@@ -114,7 +114,7 @@ public:
     }
     virtual int width(const QListBox* x1) const {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(4427, (void*)this, x)) return (int)x[0].s_int;
 	return this->QListBoxPixmap::width(x1);
     }

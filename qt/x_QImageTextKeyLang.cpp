@@ -7,7 +7,7 @@ class x_QImageTextKeyLang : public QImageTextKeyLang {
 public:
     static void x_0(Smoke::Stack x) {
 	// QImageTextKeyLang(const char*, const char*)
-	x_QImageTextKeyLang* xret = new x_QImageTextKeyLang((const char*)x[1].s_class,(const char*)x[2].s_class);
+	x_QImageTextKeyLang* xret = new x_QImageTextKeyLang((const char*)x[1].s_voidp,(const char*)x[2].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QImageTextKeyLang(const char* x1, const char* x2) : QImageTextKeyLang(x1, x2) {
@@ -21,13 +21,13 @@ public:
     }
     void x_2(Smoke::Stack x) const {
 	// operator<(const QImageTextKeyLang&)
-	bool xret = this->QImageTextKeyLang::operator<(*(const QImageTextKeyLang *)x[1].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QImageTextKeyLang::operator<(*(const QImageTextKeyLang *)x[1].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_3(Smoke::Stack x) const {
 	// operator==(const QImageTextKeyLang&)
-	bool xret = this->QImageTextKeyLang::operator==(*(const QImageTextKeyLang *)x[1].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QImageTextKeyLang::operator==(*(const QImageTextKeyLang *)x[1].s_voidp);
+	x[0].s_bool = xret;
     }
     ~x_QImageTextKeyLang() {}
 };

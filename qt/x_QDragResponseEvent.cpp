@@ -15,7 +15,7 @@ public:
     void x_1(Smoke::Stack x) const {
 	// dragAccepted()
 	bool xret = this->QDragResponseEvent::dragAccepted();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     ~x_QDragResponseEvent() {}
 };

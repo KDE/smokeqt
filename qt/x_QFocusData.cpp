@@ -11,27 +11,27 @@ public:
     void x_0(Smoke::Stack x) const {
 	// focusWidget()
 	QWidget* xret = xthis->QFocusData::focusWidget();
-	x[0].s_class = (void*)xret;
+	x[0].s_voidp = (void*)xret;
     }
     void x_1(Smoke::Stack x) {
 	// home()
 	QWidget* xret = xthis->QFocusData::home();
-	x[0].s_class = (void*)xret;
+	x[0].s_voidp = (void*)xret;
     }
     void x_2(Smoke::Stack x) {
 	// next()
 	QWidget* xret = xthis->QFocusData::next();
-	x[0].s_class = (void*)xret;
+	x[0].s_voidp = (void*)xret;
     }
     void x_3(Smoke::Stack x) {
 	// prev()
 	QWidget* xret = xthis->QFocusData::prev();
-	x[0].s_class = (void*)xret;
+	x[0].s_voidp = (void*)xret;
     }
     void x_4(Smoke::Stack x) const {
 	// count()
 	int xret = xthis->QFocusData::count();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     ~x_QFocusData() {}
 };

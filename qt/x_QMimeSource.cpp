@@ -15,17 +15,17 @@ public:
     }
     void x_1(Smoke::Stack x) const {
 	// provides(const char*)
-	bool xret = this->QMimeSource::provides((const char*)x[1].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QMimeSource::provides((const char*)x[1].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_2(Smoke::Stack x) const {
 	// serialNumber()
 	int xret = this->QMimeSource::serialNumber();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     virtual QByteArray encodedData(const char* x1) const {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	qt_Smoke->callMethod(5114, (void*)this, x, true /*pure virtual*/);
 	QByteArray *xptr = (QByteArray *)x[0].s_class;
 	QByteArray xret(*xptr);
@@ -35,14 +35,14 @@ public:
     }
     virtual const char* format(int x1) const {
 	Smoke::StackItem x[2];
-	x[1].s_int = (int)x1;
+	x[1].s_int = x1;
 	qt_Smoke->callMethod(5111, (void*)this, x, true /*pure virtual*/);
 	return (const char*)x[0].s_class;
 	// ABSTRACT
     }
     virtual bool provides(const char* x1) const {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(5113, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QMimeSource::provides(x1);
     }

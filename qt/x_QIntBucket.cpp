@@ -8,7 +8,7 @@ class x_QIntBucket : public QIntBucket {
 public:
     static void x_0(Smoke::Stack x) {
 	// QIntBucket(long, QPtrCollection::Item, QBaseBucket*)
-	x_QIntBucket* xret = new x_QIntBucket((long)x[1].s_long,*(QPtrCollection::Item *)x[2].s_class,(QBaseBucket*)x[3].s_class);
+	x_QIntBucket* xret = new x_QIntBucket((long)x[1].s_long,*(QPtrCollection::Item *)x[2].s_voidp,(QBaseBucket*)x[3].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QIntBucket(long x1, QPtrCollection::Item x2, QBaseBucket* x3) : QIntBucket(x1, x2, x3) {
@@ -16,7 +16,7 @@ public:
     void x_1(Smoke::Stack x) const {
 	// getKey()
 	long xret = this->QIntBucket::getKey();
-	x[0].s_long = (long)xret;
+	x[0].s_long = xret;
     }
     ~x_QIntBucket() {}
 };

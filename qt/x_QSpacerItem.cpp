@@ -10,14 +10,14 @@ class x_QSpacerItem : public QSpacerItem {
 public:
     static void x_0(Smoke::Stack x) {
 	// QSpacerItem(int, int, QSizePolicy::SizeType, QSizePolicy::SizeType)
-	x_QSpacerItem* xret = new x_QSpacerItem((int)x[1].s_int,(int)x[2].s_int,*(QSizePolicy::SizeType *)x[3].s_class,*(QSizePolicy::SizeType *)x[4].s_class);
+	x_QSpacerItem* xret = new x_QSpacerItem((int)x[1].s_int,(int)x[2].s_int,(QSizePolicy::SizeType)x[3].s_enum,(QSizePolicy::SizeType)x[4].s_enum);
 	x[0].s_class = (void*)xret;
     }
     x_QSpacerItem(int x1, int x2, QSizePolicy::SizeType x3, QSizePolicy::SizeType x4) : QSpacerItem(x1, x2, x3, x4) {
     }
     static void x_1(Smoke::Stack x) {
 	// QSpacerItem(int, int, QSizePolicy::SizeType)
-	x_QSpacerItem* xret = new x_QSpacerItem((int)x[1].s_int,(int)x[2].s_int,*(QSizePolicy::SizeType *)x[3].s_class);
+	x_QSpacerItem* xret = new x_QSpacerItem((int)x[1].s_int,(int)x[2].s_int,(QSizePolicy::SizeType)x[3].s_enum);
 	x[0].s_class = (void*)xret;
     }
     x_QSpacerItem(int x1, int x2, QSizePolicy::SizeType x3) : QSpacerItem(x1, x2, x3) {
@@ -31,18 +31,18 @@ public:
     }
     void x_3(Smoke::Stack x) {
 	// changeSize(int, int, QSizePolicy::SizeType, QSizePolicy::SizeType)
-	this->QSpacerItem::changeSize((int)x[1].s_int,(int)x[2].s_int,*(QSizePolicy::SizeType *)x[3].s_class,*(QSizePolicy::SizeType *)x[4].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QSpacerItem::changeSize((int)x[1].s_int,(int)x[2].s_int,(QSizePolicy::SizeType)x[3].s_enum,(QSizePolicy::SizeType)x[4].s_enum);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_4(Smoke::Stack x) {
 	// changeSize(int, int, QSizePolicy::SizeType)
-	this->QSpacerItem::changeSize((int)x[1].s_int,(int)x[2].s_int,*(QSizePolicy::SizeType *)x[3].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QSpacerItem::changeSize((int)x[1].s_int,(int)x[2].s_int,(QSizePolicy::SizeType)x[3].s_enum);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_5(Smoke::Stack x) {
 	// changeSize(int, int)
 	this->QSpacerItem::changeSize((int)x[1].s_int,(int)x[2].s_int);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_6(Smoke::Stack x) const {
 	// sizeHint()
@@ -62,17 +62,17 @@ public:
     void x_9(Smoke::Stack x) const {
 	// expanding()
 	QSizePolicy::ExpandData xret = this->QSpacerItem::expanding();
-	x[0].s_class = (void*)new QSizePolicy::ExpandData(xret);
+	x[0].s_enum = xret;
     }
     void x_10(Smoke::Stack x) const {
 	// isEmpty()
 	bool xret = this->QSpacerItem::isEmpty();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_11(Smoke::Stack x) {
 	// setGeometry(const QRect&)
-	this->QSpacerItem::setGeometry(*(const QRect *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QSpacerItem::setGeometry(*(const QRect *)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_12(Smoke::Stack x) const {
 	// geometry()
@@ -82,7 +82,7 @@ public:
     void x_13(Smoke::Stack x) {
 	// spacerItem()
 	QSpacerItem* xret = this->QSpacerItem::spacerItem();
-	x[0].s_class = (void*)xret;
+	x[0].s_voidp = (void*)xret;
     }
     virtual QSizePolicy::ExpandData expanding() const {
 	Smoke::StackItem x[1];
@@ -111,7 +111,7 @@ public:
     }
     virtual int heightForWidth(int x1) const {
 	Smoke::StackItem x[2];
-	x[1].s_int = (int)x1;
+	x[1].s_int = x1;
 	if(qt_Smoke->callMethod(4117, (void*)this, x)) return (int)x[0].s_int;
 	return this->QLayoutItem::heightForWidth(x1);
     }
@@ -162,13 +162,13 @@ public:
     }
     virtual void setAlignment(int x1) {
 	Smoke::StackItem x[2];
-	x[1].s_int = (int)x1;
+	x[1].s_int = x1;
 	if(qt_Smoke->callMethod(4124, (void*)this, x)) return;
 	this->QLayoutItem::setAlignment(x1);
     }
     virtual void setGeometry(const QRect& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)&x1;
+	x[1].s_voidp = (void*)&x1;
 	if(qt_Smoke->callMethod(7134, (void*)this, x)) return;
 	this->QSpacerItem::setGeometry(x1);
     }

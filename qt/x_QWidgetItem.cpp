@@ -10,7 +10,7 @@ class x_QWidgetItem : public QWidgetItem {
 public:
     static void x_0(Smoke::Stack x) {
 	// QWidgetItem(QWidget*)
-	x_QWidgetItem* xret = new x_QWidgetItem((QWidget*)x[1].s_class);
+	x_QWidgetItem* xret = new x_QWidgetItem((QWidget*)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QWidgetItem(QWidget* x1) : QWidgetItem(x1) {
@@ -33,17 +33,17 @@ public:
     void x_4(Smoke::Stack x) const {
 	// expanding()
 	QSizePolicy::ExpandData xret = this->QWidgetItem::expanding();
-	x[0].s_class = (void*)new QSizePolicy::ExpandData(xret);
+	x[0].s_enum = xret;
     }
     void x_5(Smoke::Stack x) const {
 	// isEmpty()
 	bool xret = this->QWidgetItem::isEmpty();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_6(Smoke::Stack x) {
 	// setGeometry(const QRect&)
-	this->QWidgetItem::setGeometry(*(const QRect *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QWidgetItem::setGeometry(*(const QRect *)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_7(Smoke::Stack x) const {
 	// geometry()
@@ -53,17 +53,17 @@ public:
     void x_8(Smoke::Stack x) {
 	// widget()
 	QWidget* xret = this->QWidgetItem::widget();
-	x[0].s_class = (void*)xret;
+	x[0].s_voidp = (void*)xret;
     }
     void x_9(Smoke::Stack x) const {
 	// hasHeightForWidth()
 	bool xret = this->QWidgetItem::hasHeightForWidth();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_10(Smoke::Stack x) const {
 	// heightForWidth(int)
 	int xret = this->QWidgetItem::heightForWidth((int)x[1].s_int);
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     virtual QSizePolicy::ExpandData expanding() const {
 	Smoke::StackItem x[1];
@@ -92,7 +92,7 @@ public:
     }
     virtual int heightForWidth(int x1) const {
 	Smoke::StackItem x[2];
-	x[1].s_int = (int)x1;
+	x[1].s_int = x1;
 	if(qt_Smoke->callMethod(9845, (void*)this, x)) return (int)x[0].s_int;
 	return this->QWidgetItem::heightForWidth(x1);
     }
@@ -143,13 +143,13 @@ public:
     }
     virtual void setAlignment(int x1) {
 	Smoke::StackItem x[2];
-	x[1].s_int = (int)x1;
+	x[1].s_int = x1;
 	if(qt_Smoke->callMethod(4124, (void*)this, x)) return;
 	this->QLayoutItem::setAlignment(x1);
     }
     virtual void setGeometry(const QRect& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)&x1;
+	x[1].s_voidp = (void*)&x1;
 	if(qt_Smoke->callMethod(9841, (void*)this, x)) return;
 	this->QWidgetItem::setGeometry(x1);
     }

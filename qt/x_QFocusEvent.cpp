@@ -28,7 +28,7 @@ public:
     }
     static void x_7(Smoke::Stack x) {
 	// QFocusEvent(QEvent::Type)
-	x_QFocusEvent* xret = new x_QFocusEvent(*(QEvent::Type *)x[1].s_class);
+	x_QFocusEvent* xret = new x_QFocusEvent((QEvent::Type)x[1].s_enum);
 	x[0].s_class = (void*)xret;
     }
     x_QFocusEvent(QEvent::Type x1) : QFocusEvent(x1) {
@@ -36,27 +36,27 @@ public:
     void x_8(Smoke::Stack x) const {
 	// gotFocus()
 	bool xret = this->QFocusEvent::gotFocus();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_9(Smoke::Stack x) const {
 	// lostFocus()
 	bool xret = this->QFocusEvent::lostFocus();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     static void x_10(Smoke::Stack x) {
 	// reason()
 	QFocusEvent::Reason xret = QFocusEvent::reason();
-	x[0].s_class = (void*)new QFocusEvent::Reason(xret);
+	x[0].s_enum = xret;
     }
     static void x_11(Smoke::Stack x) {
 	// setReason(QFocusEvent::Reason)
-	QFocusEvent::setReason(*(QFocusEvent::Reason *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	QFocusEvent::setReason((QFocusEvent::Reason)x[1].s_enum);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     static void x_12(Smoke::Stack x) {
 	// resetReason()
 	QFocusEvent::resetReason();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     ~x_QFocusEvent() {}
 };

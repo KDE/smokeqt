@@ -16,26 +16,26 @@ public:
     }
     static void x_1(Smoke::Stack x) {
 	// QSqlRecordInfo(const QSqlFieldInfoList&)
-	x_QSqlRecordInfo* xret = new x_QSqlRecordInfo(*(const QSqlFieldInfoList *)x[1].s_class);
+	x_QSqlRecordInfo* xret = new x_QSqlRecordInfo(*(const QSqlFieldInfoList *)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QSqlRecordInfo(const QSqlFieldInfoList& x1) : QSqlRecordInfo(x1) {
     }
     static void x_2(Smoke::Stack x) {
 	// QSqlRecordInfo(const QSqlRecord&)
-	x_QSqlRecordInfo* xret = new x_QSqlRecordInfo(*(const QSqlRecord *)x[1].s_class);
+	x_QSqlRecordInfo* xret = new x_QSqlRecordInfo(*(const QSqlRecord *)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QSqlRecordInfo(const QSqlRecord& x1) : QSqlRecordInfo(x1) {
     }
     void x_3(Smoke::Stack x) const {
 	// contains(const QString&)
-	size_type xret = this->QSqlRecordInfo::contains(*(const QString *)x[1].s_class);
-	x[0].s_class = (void*)new size_type(xret);
+	size_type xret = this->QSqlRecordInfo::contains(*(const QString *)x[1].s_voidp);
+	x[0].s_int = xret;
     }
     void x_4(Smoke::Stack x) const {
 	// find(const QString&)
-	QSqlFieldInfo xret = this->QSqlRecordInfo::find(*(const QString *)x[1].s_class);
+	QSqlFieldInfo xret = this->QSqlRecordInfo::find(*(const QString *)x[1].s_voidp);
 	x[0].s_class = (void*)new QSqlFieldInfo(xret);
     }
     void x_5(Smoke::Stack x) const {

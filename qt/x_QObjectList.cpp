@@ -14,15 +14,15 @@ public:
     }
     static void x_1(Smoke::Stack x) {
 	// QObjectList(const QObjectList&)
-	x_QObjectList* xret = new x_QObjectList(*(const QObjectList *)x[1].s_class);
+	x_QObjectList* xret = new x_QObjectList(*(const QObjectList *)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QObjectList(const QObjectList& x1) : QObjectList(x1) {
     }
     void x_2(Smoke::Stack x) {
 	// operator=(const QObjectList&)
-	QObjectList& xret = this->QObjectList::operator=(*(const QObjectList *)x[1].s_class);
-	x[0].s_class = (void*)&xret;
+	QObjectList& xret = this->QObjectList::operator=(*(const QObjectList *)x[1].s_voidp);
+	x[0].s_voidp = (void*)&xret;
     }
     ~x_QObjectList() {}
 };

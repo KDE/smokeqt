@@ -24,14 +24,14 @@ public:
     }
     static void x_4(Smoke::Stack x) {
 	// QProcess(QObject*, const char*)
-	x_QProcess* xret = new x_QProcess((QObject*)x[1].s_class,(const char*)x[2].s_class);
+	x_QProcess* xret = new x_QProcess((QObject*)x[1].s_voidp,(const char*)x[2].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QProcess(QObject* x1, const char* x2) : QProcess(x1, x2) {
     }
     static void x_5(Smoke::Stack x) {
 	// QProcess(QObject*)
-	x_QProcess* xret = new x_QProcess((QObject*)x[1].s_class);
+	x_QProcess* xret = new x_QProcess((QObject*)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QProcess(QObject* x1) : QProcess(x1) {
@@ -45,42 +45,42 @@ public:
     }
     static void x_7(Smoke::Stack x) {
 	// QProcess(const QString&, QObject*, const char*)
-	x_QProcess* xret = new x_QProcess(*(const QString *)x[1].s_class,(QObject*)x[2].s_class,(const char*)x[3].s_class);
+	x_QProcess* xret = new x_QProcess(*(const QString *)x[1].s_voidp,(QObject*)x[2].s_voidp,(const char*)x[3].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QProcess(const QString& x1, QObject* x2, const char* x3) : QProcess(x1, x2, x3) {
     }
     static void x_8(Smoke::Stack x) {
 	// QProcess(const QString&, QObject*)
-	x_QProcess* xret = new x_QProcess(*(const QString *)x[1].s_class,(QObject*)x[2].s_class);
+	x_QProcess* xret = new x_QProcess(*(const QString *)x[1].s_voidp,(QObject*)x[2].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QProcess(const QString& x1, QObject* x2) : QProcess(x1, x2) {
     }
     static void x_9(Smoke::Stack x) {
 	// QProcess(const QString&)
-	x_QProcess* xret = new x_QProcess(*(const QString *)x[1].s_class);
+	x_QProcess* xret = new x_QProcess(*(const QString *)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QProcess(const QString& x1) : QProcess(x1) {
     }
     static void x_10(Smoke::Stack x) {
 	// QProcess(const QStringList&, QObject*, const char*)
-	x_QProcess* xret = new x_QProcess(*(const QStringList *)x[1].s_class,(QObject*)x[2].s_class,(const char*)x[3].s_class);
+	x_QProcess* xret = new x_QProcess(*(const QStringList *)x[1].s_voidp,(QObject*)x[2].s_voidp,(const char*)x[3].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QProcess(const QStringList& x1, QObject* x2, const char* x3) : QProcess(x1, x2, x3) {
     }
     static void x_11(Smoke::Stack x) {
 	// QProcess(const QStringList&, QObject*)
-	x_QProcess* xret = new x_QProcess(*(const QStringList *)x[1].s_class,(QObject*)x[2].s_class);
+	x_QProcess* xret = new x_QProcess(*(const QStringList *)x[1].s_voidp,(QObject*)x[2].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QProcess(const QStringList& x1, QObject* x2) : QProcess(x1, x2) {
     }
     static void x_12(Smoke::Stack x) {
 	// QProcess(const QStringList&)
-	x_QProcess* xret = new x_QProcess(*(const QStringList *)x[1].s_class);
+	x_QProcess* xret = new x_QProcess(*(const QStringList *)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QProcess(const QStringList& x1) : QProcess(x1) {
@@ -93,17 +93,17 @@ public:
     void x_14(Smoke::Stack x) {
 	// clearArguments()
 	this->QProcess::clearArguments();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_15(Smoke::Stack x) {
 	// setArguments(const QStringList&)
-	this->QProcess::setArguments(*(const QStringList *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QProcess::setArguments(*(const QStringList *)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_16(Smoke::Stack x) {
 	// addArgument(const QString&)
-	this->QProcess::addArgument(*(const QString *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QProcess::addArgument(*(const QString *)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_17(Smoke::Stack x) const {
 	// workingDirectory()
@@ -112,181 +112,181 @@ public:
     }
     void x_18(Smoke::Stack x) {
 	// setWorkingDirectory(const QDir&)
-	this->QProcess::setWorkingDirectory(*(const QDir *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QProcess::setWorkingDirectory(*(const QDir *)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_19(Smoke::Stack x) {
 	// setCommunication(int)
 	this->QProcess::setCommunication((int)x[1].s_int);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_20(Smoke::Stack x) const {
 	// communication()
 	int xret = this->QProcess::communication();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_21(Smoke::Stack x) {
 	// start(QStringList*)
-	bool xret = this->QProcess::start((QStringList*)x[1].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QProcess::start((QStringList*)x[1].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_22(Smoke::Stack x) {
 	// start()
 	bool xret = this->QProcess::start();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_23(Smoke::Stack x) {
 	// launch(const QString&, QStringList*)
-	bool xret = this->QProcess::launch(*(const QString *)x[1].s_class,(QStringList*)x[2].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QProcess::launch(*(const QString *)x[1].s_voidp,(QStringList*)x[2].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_24(Smoke::Stack x) {
 	// launch(const QString&)
-	bool xret = this->QProcess::launch(*(const QString *)x[1].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QProcess::launch(*(const QString *)x[1].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_25(Smoke::Stack x) {
 	// launch(const QByteArray&, QStringList*)
-	bool xret = this->QProcess::launch(*(const QByteArray *)x[1].s_class,(QStringList*)x[2].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QProcess::launch(*(const QByteArray *)x[1].s_voidp,(QStringList*)x[2].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_26(Smoke::Stack x) {
 	// launch(const QByteArray&)
-	bool xret = this->QProcess::launch(*(const QByteArray *)x[1].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QProcess::launch(*(const QByteArray *)x[1].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_27(Smoke::Stack x) const {
 	// isRunning()
 	bool xret = this->QProcess::isRunning();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_28(Smoke::Stack x) const {
 	// normalExit()
 	bool xret = this->QProcess::normalExit();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_29(Smoke::Stack x) const {
 	// exitStatus()
 	int xret = this->QProcess::exitStatus();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_30(Smoke::Stack x) {
 	// readStdout()
 	QByteArray xret = this->QProcess::readStdout();
-	x[0].s_class = (void*)new QByteArray(xret);
+	x[0].s_voidp = (void*)new QByteArray(xret);
     }
     void x_31(Smoke::Stack x) {
 	// readStderr()
 	QByteArray xret = this->QProcess::readStderr();
-	x[0].s_class = (void*)new QByteArray(xret);
+	x[0].s_voidp = (void*)new QByteArray(xret);
     }
     void x_32(Smoke::Stack x) const {
 	// canReadLineStdout()
 	bool xret = this->QProcess::canReadLineStdout();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_33(Smoke::Stack x) const {
 	// canReadLineStderr()
 	bool xret = this->QProcess::canReadLineStderr();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_34(Smoke::Stack x) {
 	// readLineStdout()
 	QString xret = this->QProcess::readLineStdout();
-	x[0].s_class = (void*)new QString(xret);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     void x_35(Smoke::Stack x) {
 	// readLineStderr()
 	QString xret = this->QProcess::readLineStderr();
-	x[0].s_class = (void*)new QString(xret);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     void x_36(Smoke::Stack x) {
 	// processIdentifier()
 	QProcess::PID xret = this->QProcess::processIdentifier();
-	x[0].s_class = (void*)new QProcess::PID(xret);
+	x[0].s_long = xret;
     }
     void x_37(Smoke::Stack x) {
 	// flushStdin()
 	this->QProcess::flushStdin();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_38(Smoke::Stack x) const {
 	// tryTerminate()
 	this->QProcess::tryTerminate();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_39(Smoke::Stack x) const {
 	// kill()
 	this->QProcess::kill();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_40(Smoke::Stack x) {
 	// writeToStdin(const QByteArray&)
-	this->QProcess::writeToStdin(*(const QByteArray *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QProcess::writeToStdin(*(const QByteArray *)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_41(Smoke::Stack x) {
 	// writeToStdin(const QString&)
-	this->QProcess::writeToStdin(*(const QString *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QProcess::writeToStdin(*(const QString *)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_42(Smoke::Stack x) {
 	// closeStdin()
 	this->QProcess::closeStdin();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_43(Smoke::Stack x) {
 	// readyReadStdout()
 	this->QProcess::readyReadStdout();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_44(Smoke::Stack x) {
 	// readyReadStderr()
 	this->QProcess::readyReadStderr();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_45(Smoke::Stack x) {
 	// processExited()
 	this->QProcess::processExited();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_46(Smoke::Stack x) {
 	// wroteToStdin()
 	this->QProcess::wroteToStdin();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_47(Smoke::Stack x) {
 	// launchFinished()
 	this->QProcess::launchFinished();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_48(Smoke::Stack x) {
 	// connectNotify(const char*)
-	this->QProcess::connectNotify((const char*)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QProcess::connectNotify((const char*)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_49(Smoke::Stack x) {
 	// disconnectNotify(const char*)
-	this->QProcess::disconnectNotify((const char*)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QProcess::disconnectNotify((const char*)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     virtual void addArgument(const QString& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)&x1;
+	x[1].s_voidp = (void*)&x1;
 	if(qt_Smoke->callMethod(6219, (void*)this, x)) return;
 	this->QProcess::addArgument(x1);
     }
     virtual bool checkConnectArgs(const char* x1, const QObject* x2, const char* x3) {
 	Smoke::StackItem x[4];
-	x[1].s_class = (void*)x1;
-	x[2].s_class = (void*)x2;
-	x[3].s_class = (void*)x3;
+	x[1].s_voidp = (void*)x1;
+	x[2].s_voidp = (void*)x2;
+	x[3].s_voidp = (void*)x3;
 	if(qt_Smoke->callMethod(5470, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QObject::checkConnectArgs(x1, x2, x3);
     }
     virtual void childEvent(QChildEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(5466, (void*)this, x)) return;
 	this->QObject::childEvent(x1);
     }
@@ -297,58 +297,58 @@ public:
     }
     virtual void connectNotify(const char* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(6251, (void*)this, x)) return;
 	this->QProcess::connectNotify(x1);
     }
     virtual void customEvent(QCustomEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(5467, (void*)this, x)) return;
 	this->QObject::customEvent(x1);
     }
     virtual void disconnectNotify(const char* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(6252, (void*)this, x)) return;
 	this->QProcess::disconnectNotify(x1);
     }
     virtual bool event(QEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(5405, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QObject::event(x1);
     }
     virtual bool eventFilter(QObject* x1, QEvent* x2) {
 	Smoke::StackItem x[3];
-	x[1].s_class = (void*)x1;
-	x[2].s_class = (void*)x2;
+	x[1].s_voidp = (void*)x1;
+	x[2].s_voidp = (void*)x2;
 	if(qt_Smoke->callMethod(5406, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QObject::eventFilter(x1, x2);
     }
     virtual void insertChild(QObject* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(5428, (void*)this, x)) return;
 	this->QObject::insertChild(x1);
     }
     virtual bool launch(const QByteArray& x1, QStringList* x2) {
 	Smoke::StackItem x[3];
-	x[1].s_class = (void*)&x1;
-	x[2].s_class = (void*)x2;
+	x[1].s_voidp = (void*)&x1;
+	x[2].s_voidp = (void*)x2;
 	if(qt_Smoke->callMethod(6228, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QProcess::launch(x1, x2);
     }
     virtual bool launch(const QString& x1, QStringList* x2) {
 	Smoke::StackItem x[3];
-	x[1].s_class = (void*)&x1;
-	x[2].s_class = (void*)x2;
+	x[1].s_voidp = (void*)&x1;
+	x[2].s_voidp = (void*)x2;
 	if(qt_Smoke->callMethod(6226, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QProcess::launch(x1, x2);
     }
     virtual QVariant property(const char* x1) const {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(5442, (void*)this, x)) {
 	    QVariant *xptr = (QVariant *)x[0].s_class;
 	    QVariant xret(*xptr);
@@ -399,56 +399,56 @@ public:
     }
     virtual void removeChild(QObject* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(5429, (void*)this, x)) return;
 	this->QObject::removeChild(x1);
     }
     virtual void setArguments(const QStringList& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)&x1;
+	x[1].s_voidp = (void*)&x1;
 	if(qt_Smoke->callMethod(6218, (void*)this, x)) return;
 	this->QProcess::setArguments(x1);
     }
     virtual void setName(const char* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(5411, (void*)this, x)) return;
 	this->QObject::setName(x1);
     }
     virtual bool setProperty(const char* x1, const QVariant& x2) {
 	Smoke::StackItem x[3];
-	x[1].s_class = (void*)x1;
-	x[2].s_class = (void*)&x2;
+	x[1].s_voidp = (void*)x1;
+	x[2].s_voidp = (void*)&x2;
 	if(qt_Smoke->callMethod(5441, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QObject::setProperty(x1, x2);
     }
     virtual void setWorkingDirectory(const QDir& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)&x1;
+	x[1].s_voidp = (void*)&x1;
 	if(qt_Smoke->callMethod(6221, (void*)this, x)) return;
 	this->QProcess::setWorkingDirectory(x1);
     }
     virtual bool start(QStringList* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(6224, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QProcess::start(x1);
     }
     virtual void timerEvent(QTimerEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(5465, (void*)this, x)) return;
 	this->QObject::timerEvent(x1);
     }
     virtual void writeToStdin(const QByteArray& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)&x1;
+	x[1].s_voidp = (void*)&x1;
 	if(qt_Smoke->callMethod(6243, (void*)this, x)) return;
 	this->QProcess::writeToStdin(x1);
     }
     virtual void writeToStdin(const QString& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)&x1;
+	x[1].s_voidp = (void*)&x1;
 	if(qt_Smoke->callMethod(6244, (void*)this, x)) return;
 	this->QProcess::writeToStdin(x1);
     }

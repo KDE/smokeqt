@@ -53,28 +53,28 @@ public:
     }
     static void x_14(Smoke::Stack x) {
 	// QSizePolicy(QSizePolicy::SizeType, QSizePolicy::SizeType, bool)
-	x_QSizePolicy* xret = new x_QSizePolicy(*(QSizePolicy::SizeType *)x[1].s_class,*(QSizePolicy::SizeType *)x[2].s_class,(bool)x[3].s_bool);
+	x_QSizePolicy* xret = new x_QSizePolicy((QSizePolicy::SizeType)x[1].s_enum,(QSizePolicy::SizeType)x[2].s_enum,(bool)x[3].s_bool);
 	x[0].s_class = (void*)xret;
     }
     x_QSizePolicy(QSizePolicy::SizeType x1, QSizePolicy::SizeType x2, bool x3) : QSizePolicy(x1, x2, x3) {
     }
     static void x_15(Smoke::Stack x) {
 	// QSizePolicy(QSizePolicy::SizeType, QSizePolicy::SizeType)
-	x_QSizePolicy* xret = new x_QSizePolicy(*(QSizePolicy::SizeType *)x[1].s_class,*(QSizePolicy::SizeType *)x[2].s_class);
+	x_QSizePolicy* xret = new x_QSizePolicy((QSizePolicy::SizeType)x[1].s_enum,(QSizePolicy::SizeType)x[2].s_enum);
 	x[0].s_class = (void*)xret;
     }
     x_QSizePolicy(QSizePolicy::SizeType x1, QSizePolicy::SizeType x2) : QSizePolicy(x1, x2) {
     }
     static void x_16(Smoke::Stack x) {
 	// QSizePolicy(QSizePolicy::SizeType, QSizePolicy::SizeType, uchar, uchar, bool)
-	x_QSizePolicy* xret = new x_QSizePolicy(*(QSizePolicy::SizeType *)x[1].s_class,*(QSizePolicy::SizeType *)x[2].s_class,(uchar)x[3].s_uchar,(uchar)x[4].s_uchar,(bool)x[5].s_bool);
+	x_QSizePolicy* xret = new x_QSizePolicy((QSizePolicy::SizeType)x[1].s_enum,(QSizePolicy::SizeType)x[2].s_enum,(uchar)x[3].s_uchar,(uchar)x[4].s_uchar,(bool)x[5].s_bool);
 	x[0].s_class = (void*)xret;
     }
     x_QSizePolicy(QSizePolicy::SizeType x1, QSizePolicy::SizeType x2, uchar x3, uchar x4, bool x5) : QSizePolicy(x1, x2, x3, x4, x5) {
     }
     static void x_17(Smoke::Stack x) {
 	// QSizePolicy(QSizePolicy::SizeType, QSizePolicy::SizeType, uchar, uchar)
-	x_QSizePolicy* xret = new x_QSizePolicy(*(QSizePolicy::SizeType *)x[1].s_class,*(QSizePolicy::SizeType *)x[2].s_class,(uchar)x[3].s_uchar,(uchar)x[4].s_uchar);
+	x_QSizePolicy* xret = new x_QSizePolicy((QSizePolicy::SizeType)x[1].s_enum,(QSizePolicy::SizeType)x[2].s_enum,(uchar)x[3].s_uchar,(uchar)x[4].s_uchar);
 	x[0].s_class = (void*)xret;
     }
     x_QSizePolicy(QSizePolicy::SizeType x1, QSizePolicy::SizeType x2, uchar x3, uchar x4) : QSizePolicy(x1, x2, x3, x4) {
@@ -82,87 +82,87 @@ public:
     void x_18(Smoke::Stack x) const {
 	// horData()
 	QSizePolicy::SizeType xret = this->QSizePolicy::horData();
-	x[0].s_class = (void*)new QSizePolicy::SizeType(xret);
+	x[0].s_enum = xret;
     }
     void x_19(Smoke::Stack x) const {
 	// verData()
 	QSizePolicy::SizeType xret = this->QSizePolicy::verData();
-	x[0].s_class = (void*)new QSizePolicy::SizeType(xret);
+	x[0].s_enum = xret;
     }
     void x_20(Smoke::Stack x) const {
 	// mayShrinkHorizontally()
 	bool xret = this->QSizePolicy::mayShrinkHorizontally();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_21(Smoke::Stack x) const {
 	// mayShrinkVertically()
 	bool xret = this->QSizePolicy::mayShrinkVertically();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_22(Smoke::Stack x) const {
 	// mayGrowHorizontally()
 	bool xret = this->QSizePolicy::mayGrowHorizontally();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_23(Smoke::Stack x) const {
 	// mayGrowVertically()
 	bool xret = this->QSizePolicy::mayGrowVertically();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_24(Smoke::Stack x) const {
 	// expanding()
 	QSizePolicy::ExpandData xret = this->QSizePolicy::expanding();
-	x[0].s_class = (void*)new QSizePolicy::ExpandData(xret);
+	x[0].s_enum = xret;
     }
     void x_25(Smoke::Stack x) {
 	// setHorData(QSizePolicy::SizeType)
-	this->QSizePolicy::setHorData(*(QSizePolicy::SizeType *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QSizePolicy::setHorData((QSizePolicy::SizeType)x[1].s_enum);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_26(Smoke::Stack x) {
 	// setVerData(QSizePolicy::SizeType)
-	this->QSizePolicy::setVerData(*(QSizePolicy::SizeType *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QSizePolicy::setVerData((QSizePolicy::SizeType)x[1].s_enum);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_27(Smoke::Stack x) {
 	// setHeightForWidth(bool)
 	this->QSizePolicy::setHeightForWidth((bool)x[1].s_bool);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_28(Smoke::Stack x) const {
 	// hasHeightForWidth()
 	bool xret = this->QSizePolicy::hasHeightForWidth();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_29(Smoke::Stack x) const {
 	// operator==(const QSizePolicy&)
-	bool xret = this->QSizePolicy::operator==(*(const QSizePolicy *)x[1].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QSizePolicy::operator==(*(const QSizePolicy *)x[1].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_30(Smoke::Stack x) const {
 	// operator!=(const QSizePolicy&)
-	bool xret = this->QSizePolicy::operator!=(*(const QSizePolicy *)x[1].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QSizePolicy::operator!=(*(const QSizePolicy *)x[1].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_31(Smoke::Stack x) const {
 	// horStretch()
 	uint xret = this->QSizePolicy::horStretch();
-	x[0].s_uint = (uint)xret;
+	x[0].s_uint = xret;
     }
     void x_32(Smoke::Stack x) const {
 	// verStretch()
 	uint xret = this->QSizePolicy::verStretch();
-	x[0].s_uint = (uint)xret;
+	x[0].s_uint = xret;
     }
     void x_33(Smoke::Stack x) {
 	// setHorStretch(uchar)
 	this->QSizePolicy::setHorStretch((uchar)x[1].s_uchar);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_34(Smoke::Stack x) {
 	// setVerStretch(uchar)
 	this->QSizePolicy::setVerStretch((uchar)x[1].s_uchar);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     ~x_QSizePolicy() {}
 };

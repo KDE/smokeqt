@@ -21,8 +21,8 @@ public:
     }
     static void x_2(Smoke::Stack x) {
 	// create(const QString&)
-	QStyle* xret = QStyleFactory::create(*(const QString *)x[1].s_class);
-	x[0].s_class = (void*)xret;
+	QStyle* xret = QStyleFactory::create(*(const QString *)x[1].s_voidp);
+	x[0].s_voidp = (void*)xret;
     }
     ~x_QStyleFactory() {}
 };

@@ -7,14 +7,14 @@ class x_QIODeviceSource : public QIODeviceSource {
 public:
     static void x_0(Smoke::Stack x) {
 	// QIODeviceSource(QIODevice*, int)
-	x_QIODeviceSource* xret = new x_QIODeviceSource((QIODevice*)x[1].s_class,(int)x[2].s_int);
+	x_QIODeviceSource* xret = new x_QIODeviceSource((QIODevice*)x[1].s_voidp,(int)x[2].s_int);
 	x[0].s_class = (void*)xret;
     }
     x_QIODeviceSource(QIODevice* x1, int x2) : QIODeviceSource(x1, x2) {
     }
     static void x_1(Smoke::Stack x) {
 	// QIODeviceSource(QIODevice*)
-	x_QIODeviceSource* xret = new x_QIODeviceSource((QIODevice*)x[1].s_class);
+	x_QIODeviceSource* xret = new x_QIODeviceSource((QIODevice*)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QIODeviceSource(QIODevice* x1) : QIODeviceSource(x1) {
@@ -22,31 +22,31 @@ public:
     void x_2(Smoke::Stack x) {
 	// readyToSend()
 	int xret = this->QIODeviceSource::readyToSend();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_3(Smoke::Stack x) {
 	// sendTo(QDataSink*, int)
-	this->QIODeviceSource::sendTo((QDataSink*)x[1].s_class,(int)x[2].s_int);
-	x[0].s_int = x[0].s_int; // noop
+	this->QIODeviceSource::sendTo((QDataSink*)x[1].s_voidp,(int)x[2].s_int);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_4(Smoke::Stack x) const {
 	// rewindable()
 	bool xret = this->QIODeviceSource::rewindable();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_5(Smoke::Stack x) {
 	// enableRewind(bool)
 	this->QIODeviceSource::enableRewind((bool)x[1].s_bool);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_6(Smoke::Stack x) {
 	// rewind()
 	this->QIODeviceSource::rewind();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     virtual void enableRewind(bool x1) {
 	Smoke::StackItem x[2];
-	x[1].s_bool = (bool)x1;
+	x[1].s_bool = x1;
 	if(qt_Smoke->callMethod(3403, (void*)this, x)) return;
 	this->QIODeviceSource::enableRewind(x1);
     }
@@ -67,8 +67,8 @@ public:
     }
     virtual void sendTo(QDataSink* x1, int x2) {
 	Smoke::StackItem x[3];
-	x[1].s_class = (void*)x1;
-	x[2].s_int = (int)x2;
+	x[1].s_voidp = (void*)x1;
+	x[2].s_int = x2;
 	if(qt_Smoke->callMethod(3401, (void*)this, x)) return;
 	this->QIODeviceSource::sendTo(x1, x2);
     }

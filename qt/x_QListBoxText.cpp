@@ -8,21 +8,21 @@ class x_QListBoxText : public QListBoxText {
 public:
     static void x_0(Smoke::Stack x) {
 	// QListBoxText(QListBox*, const QString&)
-	x_QListBoxText* xret = new x_QListBoxText((QListBox*)x[1].s_class,*(const QString *)x[2].s_class);
+	x_QListBoxText* xret = new x_QListBoxText((QListBox*)x[1].s_voidp,*(const QString *)x[2].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QListBoxText(QListBox* x1, const QString& x2) : QListBoxText(x1, x2) {
     }
     static void x_1(Smoke::Stack x) {
 	// QListBoxText(QListBox*)
-	x_QListBoxText* xret = new x_QListBoxText((QListBox*)x[1].s_class);
+	x_QListBoxText* xret = new x_QListBoxText((QListBox*)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QListBoxText(QListBox* x1) : QListBoxText(x1) {
     }
     static void x_2(Smoke::Stack x) {
 	// QListBoxText(const QString&)
-	x_QListBoxText* xret = new x_QListBoxText(*(const QString *)x[1].s_class);
+	x_QListBoxText* xret = new x_QListBoxText(*(const QString *)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QListBoxText(const QString& x1) : QListBoxText(x1) {
@@ -36,40 +36,40 @@ public:
     }
     static void x_4(Smoke::Stack x) {
 	// QListBoxText(QListBox*, const QString&, QListBoxItem*)
-	x_QListBoxText* xret = new x_QListBoxText((QListBox*)x[1].s_class,*(const QString *)x[2].s_class,(QListBoxItem*)x[3].s_class);
+	x_QListBoxText* xret = new x_QListBoxText((QListBox*)x[1].s_voidp,*(const QString *)x[2].s_voidp,(QListBoxItem*)x[3].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QListBoxText(QListBox* x1, const QString& x2, QListBoxItem* x3) : QListBoxText(x1, x2, x3) {
     }
     void x_5(Smoke::Stack x) const {
 	// height(const QListBox*)
-	int xret = this->QListBoxText::height((const QListBox*)x[1].s_class);
-	x[0].s_int = (int)xret;
+	int xret = this->QListBoxText::height((const QListBox*)x[1].s_voidp);
+	x[0].s_int = xret;
     }
     void x_6(Smoke::Stack x) const {
 	// width(const QListBox*)
-	int xret = this->QListBoxText::width((const QListBox*)x[1].s_class);
-	x[0].s_int = (int)xret;
+	int xret = this->QListBoxText::width((const QListBox*)x[1].s_voidp);
+	x[0].s_int = xret;
     }
     void x_7(Smoke::Stack x) const {
 	// rtti()
 	int xret = this->QListBoxText::rtti();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_8(Smoke::Stack x) {
 	// paint(QPainter*)
-	this->QListBoxText::paint((QPainter*)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QListBoxText::paint((QPainter*)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     virtual int height(const QListBox* x1) const {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(4436, (void*)this, x)) return (int)x[0].s_int;
 	return this->QListBoxText::height(x1);
     }
     virtual void paint(QPainter* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(4439, (void*)this, x)) return;
 	this->QListBoxText::paint(x1);
     }
@@ -85,7 +85,7 @@ public:
     }
     virtual void setText(const QString& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)&x1;
+	x[1].s_voidp = (void*)&x1;
 	if(qt_Smoke->callMethod(4416, (void*)this, x)) return;
 	this->QListBoxItem::setText(x1);
     }
@@ -101,7 +101,7 @@ public:
     }
     virtual int width(const QListBox* x1) const {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(4437, (void*)this, x)) return (int)x[0].s_int;
 	return this->QListBoxText::width(x1);
     }

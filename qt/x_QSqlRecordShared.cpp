@@ -7,7 +7,7 @@ class x_QSqlRecordShared : public QSqlRecordShared {
 public:
     static void x_0(Smoke::Stack x) {
 	// QSqlRecordShared(QSqlRecordPrivate*)
-	x_QSqlRecordShared* xret = new x_QSqlRecordShared((QSqlRecordPrivate*)x[1].s_class);
+	x_QSqlRecordShared* xret = new x_QSqlRecordShared((QSqlRecordPrivate*)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QSqlRecordShared(QSqlRecordPrivate* x1) : QSqlRecordShared(x1) {

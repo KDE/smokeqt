@@ -22,88 +22,88 @@ public:
     }
     void x_2(Smoke::Stack x) const {
 	// styles(const QString&)
-	QStringList xret = this->QFontDatabase::styles(*(const QString *)x[1].s_class);
+	QStringList xret = this->QFontDatabase::styles(*(const QString *)x[1].s_voidp);
 	x[0].s_class = (void*)new QStringList(xret);
     }
     void x_3(Smoke::Stack x) {
 	// pointSizes(const QString&, const QString&)
-	QValueList<int> xret = this->QFontDatabase::pointSizes(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class);
-	x[0].s_class = (void*)new QValueList<int>(xret);
+	QValueList<int> xret = this->QFontDatabase::pointSizes(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
+	x[0].s_voidp = (void*)new QValueList<int>(xret);
     }
     void x_4(Smoke::Stack x) {
 	// pointSizes(const QString&)
-	QValueList<int> xret = this->QFontDatabase::pointSizes(*(const QString *)x[1].s_class);
-	x[0].s_class = (void*)new QValueList<int>(xret);
+	QValueList<int> xret = this->QFontDatabase::pointSizes(*(const QString *)x[1].s_voidp);
+	x[0].s_voidp = (void*)new QValueList<int>(xret);
     }
     void x_5(Smoke::Stack x) {
 	// smoothSizes(const QString&, const QString&)
-	QValueList<int> xret = this->QFontDatabase::smoothSizes(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class);
-	x[0].s_class = (void*)new QValueList<int>(xret);
+	QValueList<int> xret = this->QFontDatabase::smoothSizes(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
+	x[0].s_voidp = (void*)new QValueList<int>(xret);
     }
     void x_6(Smoke::Stack x) {
 	// styleString(const QFont&)
-	QString xret = this->QFontDatabase::styleString(*(const QFont *)x[1].s_class);
-	x[0].s_class = (void*)new QString(xret);
+	QString xret = this->QFontDatabase::styleString(*(const QFont *)x[1].s_voidp);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     void x_7(Smoke::Stack x) {
 	// font(const QString&, const QString&, int)
-	QFont xret = this->QFontDatabase::font(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,(int)x[3].s_int);
+	QFont xret = this->QFontDatabase::font(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,(int)x[3].s_int);
 	x[0].s_class = (void*)new QFont(xret);
     }
     void x_8(Smoke::Stack x) const {
 	// isBitmapScalable(const QString&, const QString&)
-	bool xret = this->QFontDatabase::isBitmapScalable(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QFontDatabase::isBitmapScalable(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_9(Smoke::Stack x) const {
 	// isBitmapScalable(const QString&)
-	bool xret = this->QFontDatabase::isBitmapScalable(*(const QString *)x[1].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QFontDatabase::isBitmapScalable(*(const QString *)x[1].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_10(Smoke::Stack x) const {
 	// isSmoothlyScalable(const QString&, const QString&)
-	bool xret = this->QFontDatabase::isSmoothlyScalable(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QFontDatabase::isSmoothlyScalable(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_11(Smoke::Stack x) const {
 	// isSmoothlyScalable(const QString&)
-	bool xret = this->QFontDatabase::isSmoothlyScalable(*(const QString *)x[1].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QFontDatabase::isSmoothlyScalable(*(const QString *)x[1].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_12(Smoke::Stack x) const {
 	// isScalable(const QString&, const QString&)
-	bool xret = this->QFontDatabase::isScalable(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QFontDatabase::isScalable(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_13(Smoke::Stack x) const {
 	// isScalable(const QString&)
-	bool xret = this->QFontDatabase::isScalable(*(const QString *)x[1].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QFontDatabase::isScalable(*(const QString *)x[1].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_14(Smoke::Stack x) const {
 	// isFixedPitch(const QString&, const QString&)
-	bool xret = this->QFontDatabase::isFixedPitch(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QFontDatabase::isFixedPitch(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_15(Smoke::Stack x) const {
 	// isFixedPitch(const QString&)
-	bool xret = this->QFontDatabase::isFixedPitch(*(const QString *)x[1].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QFontDatabase::isFixedPitch(*(const QString *)x[1].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_16(Smoke::Stack x) const {
 	// italic(const QString&, const QString&)
-	bool xret = this->QFontDatabase::italic(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QFontDatabase::italic(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_17(Smoke::Stack x) const {
 	// bold(const QString&, const QString&)
-	bool xret = this->QFontDatabase::bold(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QFontDatabase::bold(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_18(Smoke::Stack x) const {
 	// weight(const QString&, const QString&)
-	int xret = this->QFontDatabase::weight(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class);
-	x[0].s_int = (int)xret;
+	int xret = this->QFontDatabase::weight(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
+	x[0].s_int = xret;
     }
     void x_19(Smoke::Stack x) const {
 	// families(bool)
@@ -112,73 +112,73 @@ public:
     }
     void x_20(Smoke::Stack x) const {
 	// styles(const QString&, const QString&)
-	QStringList xret = this->QFontDatabase::styles(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class);
+	QStringList xret = this->QFontDatabase::styles(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
 	x[0].s_class = (void*)new QStringList(xret);
     }
     void x_21(Smoke::Stack x) {
 	// pointSizes(const QString&, const QString&, const QString&)
-	QValueList<int> xret = this->QFontDatabase::pointSizes(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,*(const QString *)x[3].s_class);
-	x[0].s_class = (void*)new QValueList<int>(xret);
+	QValueList<int> xret = this->QFontDatabase::pointSizes(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,*(const QString *)x[3].s_voidp);
+	x[0].s_voidp = (void*)new QValueList<int>(xret);
     }
     void x_22(Smoke::Stack x) {
 	// smoothSizes(const QString&, const QString&, const QString&)
-	QValueList<int> xret = this->QFontDatabase::smoothSizes(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,*(const QString *)x[3].s_class);
-	x[0].s_class = (void*)new QValueList<int>(xret);
+	QValueList<int> xret = this->QFontDatabase::smoothSizes(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,*(const QString *)x[3].s_voidp);
+	x[0].s_voidp = (void*)new QValueList<int>(xret);
     }
     void x_23(Smoke::Stack x) {
 	// font(const QString&, const QString&, int, const QString&)
-	QFont xret = this->QFontDatabase::font(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,(int)x[3].s_int,*(const QString *)x[4].s_class);
+	QFont xret = this->QFontDatabase::font(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,(int)x[3].s_int,*(const QString *)x[4].s_voidp);
 	x[0].s_class = (void*)new QFont(xret);
     }
     void x_24(Smoke::Stack x) const {
 	// isBitmapScalable(const QString&, const QString&, const QString&)
-	bool xret = this->QFontDatabase::isBitmapScalable(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,*(const QString *)x[3].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QFontDatabase::isBitmapScalable(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,*(const QString *)x[3].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_25(Smoke::Stack x) const {
 	// isSmoothlyScalable(const QString&, const QString&, const QString&)
-	bool xret = this->QFontDatabase::isSmoothlyScalable(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,*(const QString *)x[3].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QFontDatabase::isSmoothlyScalable(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,*(const QString *)x[3].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_26(Smoke::Stack x) const {
 	// isScalable(const QString&, const QString&, const QString&)
-	bool xret = this->QFontDatabase::isScalable(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,*(const QString *)x[3].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QFontDatabase::isScalable(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,*(const QString *)x[3].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_27(Smoke::Stack x) const {
 	// isFixedPitch(const QString&, const QString&, const QString&)
-	bool xret = this->QFontDatabase::isFixedPitch(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,*(const QString *)x[3].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QFontDatabase::isFixedPitch(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,*(const QString *)x[3].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_28(Smoke::Stack x) const {
 	// italic(const QString&, const QString&, const QString&)
-	bool xret = this->QFontDatabase::italic(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,*(const QString *)x[3].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QFontDatabase::italic(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,*(const QString *)x[3].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_29(Smoke::Stack x) const {
 	// bold(const QString&, const QString&, const QString&)
-	bool xret = this->QFontDatabase::bold(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,*(const QString *)x[3].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QFontDatabase::bold(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,*(const QString *)x[3].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_30(Smoke::Stack x) const {
 	// weight(const QString&, const QString&, const QString&)
-	int xret = this->QFontDatabase::weight(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,*(const QString *)x[3].s_class);
-	x[0].s_int = (int)xret;
+	int xret = this->QFontDatabase::weight(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,*(const QString *)x[3].s_voidp);
+	x[0].s_int = xret;
     }
     static void x_31(Smoke::Stack x) {
 	// standardSizes()
 	QValueList<int> xret = QFontDatabase::standardSizes();
-	x[0].s_class = (void*)new QValueList<int>(xret);
+	x[0].s_voidp = (void*)new QValueList<int>(xret);
     }
     static void x_32(Smoke::Stack x) {
 	// scriptName(QFont::Script)
-	QString xret = QFontDatabase::scriptName(*(QFont::Script *)x[1].s_class);
-	x[0].s_class = (void*)new QString(xret);
+	QString xret = QFontDatabase::scriptName((QFont::Script)x[1].s_enum);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     static void x_33(Smoke::Stack x) {
 	// scriptSample(QFont::Script)
-	QString xret = QFontDatabase::scriptSample(*(QFont::Script *)x[1].s_class);
-	x[0].s_class = (void*)new QString(xret);
+	QString xret = QFontDatabase::scriptSample((QFont::Script)x[1].s_enum);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     ~x_QFontDatabase() {}
 };

@@ -42,81 +42,81 @@ public:
     }
     static void x_9(Smoke::Stack x) {
 	// QDns(const QString&, QDns::RecordType)
-	x_QDns* xret = new x_QDns(*(const QString *)x[1].s_class,*(QDns::RecordType *)x[2].s_class);
+	x_QDns* xret = new x_QDns(*(const QString *)x[1].s_voidp,(QDns::RecordType)x[2].s_enum);
 	x[0].s_class = (void*)xret;
     }
     x_QDns(const QString& x1, QDns::RecordType x2) : QDns(x1, x2) {
     }
     static void x_10(Smoke::Stack x) {
 	// QDns(const QString&)
-	x_QDns* xret = new x_QDns(*(const QString *)x[1].s_class);
+	x_QDns* xret = new x_QDns(*(const QString *)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QDns(const QString& x1) : QDns(x1) {
     }
     static void x_11(Smoke::Stack x) {
 	// QDns(const QHostAddress&, QDns::RecordType)
-	x_QDns* xret = new x_QDns(*(const QHostAddress *)x[1].s_class,*(QDns::RecordType *)x[2].s_class);
+	x_QDns* xret = new x_QDns(*(const QHostAddress *)x[1].s_voidp,(QDns::RecordType)x[2].s_enum);
 	x[0].s_class = (void*)xret;
     }
     x_QDns(const QHostAddress& x1, QDns::RecordType x2) : QDns(x1, x2) {
     }
     static void x_12(Smoke::Stack x) {
 	// QDns(const QHostAddress&)
-	x_QDns* xret = new x_QDns(*(const QHostAddress *)x[1].s_class);
+	x_QDns* xret = new x_QDns(*(const QHostAddress *)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QDns(const QHostAddress& x1) : QDns(x1) {
     }
     void x_13(Smoke::Stack x) {
 	// setLabel(const QString&)
-	this->QDns::setLabel(*(const QString *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QDns::setLabel(*(const QString *)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_14(Smoke::Stack x) {
 	// setLabel(const QHostAddress&)
-	this->QDns::setLabel(*(const QHostAddress *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QDns::setLabel(*(const QHostAddress *)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_15(Smoke::Stack x) const {
 	// label()
 	QString xret = this->QDns::label();
-	x[0].s_class = (void*)new QString(xret);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     void x_16(Smoke::Stack x) {
 	// setRecordType(QDns::RecordType)
-	this->QDns::setRecordType(*(QDns::RecordType *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QDns::setRecordType((QDns::RecordType)x[1].s_enum);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_17(Smoke::Stack x) {
 	// setRecordType()
 	this->QDns::setRecordType();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_18(Smoke::Stack x) const {
 	// recordType()
 	QDns::RecordType xret = this->QDns::recordType();
-	x[0].s_class = (void*)new QDns::RecordType(xret);
+	x[0].s_enum = xret;
     }
     void x_19(Smoke::Stack x) const {
 	// isWorking()
 	bool xret = this->QDns::isWorking();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_20(Smoke::Stack x) const {
 	// addresses()
 	QValueList<QHostAddress> xret = this->QDns::addresses();
-	x[0].s_class = (void*)new QValueList<QHostAddress>(xret);
+	x[0].s_voidp = (void*)new QValueList<QHostAddress>(xret);
     }
     void x_21(Smoke::Stack x) const {
 	// mailServers()
 	QValueList<MailServer> xret = this->QDns::mailServers();
-	x[0].s_class = (void*)new QValueList<MailServer>(xret);
+	x[0].s_voidp = (void*)new QValueList<MailServer>(xret);
     }
     void x_22(Smoke::Stack x) const {
 	// servers()
 	QValueList<Server> xret = this->QDns::servers();
-	x[0].s_class = (void*)new QValueList<Server>(xret);
+	x[0].s_voidp = (void*)new QValueList<Server>(xret);
     }
     void x_23(Smoke::Stack x) const {
 	// hostNames()
@@ -131,7 +131,7 @@ public:
     void x_25(Smoke::Stack x) const {
 	// canonicalName()
 	QString xret = this->QDns::canonicalName();
-	x[0].s_class = (void*)new QString(xret);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     void x_26(Smoke::Stack x) const {
 	// qualifiedNames()
@@ -141,67 +141,67 @@ public:
     void x_27(Smoke::Stack x) {
 	// resultsReady()
 	this->QDns::resultsReady();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_28(Smoke::Stack x) {
 	// connectNotify(const char*)
-	this->QDns::connectNotify((const char*)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QDns::connectNotify((const char*)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     virtual bool checkConnectArgs(const char* x1, const QObject* x2, const char* x3) {
 	Smoke::StackItem x[4];
-	x[1].s_class = (void*)x1;
-	x[2].s_class = (void*)x2;
-	x[3].s_class = (void*)x3;
+	x[1].s_voidp = (void*)x1;
+	x[2].s_voidp = (void*)x2;
+	x[3].s_voidp = (void*)x3;
 	if(qt_Smoke->callMethod(5470, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QObject::checkConnectArgs(x1, x2, x3);
     }
     virtual void childEvent(QChildEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(5466, (void*)this, x)) return;
 	this->QObject::childEvent(x1);
     }
     virtual void connectNotify(const char* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(1870, (void*)this, x)) return;
 	this->QDns::connectNotify(x1);
     }
     virtual void customEvent(QCustomEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(5467, (void*)this, x)) return;
 	this->QObject::customEvent(x1);
     }
     virtual void disconnectNotify(const char* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(5469, (void*)this, x)) return;
 	this->QObject::disconnectNotify(x1);
     }
     virtual bool event(QEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(5405, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QObject::event(x1);
     }
     virtual bool eventFilter(QObject* x1, QEvent* x2) {
 	Smoke::StackItem x[3];
-	x[1].s_class = (void*)x1;
-	x[2].s_class = (void*)x2;
+	x[1].s_voidp = (void*)x1;
+	x[2].s_voidp = (void*)x2;
 	if(qt_Smoke->callMethod(5406, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QObject::eventFilter(x1, x2);
     }
     virtual void insertChild(QObject* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(5428, (void*)this, x)) return;
 	this->QObject::insertChild(x1);
     }
     virtual QVariant property(const char* x1) const {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(5442, (void*)this, x)) {
 	    QVariant *xptr = (QVariant *)x[0].s_class;
 	    QVariant xret(*xptr);
@@ -212,44 +212,44 @@ public:
     }
     virtual void removeChild(QObject* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(5429, (void*)this, x)) return;
 	this->QObject::removeChild(x1);
     }
     virtual void setLabel(const QHostAddress& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)&x1;
+	x[1].s_voidp = (void*)&x1;
 	if(qt_Smoke->callMethod(1856, (void*)this, x)) return;
 	this->QDns::setLabel(x1);
     }
     virtual void setLabel(const QString& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)&x1;
+	x[1].s_voidp = (void*)&x1;
 	if(qt_Smoke->callMethod(1855, (void*)this, x)) return;
 	this->QDns::setLabel(x1);
     }
     virtual void setName(const char* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(5411, (void*)this, x)) return;
 	this->QObject::setName(x1);
     }
     virtual bool setProperty(const char* x1, const QVariant& x2) {
 	Smoke::StackItem x[3];
-	x[1].s_class = (void*)x1;
-	x[2].s_class = (void*)&x2;
+	x[1].s_voidp = (void*)x1;
+	x[2].s_voidp = (void*)&x2;
 	if(qt_Smoke->callMethod(5441, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QObject::setProperty(x1, x2);
     }
     virtual void setRecordType(QDns::RecordType x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)&x1;
+	x[1].s_enum = x1;
 	if(qt_Smoke->callMethod(1858, (void*)this, x)) return;
 	this->QDns::setRecordType(x1);
     }
     virtual void timerEvent(QTimerEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(5465, (void*)this, x)) return;
 	this->QObject::timerEvent(x1);
     }

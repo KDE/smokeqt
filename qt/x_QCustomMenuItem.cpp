@@ -18,17 +18,17 @@ public:
     void x_1(Smoke::Stack x) const {
 	// fullSpan()
 	bool xret = this->QCustomMenuItem::fullSpan();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_2(Smoke::Stack x) const {
 	// isSeparator()
 	bool xret = this->QCustomMenuItem::isSeparator();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_3(Smoke::Stack x) {
 	// setFont(const QFont&)
-	this->QCustomMenuItem::setFont(*(const QFont *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QCustomMenuItem::setFont(*(const QFont *)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     virtual bool fullSpan() const {
 	Smoke::StackItem x[1];
@@ -42,21 +42,21 @@ public:
     }
     virtual void paint(QPainter* x1, const QColorGroup& x2, bool x3, bool x4, int x5, int x6, int x7, int x8) {
 	Smoke::StackItem x[9];
-	x[1].s_class = (void*)x1;
-	x[2].s_class = (void*)&x2;
-	x[3].s_bool = (bool)x3;
-	x[4].s_bool = (bool)x4;
-	x[5].s_int = (int)x5;
-	x[6].s_int = (int)x6;
-	x[7].s_int = (int)x7;
-	x[8].s_int = (int)x8;
+	x[1].s_voidp = (void*)x1;
+	x[2].s_voidp = (void*)&x2;
+	x[3].s_bool = x3;
+	x[4].s_bool = x4;
+	x[5].s_int = x5;
+	x[6].s_int = x6;
+	x[7].s_int = x7;
+	x[8].s_int = x8;
 	qt_Smoke->callMethod(1249, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }
     virtual void setFont(const QFont& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)&x1;
+	x[1].s_voidp = (void*)&x1;
 	if(qt_Smoke->callMethod(1248, (void*)this, x)) return;
 	this->QCustomMenuItem::setFont(x1);
     }

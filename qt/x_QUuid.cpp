@@ -22,14 +22,14 @@ public:
     }
     static void x_2(Smoke::Stack x) {
 	// QUuid(const QUuid&)
-	x_QUuid* xret = new x_QUuid(*(const QUuid *)x[1].s_class);
+	x_QUuid* xret = new x_QUuid(*(const QUuid *)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QUuid(const QUuid& x1) : QUuid(x1) {
     }
     static void x_3(Smoke::Stack x) {
 	// QUuid(const QString&)
-	x_QUuid* xret = new x_QUuid(*(const QString *)x[1].s_class);
+	x_QUuid* xret = new x_QUuid(*(const QString *)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QUuid(const QString& x1) : QUuid(x1) {
@@ -37,32 +37,32 @@ public:
     void x_4(Smoke::Stack x) const {
 	// toString()
 	QString xret = this->QUuid::toString();
-	x[0].s_class = (void*)new QString(xret);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     void x_5(Smoke::Stack x) const {
 	// operator QString()
 	this->QUuid::operator QString();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_6(Smoke::Stack x) const {
 	// isNull()
 	bool xret = this->QUuid::isNull();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_7(Smoke::Stack x) {
 	// operator=(const QUuid&)
-	QUuid& xret = this->QUuid::operator=(*(const QUuid *)x[1].s_class);
-	x[0].s_class = (void*)&xret;
+	QUuid& xret = this->QUuid::operator=(*(const QUuid *)x[1].s_voidp);
+	x[0].s_voidp = (void*)&xret;
     }
     void x_8(Smoke::Stack x) const {
 	// operator==(const QUuid&)
-	bool xret = this->QUuid::operator==(*(const QUuid *)x[1].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QUuid::operator==(*(const QUuid *)x[1].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_9(Smoke::Stack x) const {
 	// operator!=(const QUuid&)
-	bool xret = this->QUuid::operator!=(*(const QUuid *)x[1].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QUuid::operator!=(*(const QUuid *)x[1].s_voidp);
+	x[0].s_bool = xret;
     }
     ~x_QUuid() {}
 };

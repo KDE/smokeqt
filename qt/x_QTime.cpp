@@ -38,57 +38,57 @@ public:
     void x_4(Smoke::Stack x) const {
 	// isNull()
 	bool xret = this->QTime::isNull();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_5(Smoke::Stack x) const {
 	// isValid()
 	bool xret = this->QTime::isValid();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_6(Smoke::Stack x) const {
 	// hour()
 	int xret = this->QTime::hour();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_7(Smoke::Stack x) const {
 	// minute()
 	int xret = this->QTime::minute();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_8(Smoke::Stack x) const {
 	// second()
 	int xret = this->QTime::second();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_9(Smoke::Stack x) const {
 	// msec()
 	int xret = this->QTime::msec();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_10(Smoke::Stack x) const {
 	// toString(Qt::DateFormat)
-	QString xret = this->QTime::toString(*(Qt::DateFormat *)x[1].s_class);
-	x[0].s_class = (void*)new QString(xret);
+	QString xret = this->QTime::toString((Qt::DateFormat)x[1].s_enum);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     void x_11(Smoke::Stack x) const {
 	// toString()
 	QString xret = this->QTime::toString();
-	x[0].s_class = (void*)new QString(xret);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     void x_12(Smoke::Stack x) const {
 	// toString(const QString&)
-	QString xret = this->QTime::toString(*(const QString *)x[1].s_class);
-	x[0].s_class = (void*)new QString(xret);
+	QString xret = this->QTime::toString(*(const QString *)x[1].s_voidp);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     void x_13(Smoke::Stack x) {
 	// setHMS(int, int, int, int)
 	bool xret = this->QTime::setHMS((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int);
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_14(Smoke::Stack x) {
 	// setHMS(int, int, int)
 	bool xret = this->QTime::setHMS((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int);
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_15(Smoke::Stack x) const {
 	// addSecs(int)
@@ -97,8 +97,8 @@ public:
     }
     void x_16(Smoke::Stack x) const {
 	// secsTo(const QTime&)
-	int xret = this->QTime::secsTo(*(const QTime *)x[1].s_class);
-	x[0].s_int = (int)xret;
+	int xret = this->QTime::secsTo(*(const QTime *)x[1].s_voidp);
+	x[0].s_int = xret;
     }
     void x_17(Smoke::Stack x) const {
 	// addMSecs(int)
@@ -107,53 +107,53 @@ public:
     }
     void x_18(Smoke::Stack x) const {
 	// msecsTo(const QTime&)
-	int xret = this->QTime::msecsTo(*(const QTime *)x[1].s_class);
-	x[0].s_int = (int)xret;
+	int xret = this->QTime::msecsTo(*(const QTime *)x[1].s_voidp);
+	x[0].s_int = xret;
     }
     void x_19(Smoke::Stack x) const {
 	// operator==(const QTime&)
-	bool xret = this->QTime::operator==(*(const QTime *)x[1].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QTime::operator==(*(const QTime *)x[1].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_20(Smoke::Stack x) const {
 	// operator!=(const QTime&)
-	bool xret = this->QTime::operator!=(*(const QTime *)x[1].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QTime::operator!=(*(const QTime *)x[1].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_21(Smoke::Stack x) const {
 	// operator<(const QTime&)
-	bool xret = this->QTime::operator<(*(const QTime *)x[1].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QTime::operator<(*(const QTime *)x[1].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_22(Smoke::Stack x) const {
 	// operator<=(const QTime&)
-	bool xret = this->QTime::operator<=(*(const QTime *)x[1].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QTime::operator<=(*(const QTime *)x[1].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_23(Smoke::Stack x) const {
 	// operator>(const QTime&)
-	bool xret = this->QTime::operator>(*(const QTime *)x[1].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QTime::operator>(*(const QTime *)x[1].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_24(Smoke::Stack x) const {
 	// operator>=(const QTime&)
-	bool xret = this->QTime::operator>=(*(const QTime *)x[1].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QTime::operator>=(*(const QTime *)x[1].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_25(Smoke::Stack x) {
 	// start()
 	this->QTime::start();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_26(Smoke::Stack x) {
 	// restart()
 	int xret = this->QTime::restart();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_27(Smoke::Stack x) const {
 	// elapsed()
 	int xret = this->QTime::elapsed();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     static void x_28(Smoke::Stack x) {
 	// currentTime()
@@ -162,23 +162,23 @@ public:
     }
     static void x_29(Smoke::Stack x) {
 	// fromString(const QString&, Qt::DateFormat)
-	QTime xret = QTime::fromString(*(const QString *)x[1].s_class,*(Qt::DateFormat *)x[2].s_class);
+	QTime xret = QTime::fromString(*(const QString *)x[1].s_voidp,(Qt::DateFormat)x[2].s_enum);
 	x[0].s_class = (void*)new QTime(xret);
     }
     static void x_30(Smoke::Stack x) {
 	// fromString(const QString&)
-	QTime xret = QTime::fromString(*(const QString *)x[1].s_class);
+	QTime xret = QTime::fromString(*(const QString *)x[1].s_voidp);
 	x[0].s_class = (void*)new QTime(xret);
     }
     static void x_31(Smoke::Stack x) {
 	// isValid(int, int, int, int)
 	bool xret = QTime::isValid((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int);
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     static void x_32(Smoke::Stack x) {
 	// isValid(int, int, int)
 	bool xret = QTime::isValid((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int);
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     ~x_QTime() {}
 };

@@ -18,14 +18,14 @@ public:
     }
     static void x_3(Smoke::Stack x) {
 	// QContextMenuEvent(QContextMenuEvent::Reason, const QPoint&, const QPoint&, int)
-	x_QContextMenuEvent* xret = new x_QContextMenuEvent(*(QContextMenuEvent::Reason *)x[1].s_class,*(const QPoint *)x[2].s_class,*(const QPoint *)x[3].s_class,(int)x[4].s_int);
+	x_QContextMenuEvent* xret = new x_QContextMenuEvent((QContextMenuEvent::Reason)x[1].s_enum,*(const QPoint *)x[2].s_voidp,*(const QPoint *)x[3].s_voidp,(int)x[4].s_int);
 	x[0].s_class = (void*)xret;
     }
     x_QContextMenuEvent(QContextMenuEvent::Reason x1, const QPoint& x2, const QPoint& x3, int x4) : QContextMenuEvent(x1, x2, x3, x4) {
     }
     static void x_4(Smoke::Stack x) {
 	// QContextMenuEvent(QContextMenuEvent::Reason, const QPoint&, int)
-	x_QContextMenuEvent* xret = new x_QContextMenuEvent(*(QContextMenuEvent::Reason *)x[1].s_class,*(const QPoint *)x[2].s_class,(int)x[3].s_int);
+	x_QContextMenuEvent* xret = new x_QContextMenuEvent((QContextMenuEvent::Reason)x[1].s_enum,*(const QPoint *)x[2].s_voidp,(int)x[3].s_int);
 	x[0].s_class = (void*)xret;
     }
     x_QContextMenuEvent(QContextMenuEvent::Reason x1, const QPoint& x2, int x3) : QContextMenuEvent(x1, x2, x3) {
@@ -33,67 +33,67 @@ public:
     void x_5(Smoke::Stack x) const {
 	// x()
 	int xret = this->QContextMenuEvent::x();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_6(Smoke::Stack x) const {
 	// y()
 	int xret = this->QContextMenuEvent::y();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_7(Smoke::Stack x) const {
 	// globalX()
 	int xret = this->QContextMenuEvent::globalX();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_8(Smoke::Stack x) const {
 	// globalY()
 	int xret = this->QContextMenuEvent::globalY();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_9(Smoke::Stack x) const {
 	// pos()
 	const QPoint& xret = this->QContextMenuEvent::pos();
-	x[0].s_class = (void*)&xret;
+	x[0].s_voidp = (void*)&xret;
     }
     void x_10(Smoke::Stack x) const {
 	// globalPos()
 	const QPoint& xret = this->QContextMenuEvent::globalPos();
-	x[0].s_class = (void*)&xret;
+	x[0].s_voidp = (void*)&xret;
     }
     void x_11(Smoke::Stack x) const {
 	// state()
 	Qt::ButtonState xret = this->QContextMenuEvent::state();
-	x[0].s_class = (void*)new Qt::ButtonState(xret);
+	x[0].s_enum = xret;
     }
     void x_12(Smoke::Stack x) const {
 	// isAccepted()
 	bool xret = this->QContextMenuEvent::isAccepted();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_13(Smoke::Stack x) const {
 	// isConsumed()
 	bool xret = this->QContextMenuEvent::isConsumed();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_14(Smoke::Stack x) {
 	// consume()
 	this->QContextMenuEvent::consume();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_15(Smoke::Stack x) {
 	// accept()
 	this->QContextMenuEvent::accept();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_16(Smoke::Stack x) {
 	// ignore()
 	this->QContextMenuEvent::ignore();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_17(Smoke::Stack x) const {
 	// reason()
 	QContextMenuEvent::Reason xret = this->QContextMenuEvent::reason();
-	x[0].s_class = (void*)new QContextMenuEvent::Reason(xret);
+	x[0].s_enum = xret;
     }
     ~x_QContextMenuEvent() {}
 };

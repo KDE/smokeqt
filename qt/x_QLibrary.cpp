@@ -8,49 +8,49 @@ class x_QLibrary : public QLibrary {
 public:
     static void x_0(Smoke::Stack x) {
 	// QLibrary(const QString&)
-	x_QLibrary* xret = new x_QLibrary(*(const QString *)x[1].s_class);
+	x_QLibrary* xret = new x_QLibrary(*(const QString *)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QLibrary(const QString& x1) : QLibrary(x1) {
     }
     void x_1(Smoke::Stack x) {
 	// resolve(const char*)
-	void* xret = this->QLibrary::resolve((const char*)x[1].s_class);
+	void* xret = this->QLibrary::resolve((const char*)x[1].s_voidp);
 	x[0].s_voidp = (void*)xret;
     }
     void x_2(Smoke::Stack x) {
 	// load()
 	bool xret = this->QLibrary::load();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_3(Smoke::Stack x) {
 	// unload()
 	bool xret = this->QLibrary::unload();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_4(Smoke::Stack x) const {
 	// isLoaded()
 	bool xret = this->QLibrary::isLoaded();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_5(Smoke::Stack x) const {
 	// autoUnload()
 	bool xret = this->QLibrary::autoUnload();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_6(Smoke::Stack x) {
 	// setAutoUnload(bool)
 	this->QLibrary::setAutoUnload((bool)x[1].s_bool);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_7(Smoke::Stack x) const {
 	// library()
 	QString xret = this->QLibrary::library();
-	x[0].s_class = (void*)new QString(xret);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     static void x_8(Smoke::Stack x) {
 	// resolve(const QString&, const char*)
-	void* xret = QLibrary::resolve(*(const QString *)x[1].s_class,(const char*)x[2].s_class);
+	void* xret = QLibrary::resolve(*(const QString *)x[1].s_voidp,(const char*)x[2].s_voidp);
 	x[0].s_voidp = (void*)xret;
     }
     virtual bool unload() {

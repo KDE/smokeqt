@@ -15,10 +15,10 @@ public:
     }
     virtual int decode(QImage& x1, QImageConsumer* x2, const uchar* x3, int x4) {
 	Smoke::StackItem x[5];
-	x[1].s_class = (void*)&x1;
-	x[2].s_class = (void*)x2;
-	x[3].s_class = (void*)x3;
-	x[4].s_int = (int)x4;
+	x[1].s_voidp = (void*)&x1;
+	x[2].s_voidp = (void*)x2;
+	x[3].s_voidp = (void*)x3;
+	x[4].s_int = x4;
 	qt_Smoke->callMethod(3800, (void*)this, x, true /*pure virtual*/);
 	return (int)x[0].s_int;
 	// ABSTRACT

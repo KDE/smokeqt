@@ -18,43 +18,43 @@ public:
     }
     void x_1(Smoke::Stack x) const {
 	// data(const QString&)
-	const QMimeSource* xret = this->QMimeSourceFactory::data(*(const QString *)x[1].s_class);
-	x[0].s_class = (void*)xret;
+	const QMimeSource* xret = this->QMimeSourceFactory::data(*(const QString *)x[1].s_voidp);
+	x[0].s_voidp = (void*)xret;
     }
     void x_2(Smoke::Stack x) const {
 	// makeAbsolute(const QString&, const QString&)
-	QString xret = this->QMimeSourceFactory::makeAbsolute(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class);
-	x[0].s_class = (void*)new QString(xret);
+	QString xret = this->QMimeSourceFactory::makeAbsolute(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     void x_3(Smoke::Stack x) const {
 	// data(const QString&, const QString&)
-	const QMimeSource* xret = this->QMimeSourceFactory::data(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class);
-	x[0].s_class = (void*)xret;
+	const QMimeSource* xret = this->QMimeSourceFactory::data(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
+	x[0].s_voidp = (void*)xret;
     }
     void x_4(Smoke::Stack x) {
 	// setText(const QString&, const QString&)
-	this->QMimeSourceFactory::setText(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QMimeSourceFactory::setText(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_5(Smoke::Stack x) {
 	// setImage(const QString&, const QImage&)
-	this->QMimeSourceFactory::setImage(*(const QString *)x[1].s_class,*(const QImage *)x[2].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QMimeSourceFactory::setImage(*(const QString *)x[1].s_voidp,*(const QImage *)x[2].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_6(Smoke::Stack x) {
 	// setPixmap(const QString&, const QPixmap&)
-	this->QMimeSourceFactory::setPixmap(*(const QString *)x[1].s_class,*(const QPixmap *)x[2].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QMimeSourceFactory::setPixmap(*(const QString *)x[1].s_voidp,*(const QPixmap *)x[2].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_7(Smoke::Stack x) {
 	// setData(const QString&, QMimeSource*)
-	this->QMimeSourceFactory::setData(*(const QString *)x[1].s_class,(QMimeSource*)x[2].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QMimeSourceFactory::setData(*(const QString *)x[1].s_voidp,(QMimeSource*)x[2].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_8(Smoke::Stack x) {
 	// setFilePath(const QStringList&)
-	this->QMimeSourceFactory::setFilePath(*(const QStringList *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QMimeSourceFactory::setFilePath(*(const QStringList *)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_9(Smoke::Stack x) const {
 	// filePath()
@@ -63,42 +63,42 @@ public:
     }
     void x_10(Smoke::Stack x) {
 	// addFilePath(const QString&)
-	this->QMimeSourceFactory::addFilePath(*(const QString *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QMimeSourceFactory::addFilePath(*(const QString *)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_11(Smoke::Stack x) {
 	// setExtensionType(const QString&, const char*)
-	this->QMimeSourceFactory::setExtensionType(*(const QString *)x[1].s_class,(const char*)x[2].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QMimeSourceFactory::setExtensionType(*(const QString *)x[1].s_voidp,(const char*)x[2].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     static void x_12(Smoke::Stack x) {
 	// defaultFactory()
 	QMimeSourceFactory* xret = QMimeSourceFactory::defaultFactory();
-	x[0].s_class = (void*)xret;
+	x[0].s_voidp = (void*)xret;
     }
     static void x_13(Smoke::Stack x) {
 	// setDefaultFactory(QMimeSourceFactory*)
-	QMimeSourceFactory::setDefaultFactory((QMimeSourceFactory*)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	QMimeSourceFactory::setDefaultFactory((QMimeSourceFactory*)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     static void x_14(Smoke::Stack x) {
 	// takeDefaultFactory()
 	QMimeSourceFactory* xret = QMimeSourceFactory::takeDefaultFactory();
-	x[0].s_class = (void*)xret;
+	x[0].s_voidp = (void*)xret;
     }
     static void x_15(Smoke::Stack x) {
 	// addFactory(QMimeSourceFactory*)
-	QMimeSourceFactory::addFactory((QMimeSourceFactory*)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	QMimeSourceFactory::addFactory((QMimeSourceFactory*)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     static void x_16(Smoke::Stack x) {
 	// removeFactory(QMimeSourceFactory*)
-	QMimeSourceFactory::removeFactory((QMimeSourceFactory*)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	QMimeSourceFactory::removeFactory((QMimeSourceFactory*)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     virtual const QMimeSource* data(const QString& x1) const {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)&x1;
+	x[1].s_voidp = (void*)&x1;
 	if(qt_Smoke->callMethod(5118, (void*)this, x)) return (const QMimeSource*)x[0].s_class;
 	return this->QMimeSourceFactory::data(x1);
     }
@@ -114,8 +114,8 @@ public:
     }
     virtual QString makeAbsolute(const QString& x1, const QString& x2) const {
 	Smoke::StackItem x[3];
-	x[1].s_class = (void*)&x1;
-	x[2].s_class = (void*)&x2;
+	x[1].s_voidp = (void*)&x1;
+	x[2].s_voidp = (void*)&x2;
 	if(qt_Smoke->callMethod(5119, (void*)this, x)) {
 	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
@@ -126,42 +126,42 @@ public:
     }
     virtual void setData(const QString& x1, QMimeSource* x2) {
 	Smoke::StackItem x[3];
-	x[1].s_class = (void*)&x1;
-	x[2].s_class = (void*)x2;
+	x[1].s_voidp = (void*)&x1;
+	x[2].s_voidp = (void*)x2;
 	if(qt_Smoke->callMethod(5124, (void*)this, x)) return;
 	this->QMimeSourceFactory::setData(x1, x2);
     }
     virtual void setExtensionType(const QString& x1, const char* x2) {
 	Smoke::StackItem x[3];
-	x[1].s_class = (void*)&x1;
-	x[2].s_class = (void*)x2;
+	x[1].s_voidp = (void*)&x1;
+	x[2].s_voidp = (void*)x2;
 	if(qt_Smoke->callMethod(5128, (void*)this, x)) return;
 	this->QMimeSourceFactory::setExtensionType(x1, x2);
     }
     virtual void setFilePath(const QStringList& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)&x1;
+	x[1].s_voidp = (void*)&x1;
 	if(qt_Smoke->callMethod(5125, (void*)this, x)) return;
 	this->QMimeSourceFactory::setFilePath(x1);
     }
     virtual void setImage(const QString& x1, const QImage& x2) {
 	Smoke::StackItem x[3];
-	x[1].s_class = (void*)&x1;
-	x[2].s_class = (void*)&x2;
+	x[1].s_voidp = (void*)&x1;
+	x[2].s_voidp = (void*)&x2;
 	if(qt_Smoke->callMethod(5122, (void*)this, x)) return;
 	this->QMimeSourceFactory::setImage(x1, x2);
     }
     virtual void setPixmap(const QString& x1, const QPixmap& x2) {
 	Smoke::StackItem x[3];
-	x[1].s_class = (void*)&x1;
-	x[2].s_class = (void*)&x2;
+	x[1].s_voidp = (void*)&x1;
+	x[2].s_voidp = (void*)&x2;
 	if(qt_Smoke->callMethod(5123, (void*)this, x)) return;
 	this->QMimeSourceFactory::setPixmap(x1, x2);
     }
     virtual void setText(const QString& x1, const QString& x2) {
 	Smoke::StackItem x[3];
-	x[1].s_class = (void*)&x1;
-	x[2].s_class = (void*)&x2;
+	x[1].s_voidp = (void*)&x1;
+	x[2].s_voidp = (void*)&x2;
 	if(qt_Smoke->callMethod(5121, (void*)this, x)) return;
 	this->QMimeSourceFactory::setText(x1, x2);
     }

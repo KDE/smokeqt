@@ -45,7 +45,7 @@ foreach $filename (readdir(QT)) {
     {
         push(@headers, $entry)
           if ( !defined $excludes{$filename} # Not excluded
-	      && $filename =~ /\.h/ ); # Not a backup file etc. Only headers.
+	      && $filename =~ /\.h$/ ); # Not a backup file etc. Only headers.
     }
 }
 closedir QT;

@@ -17,49 +17,49 @@ public:
     }
     static void x_1(Smoke::Stack x) {
 	// QTab(const QString&)
-	x_QTab* xret = new x_QTab(*(const QString *)x[1].s_class);
+	x_QTab* xret = new x_QTab(*(const QString *)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QTab(const QString& x1) : QTab(x1) {
     }
     static void x_2(Smoke::Stack x) {
 	// QTab(const QIconSet&, const QString&)
-	x_QTab* xret = new x_QTab(*(const QIconSet *)x[1].s_class,*(const QString *)x[2].s_class);
+	x_QTab* xret = new x_QTab(*(const QIconSet *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QTab(const QIconSet& x1, const QString& x2) : QTab(x1, x2) {
     }
     static void x_3(Smoke::Stack x) {
 	// QTab(const QIconSet&)
-	x_QTab* xret = new x_QTab(*(const QIconSet *)x[1].s_class);
+	x_QTab* xret = new x_QTab(*(const QIconSet *)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QTab(const QIconSet& x1) : QTab(x1) {
     }
     void x_4(Smoke::Stack x) {
 	// setText(const QString&)
-	this->QTab::setText(*(const QString *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QTab::setText(*(const QString *)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_5(Smoke::Stack x) const {
 	// text()
 	QString xret = this->QTab::text();
-	x[0].s_class = (void*)new QString(xret);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     void x_6(Smoke::Stack x) {
 	// setIconSet(const QIconSet&)
-	this->QTab::setIconSet(*(const QIconSet *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QTab::setIconSet(*(const QIconSet *)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_7(Smoke::Stack x) const {
 	// iconSet()
 	QIconSet* xret = this->QTab::iconSet();
-	x[0].s_class = (void*)xret;
+	x[0].s_voidp = (void*)xret;
     }
     void x_8(Smoke::Stack x) {
 	// setRect(const QRect&)
-	this->QTab::setRect(*(const QRect *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QTab::setRect(*(const QRect *)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_9(Smoke::Stack x) const {
 	// rect()
@@ -69,22 +69,22 @@ public:
     void x_10(Smoke::Stack x) {
 	// setEnabled(bool)
 	this->QTab::setEnabled((bool)x[1].s_bool);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_11(Smoke::Stack x) const {
 	// isEnabled()
 	bool xret = this->QTab::isEnabled();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_12(Smoke::Stack x) {
 	// setIdentifier(int)
 	this->QTab::setIdentifier((int)x[1].s_int);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_13(Smoke::Stack x) const {
 	// identifier()
 	int xret = this->QTab::identifier();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     ~x_QTab() {}
 };

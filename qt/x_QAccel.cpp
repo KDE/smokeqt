@@ -10,28 +10,28 @@ class x_QAccel : public QAccel {
 public:
     static void x_0(Smoke::Stack x) {
 	// QAccel(QWidget*, const char*)
-	x_QAccel* xret = new x_QAccel((QWidget*)x[1].s_class,(const char*)x[2].s_class);
+	x_QAccel* xret = new x_QAccel((QWidget*)x[1].s_voidp,(const char*)x[2].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QAccel(QWidget* x1, const char* x2) : QAccel(x1, x2) {
     }
     static void x_1(Smoke::Stack x) {
 	// QAccel(QWidget*)
-	x_QAccel* xret = new x_QAccel((QWidget*)x[1].s_class);
+	x_QAccel* xret = new x_QAccel((QWidget*)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QAccel(QWidget* x1) : QAccel(x1) {
     }
     static void x_2(Smoke::Stack x) {
 	// QAccel(QWidget*, QObject*, const char*)
-	x_QAccel* xret = new x_QAccel((QWidget*)x[1].s_class,(QObject*)x[2].s_class,(const char*)x[3].s_class);
+	x_QAccel* xret = new x_QAccel((QWidget*)x[1].s_voidp,(QObject*)x[2].s_voidp,(const char*)x[3].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QAccel(QWidget* x1, QObject* x2, const char* x3) : QAccel(x1, x2, x3) {
     }
     static void x_3(Smoke::Stack x) {
 	// QAccel(QWidget*, QObject*)
-	x_QAccel* xret = new x_QAccel((QWidget*)x[1].s_class,(QObject*)x[2].s_class);
+	x_QAccel* xret = new x_QAccel((QWidget*)x[1].s_voidp,(QObject*)x[2].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QAccel(QWidget* x1, QObject* x2) : QAccel(x1, x2) {
@@ -39,37 +39,37 @@ public:
     void x_4(Smoke::Stack x) const {
 	// isEnabled()
 	bool xret = this->QAccel::isEnabled();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_5(Smoke::Stack x) {
 	// setEnabled(bool)
 	this->QAccel::setEnabled((bool)x[1].s_bool);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_6(Smoke::Stack x) const {
 	// count()
 	uint xret = this->QAccel::count();
-	x[0].s_uint = (uint)xret;
+	x[0].s_uint = xret;
     }
     void x_7(Smoke::Stack x) {
 	// insertItem(const QKeySequence&, int)
-	int xret = this->QAccel::insertItem(*(const QKeySequence *)x[1].s_class,(int)x[2].s_int);
-	x[0].s_int = (int)xret;
+	int xret = this->QAccel::insertItem(*(const QKeySequence *)x[1].s_voidp,(int)x[2].s_int);
+	x[0].s_int = xret;
     }
     void x_8(Smoke::Stack x) {
 	// insertItem(const QKeySequence&)
-	int xret = this->QAccel::insertItem(*(const QKeySequence *)x[1].s_class);
-	x[0].s_int = (int)xret;
+	int xret = this->QAccel::insertItem(*(const QKeySequence *)x[1].s_voidp);
+	x[0].s_int = xret;
     }
     void x_9(Smoke::Stack x) {
 	// removeItem(int)
 	this->QAccel::removeItem((int)x[1].s_int);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_10(Smoke::Stack x) {
 	// clear()
 	this->QAccel::clear();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_11(Smoke::Stack x) {
 	// key(int)
@@ -78,133 +78,133 @@ public:
     }
     void x_12(Smoke::Stack x) const {
 	// findKey(const QKeySequence&)
-	int xret = this->QAccel::findKey(*(const QKeySequence *)x[1].s_class);
-	x[0].s_int = (int)xret;
+	int xret = this->QAccel::findKey(*(const QKeySequence *)x[1].s_voidp);
+	x[0].s_int = xret;
     }
     void x_13(Smoke::Stack x) const {
 	// isItemEnabled(int)
 	bool xret = this->QAccel::isItemEnabled((int)x[1].s_int);
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_14(Smoke::Stack x) {
 	// setItemEnabled(int, bool)
 	this->QAccel::setItemEnabled((int)x[1].s_int,(bool)x[2].s_bool);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_15(Smoke::Stack x) {
 	// connectItem(int, const QObject*, const char*)
-	bool xret = this->QAccel::connectItem((int)x[1].s_int,(const QObject*)x[2].s_class,(const char*)x[3].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QAccel::connectItem((int)x[1].s_int,(const QObject*)x[2].s_voidp,(const char*)x[3].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_16(Smoke::Stack x) {
 	// disconnectItem(int, const QObject*, const char*)
-	bool xret = this->QAccel::disconnectItem((int)x[1].s_int,(const QObject*)x[2].s_class,(const char*)x[3].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QAccel::disconnectItem((int)x[1].s_int,(const QObject*)x[2].s_voidp,(const char*)x[3].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_17(Smoke::Stack x) {
 	// repairEventFilter()
 	this->QAccel::repairEventFilter();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_18(Smoke::Stack x) {
 	// setWhatsThis(int, const QString&)
-	this->QAccel::setWhatsThis((int)x[1].s_int,*(const QString *)x[2].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QAccel::setWhatsThis((int)x[1].s_int,*(const QString *)x[2].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_19(Smoke::Stack x) const {
 	// whatsThis(int)
 	QString xret = this->QAccel::whatsThis((int)x[1].s_int);
-	x[0].s_class = (void*)new QString(xret);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     void x_20(Smoke::Stack x) {
 	// setIgnoreWhatsThis(bool)
 	this->QAccel::setIgnoreWhatsThis((bool)x[1].s_bool);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_21(Smoke::Stack x) const {
 	// ignoreWhatsThis()
 	bool xret = this->QAccel::ignoreWhatsThis();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_22(Smoke::Stack x) {
 	// activated(int)
 	this->QAccel::activated((int)x[1].s_int);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     static void x_23(Smoke::Stack x) {
 	// shortcutKey(const QString&)
-	QKeySequence xret = QAccel::shortcutKey(*(const QString *)x[1].s_class);
+	QKeySequence xret = QAccel::shortcutKey(*(const QString *)x[1].s_voidp);
 	x[0].s_class = (void*)new QKeySequence(xret);
     }
     static void x_24(Smoke::Stack x) {
 	// keyToString(QKeySequence)
 	QString xret = QAccel::keyToString(*(QKeySequence *)x[1].s_class);
-	x[0].s_class = (void*)new QString(xret);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     static void x_25(Smoke::Stack x) {
 	// stringToKey(const QString&)
-	QKeySequence xret = QAccel::stringToKey(*(const QString *)x[1].s_class);
+	QKeySequence xret = QAccel::stringToKey(*(const QString *)x[1].s_voidp);
 	x[0].s_class = (void*)new QKeySequence(xret);
     }
     void x_26(Smoke::Stack x) {
 	// eventFilter(QObject*, QEvent*)
-	bool xret = this->QAccel::eventFilter((QObject*)x[1].s_class,(QEvent*)x[2].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QAccel::eventFilter((QObject*)x[1].s_voidp,(QEvent*)x[2].s_voidp);
+	x[0].s_bool = xret;
     }
     virtual bool checkConnectArgs(const char* x1, const QObject* x2, const char* x3) {
 	Smoke::StackItem x[4];
-	x[1].s_class = (void*)x1;
-	x[2].s_class = (void*)x2;
-	x[3].s_class = (void*)x3;
+	x[1].s_voidp = (void*)x1;
+	x[2].s_voidp = (void*)x2;
+	x[3].s_voidp = (void*)x3;
 	if(qt_Smoke->callMethod(5470, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QObject::checkConnectArgs(x1, x2, x3);
     }
     virtual void childEvent(QChildEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(5466, (void*)this, x)) return;
 	this->QObject::childEvent(x1);
     }
     virtual void connectNotify(const char* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(5468, (void*)this, x)) return;
 	this->QObject::connectNotify(x1);
     }
     virtual void customEvent(QCustomEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(5467, (void*)this, x)) return;
 	this->QObject::customEvent(x1);
     }
     virtual void disconnectNotify(const char* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(5469, (void*)this, x)) return;
 	this->QObject::disconnectNotify(x1);
     }
     virtual bool event(QEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(5405, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QObject::event(x1);
     }
     virtual bool eventFilter(QObject* x1, QEvent* x2) {
 	Smoke::StackItem x[3];
-	x[1].s_class = (void*)x1;
-	x[2].s_class = (void*)x2;
+	x[1].s_voidp = (void*)x1;
+	x[2].s_voidp = (void*)x2;
 	if(qt_Smoke->callMethod(27, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QAccel::eventFilter(x1, x2);
     }
     virtual void insertChild(QObject* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(5428, (void*)this, x)) return;
 	this->QObject::insertChild(x1);
     }
     virtual QVariant property(const char* x1) const {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(5442, (void*)this, x)) {
 	    QVariant *xptr = (QVariant *)x[0].s_class;
 	    QVariant xret(*xptr);
@@ -215,26 +215,26 @@ public:
     }
     virtual void removeChild(QObject* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(5429, (void*)this, x)) return;
 	this->QObject::removeChild(x1);
     }
     virtual void setName(const char* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(5411, (void*)this, x)) return;
 	this->QObject::setName(x1);
     }
     virtual bool setProperty(const char* x1, const QVariant& x2) {
 	Smoke::StackItem x[3];
-	x[1].s_class = (void*)x1;
-	x[2].s_class = (void*)&x2;
+	x[1].s_voidp = (void*)x1;
+	x[2].s_voidp = (void*)&x2;
 	if(qt_Smoke->callMethod(5441, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QObject::setProperty(x1, x2);
     }
     virtual void timerEvent(QTimerEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(5465, (void*)this, x)) return;
 	this->QObject::timerEvent(x1);
     }

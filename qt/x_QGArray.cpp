@@ -28,139 +28,139 @@ public:
     }
     static void x_3(Smoke::Stack x) {
 	// QGArray(const QGArray&)
-	x_QGArray* xret = new x_QGArray(*(const QGArray *)x[1].s_class);
+	x_QGArray* xret = new x_QGArray(*(const QGArray *)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QGArray(const QGArray& x1) : QGArray(x1) {
     }
     void x_4(Smoke::Stack x) {
 	// operator=(const QGArray&)
-	QGArray& xret = this->QGArray::operator=(*(const QGArray *)x[1].s_class);
-	x[0].s_class = (void*)&xret;
+	QGArray& xret = this->QGArray::operator=(*(const QGArray *)x[1].s_voidp);
+	x[0].s_voidp = (void*)&xret;
     }
     void x_5(Smoke::Stack x) {
 	// detach()
 	this->QGArray::detach();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_6(Smoke::Stack x) const {
 	// data()
 	char* xret = this->QGArray::data();
-	x[0].s_class = (void*)xret;
+	x[0].s_voidp = (void*)xret;
     }
     void x_7(Smoke::Stack x) const {
 	// nrefs()
 	uint xret = this->QGArray::nrefs();
-	x[0].s_uint = (uint)xret;
+	x[0].s_uint = xret;
     }
     void x_8(Smoke::Stack x) const {
 	// size()
 	uint xret = this->QGArray::size();
-	x[0].s_uint = (uint)xret;
+	x[0].s_uint = xret;
     }
     void x_9(Smoke::Stack x) const {
 	// isEqual(const QGArray&)
-	bool xret = this->QGArray::isEqual(*(const QGArray *)x[1].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QGArray::isEqual(*(const QGArray *)x[1].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_10(Smoke::Stack x) {
 	// resize(uint)
 	bool xret = this->QGArray::resize((uint)x[1].s_uint);
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_11(Smoke::Stack x) {
 	// fill(const char*, int, uint)
-	bool xret = this->QGArray::fill((const char*)x[1].s_class,(int)x[2].s_int,(uint)x[3].s_uint);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QGArray::fill((const char*)x[1].s_voidp,(int)x[2].s_int,(uint)x[3].s_uint);
+	x[0].s_bool = xret;
     }
     void x_12(Smoke::Stack x) {
 	// assign(const QGArray&)
-	QGArray& xret = this->QGArray::assign(*(const QGArray *)x[1].s_class);
-	x[0].s_class = (void*)&xret;
+	QGArray& xret = this->QGArray::assign(*(const QGArray *)x[1].s_voidp);
+	x[0].s_voidp = (void*)&xret;
     }
     void x_13(Smoke::Stack x) {
 	// assign(const char*, uint)
-	QGArray& xret = this->QGArray::assign((const char*)x[1].s_class,(uint)x[2].s_uint);
-	x[0].s_class = (void*)&xret;
+	QGArray& xret = this->QGArray::assign((const char*)x[1].s_voidp,(uint)x[2].s_uint);
+	x[0].s_voidp = (void*)&xret;
     }
     void x_14(Smoke::Stack x) {
 	// duplicate(const QGArray&)
-	QGArray& xret = this->QGArray::duplicate(*(const QGArray *)x[1].s_class);
-	x[0].s_class = (void*)&xret;
+	QGArray& xret = this->QGArray::duplicate(*(const QGArray *)x[1].s_voidp);
+	x[0].s_voidp = (void*)&xret;
     }
     void x_15(Smoke::Stack x) {
 	// duplicate(const char*, uint)
-	QGArray& xret = this->QGArray::duplicate((const char*)x[1].s_class,(uint)x[2].s_uint);
-	x[0].s_class = (void*)&xret;
+	QGArray& xret = this->QGArray::duplicate((const char*)x[1].s_voidp,(uint)x[2].s_uint);
+	x[0].s_voidp = (void*)&xret;
     }
     void x_16(Smoke::Stack x) {
 	// store(const char*, uint)
-	this->QGArray::store((const char*)x[1].s_class,(uint)x[2].s_uint);
-	x[0].s_int = x[0].s_int; // noop
+	this->QGArray::store((const char*)x[1].s_voidp,(uint)x[2].s_uint);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_17(Smoke::Stack x) const {
 	// sharedBlock()
 	QGArray::array_data* xret = this->QGArray::sharedBlock();
-	x[0].s_class = (void*)xret;
+	x[0].s_voidp = (void*)xret;
     }
     void x_18(Smoke::Stack x) {
 	// setSharedBlock(QGArray::array_data*)
-	this->QGArray::setSharedBlock((QGArray::array_data*)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QGArray::setSharedBlock((QGArray::array_data*)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_19(Smoke::Stack x) {
 	// setRawData(const char*, uint)
-	QGArray& xret = this->QGArray::setRawData((const char*)x[1].s_class,(uint)x[2].s_uint);
-	x[0].s_class = (void*)&xret;
+	QGArray& xret = this->QGArray::setRawData((const char*)x[1].s_voidp,(uint)x[2].s_uint);
+	x[0].s_voidp = (void*)&xret;
     }
     void x_20(Smoke::Stack x) {
 	// resetRawData(const char*, uint)
-	this->QGArray::resetRawData((const char*)x[1].s_class,(uint)x[2].s_uint);
-	x[0].s_int = x[0].s_int; // noop
+	this->QGArray::resetRawData((const char*)x[1].s_voidp,(uint)x[2].s_uint);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_21(Smoke::Stack x) const {
 	// find(const char*, uint, uint)
-	int xret = this->QGArray::find((const char*)x[1].s_class,(uint)x[2].s_uint,(uint)x[3].s_uint);
-	x[0].s_int = (int)xret;
+	int xret = this->QGArray::find((const char*)x[1].s_voidp,(uint)x[2].s_uint,(uint)x[3].s_uint);
+	x[0].s_int = xret;
     }
     void x_22(Smoke::Stack x) const {
 	// contains(const char*, uint)
-	int xret = this->QGArray::contains((const char*)x[1].s_class,(uint)x[2].s_uint);
-	x[0].s_int = (int)xret;
+	int xret = this->QGArray::contains((const char*)x[1].s_voidp,(uint)x[2].s_uint);
+	x[0].s_int = xret;
     }
     void x_23(Smoke::Stack x) {
 	// sort(uint)
 	this->QGArray::sort((uint)x[1].s_uint);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_24(Smoke::Stack x) const {
 	// bsearch(const char*, uint)
-	int xret = this->QGArray::bsearch((const char*)x[1].s_class,(uint)x[2].s_uint);
-	x[0].s_int = (int)xret;
+	int xret = this->QGArray::bsearch((const char*)x[1].s_voidp,(uint)x[2].s_uint);
+	x[0].s_int = xret;
     }
     void x_25(Smoke::Stack x) const {
 	// at(uint)
 	char* xret = this->QGArray::at((uint)x[1].s_uint);
-	x[0].s_class = (void*)xret;
+	x[0].s_voidp = (void*)xret;
     }
     void x_26(Smoke::Stack x) {
 	// setExpand(uint, const char*, uint)
-	bool xret = this->QGArray::setExpand((uint)x[1].s_uint,(const char*)x[2].s_class,(uint)x[3].s_uint);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QGArray::setExpand((uint)x[1].s_uint,(const char*)x[2].s_voidp,(uint)x[3].s_uint);
+	x[0].s_bool = xret;
     }
     void x_27(Smoke::Stack x) {
 	// newData()
 	QGArray::array_data* xret = this->QGArray::newData();
-	x[0].s_class = (void*)xret;
+	x[0].s_voidp = (void*)xret;
     }
     void x_28(Smoke::Stack x) {
 	// deleteData(QGArray::array_data*)
-	this->QGArray::deleteData((QGArray::array_data*)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QGArray::deleteData((QGArray::array_data*)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     virtual void deleteData(QGArray::array_data* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(2989, (void*)this, x)) return;
 	this->QGArray::deleteData(x1);
     }

@@ -48,202 +48,202 @@ public:
     }
     static void x_9(Smoke::Stack x) {
 	// QMovie(QDataSource*, int)
-	x_QMovie* xret = new x_QMovie((QDataSource*)x[1].s_class,(int)x[2].s_int);
+	x_QMovie* xret = new x_QMovie((QDataSource*)x[1].s_voidp,(int)x[2].s_int);
 	x[0].s_class = (void*)xret;
     }
     x_QMovie(QDataSource* x1, int x2) : QMovie(x1, x2) {
     }
     static void x_10(Smoke::Stack x) {
 	// QMovie(QDataSource*)
-	x_QMovie* xret = new x_QMovie((QDataSource*)x[1].s_class);
+	x_QMovie* xret = new x_QMovie((QDataSource*)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QMovie(QDataSource* x1) : QMovie(x1) {
     }
     static void x_11(Smoke::Stack x) {
 	// QMovie(const QString&, int)
-	x_QMovie* xret = new x_QMovie(*(const QString *)x[1].s_class,(int)x[2].s_int);
+	x_QMovie* xret = new x_QMovie(*(const QString *)x[1].s_voidp,(int)x[2].s_int);
 	x[0].s_class = (void*)xret;
     }
     x_QMovie(const QString& x1, int x2) : QMovie(x1, x2) {
     }
     static void x_12(Smoke::Stack x) {
 	// QMovie(const QString&)
-	x_QMovie* xret = new x_QMovie(*(const QString *)x[1].s_class);
+	x_QMovie* xret = new x_QMovie(*(const QString *)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QMovie(const QString& x1) : QMovie(x1) {
     }
     static void x_13(Smoke::Stack x) {
 	// QMovie(QByteArray, int)
-	x_QMovie* xret = new x_QMovie(*(QByteArray *)x[1].s_class,(int)x[2].s_int);
+	x_QMovie* xret = new x_QMovie(*(QByteArray *)x[1].s_voidp,(int)x[2].s_int);
 	x[0].s_class = (void*)xret;
     }
     x_QMovie(QByteArray x1, int x2) : QMovie(x1, x2) {
     }
     static void x_14(Smoke::Stack x) {
 	// QMovie(QByteArray)
-	x_QMovie* xret = new x_QMovie(*(QByteArray *)x[1].s_class);
+	x_QMovie* xret = new x_QMovie(*(QByteArray *)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QMovie(QByteArray x1) : QMovie(x1) {
     }
     static void x_15(Smoke::Stack x) {
 	// QMovie(const QMovie&)
-	x_QMovie* xret = new x_QMovie(*(const QMovie *)x[1].s_class);
+	x_QMovie* xret = new x_QMovie(*(const QMovie *)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QMovie(const QMovie& x1) : QMovie(x1) {
     }
     void x_16(Smoke::Stack x) {
 	// operator=(const QMovie&)
-	QMovie& xret = this->QMovie::operator=(*(const QMovie *)x[1].s_class);
-	x[0].s_class = (void*)&xret;
+	QMovie& xret = this->QMovie::operator=(*(const QMovie *)x[1].s_voidp);
+	x[0].s_voidp = (void*)&xret;
     }
     void x_17(Smoke::Stack x) const {
 	// pushSpace()
 	int xret = this->QMovie::pushSpace();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_18(Smoke::Stack x) {
 	// pushData(const uchar*, int)
-	this->QMovie::pushData((const uchar*)x[1].s_class,(int)x[2].s_int);
-	x[0].s_int = x[0].s_int; // noop
+	this->QMovie::pushData((const uchar*)x[1].s_voidp,(int)x[2].s_int);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_19(Smoke::Stack x) const {
 	// backgroundColor()
 	const QColor& xret = this->QMovie::backgroundColor();
-	x[0].s_class = (void*)&xret;
+	x[0].s_voidp = (void*)&xret;
     }
     void x_20(Smoke::Stack x) {
 	// setBackgroundColor(const QColor&)
-	this->QMovie::setBackgroundColor(*(const QColor *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QMovie::setBackgroundColor(*(const QColor *)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_21(Smoke::Stack x) const {
 	// getValidRect()
 	const QRect& xret = this->QMovie::getValidRect();
-	x[0].s_class = (void*)&xret;
+	x[0].s_voidp = (void*)&xret;
     }
     void x_22(Smoke::Stack x) const {
 	// framePixmap()
 	const QPixmap& xret = this->QMovie::framePixmap();
-	x[0].s_class = (void*)&xret;
+	x[0].s_voidp = (void*)&xret;
     }
     void x_23(Smoke::Stack x) const {
 	// frameImage()
 	const QImage& xret = this->QMovie::frameImage();
-	x[0].s_class = (void*)&xret;
+	x[0].s_voidp = (void*)&xret;
     }
     void x_24(Smoke::Stack x) const {
 	// isNull()
 	bool xret = this->QMovie::isNull();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_25(Smoke::Stack x) const {
 	// frameNumber()
 	int xret = this->QMovie::frameNumber();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_26(Smoke::Stack x) const {
 	// steps()
 	int xret = this->QMovie::steps();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_27(Smoke::Stack x) const {
 	// paused()
 	bool xret = this->QMovie::paused();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_28(Smoke::Stack x) const {
 	// finished()
 	bool xret = this->QMovie::finished();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_29(Smoke::Stack x) const {
 	// running()
 	bool xret = this->QMovie::running();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_30(Smoke::Stack x) {
 	// unpause()
 	this->QMovie::unpause();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_31(Smoke::Stack x) {
 	// pause()
 	this->QMovie::pause();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_32(Smoke::Stack x) {
 	// step()
 	this->QMovie::step();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_33(Smoke::Stack x) {
 	// step(int)
 	this->QMovie::step((int)x[1].s_int);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_34(Smoke::Stack x) {
 	// restart()
 	this->QMovie::restart();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_35(Smoke::Stack x) const {
 	// speed()
 	int xret = this->QMovie::speed();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_36(Smoke::Stack x) {
 	// setSpeed(int)
 	this->QMovie::setSpeed((int)x[1].s_int);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_37(Smoke::Stack x) {
 	// connectResize(QObject*, const char*)
-	this->QMovie::connectResize((QObject*)x[1].s_class,(const char*)x[2].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QMovie::connectResize((QObject*)x[1].s_voidp,(const char*)x[2].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_38(Smoke::Stack x) {
 	// disconnectResize(QObject*, const char*)
-	this->QMovie::disconnectResize((QObject*)x[1].s_class,(const char*)x[2].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QMovie::disconnectResize((QObject*)x[1].s_voidp,(const char*)x[2].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_39(Smoke::Stack x) {
 	// disconnectResize(QObject*)
-	this->QMovie::disconnectResize((QObject*)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QMovie::disconnectResize((QObject*)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_40(Smoke::Stack x) {
 	// connectUpdate(QObject*, const char*)
-	this->QMovie::connectUpdate((QObject*)x[1].s_class,(const char*)x[2].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QMovie::connectUpdate((QObject*)x[1].s_voidp,(const char*)x[2].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_41(Smoke::Stack x) {
 	// disconnectUpdate(QObject*, const char*)
-	this->QMovie::disconnectUpdate((QObject*)x[1].s_class,(const char*)x[2].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QMovie::disconnectUpdate((QObject*)x[1].s_voidp,(const char*)x[2].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_42(Smoke::Stack x) {
 	// disconnectUpdate(QObject*)
-	this->QMovie::disconnectUpdate((QObject*)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QMovie::disconnectUpdate((QObject*)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_43(Smoke::Stack x) {
 	// connectStatus(QObject*, const char*)
-	this->QMovie::connectStatus((QObject*)x[1].s_class,(const char*)x[2].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QMovie::connectStatus((QObject*)x[1].s_voidp,(const char*)x[2].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_44(Smoke::Stack x) {
 	// disconnectStatus(QObject*, const char*)
-	this->QMovie::disconnectStatus((QObject*)x[1].s_class,(const char*)x[2].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QMovie::disconnectStatus((QObject*)x[1].s_voidp,(const char*)x[2].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_45(Smoke::Stack x) {
 	// disconnectStatus(QObject*)
-	this->QMovie::disconnectStatus((QObject*)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QMovie::disconnectStatus((QObject*)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     ~x_QMovie() {}
 };

@@ -10,42 +10,42 @@ public:
     void x_0(Smoke::Stack x) const {
 	// mibEnum()
 	int xret = this->QEucJpCodec::mibEnum();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_1(Smoke::Stack x) const {
 	// name()
 	const char* xret = this->QEucJpCodec::name();
-	x[0].s_class = (void*)xret;
+	x[0].s_voidp = (void*)xret;
     }
     void x_2(Smoke::Stack x) const {
 	// mimeName()
 	const char* xret = this->QEucJpCodec::mimeName();
-	x[0].s_class = (void*)xret;
+	x[0].s_voidp = (void*)xret;
     }
     void x_3(Smoke::Stack x) const {
 	// makeDecoder()
 	QTextDecoder* xret = this->QEucJpCodec::makeDecoder();
-	x[0].s_class = (void*)xret;
+	x[0].s_voidp = (void*)xret;
     }
     void x_4(Smoke::Stack x) const {
 	// fromUnicode(const QString&, int&)
-	QCString xret = this->QEucJpCodec::fromUnicode(*(const QString *)x[1].s_class,*(int *)x[2].s_class);
-	x[0].s_class = (void*)new QCString(xret);
+	QCString xret = this->QEucJpCodec::fromUnicode(*(const QString *)x[1].s_voidp,*(int *)x[2].s_voidp);
+	x[0].s_voidp = (void*)new QCString(xret);
     }
     void x_5(Smoke::Stack x) const {
 	// toUnicode(const char*, int)
-	QString xret = this->QEucJpCodec::toUnicode((const char*)x[1].s_class,(int)x[2].s_int);
-	x[0].s_class = (void*)new QString(xret);
+	QString xret = this->QEucJpCodec::toUnicode((const char*)x[1].s_voidp,(int)x[2].s_int);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     void x_6(Smoke::Stack x) const {
 	// heuristicContentMatch(const char*, int)
-	int xret = this->QEucJpCodec::heuristicContentMatch((const char*)x[1].s_class,(int)x[2].s_int);
-	x[0].s_int = (int)xret;
+	int xret = this->QEucJpCodec::heuristicContentMatch((const char*)x[1].s_voidp,(int)x[2].s_int);
+	x[0].s_int = xret;
     }
     void x_7(Smoke::Stack x) const {
 	// heuristicNameMatch(const char*)
-	int xret = this->QEucJpCodec::heuristicNameMatch((const char*)x[1].s_class);
-	x[0].s_int = (int)xret;
+	int xret = this->QEucJpCodec::heuristicNameMatch((const char*)x[1].s_voidp);
+	x[0].s_int = xret;
     }
     static void x_8(Smoke::Stack x) {
 	// QEucJpCodec()
@@ -62,14 +62,14 @@ public:
     }
     virtual bool canEncode(const QString& x1) const {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)&x1;
+	x[1].s_voidp = (void*)&x1;
 	if(qt_Smoke->callMethod(8539, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QTextCodec::canEncode(x1);
     }
     virtual unsigned short characterFromUnicode(const QString& x1, int x2) const {
 	Smoke::StackItem x[3];
-	x[1].s_class = (void*)&x1;
-	x[2].s_int = (int)x2;
+	x[1].s_voidp = (void*)&x1;
+	x[2].s_int = x2;
 	if(qt_Smoke->callMethod(8543, (void*)this, x)) {
 	    unsigned short *xptr = (unsigned short *)x[0].s_class;
 	    unsigned short xret(*xptr);
@@ -80,8 +80,8 @@ public:
     }
     virtual QCString fromUnicode(const QString& x1, int& x2) const {
 	Smoke::StackItem x[3];
-	x[1].s_class = (void*)&x1;
-	x[2].s_class = (void*)&x2;
+	x[1].s_voidp = (void*)&x1;
+	x[2].s_voidp = (void*)&x2;
 	if(qt_Smoke->callMethod(2372, (void*)this, x)) {
 	    QCString *xptr = (QCString *)x[0].s_class;
 	    QCString xret(*xptr);
@@ -92,9 +92,9 @@ public:
     }
     virtual QByteArray fromUnicode(const QString& x1, int x2, int x3) const {
 	Smoke::StackItem x[4];
-	x[1].s_class = (void*)&x1;
-	x[2].s_int = (int)x2;
-	x[3].s_int = (int)x3;
+	x[1].s_voidp = (void*)&x1;
+	x[2].s_int = x2;
+	x[3].s_int = x3;
 	if(qt_Smoke->callMethod(8542, (void*)this, x)) {
 	    QByteArray *xptr = (QByteArray *)x[0].s_class;
 	    QByteArray xret(*xptr);
@@ -105,14 +105,14 @@ public:
     }
     virtual int heuristicContentMatch(const char* x1, int x2) const {
 	Smoke::StackItem x[3];
-	x[1].s_class = (void*)x1;
-	x[2].s_int = (int)x2;
+	x[1].s_voidp = (void*)x1;
+	x[2].s_int = x2;
 	if(qt_Smoke->callMethod(2374, (void*)this, x)) return (int)x[0].s_int;
 	return this->QEucJpCodec::heuristicContentMatch(x1, x2);
     }
     virtual int heuristicNameMatch(const char* x1) const {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(2375, (void*)this, x)) return (int)x[0].s_int;
 	return this->QEucJpCodec::heuristicNameMatch(x1);
     }
@@ -143,8 +143,8 @@ public:
     }
     virtual QString toUnicode(const char* x1, int x2) const {
 	Smoke::StackItem x[3];
-	x[1].s_class = (void*)x1;
-	x[2].s_int = (int)x2;
+	x[1].s_voidp = (void*)x1;
+	x[2].s_int = x2;
 	if(qt_Smoke->callMethod(2373, (void*)this, x)) {
 	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);

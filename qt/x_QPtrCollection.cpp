@@ -8,12 +8,12 @@ public:
     void x_0(Smoke::Stack x) const {
 	// autoDelete()
 	bool xret = this->QPtrCollection::autoDelete();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_1(Smoke::Stack x) {
 	// setAutoDelete(bool)
 	this->QPtrCollection::setAutoDelete((bool)x[1].s_bool);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     static void x_2(Smoke::Stack x) {
 	// QPtrCollection()
@@ -24,15 +24,15 @@ public:
     }
     static void x_3(Smoke::Stack x) {
 	// QPtrCollection(const QPtrCollection&)
-	x_QPtrCollection* xret = new x_QPtrCollection(*(const QPtrCollection *)x[1].s_class);
+	x_QPtrCollection* xret = new x_QPtrCollection(*(const QPtrCollection *)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QPtrCollection(const QPtrCollection& x1) : QPtrCollection(x1) {
     }
     void x_4(Smoke::Stack x) {
 	// newItem(QPtrCollection::Item)
-	QPtrCollection::Item xret = this->QPtrCollection::newItem(*(QPtrCollection::Item *)x[1].s_class);
-	x[0].s_class = (void*)new QPtrCollection::Item(xret);
+	QPtrCollection::Item xret = this->QPtrCollection::newItem(*(QPtrCollection::Item *)x[1].s_voidp);
+	x[0].s_voidp = (void*)new QPtrCollection::Item(xret);
     }
     virtual void clear() {
 	Smoke::StackItem x[1];
@@ -48,14 +48,14 @@ public:
     }
     virtual void deleteItem(QPtrCollection::Item x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)&x1;
+	x[1].s_voidp = (void*)&x1;
 	qt_Smoke->callMethod(6325, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }
     virtual QPtrCollection::Item newItem(QPtrCollection::Item x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)&x1;
+	x[1].s_voidp = (void*)&x1;
 	if(qt_Smoke->callMethod(6324, (void*)this, x)) {
 	    QPtrCollection::Item *xptr = (QPtrCollection::Item *)x[0].s_class;
 	    QPtrCollection::Item xret(*xptr);

@@ -24,9 +24,9 @@ public:
     }
     virtual bool resolveEntity(const QString& x1, const QString& x2, QXmlInputSource*& x3) {
 	Smoke::StackItem x[4];
-	x[1].s_class = (void*)&x1;
-	x[2].s_class = (void*)&x2;
-	x[3].s_class = (void*)&x3;
+	x[1].s_voidp = (void*)&x1;
+	x[2].s_voidp = (void*)&x2;
+	x[3].s_voidp = (void*)&x3;
 	qt_Smoke->callMethod(10040, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT

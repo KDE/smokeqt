@@ -21,15 +21,15 @@ public:
     }
     static void x_2(Smoke::Stack x) {
 	// QStrList(const QStrList&)
-	x_QStrList* xret = new x_QStrList(*(const QStrList *)x[1].s_class);
+	x_QStrList* xret = new x_QStrList(*(const QStrList *)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QStrList(const QStrList& x1) : QStrList(x1) {
     }
     void x_3(Smoke::Stack x) {
 	// operator=(const QStrList&)
-	QStrList& xret = this->QStrList::operator=(*(const QStrList *)x[1].s_class);
-	x[0].s_class = (void*)&xret;
+	QStrList& xret = this->QStrList::operator=(*(const QStrList *)x[1].s_voidp);
+	x[0].s_voidp = (void*)&xret;
     }
     ~x_QStrList() {}
 };

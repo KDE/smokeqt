@@ -14,7 +14,7 @@ public:
     }
     static void x_1(Smoke::Stack x) {
 	// QStringData(QChar*, uint, uint)
-	x_QStringData* xret = new x_QStringData((QChar*)x[1].s_class,(uint)x[2].s_uint,(uint)x[3].s_uint);
+	x_QStringData* xret = new x_QStringData((QChar*)x[1].s_voidp,(uint)x[2].s_uint,(uint)x[3].s_uint);
 	x[0].s_class = (void*)xret;
     }
     x_QStringData(QChar* x1, uint x2, uint x3) : QStringData(x1, x2, x3) {
@@ -22,12 +22,12 @@ public:
     void x_2(Smoke::Stack x) {
 	// deleteSelf()
 	this->QStringData::deleteSelf();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_3(Smoke::Stack x) {
 	// setDirty()
 	this->QStringData::setDirty();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     ~x_QStringData() {}
 };

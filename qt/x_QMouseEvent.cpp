@@ -9,14 +9,14 @@ class x_QMouseEvent : public QMouseEvent {
 public:
     static void x_0(Smoke::Stack x) {
 	// QMouseEvent(QEvent::Type, const QPoint&, int, int)
-	x_QMouseEvent* xret = new x_QMouseEvent(*(QEvent::Type *)x[1].s_class,*(const QPoint *)x[2].s_class,(int)x[3].s_int,(int)x[4].s_int);
+	x_QMouseEvent* xret = new x_QMouseEvent((QEvent::Type)x[1].s_enum,*(const QPoint *)x[2].s_voidp,(int)x[3].s_int,(int)x[4].s_int);
 	x[0].s_class = (void*)xret;
     }
     x_QMouseEvent(QEvent::Type x1, const QPoint& x2, int x3, int x4) : QMouseEvent(x1, x2, x3, x4) {
     }
     static void x_1(Smoke::Stack x) {
 	// QMouseEvent(QEvent::Type, const QPoint&, const QPoint&, int, int)
-	x_QMouseEvent* xret = new x_QMouseEvent(*(QEvent::Type *)x[1].s_class,*(const QPoint *)x[2].s_class,*(const QPoint *)x[3].s_class,(int)x[4].s_int,(int)x[5].s_int);
+	x_QMouseEvent* xret = new x_QMouseEvent((QEvent::Type)x[1].s_enum,*(const QPoint *)x[2].s_voidp,*(const QPoint *)x[3].s_voidp,(int)x[4].s_int,(int)x[5].s_int);
 	x[0].s_class = (void*)xret;
     }
     x_QMouseEvent(QEvent::Type x1, const QPoint& x2, const QPoint& x3, int x4, int x5) : QMouseEvent(x1, x2, x3, x4, x5) {
@@ -24,62 +24,62 @@ public:
     void x_2(Smoke::Stack x) const {
 	// pos()
 	const QPoint& xret = this->QMouseEvent::pos();
-	x[0].s_class = (void*)&xret;
+	x[0].s_voidp = (void*)&xret;
     }
     void x_3(Smoke::Stack x) const {
 	// globalPos()
 	const QPoint& xret = this->QMouseEvent::globalPos();
-	x[0].s_class = (void*)&xret;
+	x[0].s_voidp = (void*)&xret;
     }
     void x_4(Smoke::Stack x) const {
 	// x()
 	int xret = this->QMouseEvent::x();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_5(Smoke::Stack x) const {
 	// y()
 	int xret = this->QMouseEvent::y();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_6(Smoke::Stack x) const {
 	// globalX()
 	int xret = this->QMouseEvent::globalX();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_7(Smoke::Stack x) const {
 	// globalY()
 	int xret = this->QMouseEvent::globalY();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_8(Smoke::Stack x) const {
 	// button()
 	Qt::ButtonState xret = this->QMouseEvent::button();
-	x[0].s_class = (void*)new Qt::ButtonState(xret);
+	x[0].s_enum = xret;
     }
     void x_9(Smoke::Stack x) const {
 	// state()
 	Qt::ButtonState xret = this->QMouseEvent::state();
-	x[0].s_class = (void*)new Qt::ButtonState(xret);
+	x[0].s_enum = xret;
     }
     void x_10(Smoke::Stack x) const {
 	// stateAfter()
 	Qt::ButtonState xret = this->QMouseEvent::stateAfter();
-	x[0].s_class = (void*)new Qt::ButtonState(xret);
+	x[0].s_enum = xret;
     }
     void x_11(Smoke::Stack x) const {
 	// isAccepted()
 	bool xret = this->QMouseEvent::isAccepted();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_12(Smoke::Stack x) {
 	// accept()
 	this->QMouseEvent::accept();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_13(Smoke::Stack x) {
 	// ignore()
 	this->QMouseEvent::ignore();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     ~x_QMouseEvent() {}
 };

@@ -11,14 +11,14 @@ class x_QStyleSheet : public QStyleSheet {
 public:
     static void x_0(Smoke::Stack x) {
 	// QStyleSheet(QObject*, const char*)
-	x_QStyleSheet* xret = new x_QStyleSheet((QObject*)x[1].s_class,(const char*)x[2].s_class);
+	x_QStyleSheet* xret = new x_QStyleSheet((QObject*)x[1].s_voidp,(const char*)x[2].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QStyleSheet(QObject* x1, const char* x2) : QStyleSheet(x1, x2) {
     }
     static void x_1(Smoke::Stack x) {
 	// QStyleSheet(QObject*)
-	x_QStyleSheet* xret = new x_QStyleSheet((QObject*)x[1].s_class);
+	x_QStyleSheet* xret = new x_QStyleSheet((QObject*)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QStyleSheet(QObject* x1) : QStyleSheet(x1) {
@@ -32,124 +32,124 @@ public:
     }
     void x_3(Smoke::Stack x) {
 	// item(const QString&)
-	QStyleSheetItem* xret = this->QStyleSheet::item(*(const QString *)x[1].s_class);
-	x[0].s_class = (void*)xret;
+	QStyleSheetItem* xret = this->QStyleSheet::item(*(const QString *)x[1].s_voidp);
+	x[0].s_voidp = (void*)xret;
     }
     void x_4(Smoke::Stack x) const {
 	// item(const QString&)
-	const QStyleSheetItem* xret = this->QStyleSheet::item(*(const QString *)x[1].s_class);
-	x[0].s_class = (void*)xret;
+	const QStyleSheetItem* xret = this->QStyleSheet::item(*(const QString *)x[1].s_voidp);
+	x[0].s_voidp = (void*)xret;
     }
     void x_5(Smoke::Stack x) {
 	// insert(QStyleSheetItem*)
-	this->QStyleSheet::insert((QStyleSheetItem*)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QStyleSheet::insert((QStyleSheetItem*)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_6(Smoke::Stack x) const {
 	// tag(const QString&, const QMap<QString, QString>&, const QString&, const QMimeSourceFactory&, bool, QTextDocument*)
-	QTextCustomItem* xret = this->QStyleSheet::tag(*(const QString *)x[1].s_class,*(const QMap<QString, QString> *)x[2].s_class,*(const QString *)x[3].s_class,*(const QMimeSourceFactory *)x[4].s_class,(bool)x[5].s_bool,(QTextDocument*)x[6].s_class);
-	x[0].s_class = (void*)xret;
+	QTextCustomItem* xret = this->QStyleSheet::tag(*(const QString *)x[1].s_voidp,*(const QMap<QString, QString> *)x[2].s_voidp,*(const QString *)x[3].s_voidp,*(const QMimeSourceFactory *)x[4].s_voidp,(bool)x[5].s_bool,(QTextDocument*)x[6].s_voidp);
+	x[0].s_voidp = (void*)xret;
     }
     void x_7(Smoke::Stack x) const {
 	// scaleFont(QFont&, int)
-	this->QStyleSheet::scaleFont(*(QFont *)x[1].s_class,(int)x[2].s_int);
-	x[0].s_int = x[0].s_int; // noop
+	this->QStyleSheet::scaleFont(*(QFont *)x[1].s_voidp,(int)x[2].s_int);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_8(Smoke::Stack x) const {
 	// error(const QString&)
-	this->QStyleSheet::error(*(const QString *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QStyleSheet::error(*(const QString *)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     static void x_9(Smoke::Stack x) {
 	// defaultSheet()
 	QStyleSheet* xret = QStyleSheet::defaultSheet();
-	x[0].s_class = (void*)xret;
+	x[0].s_voidp = (void*)xret;
     }
     static void x_10(Smoke::Stack x) {
 	// setDefaultSheet(QStyleSheet*)
-	QStyleSheet::setDefaultSheet((QStyleSheet*)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	QStyleSheet::setDefaultSheet((QStyleSheet*)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     static void x_11(Smoke::Stack x) {
 	// escape(const QString&)
-	QString xret = QStyleSheet::escape(*(const QString *)x[1].s_class);
-	x[0].s_class = (void*)new QString(xret);
+	QString xret = QStyleSheet::escape(*(const QString *)x[1].s_voidp);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     static void x_12(Smoke::Stack x) {
 	// convertFromPlainText(const QString&, QStyleSheetItem::WhiteSpaceMode)
-	QString xret = QStyleSheet::convertFromPlainText(*(const QString *)x[1].s_class,*(QStyleSheetItem::WhiteSpaceMode *)x[2].s_class);
-	x[0].s_class = (void*)new QString(xret);
+	QString xret = QStyleSheet::convertFromPlainText(*(const QString *)x[1].s_voidp,(QStyleSheetItem::WhiteSpaceMode)x[2].s_enum);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     static void x_13(Smoke::Stack x) {
 	// convertFromPlainText(const QString&)
-	QString xret = QStyleSheet::convertFromPlainText(*(const QString *)x[1].s_class);
-	x[0].s_class = (void*)new QString(xret);
+	QString xret = QStyleSheet::convertFromPlainText(*(const QString *)x[1].s_voidp);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     static void x_14(Smoke::Stack x) {
 	// mightBeRichText(const QString&)
-	bool xret = QStyleSheet::mightBeRichText(*(const QString *)x[1].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = QStyleSheet::mightBeRichText(*(const QString *)x[1].s_voidp);
+	x[0].s_bool = xret;
     }
     virtual bool checkConnectArgs(const char* x1, const QObject* x2, const char* x3) {
 	Smoke::StackItem x[4];
-	x[1].s_class = (void*)x1;
-	x[2].s_class = (void*)x2;
-	x[3].s_class = (void*)x3;
+	x[1].s_voidp = (void*)x1;
+	x[2].s_voidp = (void*)x2;
+	x[3].s_voidp = (void*)x3;
 	if(qt_Smoke->callMethod(5470, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QObject::checkConnectArgs(x1, x2, x3);
     }
     virtual void childEvent(QChildEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(5466, (void*)this, x)) return;
 	this->QObject::childEvent(x1);
     }
     virtual void connectNotify(const char* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(5468, (void*)this, x)) return;
 	this->QObject::connectNotify(x1);
     }
     virtual void customEvent(QCustomEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(5467, (void*)this, x)) return;
 	this->QObject::customEvent(x1);
     }
     virtual void disconnectNotify(const char* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(5469, (void*)this, x)) return;
 	this->QObject::disconnectNotify(x1);
     }
     virtual void error(const QString& x1) const {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)&x1;
+	x[1].s_voidp = (void*)&x1;
 	if(qt_Smoke->callMethod(8023, (void*)this, x)) return;
 	this->QStyleSheet::error(x1);
     }
     virtual bool event(QEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(5405, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QObject::event(x1);
     }
     virtual bool eventFilter(QObject* x1, QEvent* x2) {
 	Smoke::StackItem x[3];
-	x[1].s_class = (void*)x1;
-	x[2].s_class = (void*)x2;
+	x[1].s_voidp = (void*)x1;
+	x[2].s_voidp = (void*)x2;
 	if(qt_Smoke->callMethod(5406, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QObject::eventFilter(x1, x2);
     }
     virtual void insertChild(QObject* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(5428, (void*)this, x)) return;
 	this->QObject::insertChild(x1);
     }
     virtual QVariant property(const char* x1) const {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(5442, (void*)this, x)) {
 	    QVariant *xptr = (QVariant *)x[0].s_class;
 	    QVariant xret(*xptr);
@@ -160,44 +160,44 @@ public:
     }
     virtual void removeChild(QObject* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(5429, (void*)this, x)) return;
 	this->QObject::removeChild(x1);
     }
     virtual void scaleFont(QFont& x1, int x2) const {
 	Smoke::StackItem x[3];
-	x[1].s_class = (void*)&x1;
-	x[2].s_int = (int)x2;
+	x[1].s_voidp = (void*)&x1;
+	x[2].s_int = x2;
 	if(qt_Smoke->callMethod(8022, (void*)this, x)) return;
 	this->QStyleSheet::scaleFont(x1, x2);
     }
     virtual void setName(const char* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(5411, (void*)this, x)) return;
 	this->QObject::setName(x1);
     }
     virtual bool setProperty(const char* x1, const QVariant& x2) {
 	Smoke::StackItem x[3];
-	x[1].s_class = (void*)x1;
-	x[2].s_class = (void*)&x2;
+	x[1].s_voidp = (void*)x1;
+	x[2].s_voidp = (void*)&x2;
 	if(qt_Smoke->callMethod(5441, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QObject::setProperty(x1, x2);
     }
     virtual QTextCustomItem* tag(const QString& x1, const QMap<QString, QString>& x2, const QString& x3, const QMimeSourceFactory& x4, bool x5, QTextDocument* x6) const {
 	Smoke::StackItem x[7];
-	x[1].s_class = (void*)&x1;
-	x[2].s_class = (void*)&x2;
-	x[3].s_class = (void*)&x3;
-	x[4].s_class = (void*)&x4;
-	x[5].s_bool = (bool)x5;
-	x[6].s_class = (void*)x6;
+	x[1].s_voidp = (void*)&x1;
+	x[2].s_voidp = (void*)&x2;
+	x[3].s_voidp = (void*)&x3;
+	x[4].s_voidp = (void*)&x4;
+	x[5].s_bool = x5;
+	x[6].s_voidp = (void*)x6;
 	if(qt_Smoke->callMethod(8021, (void*)this, x)) return (QTextCustomItem*)x[0].s_class;
 	return this->QStyleSheet::tag(x1, x2, x3, x4, x5, x6);
     }
     virtual void timerEvent(QTimerEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(5465, (void*)this, x)) return;
 	this->QObject::timerEvent(x1);
     }

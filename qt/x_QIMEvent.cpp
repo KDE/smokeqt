@@ -8,7 +8,7 @@ class x_QIMEvent : public QIMEvent {
 public:
     static void x_0(Smoke::Stack x) {
 	// QIMEvent(QEvent::Type, const QString&, int)
-	x_QIMEvent* xret = new x_QIMEvent(*(QEvent::Type *)x[1].s_class,*(const QString *)x[2].s_class,(int)x[3].s_int);
+	x_QIMEvent* xret = new x_QIMEvent((QEvent::Type)x[1].s_enum,*(const QString *)x[2].s_voidp,(int)x[3].s_int);
 	x[0].s_class = (void*)xret;
     }
     x_QIMEvent(QEvent::Type x1, const QString& x2, int x3) : QIMEvent(x1, x2, x3) {
@@ -16,27 +16,27 @@ public:
     void x_1(Smoke::Stack x) const {
 	// text()
 	const QString& xret = this->QIMEvent::text();
-	x[0].s_class = (void*)&xret;
+	x[0].s_voidp = (void*)&xret;
     }
     void x_2(Smoke::Stack x) const {
 	// cursorPos()
 	int xret = this->QIMEvent::cursorPos();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_3(Smoke::Stack x) const {
 	// isAccepted()
 	bool xret = this->QIMEvent::isAccepted();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_4(Smoke::Stack x) {
 	// accept()
 	this->QIMEvent::accept();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_5(Smoke::Stack x) {
 	// ignore()
 	this->QIMEvent::ignore();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     ~x_QIMEvent() {}
 };

@@ -17,14 +17,14 @@ public:
     }
     static void x_1(Smoke::Stack x) {
 	// QRect(const QPoint&, const QPoint&)
-	x_QRect* xret = new x_QRect(*(const QPoint *)x[1].s_class,*(const QPoint *)x[2].s_class);
+	x_QRect* xret = new x_QRect(*(const QPoint *)x[1].s_voidp,*(const QPoint *)x[2].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QRect(const QPoint& x1, const QPoint& x2) : QRect(x1, x2) {
     }
     static void x_2(Smoke::Stack x) {
 	// QRect(const QPoint&, const QSize&)
-	x_QRect* xret = new x_QRect(*(const QPoint *)x[1].s_class,*(const QSize *)x[2].s_class);
+	x_QRect* xret = new x_QRect(*(const QPoint *)x[1].s_voidp,*(const QSize *)x[2].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QRect(const QPoint& x1, const QSize& x2) : QRect(x1, x2) {
@@ -39,17 +39,17 @@ public:
     void x_4(Smoke::Stack x) const {
 	// isNull()
 	bool xret = this->QRect::isNull();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_5(Smoke::Stack x) const {
 	// isEmpty()
 	bool xret = this->QRect::isEmpty();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_6(Smoke::Stack x) const {
 	// isValid()
 	bool xret = this->QRect::isValid();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_7(Smoke::Stack x) const {
 	// normalize()
@@ -59,82 +59,82 @@ public:
     void x_8(Smoke::Stack x) const {
 	// left()
 	int xret = this->QRect::left();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_9(Smoke::Stack x) const {
 	// top()
 	int xret = this->QRect::top();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_10(Smoke::Stack x) const {
 	// right()
 	int xret = this->QRect::right();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_11(Smoke::Stack x) const {
 	// bottom()
 	int xret = this->QRect::bottom();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_12(Smoke::Stack x) {
 	// rLeft()
 	QCOORD& xret = this->QRect::rLeft();
-	x[0].s_class = (void*)&xret;
+	x[0].s_voidp = (void*)&xret;
     }
     void x_13(Smoke::Stack x) {
 	// rTop()
 	QCOORD& xret = this->QRect::rTop();
-	x[0].s_class = (void*)&xret;
+	x[0].s_voidp = (void*)&xret;
     }
     void x_14(Smoke::Stack x) {
 	// rRight()
 	QCOORD& xret = this->QRect::rRight();
-	x[0].s_class = (void*)&xret;
+	x[0].s_voidp = (void*)&xret;
     }
     void x_15(Smoke::Stack x) {
 	// rBottom()
 	QCOORD& xret = this->QRect::rBottom();
-	x[0].s_class = (void*)&xret;
+	x[0].s_voidp = (void*)&xret;
     }
     void x_16(Smoke::Stack x) const {
 	// x()
 	int xret = this->QRect::x();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_17(Smoke::Stack x) const {
 	// y()
 	int xret = this->QRect::y();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_18(Smoke::Stack x) {
 	// setLeft(int)
 	this->QRect::setLeft((int)x[1].s_int);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_19(Smoke::Stack x) {
 	// setTop(int)
 	this->QRect::setTop((int)x[1].s_int);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_20(Smoke::Stack x) {
 	// setRight(int)
 	this->QRect::setRight((int)x[1].s_int);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_21(Smoke::Stack x) {
 	// setBottom(int)
 	this->QRect::setBottom((int)x[1].s_int);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_22(Smoke::Stack x) {
 	// setX(int)
 	this->QRect::setX((int)x[1].s_int);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_23(Smoke::Stack x) {
 	// setY(int)
 	this->QRect::setY((int)x[1].s_int);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_24(Smoke::Stack x) const {
 	// topLeft()
@@ -163,58 +163,58 @@ public:
     }
     void x_29(Smoke::Stack x) const {
 	// rect(int*, int*, int*, int*)
-	this->QRect::rect((int*)x[1].s_class,(int*)x[2].s_class,(int*)x[3].s_class,(int*)x[4].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QRect::rect((int*)x[1].s_voidp,(int*)x[2].s_voidp,(int*)x[3].s_voidp,(int*)x[4].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_30(Smoke::Stack x) const {
 	// coords(int*, int*, int*, int*)
-	this->QRect::coords((int*)x[1].s_class,(int*)x[2].s_class,(int*)x[3].s_class,(int*)x[4].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QRect::coords((int*)x[1].s_voidp,(int*)x[2].s_voidp,(int*)x[3].s_voidp,(int*)x[4].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_31(Smoke::Stack x) {
 	// moveTopLeft(const QPoint&)
-	this->QRect::moveTopLeft(*(const QPoint *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QRect::moveTopLeft(*(const QPoint *)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_32(Smoke::Stack x) {
 	// moveBottomRight(const QPoint&)
-	this->QRect::moveBottomRight(*(const QPoint *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QRect::moveBottomRight(*(const QPoint *)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_33(Smoke::Stack x) {
 	// moveTopRight(const QPoint&)
-	this->QRect::moveTopRight(*(const QPoint *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QRect::moveTopRight(*(const QPoint *)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_34(Smoke::Stack x) {
 	// moveBottomLeft(const QPoint&)
-	this->QRect::moveBottomLeft(*(const QPoint *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QRect::moveBottomLeft(*(const QPoint *)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_35(Smoke::Stack x) {
 	// moveCenter(const QPoint&)
-	this->QRect::moveCenter(*(const QPoint *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QRect::moveCenter(*(const QPoint *)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_36(Smoke::Stack x) {
 	// moveBy(int, int)
 	this->QRect::moveBy((int)x[1].s_int,(int)x[2].s_int);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_37(Smoke::Stack x) {
 	// setRect(int, int, int, int)
 	this->QRect::setRect((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_38(Smoke::Stack x) {
 	// setCoords(int, int, int, int)
 	this->QRect::setCoords((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_39(Smoke::Stack x) {
 	// addCoords(int, int, int, int)
 	this->QRect::addCoords((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_40(Smoke::Stack x) const {
 	// size()
@@ -224,92 +224,92 @@ public:
     void x_41(Smoke::Stack x) const {
 	// width()
 	int xret = this->QRect::width();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_42(Smoke::Stack x) const {
 	// height()
 	int xret = this->QRect::height();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_43(Smoke::Stack x) {
 	// setWidth(int)
 	this->QRect::setWidth((int)x[1].s_int);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_44(Smoke::Stack x) {
 	// setHeight(int)
 	this->QRect::setHeight((int)x[1].s_int);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_45(Smoke::Stack x) {
 	// setSize(const QSize&)
-	this->QRect::setSize(*(const QSize *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QRect::setSize(*(const QSize *)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_46(Smoke::Stack x) const {
 	// operator|(const QRect&)
-	QRect xret = this->QRect::operator|(*(const QRect *)x[1].s_class);
+	QRect xret = this->QRect::operator|(*(const QRect *)x[1].s_voidp);
 	x[0].s_class = (void*)new QRect(xret);
     }
     void x_47(Smoke::Stack x) const {
 	// operator&(const QRect&)
-	QRect xret = this->QRect::operator&(*(const QRect *)x[1].s_class);
+	QRect xret = this->QRect::operator&(*(const QRect *)x[1].s_voidp);
 	x[0].s_class = (void*)new QRect(xret);
     }
     void x_48(Smoke::Stack x) {
 	// operator|=(const QRect&)
-	QRect& xret = this->QRect::operator|=(*(const QRect *)x[1].s_class);
-	x[0].s_class = (void*)&xret;
+	QRect& xret = this->QRect::operator|=(*(const QRect *)x[1].s_voidp);
+	x[0].s_voidp = (void*)&xret;
     }
     void x_49(Smoke::Stack x) {
 	// operator&=(const QRect&)
-	QRect& xret = this->QRect::operator&=(*(const QRect *)x[1].s_class);
-	x[0].s_class = (void*)&xret;
+	QRect& xret = this->QRect::operator&=(*(const QRect *)x[1].s_voidp);
+	x[0].s_voidp = (void*)&xret;
     }
     void x_50(Smoke::Stack x) const {
 	// contains(const QPoint&, bool)
-	bool xret = this->QRect::contains(*(const QPoint *)x[1].s_class,(bool)x[2].s_bool);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QRect::contains(*(const QPoint *)x[1].s_voidp,(bool)x[2].s_bool);
+	x[0].s_bool = xret;
     }
     void x_51(Smoke::Stack x) const {
 	// contains(const QPoint&)
-	bool xret = this->QRect::contains(*(const QPoint *)x[1].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QRect::contains(*(const QPoint *)x[1].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_52(Smoke::Stack x) const {
 	// contains(int, int, bool)
 	bool xret = this->QRect::contains((int)x[1].s_int,(int)x[2].s_int,(bool)x[3].s_bool);
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_53(Smoke::Stack x) const {
 	// contains(int, int)
 	bool xret = this->QRect::contains((int)x[1].s_int,(int)x[2].s_int);
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_54(Smoke::Stack x) const {
 	// contains(const QRect&, bool)
-	bool xret = this->QRect::contains(*(const QRect *)x[1].s_class,(bool)x[2].s_bool);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QRect::contains(*(const QRect *)x[1].s_voidp,(bool)x[2].s_bool);
+	x[0].s_bool = xret;
     }
     void x_55(Smoke::Stack x) const {
 	// contains(const QRect&)
-	bool xret = this->QRect::contains(*(const QRect *)x[1].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QRect::contains(*(const QRect *)x[1].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_56(Smoke::Stack x) const {
 	// unite(const QRect&)
-	QRect xret = this->QRect::unite(*(const QRect *)x[1].s_class);
+	QRect xret = this->QRect::unite(*(const QRect *)x[1].s_voidp);
 	x[0].s_class = (void*)new QRect(xret);
     }
     void x_57(Smoke::Stack x) const {
 	// intersect(const QRect&)
-	QRect xret = this->QRect::intersect(*(const QRect *)x[1].s_class);
+	QRect xret = this->QRect::intersect(*(const QRect *)x[1].s_voidp);
 	x[0].s_class = (void*)new QRect(xret);
     }
     void x_58(Smoke::Stack x) const {
 	// intersects(const QRect&)
-	bool xret = this->QRect::intersects(*(const QRect *)x[1].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QRect::intersects(*(const QRect *)x[1].s_voidp);
+	x[0].s_bool = xret;
     }
     ~x_QRect() {}
 };

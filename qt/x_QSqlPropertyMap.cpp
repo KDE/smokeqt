@@ -16,38 +16,38 @@ public:
     }
     void x_1(Smoke::Stack x) {
 	// property(QWidget*)
-	QVariant xret = this->QSqlPropertyMap::property((QWidget*)x[1].s_class);
+	QVariant xret = this->QSqlPropertyMap::property((QWidget*)x[1].s_voidp);
 	x[0].s_class = (void*)new QVariant(xret);
     }
     void x_2(Smoke::Stack x) {
 	// setProperty(QWidget*, const QVariant&)
-	this->QSqlPropertyMap::setProperty((QWidget*)x[1].s_class,*(const QVariant *)x[2].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QSqlPropertyMap::setProperty((QWidget*)x[1].s_voidp,*(const QVariant *)x[2].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_3(Smoke::Stack x) {
 	// insert(const QString&, const QString&)
-	this->QSqlPropertyMap::insert(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QSqlPropertyMap::insert(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_4(Smoke::Stack x) {
 	// remove(const QString&)
-	this->QSqlPropertyMap::remove(*(const QString *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QSqlPropertyMap::remove(*(const QString *)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     static void x_5(Smoke::Stack x) {
 	// defaultMap()
 	QSqlPropertyMap* xret = QSqlPropertyMap::defaultMap();
-	x[0].s_class = (void*)xret;
+	x[0].s_voidp = (void*)xret;
     }
     static void x_6(Smoke::Stack x) {
 	// installDefaultMap(QSqlPropertyMap*)
-	QSqlPropertyMap::installDefaultMap((QSqlPropertyMap*)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	QSqlPropertyMap::installDefaultMap((QSqlPropertyMap*)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     virtual void setProperty(QWidget* x1, const QVariant& x2) {
 	Smoke::StackItem x[3];
-	x[1].s_class = (void*)x1;
-	x[2].s_class = (void*)&x2;
+	x[1].s_voidp = (void*)x1;
+	x[2].s_voidp = (void*)&x2;
 	if(qt_Smoke->callMethod(7545, (void*)this, x)) return;
 	this->QSqlPropertyMap::setProperty(x1, x2);
     }

@@ -199,7 +199,7 @@ public:
     }
     static void x_64(Smoke::Stack x) {
 	// QEvent(QEvent::Type)
-	x_QEvent* xret = new x_QEvent(*(QEvent::Type *)x[1].s_class);
+	x_QEvent* xret = new x_QEvent((QEvent::Type)x[1].s_enum);
 	x[0].s_class = (void*)xret;
     }
     x_QEvent(QEvent::Type x1) : QEvent(x1) {
@@ -207,12 +207,12 @@ public:
     void x_65(Smoke::Stack x) const {
 	// type()
 	QEvent::Type xret = this->QEvent::type();
-	x[0].s_class = (void*)new QEvent::Type(xret);
+	x[0].s_enum = xret;
     }
     void x_66(Smoke::Stack x) const {
 	// spontaneous()
 	bool xret = this->QEvent::spontaneous();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     ~x_QEvent() {}
 };

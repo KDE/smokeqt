@@ -14,8 +14,8 @@ public:
     }
     virtual QImageFormat* decoderFor(const uchar* x1, int x2) {
 	Smoke::StackItem x[3];
-	x[1].s_class = (void*)x1;
-	x[2].s_int = (int)x2;
+	x[1].s_voidp = (void*)x1;
+	x[2].s_int = x2;
 	qt_Smoke->callMethod(3809, (void*)this, x, true /*pure virtual*/);
 	return (QImageFormat*)x[0].s_class;
 	// ABSTRACT

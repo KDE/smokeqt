@@ -35,120 +35,120 @@ public:
     }
     static void x_6(Smoke::Stack x) {
 	// QColor(int, int, int, QColor::Spec)
-	x_QColor* xret = new x_QColor((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,*(QColor::Spec *)x[4].s_class);
+	x_QColor* xret = new x_QColor((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(QColor::Spec)x[4].s_enum);
 	x[0].s_class = (void*)xret;
     }
     x_QColor(int x1, int x2, int x3, QColor::Spec x4) : QColor(x1, x2, x3, x4) {
     }
     static void x_7(Smoke::Stack x) {
 	// QColor(QRgb, uint)
-	x_QColor* xret = new x_QColor(*(QRgb *)x[1].s_class,(uint)x[2].s_uint);
+	x_QColor* xret = new x_QColor((QRgb)x[1].s_uint,(uint)x[2].s_uint);
 	x[0].s_class = (void*)xret;
     }
     x_QColor(QRgb x1, uint x2) : QColor(x1, x2) {
     }
     static void x_8(Smoke::Stack x) {
 	// QColor(QRgb)
-	x_QColor* xret = new x_QColor(*(QRgb *)x[1].s_class);
+	x_QColor* xret = new x_QColor((QRgb)x[1].s_uint);
 	x[0].s_class = (void*)xret;
     }
     x_QColor(QRgb x1) : QColor(x1) {
     }
     static void x_9(Smoke::Stack x) {
 	// QColor(const QString&)
-	x_QColor* xret = new x_QColor(*(const QString *)x[1].s_class);
+	x_QColor* xret = new x_QColor(*(const QString *)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QColor(const QString& x1) : QColor(x1) {
     }
     static void x_10(Smoke::Stack x) {
 	// QColor(const char*)
-	x_QColor* xret = new x_QColor((const char*)x[1].s_class);
+	x_QColor* xret = new x_QColor((const char*)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QColor(const char* x1) : QColor(x1) {
     }
     static void x_11(Smoke::Stack x) {
 	// QColor(const QColor&)
-	x_QColor* xret = new x_QColor(*(const QColor *)x[1].s_class);
+	x_QColor* xret = new x_QColor(*(const QColor *)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QColor(const QColor& x1) : QColor(x1) {
     }
     void x_12(Smoke::Stack x) {
 	// operator=(const QColor&)
-	QColor& xret = this->QColor::operator=(*(const QColor *)x[1].s_class);
-	x[0].s_class = (void*)&xret;
+	QColor& xret = this->QColor::operator=(*(const QColor *)x[1].s_voidp);
+	x[0].s_voidp = (void*)&xret;
     }
     void x_13(Smoke::Stack x) const {
 	// isValid()
 	bool xret = this->QColor::isValid();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_14(Smoke::Stack x) const {
 	// isDirty()
 	bool xret = this->QColor::isDirty();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_15(Smoke::Stack x) const {
 	// name()
 	QString xret = this->QColor::name();
-	x[0].s_class = (void*)new QString(xret);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     void x_16(Smoke::Stack x) {
 	// setNamedColor(const QString&)
-	this->QColor::setNamedColor(*(const QString *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QColor::setNamedColor(*(const QString *)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_17(Smoke::Stack x) const {
 	// rgb(int*, int*, int*)
-	this->QColor::rgb((int*)x[1].s_class,(int*)x[2].s_class,(int*)x[3].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QColor::rgb((int*)x[1].s_voidp,(int*)x[2].s_voidp,(int*)x[3].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_18(Smoke::Stack x) const {
 	// rgb()
 	QRgb xret = this->QColor::rgb();
-	x[0].s_class = (void*)new QRgb(xret);
+	x[0].s_uint = xret;
     }
     void x_19(Smoke::Stack x) {
 	// setRgb(int, int, int)
 	this->QColor::setRgb((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_20(Smoke::Stack x) {
 	// setRgb(QRgb)
-	this->QColor::setRgb(*(QRgb *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QColor::setRgb((QRgb)x[1].s_uint);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_21(Smoke::Stack x) const {
 	// red()
 	int xret = this->QColor::red();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_22(Smoke::Stack x) const {
 	// green()
 	int xret = this->QColor::green();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_23(Smoke::Stack x) const {
 	// blue()
 	int xret = this->QColor::blue();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_24(Smoke::Stack x) const {
 	// hsv(int*, int*, int*)
-	this->QColor::hsv((int*)x[1].s_class,(int*)x[2].s_class,(int*)x[3].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QColor::hsv((int*)x[1].s_voidp,(int*)x[2].s_voidp,(int*)x[3].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_25(Smoke::Stack x) const {
 	// getHsv(int&, int&, int&)
-	this->QColor::getHsv(*(int *)x[1].s_class,*(int *)x[2].s_class,*(int *)x[3].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QColor::getHsv(*(int *)x[1].s_voidp,*(int *)x[2].s_voidp,*(int *)x[3].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_26(Smoke::Stack x) {
 	// setHsv(int, int, int)
 	this->QColor::setHsv((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_27(Smoke::Stack x) const {
 	// light(int)
@@ -172,63 +172,63 @@ public:
     }
     void x_31(Smoke::Stack x) const {
 	// operator==(const QColor&)
-	bool xret = this->QColor::operator==(*(const QColor *)x[1].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QColor::operator==(*(const QColor *)x[1].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_32(Smoke::Stack x) const {
 	// operator!=(const QColor&)
-	bool xret = this->QColor::operator!=(*(const QColor *)x[1].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QColor::operator!=(*(const QColor *)x[1].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_33(Smoke::Stack x) {
 	// alloc()
 	uint xret = this->QColor::alloc();
-	x[0].s_uint = (uint)xret;
+	x[0].s_uint = xret;
     }
     void x_34(Smoke::Stack x) const {
 	// pixel()
 	uint xret = this->QColor::pixel();
-	x[0].s_uint = (uint)xret;
+	x[0].s_uint = xret;
     }
     static void x_35(Smoke::Stack x) {
 	// maxColors()
 	int xret = QColor::maxColors();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     static void x_36(Smoke::Stack x) {
 	// numBitPlanes()
 	int xret = QColor::numBitPlanes();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     static void x_37(Smoke::Stack x) {
 	// enterAllocContext()
 	int xret = QColor::enterAllocContext();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     static void x_38(Smoke::Stack x) {
 	// leaveAllocContext()
 	QColor::leaveAllocContext();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     static void x_39(Smoke::Stack x) {
 	// currentAllocContext()
 	int xret = QColor::currentAllocContext();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     static void x_40(Smoke::Stack x) {
 	// destroyAllocContext(int)
 	QColor::destroyAllocContext((int)x[1].s_int);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     static void x_41(Smoke::Stack x) {
 	// initialize()
 	QColor::initialize();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     static void x_42(Smoke::Stack x) {
 	// cleanup()
 	QColor::cleanup();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     ~x_QColor() {}
 };

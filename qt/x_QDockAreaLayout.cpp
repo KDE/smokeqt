@@ -13,51 +13,51 @@ class x_QDockAreaLayout : public QDockAreaLayout {
 public:
     static void x_0(Smoke::Stack x) {
 	// QDockAreaLayout(QWidget*, Qt::Orientation, QPtrList<QDockWindow>*, int, int, const char*)
-	x_QDockAreaLayout* xret = new x_QDockAreaLayout((QWidget*)x[1].s_class,*(Qt::Orientation *)x[2].s_class,(QPtrList<QDockWindow>*)x[3].s_class,(int)x[4].s_int,(int)x[5].s_int,(const char*)x[6].s_class);
+	x_QDockAreaLayout* xret = new x_QDockAreaLayout((QWidget*)x[1].s_voidp,(Qt::Orientation)x[2].s_enum,(QPtrList<QDockWindow>*)x[3].s_voidp,(int)x[4].s_int,(int)x[5].s_int,(const char*)x[6].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QDockAreaLayout(QWidget* x1, Qt::Orientation x2, QPtrList<QDockWindow>* x3, int x4, int x5, const char* x6) : QDockAreaLayout(x1, x2, x3, x4, x5, x6) {
     }
     static void x_1(Smoke::Stack x) {
 	// QDockAreaLayout(QWidget*, Qt::Orientation, QPtrList<QDockWindow>*, int, int)
-	x_QDockAreaLayout* xret = new x_QDockAreaLayout((QWidget*)x[1].s_class,*(Qt::Orientation *)x[2].s_class,(QPtrList<QDockWindow>*)x[3].s_class,(int)x[4].s_int,(int)x[5].s_int);
+	x_QDockAreaLayout* xret = new x_QDockAreaLayout((QWidget*)x[1].s_voidp,(Qt::Orientation)x[2].s_enum,(QPtrList<QDockWindow>*)x[3].s_voidp,(int)x[4].s_int,(int)x[5].s_int);
 	x[0].s_class = (void*)xret;
     }
     x_QDockAreaLayout(QWidget* x1, Qt::Orientation x2, QPtrList<QDockWindow>* x3, int x4, int x5) : QDockAreaLayout(x1, x2, x3, x4, x5) {
     }
     static void x_2(Smoke::Stack x) {
 	// QDockAreaLayout(QWidget*, Qt::Orientation, QPtrList<QDockWindow>*, int)
-	x_QDockAreaLayout* xret = new x_QDockAreaLayout((QWidget*)x[1].s_class,*(Qt::Orientation *)x[2].s_class,(QPtrList<QDockWindow>*)x[3].s_class,(int)x[4].s_int);
+	x_QDockAreaLayout* xret = new x_QDockAreaLayout((QWidget*)x[1].s_voidp,(Qt::Orientation)x[2].s_enum,(QPtrList<QDockWindow>*)x[3].s_voidp,(int)x[4].s_int);
 	x[0].s_class = (void*)xret;
     }
     x_QDockAreaLayout(QWidget* x1, Qt::Orientation x2, QPtrList<QDockWindow>* x3, int x4) : QDockAreaLayout(x1, x2, x3, x4) {
     }
     static void x_3(Smoke::Stack x) {
 	// QDockAreaLayout(QWidget*, Qt::Orientation, QPtrList<QDockWindow>*)
-	x_QDockAreaLayout* xret = new x_QDockAreaLayout((QWidget*)x[1].s_class,*(Qt::Orientation *)x[2].s_class,(QPtrList<QDockWindow>*)x[3].s_class);
+	x_QDockAreaLayout* xret = new x_QDockAreaLayout((QWidget*)x[1].s_voidp,(Qt::Orientation)x[2].s_enum,(QPtrList<QDockWindow>*)x[3].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QDockAreaLayout(QWidget* x1, Qt::Orientation x2, QPtrList<QDockWindow>* x3) : QDockAreaLayout(x1, x2, x3) {
     }
     void x_4(Smoke::Stack x) {
 	// addItem(QLayoutItem*)
-	this->QDockAreaLayout::addItem((QLayoutItem*)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QDockAreaLayout::addItem((QLayoutItem*)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_5(Smoke::Stack x) const {
 	// hasHeightForWidth()
 	bool xret = this->QDockAreaLayout::hasHeightForWidth();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_6(Smoke::Stack x) const {
 	// heightForWidth(int)
 	int xret = this->QDockAreaLayout::heightForWidth((int)x[1].s_int);
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_7(Smoke::Stack x) const {
 	// widthForHeight(int)
 	int xret = this->QDockAreaLayout::widthForHeight((int)x[1].s_int);
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_8(Smoke::Stack x) const {
 	// sizeHint()
@@ -77,81 +77,81 @@ public:
     void x_11(Smoke::Stack x) const {
 	// expanding()
 	QSizePolicy::ExpandData xret = this->QDockAreaLayout::expanding();
-	x[0].s_class = (void*)new QSizePolicy::ExpandData(xret);
+	x[0].s_enum = xret;
     }
     void x_12(Smoke::Stack x) {
 	// invalidate()
 	this->QDockAreaLayout::invalidate();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_13(Smoke::Stack x) const {
 	// orientation()
 	Qt::Orientation xret = this->QDockAreaLayout::orientation();
-	x[0].s_class = (void*)new Qt::Orientation(xret);
+	x[0].s_enum = xret;
     }
     void x_14(Smoke::Stack x) const {
 	// lineList()
 	QValueList<QRect> xret = this->QDockAreaLayout::lineList();
-	x[0].s_class = (void*)new QValueList<QRect>(xret);
+	x[0].s_voidp = (void*)new QValueList<QRect>(xret);
     }
     void x_15(Smoke::Stack x) const {
 	// lineStarts()
 	QPtrList<QDockWindow> xret = this->QDockAreaLayout::lineStarts();
-	x[0].s_class = (void*)new QPtrList<QDockWindow>(xret);
+	x[0].s_voidp = (void*)new QPtrList<QDockWindow>(xret);
     }
     void x_16(Smoke::Stack x) {
 	// setGeometry(const QRect&)
-	this->QDockAreaLayout::setGeometry(*(const QRect *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QDockAreaLayout::setGeometry(*(const QRect *)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     virtual void addItem(QLayoutItem* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(1909, (void*)this, x)) return;
 	this->QDockAreaLayout::addItem(x1);
     }
     virtual bool checkConnectArgs(const char* x1, const QObject* x2, const char* x3) {
 	Smoke::StackItem x[4];
-	x[1].s_class = (void*)x1;
-	x[2].s_class = (void*)x2;
-	x[3].s_class = (void*)x3;
+	x[1].s_voidp = (void*)x1;
+	x[2].s_voidp = (void*)x2;
+	x[3].s_voidp = (void*)x3;
 	if(qt_Smoke->callMethod(5470, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QObject::checkConnectArgs(x1, x2, x3);
     }
     virtual void childEvent(QChildEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(4101, (void*)this, x)) return;
 	this->QLayout::childEvent(x1);
     }
     virtual void connectNotify(const char* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(5468, (void*)this, x)) return;
 	this->QObject::connectNotify(x1);
     }
     virtual void customEvent(QCustomEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(5467, (void*)this, x)) return;
 	this->QObject::customEvent(x1);
     }
     virtual void disconnectNotify(const char* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(5469, (void*)this, x)) return;
 	this->QObject::disconnectNotify(x1);
     }
     virtual bool event(QEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(5405, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QObject::event(x1);
     }
     virtual bool eventFilter(QObject* x1, QEvent* x2) {
 	Smoke::StackItem x[3];
-	x[1].s_class = (void*)x1;
-	x[2].s_class = (void*)x2;
+	x[1].s_voidp = (void*)x1;
+	x[2].s_voidp = (void*)x2;
 	if(qt_Smoke->callMethod(4100, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QLayout::eventFilter(x1, x2);
     }
@@ -182,13 +182,13 @@ public:
     }
     virtual int heightForWidth(int x1) const {
 	Smoke::StackItem x[2];
-	x[1].s_int = (int)x1;
+	x[1].s_int = x1;
 	if(qt_Smoke->callMethod(1911, (void*)this, x)) return (int)x[0].s_int;
 	return this->QDockAreaLayout::heightForWidth(x1);
     }
     virtual void insertChild(QObject* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(5428, (void*)this, x)) return;
 	this->QObject::insertChild(x1);
     }
@@ -239,7 +239,7 @@ public:
     }
     virtual QVariant property(const char* x1) const {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(5442, (void*)this, x)) {
 	    QVariant *xptr = (QVariant *)x[0].s_class;
 	    QVariant xret(*xptr);
@@ -250,56 +250,56 @@ public:
     }
     virtual void removeChild(QObject* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(5429, (void*)this, x)) return;
 	this->QObject::removeChild(x1);
     }
     virtual void setAlignment(int x1) {
 	Smoke::StackItem x[2];
-	x[1].s_int = (int)x1;
+	x[1].s_int = x1;
 	if(qt_Smoke->callMethod(4124, (void*)this, x)) return;
 	this->QLayoutItem::setAlignment(x1);
     }
     virtual void setAutoAdd(bool x1) {
 	Smoke::StackItem x[2];
-	x[1].s_bool = (bool)x1;
+	x[1].s_bool = x1;
 	if(qt_Smoke->callMethod(4079, (void*)this, x)) return;
 	this->QLayout::setAutoAdd(x1);
     }
     virtual void setGeometry(const QRect& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)&x1;
+	x[1].s_voidp = (void*)&x1;
 	if(qt_Smoke->callMethod(1921, (void*)this, x)) return;
 	this->QDockAreaLayout::setGeometry(x1);
     }
     virtual void setMargin(int x1) {
 	Smoke::StackItem x[2];
-	x[1].s_int = (int)x1;
+	x[1].s_int = x1;
 	if(qt_Smoke->callMethod(4068, (void*)this, x)) return;
 	this->QLayout::setMargin(x1);
     }
     virtual void setMenuBar(QMenuBar* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(4075, (void*)this, x)) return;
 	this->QLayout::setMenuBar(x1);
     }
     virtual void setName(const char* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(5411, (void*)this, x)) return;
 	this->QObject::setName(x1);
     }
     virtual bool setProperty(const char* x1, const QVariant& x2) {
 	Smoke::StackItem x[3];
-	x[1].s_class = (void*)x1;
-	x[2].s_class = (void*)&x2;
+	x[1].s_voidp = (void*)x1;
+	x[2].s_voidp = (void*)&x2;
 	if(qt_Smoke->callMethod(5441, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QObject::setProperty(x1, x2);
     }
     virtual void setSpacing(int x1) {
 	Smoke::StackItem x[2];
-	x[1].s_int = (int)x1;
+	x[1].s_int = x1;
 	if(qt_Smoke->callMethod(4069, (void*)this, x)) return;
 	this->QLayout::setSpacing(x1);
     }
@@ -320,7 +320,7 @@ public:
     }
     virtual void timerEvent(QTimerEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(5465, (void*)this, x)) return;
 	this->QObject::timerEvent(x1);
     }

@@ -16,17 +16,17 @@ public:
     void x_1(Smoke::Stack x) const {
 	// data()
 	QByteArray xret = this->QIconDragItem::data();
-	x[0].s_class = (void*)new QByteArray(xret);
+	x[0].s_voidp = (void*)new QByteArray(xret);
     }
     void x_2(Smoke::Stack x) {
 	// setData(const QByteArray&)
-	this->QIconDragItem::setData(*(const QByteArray *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QIconDragItem::setData(*(const QByteArray *)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_3(Smoke::Stack x) const {
 	// operator==(const QIconDragItem&)
-	bool xret = this->QIconDragItem::operator==(*(const QIconDragItem *)x[1].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QIconDragItem::operator==(*(const QIconDragItem *)x[1].s_voidp);
+	x[0].s_bool = xret;
     }
     virtual QByteArray data() const {
 	Smoke::StackItem x[1];
@@ -40,7 +40,7 @@ public:
     }
     virtual void setData(const QByteArray& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)&x1;
+	x[1].s_voidp = (void*)&x1;
 	if(qt_Smoke->callMethod(3415, (void*)this, x)) return;
 	this->QIconDragItem::setData(x1);
     }

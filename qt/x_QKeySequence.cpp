@@ -15,7 +15,7 @@ public:
     }
     static void x_1(Smoke::Stack x) {
 	// QKeySequence(const QString&)
-	x_QKeySequence* xret = new x_QKeySequence(*(const QString *)x[1].s_class);
+	x_QKeySequence* xret = new x_QKeySequence(*(const QString *)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QKeySequence(const QString& x1) : QKeySequence(x1) {
@@ -30,34 +30,34 @@ public:
     void x_3(Smoke::Stack x) const {
 	// operator QString()
 	this->QKeySequence::operator QString();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_4(Smoke::Stack x) const {
 	// operator int()
 	this->QKeySequence::operator int();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     static void x_5(Smoke::Stack x) {
 	// QKeySequence(const QKeySequence&)
-	x_QKeySequence* xret = new x_QKeySequence(*(const QKeySequence *)x[1].s_class);
+	x_QKeySequence* xret = new x_QKeySequence(*(const QKeySequence *)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QKeySequence(const QKeySequence& x1) : QKeySequence(x1) {
     }
     void x_6(Smoke::Stack x) {
 	// operator=(const QKeySequence&)
-	QKeySequence& xret = this->QKeySequence::operator=(*(const QKeySequence *)x[1].s_class);
-	x[0].s_class = (void*)&xret;
+	QKeySequence& xret = this->QKeySequence::operator=(*(const QKeySequence *)x[1].s_voidp);
+	x[0].s_voidp = (void*)&xret;
     }
     void x_7(Smoke::Stack x) const {
 	// operator==(const QKeySequence&)
-	bool xret = this->QKeySequence::operator==(*(const QKeySequence *)x[1].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QKeySequence::operator==(*(const QKeySequence *)x[1].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_8(Smoke::Stack x) const {
 	// operator!=(const QKeySequence&)
-	bool xret = this->QKeySequence::operator!=(*(const QKeySequence *)x[1].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QKeySequence::operator!=(*(const QKeySequence *)x[1].s_voidp);
+	x[0].s_bool = xret;
     }
     ~x_QKeySequence() {}
 };

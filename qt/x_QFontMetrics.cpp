@@ -11,111 +11,111 @@ class x_QFontMetrics : public QFontMetrics {
 public:
     static void x_0(Smoke::Stack x) {
 	// QFontMetrics(const QFont&)
-	x_QFontMetrics* xret = new x_QFontMetrics(*(const QFont *)x[1].s_class);
+	x_QFontMetrics* xret = new x_QFontMetrics(*(const QFont *)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QFontMetrics(const QFont& x1) : QFontMetrics(x1) {
     }
     static void x_1(Smoke::Stack x) {
 	// QFontMetrics(const QFontMetrics&)
-	x_QFontMetrics* xret = new x_QFontMetrics(*(const QFontMetrics *)x[1].s_class);
+	x_QFontMetrics* xret = new x_QFontMetrics(*(const QFontMetrics *)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QFontMetrics(const QFontMetrics& x1) : QFontMetrics(x1) {
     }
     void x_2(Smoke::Stack x) {
 	// operator=(const QFontMetrics&)
-	QFontMetrics& xret = this->QFontMetrics::operator=(*(const QFontMetrics *)x[1].s_class);
-	x[0].s_class = (void*)&xret;
+	QFontMetrics& xret = this->QFontMetrics::operator=(*(const QFontMetrics *)x[1].s_voidp);
+	x[0].s_voidp = (void*)&xret;
     }
     void x_3(Smoke::Stack x) const {
 	// ascent()
 	int xret = this->QFontMetrics::ascent();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_4(Smoke::Stack x) const {
 	// descent()
 	int xret = this->QFontMetrics::descent();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_5(Smoke::Stack x) const {
 	// height()
 	int xret = this->QFontMetrics::height();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_6(Smoke::Stack x) const {
 	// leading()
 	int xret = this->QFontMetrics::leading();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_7(Smoke::Stack x) const {
 	// lineSpacing()
 	int xret = this->QFontMetrics::lineSpacing();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_8(Smoke::Stack x) const {
 	// minLeftBearing()
 	int xret = this->QFontMetrics::minLeftBearing();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_9(Smoke::Stack x) const {
 	// minRightBearing()
 	int xret = this->QFontMetrics::minRightBearing();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_10(Smoke::Stack x) const {
 	// maxWidth()
 	int xret = this->QFontMetrics::maxWidth();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_11(Smoke::Stack x) const {
 	// inFont(QChar)
 	bool xret = this->QFontMetrics::inFont(*(QChar *)x[1].s_class);
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_12(Smoke::Stack x) const {
 	// leftBearing(QChar)
 	int xret = this->QFontMetrics::leftBearing(*(QChar *)x[1].s_class);
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_13(Smoke::Stack x) const {
 	// rightBearing(QChar)
 	int xret = this->QFontMetrics::rightBearing(*(QChar *)x[1].s_class);
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_14(Smoke::Stack x) const {
 	// width(const QString&, int)
-	int xret = this->QFontMetrics::width(*(const QString *)x[1].s_class,(int)x[2].s_int);
-	x[0].s_int = (int)xret;
+	int xret = this->QFontMetrics::width(*(const QString *)x[1].s_voidp,(int)x[2].s_int);
+	x[0].s_int = xret;
     }
     void x_15(Smoke::Stack x) const {
 	// width(const QString&)
-	int xret = this->QFontMetrics::width(*(const QString *)x[1].s_class);
-	x[0].s_int = (int)xret;
+	int xret = this->QFontMetrics::width(*(const QString *)x[1].s_voidp);
+	x[0].s_int = xret;
     }
     void x_16(Smoke::Stack x) const {
 	// width(QChar)
 	int xret = this->QFontMetrics::width(*(QChar *)x[1].s_class);
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_17(Smoke::Stack x) const {
 	// width(char)
 	int xret = this->QFontMetrics::width((char)x[1].s_char);
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_18(Smoke::Stack x) const {
 	// charWidth(const QString&, int)
-	int xret = this->QFontMetrics::charWidth(*(const QString *)x[1].s_class,(int)x[2].s_int);
-	x[0].s_int = (int)xret;
+	int xret = this->QFontMetrics::charWidth(*(const QString *)x[1].s_voidp,(int)x[2].s_int);
+	x[0].s_int = xret;
     }
     void x_19(Smoke::Stack x) const {
 	// boundingRect(const QString&, int)
-	QRect xret = this->QFontMetrics::boundingRect(*(const QString *)x[1].s_class,(int)x[2].s_int);
+	QRect xret = this->QFontMetrics::boundingRect(*(const QString *)x[1].s_voidp,(int)x[2].s_int);
 	x[0].s_class = (void*)new QRect(xret);
     }
     void x_20(Smoke::Stack x) const {
 	// boundingRect(const QString&)
-	QRect xret = this->QFontMetrics::boundingRect(*(const QString *)x[1].s_class);
+	QRect xret = this->QFontMetrics::boundingRect(*(const QString *)x[1].s_voidp);
 	x[0].s_class = (void*)new QRect(xret);
     }
     void x_21(Smoke::Stack x) const {
@@ -125,68 +125,68 @@ public:
     }
     void x_22(Smoke::Stack x) const {
 	// boundingRect(int, int, int, int, int, const QString&, int, int, int*, QTextParag**)
-	QRect xret = this->QFontMetrics::boundingRect((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int,*(const QString *)x[6].s_class,(int)x[7].s_int,(int)x[8].s_int,(int*)x[9].s_class,(QTextParag**)x[10].s_class);
+	QRect xret = this->QFontMetrics::boundingRect((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int,*(const QString *)x[6].s_voidp,(int)x[7].s_int,(int)x[8].s_int,(int*)x[9].s_voidp,(QTextParag**)x[10].s_voidp);
 	x[0].s_class = (void*)new QRect(xret);
     }
     void x_23(Smoke::Stack x) const {
 	// boundingRect(int, int, int, int, int, const QString&, int, int, int*)
-	QRect xret = this->QFontMetrics::boundingRect((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int,*(const QString *)x[6].s_class,(int)x[7].s_int,(int)x[8].s_int,(int*)x[9].s_class);
+	QRect xret = this->QFontMetrics::boundingRect((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int,*(const QString *)x[6].s_voidp,(int)x[7].s_int,(int)x[8].s_int,(int*)x[9].s_voidp);
 	x[0].s_class = (void*)new QRect(xret);
     }
     void x_24(Smoke::Stack x) const {
 	// boundingRect(int, int, int, int, int, const QString&, int, int)
-	QRect xret = this->QFontMetrics::boundingRect((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int,*(const QString *)x[6].s_class,(int)x[7].s_int,(int)x[8].s_int);
+	QRect xret = this->QFontMetrics::boundingRect((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int,*(const QString *)x[6].s_voidp,(int)x[7].s_int,(int)x[8].s_int);
 	x[0].s_class = (void*)new QRect(xret);
     }
     void x_25(Smoke::Stack x) const {
 	// boundingRect(int, int, int, int, int, const QString&, int)
-	QRect xret = this->QFontMetrics::boundingRect((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int,*(const QString *)x[6].s_class,(int)x[7].s_int);
+	QRect xret = this->QFontMetrics::boundingRect((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int,*(const QString *)x[6].s_voidp,(int)x[7].s_int);
 	x[0].s_class = (void*)new QRect(xret);
     }
     void x_26(Smoke::Stack x) const {
 	// boundingRect(int, int, int, int, int, const QString&)
-	QRect xret = this->QFontMetrics::boundingRect((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int,*(const QString *)x[6].s_class);
+	QRect xret = this->QFontMetrics::boundingRect((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int,*(const QString *)x[6].s_voidp);
 	x[0].s_class = (void*)new QRect(xret);
     }
     void x_27(Smoke::Stack x) const {
 	// size(int, const QString&, int, int, int*, QTextParag**)
-	QSize xret = this->QFontMetrics::size((int)x[1].s_int,*(const QString *)x[2].s_class,(int)x[3].s_int,(int)x[4].s_int,(int*)x[5].s_class,(QTextParag**)x[6].s_class);
+	QSize xret = this->QFontMetrics::size((int)x[1].s_int,*(const QString *)x[2].s_voidp,(int)x[3].s_int,(int)x[4].s_int,(int*)x[5].s_voidp,(QTextParag**)x[6].s_voidp);
 	x[0].s_class = (void*)new QSize(xret);
     }
     void x_28(Smoke::Stack x) const {
 	// size(int, const QString&, int, int, int*)
-	QSize xret = this->QFontMetrics::size((int)x[1].s_int,*(const QString *)x[2].s_class,(int)x[3].s_int,(int)x[4].s_int,(int*)x[5].s_class);
+	QSize xret = this->QFontMetrics::size((int)x[1].s_int,*(const QString *)x[2].s_voidp,(int)x[3].s_int,(int)x[4].s_int,(int*)x[5].s_voidp);
 	x[0].s_class = (void*)new QSize(xret);
     }
     void x_29(Smoke::Stack x) const {
 	// size(int, const QString&, int, int)
-	QSize xret = this->QFontMetrics::size((int)x[1].s_int,*(const QString *)x[2].s_class,(int)x[3].s_int,(int)x[4].s_int);
+	QSize xret = this->QFontMetrics::size((int)x[1].s_int,*(const QString *)x[2].s_voidp,(int)x[3].s_int,(int)x[4].s_int);
 	x[0].s_class = (void*)new QSize(xret);
     }
     void x_30(Smoke::Stack x) const {
 	// size(int, const QString&, int)
-	QSize xret = this->QFontMetrics::size((int)x[1].s_int,*(const QString *)x[2].s_class,(int)x[3].s_int);
+	QSize xret = this->QFontMetrics::size((int)x[1].s_int,*(const QString *)x[2].s_voidp,(int)x[3].s_int);
 	x[0].s_class = (void*)new QSize(xret);
     }
     void x_31(Smoke::Stack x) const {
 	// size(int, const QString&)
-	QSize xret = this->QFontMetrics::size((int)x[1].s_int,*(const QString *)x[2].s_class);
+	QSize xret = this->QFontMetrics::size((int)x[1].s_int,*(const QString *)x[2].s_voidp);
 	x[0].s_class = (void*)new QSize(xret);
     }
     void x_32(Smoke::Stack x) const {
 	// underlinePos()
 	int xret = this->QFontMetrics::underlinePos();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_33(Smoke::Stack x) const {
 	// strikeOutPos()
 	int xret = this->QFontMetrics::strikeOutPos();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_34(Smoke::Stack x) const {
 	// lineWidth()
 	int xret = this->QFontMetrics::lineWidth();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     ~x_QFontMetrics() {}
 };

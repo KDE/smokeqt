@@ -8,22 +8,22 @@ public:
     void x_0(Smoke::Stack x) {
 	// maybeReady()
 	this->QDataSource::maybeReady();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_1(Smoke::Stack x) const {
 	// rewindable()
 	bool xret = this->QDataSource::rewindable();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_2(Smoke::Stack x) {
 	// enableRewind(bool)
 	this->QDataSource::enableRewind((bool)x[1].s_bool);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_3(Smoke::Stack x) {
 	// rewind()
 	this->QDataSource::rewind();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     static void x_4(Smoke::Stack x) {
 	// QDataSource()
@@ -34,7 +34,7 @@ public:
     }
     virtual void enableRewind(bool x1) {
 	Smoke::StackItem x[2];
-	x[1].s_bool = (bool)x1;
+	x[1].s_bool = x1;
 	if(qt_Smoke->callMethod(1332, (void*)this, x)) return;
 	this->QDataSource::enableRewind(x1);
     }
@@ -56,8 +56,8 @@ public:
     }
     virtual void sendTo(QDataSink* x1, int x2) {
 	Smoke::StackItem x[3];
-	x[1].s_class = (void*)x1;
-	x[2].s_int = (int)x2;
+	x[1].s_voidp = (void*)x1;
+	x[2].s_int = x2;
 	qt_Smoke->callMethod(1329, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT

@@ -15,78 +15,78 @@ public:
     }
     void x_1(Smoke::Stack x) const {
 	// index(const QString&)
-	int xret = this->QXmlAttributes::index(*(const QString *)x[1].s_class);
-	x[0].s_int = (int)xret;
+	int xret = this->QXmlAttributes::index(*(const QString *)x[1].s_voidp);
+	x[0].s_int = xret;
     }
     void x_2(Smoke::Stack x) const {
 	// index(const QString&, const QString&)
-	int xret = this->QXmlAttributes::index(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class);
-	x[0].s_int = (int)xret;
+	int xret = this->QXmlAttributes::index(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
+	x[0].s_int = xret;
     }
     void x_3(Smoke::Stack x) const {
 	// length()
 	int xret = this->QXmlAttributes::length();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_4(Smoke::Stack x) const {
 	// count()
 	int xret = this->QXmlAttributes::count();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_5(Smoke::Stack x) const {
 	// localName(int)
 	QString xret = this->QXmlAttributes::localName((int)x[1].s_int);
-	x[0].s_class = (void*)new QString(xret);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     void x_6(Smoke::Stack x) const {
 	// qName(int)
 	QString xret = this->QXmlAttributes::qName((int)x[1].s_int);
-	x[0].s_class = (void*)new QString(xret);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     void x_7(Smoke::Stack x) const {
 	// uri(int)
 	QString xret = this->QXmlAttributes::uri((int)x[1].s_int);
-	x[0].s_class = (void*)new QString(xret);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     void x_8(Smoke::Stack x) const {
 	// type(int)
 	QString xret = this->QXmlAttributes::type((int)x[1].s_int);
-	x[0].s_class = (void*)new QString(xret);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     void x_9(Smoke::Stack x) const {
 	// type(const QString&)
-	QString xret = this->QXmlAttributes::type(*(const QString *)x[1].s_class);
-	x[0].s_class = (void*)new QString(xret);
+	QString xret = this->QXmlAttributes::type(*(const QString *)x[1].s_voidp);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     void x_10(Smoke::Stack x) const {
 	// type(const QString&, const QString&)
-	QString xret = this->QXmlAttributes::type(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class);
-	x[0].s_class = (void*)new QString(xret);
+	QString xret = this->QXmlAttributes::type(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     void x_11(Smoke::Stack x) const {
 	// value(int)
 	QString xret = this->QXmlAttributes::value((int)x[1].s_int);
-	x[0].s_class = (void*)new QString(xret);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     void x_12(Smoke::Stack x) const {
 	// value(const QString&)
-	QString xret = this->QXmlAttributes::value(*(const QString *)x[1].s_class);
-	x[0].s_class = (void*)new QString(xret);
+	QString xret = this->QXmlAttributes::value(*(const QString *)x[1].s_voidp);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     void x_13(Smoke::Stack x) const {
 	// value(const QString&, const QString&)
-	QString xret = this->QXmlAttributes::value(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class);
-	x[0].s_class = (void*)new QString(xret);
+	QString xret = this->QXmlAttributes::value(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     void x_14(Smoke::Stack x) {
 	// clear()
 	this->QXmlAttributes::clear();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_15(Smoke::Stack x) {
 	// append(const QString&, const QString&, const QString&, const QString&)
-	this->QXmlAttributes::append(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,*(const QString *)x[3].s_class,*(const QString *)x[4].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QXmlAttributes::append(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,*(const QString *)x[3].s_voidp,*(const QString *)x[4].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     ~x_QXmlAttributes() {}
 };

@@ -14,15 +14,15 @@ public:
     }
     static void x_1(Smoke::Stack x) {
 	// QConnectionList(const QConnectionList&)
-	x_QConnectionList* xret = new x_QConnectionList(*(const QConnectionList *)x[1].s_class);
+	x_QConnectionList* xret = new x_QConnectionList(*(const QConnectionList *)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QConnectionList(const QConnectionList& x1) : QConnectionList(x1) {
     }
     void x_2(Smoke::Stack x) {
 	// operator=(const QConnectionList&)
-	QConnectionList& xret = this->QConnectionList::operator=(*(const QConnectionList *)x[1].s_class);
-	x[0].s_class = (void*)&xret;
+	QConnectionList& xret = this->QConnectionList::operator=(*(const QConnectionList *)x[1].s_voidp);
+	x[0].s_voidp = (void*)&xret;
     }
     ~x_QConnectionList() {}
 };

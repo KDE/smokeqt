@@ -14,8 +14,8 @@ public:
     }
     void x_1(Smoke::Stack x) {
 	// setMetaObject(QMetaObject*&)
-	this->QMetaObjectCleanUp::setMetaObject(*(QMetaObject* *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QMetaObjectCleanUp::setMetaObject(*(QMetaObject* *)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     ~x_QMetaObjectCleanUp() {}
 };

@@ -15,8 +15,8 @@ public:
     }
     virtual QString toUnicode(const char* x1, int x2) {
 	Smoke::StackItem x[3];
-	x[1].s_class = (void*)x1;
-	x[2].s_int = (int)x2;
+	x[1].s_voidp = (void*)x1;
+	x[2].s_int = x2;
 	qt_Smoke->callMethod(8567, (void*)this, x, true /*pure virtual*/);
 	QString *xptr = (QString *)x[0].s_class;
 	QString xret(*xptr);

@@ -23,72 +23,72 @@ public:
     void x_2(Smoke::Stack x) const {
 	// isNull()
 	bool xret = this->QPoint::isNull();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_3(Smoke::Stack x) const {
 	// x()
 	int xret = this->QPoint::x();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_4(Smoke::Stack x) const {
 	// y()
 	int xret = this->QPoint::y();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_5(Smoke::Stack x) {
 	// setX(int)
 	this->QPoint::setX((int)x[1].s_int);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_6(Smoke::Stack x) {
 	// setY(int)
 	this->QPoint::setY((int)x[1].s_int);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_7(Smoke::Stack x) const {
 	// manhattanLength()
 	int xret = this->QPoint::manhattanLength();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_8(Smoke::Stack x) {
 	// rx()
 	QCOORD& xret = this->QPoint::rx();
-	x[0].s_class = (void*)&xret;
+	x[0].s_voidp = (void*)&xret;
     }
     void x_9(Smoke::Stack x) {
 	// ry()
 	QCOORD& xret = this->QPoint::ry();
-	x[0].s_class = (void*)&xret;
+	x[0].s_voidp = (void*)&xret;
     }
     void x_10(Smoke::Stack x) {
 	// operator+=(const QPoint&)
-	QPoint& xret = this->QPoint::operator+=(*(const QPoint *)x[1].s_class);
-	x[0].s_class = (void*)&xret;
+	QPoint& xret = this->QPoint::operator+=(*(const QPoint *)x[1].s_voidp);
+	x[0].s_voidp = (void*)&xret;
     }
     void x_11(Smoke::Stack x) {
 	// operator-=(const QPoint&)
-	QPoint& xret = this->QPoint::operator-=(*(const QPoint *)x[1].s_class);
-	x[0].s_class = (void*)&xret;
+	QPoint& xret = this->QPoint::operator-=(*(const QPoint *)x[1].s_voidp);
+	x[0].s_voidp = (void*)&xret;
     }
     void x_12(Smoke::Stack x) {
 	// operator*=(int)
 	QPoint& xret = this->QPoint::operator*=((int)x[1].s_int);
-	x[0].s_class = (void*)&xret;
+	x[0].s_voidp = (void*)&xret;
     }
     void x_13(Smoke::Stack x) {
 	// operator*=(double)
 	QPoint& xret = this->QPoint::operator*=((double)x[1].s_double);
-	x[0].s_class = (void*)&xret;
+	x[0].s_voidp = (void*)&xret;
     }
     void x_14(Smoke::Stack x) {
 	// operator/=(int)
 	QPoint& xret = this->QPoint::operator/=((int)x[1].s_int);
-	x[0].s_class = (void*)&xret;
+	x[0].s_voidp = (void*)&xret;
     }
     void x_15(Smoke::Stack x) {
 	// operator/=(double)
 	QPoint& xret = this->QPoint::operator/=((double)x[1].s_double);
-	x[0].s_class = (void*)&xret;
+	x[0].s_voidp = (void*)&xret;
     }
     ~x_QPoint() {}
 };

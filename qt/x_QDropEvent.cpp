@@ -24,14 +24,14 @@ public:
     }
     static void x_5(Smoke::Stack x) {
 	// QDropEvent(const QPoint&, QEvent::Type)
-	x_QDropEvent* xret = new x_QDropEvent(*(const QPoint *)x[1].s_class,*(QEvent::Type *)x[2].s_class);
+	x_QDropEvent* xret = new x_QDropEvent(*(const QPoint *)x[1].s_voidp,(QEvent::Type)x[2].s_enum);
 	x[0].s_class = (void*)xret;
     }
     x_QDropEvent(const QPoint& x1, QEvent::Type x2) : QDropEvent(x1, x2) {
     }
     static void x_6(Smoke::Stack x) {
 	// QDropEvent(const QPoint&)
-	x_QDropEvent* xret = new x_QDropEvent(*(const QPoint *)x[1].s_class);
+	x_QDropEvent* xret = new x_QDropEvent(*(const QPoint *)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QDropEvent(const QPoint& x1) : QDropEvent(x1) {
@@ -39,91 +39,91 @@ public:
     void x_7(Smoke::Stack x) const {
 	// pos()
 	const QPoint& xret = this->QDropEvent::pos();
-	x[0].s_class = (void*)&xret;
+	x[0].s_voidp = (void*)&xret;
     }
     void x_8(Smoke::Stack x) const {
 	// isAccepted()
 	bool xret = this->QDropEvent::isAccepted();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_9(Smoke::Stack x) {
 	// accept(bool)
 	this->QDropEvent::accept((bool)x[1].s_bool);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_10(Smoke::Stack x) {
 	// accept()
 	this->QDropEvent::accept();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_11(Smoke::Stack x) {
 	// ignore()
 	this->QDropEvent::ignore();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_12(Smoke::Stack x) const {
 	// isActionAccepted()
 	bool xret = this->QDropEvent::isActionAccepted();
-	x[0].s_bool = (bool)xret;
+	x[0].s_bool = xret;
     }
     void x_13(Smoke::Stack x) {
 	// acceptAction(bool)
 	this->QDropEvent::acceptAction((bool)x[1].s_bool);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_14(Smoke::Stack x) {
 	// acceptAction()
 	this->QDropEvent::acceptAction();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_15(Smoke::Stack x) {
 	// setAction(QDropEvent::Action)
-	this->QDropEvent::setAction(*(QDropEvent::Action *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QDropEvent::setAction((QDropEvent::Action)x[1].s_enum);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_16(Smoke::Stack x) const {
 	// action()
 	QDropEvent::Action xret = this->QDropEvent::action();
-	x[0].s_class = (void*)new QDropEvent::Action(xret);
+	x[0].s_enum = xret;
     }
     void x_17(Smoke::Stack x) const {
 	// source()
 	QWidget* xret = this->QDropEvent::source();
-	x[0].s_class = (void*)xret;
+	x[0].s_voidp = (void*)xret;
     }
     void x_18(Smoke::Stack x) const {
 	// format(int)
 	const char* xret = this->QDropEvent::format((int)x[1].s_int);
-	x[0].s_class = (void*)xret;
+	x[0].s_voidp = (void*)xret;
     }
     void x_19(Smoke::Stack x) const {
 	// format()
 	const char* xret = this->QDropEvent::format();
-	x[0].s_class = (void*)xret;
+	x[0].s_voidp = (void*)xret;
     }
     void x_20(Smoke::Stack x) const {
 	// encodedData(const char*)
-	QByteArray xret = this->QDropEvent::encodedData((const char*)x[1].s_class);
-	x[0].s_class = (void*)new QByteArray(xret);
+	QByteArray xret = this->QDropEvent::encodedData((const char*)x[1].s_voidp);
+	x[0].s_voidp = (void*)new QByteArray(xret);
     }
     void x_21(Smoke::Stack x) const {
 	// provides(const char*)
-	bool xret = this->QDropEvent::provides((const char*)x[1].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QDropEvent::provides((const char*)x[1].s_voidp);
+	x[0].s_bool = xret;
     }
     void x_22(Smoke::Stack x) const {
 	// data(const char*)
-	QByteArray xret = this->QDropEvent::data((const char*)x[1].s_class);
-	x[0].s_class = (void*)new QByteArray(xret);
+	QByteArray xret = this->QDropEvent::data((const char*)x[1].s_voidp);
+	x[0].s_voidp = (void*)new QByteArray(xret);
     }
     void x_23(Smoke::Stack x) {
 	// setPoint(const QPoint&)
-	this->QDropEvent::setPoint(*(const QPoint *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QDropEvent::setPoint(*(const QPoint *)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     virtual QByteArray encodedData(const char* x1) const {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(2349, (void*)this, x)) {
 	    QByteArray *xptr = (QByteArray *)x[0].s_class;
 	    QByteArray xret(*xptr);
@@ -134,13 +134,13 @@ public:
     }
     virtual const char* format(int x1) const {
 	Smoke::StackItem x[2];
-	x[1].s_int = (int)x1;
+	x[1].s_int = x1;
 	if(qt_Smoke->callMethod(2347, (void*)this, x)) return (const char*)x[0].s_class;
 	return this->QDropEvent::format(x1);
     }
     virtual bool provides(const char* x1) const {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)x1;
+	x[1].s_voidp = (void*)x1;
 	if(qt_Smoke->callMethod(2350, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QDropEvent::provides(x1);
     }

@@ -7,15 +7,15 @@ class x_QWidgetIntDictIt : public QWidgetIntDictIt {
 public:
     static void x_0(Smoke::Stack x) {
 	// QWidgetIntDictIt(const QWidgetIntDict&)
-	x_QWidgetIntDictIt* xret = new x_QWidgetIntDictIt(*(const QWidgetIntDict *)x[1].s_class);
+	x_QWidgetIntDictIt* xret = new x_QWidgetIntDictIt(*(const QWidgetIntDict *)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QWidgetIntDictIt(const QWidgetIntDict& x1) : QWidgetIntDictIt(x1) {
     }
     void x_1(Smoke::Stack x) {
 	// operator=(const QWidgetIntDictIt&)
-	QWidgetIntDictIt& xret = this->QWidgetIntDictIt::operator=(*(const QWidgetIntDictIt *)x[1].s_class);
-	x[0].s_class = (void*)&xret;
+	QWidgetIntDictIt& xret = this->QWidgetIntDictIt::operator=(*(const QWidgetIntDictIt *)x[1].s_voidp);
+	x[0].s_voidp = (void*)&xret;
     }
     ~x_QWidgetIntDictIt() {}
 };

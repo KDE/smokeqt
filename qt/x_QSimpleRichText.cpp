@@ -14,49 +14,49 @@ class x_QSimpleRichText : public QSimpleRichText {
 public:
     static void x_0(Smoke::Stack x) {
 	// QSimpleRichText(const QString&, const QFont&, const QString&, const QStyleSheet*)
-	x_QSimpleRichText* xret = new x_QSimpleRichText(*(const QString *)x[1].s_class,*(const QFont *)x[2].s_class,*(const QString *)x[3].s_class,(const QStyleSheet*)x[4].s_class);
+	x_QSimpleRichText* xret = new x_QSimpleRichText(*(const QString *)x[1].s_voidp,*(const QFont *)x[2].s_voidp,*(const QString *)x[3].s_voidp,(const QStyleSheet*)x[4].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QSimpleRichText(const QString& x1, const QFont& x2, const QString& x3, const QStyleSheet* x4) : QSimpleRichText(x1, x2, x3, x4) {
     }
     static void x_1(Smoke::Stack x) {
 	// QSimpleRichText(const QString&, const QFont&, const QString&)
-	x_QSimpleRichText* xret = new x_QSimpleRichText(*(const QString *)x[1].s_class,*(const QFont *)x[2].s_class,*(const QString *)x[3].s_class);
+	x_QSimpleRichText* xret = new x_QSimpleRichText(*(const QString *)x[1].s_voidp,*(const QFont *)x[2].s_voidp,*(const QString *)x[3].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QSimpleRichText(const QString& x1, const QFont& x2, const QString& x3) : QSimpleRichText(x1, x2, x3) {
     }
     static void x_2(Smoke::Stack x) {
 	// QSimpleRichText(const QString&, const QFont&)
-	x_QSimpleRichText* xret = new x_QSimpleRichText(*(const QString *)x[1].s_class,*(const QFont *)x[2].s_class);
+	x_QSimpleRichText* xret = new x_QSimpleRichText(*(const QString *)x[1].s_voidp,*(const QFont *)x[2].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QSimpleRichText(const QString& x1, const QFont& x2) : QSimpleRichText(x1, x2) {
     }
     static void x_3(Smoke::Stack x) {
 	// QSimpleRichText(const QString&, const QFont&, const QString&, const QStyleSheet*, const QMimeSourceFactory*, int, const QColor&, bool)
-	x_QSimpleRichText* xret = new x_QSimpleRichText(*(const QString *)x[1].s_class,*(const QFont *)x[2].s_class,*(const QString *)x[3].s_class,(const QStyleSheet*)x[4].s_class,(const QMimeSourceFactory*)x[5].s_class,(int)x[6].s_int,*(const QColor *)x[7].s_class,(bool)x[8].s_bool);
+	x_QSimpleRichText* xret = new x_QSimpleRichText(*(const QString *)x[1].s_voidp,*(const QFont *)x[2].s_voidp,*(const QString *)x[3].s_voidp,(const QStyleSheet*)x[4].s_voidp,(const QMimeSourceFactory*)x[5].s_voidp,(int)x[6].s_int,*(const QColor *)x[7].s_voidp,(bool)x[8].s_bool);
 	x[0].s_class = (void*)xret;
     }
     x_QSimpleRichText(const QString& x1, const QFont& x2, const QString& x3, const QStyleSheet* x4, const QMimeSourceFactory* x5, int x6, const QColor& x7, bool x8) : QSimpleRichText(x1, x2, x3, x4, x5, x6, x7, x8) {
     }
     static void x_4(Smoke::Stack x) {
 	// QSimpleRichText(const QString&, const QFont&, const QString&, const QStyleSheet*, const QMimeSourceFactory*, int, const QColor&)
-	x_QSimpleRichText* xret = new x_QSimpleRichText(*(const QString *)x[1].s_class,*(const QFont *)x[2].s_class,*(const QString *)x[3].s_class,(const QStyleSheet*)x[4].s_class,(const QMimeSourceFactory*)x[5].s_class,(int)x[6].s_int,*(const QColor *)x[7].s_class);
+	x_QSimpleRichText* xret = new x_QSimpleRichText(*(const QString *)x[1].s_voidp,*(const QFont *)x[2].s_voidp,*(const QString *)x[3].s_voidp,(const QStyleSheet*)x[4].s_voidp,(const QMimeSourceFactory*)x[5].s_voidp,(int)x[6].s_int,*(const QColor *)x[7].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QSimpleRichText(const QString& x1, const QFont& x2, const QString& x3, const QStyleSheet* x4, const QMimeSourceFactory* x5, int x6, const QColor& x7) : QSimpleRichText(x1, x2, x3, x4, x5, x6, x7) {
     }
     static void x_5(Smoke::Stack x) {
 	// QSimpleRichText(const QString&, const QFont&, const QString&, const QStyleSheet*, const QMimeSourceFactory*, int)
-	x_QSimpleRichText* xret = new x_QSimpleRichText(*(const QString *)x[1].s_class,*(const QFont *)x[2].s_class,*(const QString *)x[3].s_class,(const QStyleSheet*)x[4].s_class,(const QMimeSourceFactory*)x[5].s_class,(int)x[6].s_int);
+	x_QSimpleRichText* xret = new x_QSimpleRichText(*(const QString *)x[1].s_voidp,*(const QFont *)x[2].s_voidp,*(const QString *)x[3].s_voidp,(const QStyleSheet*)x[4].s_voidp,(const QMimeSourceFactory*)x[5].s_voidp,(int)x[6].s_int);
 	x[0].s_class = (void*)xret;
     }
     x_QSimpleRichText(const QString& x1, const QFont& x2, const QString& x3, const QStyleSheet* x4, const QMimeSourceFactory* x5, int x6) : QSimpleRichText(x1, x2, x3, x4, x5, x6) {
     }
     static void x_6(Smoke::Stack x) {
 	// QSimpleRichText(const QString&, const QFont&, const QString&, const QStyleSheet*, const QMimeSourceFactory*)
-	x_QSimpleRichText* xret = new x_QSimpleRichText(*(const QString *)x[1].s_class,*(const QFont *)x[2].s_class,*(const QString *)x[3].s_class,(const QStyleSheet*)x[4].s_class,(const QMimeSourceFactory*)x[5].s_class);
+	x_QSimpleRichText* xret = new x_QSimpleRichText(*(const QString *)x[1].s_voidp,*(const QFont *)x[2].s_voidp,*(const QString *)x[3].s_voidp,(const QStyleSheet*)x[4].s_voidp,(const QMimeSourceFactory*)x[5].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QSimpleRichText(const QString& x1, const QFont& x2, const QString& x3, const QStyleSheet* x4, const QMimeSourceFactory* x5) : QSimpleRichText(x1, x2, x3, x4, x5) {
@@ -64,72 +64,72 @@ public:
     void x_7(Smoke::Stack x) {
 	// setWidth(int)
 	this->QSimpleRichText::setWidth((int)x[1].s_int);
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_8(Smoke::Stack x) {
 	// setWidth(QPainter*, int)
-	this->QSimpleRichText::setWidth((QPainter*)x[1].s_class,(int)x[2].s_int);
-	x[0].s_int = x[0].s_int; // noop
+	this->QSimpleRichText::setWidth((QPainter*)x[1].s_voidp,(int)x[2].s_int);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_9(Smoke::Stack x) {
 	// setDefaultFont(const QFont&)
-	this->QSimpleRichText::setDefaultFont(*(const QFont *)x[1].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QSimpleRichText::setDefaultFont(*(const QFont *)x[1].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_10(Smoke::Stack x) const {
 	// width()
 	int xret = this->QSimpleRichText::width();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_11(Smoke::Stack x) const {
 	// widthUsed()
 	int xret = this->QSimpleRichText::widthUsed();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_12(Smoke::Stack x) const {
 	// height()
 	int xret = this->QSimpleRichText::height();
-	x[0].s_int = (int)xret;
+	x[0].s_int = xret;
     }
     void x_13(Smoke::Stack x) {
 	// adjustSize()
 	this->QSimpleRichText::adjustSize();
-	x[0].s_int = x[0].s_int; // noop
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_14(Smoke::Stack x) const {
 	// draw(QPainter*, int, int, const QRect&, const QColorGroup&, const QBrush*)
-	this->QSimpleRichText::draw((QPainter*)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int,*(const QRect *)x[4].s_class,*(const QColorGroup *)x[5].s_class,(const QBrush*)x[6].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QSimpleRichText::draw((QPainter*)x[1].s_voidp,(int)x[2].s_int,(int)x[3].s_int,*(const QRect *)x[4].s_voidp,*(const QColorGroup *)x[5].s_voidp,(const QBrush*)x[6].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_15(Smoke::Stack x) const {
 	// draw(QPainter*, int, int, const QRect&, const QColorGroup&)
-	this->QSimpleRichText::draw((QPainter*)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int,*(const QRect *)x[4].s_class,*(const QColorGroup *)x[5].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QSimpleRichText::draw((QPainter*)x[1].s_voidp,(int)x[2].s_int,(int)x[3].s_int,*(const QRect *)x[4].s_voidp,*(const QColorGroup *)x[5].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_16(Smoke::Stack x) const {
 	// draw(QPainter*, int, int, const QRegion&, const QColorGroup&, const QBrush*)
-	this->QSimpleRichText::draw((QPainter*)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int,*(const QRegion *)x[4].s_class,*(const QColorGroup *)x[5].s_class,(const QBrush*)x[6].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QSimpleRichText::draw((QPainter*)x[1].s_voidp,(int)x[2].s_int,(int)x[3].s_int,*(const QRegion *)x[4].s_voidp,*(const QColorGroup *)x[5].s_voidp,(const QBrush*)x[6].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_17(Smoke::Stack x) const {
 	// draw(QPainter*, int, int, const QRegion&, const QColorGroup&)
-	this->QSimpleRichText::draw((QPainter*)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int,*(const QRegion *)x[4].s_class,*(const QColorGroup *)x[5].s_class);
-	x[0].s_int = x[0].s_int; // noop
+	this->QSimpleRichText::draw((QPainter*)x[1].s_voidp,(int)x[2].s_int,(int)x[3].s_int,*(const QRegion *)x[4].s_voidp,*(const QColorGroup *)x[5].s_voidp);
+	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_18(Smoke::Stack x) const {
 	// context()
 	QString xret = this->QSimpleRichText::context();
-	x[0].s_class = (void*)new QString(xret);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     void x_19(Smoke::Stack x) const {
 	// anchorAt(const QPoint&)
-	QString xret = this->QSimpleRichText::anchorAt(*(const QPoint *)x[1].s_class);
-	x[0].s_class = (void*)new QString(xret);
+	QString xret = this->QSimpleRichText::anchorAt(*(const QPoint *)x[1].s_voidp);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     void x_20(Smoke::Stack x) const {
 	// inText(const QPoint&)
-	bool xret = this->QSimpleRichText::inText(*(const QPoint *)x[1].s_class);
-	x[0].s_bool = (bool)xret;
+	bool xret = this->QSimpleRichText::inText(*(const QPoint *)x[1].s_voidp);
+	x[0].s_bool = xret;
     }
     ~x_QSimpleRichText() {}
 };
