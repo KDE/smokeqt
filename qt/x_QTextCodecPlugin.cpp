@@ -91,7 +91,7 @@ public:
     }
     virtual const char* className() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(10595, (void*)this, x)) return (const char*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(10598, (void*)this, x)) return (const char*)x[0].s_class;
 	return this->QTextCodecPlugin::className();
     }
     virtual void connectNotify(const char* x1) {
@@ -103,14 +103,14 @@ public:
     virtual QTextCodec* createForMib(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	qt_Smoke->binding->callMethod(10606, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(10609, (void*)this, x, true /*pure virtual*/);
 	return (QTextCodec*)x[0].s_class;
 	// ABSTRACT
     }
     virtual QTextCodec* createForName(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	qt_Smoke->binding->callMethod(10604, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(10607, (void*)this, x, true /*pure virtual*/);
 	return (QTextCodec*)x[0].s_class;
 	// ABSTRACT
     }
@@ -147,12 +147,12 @@ public:
     }
     virtual QMetaObject* metaObject() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(10594, (void*)this, x)) return (QMetaObject*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(10597, (void*)this, x)) return (QMetaObject*)x[0].s_class;
 	return this->QTextCodecPlugin::metaObject();
     }
     virtual QValueList<int> mibEnums() const {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(10605, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(10608, (void*)this, x, true /*pure virtual*/);
 	QValueList<int> *xptr = (QValueList<int> *)x[0].s_class;
 	QValueList<int> xret(*xptr);
 	delete xptr;
@@ -161,7 +161,7 @@ public:
     }
     virtual QStringList names() const {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(10603, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(10606, (void*)this, x, true /*pure virtual*/);
 	QStringList *xptr = (QStringList *)x[0].s_class;
 	QStringList xret(*xptr);
 	delete xptr;
@@ -182,21 +182,21 @@ public:
     virtual void* qt_cast(const char* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(10596, (void*)this, x)) return (void*)x[0].s_voidp;
+	if(qt_Smoke->binding->callMethod(10599, (void*)this, x)) return (void*)x[0].s_voidp;
 	return this->QTextCodecPlugin::qt_cast(x1);
     }
     virtual bool qt_emit(int x1, QUObject* x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_voidp = (void*)x2;
-	if(qt_Smoke->binding->callMethod(10598, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(10601, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QTextCodecPlugin::qt_emit(x1, x2);
     }
     virtual bool qt_invoke(int x1, QUObject* x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_voidp = (void*)x2;
-	if(qt_Smoke->binding->callMethod(10597, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(10600, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QTextCodecPlugin::qt_invoke(x1, x2);
     }
     virtual bool qt_property(int x1, int x2, QVariant* x3) {
@@ -204,7 +204,7 @@ public:
 	x[1].s_int = x1;
 	x[2].s_int = x2;
 	x[3].s_class = (void*)x3;
-	if(qt_Smoke->binding->callMethod(10599, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(10602, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QTextCodecPlugin::qt_property(x1, x2, x3);
     }
     virtual void removeChild(QObject* x1) {

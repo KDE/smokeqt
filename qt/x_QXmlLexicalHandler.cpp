@@ -23,32 +23,32 @@ public:
     virtual bool comment(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	qt_Smoke->binding->callMethod(12498, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(12501, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
     virtual bool endCDATA() {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(12497, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(12500, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
     virtual bool endDTD() {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(12493, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(12496, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
     virtual bool endEntity(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	qt_Smoke->binding->callMethod(12495, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(12498, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
     virtual QString errorString() {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(12499, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(12502, (void*)this, x, true /*pure virtual*/);
 	QString *xptr = (QString *)x[0].s_class;
 	QString xret(*xptr);
 	delete xptr;
@@ -57,7 +57,7 @@ public:
     }
     virtual bool startCDATA() {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(12496, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(12499, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
@@ -66,14 +66,14 @@ public:
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_voidp = (void*)&x2;
 	x[3].s_voidp = (void*)&x3;
-	qt_Smoke->binding->callMethod(12492, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(12495, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
     virtual bool startEntity(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	qt_Smoke->binding->callMethod(12494, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(12497, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT
     }

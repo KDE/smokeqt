@@ -213,7 +213,7 @@ public:
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {
-	  case 745: //QWMatrix::TransformationMode
+	  case 746: //QWMatrix::TransformationMode
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QWMatrix::TransformationMode;

@@ -90,7 +90,7 @@ public:
     }
     virtual const char* className() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(9501, (void*)this, x)) return (const char*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(9504, (void*)this, x)) return (const char*)x[0].s_class;
 	return this->QSqlResultShared::className();
     }
     virtual void connectNotify(const char* x1) {
@@ -132,7 +132,7 @@ public:
     }
     virtual QMetaObject* metaObject() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(9500, (void*)this, x)) return (QMetaObject*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(9503, (void*)this, x)) return (QMetaObject*)x[0].s_class;
 	return this->QSqlResultShared::metaObject();
     }
     virtual QVariant property(const char* x1) const {
@@ -149,21 +149,21 @@ public:
     virtual void* qt_cast(const char* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(9502, (void*)this, x)) return (void*)x[0].s_voidp;
+	if(qt_Smoke->binding->callMethod(9505, (void*)this, x)) return (void*)x[0].s_voidp;
 	return this->QSqlResultShared::qt_cast(x1);
     }
     virtual bool qt_emit(int x1, QUObject* x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_voidp = (void*)x2;
-	if(qt_Smoke->binding->callMethod(9504, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(9507, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QSqlResultShared::qt_emit(x1, x2);
     }
     virtual bool qt_invoke(int x1, QUObject* x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_voidp = (void*)x2;
-	if(qt_Smoke->binding->callMethod(9503, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(9506, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QSqlResultShared::qt_invoke(x1, x2);
     }
     virtual bool qt_property(int x1, int x2, QVariant* x3) {
@@ -171,7 +171,7 @@ public:
 	x[1].s_int = x1;
 	x[2].s_int = x2;
 	x[3].s_class = (void*)x3;
-	if(qt_Smoke->binding->callMethod(9505, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(9508, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QSqlResultShared::qt_property(x1, x2, x3);
     }
     virtual void removeChild(QObject* x1) {

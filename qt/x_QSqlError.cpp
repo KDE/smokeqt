@@ -111,30 +111,30 @@ public:
     virtual void setDatabaseText(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(9268, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9271, (void*)this, x)) return;
 	this->QSqlError::setDatabaseText(x1);
     }
     virtual void setDriverText(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(9266, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9269, (void*)this, x)) return;
 	this->QSqlError::setDriverText(x1);
     }
     virtual void setNumber(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(9272, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9275, (void*)this, x)) return;
 	this->QSqlError::setNumber(x1);
     }
     virtual void setType(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(9270, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9273, (void*)this, x)) return;
 	this->QSqlError::setType(x1);
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {
-	  case 568: //QSqlError::Type
+	  case 569: //QSqlError::Type
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QSqlError::Type;

@@ -22,7 +22,7 @@ public:
     }
     virtual QString errorString() {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(12422, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(12425, (void*)this, x, true /*pure virtual*/);
 	QString *xptr = (QString *)x[0].s_class;
 	QString xret(*xptr);
 	delete xptr;
@@ -34,7 +34,7 @@ public:
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_voidp = (void*)&x2;
 	x[3].s_voidp = (void*)&x3;
-	qt_Smoke->binding->callMethod(12420, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(12423, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
@@ -44,7 +44,7 @@ public:
 	x[2].s_voidp = (void*)&x2;
 	x[3].s_voidp = (void*)&x3;
 	x[4].s_voidp = (void*)&x4;
-	qt_Smoke->binding->callMethod(12421, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(12424, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT
     }

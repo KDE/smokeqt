@@ -307,7 +307,7 @@ public:
     }
     virtual const char* className() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(9120, (void*)this, x)) return (const char*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(9123, (void*)this, x)) return (const char*)x[0].s_class;
 	return this->QSqlDatabase::className();
     }
     virtual void connectNotify(const char* x1) {
@@ -349,7 +349,7 @@ public:
     }
     virtual QMetaObject* metaObject() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(9119, (void*)this, x)) return (QMetaObject*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(9122, (void*)this, x)) return (QMetaObject*)x[0].s_class;
 	return this->QSqlDatabase::metaObject();
     }
     virtual QVariant property(const char* x1) const {
@@ -366,21 +366,21 @@ public:
     virtual void* qt_cast(const char* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(9121, (void*)this, x)) return (void*)x[0].s_voidp;
+	if(qt_Smoke->binding->callMethod(9124, (void*)this, x)) return (void*)x[0].s_voidp;
 	return this->QSqlDatabase::qt_cast(x1);
     }
     virtual bool qt_emit(int x1, QUObject* x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_voidp = (void*)x2;
-	if(qt_Smoke->binding->callMethod(9123, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(9126, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QSqlDatabase::qt_emit(x1, x2);
     }
     virtual bool qt_invoke(int x1, QUObject* x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_voidp = (void*)x2;
-	if(qt_Smoke->binding->callMethod(9122, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(9125, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QSqlDatabase::qt_invoke(x1, x2);
     }
     virtual bool qt_property(int x1, int x2, QVariant* x3) {
@@ -388,7 +388,7 @@ public:
 	x[1].s_int = x1;
 	x[2].s_int = x2;
 	x[3].s_class = (void*)x3;
-	if(qt_Smoke->binding->callMethod(9124, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(9127, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QSqlDatabase::qt_property(x1, x2, x3);
     }
     virtual void removeChild(QObject* x1) {
@@ -400,13 +400,13 @@ public:
     virtual void setDatabaseName(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(9144, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9147, (void*)this, x)) return;
 	this->QSqlDatabase::setDatabaseName(x1);
     }
     virtual void setHostName(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(9147, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9150, (void*)this, x)) return;
 	this->QSqlDatabase::setHostName(x1);
     }
     virtual void setName(const char* x1) {
@@ -418,13 +418,13 @@ public:
     virtual void setPassword(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(9146, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9149, (void*)this, x)) return;
 	this->QSqlDatabase::setPassword(x1);
     }
     virtual void setPort(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(9148, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9151, (void*)this, x)) return;
 	this->QSqlDatabase::setPort(x1);
     }
     virtual bool setProperty(const char* x1, const QVariant& x2) {
@@ -437,7 +437,7 @@ public:
     virtual void setUserName(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(9145, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9148, (void*)this, x)) return;
 	this->QSqlDatabase::setUserName(x1);
     }
     virtual void timerEvent(QTimerEvent* x1) {

@@ -33,6 +33,15 @@ public:
 	x[0].s_enum = (long)QSql::Yes;
     }
     static void x_9(Smoke::Stack x) {
+	x[0].s_enum = (long)QSql::In;
+    }
+    static void x_10(Smoke::Stack x) {
+	x[0].s_enum = (long)QSql::Out;
+    }
+    static void x_11(Smoke::Stack x) {
+	x[0].s_enum = (long)QSql::InOut;
+    }
+    static void x_12(Smoke::Stack x) {
 	// QSql()
 	x_QSql* xret = new x_QSql();
 	x[0].s_class = (void*)xret;
@@ -73,6 +82,22 @@ public:
 		break;
 	    }
 	    break;
+	  case 556: //QSql::ParameterType
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new QSql::ParameterType;
+		break;
+	      case Smoke::EnumDelete:
+		delete (QSql::ParameterType*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(QSql::ParameterType*)xdata = (QSql::ParameterType)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(QSql::ParameterType*)xdata;
+		break;
+	    }
+	    break;
 	  case 553: //QSql::Confirm
 	    switch(xop) {
 	      case Smoke::EnumNew:
@@ -109,6 +134,9 @@ void xcall_QSql(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 7: x_QSql::x_7(args);	break;
 	case 8: x_QSql::x_8(args);	break;
 	case 9: x_QSql::x_9(args);	break;
-	case 10: delete (QSql*)xself;	break;
+	case 10: x_QSql::x_10(args);	break;
+	case 11: x_QSql::x_11(args);	break;
+	case 12: x_QSql::x_12(args);	break;
+	case 13: delete (QSql*)xself;	break;
     }
 }

@@ -201,78 +201,78 @@ public:
     virtual void append(const QSqlField& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(9448, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9451, (void*)this, x)) return;
 	this->QSqlRecord::append(x1);
     }
     virtual void clear() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(9453, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9456, (void*)this, x)) return;
 	this->QSqlRecord::clear();
     }
     virtual void clearValues(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(9454, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9457, (void*)this, x)) return;
 	this->QSqlRecord::clearValues(x1);
     }
     virtual void insert(int x1, const QSqlField& x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_class = (void*)&x2;
-	if(qt_Smoke->binding->callMethod(9449, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9452, (void*)this, x)) return;
 	this->QSqlRecord::insert(x1, x2);
     }
     virtual void remove(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(9450, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9453, (void*)this, x)) return;
 	this->QSqlRecord::remove(x1);
     }
     virtual void setGenerated(const QString& x1, bool x2) {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_bool = x2;
-	if(qt_Smoke->binding->callMethod(9434, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9437, (void*)this, x)) return;
 	this->QSqlRecord::setGenerated(x1, x2);
     }
     virtual void setGenerated(int x1, bool x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_bool = x2;
-	if(qt_Smoke->binding->callMethod(9435, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9438, (void*)this, x)) return;
 	this->QSqlRecord::setGenerated(x1, x2);
     }
     virtual void setNull(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(9437, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9440, (void*)this, x)) return;
 	this->QSqlRecord::setNull(x1);
     }
     virtual void setNull(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(9436, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9439, (void*)this, x)) return;
 	this->QSqlRecord::setNull(x1);
     }
     virtual void setValue(const QString& x1, const QVariant& x2) {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_class = (void*)&x2;
-	if(qt_Smoke->binding->callMethod(9431, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9434, (void*)this, x)) return;
 	this->QSqlRecord::setValue(x1, x2);
     }
     virtual void setValue(int x1, const QVariant& x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_class = (void*)&x2;
-	if(qt_Smoke->binding->callMethod(9430, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9433, (void*)this, x)) return;
 	this->QSqlRecord::setValue(x1, x2);
     }
     virtual QString toString(const QString& x1, const QString& x2) const {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_voidp = (void*)&x2;
-	if(qt_Smoke->binding->callMethod(9457, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(9460, (void*)this, x)) {
 	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;
@@ -283,7 +283,7 @@ public:
     virtual QStringList toStringList(const QString& x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(9460, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(9463, (void*)this, x)) {
 	    QStringList *xptr = (QStringList *)x[0].s_class;
 	    QStringList xret(*xptr);
 	    delete xptr;
@@ -294,7 +294,7 @@ public:
     virtual QVariant value(const QString& x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(9429, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(9432, (void*)this, x)) {
 	    QVariant *xptr = (QVariant *)x[0].s_class;
 	    QVariant xret(*xptr);
 	    delete xptr;
@@ -305,7 +305,7 @@ public:
     virtual QVariant value(int x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(9428, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(9431, (void*)this, x)) {
 	    QVariant *xptr = (QVariant *)x[0].s_class;
 	    QVariant xret(*xptr);
 	    delete xptr;

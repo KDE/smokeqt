@@ -193,7 +193,7 @@ public:
     virtual void fixup(QString& x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(11633, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11636, (void*)this, x)) return;
 	this->QValidator::fixup(x1);
     }
     virtual void insertChild(QObject* x1) {

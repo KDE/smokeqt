@@ -122,7 +122,7 @@ public:
     }
     virtual const char* className() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(12207, (void*)this, x)) return (const char*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(12210, (void*)this, x)) return (const char*)x[0].s_class;
 	return this->QWidgetPlugin::className();
     }
     virtual void connectNotify(const char* x1) {
@@ -136,7 +136,7 @@ public:
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_class = (void*)x2;
 	x[3].s_voidp = (void*)x3;
-	qt_Smoke->binding->callMethod(12216, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(12219, (void*)this, x, true /*pure virtual*/);
 	return (QWidget*)x[0].s_class;
 	// ABSTRACT
     }
@@ -168,7 +168,7 @@ public:
     virtual QString group(const QString& x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(12219, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(12222, (void*)this, x)) {
 	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;
@@ -179,7 +179,7 @@ public:
     virtual QIconSet iconSet(const QString& x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(12220, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(12223, (void*)this, x)) {
 	    QIconSet *xptr = (QIconSet *)x[0].s_class;
 	    QIconSet xret(*xptr);
 	    delete xptr;
@@ -190,7 +190,7 @@ public:
     virtual QString includeFile(const QString& x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(12221, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(12224, (void*)this, x)) {
 	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;
@@ -207,12 +207,12 @@ public:
     virtual bool isContainer(const QString& x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(12224, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(12227, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QWidgetPlugin::isContainer(x1);
     }
     virtual QStringList keys() const {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(12215, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(12218, (void*)this, x, true /*pure virtual*/);
 	QStringList *xptr = (QStringList *)x[0].s_class;
 	QStringList xret(*xptr);
 	delete xptr;
@@ -221,7 +221,7 @@ public:
     }
     virtual QMetaObject* metaObject() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(12206, (void*)this, x)) return (QMetaObject*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(12209, (void*)this, x)) return (QMetaObject*)x[0].s_class;
 	return this->QWidgetPlugin::metaObject();
     }
     virtual QVariant property(const char* x1) const {
@@ -238,21 +238,21 @@ public:
     virtual void* qt_cast(const char* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(12208, (void*)this, x)) return (void*)x[0].s_voidp;
+	if(qt_Smoke->binding->callMethod(12211, (void*)this, x)) return (void*)x[0].s_voidp;
 	return this->QWidgetPlugin::qt_cast(x1);
     }
     virtual bool qt_emit(int x1, QUObject* x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_voidp = (void*)x2;
-	if(qt_Smoke->binding->callMethod(12210, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(12213, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QWidgetPlugin::qt_emit(x1, x2);
     }
     virtual bool qt_invoke(int x1, QUObject* x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_voidp = (void*)x2;
-	if(qt_Smoke->binding->callMethod(12209, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(12212, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QWidgetPlugin::qt_invoke(x1, x2);
     }
     virtual bool qt_property(int x1, int x2, QVariant* x3) {
@@ -260,7 +260,7 @@ public:
 	x[1].s_int = x1;
 	x[2].s_int = x2;
 	x[3].s_class = (void*)x3;
-	if(qt_Smoke->binding->callMethod(12211, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(12214, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QWidgetPlugin::qt_property(x1, x2, x3);
     }
     virtual void removeChild(QObject* x1) {
@@ -291,7 +291,7 @@ public:
     virtual QString toolTip(const QString& x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(12222, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(12225, (void*)this, x)) {
 	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;
@@ -302,7 +302,7 @@ public:
     virtual QString whatsThis(const QString& x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(12223, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(12226, (void*)this, x)) {
 	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;

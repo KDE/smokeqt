@@ -174,7 +174,7 @@ public:
     virtual QByteArray encodedData(const char* x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(9558, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(9561, (void*)this, x)) {
 	    QByteArray *xptr = (QByteArray *)x[0].s_class;
 	    QByteArray xret(*xptr);
 	    delete xptr;
@@ -198,7 +198,7 @@ public:
     virtual const char* format(int x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(9557, (void*)this, x)) return (const char*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(9560, (void*)this, x)) return (const char*)x[0].s_class;
 	return this->QStoredDrag::format(x1);
     }
     virtual void insertChild(QObject* x1) {
@@ -266,7 +266,7 @@ public:
     virtual void setEncodedData(const QByteArray& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(9556, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9559, (void*)this, x)) return;
 	this->QStoredDrag::setEncodedData(x1);
     }
     virtual void setName(const char* x1) {

@@ -193,7 +193,7 @@ public:
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {
-	  case 624: //QStyleOption::StyleOptionDefault
+	  case 625: //QStyleOption::StyleOptionDefault
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QStyleOption::StyleOptionDefault;

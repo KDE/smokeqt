@@ -163,7 +163,7 @@ public:
     }
     virtual const char* className() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(10617, (void*)this, x)) return (const char*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(10620, (void*)this, x)) return (const char*)x[0].s_class;
 	return this->QTextDrag::className();
     }
     virtual void connectNotify(const char* x1) {
@@ -193,7 +193,7 @@ public:
     virtual QByteArray encodedData(const char* x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(10633, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(10636, (void*)this, x)) {
 	    QByteArray *xptr = (QByteArray *)x[0].s_class;
 	    QByteArray xret(*xptr);
 	    delete xptr;
@@ -217,7 +217,7 @@ public:
     virtual const char* format(int x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(10632, (void*)this, x)) return (const char*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(10635, (void*)this, x)) return (const char*)x[0].s_class;
 	return this->QTextDrag::format(x1);
     }
     virtual void insertChild(QObject* x1) {
@@ -228,7 +228,7 @@ public:
     }
     virtual QMetaObject* metaObject() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(10616, (void*)this, x)) return (QMetaObject*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(10619, (void*)this, x)) return (QMetaObject*)x[0].s_class;
 	return this->QTextDrag::metaObject();
     }
     virtual QVariant property(const char* x1) const {
@@ -251,21 +251,21 @@ public:
     virtual void* qt_cast(const char* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(10618, (void*)this, x)) return (void*)x[0].s_voidp;
+	if(qt_Smoke->binding->callMethod(10621, (void*)this, x)) return (void*)x[0].s_voidp;
 	return this->QTextDrag::qt_cast(x1);
     }
     virtual bool qt_emit(int x1, QUObject* x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_voidp = (void*)x2;
-	if(qt_Smoke->binding->callMethod(10620, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(10623, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QTextDrag::qt_emit(x1, x2);
     }
     virtual bool qt_invoke(int x1, QUObject* x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_voidp = (void*)x2;
-	if(qt_Smoke->binding->callMethod(10619, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(10622, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QTextDrag::qt_invoke(x1, x2);
     }
     virtual bool qt_property(int x1, int x2, QVariant* x3) {
@@ -273,7 +273,7 @@ public:
 	x[1].s_int = x1;
 	x[2].s_int = x2;
 	x[3].s_class = (void*)x3;
-	if(qt_Smoke->binding->callMethod(10621, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(10624, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QTextDrag::qt_property(x1, x2, x3);
     }
     virtual void removeChild(QObject* x1) {
@@ -311,13 +311,13 @@ public:
     virtual void setSubtype(const QCString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(10631, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10634, (void*)this, x)) return;
 	this->QTextDrag::setSubtype(x1);
     }
     virtual void setText(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(10630, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10633, (void*)this, x)) return;
 	this->QTextDrag::setText(x1);
     }
     virtual void timerEvent(QTimerEvent* x1) {

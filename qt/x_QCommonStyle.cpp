@@ -314,7 +314,7 @@ public:
 	x[7].s_voidp = (void*)&x7;
 	x[8].s_int = x8;
 	x[9].s_class = (void*)x9;
-	if(qt_Smoke->binding->callMethod(9837, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9840, (void*)this, x)) return;
 	this->QStyle::drawItem(x1, x2, x3, x4, x5, x6, x7, x8, x9);
     }
     virtual void drawPrimitive(QStyle::PrimitiveElement x1, QPainter* x2, const QRect& x3, const QColorGroup& x4, QStyle::SFlags x5, const QStyleOption& x6) const {
@@ -356,7 +356,7 @@ public:
 	x[5].s_class = (void*)x5;
 	x[6].s_voidp = (void*)&x6;
 	x[7].s_int = x7;
-	if(qt_Smoke->binding->callMethod(9835, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(9838, (void*)this, x)) {
 	    QRect *xptr = (QRect *)x[0].s_class;
 	    QRect xret(*xptr);
 	    delete xptr;
@@ -379,25 +379,25 @@ public:
     virtual void polish(QApplication* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(9831, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9834, (void*)this, x)) return;
 	this->QStyle::polish(x1);
     }
     virtual void polish(QPalette& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(9833, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9836, (void*)this, x)) return;
 	this->QStyle::polish(x1);
     }
     virtual void polish(QWidget* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(9829, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9832, (void*)this, x)) return;
 	this->QStyle::polish(x1);
     }
     virtual void polishPopupMenu(QPopupMenu* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	qt_Smoke->binding->callMethod(9834, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(9837, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }
@@ -544,13 +544,13 @@ public:
     virtual void unPolish(QApplication* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(9832, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9835, (void*)this, x)) return;
 	this->QStyle::unPolish(x1);
     }
     virtual void unPolish(QWidget* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(9830, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9833, (void*)this, x)) return;
 	this->QStyle::unPolish(x1);
     }
     ~x_QCommonStyle() { qt_Smoke->binding->deleted(49, (void*)this); }

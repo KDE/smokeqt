@@ -338,7 +338,7 @@ public:
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {
-	  case 630: //QStyleSheetItem::DisplayMode
+	  case 631: //QStyleSheetItem::DisplayMode
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QStyleSheetItem::DisplayMode;
@@ -354,7 +354,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 635: //QStyleSheetItem::VerticalAlignment
+	  case 636: //QStyleSheetItem::VerticalAlignment
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QStyleSheetItem::VerticalAlignment;
@@ -370,7 +370,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 634: //QStyleSheetItem::Margin
+	  case 635: //QStyleSheetItem::Margin
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QStyleSheetItem::Margin;
@@ -386,7 +386,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 636: //QStyleSheetItem::WhiteSpaceMode
+	  case 637: //QStyleSheetItem::WhiteSpaceMode
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QStyleSheetItem::WhiteSpaceMode;
@@ -402,7 +402,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 632: //QStyleSheetItem::ListStyle
+	  case 633: //QStyleSheetItem::ListStyle
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QStyleSheetItem::ListStyle;
@@ -418,7 +418,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 629: //QStyleSheetItem::AdditionalStyleValues
+	  case 630: //QStyleSheetItem::AdditionalStyleValues
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QStyleSheetItem::AdditionalStyleValues;

@@ -76,14 +76,14 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_class = (void*)x1;
 	x[2].s_class = (void*)x2;
-	if(qt_Smoke->binding->callMethod(9249, (void*)this, x)) return (QWidget*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(9252, (void*)this, x)) return (QWidget*)x[0].s_class;
 	return this->QSqlEditorFactory::createEditor(x1, x2);
     }
     virtual QWidget* createEditor(QWidget* x1, const QVariant& x2) {
 	Smoke::StackItem x[3];
 	x[1].s_class = (void*)x1;
 	x[2].s_class = (void*)&x2;
-	if(qt_Smoke->binding->callMethod(9248, (void*)this, x)) return (QWidget*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(9251, (void*)this, x)) return (QWidget*)x[0].s_class;
 	return this->QSqlEditorFactory::createEditor(x1, x2);
     }
     virtual void customEvent(QCustomEvent* x1) {

@@ -269,90 +269,90 @@ public:
     virtual void addPath(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(11394, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11397, (void*)this, x)) return;
 	this->QUrl::addPath(x1);
     }
     virtual bool cdUp() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(11406, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(11409, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QUrl::cdUp();
     }
     virtual bool parse(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(11411, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(11414, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QUrl::parse(x1);
     }
     virtual void reset() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(11410, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11413, (void*)this, x)) return;
 	this->QUrl::reset();
     }
     virtual void setEncodedPathAndQuery(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(11385, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11388, (void*)this, x)) return;
 	this->QUrl::setEncodedPathAndQuery(x1);
     }
     virtual void setFileName(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(11395, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11398, (void*)this, x)) return;
 	this->QUrl::setFileName(x1);
     }
     virtual void setHost(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(11376, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11379, (void*)this, x)) return;
 	this->QUrl::setHost(x1);
     }
     virtual void setPassword(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(11373, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11376, (void*)this, x)) return;
 	this->QUrl::setPassword(x1);
     }
     virtual void setPath(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(11383, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11386, (void*)this, x)) return;
 	this->QUrl::setPath(x1);
     }
     virtual void setPort(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(11379, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11382, (void*)this, x)) return;
 	this->QUrl::setPort(x1);
     }
     virtual void setProtocol(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(11368, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11371, (void*)this, x)) return;
 	this->QUrl::setProtocol(x1);
     }
     virtual void setQuery(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(11387, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11390, (void*)this, x)) return;
 	this->QUrl::setQuery(x1);
     }
     virtual void setRef(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(11390, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11393, (void*)this, x)) return;
 	this->QUrl::setRef(x1);
     }
     virtual void setUser(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(11370, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11373, (void*)this, x)) return;
 	this->QUrl::setUser(x1);
     }
     virtual QString toString(bool x1, bool x2) const {
 	Smoke::StackItem x[3];
 	x[1].s_bool = x1;
 	x[2].s_bool = x2;
-	if(qt_Smoke->binding->callMethod(11403, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(11406, (void*)this, x)) {
 	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;
