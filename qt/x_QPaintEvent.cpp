@@ -9,28 +9,28 @@ class x_QPaintEvent : public QPaintEvent {
 public:
     static void x_0(Smoke::Stack x) {
 	// QPaintEvent(const QRegion&, bool)
-	x_QPaintEvent* xret = new x_QPaintEvent(*(const QRegion *)x[1].s_voidp,(bool)x[2].s_bool);
+	x_QPaintEvent* xret = new x_QPaintEvent(*(const QRegion *)x[1].s_class,(bool)x[2].s_bool);
 	x[0].s_class = (void*)xret;
     }
     x_QPaintEvent(const QRegion& x1, bool x2) : QPaintEvent(x1, x2) {
     }
     static void x_1(Smoke::Stack x) {
 	// QPaintEvent(const QRegion&)
-	x_QPaintEvent* xret = new x_QPaintEvent(*(const QRegion *)x[1].s_voidp);
+	x_QPaintEvent* xret = new x_QPaintEvent(*(const QRegion *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QPaintEvent(const QRegion& x1) : QPaintEvent(x1) {
     }
     static void x_2(Smoke::Stack x) {
 	// QPaintEvent(const QRect&, bool)
-	x_QPaintEvent* xret = new x_QPaintEvent(*(const QRect *)x[1].s_voidp,(bool)x[2].s_bool);
+	x_QPaintEvent* xret = new x_QPaintEvent(*(const QRect *)x[1].s_class,(bool)x[2].s_bool);
 	x[0].s_class = (void*)xret;
     }
     x_QPaintEvent(const QRect& x1, bool x2) : QPaintEvent(x1, x2) {
     }
     static void x_3(Smoke::Stack x) {
 	// QPaintEvent(const QRect&)
-	x_QPaintEvent* xret = new x_QPaintEvent(*(const QRect *)x[1].s_voidp);
+	x_QPaintEvent* xret = new x_QPaintEvent(*(const QRect *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QPaintEvent(const QRect& x1) : QPaintEvent(x1) {
@@ -38,19 +38,19 @@ public:
     void x_4(Smoke::Stack x) const {
 	// rect()
 	const QRect& xret = this->QPaintEvent::rect();
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_5(Smoke::Stack x) const {
 	// region()
 	const QRegion& xret = this->QPaintEvent::region();
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_6(Smoke::Stack x) const {
 	// erased()
 	bool xret = this->QPaintEvent::erased();
 	x[0].s_bool = xret;
     }
-    ~x_QPaintEvent() {}
+    ~x_QPaintEvent() { qt_Smoke->binding->deleted(219, (void*)this); }
 };
 void xcall_QPaintEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QPaintEvent *xself = (x_QPaintEvent*)obj;

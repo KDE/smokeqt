@@ -12,17 +12,17 @@ public:
     x_QColorDialog(void *x) : xthis((QColorDialog*)x) {}
     static void x_0(Smoke::Stack x) {
 	// getColor(const QColor&, QWidget*, const char*)
-	QColor xret = QColorDialog::getColor(*(const QColor *)x[1].s_voidp,(QWidget*)x[2].s_voidp,(const char*)x[3].s_voidp);
+	QColor xret = QColorDialog::getColor(*(const QColor *)x[1].s_class,(QWidget*)x[2].s_class,(const char*)x[3].s_voidp);
 	x[0].s_class = (void*)new QColor(xret);
     }
     static void x_1(Smoke::Stack x) {
 	// getColor(const QColor&, QWidget*)
-	QColor xret = QColorDialog::getColor(*(const QColor *)x[1].s_voidp,(QWidget*)x[2].s_voidp);
+	QColor xret = QColorDialog::getColor(*(const QColor *)x[1].s_class,(QWidget*)x[2].s_class);
 	x[0].s_class = (void*)new QColor(xret);
     }
     static void x_2(Smoke::Stack x) {
 	// getColor(const QColor&)
-	QColor xret = QColorDialog::getColor(*(const QColor *)x[1].s_voidp);
+	QColor xret = QColorDialog::getColor(*(const QColor *)x[1].s_class);
 	x[0].s_class = (void*)new QColor(xret);
     }
     static void x_3(Smoke::Stack x) {
@@ -32,12 +32,12 @@ public:
     }
     static void x_4(Smoke::Stack x) {
 	// getRgba(QRgb, bool*, QWidget*, const char*)
-	QRgb xret = QColorDialog::getRgba((QRgb)x[1].s_uint,(bool*)x[2].s_voidp,(QWidget*)x[3].s_voidp,(const char*)x[4].s_voidp);
+	QRgb xret = QColorDialog::getRgba((QRgb)x[1].s_uint,(bool*)x[2].s_voidp,(QWidget*)x[3].s_class,(const char*)x[4].s_voidp);
 	x[0].s_uint = xret;
     }
     static void x_5(Smoke::Stack x) {
 	// getRgba(QRgb, bool*, QWidget*)
-	QRgb xret = QColorDialog::getRgba((QRgb)x[1].s_uint,(bool*)x[2].s_voidp,(QWidget*)x[3].s_voidp);
+	QRgb xret = QColorDialog::getRgba((QRgb)x[1].s_uint,(bool*)x[2].s_voidp,(QWidget*)x[3].s_class);
 	x[0].s_uint = xret;
     }
     static void x_6(Smoke::Stack x) {
@@ -65,7 +65,7 @@ public:
 	QColorDialog::setCustomColor((int)x[1].s_int,(QRgb)x[2].s_uint);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    ~x_QColorDialog() {}
+    ~x_QColorDialog() { qt_Smoke->binding->deleted(42, (void*)this); }
 };
 void xcall_QColorDialog(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QColorDialog xtmp(obj), *xself = &xtmp;

@@ -47,7 +47,7 @@ public:
     }
     static void x_9(Smoke::Stack x) {
 	// QPixmap(const QImage&)
-	x_QPixmap* xret = new x_QPixmap(*(const QImage *)x[1].s_voidp);
+	x_QPixmap* xret = new x_QPixmap(*(const QImage *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QPixmap(const QImage& x1) : QPixmap(x1) {
@@ -75,21 +75,21 @@ public:
     }
     static void x_13(Smoke::Stack x) {
 	// QPixmap(const QSize&, int, QPixmap::Optimization)
-	x_QPixmap* xret = new x_QPixmap(*(const QSize *)x[1].s_voidp,(int)x[2].s_int,(QPixmap::Optimization)x[3].s_enum);
+	x_QPixmap* xret = new x_QPixmap(*(const QSize *)x[1].s_class,(int)x[2].s_int,(QPixmap::Optimization)x[3].s_enum);
 	x[0].s_class = (void*)xret;
     }
     x_QPixmap(const QSize& x1, int x2, QPixmap::Optimization x3) : QPixmap(x1, x2, x3) {
     }
     static void x_14(Smoke::Stack x) {
 	// QPixmap(const QSize&, int)
-	x_QPixmap* xret = new x_QPixmap(*(const QSize *)x[1].s_voidp,(int)x[2].s_int);
+	x_QPixmap* xret = new x_QPixmap(*(const QSize *)x[1].s_class,(int)x[2].s_int);
 	x[0].s_class = (void*)xret;
     }
     x_QPixmap(const QSize& x1, int x2) : QPixmap(x1, x2) {
     }
     static void x_15(Smoke::Stack x) {
 	// QPixmap(const QSize&)
-	x_QPixmap* xret = new x_QPixmap(*(const QSize *)x[1].s_voidp);
+	x_QPixmap* xret = new x_QPixmap(*(const QSize *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QPixmap(const QSize& x1) : QPixmap(x1) {
@@ -138,20 +138,20 @@ public:
     }
     static void x_22(Smoke::Stack x) {
 	// QPixmap(const QPixmap&)
-	x_QPixmap* xret = new x_QPixmap(*(const QPixmap *)x[1].s_voidp);
+	x_QPixmap* xret = new x_QPixmap(*(const QPixmap *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QPixmap(const QPixmap& x1) : QPixmap(x1) {
     }
     void x_23(Smoke::Stack x) {
 	// operator=(const QPixmap&)
-	QPixmap& xret = this->QPixmap::operator=(*(const QPixmap *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QPixmap& xret = this->QPixmap::operator=(*(const QPixmap *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_24(Smoke::Stack x) {
 	// operator=(const QImage&)
-	QPixmap& xret = this->QPixmap::operator=(*(const QImage *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QPixmap& xret = this->QPixmap::operator=(*(const QImage *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_25(Smoke::Stack x) const {
 	// isNull()
@@ -185,7 +185,7 @@ public:
     }
     void x_31(Smoke::Stack x) {
 	// fill(const QColor&)
-	this->QPixmap::fill(*(const QColor *)x[1].s_voidp);
+	this->QPixmap::fill(*(const QColor *)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_32(Smoke::Stack x) {
@@ -195,12 +195,12 @@ public:
     }
     void x_33(Smoke::Stack x) {
 	// fill(const QWidget*, int, int)
-	this->QPixmap::fill((const QWidget*)x[1].s_voidp,(int)x[2].s_int,(int)x[3].s_int);
+	this->QPixmap::fill((const QWidget*)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_34(Smoke::Stack x) {
 	// fill(const QWidget*, const QPoint&)
-	this->QPixmap::fill((const QWidget*)x[1].s_voidp,*(const QPoint *)x[2].s_voidp);
+	this->QPixmap::fill((const QWidget*)x[1].s_class,*(const QPoint *)x[2].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_35(Smoke::Stack x) {
@@ -210,17 +210,17 @@ public:
     }
     void x_36(Smoke::Stack x) {
 	// resize(const QSize&)
-	this->QPixmap::resize(*(const QSize *)x[1].s_voidp);
+	this->QPixmap::resize(*(const QSize *)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_37(Smoke::Stack x) const {
 	// mask()
 	const QBitmap* xret = this->QPixmap::mask();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_38(Smoke::Stack x) {
 	// setMask(const QBitmap&)
-	this->QPixmap::setMask(*(const QBitmap *)x[1].s_voidp);
+	this->QPixmap::setMask(*(const QBitmap *)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_39(Smoke::Stack x) const {
@@ -240,7 +240,7 @@ public:
     }
     void x_42(Smoke::Stack x) const {
 	// xForm(const QWMatrix&)
-	QPixmap xret = this->QPixmap::xForm(*(const QWMatrix *)x[1].s_voidp);
+	QPixmap xret = this->QPixmap::xForm(*(const QWMatrix *)x[1].s_class);
 	x[0].s_class = (void*)new QPixmap(xret);
     }
     void x_43(Smoke::Stack x) const {
@@ -250,17 +250,17 @@ public:
     }
     void x_44(Smoke::Stack x) {
 	// convertFromImage(const QImage&, QPixmap::ColorMode)
-	bool xret = this->QPixmap::convertFromImage(*(const QImage *)x[1].s_voidp,(QPixmap::ColorMode)x[2].s_enum);
+	bool xret = this->QPixmap::convertFromImage(*(const QImage *)x[1].s_class,(QPixmap::ColorMode)x[2].s_enum);
 	x[0].s_bool = xret;
     }
     void x_45(Smoke::Stack x) {
 	// convertFromImage(const QImage&)
-	bool xret = this->QPixmap::convertFromImage(*(const QImage *)x[1].s_voidp);
+	bool xret = this->QPixmap::convertFromImage(*(const QImage *)x[1].s_class);
 	x[0].s_bool = xret;
     }
     void x_46(Smoke::Stack x) {
 	// convertFromImage(const QImage&, int)
-	bool xret = this->QPixmap::convertFromImage(*(const QImage *)x[1].s_voidp,(int)x[2].s_int);
+	bool xret = this->QPixmap::convertFromImage(*(const QImage *)x[1].s_class,(int)x[2].s_int);
 	x[0].s_bool = xret;
     }
     void x_47(Smoke::Stack x) {
@@ -385,32 +385,32 @@ public:
     }
     static void x_71(Smoke::Stack x) {
 	// grabWidget(QWidget*, int, int, int, int)
-	QPixmap xret = QPixmap::grabWidget((QWidget*)x[1].s_voidp,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int);
+	QPixmap xret = QPixmap::grabWidget((QWidget*)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int);
 	x[0].s_class = (void*)new QPixmap(xret);
     }
     static void x_72(Smoke::Stack x) {
 	// grabWidget(QWidget*, int, int, int)
-	QPixmap xret = QPixmap::grabWidget((QWidget*)x[1].s_voidp,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int);
+	QPixmap xret = QPixmap::grabWidget((QWidget*)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int);
 	x[0].s_class = (void*)new QPixmap(xret);
     }
     static void x_73(Smoke::Stack x) {
 	// grabWidget(QWidget*, int, int)
-	QPixmap xret = QPixmap::grabWidget((QWidget*)x[1].s_voidp,(int)x[2].s_int,(int)x[3].s_int);
+	QPixmap xret = QPixmap::grabWidget((QWidget*)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int);
 	x[0].s_class = (void*)new QPixmap(xret);
     }
     static void x_74(Smoke::Stack x) {
 	// grabWidget(QWidget*, int)
-	QPixmap xret = QPixmap::grabWidget((QWidget*)x[1].s_voidp,(int)x[2].s_int);
+	QPixmap xret = QPixmap::grabWidget((QWidget*)x[1].s_class,(int)x[2].s_int);
 	x[0].s_class = (void*)new QPixmap(xret);
     }
     static void x_75(Smoke::Stack x) {
 	// grabWidget(QWidget*)
-	QPixmap xret = QPixmap::grabWidget((QWidget*)x[1].s_voidp);
+	QPixmap xret = QPixmap::grabWidget((QWidget*)x[1].s_class);
 	x[0].s_class = (void*)new QPixmap(xret);
     }
     static void x_76(Smoke::Stack x) {
 	// trueMatrix(const QWMatrix&, int, int)
-	QWMatrix xret = QPixmap::trueMatrix(*(const QWMatrix *)x[1].s_voidp,(int)x[2].s_int,(int)x[3].s_int);
+	QWMatrix xret = QPixmap::trueMatrix(*(const QWMatrix *)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int);
 	x[0].s_class = (void*)new QWMatrix(xret);
     }
     static void x_77(Smoke::Stack x) {
@@ -443,50 +443,50 @@ public:
     virtual bool cmd(int x1, QPainter* x2, QPDevCmdParam* x3) {
 	Smoke::StackItem x[4];
 	x[1].s_int = x1;
-	x[2].s_voidp = (void*)x2;
+	x[2].s_class = (void*)x2;
 	x[3].s_voidp = (void*)x3;
-	if(qt_Smoke->callMethod(5566, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(5566, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QPaintDevice::cmd(x1, x2, x3);
     }
     virtual void detach() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(5934, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(5934, (void*)this, x)) return;
 	this->QPixmap::detach();
     }
     virtual int fontInf(QFont* x1, int x2) const {
 	Smoke::StackItem x[3];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	x[2].s_int = x2;
-	if(qt_Smoke->callMethod(5571, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(5571, (void*)this, x)) return (int)x[0].s_int;
 	return this->QPaintDevice::fontInf(x1, x2);
     }
     virtual int fontMet(QFont* x1, int x2, const char* x3, int x4) const {
 	Smoke::StackItem x[5];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	x[2].s_int = x2;
 	x[3].s_voidp = (void*)x3;
 	x[4].s_int = x4;
-	if(qt_Smoke->callMethod(5568, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(5568, (void*)this, x)) return (int)x[0].s_int;
 	return this->QPaintDevice::fontMet(x1, x2, x3, x4);
     }
     virtual int metric(int x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->callMethod(5952, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(5952, (void*)this, x)) return (int)x[0].s_int;
 	return this->QPixmap::metric(x1);
     }
     virtual int resolution() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(5564, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(5564, (void*)this, x)) return (int)x[0].s_int;
 	return this->QPaintDevice::resolution();
     }
     virtual void setResolution(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->callMethod(5563, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(5563, (void*)this, x)) return;
 	this->QPaintDevice::setResolution(x1);
     }
-    ~x_QPixmap() {}
+    ~x_QPixmap() { qt_Smoke->binding->deleted(224, (void*)this); }
 };
 void xcall_QPixmap(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QPixmap *xself = (x_QPixmap*)obj;

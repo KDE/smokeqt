@@ -312,7 +312,7 @@ public:
     }
     static void x_96(Smoke::Stack x) {
 	// QChar(const QChar&)
-	x_QChar* xret = new x_QChar(*(const QChar *)x[1].s_voidp);
+	x_QChar* xret = new x_QChar(*(const QChar *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QChar(const QChar& x1) : QChar(x1) {
@@ -495,7 +495,7 @@ public:
 	bool xret = QChar::networkOrdered();
 	x[0].s_bool = xret;
     }
-    ~x_QChar() {}
+    ~x_QChar() { qt_Smoke->binding->deleted(33, (void*)this); }
 };
 void xcall_QChar(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QChar *xself = (x_QChar*)obj;

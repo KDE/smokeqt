@@ -25,12 +25,12 @@ public:
     }
     void x_3(Smoke::Stack x) const {
 	// operator==(const QIconDragItem&)
-	bool xret = this->QIconDragItem::operator==(*(const QIconDragItem *)x[1].s_voidp);
+	bool xret = this->QIconDragItem::operator==(*(const QIconDragItem *)x[1].s_class);
 	x[0].s_bool = xret;
     }
     virtual QByteArray data() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(3414, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(3414, (void*)this, x)) {
 	    QByteArray *xptr = (QByteArray *)x[0].s_class;
 	    QByteArray xret(*xptr);
 	    delete xptr;
@@ -41,10 +41,10 @@ public:
     virtual void setData(const QByteArray& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->callMethod(3415, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(3415, (void*)this, x)) return;
 	this->QIconDragItem::setData(x1);
     }
-    ~x_QIconDragItem() {}
+    ~x_QIconDragItem() { qt_Smoke->binding->deleted(150, (void*)this); }
 };
 void xcall_QIconDragItem(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QIconDragItem *xself = (x_QIconDragItem*)obj;

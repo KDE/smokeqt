@@ -24,36 +24,36 @@ public:
     }
     static void x_2(Smoke::Stack x) {
 	// QBrush(const QColor&, Qt::BrushStyle)
-	x_QBrush* xret = new x_QBrush(*(const QColor *)x[1].s_voidp,(Qt::BrushStyle)x[2].s_enum);
+	x_QBrush* xret = new x_QBrush(*(const QColor *)x[1].s_class,(Qt::BrushStyle)x[2].s_enum);
 	x[0].s_class = (void*)xret;
     }
     x_QBrush(const QColor& x1, Qt::BrushStyle x2) : QBrush(x1, x2) {
     }
     static void x_3(Smoke::Stack x) {
 	// QBrush(const QColor&)
-	x_QBrush* xret = new x_QBrush(*(const QColor *)x[1].s_voidp);
+	x_QBrush* xret = new x_QBrush(*(const QColor *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QBrush(const QColor& x1) : QBrush(x1) {
     }
     static void x_4(Smoke::Stack x) {
 	// QBrush(const QColor&, const QPixmap&)
-	x_QBrush* xret = new x_QBrush(*(const QColor *)x[1].s_voidp,*(const QPixmap *)x[2].s_voidp);
+	x_QBrush* xret = new x_QBrush(*(const QColor *)x[1].s_class,*(const QPixmap *)x[2].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QBrush(const QColor& x1, const QPixmap& x2) : QBrush(x1, x2) {
     }
     static void x_5(Smoke::Stack x) {
 	// QBrush(const QBrush&)
-	x_QBrush* xret = new x_QBrush(*(const QBrush *)x[1].s_voidp);
+	x_QBrush* xret = new x_QBrush(*(const QBrush *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QBrush(const QBrush& x1) : QBrush(x1) {
     }
     void x_6(Smoke::Stack x) {
 	// operator=(const QBrush&)
-	QBrush& xret = this->QBrush::operator=(*(const QBrush *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QBrush& xret = this->QBrush::operator=(*(const QBrush *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_7(Smoke::Stack x) const {
 	// style()
@@ -68,34 +68,34 @@ public:
     void x_9(Smoke::Stack x) const {
 	// color()
 	const QColor& xret = this->QBrush::color();
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_10(Smoke::Stack x) {
 	// setColor(const QColor&)
-	this->QBrush::setColor(*(const QColor *)x[1].s_voidp);
+	this->QBrush::setColor(*(const QColor *)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_11(Smoke::Stack x) const {
 	// pixmap()
 	QPixmap* xret = this->QBrush::pixmap();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_12(Smoke::Stack x) {
 	// setPixmap(const QPixmap&)
-	this->QBrush::setPixmap(*(const QPixmap *)x[1].s_voidp);
+	this->QBrush::setPixmap(*(const QPixmap *)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_13(Smoke::Stack x) const {
 	// operator==(const QBrush&)
-	bool xret = this->QBrush::operator==(*(const QBrush *)x[1].s_voidp);
+	bool xret = this->QBrush::operator==(*(const QBrush *)x[1].s_class);
 	x[0].s_bool = xret;
     }
     void x_14(Smoke::Stack x) const {
 	// operator!=(const QBrush&)
-	bool xret = this->QBrush::operator!=(*(const QBrush *)x[1].s_voidp);
+	bool xret = this->QBrush::operator!=(*(const QBrush *)x[1].s_class);
 	x[0].s_bool = xret;
     }
-    ~x_QBrush() {}
+    ~x_QBrush() { qt_Smoke->binding->deleted(14, (void*)this); }
 };
 void xcall_QBrush(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QBrush *xself = (x_QBrush*)obj;

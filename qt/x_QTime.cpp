@@ -97,7 +97,7 @@ public:
     }
     void x_16(Smoke::Stack x) const {
 	// secsTo(const QTime&)
-	int xret = this->QTime::secsTo(*(const QTime *)x[1].s_voidp);
+	int xret = this->QTime::secsTo(*(const QTime *)x[1].s_class);
 	x[0].s_int = xret;
     }
     void x_17(Smoke::Stack x) const {
@@ -107,37 +107,37 @@ public:
     }
     void x_18(Smoke::Stack x) const {
 	// msecsTo(const QTime&)
-	int xret = this->QTime::msecsTo(*(const QTime *)x[1].s_voidp);
+	int xret = this->QTime::msecsTo(*(const QTime *)x[1].s_class);
 	x[0].s_int = xret;
     }
     void x_19(Smoke::Stack x) const {
 	// operator==(const QTime&)
-	bool xret = this->QTime::operator==(*(const QTime *)x[1].s_voidp);
+	bool xret = this->QTime::operator==(*(const QTime *)x[1].s_class);
 	x[0].s_bool = xret;
     }
     void x_20(Smoke::Stack x) const {
 	// operator!=(const QTime&)
-	bool xret = this->QTime::operator!=(*(const QTime *)x[1].s_voidp);
+	bool xret = this->QTime::operator!=(*(const QTime *)x[1].s_class);
 	x[0].s_bool = xret;
     }
     void x_21(Smoke::Stack x) const {
 	// operator<(const QTime&)
-	bool xret = this->QTime::operator<(*(const QTime *)x[1].s_voidp);
+	bool xret = this->QTime::operator<(*(const QTime *)x[1].s_class);
 	x[0].s_bool = xret;
     }
     void x_22(Smoke::Stack x) const {
 	// operator<=(const QTime&)
-	bool xret = this->QTime::operator<=(*(const QTime *)x[1].s_voidp);
+	bool xret = this->QTime::operator<=(*(const QTime *)x[1].s_class);
 	x[0].s_bool = xret;
     }
     void x_23(Smoke::Stack x) const {
 	// operator>(const QTime&)
-	bool xret = this->QTime::operator>(*(const QTime *)x[1].s_voidp);
+	bool xret = this->QTime::operator>(*(const QTime *)x[1].s_class);
 	x[0].s_bool = xret;
     }
     void x_24(Smoke::Stack x) const {
 	// operator>=(const QTime&)
-	bool xret = this->QTime::operator>=(*(const QTime *)x[1].s_voidp);
+	bool xret = this->QTime::operator>=(*(const QTime *)x[1].s_class);
 	x[0].s_bool = xret;
     }
     void x_25(Smoke::Stack x) {
@@ -180,7 +180,7 @@ public:
 	bool xret = QTime::isValid((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int);
 	x[0].s_bool = xret;
     }
-    ~x_QTime() {}
+    ~x_QTime() { qt_Smoke->binding->deleted(327, (void*)this); }
 };
 void xcall_QTime(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QTime *xself = (x_QTime*)obj;

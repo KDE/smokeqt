@@ -30,15 +30,15 @@ public:
     }
     static void x_3(Smoke::Stack x) {
 	// QHostAddress(const QHostAddress&)
-	x_QHostAddress* xret = new x_QHostAddress(*(const QHostAddress *)x[1].s_voidp);
+	x_QHostAddress* xret = new x_QHostAddress(*(const QHostAddress *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QHostAddress(const QHostAddress& x1) : QHostAddress(x1) {
     }
     void x_4(Smoke::Stack x) {
 	// operator=(const QHostAddress&)
-	QHostAddress& xret = this->QHostAddress::operator=(*(const QHostAddress *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QHostAddress& xret = this->QHostAddress::operator=(*(const QHostAddress *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_5(Smoke::Stack x) {
 	// setAddress(Q_UINT32)
@@ -72,10 +72,10 @@ public:
     }
     void x_11(Smoke::Stack x) const {
 	// operator==(const QHostAddress&)
-	bool xret = this->QHostAddress::operator==(*(const QHostAddress *)x[1].s_voidp);
+	bool xret = this->QHostAddress::operator==(*(const QHostAddress *)x[1].s_class);
 	x[0].s_bool = xret;
     }
-    ~x_QHostAddress() {}
+    ~x_QHostAddress() { qt_Smoke->binding->deleted(144, (void*)this); }
 };
 void xcall_QHostAddress(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QHostAddress *xself = (x_QHostAddress*)obj;

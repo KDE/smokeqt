@@ -1506,7 +1506,7 @@ public:
     }
     x_Qt() : Qt() {
     }
-    ~x_Qt() {}
+    ~x_Qt() { qt_Smoke->binding->deleted(380, (void*)this); }
 };
 void xcall_Qt(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_Qt *xself = (x_Qt*)obj;

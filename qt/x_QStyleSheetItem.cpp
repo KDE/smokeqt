@@ -84,14 +84,14 @@ public:
     }
     static void x_25(Smoke::Stack x) {
 	// QStyleSheetItem(QStyleSheet*, const QString&)
-	x_QStyleSheetItem* xret = new x_QStyleSheetItem((QStyleSheet*)x[1].s_voidp,*(const QString *)x[2].s_voidp);
+	x_QStyleSheetItem* xret = new x_QStyleSheetItem((QStyleSheet*)x[1].s_class,*(const QString *)x[2].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QStyleSheetItem(QStyleSheet* x1, const QString& x2) : QStyleSheetItem(x1, x2) {
     }
     static void x_26(Smoke::Stack x) {
 	// QStyleSheetItem(const QStyleSheetItem&)
-	x_QStyleSheetItem* xret = new x_QStyleSheetItem(*(const QStyleSheetItem *)x[1].s_voidp);
+	x_QStyleSheetItem* xret = new x_QStyleSheetItem(*(const QStyleSheetItem *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QStyleSheetItem(const QStyleSheetItem& x1) : QStyleSheetItem(x1) {
@@ -104,12 +104,12 @@ public:
     void x_28(Smoke::Stack x) {
 	// styleSheet()
 	QStyleSheet* xret = this->QStyleSheetItem::styleSheet();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_29(Smoke::Stack x) const {
 	// styleSheet()
 	const QStyleSheet* xret = this->QStyleSheetItem::styleSheet();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_30(Smoke::Stack x) const {
 	// displayMode()
@@ -208,7 +208,7 @@ public:
     }
     void x_49(Smoke::Stack x) {
 	// setColor(const QColor&)
-	this->QStyleSheetItem::setColor(*(const QColor *)x[1].s_voidp);
+	this->QStyleSheetItem::setColor(*(const QColor *)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_50(Smoke::Stack x) const {
@@ -293,7 +293,7 @@ public:
     }
     void x_66(Smoke::Stack x) const {
 	// allowedInContext(const QStyleSheetItem*)
-	bool xret = this->QStyleSheetItem::allowedInContext((const QStyleSheetItem*)x[1].s_voidp);
+	bool xret = this->QStyleSheetItem::allowedInContext((const QStyleSheetItem*)x[1].s_class);
 	x[0].s_bool = xret;
     }
     void x_67(Smoke::Stack x) const {
@@ -316,7 +316,7 @@ public:
 	int xret = this->QStyleSheetItem::lineSpacing();
 	x[0].s_int = xret;
     }
-    ~x_QStyleSheetItem() {}
+    ~x_QStyleSheetItem() { qt_Smoke->binding->deleted(304, (void*)this); }
 };
 void xcall_QStyleSheetItem(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QStyleSheetItem *xself = (x_QStyleSheetItem*)obj;

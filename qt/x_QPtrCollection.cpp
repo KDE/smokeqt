@@ -24,7 +24,7 @@ public:
     }
     static void x_3(Smoke::Stack x) {
 	// QPtrCollection(const QPtrCollection&)
-	x_QPtrCollection* xret = new x_QPtrCollection(*(const QPtrCollection *)x[1].s_voidp);
+	x_QPtrCollection* xret = new x_QPtrCollection(*(const QPtrCollection *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QPtrCollection(const QPtrCollection& x1) : QPtrCollection(x1) {
@@ -36,27 +36,27 @@ public:
     }
     virtual void clear() {
 	Smoke::StackItem x[1];
-	qt_Smoke->callMethod(6321, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(6321, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }
     virtual uint count() const {
 	Smoke::StackItem x[1];
-	qt_Smoke->callMethod(6320, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(6320, (void*)this, x, true /*pure virtual*/);
 	return (uint)x[0].s_uint;
 	// ABSTRACT
     }
     virtual void deleteItem(QPtrCollection::Item x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	qt_Smoke->callMethod(6325, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(6325, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }
     virtual QPtrCollection::Item newItem(QPtrCollection::Item x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->callMethod(6324, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(6324, (void*)this, x)) {
 	    QPtrCollection::Item *xptr = (QPtrCollection::Item *)x[0].s_class;
 	    QPtrCollection::Item xret(*xptr);
 	    delete xptr;
@@ -64,7 +64,7 @@ public:
 	}
 	return this->QPtrCollection::newItem(x1);
     }
-    ~x_QPtrCollection() {}
+    ~x_QPtrCollection() { qt_Smoke->binding->deleted(237, (void*)this); }
 };
 void xcall_QPtrCollection(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QPtrCollection *xself = (x_QPtrCollection*)obj;

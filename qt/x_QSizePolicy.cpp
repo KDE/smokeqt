@@ -136,12 +136,12 @@ public:
     }
     void x_29(Smoke::Stack x) const {
 	// operator==(const QSizePolicy&)
-	bool xret = this->QSizePolicy::operator==(*(const QSizePolicy *)x[1].s_voidp);
+	bool xret = this->QSizePolicy::operator==(*(const QSizePolicy *)x[1].s_class);
 	x[0].s_bool = xret;
     }
     void x_30(Smoke::Stack x) const {
 	// operator!=(const QSizePolicy&)
-	bool xret = this->QSizePolicy::operator!=(*(const QSizePolicy *)x[1].s_voidp);
+	bool xret = this->QSizePolicy::operator!=(*(const QSizePolicy *)x[1].s_class);
 	x[0].s_bool = xret;
     }
     void x_31(Smoke::Stack x) const {
@@ -164,7 +164,7 @@ public:
 	this->QSizePolicy::setVerStretch((uchar)x[1].s_uchar);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    ~x_QSizePolicy() {}
+    ~x_QSizePolicy() { qt_Smoke->binding->deleted(262, (void*)this); }
 };
 void xcall_QSizePolicy(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QSizePolicy *xself = (x_QSizePolicy*)obj;

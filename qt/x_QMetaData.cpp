@@ -21,7 +21,7 @@ public:
     }
     x_QMetaData() : QMetaData() {
     }
-    ~x_QMetaData() {}
+    ~x_QMetaData() { qt_Smoke->binding->deleted(194, (void*)this); }
 };
 void xcall_QMetaData(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QMetaData *xself = (x_QMetaData*)obj;

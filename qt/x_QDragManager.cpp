@@ -8,7 +8,7 @@ private:
     QDragManager *xthis;
 public:
     x_QDragManager(void *x) : xthis((QDragManager*)x) {}
-    ~x_QDragManager() {}
+    ~x_QDragManager() { qt_Smoke->binding->deleted(98, (void*)this); }
 };
 void xcall_QDragManager(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QDragManager xtmp(obj), *xself = &xtmp;

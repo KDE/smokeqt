@@ -103,37 +103,37 @@ public:
     }
     void x_18(Smoke::Stack x) const {
 	// daysTo(const QDate&)
-	int xret = this->QDate::daysTo(*(const QDate *)x[1].s_voidp);
+	int xret = this->QDate::daysTo(*(const QDate *)x[1].s_class);
 	x[0].s_int = xret;
     }
     void x_19(Smoke::Stack x) const {
 	// operator==(const QDate&)
-	bool xret = this->QDate::operator==(*(const QDate *)x[1].s_voidp);
+	bool xret = this->QDate::operator==(*(const QDate *)x[1].s_class);
 	x[0].s_bool = xret;
     }
     void x_20(Smoke::Stack x) const {
 	// operator!=(const QDate&)
-	bool xret = this->QDate::operator!=(*(const QDate *)x[1].s_voidp);
+	bool xret = this->QDate::operator!=(*(const QDate *)x[1].s_class);
 	x[0].s_bool = xret;
     }
     void x_21(Smoke::Stack x) const {
 	// operator<(const QDate&)
-	bool xret = this->QDate::operator<(*(const QDate *)x[1].s_voidp);
+	bool xret = this->QDate::operator<(*(const QDate *)x[1].s_class);
 	x[0].s_bool = xret;
     }
     void x_22(Smoke::Stack x) const {
 	// operator<=(const QDate&)
-	bool xret = this->QDate::operator<=(*(const QDate *)x[1].s_voidp);
+	bool xret = this->QDate::operator<=(*(const QDate *)x[1].s_class);
 	x[0].s_bool = xret;
     }
     void x_23(Smoke::Stack x) const {
 	// operator>(const QDate&)
-	bool xret = this->QDate::operator>(*(const QDate *)x[1].s_voidp);
+	bool xret = this->QDate::operator>(*(const QDate *)x[1].s_class);
 	x[0].s_bool = xret;
     }
     void x_24(Smoke::Stack x) const {
 	// operator>=(const QDate&)
-	bool xret = this->QDate::operator>=(*(const QDate *)x[1].s_voidp);
+	bool xret = this->QDate::operator>=(*(const QDate *)x[1].s_class);
 	x[0].s_bool = xret;
     }
     static void x_25(Smoke::Stack x) {
@@ -201,7 +201,7 @@ public:
 	QDate::julianToGregorian((uint)x[1].s_uint,*(int *)x[2].s_voidp,*(int *)x[3].s_voidp,*(int *)x[4].s_voidp);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    ~x_QDate() {}
+    ~x_QDate() { qt_Smoke->binding->deleted(62, (void*)this); }
 };
 void xcall_QDate(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QDate *xself = (x_QDate*)obj;

@@ -24,12 +24,12 @@ public:
     }
     void x_3(Smoke::Stack x) const {
 	// operator==(const QTableSelection&)
-	bool xret = this->QTableSelection::operator==(*(const QTableSelection *)x[1].s_voidp);
+	bool xret = this->QTableSelection::operator==(*(const QTableSelection *)x[1].s_class);
 	x[0].s_bool = xret;
     }
     void x_4(Smoke::Stack x) const {
 	// operator!=(const QTableSelection&)
-	bool xret = this->QTableSelection::operator!=(*(const QTableSelection *)x[1].s_voidp);
+	bool xret = this->QTableSelection::operator!=(*(const QTableSelection *)x[1].s_class);
 	x[0].s_bool = xret;
     }
     void x_5(Smoke::Stack x) const {
@@ -67,7 +67,7 @@ public:
 	bool xret = this->QTableSelection::isActive();
 	x[0].s_bool = xret;
     }
-    ~x_QTableSelection() {}
+    ~x_QTableSelection() { qt_Smoke->binding->deleted(313, (void*)this); }
 };
 void xcall_QTableSelection(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QTableSelection *xself = (x_QTableSelection*)obj;

@@ -38,7 +38,7 @@ public:
 	this->QIMEvent::ignore();
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    ~x_QIMEvent() {}
+    ~x_QIMEvent() { qt_Smoke->binding->deleted(146, (void*)this); }
 };
 void xcall_QIMEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QIMEvent *xself = (x_QIMEvent*)obj;

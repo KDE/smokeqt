@@ -73,7 +73,7 @@ public:
 	QString xret = this->QXmlParseException::message();
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    ~x_QXmlParseException() {}
+    ~x_QXmlParseException() { qt_Smoke->binding->deleted(377, (void*)this); }
 };
 void xcall_QXmlParseException(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QXmlParseException *xself = (x_QXmlParseException*)obj;

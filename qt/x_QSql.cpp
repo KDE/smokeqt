@@ -39,7 +39,7 @@ public:
     }
     x_QSql() : QSql() {
     }
-    ~x_QSql() {}
+    ~x_QSql() { qt_Smoke->binding->deleted(273, (void*)this); }
 };
 void xcall_QSql(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QSql *xself = (x_QSql*)obj;

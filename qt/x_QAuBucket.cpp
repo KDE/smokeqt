@@ -12,7 +12,7 @@ public:
     }
     x_QAuBucket() : QAuBucket() {
     }
-    ~x_QAuBucket() {}
+    ~x_QAuBucket() { qt_Smoke->binding->deleted(7, (void*)this); }
 };
 void xcall_QAuBucket(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QAuBucket *xself = (x_QAuBucket*)obj;

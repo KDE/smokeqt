@@ -8,7 +8,7 @@ class x_QResizeEvent : public QResizeEvent {
 public:
     static void x_0(Smoke::Stack x) {
 	// QResizeEvent(const QSize&, const QSize&)
-	x_QResizeEvent* xret = new x_QResizeEvent(*(const QSize *)x[1].s_voidp,*(const QSize *)x[2].s_voidp);
+	x_QResizeEvent* xret = new x_QResizeEvent(*(const QSize *)x[1].s_class,*(const QSize *)x[2].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QResizeEvent(const QSize& x1, const QSize& x2) : QResizeEvent(x1, x2) {
@@ -16,14 +16,14 @@ public:
     void x_1(Smoke::Stack x) const {
 	// size()
 	const QSize& xret = this->QResizeEvent::size();
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_2(Smoke::Stack x) const {
 	// oldSize()
 	const QSize& xret = this->QResizeEvent::oldSize();
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
-    ~x_QResizeEvent() {}
+    ~x_QResizeEvent() { qt_Smoke->binding->deleted(245, (void*)this); }
 };
 void xcall_QResizeEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QResizeEvent *xself = (x_QResizeEvent*)obj;

@@ -27,49 +27,49 @@ public:
     }
     void x_3(Smoke::Stack x) {
 	// setFont(const QFont&)
-	this->QCustomMenuItem::setFont(*(const QFont *)x[1].s_voidp);
+	this->QCustomMenuItem::setFont(*(const QFont *)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     virtual bool fullSpan() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(1246, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(1246, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QCustomMenuItem::fullSpan();
     }
     virtual bool isSeparator() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(1247, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(1247, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QCustomMenuItem::isSeparator();
     }
     virtual void paint(QPainter* x1, const QColorGroup& x2, bool x3, bool x4, int x5, int x6, int x7, int x8) {
 	Smoke::StackItem x[9];
-	x[1].s_voidp = (void*)x1;
-	x[2].s_voidp = (void*)&x2;
+	x[1].s_class = (void*)x1;
+	x[2].s_class = (void*)&x2;
 	x[3].s_bool = x3;
 	x[4].s_bool = x4;
 	x[5].s_int = x5;
 	x[6].s_int = x6;
 	x[7].s_int = x7;
 	x[8].s_int = x8;
-	qt_Smoke->callMethod(1249, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(1249, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }
     virtual void setFont(const QFont& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->callMethod(1248, (void*)this, x)) return;
+	x[1].s_class = (void*)&x1;
+	if(qt_Smoke->binding->callMethod(1248, (void*)this, x)) return;
 	this->QCustomMenuItem::setFont(x1);
     }
     virtual QSize sizeHint() {
 	Smoke::StackItem x[1];
-	qt_Smoke->callMethod(1250, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(1250, (void*)this, x, true /*pure virtual*/);
 	QSize *xptr = (QSize *)x[0].s_class;
 	QSize xret(*xptr);
 	delete xptr;
 	return xret;
 	// ABSTRACT
     }
-    ~x_QCustomMenuItem() {}
+    ~x_QCustomMenuItem() { qt_Smoke->binding->deleted(54, (void*)this); }
 };
 void xcall_QCustomMenuItem(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QCustomMenuItem *xself = (x_QCustomMenuItem*)obj;

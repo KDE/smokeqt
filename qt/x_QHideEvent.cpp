@@ -12,7 +12,7 @@ public:
     }
     x_QHideEvent() : QHideEvent() {
     }
-    ~x_QHideEvent() {}
+    ~x_QHideEvent() { qt_Smoke->binding->deleted(143, (void*)this); }
 };
 void xcall_QHideEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QHideEvent *xself = (x_QHideEvent*)obj;

@@ -28,15 +28,15 @@ public:
     }
     static void x_5(Smoke::Stack x) {
 	// QGCache(const QGCache&)
-	x_QGCache* xret = new x_QGCache(*(const QGCache *)x[1].s_voidp);
+	x_QGCache* xret = new x_QGCache(*(const QGCache *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QGCache(const QGCache& x1) : QGCache(x1) {
     }
     void x_6(Smoke::Stack x) {
 	// operator=(const QGCache&)
-	QGCache& xret = this->QGCache::operator=(*(const QGCache *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QGCache& xret = this->QGCache::operator=(*(const QGCache *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_7(Smoke::Stack x) const {
 	// count()
@@ -125,25 +125,25 @@ public:
     }
     virtual void clear() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(3003, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(3003, (void*)this, x)) return;
 	this->QGCache::clear();
     }
     virtual uint count() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(2998, (void*)this, x)) return (uint)x[0].s_uint;
+	if(qt_Smoke->binding->callMethod(2998, (void*)this, x)) return (uint)x[0].s_uint;
 	return this->QGCache::count();
     }
     virtual void deleteItem(QPtrCollection::Item x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	qt_Smoke->callMethod(6325, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(6325, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }
     virtual QPtrCollection::Item newItem(QPtrCollection::Item x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->callMethod(6324, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(6324, (void*)this, x)) {
 	    QPtrCollection::Item *xptr = (QPtrCollection::Item *)x[0].s_class;
 	    QPtrCollection::Item xret(*xptr);
 	    delete xptr;
@@ -151,7 +151,7 @@ public:
 	}
 	return this->QPtrCollection::newItem(x1);
     }
-    ~x_QGCache() {}
+    ~x_QGCache() { qt_Smoke->binding->deleted(125, (void*)this); }
 };
 void xcall_QGCache(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QGCache *xself = (x_QGCache*)obj;

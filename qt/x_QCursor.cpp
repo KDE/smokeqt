@@ -24,57 +24,57 @@ public:
     }
     static void x_2(Smoke::Stack x) {
 	// QCursor(const QBitmap&, const QBitmap&, int, int)
-	x_QCursor* xret = new x_QCursor(*(const QBitmap *)x[1].s_voidp,*(const QBitmap *)x[2].s_voidp,(int)x[3].s_int,(int)x[4].s_int);
+	x_QCursor* xret = new x_QCursor(*(const QBitmap *)x[1].s_class,*(const QBitmap *)x[2].s_class,(int)x[3].s_int,(int)x[4].s_int);
 	x[0].s_class = (void*)xret;
     }
     x_QCursor(const QBitmap& x1, const QBitmap& x2, int x3, int x4) : QCursor(x1, x2, x3, x4) {
     }
     static void x_3(Smoke::Stack x) {
 	// QCursor(const QBitmap&, const QBitmap&, int)
-	x_QCursor* xret = new x_QCursor(*(const QBitmap *)x[1].s_voidp,*(const QBitmap *)x[2].s_voidp,(int)x[3].s_int);
+	x_QCursor* xret = new x_QCursor(*(const QBitmap *)x[1].s_class,*(const QBitmap *)x[2].s_class,(int)x[3].s_int);
 	x[0].s_class = (void*)xret;
     }
     x_QCursor(const QBitmap& x1, const QBitmap& x2, int x3) : QCursor(x1, x2, x3) {
     }
     static void x_4(Smoke::Stack x) {
 	// QCursor(const QBitmap&, const QBitmap&)
-	x_QCursor* xret = new x_QCursor(*(const QBitmap *)x[1].s_voidp,*(const QBitmap *)x[2].s_voidp);
+	x_QCursor* xret = new x_QCursor(*(const QBitmap *)x[1].s_class,*(const QBitmap *)x[2].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QCursor(const QBitmap& x1, const QBitmap& x2) : QCursor(x1, x2) {
     }
     static void x_5(Smoke::Stack x) {
 	// QCursor(const QPixmap&, int, int)
-	x_QCursor* xret = new x_QCursor(*(const QPixmap *)x[1].s_voidp,(int)x[2].s_int,(int)x[3].s_int);
+	x_QCursor* xret = new x_QCursor(*(const QPixmap *)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int);
 	x[0].s_class = (void*)xret;
     }
     x_QCursor(const QPixmap& x1, int x2, int x3) : QCursor(x1, x2, x3) {
     }
     static void x_6(Smoke::Stack x) {
 	// QCursor(const QPixmap&, int)
-	x_QCursor* xret = new x_QCursor(*(const QPixmap *)x[1].s_voidp,(int)x[2].s_int);
+	x_QCursor* xret = new x_QCursor(*(const QPixmap *)x[1].s_class,(int)x[2].s_int);
 	x[0].s_class = (void*)xret;
     }
     x_QCursor(const QPixmap& x1, int x2) : QCursor(x1, x2) {
     }
     static void x_7(Smoke::Stack x) {
 	// QCursor(const QPixmap&)
-	x_QCursor* xret = new x_QCursor(*(const QPixmap *)x[1].s_voidp);
+	x_QCursor* xret = new x_QCursor(*(const QPixmap *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QCursor(const QPixmap& x1) : QCursor(x1) {
     }
     static void x_8(Smoke::Stack x) {
 	// QCursor(const QCursor&)
-	x_QCursor* xret = new x_QCursor(*(const QCursor *)x[1].s_voidp);
+	x_QCursor* xret = new x_QCursor(*(const QCursor *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QCursor(const QCursor& x1) : QCursor(x1) {
     }
     void x_9(Smoke::Stack x) {
 	// operator=(const QCursor&)
-	QCursor& xret = this->QCursor::operator=(*(const QCursor *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QCursor& xret = this->QCursor::operator=(*(const QCursor *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_10(Smoke::Stack x) const {
 	// shape()
@@ -89,12 +89,12 @@ public:
     void x_12(Smoke::Stack x) const {
 	// bitmap()
 	const QBitmap* xret = this->QCursor::bitmap();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_13(Smoke::Stack x) const {
 	// mask()
 	const QBitmap* xret = this->QCursor::mask();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_14(Smoke::Stack x) const {
 	// hotSpot()
@@ -113,7 +113,7 @@ public:
     }
     static void x_17(Smoke::Stack x) {
 	// setPos(const QPoint&)
-	QCursor::setPos(*(const QPoint *)x[1].s_voidp);
+	QCursor::setPos(*(const QPoint *)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     static void x_18(Smoke::Stack x) {
@@ -128,7 +128,7 @@ public:
     }
     static void x_20(Smoke::Stack x) {
 	// setPos(const QPoint&)
-	QCursor::setPos(*(const QPoint *)x[1].s_voidp);
+	QCursor::setPos(*(const QPoint *)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     static void x_21(Smoke::Stack x) {
@@ -141,7 +141,7 @@ public:
 	QCursor::cleanup();
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    ~x_QCursor() {}
+    ~x_QCursor() { qt_Smoke->binding->deleted(52, (void*)this); }
 };
 void xcall_QCursor(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QCursor *xself = (x_QCursor*)obj;

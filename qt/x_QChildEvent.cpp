@@ -7,7 +7,7 @@ class x_QChildEvent : public QChildEvent {
 public:
     static void x_0(Smoke::Stack x) {
 	// QChildEvent(QEvent::Type, QObject*)
-	x_QChildEvent* xret = new x_QChildEvent((QEvent::Type)x[1].s_enum,(QObject*)x[2].s_voidp);
+	x_QChildEvent* xret = new x_QChildEvent((QEvent::Type)x[1].s_enum,(QObject*)x[2].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QChildEvent(QEvent::Type x1, QObject* x2) : QChildEvent(x1, x2) {
@@ -15,7 +15,7 @@ public:
     void x_1(Smoke::Stack x) const {
 	// child()
 	QObject* xret = this->QChildEvent::child();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_2(Smoke::Stack x) const {
 	// inserted()
@@ -27,7 +27,7 @@ public:
 	bool xret = this->QChildEvent::removed();
 	x[0].s_bool = xret;
     }
-    ~x_QChildEvent() {}
+    ~x_QChildEvent() { qt_Smoke->binding->deleted(38, (void*)this); }
 };
 void xcall_QChildEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QChildEvent *xself = (x_QChildEvent*)obj;

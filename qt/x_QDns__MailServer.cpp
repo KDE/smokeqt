@@ -28,7 +28,7 @@ public:
     }
     x_QDns__MailServer() : QDns::MailServer() {
     }
-    ~x_QDns__MailServer() {}
+    ~x_QDns__MailServer() { qt_Smoke->binding->deleted(72, (void*)this); }
 };
 void xcall_QDns__MailServer(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QDns__MailServer *xself = (x_QDns__MailServer*)obj;

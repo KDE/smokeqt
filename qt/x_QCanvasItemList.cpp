@@ -13,7 +13,7 @@ public:
     }
     void x_1(Smoke::Stack x) {
 	// drawUnique(QPainter&)
-	this->QCanvasItemList::drawUnique(*(QPainter *)x[1].s_voidp);
+	this->QCanvasItemList::drawUnique(*(QPainter *)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     static void x_2(Smoke::Stack x) {
@@ -23,7 +23,7 @@ public:
     }
     x_QCanvasItemList() : QCanvasItemList() {
     }
-    ~x_QCanvasItemList() {}
+    ~x_QCanvasItemList() { qt_Smoke->binding->deleted(22, (void*)this); }
 };
 void xcall_QCanvasItemList(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QCanvasItemList *xself = (x_QCanvasItemList*)obj;

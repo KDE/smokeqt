@@ -23,7 +23,7 @@ public:
     }
     static void x_2(Smoke::Stack x) {
 	// QPicture(const QPicture&)
-	x_QPicture* xret = new x_QPicture(*(const QPicture *)x[1].s_voidp);
+	x_QPicture* xret = new x_QPicture(*(const QPicture *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QPicture(const QPicture& x1) : QPicture(x1) {
@@ -50,17 +50,17 @@ public:
     }
     void x_7(Smoke::Stack x) {
 	// play(QPainter*)
-	bool xret = this->QPicture::play((QPainter*)x[1].s_voidp);
+	bool xret = this->QPicture::play((QPainter*)x[1].s_class);
 	x[0].s_bool = xret;
     }
     void x_8(Smoke::Stack x) {
 	// load(QIODevice*, const char*)
-	bool xret = this->QPicture::load((QIODevice*)x[1].s_voidp,(const char*)x[2].s_voidp);
+	bool xret = this->QPicture::load((QIODevice*)x[1].s_class,(const char*)x[2].s_voidp);
 	x[0].s_bool = xret;
     }
     void x_9(Smoke::Stack x) {
 	// load(QIODevice*)
-	bool xret = this->QPicture::load((QIODevice*)x[1].s_voidp);
+	bool xret = this->QPicture::load((QIODevice*)x[1].s_class);
 	x[0].s_bool = xret;
     }
     void x_10(Smoke::Stack x) {
@@ -75,12 +75,12 @@ public:
     }
     void x_12(Smoke::Stack x) {
 	// save(QIODevice*, const char*)
-	bool xret = this->QPicture::save((QIODevice*)x[1].s_voidp,(const char*)x[2].s_voidp);
+	bool xret = this->QPicture::save((QIODevice*)x[1].s_class,(const char*)x[2].s_voidp);
 	x[0].s_bool = xret;
     }
     void x_13(Smoke::Stack x) {
 	// save(QIODevice*)
-	bool xret = this->QPicture::save((QIODevice*)x[1].s_voidp);
+	bool xret = this->QPicture::save((QIODevice*)x[1].s_class);
 	x[0].s_bool = xret;
     }
     void x_14(Smoke::Stack x) {
@@ -100,12 +100,12 @@ public:
     }
     void x_17(Smoke::Stack x) {
 	// operator=(const QPicture&)
-	QPicture& xret = this->QPicture::operator=(*(const QPicture *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QPicture& xret = this->QPicture::operator=(*(const QPicture *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_18(Smoke::Stack x) {
 	// cmd(int, QPainter*, QPDevCmdParam*)
-	bool xret = this->QPicture::cmd((int)x[1].s_int,(QPainter*)x[2].s_voidp,(QPDevCmdParam*)x[3].s_voidp);
+	bool xret = this->QPicture::cmd((int)x[1].s_int,(QPainter*)x[2].s_class,(QPDevCmdParam*)x[3].s_voidp);
 	x[0].s_bool = xret;
     }
     void x_19(Smoke::Stack x) const {
@@ -126,52 +126,52 @@ public:
     virtual bool cmd(int x1, QPainter* x2, QPDevCmdParam* x3) {
 	Smoke::StackItem x[4];
 	x[1].s_int = x1;
-	x[2].s_voidp = (void*)x2;
+	x[2].s_class = (void*)x2;
 	x[3].s_voidp = (void*)x3;
-	if(qt_Smoke->callMethod(5866, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(5866, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QPicture::cmd(x1, x2, x3);
     }
     virtual int fontInf(QFont* x1, int x2) const {
 	Smoke::StackItem x[3];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	x[2].s_int = x2;
-	if(qt_Smoke->callMethod(5571, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(5571, (void*)this, x)) return (int)x[0].s_int;
 	return this->QPaintDevice::fontInf(x1, x2);
     }
     virtual int fontMet(QFont* x1, int x2, const char* x3, int x4) const {
 	Smoke::StackItem x[5];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	x[2].s_int = x2;
 	x[3].s_voidp = (void*)x3;
 	x[4].s_int = x4;
-	if(qt_Smoke->callMethod(5568, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(5568, (void*)this, x)) return (int)x[0].s_int;
 	return this->QPaintDevice::fontMet(x1, x2, x3, x4);
     }
     virtual int metric(int x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->callMethod(5867, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(5867, (void*)this, x)) return (int)x[0].s_int;
 	return this->QPicture::metric(x1);
     }
     virtual int resolution() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(5564, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(5564, (void*)this, x)) return (int)x[0].s_int;
 	return this->QPaintDevice::resolution();
     }
     virtual void setData(const char* x1, uint x2) {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)x1;
 	x[2].s_uint = x2;
-	if(qt_Smoke->callMethod(5854, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(5854, (void*)this, x)) return;
 	this->QPicture::setData(x1, x2);
     }
     virtual void setResolution(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->callMethod(5563, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(5563, (void*)this, x)) return;
 	this->QPaintDevice::setResolution(x1);
     }
-    ~x_QPicture() {}
+    ~x_QPicture() { qt_Smoke->binding->deleted(223, (void*)this); }
 };
 void xcall_QPicture(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QPicture *xself = (x_QPicture*)obj;

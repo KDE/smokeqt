@@ -88,7 +88,7 @@ public:
 	this->QXmlAttributes::append(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,*(const QString *)x[3].s_voidp,*(const QString *)x[4].s_voidp);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    ~x_QXmlAttributes() {}
+    ~x_QXmlAttributes() { qt_Smoke->binding->deleted(366, (void*)this); }
 };
 void xcall_QXmlAttributes(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QXmlAttributes *xself = (x_QXmlAttributes*)obj;

@@ -22,7 +22,7 @@ public:
 	bool xret = this->QShared::deref();
 	x[0].s_bool = xret;
     }
-    ~x_QShared() {}
+    ~x_QShared() { qt_Smoke->binding->deleted(254, (void*)this); }
 };
 void xcall_QShared(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QShared *xself = (x_QShared*)obj;

@@ -50,12 +50,12 @@ public:
     }
     void x_9(Smoke::Stack x) {
 	// writeEntry(const QString&, const QStringList&)
-	bool xret = this->QSettings::writeEntry(*(const QString *)x[1].s_voidp,*(const QStringList *)x[2].s_voidp);
+	bool xret = this->QSettings::writeEntry(*(const QString *)x[1].s_voidp,*(const QStringList *)x[2].s_class);
 	x[0].s_bool = xret;
     }
     void x_10(Smoke::Stack x) {
 	// writeEntry(const QString&, const QStringList&, const QChar&)
-	bool xret = this->QSettings::writeEntry(*(const QString *)x[1].s_voidp,*(const QStringList *)x[2].s_voidp,*(const QChar *)x[3].s_voidp);
+	bool xret = this->QSettings::writeEntry(*(const QString *)x[1].s_voidp,*(const QStringList *)x[2].s_class,*(const QChar *)x[3].s_class);
 	x[0].s_bool = xret;
     }
     void x_11(Smoke::Stack x) const {
@@ -80,12 +80,12 @@ public:
     }
     void x_15(Smoke::Stack x) {
 	// readListEntry(const QString&, const QChar&, bool*)
-	QStringList xret = this->QSettings::readListEntry(*(const QString *)x[1].s_voidp,*(const QChar *)x[2].s_voidp,(bool*)x[3].s_voidp);
+	QStringList xret = this->QSettings::readListEntry(*(const QString *)x[1].s_voidp,*(const QChar *)x[2].s_class,(bool*)x[3].s_voidp);
 	x[0].s_class = (void*)new QStringList(xret);
     }
     void x_16(Smoke::Stack x) {
 	// readListEntry(const QString&, const QChar&)
-	QStringList xret = this->QSettings::readListEntry(*(const QString *)x[1].s_voidp,*(const QChar *)x[2].s_voidp);
+	QStringList xret = this->QSettings::readListEntry(*(const QString *)x[1].s_voidp,*(const QChar *)x[2].s_class);
 	x[0].s_class = (void*)new QStringList(xret);
     }
     void x_17(Smoke::Stack x) {
@@ -163,7 +163,7 @@ public:
 	this->QSettings::removeSearchPath((QSettings::System)x[1].s_enum,*(const QString *)x[2].s_voidp);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    ~x_QSettings() {}
+    ~x_QSettings() { qt_Smoke->binding->deleted(253, (void*)this); }
 };
 void xcall_QSettings(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QSettings *xself = (x_QSettings*)obj;

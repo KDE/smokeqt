@@ -21,15 +21,15 @@ public:
     }
     void x_2(Smoke::Stack x) const {
 	// operator<(const QImageTextKeyLang&)
-	bool xret = this->QImageTextKeyLang::operator<(*(const QImageTextKeyLang *)x[1].s_voidp);
+	bool xret = this->QImageTextKeyLang::operator<(*(const QImageTextKeyLang *)x[1].s_class);
 	x[0].s_bool = xret;
     }
     void x_3(Smoke::Stack x) const {
 	// operator==(const QImageTextKeyLang&)
-	bool xret = this->QImageTextKeyLang::operator==(*(const QImageTextKeyLang *)x[1].s_voidp);
+	bool xret = this->QImageTextKeyLang::operator==(*(const QImageTextKeyLang *)x[1].s_class);
 	x[0].s_bool = xret;
     }
-    ~x_QImageTextKeyLang() {}
+    ~x_QImageTextKeyLang() { qt_Smoke->binding->deleted(162, (void*)this); }
 };
 void xcall_QImageTextKeyLang(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QImageTextKeyLang *xself = (x_QImageTextKeyLang*)obj;

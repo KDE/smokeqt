@@ -17,7 +17,7 @@ public:
 	int xret = this->QTimerEvent::timerId();
 	x[0].s_int = xret;
     }
-    ~x_QTimerEvent() {}
+    ~x_QTimerEvent() { qt_Smoke->binding->deleted(330, (void*)this); }
 };
 void xcall_QTimerEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QTimerEvent *xself = (x_QTimerEvent*)obj;

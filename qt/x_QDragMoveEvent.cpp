@@ -10,14 +10,14 @@ class x_QDragMoveEvent : public QDragMoveEvent {
 public:
     static void x_0(Smoke::Stack x) {
 	// QDragMoveEvent(const QPoint&, QEvent::Type)
-	x_QDragMoveEvent* xret = new x_QDragMoveEvent(*(const QPoint *)x[1].s_voidp,(QEvent::Type)x[2].s_enum);
+	x_QDragMoveEvent* xret = new x_QDragMoveEvent(*(const QPoint *)x[1].s_class,(QEvent::Type)x[2].s_enum);
 	x[0].s_class = (void*)xret;
     }
     x_QDragMoveEvent(const QPoint& x1, QEvent::Type x2) : QDragMoveEvent(x1, x2) {
     }
     static void x_1(Smoke::Stack x) {
 	// QDragMoveEvent(const QPoint&)
-	x_QDragMoveEvent* xret = new x_QDragMoveEvent(*(const QPoint *)x[1].s_voidp);
+	x_QDragMoveEvent* xret = new x_QDragMoveEvent(*(const QPoint *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QDragMoveEvent(const QPoint& x1) : QDragMoveEvent(x1) {
@@ -39,12 +39,12 @@ public:
     }
     void x_5(Smoke::Stack x) {
 	// accept(const QRect&)
-	this->QDragMoveEvent::accept(*(const QRect *)x[1].s_voidp);
+	this->QDragMoveEvent::accept(*(const QRect *)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_6(Smoke::Stack x) {
 	// ignore(const QRect&)
-	this->QDragMoveEvent::ignore(*(const QRect *)x[1].s_voidp);
+	this->QDragMoveEvent::ignore(*(const QRect *)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_7(Smoke::Stack x) {
@@ -55,7 +55,7 @@ public:
     virtual QByteArray encodedData(const char* x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->callMethod(2349, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(2349, (void*)this, x)) {
 	    QByteArray *xptr = (QByteArray *)x[0].s_class;
 	    QByteArray xret(*xptr);
 	    delete xptr;
@@ -66,16 +66,16 @@ public:
     virtual const char* format(int x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->callMethod(2347, (void*)this, x)) return (const char*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(2347, (void*)this, x)) return (const char*)x[0].s_class;
 	return this->QDropEvent::format(x1);
     }
     virtual bool provides(const char* x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->callMethod(2350, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(2350, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QDropEvent::provides(x1);
     }
-    ~x_QDragMoveEvent() {}
+    ~x_QDragMoveEvent() { qt_Smoke->binding->deleted(99, (void*)this); }
 };
 void xcall_QDragMoveEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QDragMoveEvent *xself = (x_QDragMoveEvent*)obj;

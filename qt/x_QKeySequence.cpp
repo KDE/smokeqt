@@ -39,27 +39,27 @@ public:
     }
     static void x_5(Smoke::Stack x) {
 	// QKeySequence(const QKeySequence&)
-	x_QKeySequence* xret = new x_QKeySequence(*(const QKeySequence *)x[1].s_voidp);
+	x_QKeySequence* xret = new x_QKeySequence(*(const QKeySequence *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QKeySequence(const QKeySequence& x1) : QKeySequence(x1) {
     }
     void x_6(Smoke::Stack x) {
 	// operator=(const QKeySequence&)
-	QKeySequence& xret = this->QKeySequence::operator=(*(const QKeySequence *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QKeySequence& xret = this->QKeySequence::operator=(*(const QKeySequence *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_7(Smoke::Stack x) const {
 	// operator==(const QKeySequence&)
-	bool xret = this->QKeySequence::operator==(*(const QKeySequence *)x[1].s_voidp);
+	bool xret = this->QKeySequence::operator==(*(const QKeySequence *)x[1].s_class);
 	x[0].s_bool = xret;
     }
     void x_8(Smoke::Stack x) const {
 	// operator!=(const QKeySequence&)
-	bool xret = this->QKeySequence::operator!=(*(const QKeySequence *)x[1].s_voidp);
+	bool xret = this->QKeySequence::operator!=(*(const QKeySequence *)x[1].s_class);
 	x[0].s_bool = xret;
     }
-    ~x_QKeySequence() {}
+    ~x_QKeySequence() { qt_Smoke->binding->deleted(170, (void*)this); }
 };
 void xcall_QKeySequence(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QKeySequence *xself = (x_QKeySequence*)obj;

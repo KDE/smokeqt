@@ -21,17 +21,17 @@ public:
     }
     static void x_2(Smoke::Stack x) {
 	// QWidgetIntDict(const QWidgetIntDict&)
-	x_QWidgetIntDict* xret = new x_QWidgetIntDict(*(const QWidgetIntDict *)x[1].s_voidp);
+	x_QWidgetIntDict* xret = new x_QWidgetIntDict(*(const QWidgetIntDict *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QWidgetIntDict(const QWidgetIntDict& x1) : QWidgetIntDict(x1) {
     }
     void x_3(Smoke::Stack x) {
 	// operator=(const QWidgetIntDict&)
-	QWidgetIntDict& xret = this->QWidgetIntDict::operator=(*(const QWidgetIntDict *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QWidgetIntDict& xret = this->QWidgetIntDict::operator=(*(const QWidgetIntDict *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
-    ~x_QWidgetIntDict() {}
+    ~x_QWidgetIntDict() { qt_Smoke->binding->deleted(356, (void*)this); }
 };
 void xcall_QWidgetIntDict(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QWidgetIntDict *xself = (x_QWidgetIntDict*)obj;

@@ -9,14 +9,14 @@ class x_QWhatsThis : public QWhatsThis {
 public:
     static void x_0(Smoke::Stack x) {
 	// QWhatsThis(QWidget*)
-	x_QWhatsThis* xret = new x_QWhatsThis((QWidget*)x[1].s_voidp);
+	x_QWhatsThis* xret = new x_QWhatsThis((QWidget*)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QWhatsThis(QWidget* x1) : QWhatsThis(x1) {
     }
     void x_1(Smoke::Stack x) {
 	// text(const QPoint&)
-	QString xret = this->QWhatsThis::text(*(const QPoint *)x[1].s_voidp);
+	QString xret = this->QWhatsThis::text(*(const QPoint *)x[1].s_class);
 	x[0].s_voidp = (void*)new QString(xret);
     }
     void x_2(Smoke::Stack x) {
@@ -26,33 +26,33 @@ public:
     }
     static void x_3(Smoke::Stack x) {
 	// add(QWidget*, const QString&)
-	QWhatsThis::add((QWidget*)x[1].s_voidp,*(const QString *)x[2].s_voidp);
+	QWhatsThis::add((QWidget*)x[1].s_class,*(const QString *)x[2].s_voidp);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     static void x_4(Smoke::Stack x) {
 	// remove(QWidget*)
-	QWhatsThis::remove((QWidget*)x[1].s_voidp);
+	QWhatsThis::remove((QWidget*)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     static void x_5(Smoke::Stack x) {
 	// textFor(QWidget*, const QPoint&, bool)
-	QString xret = QWhatsThis::textFor((QWidget*)x[1].s_voidp,*(const QPoint *)x[2].s_voidp,(bool)x[3].s_bool);
+	QString xret = QWhatsThis::textFor((QWidget*)x[1].s_class,*(const QPoint *)x[2].s_class,(bool)x[3].s_bool);
 	x[0].s_voidp = (void*)new QString(xret);
     }
     static void x_6(Smoke::Stack x) {
 	// textFor(QWidget*, const QPoint&)
-	QString xret = QWhatsThis::textFor((QWidget*)x[1].s_voidp,*(const QPoint *)x[2].s_voidp);
+	QString xret = QWhatsThis::textFor((QWidget*)x[1].s_class,*(const QPoint *)x[2].s_class);
 	x[0].s_voidp = (void*)new QString(xret);
     }
     static void x_7(Smoke::Stack x) {
 	// textFor(QWidget*)
-	QString xret = QWhatsThis::textFor((QWidget*)x[1].s_voidp);
+	QString xret = QWhatsThis::textFor((QWidget*)x[1].s_class);
 	x[0].s_voidp = (void*)new QString(xret);
     }
     static void x_8(Smoke::Stack x) {
 	// whatsThisButton(QWidget*)
-	QToolButton* xret = QWhatsThis::whatsThisButton((QWidget*)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	QToolButton* xret = QWhatsThis::whatsThisButton((QWidget*)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     static void x_9(Smoke::Stack x) {
 	// enterWhatsThisMode()
@@ -66,12 +66,12 @@ public:
     }
     static void x_11(Smoke::Stack x) {
 	// leaveWhatsThisMode(const QString&, const QPoint&, QWidget*)
-	QWhatsThis::leaveWhatsThisMode(*(const QString *)x[1].s_voidp,*(const QPoint *)x[2].s_voidp,(QWidget*)x[3].s_voidp);
+	QWhatsThis::leaveWhatsThisMode(*(const QString *)x[1].s_voidp,*(const QPoint *)x[2].s_class,(QWidget*)x[3].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     static void x_12(Smoke::Stack x) {
 	// leaveWhatsThisMode(const QString&, const QPoint&)
-	QWhatsThis::leaveWhatsThisMode(*(const QString *)x[1].s_voidp,*(const QPoint *)x[2].s_voidp);
+	QWhatsThis::leaveWhatsThisMode(*(const QString *)x[1].s_voidp,*(const QPoint *)x[2].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     static void x_13(Smoke::Stack x) {
@@ -86,12 +86,12 @@ public:
     }
     static void x_15(Smoke::Stack x) {
 	// display(const QString&, const QPoint&, QWidget*)
-	QWhatsThis::display(*(const QString *)x[1].s_voidp,*(const QPoint *)x[2].s_voidp,(QWidget*)x[3].s_voidp);
+	QWhatsThis::display(*(const QString *)x[1].s_voidp,*(const QPoint *)x[2].s_class,(QWidget*)x[3].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     static void x_16(Smoke::Stack x) {
 	// display(const QString&, const QPoint&)
-	QWhatsThis::display(*(const QString *)x[1].s_voidp,*(const QPoint *)x[2].s_voidp);
+	QWhatsThis::display(*(const QString *)x[1].s_voidp,*(const QPoint *)x[2].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     static void x_17(Smoke::Stack x) {
@@ -102,13 +102,13 @@ public:
     virtual bool clicked(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->callMethod(9522, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(9522, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QWhatsThis::clicked(x1);
     }
     virtual QString text(const QPoint& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->callMethod(9521, (void*)this, x)) {
+	x[1].s_class = (void*)&x1;
+	if(qt_Smoke->binding->callMethod(9521, (void*)this, x)) {
 	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;
@@ -116,7 +116,7 @@ public:
 	}
 	return this->QWhatsThis::text(x1);
     }
-    ~x_QWhatsThis() {}
+    ~x_QWhatsThis() { qt_Smoke->binding->deleted(353, (void*)this); }
 };
 void xcall_QWhatsThis(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QWhatsThis *xself = (x_QWhatsThis*)obj;

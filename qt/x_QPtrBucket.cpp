@@ -8,7 +8,7 @@ class x_QPtrBucket : public QPtrBucket {
 public:
     static void x_0(Smoke::Stack x) {
 	// QPtrBucket(void*, QPtrCollection::Item, QBaseBucket*)
-	x_QPtrBucket* xret = new x_QPtrBucket((void*)x[1].s_voidp,*(QPtrCollection::Item *)x[2].s_voidp,(QBaseBucket*)x[3].s_voidp);
+	x_QPtrBucket* xret = new x_QPtrBucket((void*)x[1].s_voidp,*(QPtrCollection::Item *)x[2].s_voidp,(QBaseBucket*)x[3].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QPtrBucket(void* x1, QPtrCollection::Item x2, QBaseBucket* x3) : QPtrBucket(x1, x2, x3) {
@@ -18,7 +18,7 @@ public:
 	void* xret = this->QPtrBucket::getKey();
 	x[0].s_voidp = (void*)xret;
     }
-    ~x_QPtrBucket() {}
+    ~x_QPtrBucket() { qt_Smoke->binding->deleted(236, (void*)this); }
 };
 void xcall_QPtrBucket(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QPtrBucket *xself = (x_QPtrBucket*)obj;

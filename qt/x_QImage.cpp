@@ -63,21 +63,21 @@ public:
     }
     static void x_10(Smoke::Stack x) {
 	// QImage(const QSize&, int, int, QImage::Endian)
-	x_QImage* xret = new x_QImage(*(const QSize *)x[1].s_voidp,(int)x[2].s_int,(int)x[3].s_int,(QImage::Endian)x[4].s_enum);
+	x_QImage* xret = new x_QImage(*(const QSize *)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int,(QImage::Endian)x[4].s_enum);
 	x[0].s_class = (void*)xret;
     }
     x_QImage(const QSize& x1, int x2, int x3, QImage::Endian x4) : QImage(x1, x2, x3, x4) {
     }
     static void x_11(Smoke::Stack x) {
 	// QImage(const QSize&, int, int)
-	x_QImage* xret = new x_QImage(*(const QSize *)x[1].s_voidp,(int)x[2].s_int,(int)x[3].s_int);
+	x_QImage* xret = new x_QImage(*(const QSize *)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int);
 	x[0].s_class = (void*)xret;
     }
     x_QImage(const QSize& x1, int x2, int x3) : QImage(x1, x2, x3) {
     }
     static void x_12(Smoke::Stack x) {
 	// QImage(const QSize&, int)
-	x_QImage* xret = new x_QImage(*(const QSize *)x[1].s_voidp,(int)x[2].s_int);
+	x_QImage* xret = new x_QImage(*(const QSize *)x[1].s_class,(int)x[2].s_int);
 	x[0].s_class = (void*)xret;
     }
     x_QImage(const QSize& x1, int x2) : QImage(x1, x2) {
@@ -119,29 +119,29 @@ public:
     }
     static void x_18(Smoke::Stack x) {
 	// QImage(const QImage&)
-	x_QImage* xret = new x_QImage(*(const QImage *)x[1].s_voidp);
+	x_QImage* xret = new x_QImage(*(const QImage *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QImage(const QImage& x1) : QImage(x1) {
     }
     void x_19(Smoke::Stack x) {
 	// operator=(const QImage&)
-	QImage& xret = this->QImage::operator=(*(const QImage *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QImage& xret = this->QImage::operator=(*(const QImage *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_20(Smoke::Stack x) {
 	// operator=(const QPixmap&)
-	QImage& xret = this->QImage::operator=(*(const QPixmap *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QImage& xret = this->QImage::operator=(*(const QPixmap *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_21(Smoke::Stack x) const {
 	// operator==(const QImage&)
-	bool xret = this->QImage::operator==(*(const QImage *)x[1].s_voidp);
+	bool xret = this->QImage::operator==(*(const QImage *)x[1].s_class);
 	x[0].s_bool = xret;
     }
     void x_22(Smoke::Stack x) const {
 	// operator!=(const QImage&)
-	bool xret = this->QImage::operator!=(*(const QImage *)x[1].s_voidp);
+	bool xret = this->QImage::operator!=(*(const QImage *)x[1].s_class);
 	x[0].s_bool = xret;
     }
     void x_23(Smoke::Stack x) {
@@ -166,7 +166,7 @@ public:
     }
     void x_27(Smoke::Stack x) const {
 	// copy(const QRect&)
-	QImage xret = this->QImage::copy(*(const QRect *)x[1].s_voidp);
+	QImage xret = this->QImage::copy(*(const QRect *)x[1].s_class);
 	x[0].s_class = (void*)new QImage(xret);
     }
     void x_28(Smoke::Stack x) const {
@@ -291,17 +291,17 @@ public:
     }
     void x_52(Smoke::Stack x) {
 	// create(const QSize&, int, int, QImage::Endian)
-	bool xret = this->QImage::create(*(const QSize *)x[1].s_voidp,(int)x[2].s_int,(int)x[3].s_int,(QImage::Endian)x[4].s_enum);
+	bool xret = this->QImage::create(*(const QSize *)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int,(QImage::Endian)x[4].s_enum);
 	x[0].s_bool = xret;
     }
     void x_53(Smoke::Stack x) {
 	// create(const QSize&, int, int)
-	bool xret = this->QImage::create(*(const QSize *)x[1].s_voidp,(int)x[2].s_int,(int)x[3].s_int);
+	bool xret = this->QImage::create(*(const QSize *)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int);
 	x[0].s_bool = xret;
     }
     void x_54(Smoke::Stack x) {
 	// create(const QSize&, int)
-	bool xret = this->QImage::create(*(const QSize *)x[1].s_voidp,(int)x[2].s_int);
+	bool xret = this->QImage::create(*(const QSize *)x[1].s_class,(int)x[2].s_int);
 	x[0].s_bool = xret;
     }
     void x_55(Smoke::Stack x) {
@@ -361,12 +361,12 @@ public:
     }
     void x_66(Smoke::Stack x) const {
 	// smoothScale(const QSize&, QImage::ScaleMode)
-	QImage xret = this->QImage::smoothScale(*(const QSize *)x[1].s_voidp,(QImage::ScaleMode)x[2].s_enum);
+	QImage xret = this->QImage::smoothScale(*(const QSize *)x[1].s_class,(QImage::ScaleMode)x[2].s_enum);
 	x[0].s_class = (void*)new QImage(xret);
     }
     void x_67(Smoke::Stack x) const {
 	// smoothScale(const QSize&)
-	QImage xret = this->QImage::smoothScale(*(const QSize *)x[1].s_voidp);
+	QImage xret = this->QImage::smoothScale(*(const QSize *)x[1].s_class);
 	x[0].s_class = (void*)new QImage(xret);
     }
     void x_68(Smoke::Stack x) const {
@@ -381,12 +381,12 @@ public:
     }
     void x_70(Smoke::Stack x) const {
 	// scale(const QSize&, QImage::ScaleMode)
-	QImage xret = this->QImage::scale(*(const QSize *)x[1].s_voidp,(QImage::ScaleMode)x[2].s_enum);
+	QImage xret = this->QImage::scale(*(const QSize *)x[1].s_class,(QImage::ScaleMode)x[2].s_enum);
 	x[0].s_class = (void*)new QImage(xret);
     }
     void x_71(Smoke::Stack x) const {
 	// scale(const QSize&)
-	QImage xret = this->QImage::scale(*(const QSize *)x[1].s_voidp);
+	QImage xret = this->QImage::scale(*(const QSize *)x[1].s_class);
 	x[0].s_class = (void*)new QImage(xret);
     }
     void x_72(Smoke::Stack x) const {
@@ -401,7 +401,7 @@ public:
     }
     void x_74(Smoke::Stack x) const {
 	// xForm(const QWMatrix&)
-	QImage xret = this->QImage::xForm(*(const QWMatrix *)x[1].s_voidp);
+	QImage xret = this->QImage::xForm(*(const QWMatrix *)x[1].s_class);
 	x[0].s_class = (void*)new QImage(xret);
     }
     void x_75(Smoke::Stack x) const {
@@ -526,7 +526,7 @@ public:
     }
     void x_99(Smoke::Stack x) {
 	// setOffset(const QPoint&)
-	this->QImage::setOffset(*(const QPoint *)x[1].s_voidp);
+	this->QImage::setOffset(*(const QPoint *)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_100(Smoke::Stack x) const {
@@ -556,7 +556,7 @@ public:
     }
     void x_105(Smoke::Stack x) const {
 	// text(const QImageTextKeyLang&)
-	QString xret = this->QImage::text(*(const QImageTextKeyLang *)x[1].s_voidp);
+	QString xret = this->QImage::text(*(const QImageTextKeyLang *)x[1].s_class);
 	x[0].s_voidp = (void*)new QString(xret);
     }
     void x_106(Smoke::Stack x) {
@@ -599,7 +599,7 @@ public:
 	QStringList xret = QImage::outputFormatList();
 	x[0].s_class = (void*)new QStringList(xret);
     }
-    ~x_QImage() {}
+    ~x_QImage() { qt_Smoke->binding->deleted(154, (void*)this); }
 };
 void xcall_QImage(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QImage *xself = (x_QImage*)obj;

@@ -85,7 +85,7 @@ public:
 	this->QKeyEvent::ignore();
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    ~x_QKeyEvent() {}
+    ~x_QKeyEvent() { qt_Smoke->binding->deleted(169, (void*)this); }
 };
 void xcall_QKeyEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QKeyEvent *xself = (x_QKeyEvent*)obj;

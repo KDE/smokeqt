@@ -70,15 +70,15 @@ public:
     }
     static void x_11(Smoke::Stack x) {
 	// QColor(const QColor&)
-	x_QColor* xret = new x_QColor(*(const QColor *)x[1].s_voidp);
+	x_QColor* xret = new x_QColor(*(const QColor *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QColor(const QColor& x1) : QColor(x1) {
     }
     void x_12(Smoke::Stack x) {
 	// operator=(const QColor&)
-	QColor& xret = this->QColor::operator=(*(const QColor *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QColor& xret = this->QColor::operator=(*(const QColor *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_13(Smoke::Stack x) const {
 	// isValid()
@@ -172,12 +172,12 @@ public:
     }
     void x_31(Smoke::Stack x) const {
 	// operator==(const QColor&)
-	bool xret = this->QColor::operator==(*(const QColor *)x[1].s_voidp);
+	bool xret = this->QColor::operator==(*(const QColor *)x[1].s_class);
 	x[0].s_bool = xret;
     }
     void x_32(Smoke::Stack x) const {
 	// operator!=(const QColor&)
-	bool xret = this->QColor::operator!=(*(const QColor *)x[1].s_voidp);
+	bool xret = this->QColor::operator!=(*(const QColor *)x[1].s_class);
 	x[0].s_bool = xret;
     }
     void x_33(Smoke::Stack x) {
@@ -230,7 +230,7 @@ public:
 	QColor::cleanup();
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    ~x_QColor() {}
+    ~x_QColor() { qt_Smoke->binding->deleted(41, (void*)this); }
 };
 void xcall_QColor(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QColor *xself = (x_QColor*)obj;

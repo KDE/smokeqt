@@ -12,7 +12,7 @@ public:
     }
     x_QTLWExtra() : QTLWExtra() {
     }
-    ~x_QTLWExtra() {}
+    ~x_QTLWExtra() { qt_Smoke->binding->deleted(305, (void*)this); }
 };
 void xcall_QTLWExtra(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QTLWExtra *xself = (x_QTLWExtra*)obj;

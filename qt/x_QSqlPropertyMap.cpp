@@ -16,12 +16,12 @@ public:
     }
     void x_1(Smoke::Stack x) {
 	// property(QWidget*)
-	QVariant xret = this->QSqlPropertyMap::property((QWidget*)x[1].s_voidp);
+	QVariant xret = this->QSqlPropertyMap::property((QWidget*)x[1].s_class);
 	x[0].s_class = (void*)new QVariant(xret);
     }
     void x_2(Smoke::Stack x) {
 	// setProperty(QWidget*, const QVariant&)
-	this->QSqlPropertyMap::setProperty((QWidget*)x[1].s_voidp,*(const QVariant *)x[2].s_voidp);
+	this->QSqlPropertyMap::setProperty((QWidget*)x[1].s_class,*(const QVariant *)x[2].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_3(Smoke::Stack x) {
@@ -37,21 +37,21 @@ public:
     static void x_5(Smoke::Stack x) {
 	// defaultMap()
 	QSqlPropertyMap* xret = QSqlPropertyMap::defaultMap();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     static void x_6(Smoke::Stack x) {
 	// installDefaultMap(QSqlPropertyMap*)
-	QSqlPropertyMap::installDefaultMap((QSqlPropertyMap*)x[1].s_voidp);
+	QSqlPropertyMap::installDefaultMap((QSqlPropertyMap*)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     virtual void setProperty(QWidget* x1, const QVariant& x2) {
 	Smoke::StackItem x[3];
-	x[1].s_voidp = (void*)x1;
-	x[2].s_voidp = (void*)&x2;
-	if(qt_Smoke->callMethod(7545, (void*)this, x)) return;
+	x[1].s_class = (void*)x1;
+	x[2].s_class = (void*)&x2;
+	if(qt_Smoke->binding->callMethod(7545, (void*)this, x)) return;
 	this->QSqlPropertyMap::setProperty(x1, x2);
     }
-    ~x_QSqlPropertyMap() {}
+    ~x_QSqlPropertyMap() { qt_Smoke->binding->deleted(285, (void*)this); }
 };
 void xcall_QSqlPropertyMap(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QSqlPropertyMap *xself = (x_QSqlPropertyMap*)obj;

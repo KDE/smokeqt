@@ -42,7 +42,7 @@ public:
     }
     x_QDns__Server() : QDns::Server() {
     }
-    ~x_QDns__Server() {}
+    ~x_QDns__Server() { qt_Smoke->binding->deleted(73, (void*)this); }
 };
 void xcall_QDns__Server(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QDns__Server *xself = (x_QDns__Server*)obj;

@@ -14,11 +14,11 @@ public:
     }
     virtual QSqlDriver* createObject() {
 	Smoke::StackItem x[1];
-	qt_Smoke->callMethod(7414, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(7414, (void*)this, x, true /*pure virtual*/);
 	return (QSqlDriver*)x[0].s_class;
 	// ABSTRACT
     }
-    ~x_QSqlDriverCreatorBase() {}
+    ~x_QSqlDriverCreatorBase() { qt_Smoke->binding->deleted(277, (void*)this); }
 };
 void xcall_QSqlDriverCreatorBase(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QSqlDriverCreatorBase *xself = (x_QSqlDriverCreatorBase*)obj;

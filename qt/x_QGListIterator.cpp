@@ -15,15 +15,15 @@ public:
     }
     static void x_1(Smoke::Stack x) {
 	// QGListIterator(const QGListIterator&)
-	x_QGListIterator* xret = new x_QGListIterator(*(const QGListIterator *)x[1].s_voidp);
+	x_QGListIterator* xret = new x_QGListIterator(*(const QGListIterator *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QGListIterator(const QGListIterator& x1) : QGListIterator(x1) {
     }
     void x_2(Smoke::Stack x) {
 	// operator=(const QGListIterator&)
-	QGListIterator& xret = this->QGListIterator::operator=(*(const QGListIterator *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QGListIterator& xret = this->QGListIterator::operator=(*(const QGListIterator *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_3(Smoke::Stack x) const {
 	// atFirst()
@@ -75,7 +75,7 @@ public:
 	QPtrCollection::Item xret = this->QGListIterator::operator-=((uint)x[1].s_uint);
 	x[0].s_voidp = (void*)new QPtrCollection::Item(xret);
     }
-    ~x_QGListIterator() {}
+    ~x_QGListIterator() { qt_Smoke->binding->deleted(130, (void*)this); }
 };
 void xcall_QGListIterator(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QGListIterator *xself = (x_QGListIterator*)obj;

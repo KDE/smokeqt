@@ -23,43 +23,43 @@ public:
     }
     static void x_2(Smoke::Stack x) {
 	// QPen(const QColor&, uint, Qt::PenStyle)
-	x_QPen* xret = new x_QPen(*(const QColor *)x[1].s_voidp,(uint)x[2].s_uint,(Qt::PenStyle)x[3].s_enum);
+	x_QPen* xret = new x_QPen(*(const QColor *)x[1].s_class,(uint)x[2].s_uint,(Qt::PenStyle)x[3].s_enum);
 	x[0].s_class = (void*)xret;
     }
     x_QPen(const QColor& x1, uint x2, Qt::PenStyle x3) : QPen(x1, x2, x3) {
     }
     static void x_3(Smoke::Stack x) {
 	// QPen(const QColor&, uint)
-	x_QPen* xret = new x_QPen(*(const QColor *)x[1].s_voidp,(uint)x[2].s_uint);
+	x_QPen* xret = new x_QPen(*(const QColor *)x[1].s_class,(uint)x[2].s_uint);
 	x[0].s_class = (void*)xret;
     }
     x_QPen(const QColor& x1, uint x2) : QPen(x1, x2) {
     }
     static void x_4(Smoke::Stack x) {
 	// QPen(const QColor&)
-	x_QPen* xret = new x_QPen(*(const QColor *)x[1].s_voidp);
+	x_QPen* xret = new x_QPen(*(const QColor *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QPen(const QColor& x1) : QPen(x1) {
     }
     static void x_5(Smoke::Stack x) {
 	// QPen(const QColor&, uint, Qt::PenStyle, Qt::PenCapStyle, Qt::PenJoinStyle)
-	x_QPen* xret = new x_QPen(*(const QColor *)x[1].s_voidp,(uint)x[2].s_uint,(Qt::PenStyle)x[3].s_enum,(Qt::PenCapStyle)x[4].s_enum,(Qt::PenJoinStyle)x[5].s_enum);
+	x_QPen* xret = new x_QPen(*(const QColor *)x[1].s_class,(uint)x[2].s_uint,(Qt::PenStyle)x[3].s_enum,(Qt::PenCapStyle)x[4].s_enum,(Qt::PenJoinStyle)x[5].s_enum);
 	x[0].s_class = (void*)xret;
     }
     x_QPen(const QColor& x1, uint x2, Qt::PenStyle x3, Qt::PenCapStyle x4, Qt::PenJoinStyle x5) : QPen(x1, x2, x3, x4, x5) {
     }
     static void x_6(Smoke::Stack x) {
 	// QPen(const QPen&)
-	x_QPen* xret = new x_QPen(*(const QPen *)x[1].s_voidp);
+	x_QPen* xret = new x_QPen(*(const QPen *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QPen(const QPen& x1) : QPen(x1) {
     }
     void x_7(Smoke::Stack x) {
 	// operator=(const QPen&)
-	QPen& xret = this->QPen::operator=(*(const QPen *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QPen& xret = this->QPen::operator=(*(const QPen *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_8(Smoke::Stack x) const {
 	// style()
@@ -84,11 +84,11 @@ public:
     void x_12(Smoke::Stack x) const {
 	// color()
 	const QColor& xret = this->QPen::color();
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_13(Smoke::Stack x) {
 	// setColor(const QColor&)
-	this->QPen::setColor(*(const QColor *)x[1].s_voidp);
+	this->QPen::setColor(*(const QColor *)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_14(Smoke::Stack x) const {
@@ -113,15 +113,15 @@ public:
     }
     void x_18(Smoke::Stack x) const {
 	// operator==(const QPen&)
-	bool xret = this->QPen::operator==(*(const QPen *)x[1].s_voidp);
+	bool xret = this->QPen::operator==(*(const QPen *)x[1].s_class);
 	x[0].s_bool = xret;
     }
     void x_19(Smoke::Stack x) const {
 	// operator!=(const QPen&)
-	bool xret = this->QPen::operator!=(*(const QPen *)x[1].s_voidp);
+	bool xret = this->QPen::operator!=(*(const QPen *)x[1].s_class);
 	x[0].s_bool = xret;
     }
-    ~x_QPen() {}
+    ~x_QPen() { qt_Smoke->binding->deleted(222, (void*)this); }
 };
 void xcall_QPen(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QPen *xself = (x_QPen*)obj;

@@ -38,50 +38,50 @@ public:
     }
     static void x_5(Smoke::Stack x) {
 	// QRegion(const QRect&, QRegion::RegionType)
-	x_QRegion* xret = new x_QRegion(*(const QRect *)x[1].s_voidp,(QRegion::RegionType)x[2].s_enum);
+	x_QRegion* xret = new x_QRegion(*(const QRect *)x[1].s_class,(QRegion::RegionType)x[2].s_enum);
 	x[0].s_class = (void*)xret;
     }
     x_QRegion(const QRect& x1, QRegion::RegionType x2) : QRegion(x1, x2) {
     }
     static void x_6(Smoke::Stack x) {
 	// QRegion(const QRect&)
-	x_QRegion* xret = new x_QRegion(*(const QRect *)x[1].s_voidp);
+	x_QRegion* xret = new x_QRegion(*(const QRect *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QRegion(const QRect& x1) : QRegion(x1) {
     }
     static void x_7(Smoke::Stack x) {
 	// QRegion(const QPointArray&, bool)
-	x_QRegion* xret = new x_QRegion(*(const QPointArray *)x[1].s_voidp,(bool)x[2].s_bool);
+	x_QRegion* xret = new x_QRegion(*(const QPointArray *)x[1].s_class,(bool)x[2].s_bool);
 	x[0].s_class = (void*)xret;
     }
     x_QRegion(const QPointArray& x1, bool x2) : QRegion(x1, x2) {
     }
     static void x_8(Smoke::Stack x) {
 	// QRegion(const QPointArray&)
-	x_QRegion* xret = new x_QRegion(*(const QPointArray *)x[1].s_voidp);
+	x_QRegion* xret = new x_QRegion(*(const QPointArray *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QRegion(const QPointArray& x1) : QRegion(x1) {
     }
     static void x_9(Smoke::Stack x) {
 	// QRegion(const QRegion&)
-	x_QRegion* xret = new x_QRegion(*(const QRegion *)x[1].s_voidp);
+	x_QRegion* xret = new x_QRegion(*(const QRegion *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QRegion(const QRegion& x1) : QRegion(x1) {
     }
     static void x_10(Smoke::Stack x) {
 	// QRegion(const QBitmap&)
-	x_QRegion* xret = new x_QRegion(*(const QBitmap *)x[1].s_voidp);
+	x_QRegion* xret = new x_QRegion(*(const QBitmap *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QRegion(const QBitmap& x1) : QRegion(x1) {
     }
     void x_11(Smoke::Stack x) {
 	// operator=(const QRegion&)
-	QRegion& xret = this->QRegion::operator=(*(const QRegion *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QRegion& xret = this->QRegion::operator=(*(const QRegion *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_12(Smoke::Stack x) const {
 	// isNull()
@@ -95,12 +95,12 @@ public:
     }
     void x_14(Smoke::Stack x) const {
 	// contains(const QPoint&)
-	bool xret = this->QRegion::contains(*(const QPoint *)x[1].s_voidp);
+	bool xret = this->QRegion::contains(*(const QPoint *)x[1].s_class);
 	x[0].s_bool = xret;
     }
     void x_15(Smoke::Stack x) const {
 	// contains(const QRect&)
-	bool xret = this->QRegion::contains(*(const QRect *)x[1].s_voidp);
+	bool xret = this->QRegion::contains(*(const QRect *)x[1].s_class);
 	x[0].s_bool = xret;
     }
     void x_16(Smoke::Stack x) {
@@ -110,22 +110,22 @@ public:
     }
     void x_17(Smoke::Stack x) const {
 	// unite(const QRegion&)
-	QRegion xret = this->QRegion::unite(*(const QRegion *)x[1].s_voidp);
+	QRegion xret = this->QRegion::unite(*(const QRegion *)x[1].s_class);
 	x[0].s_class = (void*)new QRegion(xret);
     }
     void x_18(Smoke::Stack x) const {
 	// intersect(const QRegion&)
-	QRegion xret = this->QRegion::intersect(*(const QRegion *)x[1].s_voidp);
+	QRegion xret = this->QRegion::intersect(*(const QRegion *)x[1].s_class);
 	x[0].s_class = (void*)new QRegion(xret);
     }
     void x_19(Smoke::Stack x) const {
 	// subtract(const QRegion&)
-	QRegion xret = this->QRegion::subtract(*(const QRegion *)x[1].s_voidp);
+	QRegion xret = this->QRegion::subtract(*(const QRegion *)x[1].s_class);
 	x[0].s_class = (void*)new QRegion(xret);
     }
     void x_20(Smoke::Stack x) const {
 	// eor(const QRegion&)
-	QRegion xret = this->QRegion::eor(*(const QRegion *)x[1].s_voidp);
+	QRegion xret = this->QRegion::eor(*(const QRegion *)x[1].s_class);
 	x[0].s_class = (void*)new QRegion(xret);
     }
     void x_21(Smoke::Stack x) const {
@@ -140,70 +140,70 @@ public:
     }
     void x_23(Smoke::Stack x) {
 	// setRects(const QRect*, int)
-	this->QRegion::setRects((const QRect*)x[1].s_voidp,(int)x[2].s_int);
+	this->QRegion::setRects((const QRect*)x[1].s_class,(int)x[2].s_int);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_24(Smoke::Stack x) const {
 	// operator|(const QRegion&)
-	const QRegion xret = this->QRegion::operator|(*(const QRegion *)x[1].s_voidp);
+	const QRegion xret = this->QRegion::operator|(*(const QRegion *)x[1].s_class);
 	x[0].s_class = (void*)new QRegion(xret);
     }
     void x_25(Smoke::Stack x) const {
 	// operator+(const QRegion&)
-	const QRegion xret = this->QRegion::operator+(*(const QRegion *)x[1].s_voidp);
+	const QRegion xret = this->QRegion::operator+(*(const QRegion *)x[1].s_class);
 	x[0].s_class = (void*)new QRegion(xret);
     }
     void x_26(Smoke::Stack x) const {
 	// operator&(const QRegion&)
-	const QRegion xret = this->QRegion::operator&(*(const QRegion *)x[1].s_voidp);
+	const QRegion xret = this->QRegion::operator&(*(const QRegion *)x[1].s_class);
 	x[0].s_class = (void*)new QRegion(xret);
     }
     void x_27(Smoke::Stack x) const {
 	// operator-(const QRegion&)
-	const QRegion xret = this->QRegion::operator-(*(const QRegion *)x[1].s_voidp);
+	const QRegion xret = this->QRegion::operator-(*(const QRegion *)x[1].s_class);
 	x[0].s_class = (void*)new QRegion(xret);
     }
     void x_28(Smoke::Stack x) const {
 	// operator^(const QRegion&)
-	const QRegion xret = this->QRegion::operator^(*(const QRegion *)x[1].s_voidp);
+	const QRegion xret = this->QRegion::operator^(*(const QRegion *)x[1].s_class);
 	x[0].s_class = (void*)new QRegion(xret);
     }
     void x_29(Smoke::Stack x) {
 	// operator|=(const QRegion&)
-	QRegion& xret = this->QRegion::operator|=(*(const QRegion *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QRegion& xret = this->QRegion::operator|=(*(const QRegion *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_30(Smoke::Stack x) {
 	// operator+=(const QRegion&)
-	QRegion& xret = this->QRegion::operator+=(*(const QRegion *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QRegion& xret = this->QRegion::operator+=(*(const QRegion *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_31(Smoke::Stack x) {
 	// operator&=(const QRegion&)
-	QRegion& xret = this->QRegion::operator&=(*(const QRegion *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QRegion& xret = this->QRegion::operator&=(*(const QRegion *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_32(Smoke::Stack x) {
 	// operator-=(const QRegion&)
-	QRegion& xret = this->QRegion::operator-=(*(const QRegion *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QRegion& xret = this->QRegion::operator-=(*(const QRegion *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_33(Smoke::Stack x) {
 	// operator^=(const QRegion&)
-	QRegion& xret = this->QRegion::operator^=(*(const QRegion *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QRegion& xret = this->QRegion::operator^=(*(const QRegion *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_34(Smoke::Stack x) const {
 	// operator==(const QRegion&)
-	bool xret = this->QRegion::operator==(*(const QRegion *)x[1].s_voidp);
+	bool xret = this->QRegion::operator==(*(const QRegion *)x[1].s_class);
 	x[0].s_bool = xret;
     }
     void x_35(Smoke::Stack x) const {
 	// operator!=(const QRegion&)
-	bool xret = this->QRegion::operator!=(*(const QRegion *)x[1].s_voidp);
+	bool xret = this->QRegion::operator!=(*(const QRegion *)x[1].s_class);
 	x[0].s_bool = xret;
     }
-    ~x_QRegion() {}
+    ~x_QRegion() { qt_Smoke->binding->deleted(244, (void*)this); }
 };
 void xcall_QRegion(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QRegion *xself = (x_QRegion*)obj;

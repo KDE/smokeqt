@@ -99,7 +99,7 @@ public:
     }
     virtual QIODevice::Offset at() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(339, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(339, (void*)this, x)) {
 	    QIODevice::Offset *xptr = (QIODevice::Offset *)x[0].s_class;
 	    QIODevice::Offset xret(*xptr);
 	    delete xptr;
@@ -110,44 +110,44 @@ public:
     virtual bool at(QIODevice::Offset x1) {
 	Smoke::StackItem x[2];
 	x[1].s_ulong = x1;
-	if(qt_Smoke->callMethod(340, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(340, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QBuffer::at(x1);
     }
     virtual bool atEnd() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(3382, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(3382, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QIODevice::atEnd();
     }
     virtual void close() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(336, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(336, (void*)this, x)) return;
 	this->QBuffer::close();
     }
     virtual void flush() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(337, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(337, (void*)this, x)) return;
 	this->QBuffer::flush();
     }
     virtual int getch() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(345, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(345, (void*)this, x)) return (int)x[0].s_int;
 	return this->QBuffer::getch();
     }
     virtual bool open(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->callMethod(335, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(335, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QBuffer::open(x1);
     }
     virtual int putch(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->callMethod(346, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(346, (void*)this, x)) return (int)x[0].s_int;
 	return this->QBuffer::putch(x1);
     }
     virtual QByteArray readAll() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(3388, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(3388, (void*)this, x)) {
 	    QByteArray *xptr = (QByteArray *)x[0].s_class;
 	    QByteArray xret(*xptr);
 	    delete xptr;
@@ -159,7 +159,7 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)x1;
 	x[2].s_long = x2;
-	if(qt_Smoke->callMethod(341, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(341, (void*)this, x)) {
 	    Q_LONG *xptr = (Q_LONG *)x[0].s_class;
 	    Q_LONG xret(*xptr);
 	    delete xptr;
@@ -171,7 +171,7 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)x1;
 	x[2].s_long = x2;
-	if(qt_Smoke->callMethod(344, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(344, (void*)this, x)) {
 	    Q_LONG *xptr = (Q_LONG *)x[0].s_class;
 	    Q_LONG xret(*xptr);
 	    delete xptr;
@@ -181,7 +181,7 @@ public:
     }
     virtual QIODevice::Offset size() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(338, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(338, (void*)this, x)) {
 	    QIODevice::Offset *xptr = (QIODevice::Offset *)x[0].s_class;
 	    QIODevice::Offset xret(*xptr);
 	    delete xptr;
@@ -192,14 +192,14 @@ public:
     virtual int ungetch(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->callMethod(347, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(347, (void*)this, x)) return (int)x[0].s_int;
 	return this->QBuffer::ungetch(x1);
     }
     virtual Q_LONG writeBlock(const char* x1, Q_ULONG x2) {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)x1;
 	x[2].s_long = x2;
-	if(qt_Smoke->callMethod(342, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(342, (void*)this, x)) {
 	    Q_LONG *xptr = (Q_LONG *)x[0].s_class;
 	    Q_LONG xret(*xptr);
 	    delete xptr;
@@ -207,7 +207,7 @@ public:
 	}
 	return this->QBuffer::writeBlock(x1, x2);
     }
-    ~x_QBuffer() {}
+    ~x_QBuffer() { qt_Smoke->binding->deleted(15, (void*)this); }
 };
 void xcall_QBuffer(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QBuffer *xself = (x_QBuffer*)obj;

@@ -14,17 +14,17 @@ public:
     }
     static void x_1(Smoke::Stack x) {
 	// QConnectionList(const QConnectionList&)
-	x_QConnectionList* xret = new x_QConnectionList(*(const QConnectionList *)x[1].s_voidp);
+	x_QConnectionList* xret = new x_QConnectionList(*(const QConnectionList *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QConnectionList(const QConnectionList& x1) : QConnectionList(x1) {
     }
     void x_2(Smoke::Stack x) {
 	// operator=(const QConnectionList&)
-	QConnectionList& xret = this->QConnectionList::operator=(*(const QConnectionList *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QConnectionList& xret = this->QConnectionList::operator=(*(const QConnectionList *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
-    ~x_QConnectionList() {}
+    ~x_QConnectionList() { qt_Smoke->binding->deleted(49, (void*)this); }
 };
 void xcall_QConnectionList(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QConnectionList *xself = (x_QConnectionList*)obj;

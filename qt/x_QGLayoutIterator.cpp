@@ -14,23 +14,23 @@ public:
     }
     virtual QLayoutItem* current() {
 	Smoke::StackItem x[1];
-	qt_Smoke->callMethod(3062, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(3062, (void*)this, x, true /*pure virtual*/);
 	return (QLayoutItem*)x[0].s_class;
 	// ABSTRACT
     }
     virtual QLayoutItem* next() {
 	Smoke::StackItem x[1];
-	qt_Smoke->callMethod(3061, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(3061, (void*)this, x, true /*pure virtual*/);
 	return (QLayoutItem*)x[0].s_class;
 	// ABSTRACT
     }
     virtual QLayoutItem* takeCurrent() {
 	Smoke::StackItem x[1];
-	qt_Smoke->callMethod(3063, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(3063, (void*)this, x, true /*pure virtual*/);
 	return (QLayoutItem*)x[0].s_class;
 	// ABSTRACT
     }
-    ~x_QGLayoutIterator() {}
+    ~x_QGLayoutIterator() { qt_Smoke->binding->deleted(129, (void*)this); }
 };
 void xcall_QGLayoutIterator(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QGLayoutIterator *xself = (x_QGLayoutIterator*)obj;

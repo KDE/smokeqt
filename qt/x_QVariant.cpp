@@ -132,14 +132,14 @@ public:
     }
     static void x_33(Smoke::Stack x) {
 	// QVariant(const QVariant&)
-	x_QVariant* xret = new x_QVariant(*(const QVariant *)x[1].s_voidp);
+	x_QVariant* xret = new x_QVariant(*(const QVariant *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QVariant(const QVariant& x1) : QVariant(x1) {
     }
     static void x_34(Smoke::Stack x) {
 	// QVariant(QDataStream&)
-	x_QVariant* xret = new x_QVariant(*(QDataStream *)x[1].s_voidp);
+	x_QVariant* xret = new x_QVariant(*(QDataStream *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QVariant(QDataStream& x1) : QVariant(x1) {
@@ -167,133 +167,133 @@ public:
     }
     static void x_38(Smoke::Stack x) {
 	// QVariant(const QStringList&)
-	x_QVariant* xret = new x_QVariant(*(const QStringList *)x[1].s_voidp);
+	x_QVariant* xret = new x_QVariant(*(const QStringList *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QVariant(const QStringList& x1) : QVariant(x1) {
     }
     static void x_39(Smoke::Stack x) {
 	// QVariant(const QFont&)
-	x_QVariant* xret = new x_QVariant(*(const QFont *)x[1].s_voidp);
+	x_QVariant* xret = new x_QVariant(*(const QFont *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QVariant(const QFont& x1) : QVariant(x1) {
     }
     static void x_40(Smoke::Stack x) {
 	// QVariant(const QPixmap&)
-	x_QVariant* xret = new x_QVariant(*(const QPixmap *)x[1].s_voidp);
+	x_QVariant* xret = new x_QVariant(*(const QPixmap *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QVariant(const QPixmap& x1) : QVariant(x1) {
     }
     static void x_41(Smoke::Stack x) {
 	// QVariant(const QImage&)
-	x_QVariant* xret = new x_QVariant(*(const QImage *)x[1].s_voidp);
+	x_QVariant* xret = new x_QVariant(*(const QImage *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QVariant(const QImage& x1) : QVariant(x1) {
     }
     static void x_42(Smoke::Stack x) {
 	// QVariant(const QBrush&)
-	x_QVariant* xret = new x_QVariant(*(const QBrush *)x[1].s_voidp);
+	x_QVariant* xret = new x_QVariant(*(const QBrush *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QVariant(const QBrush& x1) : QVariant(x1) {
     }
     static void x_43(Smoke::Stack x) {
 	// QVariant(const QPoint&)
-	x_QVariant* xret = new x_QVariant(*(const QPoint *)x[1].s_voidp);
+	x_QVariant* xret = new x_QVariant(*(const QPoint *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QVariant(const QPoint& x1) : QVariant(x1) {
     }
     static void x_44(Smoke::Stack x) {
 	// QVariant(const QRect&)
-	x_QVariant* xret = new x_QVariant(*(const QRect *)x[1].s_voidp);
+	x_QVariant* xret = new x_QVariant(*(const QRect *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QVariant(const QRect& x1) : QVariant(x1) {
     }
     static void x_45(Smoke::Stack x) {
 	// QVariant(const QSize&)
-	x_QVariant* xret = new x_QVariant(*(const QSize *)x[1].s_voidp);
+	x_QVariant* xret = new x_QVariant(*(const QSize *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QVariant(const QSize& x1) : QVariant(x1) {
     }
     static void x_46(Smoke::Stack x) {
 	// QVariant(const QColor&)
-	x_QVariant* xret = new x_QVariant(*(const QColor *)x[1].s_voidp);
+	x_QVariant* xret = new x_QVariant(*(const QColor *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QVariant(const QColor& x1) : QVariant(x1) {
     }
     static void x_47(Smoke::Stack x) {
 	// QVariant(const QPalette&)
-	x_QVariant* xret = new x_QVariant(*(const QPalette *)x[1].s_voidp);
+	x_QVariant* xret = new x_QVariant(*(const QPalette *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QVariant(const QPalette& x1) : QVariant(x1) {
     }
     static void x_48(Smoke::Stack x) {
 	// QVariant(const QColorGroup&)
-	x_QVariant* xret = new x_QVariant(*(const QColorGroup *)x[1].s_voidp);
+	x_QVariant* xret = new x_QVariant(*(const QColorGroup *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QVariant(const QColorGroup& x1) : QVariant(x1) {
     }
     static void x_49(Smoke::Stack x) {
 	// QVariant(const QIconSet&)
-	x_QVariant* xret = new x_QVariant(*(const QIconSet *)x[1].s_voidp);
+	x_QVariant* xret = new x_QVariant(*(const QIconSet *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QVariant(const QIconSet& x1) : QVariant(x1) {
     }
     static void x_50(Smoke::Stack x) {
 	// QVariant(const QPointArray&)
-	x_QVariant* xret = new x_QVariant(*(const QPointArray *)x[1].s_voidp);
+	x_QVariant* xret = new x_QVariant(*(const QPointArray *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QVariant(const QPointArray& x1) : QVariant(x1) {
     }
     static void x_51(Smoke::Stack x) {
 	// QVariant(const QRegion&)
-	x_QVariant* xret = new x_QVariant(*(const QRegion *)x[1].s_voidp);
+	x_QVariant* xret = new x_QVariant(*(const QRegion *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QVariant(const QRegion& x1) : QVariant(x1) {
     }
     static void x_52(Smoke::Stack x) {
 	// QVariant(const QBitmap&)
-	x_QVariant* xret = new x_QVariant(*(const QBitmap *)x[1].s_voidp);
+	x_QVariant* xret = new x_QVariant(*(const QBitmap *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QVariant(const QBitmap& x1) : QVariant(x1) {
     }
     static void x_53(Smoke::Stack x) {
 	// QVariant(const QCursor&)
-	x_QVariant* xret = new x_QVariant(*(const QCursor *)x[1].s_voidp);
+	x_QVariant* xret = new x_QVariant(*(const QCursor *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QVariant(const QCursor& x1) : QVariant(x1) {
     }
     static void x_54(Smoke::Stack x) {
 	// QVariant(const QDate&)
-	x_QVariant* xret = new x_QVariant(*(const QDate *)x[1].s_voidp);
+	x_QVariant* xret = new x_QVariant(*(const QDate *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QVariant(const QDate& x1) : QVariant(x1) {
     }
     static void x_55(Smoke::Stack x) {
 	// QVariant(const QTime&)
-	x_QVariant* xret = new x_QVariant(*(const QTime *)x[1].s_voidp);
+	x_QVariant* xret = new x_QVariant(*(const QTime *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QVariant(const QTime& x1) : QVariant(x1) {
     }
     static void x_56(Smoke::Stack x) {
 	// QVariant(const QDateTime&)
-	x_QVariant* xret = new x_QVariant(*(const QDateTime *)x[1].s_voidp);
+	x_QVariant* xret = new x_QVariant(*(const QDateTime *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QVariant(const QDateTime& x1) : QVariant(x1) {
@@ -314,7 +314,7 @@ public:
     }
     static void x_59(Smoke::Stack x) {
 	// QVariant(const QKeySequence&)
-	x_QVariant* xret = new x_QVariant(*(const QKeySequence *)x[1].s_voidp);
+	x_QVariant* xret = new x_QVariant(*(const QKeySequence *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QVariant(const QKeySequence& x1) : QVariant(x1) {
@@ -370,17 +370,17 @@ public:
     }
     void x_67(Smoke::Stack x) {
 	// operator=(const QVariant&)
-	QVariant& xret = this->QVariant::operator=(*(const QVariant *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QVariant& xret = this->QVariant::operator=(*(const QVariant *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_68(Smoke::Stack x) const {
 	// operator==(const QVariant&)
-	bool xret = this->QVariant::operator==(*(const QVariant *)x[1].s_voidp);
+	bool xret = this->QVariant::operator==(*(const QVariant *)x[1].s_class);
 	x[0].s_bool = xret;
     }
     void x_69(Smoke::Stack x) const {
 	// operator!=(const QVariant&)
-	bool xret = this->QVariant::operator!=(*(const QVariant *)x[1].s_voidp);
+	bool xret = this->QVariant::operator!=(*(const QVariant *)x[1].s_class);
 	x[0].s_bool = xret;
     }
     void x_70(Smoke::Stack x) const {
@@ -631,97 +631,97 @@ public:
     void x_119(Smoke::Stack x) {
 	// asStringList()
 	QStringList& xret = this->QVariant::asStringList();
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_120(Smoke::Stack x) {
 	// asFont()
 	QFont& xret = this->QVariant::asFont();
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_121(Smoke::Stack x) {
 	// asPixmap()
 	QPixmap& xret = this->QVariant::asPixmap();
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_122(Smoke::Stack x) {
 	// asImage()
 	QImage& xret = this->QVariant::asImage();
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_123(Smoke::Stack x) {
 	// asBrush()
 	QBrush& xret = this->QVariant::asBrush();
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_124(Smoke::Stack x) {
 	// asPoint()
 	QPoint& xret = this->QVariant::asPoint();
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_125(Smoke::Stack x) {
 	// asRect()
 	QRect& xret = this->QVariant::asRect();
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_126(Smoke::Stack x) {
 	// asSize()
 	QSize& xret = this->QVariant::asSize();
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_127(Smoke::Stack x) {
 	// asColor()
 	QColor& xret = this->QVariant::asColor();
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_128(Smoke::Stack x) {
 	// asPalette()
 	QPalette& xret = this->QVariant::asPalette();
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_129(Smoke::Stack x) {
 	// asColorGroup()
 	QColorGroup& xret = this->QVariant::asColorGroup();
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_130(Smoke::Stack x) {
 	// asIconSet()
 	QIconSet& xret = this->QVariant::asIconSet();
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_131(Smoke::Stack x) {
 	// asPointArray()
 	QPointArray& xret = this->QVariant::asPointArray();
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_132(Smoke::Stack x) {
 	// asBitmap()
 	QBitmap& xret = this->QVariant::asBitmap();
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_133(Smoke::Stack x) {
 	// asRegion()
 	QRegion& xret = this->QVariant::asRegion();
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_134(Smoke::Stack x) {
 	// asCursor()
 	QCursor& xret = this->QVariant::asCursor();
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_135(Smoke::Stack x) {
 	// asDate()
 	QDate& xret = this->QVariant::asDate();
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_136(Smoke::Stack x) {
 	// asTime()
 	QTime& xret = this->QVariant::asTime();
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_137(Smoke::Stack x) {
 	// asDateTime()
 	QDateTime& xret = this->QVariant::asDateTime();
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_138(Smoke::Stack x) {
 	// asByteArray()
@@ -736,7 +736,7 @@ public:
     void x_140(Smoke::Stack x) {
 	// asKeySequence()
 	QKeySequence& xret = this->QVariant::asKeySequence();
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_141(Smoke::Stack x) {
 	// asInt()
@@ -771,16 +771,16 @@ public:
     void x_147(Smoke::Stack x) {
 	// asSizePolicy()
 	QSizePolicy& xret = this->QVariant::asSizePolicy();
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_148(Smoke::Stack x) {
 	// load(QDataStream&)
-	this->QVariant::load(*(QDataStream *)x[1].s_voidp);
+	this->QVariant::load(*(QDataStream *)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_149(Smoke::Stack x) const {
 	// save(QDataStream&)
-	this->QVariant::save(*(QDataStream *)x[1].s_voidp);
+	this->QVariant::save(*(QDataStream *)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     static void x_150(Smoke::Stack x) {
@@ -793,7 +793,7 @@ public:
 	QVariant::Type xret = QVariant::nameToType((const char*)x[1].s_voidp);
 	x[0].s_enum = xret;
     }
-    ~x_QVariant() {}
+    ~x_QVariant() { qt_Smoke->binding->deleted(350, (void*)this); }
 };
 void xcall_QVariant(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QVariant *xself = (x_QVariant*)obj;

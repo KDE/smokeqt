@@ -9,35 +9,35 @@ class x_QSqlFieldInfo : public QSqlFieldInfo {
 public:
     static void x_0(Smoke::Stack x) {
 	// QSqlFieldInfo(const QString&, QVariant::Type, int, int, int, const QVariant&, int, bool, bool, bool)
-	x_QSqlFieldInfo* xret = new x_QSqlFieldInfo(*(const QString *)x[1].s_voidp,(QVariant::Type)x[2].s_enum,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int,*(const QVariant *)x[6].s_voidp,(int)x[7].s_int,(bool)x[8].s_bool,(bool)x[9].s_bool,(bool)x[10].s_bool);
+	x_QSqlFieldInfo* xret = new x_QSqlFieldInfo(*(const QString *)x[1].s_voidp,(QVariant::Type)x[2].s_enum,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int,*(const QVariant *)x[6].s_class,(int)x[7].s_int,(bool)x[8].s_bool,(bool)x[9].s_bool,(bool)x[10].s_bool);
 	x[0].s_class = (void*)xret;
     }
     x_QSqlFieldInfo(const QString& x1, QVariant::Type x2, int x3, int x4, int x5, const QVariant& x6, int x7, bool x8, bool x9, bool x10) : QSqlFieldInfo(x1, x2, x3, x4, x5, x6, x7, x8, x9, x10) {
     }
     static void x_1(Smoke::Stack x) {
 	// QSqlFieldInfo(const QString&, QVariant::Type, int, int, int, const QVariant&, int, bool, bool)
-	x_QSqlFieldInfo* xret = new x_QSqlFieldInfo(*(const QString *)x[1].s_voidp,(QVariant::Type)x[2].s_enum,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int,*(const QVariant *)x[6].s_voidp,(int)x[7].s_int,(bool)x[8].s_bool,(bool)x[9].s_bool);
+	x_QSqlFieldInfo* xret = new x_QSqlFieldInfo(*(const QString *)x[1].s_voidp,(QVariant::Type)x[2].s_enum,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int,*(const QVariant *)x[6].s_class,(int)x[7].s_int,(bool)x[8].s_bool,(bool)x[9].s_bool);
 	x[0].s_class = (void*)xret;
     }
     x_QSqlFieldInfo(const QString& x1, QVariant::Type x2, int x3, int x4, int x5, const QVariant& x6, int x7, bool x8, bool x9) : QSqlFieldInfo(x1, x2, x3, x4, x5, x6, x7, x8, x9) {
     }
     static void x_2(Smoke::Stack x) {
 	// QSqlFieldInfo(const QString&, QVariant::Type, int, int, int, const QVariant&, int, bool)
-	x_QSqlFieldInfo* xret = new x_QSqlFieldInfo(*(const QString *)x[1].s_voidp,(QVariant::Type)x[2].s_enum,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int,*(const QVariant *)x[6].s_voidp,(int)x[7].s_int,(bool)x[8].s_bool);
+	x_QSqlFieldInfo* xret = new x_QSqlFieldInfo(*(const QString *)x[1].s_voidp,(QVariant::Type)x[2].s_enum,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int,*(const QVariant *)x[6].s_class,(int)x[7].s_int,(bool)x[8].s_bool);
 	x[0].s_class = (void*)xret;
     }
     x_QSqlFieldInfo(const QString& x1, QVariant::Type x2, int x3, int x4, int x5, const QVariant& x6, int x7, bool x8) : QSqlFieldInfo(x1, x2, x3, x4, x5, x6, x7, x8) {
     }
     static void x_3(Smoke::Stack x) {
 	// QSqlFieldInfo(const QString&, QVariant::Type, int, int, int, const QVariant&, int)
-	x_QSqlFieldInfo* xret = new x_QSqlFieldInfo(*(const QString *)x[1].s_voidp,(QVariant::Type)x[2].s_enum,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int,*(const QVariant *)x[6].s_voidp,(int)x[7].s_int);
+	x_QSqlFieldInfo* xret = new x_QSqlFieldInfo(*(const QString *)x[1].s_voidp,(QVariant::Type)x[2].s_enum,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int,*(const QVariant *)x[6].s_class,(int)x[7].s_int);
 	x[0].s_class = (void*)xret;
     }
     x_QSqlFieldInfo(const QString& x1, QVariant::Type x2, int x3, int x4, int x5, const QVariant& x6, int x7) : QSqlFieldInfo(x1, x2, x3, x4, x5, x6, x7) {
     }
     static void x_4(Smoke::Stack x) {
 	// QSqlFieldInfo(const QString&, QVariant::Type, int, int, int, const QVariant&)
-	x_QSqlFieldInfo* xret = new x_QSqlFieldInfo(*(const QString *)x[1].s_voidp,(QVariant::Type)x[2].s_enum,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int,*(const QVariant *)x[6].s_voidp);
+	x_QSqlFieldInfo* xret = new x_QSqlFieldInfo(*(const QString *)x[1].s_voidp,(QVariant::Type)x[2].s_enum,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int,*(const QVariant *)x[6].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QSqlFieldInfo(const QString& x1, QVariant::Type x2, int x3, int x4, int x5, const QVariant& x6) : QSqlFieldInfo(x1, x2, x3, x4, x5, x6) {
@@ -86,33 +86,33 @@ public:
     }
     static void x_11(Smoke::Stack x) {
 	// QSqlFieldInfo(const QSqlFieldInfo&)
-	x_QSqlFieldInfo* xret = new x_QSqlFieldInfo(*(const QSqlFieldInfo *)x[1].s_voidp);
+	x_QSqlFieldInfo* xret = new x_QSqlFieldInfo(*(const QSqlFieldInfo *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QSqlFieldInfo(const QSqlFieldInfo& x1) : QSqlFieldInfo(x1) {
     }
     static void x_12(Smoke::Stack x) {
 	// QSqlFieldInfo(const QSqlField&, bool)
-	x_QSqlFieldInfo* xret = new x_QSqlFieldInfo(*(const QSqlField *)x[1].s_voidp,(bool)x[2].s_bool);
+	x_QSqlFieldInfo* xret = new x_QSqlFieldInfo(*(const QSqlField *)x[1].s_class,(bool)x[2].s_bool);
 	x[0].s_class = (void*)xret;
     }
     x_QSqlFieldInfo(const QSqlField& x1, bool x2) : QSqlFieldInfo(x1, x2) {
     }
     static void x_13(Smoke::Stack x) {
 	// QSqlFieldInfo(const QSqlField&)
-	x_QSqlFieldInfo* xret = new x_QSqlFieldInfo(*(const QSqlField *)x[1].s_voidp);
+	x_QSqlFieldInfo* xret = new x_QSqlFieldInfo(*(const QSqlField *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QSqlFieldInfo(const QSqlField& x1) : QSqlFieldInfo(x1) {
     }
     void x_14(Smoke::Stack x) {
 	// operator=(const QSqlFieldInfo&)
-	QSqlFieldInfo& xret = this->QSqlFieldInfo::operator=(*(const QSqlFieldInfo *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QSqlFieldInfo& xret = this->QSqlFieldInfo::operator=(*(const QSqlFieldInfo *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_15(Smoke::Stack x) const {
 	// operator==(const QSqlFieldInfo&)
-	bool xret = this->QSqlFieldInfo::operator==(*(const QSqlFieldInfo *)x[1].s_voidp);
+	bool xret = this->QSqlFieldInfo::operator==(*(const QSqlFieldInfo *)x[1].s_class);
 	x[0].s_bool = xret;
     }
     void x_16(Smoke::Stack x) const {
@@ -188,22 +188,22 @@ public:
     virtual void setCalculated(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->callMethod(7497, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(7497, (void*)this, x)) return;
 	this->QSqlFieldInfo::setCalculated(x1);
     }
     virtual void setGenerated(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->callMethod(7496, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(7496, (void*)this, x)) return;
 	this->QSqlFieldInfo::setGenerated(x1);
     }
     virtual void setTrim(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->callMethod(7495, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(7495, (void*)this, x)) return;
 	this->QSqlFieldInfo::setTrim(x1);
     }
-    ~x_QSqlFieldInfo() {}
+    ~x_QSqlFieldInfo() { qt_Smoke->binding->deleted(282, (void*)this); }
 };
 void xcall_QSqlFieldInfo(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QSqlFieldInfo *xself = (x_QSqlFieldInfo*)obj;

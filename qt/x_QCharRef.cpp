@@ -35,7 +35,7 @@ public:
     }
     void x_5(Smoke::Stack x) {
 	// operator=(const QCharRef&)
-	QCharRef xret = xthis->QCharRef::operator=(*(const QCharRef *)x[1].s_voidp);
+	QCharRef xret = xthis->QCharRef::operator=(*(const QCharRef *)x[1].s_class);
 	x[0].s_class = (void*)new QCharRef(xret);
     }
     void x_6(Smoke::Stack x) {
@@ -173,7 +173,7 @@ public:
 	uchar xret = xthis->QCharRef::row();
 	x[0].s_uchar = xret;
     }
-    ~x_QCharRef() {}
+    ~x_QCharRef() { qt_Smoke->binding->deleted(34, (void*)this); }
 };
 void xcall_QCharRef(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QCharRef xtmp(obj), *xself = &xtmp;

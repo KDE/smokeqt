@@ -62,12 +62,12 @@ public:
     }
     void x_10(Smoke::Stack x) const {
 	// expandedTo(const QSize&)
-	QSize xret = this->QSize::expandedTo(*(const QSize *)x[1].s_voidp);
+	QSize xret = this->QSize::expandedTo(*(const QSize *)x[1].s_class);
 	x[0].s_class = (void*)new QSize(xret);
     }
     void x_11(Smoke::Stack x) const {
 	// boundedTo(const QSize&)
-	QSize xret = this->QSize::boundedTo(*(const QSize *)x[1].s_voidp);
+	QSize xret = this->QSize::boundedTo(*(const QSize *)x[1].s_class);
 	x[0].s_class = (void*)new QSize(xret);
     }
     void x_12(Smoke::Stack x) {
@@ -82,35 +82,35 @@ public:
     }
     void x_14(Smoke::Stack x) {
 	// operator+=(const QSize&)
-	QSize& xret = this->QSize::operator+=(*(const QSize *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QSize& xret = this->QSize::operator+=(*(const QSize *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_15(Smoke::Stack x) {
 	// operator-=(const QSize&)
-	QSize& xret = this->QSize::operator-=(*(const QSize *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QSize& xret = this->QSize::operator-=(*(const QSize *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_16(Smoke::Stack x) {
 	// operator*=(int)
 	QSize& xret = this->QSize::operator*=((int)x[1].s_int);
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_17(Smoke::Stack x) {
 	// operator*=(double)
 	QSize& xret = this->QSize::operator*=((double)x[1].s_double);
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_18(Smoke::Stack x) {
 	// operator/=(int)
 	QSize& xret = this->QSize::operator/=((int)x[1].s_int);
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_19(Smoke::Stack x) {
 	// operator/=(double)
 	QSize& xret = this->QSize::operator/=((double)x[1].s_double);
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
-    ~x_QSize() {}
+    ~x_QSize() { qt_Smoke->binding->deleted(260, (void*)this); }
 };
 void xcall_QSize(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QSize *xself = (x_QSize*)obj;

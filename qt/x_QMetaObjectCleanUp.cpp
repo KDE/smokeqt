@@ -17,7 +17,7 @@ public:
 	this->QMetaObjectCleanUp::setMetaObject(*(QMetaObject* *)x[1].s_voidp);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    ~x_QMetaObjectCleanUp() {}
+    ~x_QMetaObjectCleanUp() { qt_Smoke->binding->deleted(197, (void*)this); }
 };
 void xcall_QMetaObjectCleanUp(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QMetaObjectCleanUp *xself = (x_QMetaObjectCleanUp*)obj;

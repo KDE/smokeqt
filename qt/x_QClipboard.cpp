@@ -45,11 +45,11 @@ public:
     void x_6(Smoke::Stack x) const {
 	// data()
 	QMimeSource* xret = xthis->QClipboard::data();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_7(Smoke::Stack x) {
 	// setData(QMimeSource*)
-	xthis->QClipboard::setData((QMimeSource*)x[1].s_voidp);
+	xthis->QClipboard::setData((QMimeSource*)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_8(Smoke::Stack x) const {
@@ -79,15 +79,15 @@ public:
     }
     void x_13(Smoke::Stack x) {
 	// setImage(const QImage&)
-	xthis->QClipboard::setImage(*(const QImage *)x[1].s_voidp);
+	xthis->QClipboard::setImage(*(const QImage *)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_14(Smoke::Stack x) {
 	// setPixmap(const QPixmap&)
-	xthis->QClipboard::setPixmap(*(const QPixmap *)x[1].s_voidp);
+	xthis->QClipboard::setPixmap(*(const QPixmap *)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    ~x_QClipboard() {}
+    ~x_QClipboard() { qt_Smoke->binding->deleted(39, (void*)this); }
 };
 void xcall_QClipboard(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QClipboard xtmp(obj), *xself = &xtmp;

@@ -9,7 +9,7 @@ class x_QStringBucket : public QStringBucket {
 public:
     static void x_0(Smoke::Stack x) {
 	// QStringBucket(const QString&, QPtrCollection::Item, QBaseBucket*)
-	x_QStringBucket* xret = new x_QStringBucket(*(const QString *)x[1].s_voidp,*(QPtrCollection::Item *)x[2].s_voidp,(QBaseBucket*)x[3].s_voidp);
+	x_QStringBucket* xret = new x_QStringBucket(*(const QString *)x[1].s_voidp,*(QPtrCollection::Item *)x[2].s_voidp,(QBaseBucket*)x[3].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QStringBucket(const QString& x1, QPtrCollection::Item x2, QBaseBucket* x3) : QStringBucket(x1, x2, x3) {
@@ -19,7 +19,7 @@ public:
 	const QString& xret = this->QStringBucket::getKey();
 	x[0].s_voidp = (void*)&xret;
     }
-    ~x_QStringBucket() {}
+    ~x_QStringBucket() { qt_Smoke->binding->deleted(296, (void*)this); }
 };
 void xcall_QStringBucket(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QStringBucket *xself = (x_QStringBucket*)obj;

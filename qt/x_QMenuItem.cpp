@@ -22,7 +22,7 @@ public:
     void x_2(Smoke::Stack x) const {
 	// iconSet()
 	QIconSet* xret = this->QMenuItem::iconSet();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_3(Smoke::Stack x) const {
 	// text()
@@ -37,22 +37,22 @@ public:
     void x_5(Smoke::Stack x) const {
 	// pixmap()
 	QPixmap* xret = this->QMenuItem::pixmap();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_6(Smoke::Stack x) const {
 	// popup()
 	QPopupMenu* xret = this->QMenuItem::popup();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_7(Smoke::Stack x) const {
 	// widget()
 	QWidget* xret = this->QMenuItem::widget();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_8(Smoke::Stack x) const {
 	// custom()
 	QCustomMenuItem* xret = this->QMenuItem::custom();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_9(Smoke::Stack x) const {
 	// key()
@@ -62,7 +62,7 @@ public:
     void x_10(Smoke::Stack x) const {
 	// signal()
 	QSignal* xret = this->QMenuItem::signal();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_11(Smoke::Stack x) const {
 	// isSeparator()
@@ -99,7 +99,7 @@ public:
 	this->QMenuItem::setWhatsThis(*(const QString *)x[1].s_voidp);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    ~x_QMenuItem() {}
+    ~x_QMenuItem() { qt_Smoke->binding->deleted(192, (void*)this); }
 };
 void xcall_QMenuItem(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QMenuItem *xself = (x_QMenuItem*)obj;

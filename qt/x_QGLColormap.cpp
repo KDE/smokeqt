@@ -16,15 +16,15 @@ public:
     }
     static void x_1(Smoke::Stack x) {
 	// QGLColormap(const QGLColormap&)
-	x_QGLColormap* xret = new x_QGLColormap(*(const QGLColormap *)x[1].s_voidp);
+	x_QGLColormap* xret = new x_QGLColormap(*(const QGLColormap *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QGLColormap(const QGLColormap& x1) : QGLColormap(x1) {
     }
     void x_2(Smoke::Stack x) {
 	// operator=(const QGLColormap&)
-	QGLColormap& xret = this->QGLColormap::operator=(*(const QGLColormap *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QGLColormap& xret = this->QGLColormap::operator=(*(const QGLColormap *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_3(Smoke::Stack x) const {
 	// isEmpty()
@@ -58,7 +58,7 @@ public:
     }
     void x_9(Smoke::Stack x) {
 	// setEntry(int, const QColor&)
-	this->QGLColormap::setEntry((int)x[1].s_int,*(const QColor *)x[2].s_voidp);
+	this->QGLColormap::setEntry((int)x[1].s_int,*(const QColor *)x[2].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_10(Smoke::Stack x) const {
@@ -81,7 +81,7 @@ public:
 	int xret = this->QGLColormap::findNearest((QRgb)x[1].s_uint);
 	x[0].s_int = xret;
     }
-    ~x_QGLColormap() {}
+    ~x_QGLColormap() { qt_Smoke->binding->deleted(128, (void*)this); }
 };
 void xcall_QGLColormap(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QGLColormap *xself = (x_QGLColormap*)obj;

@@ -64,7 +64,7 @@ public:
 	this->QXmlNamespaceSupport::reset();
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    ~x_QXmlNamespaceSupport() {}
+    ~x_QXmlNamespaceSupport() { qt_Smoke->binding->deleted(376, (void*)this); }
 };
 void xcall_QXmlNamespaceSupport(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QXmlNamespaceSupport *xself = (x_QXmlNamespaceSupport*)obj;

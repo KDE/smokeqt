@@ -18,21 +18,21 @@ public:
     }
     static void x_1(Smoke::Stack x) {
 	// QXmlInputSource(QIODevice*)
-	x_QXmlInputSource* xret = new x_QXmlInputSource((QIODevice*)x[1].s_voidp);
+	x_QXmlInputSource* xret = new x_QXmlInputSource((QIODevice*)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QXmlInputSource(QIODevice* x1) : QXmlInputSource(x1) {
     }
     static void x_2(Smoke::Stack x) {
 	// QXmlInputSource(QFile&)
-	x_QXmlInputSource* xret = new x_QXmlInputSource(*(QFile *)x[1].s_voidp);
+	x_QXmlInputSource* xret = new x_QXmlInputSource(*(QFile *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QXmlInputSource(QFile& x1) : QXmlInputSource(x1) {
     }
     static void x_3(Smoke::Stack x) {
 	// QXmlInputSource(QTextStream&)
-	x_QXmlInputSource* xret = new x_QXmlInputSource(*(QTextStream *)x[1].s_voidp);
+	x_QXmlInputSource* xret = new x_QXmlInputSource(*(QTextStream *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QXmlInputSource(QTextStream& x1) : QXmlInputSource(x1) {
@@ -79,7 +79,7 @@ public:
     }
     virtual QString data() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(10056, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(10056, (void*)this, x)) {
 	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;
@@ -89,14 +89,14 @@ public:
     }
     virtual void fetchData() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(10055, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10055, (void*)this, x)) return;
 	this->QXmlInputSource::fetchData();
     }
     virtual QString fromRawData(const QByteArray& x1, bool x2) {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_bool = x2;
-	if(qt_Smoke->callMethod(10059, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(10059, (void*)this, x)) {
 	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;
@@ -106,7 +106,7 @@ public:
     }
     virtual QChar next() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(10057, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(10057, (void*)this, x)) {
 	    QChar *xptr = (QChar *)x[0].s_class;
 	    QChar xret(*xptr);
 	    delete xptr;
@@ -116,22 +116,22 @@ public:
     }
     virtual void reset() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(10058, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10058, (void*)this, x)) return;
 	this->QXmlInputSource::reset();
     }
     virtual void setData(const QByteArray& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->callMethod(10054, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10054, (void*)this, x)) return;
 	this->QXmlInputSource::setData(x1);
     }
     virtual void setData(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->callMethod(10053, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10053, (void*)this, x)) return;
 	this->QXmlInputSource::setData(x1);
     }
-    ~x_QXmlInputSource() {}
+    ~x_QXmlInputSource() { qt_Smoke->binding->deleted(373, (void*)this); }
 };
 void xcall_QXmlInputSource(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QXmlInputSource *xself = (x_QXmlInputSource*)obj;

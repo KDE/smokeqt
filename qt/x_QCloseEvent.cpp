@@ -27,7 +27,7 @@ public:
 	this->QCloseEvent::ignore();
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    ~x_QCloseEvent() {}
+    ~x_QCloseEvent() { qt_Smoke->binding->deleted(40, (void*)this); }
 };
 void xcall_QCloseEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QCloseEvent *xself = (x_QCloseEvent*)obj;

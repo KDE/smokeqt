@@ -8,7 +8,7 @@ class x_QListBoxItem : public QListBoxItem {
 public:
     static void x_0(Smoke::Stack x) {
 	// QListBoxItem(QListBox*)
-	x_QListBoxItem* xret = new x_QListBoxItem((QListBox*)x[1].s_voidp);
+	x_QListBoxItem* xret = new x_QListBoxItem((QListBox*)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QListBoxItem(QListBox* x1) : QListBoxItem(x1) {
@@ -22,7 +22,7 @@ public:
     }
     static void x_2(Smoke::Stack x) {
 	// QListBoxItem(QListBox*, QListBoxItem*)
-	x_QListBoxItem* xret = new x_QListBoxItem((QListBox*)x[1].s_voidp,(QListBoxItem*)x[2].s_voidp);
+	x_QListBoxItem* xret = new x_QListBoxItem((QListBox*)x[1].s_class,(QListBoxItem*)x[2].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QListBoxItem(QListBox* x1, QListBoxItem* x2) : QListBoxItem(x1, x2) {
@@ -35,16 +35,16 @@ public:
     void x_4(Smoke::Stack x) const {
 	// pixmap()
 	const QPixmap* xret = this->QListBoxItem::pixmap();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_5(Smoke::Stack x) const {
 	// height(const QListBox*)
-	int xret = this->QListBoxItem::height((const QListBox*)x[1].s_voidp);
+	int xret = this->QListBoxItem::height((const QListBox*)x[1].s_class);
 	x[0].s_int = xret;
     }
     void x_6(Smoke::Stack x) const {
 	// width(const QListBox*)
-	int xret = this->QListBoxItem::width((const QListBox*)x[1].s_voidp);
+	int xret = this->QListBoxItem::width((const QListBox*)x[1].s_class);
 	x[0].s_int = xret;
     }
     void x_7(Smoke::Stack x) const {
@@ -70,7 +70,7 @@ public:
     void x_11(Smoke::Stack x) const {
 	// listBox()
 	QListBox* xret = this->QListBoxItem::listBox();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_12(Smoke::Stack x) {
 	// setSelectable(bool)
@@ -85,12 +85,12 @@ public:
     void x_14(Smoke::Stack x) const {
 	// next()
 	QListBoxItem* xret = this->QListBoxItem::next();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_15(Smoke::Stack x) const {
 	// prev()
 	QListBoxItem* xret = this->QListBoxItem::prev();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_16(Smoke::Stack x) const {
 	// rtti()
@@ -109,36 +109,36 @@ public:
     }
     virtual int height(const QListBox* x1) const {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->callMethod(4403, (void*)this, x)) return (int)x[0].s_int;
+	x[1].s_class = (void*)x1;
+	if(qt_Smoke->binding->callMethod(4403, (void*)this, x)) return (int)x[0].s_int;
 	return this->QListBoxItem::height(x1);
     }
     virtual void paint(QPainter* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
-	qt_Smoke->callMethod(4415, (void*)this, x, true /*pure virtual*/);
+	x[1].s_class = (void*)x1;
+	qt_Smoke->binding->callMethod(4415, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }
     virtual const QPixmap* pixmap() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(4402, (void*)this, x)) return (const QPixmap*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(4402, (void*)this, x)) return (const QPixmap*)x[0].s_class;
 	return this->QListBoxItem::pixmap();
     }
     virtual int rtti() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(4414, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(4414, (void*)this, x)) return (int)x[0].s_int;
 	return this->QListBoxItem::rtti();
     }
     virtual void setText(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->callMethod(4416, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(4416, (void*)this, x)) return;
 	this->QListBoxItem::setText(x1);
     }
     virtual QString text() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(4401, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(4401, (void*)this, x)) {
 	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;
@@ -148,11 +148,11 @@ public:
     }
     virtual int width(const QListBox* x1) const {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->callMethod(4404, (void*)this, x)) return (int)x[0].s_int;
+	x[1].s_class = (void*)x1;
+	if(qt_Smoke->binding->callMethod(4404, (void*)this, x)) return (int)x[0].s_int;
 	return this->QListBoxItem::width(x1);
     }
-    ~x_QListBoxItem() {}
+    ~x_QListBoxItem() { qt_Smoke->binding->deleted(180, (void*)this); }
 };
 void xcall_QListBoxItem(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QListBoxItem *xself = (x_QListBoxItem*)obj;

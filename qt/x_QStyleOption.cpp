@@ -40,42 +40,42 @@ public:
     }
     static void x_5(Smoke::Stack x) {
 	// QStyleOption(QMenuItem*)
-	x_QStyleOption* xret = new x_QStyleOption((QMenuItem*)x[1].s_voidp);
+	x_QStyleOption* xret = new x_QStyleOption((QMenuItem*)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QStyleOption(QMenuItem* x1) : QStyleOption(x1) {
     }
     static void x_6(Smoke::Stack x) {
 	// QStyleOption(QMenuItem*, int)
-	x_QStyleOption* xret = new x_QStyleOption((QMenuItem*)x[1].s_voidp,(int)x[2].s_int);
+	x_QStyleOption* xret = new x_QStyleOption((QMenuItem*)x[1].s_class,(int)x[2].s_int);
 	x[0].s_class = (void*)xret;
     }
     x_QStyleOption(QMenuItem* x1, int x2) : QStyleOption(x1, x2) {
     }
     static void x_7(Smoke::Stack x) {
 	// QStyleOption(QMenuItem*, int, int)
-	x_QStyleOption* xret = new x_QStyleOption((QMenuItem*)x[1].s_voidp,(int)x[2].s_int,(int)x[3].s_int);
+	x_QStyleOption* xret = new x_QStyleOption((QMenuItem*)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int);
 	x[0].s_class = (void*)xret;
     }
     x_QStyleOption(QMenuItem* x1, int x2, int x3) : QStyleOption(x1, x2, x3) {
     }
     static void x_8(Smoke::Stack x) {
 	// QStyleOption(const QColor&)
-	x_QStyleOption* xret = new x_QStyleOption(*(const QColor *)x[1].s_voidp);
+	x_QStyleOption* xret = new x_QStyleOption(*(const QColor *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QStyleOption(const QColor& x1) : QStyleOption(x1) {
     }
     static void x_9(Smoke::Stack x) {
 	// QStyleOption(QTab*)
-	x_QStyleOption* xret = new x_QStyleOption((QTab*)x[1].s_voidp);
+	x_QStyleOption* xret = new x_QStyleOption((QTab*)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QStyleOption(QTab* x1) : QStyleOption(x1) {
     }
     static void x_10(Smoke::Stack x) {
 	// QStyleOption(QListViewItem*)
-	x_QStyleOption* xret = new x_QStyleOption((QListViewItem*)x[1].s_voidp);
+	x_QStyleOption* xret = new x_QStyleOption((QListViewItem*)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QStyleOption(QListViewItem* x1) : QStyleOption(x1) {
@@ -115,7 +115,7 @@ public:
     void x_17(Smoke::Stack x) const {
 	// menuItem()
 	QMenuItem* xret = this->QStyleOption::menuItem();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_18(Smoke::Stack x) const {
 	// maxIconWidth()
@@ -130,24 +130,24 @@ public:
     void x_20(Smoke::Stack x) const {
 	// color()
 	const QColor& xret = this->QStyleOption::color();
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_21(Smoke::Stack x) const {
 	// tab()
 	QTab* xret = this->QStyleOption::tab();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_22(Smoke::Stack x) const {
 	// listViewItem()
 	QListViewItem* xret = this->QStyleOption::listViewItem();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_23(Smoke::Stack x) const {
 	// arrowType()
 	Qt::ArrowType xret = this->QStyleOption::arrowType();
 	x[0].s_enum = xret;
     }
-    ~x_QStyleOption() {}
+    ~x_QStyleOption() { qt_Smoke->binding->deleted(301, (void*)this); }
 };
 void xcall_QStyleOption(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QStyleOption *xself = (x_QStyleOption*)obj;

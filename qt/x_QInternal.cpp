@@ -39,7 +39,7 @@ public:
     }
     x_QInternal() : QInternal() {
     }
-    ~x_QInternal() {}
+    ~x_QInternal() { qt_Smoke->binding->deleted(166, (void*)this); }
 };
 void xcall_QInternal(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QInternal *xself = (x_QInternal*)obj;

@@ -19,21 +19,21 @@ public:
     void x_2(Smoke::Stack x) {
 	// getNext()
 	QBaseBucket* xret = this->QBaseBucket::getNext();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_3(Smoke::Stack x) {
 	// setNext(QBaseBucket*)
-	this->QBaseBucket::setNext((QBaseBucket*)x[1].s_voidp);
+	this->QBaseBucket::setNext((QBaseBucket*)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     static void x_4(Smoke::Stack x) {
 	// QBaseBucket(QPtrCollection::Item, QBaseBucket*)
-	x_QBaseBucket* xret = new x_QBaseBucket(*(QPtrCollection::Item *)x[1].s_voidp,(QBaseBucket*)x[2].s_voidp);
+	x_QBaseBucket* xret = new x_QBaseBucket(*(QPtrCollection::Item *)x[1].s_voidp,(QBaseBucket*)x[2].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QBaseBucket(QPtrCollection::Item x1, QBaseBucket* x2) : QBaseBucket(x1, x2) {
     }
-    ~x_QBaseBucket() {}
+    ~x_QBaseBucket() { qt_Smoke->binding->deleted(9, (void*)this); }
 };
 void xcall_QBaseBucket(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QBaseBucket *xself = (x_QBaseBucket*)obj;

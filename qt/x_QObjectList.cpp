@@ -14,17 +14,17 @@ public:
     }
     static void x_1(Smoke::Stack x) {
 	// QObjectList(const QObjectList&)
-	x_QObjectList* xret = new x_QObjectList(*(const QObjectList *)x[1].s_voidp);
+	x_QObjectList* xret = new x_QObjectList(*(const QObjectList *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QObjectList(const QObjectList& x1) : QObjectList(x1) {
     }
     void x_2(Smoke::Stack x) {
 	// operator=(const QObjectList&)
-	QObjectList& xret = this->QObjectList::operator=(*(const QObjectList *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QObjectList& xret = this->QObjectList::operator=(*(const QObjectList *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
-    ~x_QObjectList() {}
+    ~x_QObjectList() { qt_Smoke->binding->deleted(213, (void*)this); }
 };
 void xcall_QObjectList(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QObjectList *xself = (x_QObjectList*)obj;

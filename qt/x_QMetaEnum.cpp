@@ -12,7 +12,7 @@ public:
     }
     x_QMetaEnum() : QMetaEnum() {
     }
-    ~x_QMetaEnum() {}
+    ~x_QMetaEnum() { qt_Smoke->binding->deleted(195, (void*)this); }
 };
 void xcall_QMetaEnum(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QMetaEnum *xself = (x_QMetaEnum*)obj;

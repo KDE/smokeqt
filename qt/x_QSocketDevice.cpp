@@ -163,12 +163,12 @@ public:
     }
     void x_34(Smoke::Stack x) {
 	// connect(const QHostAddress&, Q_UINT16)
-	bool xret = this->QSocketDevice::connect(*(const QHostAddress *)x[1].s_voidp,(Q_UINT16)x[2].s_ushort);
+	bool xret = this->QSocketDevice::connect(*(const QHostAddress *)x[1].s_class,(Q_UINT16)x[2].s_ushort);
 	x[0].s_bool = xret;
     }
     void x_35(Smoke::Stack x) {
 	// bind(const QHostAddress&, Q_UINT16)
-	bool xret = this->QSocketDevice::bind(*(const QHostAddress *)x[1].s_voidp,(Q_UINT16)x[2].s_ushort);
+	bool xret = this->QSocketDevice::bind(*(const QHostAddress *)x[1].s_class,(Q_UINT16)x[2].s_ushort);
 	x[0].s_bool = xret;
     }
     void x_36(Smoke::Stack x) {
@@ -208,7 +208,7 @@ public:
     }
     void x_43(Smoke::Stack x) {
 	// writeBlock(const char*, Q_ULONG, const QHostAddress&, Q_UINT16)
-	Q_LONG xret = this->QSocketDevice::writeBlock((const char*)x[1].s_voidp,(Q_ULONG)x[2].s_long,*(const QHostAddress *)x[3].s_voidp,(Q_UINT16)x[4].s_ushort);
+	Q_LONG xret = this->QSocketDevice::writeBlock((const char*)x[1].s_voidp,(Q_ULONG)x[2].s_long,*(const QHostAddress *)x[3].s_class,(Q_UINT16)x[4].s_ushort);
 	x[0].s_long = xret;
     }
     void x_44(Smoke::Stack x) {
@@ -258,12 +258,12 @@ public:
     }
     virtual int accept() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(7080, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(7080, (void*)this, x)) return (int)x[0].s_int;
 	return this->QSocketDevice::accept();
     }
     virtual QIODevice::Offset at() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(7066, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(7066, (void*)this, x)) {
 	    QIODevice::Offset *xptr = (QIODevice::Offset *)x[0].s_class;
 	    QIODevice::Offset xret(*xptr);
 	    delete xptr;
@@ -274,64 +274,64 @@ public:
     virtual bool at(QIODevice::Offset x1) {
 	Smoke::StackItem x[2];
 	x[1].s_ulong = x1;
-	if(qt_Smoke->callMethod(7067, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(7067, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QSocketDevice::at(x1);
     }
     virtual bool atEnd() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(7068, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(7068, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QSocketDevice::atEnd();
     }
     virtual bool bind(const QHostAddress& x1, Q_UINT16 x2) {
 	Smoke::StackItem x[3];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	x[2].s_ushort = x2;
-	if(qt_Smoke->callMethod(7078, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(7078, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QSocketDevice::bind(x1, x2);
     }
     virtual void close() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(7063, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(7063, (void*)this, x)) return;
 	this->QSocketDevice::close();
     }
     virtual bool connect(const QHostAddress& x1, Q_UINT16 x2) {
 	Smoke::StackItem x[3];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	x[2].s_ushort = x2;
-	if(qt_Smoke->callMethod(7077, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(7077, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QSocketDevice::connect(x1, x2);
     }
     virtual void flush() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(7064, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(7064, (void*)this, x)) return;
 	this->QSocketDevice::flush();
     }
     virtual int getch() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(7087, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(7087, (void*)this, x)) return (int)x[0].s_int;
 	return this->QSocketDevice::getch();
     }
     virtual bool listen(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->callMethod(7079, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(7079, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QSocketDevice::listen(x1);
     }
     virtual bool open(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->callMethod(7062, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(7062, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QSocketDevice::open(x1);
     }
     virtual int putch(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->callMethod(7088, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(7088, (void*)this, x)) return (int)x[0].s_int;
 	return this->QSocketDevice::putch(x1);
     }
     virtual QByteArray readAll() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(3388, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(3388, (void*)this, x)) {
 	    QByteArray *xptr = (QByteArray *)x[0].s_class;
 	    QByteArray xret(*xptr);
 	    delete xptr;
@@ -343,7 +343,7 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)x1;
 	x[2].s_long = x2;
-	if(qt_Smoke->callMethod(7084, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(7084, (void*)this, x)) {
 	    Q_LONG *xptr = (Q_LONG *)x[0].s_class;
 	    Q_LONG xret(*xptr);
 	    delete xptr;
@@ -355,7 +355,7 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)x1;
 	x[2].s_long = x2;
-	if(qt_Smoke->callMethod(3386, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(3386, (void*)this, x)) {
 	    Q_LONG *xptr = (Q_LONG *)x[0].s_class;
 	    Q_LONG xret(*xptr);
 	    delete xptr;
@@ -366,37 +366,37 @@ public:
     virtual void setAddressReusable(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->callMethod(7072, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(7072, (void*)this, x)) return;
 	this->QSocketDevice::setAddressReusable(x1);
     }
     virtual void setBlocking(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->callMethod(7070, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(7070, (void*)this, x)) return;
 	this->QSocketDevice::setBlocking(x1);
     }
     virtual void setReceiveBufferSize(uint x1) {
 	Smoke::StackItem x[2];
 	x[1].s_uint = x1;
-	if(qt_Smoke->callMethod(7074, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(7074, (void*)this, x)) return;
 	this->QSocketDevice::setReceiveBufferSize(x1);
     }
     virtual void setSendBufferSize(uint x1) {
 	Smoke::StackItem x[2];
 	x[1].s_uint = x1;
-	if(qt_Smoke->callMethod(7076, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(7076, (void*)this, x)) return;
 	this->QSocketDevice::setSendBufferSize(x1);
     }
     virtual void setSocket(int x1, QSocketDevice::Type x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_enum = x2;
-	if(qt_Smoke->callMethod(7061, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(7061, (void*)this, x)) return;
 	this->QSocketDevice::setSocket(x1, x2);
     }
     virtual QIODevice::Offset size() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(7065, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(7065, (void*)this, x)) {
 	    QIODevice::Offset *xptr = (QIODevice::Offset *)x[0].s_class;
 	    QIODevice::Offset xret(*xptr);
 	    delete xptr;
@@ -407,14 +407,14 @@ public:
     virtual int ungetch(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->callMethod(7089, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(7089, (void*)this, x)) return (int)x[0].s_int;
 	return this->QSocketDevice::ungetch(x1);
     }
     virtual Q_LONG writeBlock(const char* x1, Q_ULONG x2) {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)x1;
 	x[2].s_long = x2;
-	if(qt_Smoke->callMethod(7085, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(7085, (void*)this, x)) {
 	    Q_LONG *xptr = (Q_LONG *)x[0].s_class;
 	    Q_LONG xret(*xptr);
 	    delete xptr;
@@ -426,9 +426,9 @@ public:
 	Smoke::StackItem x[5];
 	x[1].s_voidp = (void*)x1;
 	x[2].s_long = x2;
-	x[3].s_voidp = (void*)&x3;
+	x[3].s_class = (void*)&x3;
 	x[4].s_ushort = x4;
-	if(qt_Smoke->callMethod(7086, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(7086, (void*)this, x)) {
 	    Q_LONG *xptr = (Q_LONG *)x[0].s_class;
 	    Q_LONG xret(*xptr);
 	    delete xptr;
@@ -436,7 +436,7 @@ public:
 	}
 	return this->QSocketDevice::writeBlock(x1, x2, x3, x4);
     }
-    ~x_QSocketDevice() {}
+    ~x_QSocketDevice() { qt_Smoke->binding->deleted(266, (void*)this); }
 };
 void xcall_QSocketDevice(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QSocketDevice *xself = (x_QSocketDevice*)obj;

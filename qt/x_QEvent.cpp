@@ -214,7 +214,7 @@ public:
 	bool xret = this->QEvent::spontaneous();
 	x[0].s_bool = xret;
     }
-    ~x_QEvent() {}
+    ~x_QEvent() { qt_Smoke->binding->deleted(108, (void*)this); }
 };
 void xcall_QEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QEvent *xself = (x_QEvent*)obj;

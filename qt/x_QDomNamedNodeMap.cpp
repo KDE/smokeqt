@@ -15,24 +15,24 @@ public:
     }
     static void x_1(Smoke::Stack x) {
 	// QDomNamedNodeMap(const QDomNamedNodeMap&)
-	x_QDomNamedNodeMap* xret = new x_QDomNamedNodeMap(*(const QDomNamedNodeMap *)x[1].s_voidp);
+	x_QDomNamedNodeMap* xret = new x_QDomNamedNodeMap(*(const QDomNamedNodeMap *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QDomNamedNodeMap(const QDomNamedNodeMap& x1) : QDomNamedNodeMap(x1) {
     }
     void x_2(Smoke::Stack x) {
 	// operator=(const QDomNamedNodeMap&)
-	QDomNamedNodeMap& xret = this->QDomNamedNodeMap::operator=(*(const QDomNamedNodeMap *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QDomNamedNodeMap& xret = this->QDomNamedNodeMap::operator=(*(const QDomNamedNodeMap *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_3(Smoke::Stack x) const {
 	// operator==(const QDomNamedNodeMap&)
-	bool xret = this->QDomNamedNodeMap::operator==(*(const QDomNamedNodeMap *)x[1].s_voidp);
+	bool xret = this->QDomNamedNodeMap::operator==(*(const QDomNamedNodeMap *)x[1].s_class);
 	x[0].s_bool = xret;
     }
     void x_4(Smoke::Stack x) const {
 	// operator!=(const QDomNamedNodeMap&)
-	bool xret = this->QDomNamedNodeMap::operator!=(*(const QDomNamedNodeMap *)x[1].s_voidp);
+	bool xret = this->QDomNamedNodeMap::operator!=(*(const QDomNamedNodeMap *)x[1].s_class);
 	x[0].s_bool = xret;
     }
     void x_5(Smoke::Stack x) const {
@@ -42,7 +42,7 @@ public:
     }
     void x_6(Smoke::Stack x) {
 	// setNamedItem(const QDomNode&)
-	QDomNode xret = this->QDomNamedNodeMap::setNamedItem(*(const QDomNode *)x[1].s_voidp);
+	QDomNode xret = this->QDomNamedNodeMap::setNamedItem(*(const QDomNode *)x[1].s_class);
 	x[0].s_class = (void*)new QDomNode(xret);
     }
     void x_7(Smoke::Stack x) {
@@ -62,7 +62,7 @@ public:
     }
     void x_10(Smoke::Stack x) {
 	// setNamedItemNS(const QDomNode&)
-	QDomNode xret = this->QDomNamedNodeMap::setNamedItemNS(*(const QDomNode *)x[1].s_voidp);
+	QDomNode xret = this->QDomNamedNodeMap::setNamedItemNS(*(const QDomNode *)x[1].s_class);
 	x[0].s_class = (void*)new QDomNode(xret);
     }
     void x_11(Smoke::Stack x) {
@@ -85,7 +85,7 @@ public:
 	bool xret = this->QDomNamedNodeMap::contains(*(const QString *)x[1].s_voidp);
 	x[0].s_bool = xret;
     }
-    ~x_QDomNamedNodeMap() {}
+    ~x_QDomNamedNodeMap() { qt_Smoke->binding->deleted(89, (void*)this); }
 };
 void xcall_QDomNamedNodeMap(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QDomNamedNodeMap *xself = (x_QDomNamedNodeMap*)obj;

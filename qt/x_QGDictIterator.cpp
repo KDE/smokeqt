@@ -16,15 +16,15 @@ public:
     }
     static void x_1(Smoke::Stack x) {
 	// QGDictIterator(const QGDictIterator&)
-	x_QGDictIterator* xret = new x_QGDictIterator(*(const QGDictIterator *)x[1].s_voidp);
+	x_QGDictIterator* xret = new x_QGDictIterator(*(const QGDictIterator *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QGDictIterator(const QGDictIterator& x1) : QGDictIterator(x1) {
     }
     void x_2(Smoke::Stack x) {
 	// operator=(const QGDictIterator&)
-	QGDictIterator& xret = this->QGDictIterator::operator=(*(const QGDictIterator *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QGDictIterator& xret = this->QGDictIterator::operator=(*(const QGDictIterator *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_3(Smoke::Stack x) {
 	// toFirst()
@@ -71,7 +71,7 @@ public:
 	QPtrCollection::Item xret = this->QGDictIterator::operator+=((uint)x[1].s_uint);
 	x[0].s_voidp = (void*)new QPtrCollection::Item(xret);
     }
-    ~x_QGDictIterator() {}
+    ~x_QGDictIterator() { qt_Smoke->binding->deleted(127, (void*)this); }
 };
 void xcall_QGDictIterator(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QGDictIterator *xself = (x_QGDictIterator*)obj;

@@ -21,17 +21,17 @@ public:
     }
     static void x_2(Smoke::Stack x) {
 	// QStrList(const QStrList&)
-	x_QStrList* xret = new x_QStrList(*(const QStrList *)x[1].s_voidp);
+	x_QStrList* xret = new x_QStrList(*(const QStrList *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QStrList(const QStrList& x1) : QStrList(x1) {
     }
     void x_3(Smoke::Stack x) {
 	// operator=(const QStrList&)
-	QStrList& xret = this->QStrList::operator=(*(const QStrList *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QStrList& xret = this->QStrList::operator=(*(const QStrList *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
-    ~x_QStrList() {}
+    ~x_QStrList() { qt_Smoke->binding->deleted(294, (void*)this); }
 };
 void xcall_QStrList(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QStrList *xself = (x_QStrList*)obj;

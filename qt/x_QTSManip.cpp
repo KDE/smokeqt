@@ -14,10 +14,10 @@ public:
     }
     void x_1(Smoke::Stack x) {
 	// exec(QTextStream&)
-	this->QTSManip::exec(*(QTextStream *)x[1].s_voidp);
+	this->QTSManip::exec(*(QTextStream *)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    ~x_QTSManip() {}
+    ~x_QTSManip() { qt_Smoke->binding->deleted(306, (void*)this); }
 };
 void xcall_QTSManip(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QTSManip *xself = (x_QTSManip*)obj;

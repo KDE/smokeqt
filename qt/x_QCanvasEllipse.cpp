@@ -12,21 +12,21 @@ class x_QCanvasEllipse : public QCanvasEllipse {
 public:
     static void x_0(Smoke::Stack x) {
 	// QCanvasEllipse(QCanvas*)
-	x_QCanvasEllipse* xret = new x_QCanvasEllipse((QCanvas*)x[1].s_voidp);
+	x_QCanvasEllipse* xret = new x_QCanvasEllipse((QCanvas*)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QCanvasEllipse(QCanvas* x1) : QCanvasEllipse(x1) {
     }
     static void x_1(Smoke::Stack x) {
 	// QCanvasEllipse(int, int, QCanvas*)
-	x_QCanvasEllipse* xret = new x_QCanvasEllipse((int)x[1].s_int,(int)x[2].s_int,(QCanvas*)x[3].s_voidp);
+	x_QCanvasEllipse* xret = new x_QCanvasEllipse((int)x[1].s_int,(int)x[2].s_int,(QCanvas*)x[3].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QCanvasEllipse(int x1, int x2, QCanvas* x3) : QCanvasEllipse(x1, x2, x3) {
     }
     static void x_2(Smoke::Stack x) {
 	// QCanvasEllipse(int, int, int, int, QCanvas*)
-	x_QCanvasEllipse* xret = new x_QCanvasEllipse((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(QCanvas*)x[5].s_voidp);
+	x_QCanvasEllipse* xret = new x_QCanvasEllipse((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(QCanvas*)x[5].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QCanvasEllipse(int x1, int x2, int x3, int x4, QCanvas* x5) : QCanvasEllipse(x1, x2, x3, x4, x5) {
@@ -68,7 +68,7 @@ public:
     }
     void x_10(Smoke::Stack x) const {
 	// collidesWith(const QCanvasItem*)
-	bool xret = this->QCanvasEllipse::collidesWith((const QCanvasItem*)x[1].s_voidp);
+	bool xret = this->QCanvasEllipse::collidesWith((const QCanvasItem*)x[1].s_class);
 	x[0].s_bool = xret;
     }
     void x_11(Smoke::Stack x) const {
@@ -78,18 +78,18 @@ public:
     }
     void x_12(Smoke::Stack x) {
 	// drawShape(QPainter&)
-	this->QCanvasEllipse::drawShape(*(QPainter *)x[1].s_voidp);
+	this->QCanvasEllipse::drawShape(*(QPainter *)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     virtual void advance(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->callMethod(546, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(546, (void*)this, x)) return;
 	this->QCanvasItem::advance(x1);
     }
     virtual QPointArray areaPoints() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(517, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(517, (void*)this, x)) {
 	    QPointArray *xptr = (QPointArray *)x[0].s_class;
 	    QPointArray xret(*xptr);
 	    delete xptr;
@@ -99,7 +99,7 @@ public:
     }
     virtual QPointArray areaPointsAdvanced() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(620, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(620, (void*)this, x)) {
 	    QPointArray *xptr = (QPointArray *)x[0].s_class;
 	    QPointArray xret(*xptr);
 	    delete xptr;
@@ -109,7 +109,7 @@ public:
     }
     virtual QRect boundingRect() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(621, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(621, (void*)this, x)) {
 	    QRect *xptr = (QRect *)x[0].s_class;
 	    QRect xret(*xptr);
 	    delete xptr;
@@ -119,7 +119,7 @@ public:
     }
     virtual QRect boundingRectAdvanced() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(567, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(567, (void*)this, x)) {
 	    QRect *xptr = (QRect *)x[0].s_class;
 	    QRect xret(*xptr);
 	    delete xptr;
@@ -129,90 +129,90 @@ public:
     }
     virtual bool collidesWith(const QCanvasItem* x1) const {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->callMethod(518, (void*)this, x)) return (bool)x[0].s_bool;
+	x[1].s_class = (void*)x1;
+	if(qt_Smoke->binding->callMethod(518, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QCanvasEllipse::collidesWith(x1);
     }
     virtual void draw(QPainter& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->callMethod(623, (void*)this, x)) return;
+	x[1].s_class = (void*)&x1;
+	if(qt_Smoke->binding->callMethod(623, (void*)this, x)) return;
 	this->QCanvasPolygonalItem::draw(x1);
     }
     virtual void drawShape(QPainter& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->callMethod(520, (void*)this, x)) return;
+	x[1].s_class = (void*)&x1;
+	if(qt_Smoke->binding->callMethod(520, (void*)this, x)) return;
 	this->QCanvasEllipse::drawShape(x1);
     }
     virtual void moveBy(double x1, double x2) {
 	Smoke::StackItem x[3];
 	x[1].s_double = x1;
 	x[2].s_double = x2;
-	if(qt_Smoke->callMethod(534, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(534, (void*)this, x)) return;
 	this->QCanvasItem::moveBy(x1, x2);
     }
     virtual int rtti() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(519, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(519, (void*)this, x)) return (int)x[0].s_int;
 	return this->QCanvasEllipse::rtti();
     }
     virtual void setActive(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->callMethod(559, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(559, (void*)this, x)) return;
 	this->QCanvasItem::setActive(x1);
     }
     virtual void setAnimated(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->callMethod(540, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(540, (void*)this, x)) return;
 	this->QCanvasItem::setAnimated(x1);
     }
     virtual void setBrush(QBrush x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->callMethod(616, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(616, (void*)this, x)) return;
 	this->QCanvasPolygonalItem::setBrush(x1);
     }
     virtual void setCanvas(QCanvas* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->callMethod(549, (void*)this, x)) return;
+	x[1].s_class = (void*)x1;
+	if(qt_Smoke->binding->callMethod(549, (void*)this, x)) return;
 	this->QCanvasItem::setCanvas(x1);
     }
     virtual void setEnabled(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->callMethod(557, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(557, (void*)this, x)) return;
 	this->QCanvasItem::setEnabled(x1);
     }
     virtual void setPen(QPen x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->callMethod(615, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(615, (void*)this, x)) return;
 	this->QCanvasPolygonalItem::setPen(x1);
     }
     virtual void setSelected(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->callMethod(555, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(555, (void*)this, x)) return;
 	this->QCanvasItem::setSelected(x1);
     }
     virtual void setVelocity(double x1, double x2) {
 	Smoke::StackItem x[3];
 	x[1].s_double = x1;
 	x[2].s_double = x2;
-	if(qt_Smoke->callMethod(541, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(541, (void*)this, x)) return;
 	this->QCanvasItem::setVelocity(x1, x2);
     }
     virtual void setVisible(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->callMethod(553, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(553, (void*)this, x)) return;
 	this->QCanvasItem::setVisible(x1);
     }
-    ~x_QCanvasEllipse() {}
+    ~x_QCanvasEllipse() { qt_Smoke->binding->deleted(20, (void*)this); }
 };
 void xcall_QCanvasEllipse(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QCanvasEllipse *xself = (x_QCanvasEllipse*)obj;

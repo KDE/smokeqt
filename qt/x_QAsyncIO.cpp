@@ -7,7 +7,7 @@ class x_QAsyncIO : public QAsyncIO {
 public:
     void x_0(Smoke::Stack x) {
 	// connect(QObject*, const char*)
-	this->QAsyncIO::connect((QObject*)x[1].s_voidp,(const char*)x[2].s_voidp);
+	this->QAsyncIO::connect((QObject*)x[1].s_class,(const char*)x[2].s_voidp);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     static void x_1(Smoke::Stack x) {
@@ -22,7 +22,7 @@ public:
 	this->QAsyncIO::ready();
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    ~x_QAsyncIO() {}
+    ~x_QAsyncIO() { qt_Smoke->binding->deleted(6, (void*)this); }
 };
 void xcall_QAsyncIO(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QAsyncIO *xself = (x_QAsyncIO*)obj;

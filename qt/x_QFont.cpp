@@ -293,7 +293,7 @@ public:
     }
     static void x_88(Smoke::Stack x) {
 	// QFont(const QFont&)
-	x_QFont* xret = new x_QFont(*(const QFont *)x[1].s_voidp);
+	x_QFont* xret = new x_QFont(*(const QFont *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QFont(const QFont& x1) : QFont(x1) {
@@ -445,22 +445,22 @@ public:
     }
     void x_118(Smoke::Stack x) {
 	// operator=(const QFont&)
-	QFont& xret = this->QFont::operator=(*(const QFont *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QFont& xret = this->QFont::operator=(*(const QFont *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_119(Smoke::Stack x) const {
 	// operator==(const QFont&)
-	bool xret = this->QFont::operator==(*(const QFont *)x[1].s_voidp);
+	bool xret = this->QFont::operator==(*(const QFont *)x[1].s_class);
 	x[0].s_bool = xret;
     }
     void x_120(Smoke::Stack x) const {
 	// operator!=(const QFont&)
-	bool xret = this->QFont::operator!=(*(const QFont *)x[1].s_voidp);
+	bool xret = this->QFont::operator!=(*(const QFont *)x[1].s_class);
 	x[0].s_bool = xret;
     }
     void x_121(Smoke::Stack x) const {
 	// isCopyOf(const QFont&)
-	bool xret = this->QFont::isCopyOf(*(const QFont *)x[1].s_voidp);
+	bool xret = this->QFont::isCopyOf(*(const QFont *)x[1].s_class);
 	x[0].s_bool = xret;
     }
     void x_122(Smoke::Stack x) const {
@@ -530,7 +530,7 @@ public:
     }
     static void x_135(Smoke::Stack x) {
 	// insertSubstitutions(const QString&, const QStringList&)
-	QFont::insertSubstitutions(*(const QString *)x[1].s_voidp,*(const QStringList *)x[2].s_voidp);
+	QFont::insertSubstitutions(*(const QString *)x[1].s_voidp,*(const QStringList *)x[2].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     static void x_136(Smoke::Stack x) {
@@ -560,7 +560,7 @@ public:
     }
     static void x_141(Smoke::Stack x) {
 	// setDefaultFont(const QFont&)
-	QFont::setDefaultFont(*(const QFont *)x[1].s_voidp);
+	QFont::setDefaultFont(*(const QFont *)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_142(Smoke::Stack x) const {
@@ -573,7 +573,7 @@ public:
 	int xret = this->QFont::deciPointSize();
 	x[0].s_int = xret;
     }
-    ~x_QFont() {}
+    ~x_QFont() { qt_Smoke->binding->deleted(116, (void*)this); }
 };
 void xcall_QFont(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QFont *xself = (x_QFont*)obj;

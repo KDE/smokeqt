@@ -8,7 +8,7 @@ class x_QAsciiBucket : public QAsciiBucket {
 public:
     static void x_0(Smoke::Stack x) {
 	// QAsciiBucket(const char*, QPtrCollection::Item, QBaseBucket*)
-	x_QAsciiBucket* xret = new x_QAsciiBucket((const char*)x[1].s_voidp,*(QPtrCollection::Item *)x[2].s_voidp,(QBaseBucket*)x[3].s_voidp);
+	x_QAsciiBucket* xret = new x_QAsciiBucket((const char*)x[1].s_voidp,*(QPtrCollection::Item *)x[2].s_voidp,(QBaseBucket*)x[3].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QAsciiBucket(const char* x1, QPtrCollection::Item x2, QBaseBucket* x3) : QAsciiBucket(x1, x2, x3) {
@@ -18,7 +18,7 @@ public:
 	const char* xret = this->QAsciiBucket::getKey();
 	x[0].s_voidp = (void*)xret;
     }
-    ~x_QAsciiBucket() {}
+    ~x_QAsciiBucket() { qt_Smoke->binding->deleted(5, (void*)this); }
 };
 void xcall_QAsciiBucket(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QAsciiBucket *xself = (x_QAsciiBucket*)obj;

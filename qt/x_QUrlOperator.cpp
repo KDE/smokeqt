@@ -26,21 +26,21 @@ public:
     }
     static void x_2(Smoke::Stack x) {
 	// QUrlOperator(const QUrlOperator&)
-	x_QUrlOperator* xret = new x_QUrlOperator(*(const QUrlOperator *)x[1].s_voidp);
+	x_QUrlOperator* xret = new x_QUrlOperator(*(const QUrlOperator *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QUrlOperator(const QUrlOperator& x1) : QUrlOperator(x1) {
     }
     static void x_3(Smoke::Stack x) {
 	// QUrlOperator(const QUrlOperator&, const QString&, bool)
-	x_QUrlOperator* xret = new x_QUrlOperator(*(const QUrlOperator *)x[1].s_voidp,*(const QString *)x[2].s_voidp,(bool)x[3].s_bool);
+	x_QUrlOperator* xret = new x_QUrlOperator(*(const QUrlOperator *)x[1].s_class,*(const QString *)x[2].s_voidp,(bool)x[3].s_bool);
 	x[0].s_class = (void*)xret;
     }
     x_QUrlOperator(const QUrlOperator& x1, const QString& x2, bool x3) : QUrlOperator(x1, x2, x3) {
     }
     static void x_4(Smoke::Stack x) {
 	// QUrlOperator(const QUrlOperator&, const QString&)
-	x_QUrlOperator* xret = new x_QUrlOperator(*(const QUrlOperator *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
+	x_QUrlOperator* xret = new x_QUrlOperator(*(const QUrlOperator *)x[1].s_class,*(const QString *)x[2].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QUrlOperator(const QUrlOperator& x1, const QString& x2) : QUrlOperator(x1, x2) {
@@ -58,42 +58,42 @@ public:
     void x_7(Smoke::Stack x) {
 	// listChildren()
 	const QNetworkOperation* xret = this->QUrlOperator::listChildren();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_8(Smoke::Stack x) {
 	// mkdir(const QString&)
 	const QNetworkOperation* xret = this->QUrlOperator::mkdir(*(const QString *)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_9(Smoke::Stack x) {
 	// remove(const QString&)
 	const QNetworkOperation* xret = this->QUrlOperator::remove(*(const QString *)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_10(Smoke::Stack x) {
 	// rename(const QString&, const QString&)
 	const QNetworkOperation* xret = this->QUrlOperator::rename(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_11(Smoke::Stack x) {
 	// get(const QString&)
 	const QNetworkOperation* xret = this->QUrlOperator::get(*(const QString *)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_12(Smoke::Stack x) {
 	// get()
 	const QNetworkOperation* xret = this->QUrlOperator::get();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_13(Smoke::Stack x) {
 	// put(const QByteArray&, const QString&)
 	const QNetworkOperation* xret = this->QUrlOperator::put(*(const QByteArray *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_14(Smoke::Stack x) {
 	// put(const QByteArray&)
 	const QNetworkOperation* xret = this->QUrlOperator::put(*(const QByteArray *)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_15(Smoke::Stack x) {
 	// copy(const QString&, const QString&, bool, bool)
@@ -112,12 +112,12 @@ public:
     }
     void x_18(Smoke::Stack x) {
 	// copy(const QStringList&, const QString&, bool)
-	this->QUrlOperator::copy(*(const QStringList *)x[1].s_voidp,*(const QString *)x[2].s_voidp,(bool)x[3].s_bool);
+	this->QUrlOperator::copy(*(const QStringList *)x[1].s_class,*(const QString *)x[2].s_voidp,(bool)x[3].s_bool);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_19(Smoke::Stack x) {
 	// copy(const QStringList&, const QString&)
-	this->QUrlOperator::copy(*(const QStringList *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
+	this->QUrlOperator::copy(*(const QStringList *)x[1].s_class,*(const QString *)x[2].s_voidp);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_20(Smoke::Stack x) {
@@ -147,13 +147,13 @@ public:
     }
     void x_25(Smoke::Stack x) {
 	// operator=(const QUrlOperator&)
-	QUrlOperator& xret = this->QUrlOperator::operator=(*(const QUrlOperator *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QUrlOperator& xret = this->QUrlOperator::operator=(*(const QUrlOperator *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_26(Smoke::Stack x) {
 	// operator=(const QString&)
 	QUrlOperator& xret = this->QUrlOperator::operator=(*(const QString *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_27(Smoke::Stack x) {
 	// stop()
@@ -162,42 +162,42 @@ public:
     }
     void x_28(Smoke::Stack x) {
 	// newChildren(const QValueList<QUrlInfo>&, QNetworkOperation*)
-	this->QUrlOperator::newChildren(*(const QValueList<QUrlInfo> *)x[1].s_voidp,(QNetworkOperation*)x[2].s_voidp);
+	this->QUrlOperator::newChildren(*(const QValueList<QUrlInfo> *)x[1].s_voidp,(QNetworkOperation*)x[2].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_29(Smoke::Stack x) {
 	// finished(QNetworkOperation*)
-	this->QUrlOperator::finished((QNetworkOperation*)x[1].s_voidp);
+	this->QUrlOperator::finished((QNetworkOperation*)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_30(Smoke::Stack x) {
 	// start(QNetworkOperation*)
-	this->QUrlOperator::start((QNetworkOperation*)x[1].s_voidp);
+	this->QUrlOperator::start((QNetworkOperation*)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_31(Smoke::Stack x) {
 	// createdDirectory(const QUrlInfo&, QNetworkOperation*)
-	this->QUrlOperator::createdDirectory(*(const QUrlInfo *)x[1].s_voidp,(QNetworkOperation*)x[2].s_voidp);
+	this->QUrlOperator::createdDirectory(*(const QUrlInfo *)x[1].s_class,(QNetworkOperation*)x[2].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_32(Smoke::Stack x) {
 	// removed(QNetworkOperation*)
-	this->QUrlOperator::removed((QNetworkOperation*)x[1].s_voidp);
+	this->QUrlOperator::removed((QNetworkOperation*)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_33(Smoke::Stack x) {
 	// itemChanged(QNetworkOperation*)
-	this->QUrlOperator::itemChanged((QNetworkOperation*)x[1].s_voidp);
+	this->QUrlOperator::itemChanged((QNetworkOperation*)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_34(Smoke::Stack x) {
 	// data(const QByteArray&, QNetworkOperation*)
-	this->QUrlOperator::data(*(const QByteArray *)x[1].s_voidp,(QNetworkOperation*)x[2].s_voidp);
+	this->QUrlOperator::data(*(const QByteArray *)x[1].s_voidp,(QNetworkOperation*)x[2].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_35(Smoke::Stack x) {
 	// dataTransferProgress(int, int, QNetworkOperation*)
-	this->QUrlOperator::dataTransferProgress((int)x[1].s_int,(int)x[2].s_int,(QNetworkOperation*)x[3].s_voidp);
+	this->QUrlOperator::dataTransferProgress((int)x[1].s_int,(int)x[2].s_int,(QNetworkOperation*)x[3].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_36(Smoke::Stack x) {
@@ -243,42 +243,42 @@ public:
     virtual void addPath(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->callMethod(9175, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9175, (void*)this, x)) return;
 	this->QUrl::addPath(x1);
     }
     virtual bool cdUp() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(9236, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(9236, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QUrlOperator::cdUp();
     }
     virtual bool checkConnectArgs(const char* x1, const QObject* x2, const char* x3) {
 	Smoke::StackItem x[4];
 	x[1].s_voidp = (void*)x1;
-	x[2].s_voidp = (void*)x2;
+	x[2].s_class = (void*)x2;
 	x[3].s_voidp = (void*)x3;
-	if(qt_Smoke->callMethod(5470, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(5470, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QObject::checkConnectArgs(x1, x2, x3);
     }
     virtual bool checkValid() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(9270, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(9270, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QUrlOperator::checkValid();
     }
     virtual void childEvent(QChildEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->callMethod(5466, (void*)this, x)) return;
+	x[1].s_class = (void*)x1;
+	if(qt_Smoke->binding->callMethod(5466, (void*)this, x)) return;
 	this->QObject::childEvent(x1);
     }
     virtual void clearEntries() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(9271, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9271, (void*)this, x)) return;
 	this->QUrlOperator::clearEntries();
     }
     virtual void connectNotify(const char* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->callMethod(5468, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(5468, (void*)this, x)) return;
 	this->QObject::connectNotify(x1);
     }
     virtual QPtrList<QNetworkOperation> copy(const QString& x1, const QString& x2, bool x3, bool x4) {
@@ -287,7 +287,7 @@ public:
 	x[2].s_voidp = (void*)&x2;
 	x[3].s_bool = x3;
 	x[4].s_bool = x4;
-	if(qt_Smoke->callMethod(9245, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(9245, (void*)this, x)) {
 	    QPtrList<QNetworkOperation> *xptr = (QPtrList<QNetworkOperation> *)x[0].s_class;
 	    QPtrList<QNetworkOperation> xret(*xptr);
 	    delete xptr;
@@ -297,47 +297,47 @@ public:
     }
     virtual void copy(const QStringList& x1, const QString& x2, bool x3) {
 	Smoke::StackItem x[4];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	x[2].s_voidp = (void*)&x2;
 	x[3].s_bool = x3;
-	if(qt_Smoke->callMethod(9248, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9248, (void*)this, x)) return;
 	this->QUrlOperator::copy(x1, x2, x3);
     }
     virtual void customEvent(QCustomEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->callMethod(5467, (void*)this, x)) return;
+	x[1].s_class = (void*)x1;
+	if(qt_Smoke->binding->callMethod(5467, (void*)this, x)) return;
 	this->QObject::customEvent(x1);
     }
     virtual void disconnectNotify(const char* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->callMethod(5469, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(5469, (void*)this, x)) return;
 	this->QObject::disconnectNotify(x1);
     }
     virtual bool event(QEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->callMethod(5405, (void*)this, x)) return (bool)x[0].s_bool;
+	x[1].s_class = (void*)x1;
+	if(qt_Smoke->binding->callMethod(5405, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QObject::event(x1);
     }
     virtual bool eventFilter(QObject* x1, QEvent* x2) {
 	Smoke::StackItem x[3];
-	x[1].s_voidp = (void*)x1;
-	x[2].s_voidp = (void*)x2;
-	if(qt_Smoke->callMethod(5406, (void*)this, x)) return (bool)x[0].s_bool;
+	x[1].s_class = (void*)x1;
+	x[2].s_class = (void*)x2;
+	if(qt_Smoke->binding->callMethod(5406, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QObject::eventFilter(x1, x2);
     }
     virtual const QNetworkOperation* get(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->callMethod(9241, (void*)this, x)) return (const QNetworkOperation*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(9241, (void*)this, x)) return (const QNetworkOperation*)x[0].s_class;
 	return this->QUrlOperator::get(x1);
     }
     virtual QUrlInfo info(const QString& x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->callMethod(9254, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(9254, (void*)this, x)) {
 	    QUrlInfo *xptr = (QUrlInfo *)x[0].s_class;
 	    QUrlInfo xret(*xptr);
 	    delete xptr;
@@ -347,37 +347,37 @@ public:
     }
     virtual void insertChild(QObject* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->callMethod(5428, (void*)this, x)) return;
+	x[1].s_class = (void*)x1;
+	if(qt_Smoke->binding->callMethod(5428, (void*)this, x)) return;
 	this->QObject::insertChild(x1);
     }
     virtual bool isDir(bool* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->callMethod(9250, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(9250, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QUrlOperator::isDir(x1);
     }
     virtual const QNetworkOperation* listChildren() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(9237, (void*)this, x)) return (const QNetworkOperation*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(9237, (void*)this, x)) return (const QNetworkOperation*)x[0].s_class;
 	return this->QUrlOperator::listChildren();
     }
     virtual const QNetworkOperation* mkdir(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->callMethod(9238, (void*)this, x)) return (const QNetworkOperation*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(9238, (void*)this, x)) return (const QNetworkOperation*)x[0].s_class;
 	return this->QUrlOperator::mkdir(x1);
     }
     virtual bool parse(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->callMethod(9269, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(9269, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QUrlOperator::parse(x1);
     }
     virtual QVariant property(const char* x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->callMethod(5442, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(5442, (void*)this, x)) {
 	    QVariant *xptr = (QVariant *)x[0].s_class;
 	    QVariant xret(*xptr);
 	    delete xptr;
@@ -389,128 +389,128 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_voidp = (void*)&x2;
-	if(qt_Smoke->callMethod(9243, (void*)this, x)) return (const QNetworkOperation*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(9243, (void*)this, x)) return (const QNetworkOperation*)x[0].s_class;
 	return this->QUrlOperator::put(x1, x2);
     }
     virtual const QNetworkOperation* remove(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->callMethod(9239, (void*)this, x)) return (const QNetworkOperation*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(9239, (void*)this, x)) return (const QNetworkOperation*)x[0].s_class;
 	return this->QUrlOperator::remove(x1);
     }
     virtual void removeChild(QObject* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->callMethod(5429, (void*)this, x)) return;
+	x[1].s_class = (void*)x1;
+	if(qt_Smoke->binding->callMethod(5429, (void*)this, x)) return;
 	this->QObject::removeChild(x1);
     }
     virtual const QNetworkOperation* rename(const QString& x1, const QString& x2) {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_voidp = (void*)&x2;
-	if(qt_Smoke->callMethod(9240, (void*)this, x)) return (const QNetworkOperation*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(9240, (void*)this, x)) return (const QNetworkOperation*)x[0].s_class;
 	return this->QUrlOperator::rename(x1, x2);
     }
     virtual void reset() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(9268, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9268, (void*)this, x)) return;
 	this->QUrlOperator::reset();
     }
     virtual void setEncodedPathAndQuery(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->callMethod(9166, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9166, (void*)this, x)) return;
 	this->QUrl::setEncodedPathAndQuery(x1);
     }
     virtual void setFileName(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->callMethod(9176, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9176, (void*)this, x)) return;
 	this->QUrl::setFileName(x1);
     }
     virtual void setHost(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->callMethod(9157, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9157, (void*)this, x)) return;
 	this->QUrl::setHost(x1);
     }
     virtual void setName(const char* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->callMethod(5411, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(5411, (void*)this, x)) return;
 	this->QObject::setName(x1);
     }
     virtual void setNameFilter(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->callMethod(9252, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9252, (void*)this, x)) return;
 	this->QUrlOperator::setNameFilter(x1);
     }
     virtual void setPassword(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->callMethod(9154, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9154, (void*)this, x)) return;
 	this->QUrl::setPassword(x1);
     }
     virtual void setPath(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->callMethod(9235, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9235, (void*)this, x)) return;
 	this->QUrlOperator::setPath(x1);
     }
     virtual void setPort(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->callMethod(9160, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9160, (void*)this, x)) return;
 	this->QUrl::setPort(x1);
     }
     virtual bool setProperty(const char* x1, const QVariant& x2) {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)x1;
-	x[2].s_voidp = (void*)&x2;
-	if(qt_Smoke->callMethod(5441, (void*)this, x)) return (bool)x[0].s_bool;
+	x[2].s_class = (void*)&x2;
+	if(qt_Smoke->binding->callMethod(5441, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QObject::setProperty(x1, x2);
     }
     virtual void setProtocol(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->callMethod(9149, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9149, (void*)this, x)) return;
 	this->QUrl::setProtocol(x1);
     }
     virtual void setQuery(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->callMethod(9168, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9168, (void*)this, x)) return;
 	this->QUrl::setQuery(x1);
     }
     virtual void setRef(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->callMethod(9171, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9171, (void*)this, x)) return;
 	this->QUrl::setRef(x1);
     }
     virtual void setUser(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->callMethod(9151, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9151, (void*)this, x)) return;
 	this->QUrl::setUser(x1);
     }
     virtual void stop() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(9257, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9257, (void*)this, x)) return;
 	this->QUrlOperator::stop();
     }
     virtual void timerEvent(QTimerEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->callMethod(5465, (void*)this, x)) return;
+	x[1].s_class = (void*)x1;
+	if(qt_Smoke->binding->callMethod(5465, (void*)this, x)) return;
 	this->QObject::timerEvent(x1);
     }
     virtual QString toString(bool x1, bool x2) const {
 	Smoke::StackItem x[3];
 	x[1].s_bool = x1;
 	x[2].s_bool = x2;
-	if(qt_Smoke->callMethod(9184, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(9184, (void*)this, x)) {
 	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;
@@ -518,7 +518,7 @@ public:
 	}
 	return this->QUrl::toString(x1, x2);
     }
-    ~x_QUrlOperator() {}
+    ~x_QUrlOperator() { qt_Smoke->binding->deleted(341, (void*)this); }
 };
 void xcall_QUrlOperator(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QUrlOperator *xself = (x_QUrlOperator*)obj;

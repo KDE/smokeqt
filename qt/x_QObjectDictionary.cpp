@@ -35,17 +35,17 @@ public:
     }
     static void x_4(Smoke::Stack x) {
 	// QObjectDictionary(const QObjectDictionary&)
-	x_QObjectDictionary* xret = new x_QObjectDictionary(*(const QObjectDictionary *)x[1].s_voidp);
+	x_QObjectDictionary* xret = new x_QObjectDictionary(*(const QObjectDictionary *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QObjectDictionary(const QObjectDictionary& x1) : QObjectDictionary(x1) {
     }
     void x_5(Smoke::Stack x) {
 	// operator=(const QObjectDictionary&)
-	QObjectDictionary& xret = this->QObjectDictionary::operator=(*(const QObjectDictionary *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QObjectDictionary& xret = this->QObjectDictionary::operator=(*(const QObjectDictionary *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
-    ~x_QObjectDictionary() {}
+    ~x_QObjectDictionary() { qt_Smoke->binding->deleted(212, (void*)this); }
 };
 void xcall_QObjectDictionary(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QObjectDictionary *xself = (x_QObjectDictionary*)obj;

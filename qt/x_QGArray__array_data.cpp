@@ -12,7 +12,7 @@ public:
     }
     x_QGArray__array_data() : QGArray::array_data() {
     }
-    ~x_QGArray__array_data() {}
+    ~x_QGArray__array_data() { qt_Smoke->binding->deleted(124, (void*)this); }
 };
 void xcall_QGArray__array_data(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QGArray__array_data *xself = (x_QGArray__array_data*)obj;

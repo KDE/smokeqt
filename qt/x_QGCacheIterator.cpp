@@ -9,22 +9,22 @@ class x_QGCacheIterator : public QGCacheIterator {
 public:
     static void x_0(Smoke::Stack x) {
 	// QGCacheIterator(const QGCache&)
-	x_QGCacheIterator* xret = new x_QGCacheIterator(*(const QGCache *)x[1].s_voidp);
+	x_QGCacheIterator* xret = new x_QGCacheIterator(*(const QGCache *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QGCacheIterator(const QGCache& x1) : QGCacheIterator(x1) {
     }
     static void x_1(Smoke::Stack x) {
 	// QGCacheIterator(const QGCacheIterator&)
-	x_QGCacheIterator* xret = new x_QGCacheIterator(*(const QGCacheIterator *)x[1].s_voidp);
+	x_QGCacheIterator* xret = new x_QGCacheIterator(*(const QGCacheIterator *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QGCacheIterator(const QGCacheIterator& x1) : QGCacheIterator(x1) {
     }
     void x_2(Smoke::Stack x) {
 	// operator=(const QGCacheIterator&)
-	QGCacheIterator& xret = this->QGCacheIterator::operator=(*(const QGCacheIterator *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QGCacheIterator& xret = this->QGCacheIterator::operator=(*(const QGCacheIterator *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_3(Smoke::Stack x) const {
 	// count()
@@ -96,7 +96,7 @@ public:
 	QPtrCollection::Item xret = this->QGCacheIterator::operator-=((uint)x[1].s_uint);
 	x[0].s_voidp = (void*)new QPtrCollection::Item(xret);
     }
-    ~x_QGCacheIterator() {}
+    ~x_QGCacheIterator() { qt_Smoke->binding->deleted(126, (void*)this); }
 };
 void xcall_QGCacheIterator(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QGCacheIterator *xself = (x_QGCacheIterator*)obj;

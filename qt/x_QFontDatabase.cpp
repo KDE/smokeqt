@@ -42,7 +42,7 @@ public:
     }
     void x_6(Smoke::Stack x) {
 	// styleString(const QFont&)
-	QString xret = this->QFontDatabase::styleString(*(const QFont *)x[1].s_voidp);
+	QString xret = this->QFontDatabase::styleString(*(const QFont *)x[1].s_class);
 	x[0].s_voidp = (void*)new QString(xret);
     }
     void x_7(Smoke::Stack x) {
@@ -180,7 +180,7 @@ public:
 	QString xret = QFontDatabase::scriptSample((QFont::Script)x[1].s_enum);
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    ~x_QFontDatabase() {}
+    ~x_QFontDatabase() { qt_Smoke->binding->deleted(117, (void*)this); }
 };
 void xcall_QFontDatabase(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QFontDatabase *xself = (x_QFontDatabase*)obj;

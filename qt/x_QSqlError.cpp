@@ -58,15 +58,15 @@ public:
     }
     static void x_10(Smoke::Stack x) {
 	// QSqlError(const QSqlError&)
-	x_QSqlError* xret = new x_QSqlError(*(const QSqlError *)x[1].s_voidp);
+	x_QSqlError* xret = new x_QSqlError(*(const QSqlError *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QSqlError(const QSqlError& x1) : QSqlError(x1) {
     }
     void x_11(Smoke::Stack x) {
 	// operator=(const QSqlError&)
-	QSqlError& xret = this->QSqlError::operator=(*(const QSqlError *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QSqlError& xret = this->QSqlError::operator=(*(const QSqlError *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_12(Smoke::Stack x) const {
 	// driverText()
@@ -111,28 +111,28 @@ public:
     virtual void setDatabaseText(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->callMethod(7444, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(7444, (void*)this, x)) return;
 	this->QSqlError::setDatabaseText(x1);
     }
     virtual void setDriverText(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->callMethod(7442, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(7442, (void*)this, x)) return;
 	this->QSqlError::setDriverText(x1);
     }
     virtual void setNumber(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->callMethod(7448, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(7448, (void*)this, x)) return;
 	this->QSqlError::setNumber(x1);
     }
     virtual void setType(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->callMethod(7446, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(7446, (void*)this, x)) return;
 	this->QSqlError::setType(x1);
     }
-    ~x_QSqlError() {}
+    ~x_QSqlError() { qt_Smoke->binding->deleted(280, (void*)this); }
 };
 void xcall_QSqlError(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QSqlError *xself = (x_QSqlError*)obj;

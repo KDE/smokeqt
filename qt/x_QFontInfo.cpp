@@ -9,22 +9,22 @@ class x_QFontInfo : public QFontInfo {
 public:
     static void x_0(Smoke::Stack x) {
 	// QFontInfo(const QFont&)
-	x_QFontInfo* xret = new x_QFontInfo(*(const QFont *)x[1].s_voidp);
+	x_QFontInfo* xret = new x_QFontInfo(*(const QFont *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QFontInfo(const QFont& x1) : QFontInfo(x1) {
     }
     static void x_1(Smoke::Stack x) {
 	// QFontInfo(const QFontInfo&)
-	x_QFontInfo* xret = new x_QFontInfo(*(const QFontInfo *)x[1].s_voidp);
+	x_QFontInfo* xret = new x_QFontInfo(*(const QFontInfo *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QFontInfo(const QFontInfo& x1) : QFontInfo(x1) {
     }
     void x_2(Smoke::Stack x) {
 	// operator=(const QFontInfo&)
-	QFontInfo& xret = this->QFontInfo::operator=(*(const QFontInfo *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QFontInfo& xret = this->QFontInfo::operator=(*(const QFontInfo *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_3(Smoke::Stack x) const {
 	// family()
@@ -86,7 +86,7 @@ public:
 	bool xret = this->QFontInfo::exactMatch();
 	x[0].s_bool = xret;
     }
-    ~x_QFontInfo() {}
+    ~x_QFontInfo() { qt_Smoke->binding->deleted(119, (void*)this); }
 };
 void xcall_QFontInfo(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QFontInfo *xself = (x_QFontInfo*)obj;

@@ -14,12 +14,12 @@ public:
     void x_2(Smoke::Stack x) {
 	// minimum()
 	QMapNodeBase* xret = this->QMapNodeBase::minimum();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_3(Smoke::Stack x) {
 	// maximum()
 	QMapNodeBase* xret = this->QMapNodeBase::maximum();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     static void x_4(Smoke::Stack x) {
 	// QMapNodeBase()
@@ -28,7 +28,7 @@ public:
     }
     x_QMapNodeBase() : QMapNodeBase() {
     }
-    ~x_QMapNodeBase() {}
+    ~x_QMapNodeBase() { qt_Smoke->binding->deleted(188, (void*)this); }
 };
 void xcall_QMapNodeBase(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QMapNodeBase *xself = (x_QMapNodeBase*)obj;

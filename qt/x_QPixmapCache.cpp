@@ -27,21 +27,21 @@ public:
     static void x_3(Smoke::Stack x) {
 	// find(const QString&)
 	QPixmap* xret = QPixmapCache::find(*(const QString *)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     static void x_4(Smoke::Stack x) {
 	// find(const QString&, QPixmap&)
-	bool xret = QPixmapCache::find(*(const QString *)x[1].s_voidp,*(QPixmap *)x[2].s_voidp);
+	bool xret = QPixmapCache::find(*(const QString *)x[1].s_voidp,*(QPixmap *)x[2].s_class);
 	x[0].s_bool = xret;
     }
     static void x_5(Smoke::Stack x) {
 	// insert(const QString&, QPixmap*)
-	bool xret = QPixmapCache::insert(*(const QString *)x[1].s_voidp,(QPixmap*)x[2].s_voidp);
+	bool xret = QPixmapCache::insert(*(const QString *)x[1].s_voidp,(QPixmap*)x[2].s_class);
 	x[0].s_bool = xret;
     }
     static void x_6(Smoke::Stack x) {
 	// insert(const QString&, const QPixmap&)
-	bool xret = QPixmapCache::insert(*(const QString *)x[1].s_voidp,*(const QPixmap *)x[2].s_voidp);
+	bool xret = QPixmapCache::insert(*(const QString *)x[1].s_voidp,*(const QPixmap *)x[2].s_class);
 	x[0].s_bool = xret;
     }
     static void x_7(Smoke::Stack x) {
@@ -49,7 +49,7 @@ public:
 	QPixmapCache::clear();
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    ~x_QPixmapCache() {}
+    ~x_QPixmapCache() { qt_Smoke->binding->deleted(225, (void*)this); }
 };
 void xcall_QPixmapCache(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QPixmapCache *xself = (x_QPixmapCache*)obj;

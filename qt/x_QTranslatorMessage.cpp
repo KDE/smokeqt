@@ -45,22 +45,22 @@ public:
     }
     static void x_8(Smoke::Stack x) {
 	// QTranslatorMessage(QDataStream&)
-	x_QTranslatorMessage* xret = new x_QTranslatorMessage(*(QDataStream *)x[1].s_voidp);
+	x_QTranslatorMessage* xret = new x_QTranslatorMessage(*(QDataStream *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QTranslatorMessage(QDataStream& x1) : QTranslatorMessage(x1) {
     }
     static void x_9(Smoke::Stack x) {
 	// QTranslatorMessage(const QTranslatorMessage&)
-	x_QTranslatorMessage* xret = new x_QTranslatorMessage(*(const QTranslatorMessage *)x[1].s_voidp);
+	x_QTranslatorMessage* xret = new x_QTranslatorMessage(*(const QTranslatorMessage *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QTranslatorMessage(const QTranslatorMessage& x1) : QTranslatorMessage(x1) {
     }
     void x_10(Smoke::Stack x) {
 	// operator=(const QTranslatorMessage&)
-	QTranslatorMessage& xret = this->QTranslatorMessage::operator=(*(const QTranslatorMessage *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QTranslatorMessage& xret = this->QTranslatorMessage::operator=(*(const QTranslatorMessage *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_11(Smoke::Stack x) const {
 	// hash()
@@ -94,55 +94,55 @@ public:
     }
     void x_17(Smoke::Stack x) const {
 	// write(QDataStream&, bool, QTranslatorMessage::Prefix)
-	this->QTranslatorMessage::write(*(QDataStream *)x[1].s_voidp,(bool)x[2].s_bool,(QTranslatorMessage::Prefix)x[3].s_enum);
+	this->QTranslatorMessage::write(*(QDataStream *)x[1].s_class,(bool)x[2].s_bool,(QTranslatorMessage::Prefix)x[3].s_enum);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_18(Smoke::Stack x) const {
 	// write(QDataStream&, bool)
-	this->QTranslatorMessage::write(*(QDataStream *)x[1].s_voidp,(bool)x[2].s_bool);
+	this->QTranslatorMessage::write(*(QDataStream *)x[1].s_class,(bool)x[2].s_bool);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_19(Smoke::Stack x) const {
 	// write(QDataStream&)
-	this->QTranslatorMessage::write(*(QDataStream *)x[1].s_voidp);
+	this->QTranslatorMessage::write(*(QDataStream *)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_20(Smoke::Stack x) const {
 	// commonPrefix(const QTranslatorMessage&)
-	QTranslatorMessage::Prefix xret = this->QTranslatorMessage::commonPrefix(*(const QTranslatorMessage *)x[1].s_voidp);
+	QTranslatorMessage::Prefix xret = this->QTranslatorMessage::commonPrefix(*(const QTranslatorMessage *)x[1].s_class);
 	x[0].s_enum = xret;
     }
     void x_21(Smoke::Stack x) const {
 	// operator==(const QTranslatorMessage&)
-	bool xret = this->QTranslatorMessage::operator==(*(const QTranslatorMessage *)x[1].s_voidp);
+	bool xret = this->QTranslatorMessage::operator==(*(const QTranslatorMessage *)x[1].s_class);
 	x[0].s_bool = xret;
     }
     void x_22(Smoke::Stack x) const {
 	// operator!=(const QTranslatorMessage&)
-	bool xret = this->QTranslatorMessage::operator!=(*(const QTranslatorMessage *)x[1].s_voidp);
+	bool xret = this->QTranslatorMessage::operator!=(*(const QTranslatorMessage *)x[1].s_class);
 	x[0].s_bool = xret;
     }
     void x_23(Smoke::Stack x) const {
 	// operator<(const QTranslatorMessage&)
-	bool xret = this->QTranslatorMessage::operator<(*(const QTranslatorMessage *)x[1].s_voidp);
+	bool xret = this->QTranslatorMessage::operator<(*(const QTranslatorMessage *)x[1].s_class);
 	x[0].s_bool = xret;
     }
     void x_24(Smoke::Stack x) const {
 	// operator<=(const QTranslatorMessage&)
-	bool xret = this->QTranslatorMessage::operator<=(*(const QTranslatorMessage *)x[1].s_voidp);
+	bool xret = this->QTranslatorMessage::operator<=(*(const QTranslatorMessage *)x[1].s_class);
 	x[0].s_bool = xret;
     }
     void x_25(Smoke::Stack x) const {
 	// operator>(const QTranslatorMessage&)
-	bool xret = this->QTranslatorMessage::operator>(*(const QTranslatorMessage *)x[1].s_voidp);
+	bool xret = this->QTranslatorMessage::operator>(*(const QTranslatorMessage *)x[1].s_class);
 	x[0].s_bool = xret;
     }
     void x_26(Smoke::Stack x) const {
 	// operator>=(const QTranslatorMessage&)
-	bool xret = this->QTranslatorMessage::operator>=(*(const QTranslatorMessage *)x[1].s_voidp);
+	bool xret = this->QTranslatorMessage::operator>=(*(const QTranslatorMessage *)x[1].s_class);
 	x[0].s_bool = xret;
     }
-    ~x_QTranslatorMessage() {}
+    ~x_QTranslatorMessage() { qt_Smoke->binding->deleted(336, (void*)this); }
 };
 void xcall_QTranslatorMessage(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QTranslatorMessage *xself = (x_QTranslatorMessage*)obj;

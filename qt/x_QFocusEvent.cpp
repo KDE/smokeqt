@@ -58,7 +58,7 @@ public:
 	QFocusEvent::resetReason();
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    ~x_QFocusEvent() {}
+    ~x_QFocusEvent() { qt_Smoke->binding->deleted(115, (void*)this); }
 };
 void xcall_QFocusEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QFocusEvent *xself = (x_QFocusEvent*)obj;

@@ -29,7 +29,7 @@ public:
 	this->QCustomEvent::setData((void*)x[1].s_voidp);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    ~x_QCustomEvent() {}
+    ~x_QCustomEvent() { qt_Smoke->binding->deleted(53, (void*)this); }
 };
 void xcall_QCustomEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QCustomEvent *xself = (x_QCustomEvent*)obj;

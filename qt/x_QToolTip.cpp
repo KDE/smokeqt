@@ -12,14 +12,14 @@ class x_QToolTip : public QToolTip {
 public:
     static void x_0(Smoke::Stack x) {
 	// QToolTip(QWidget*, QToolTipGroup*)
-	x_QToolTip* xret = new x_QToolTip((QWidget*)x[1].s_voidp,(QToolTipGroup*)x[2].s_voidp);
+	x_QToolTip* xret = new x_QToolTip((QWidget*)x[1].s_class,(QToolTipGroup*)x[2].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QToolTip(QWidget* x1, QToolTipGroup* x2) : QToolTip(x1, x2) {
     }
     static void x_1(Smoke::Stack x) {
 	// QToolTip(QWidget*)
-	x_QToolTip* xret = new x_QToolTip((QWidget*)x[1].s_voidp);
+	x_QToolTip* xret = new x_QToolTip((QWidget*)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QToolTip(QWidget* x1) : QToolTip(x1) {
@@ -27,51 +27,51 @@ public:
     void x_2(Smoke::Stack x) const {
 	// parentWidget()
 	QWidget* xret = this->QToolTip::parentWidget();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_3(Smoke::Stack x) const {
 	// group()
 	QToolTipGroup* xret = this->QToolTip::group();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     static void x_4(Smoke::Stack x) {
 	// add(QWidget*, const QString&)
-	QToolTip::add((QWidget*)x[1].s_voidp,*(const QString *)x[2].s_voidp);
+	QToolTip::add((QWidget*)x[1].s_class,*(const QString *)x[2].s_voidp);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     static void x_5(Smoke::Stack x) {
 	// add(QWidget*, const QString&, QToolTipGroup*, const QString&)
-	QToolTip::add((QWidget*)x[1].s_voidp,*(const QString *)x[2].s_voidp,(QToolTipGroup*)x[3].s_voidp,*(const QString *)x[4].s_voidp);
+	QToolTip::add((QWidget*)x[1].s_class,*(const QString *)x[2].s_voidp,(QToolTipGroup*)x[3].s_class,*(const QString *)x[4].s_voidp);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     static void x_6(Smoke::Stack x) {
 	// remove(QWidget*)
-	QToolTip::remove((QWidget*)x[1].s_voidp);
+	QToolTip::remove((QWidget*)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     static void x_7(Smoke::Stack x) {
 	// add(QWidget*, const QRect&, const QString&)
-	QToolTip::add((QWidget*)x[1].s_voidp,*(const QRect *)x[2].s_voidp,*(const QString *)x[3].s_voidp);
+	QToolTip::add((QWidget*)x[1].s_class,*(const QRect *)x[2].s_class,*(const QString *)x[3].s_voidp);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     static void x_8(Smoke::Stack x) {
 	// add(QWidget*, const QRect&, const QString&, QToolTipGroup*, const QString&)
-	QToolTip::add((QWidget*)x[1].s_voidp,*(const QRect *)x[2].s_voidp,*(const QString *)x[3].s_voidp,(QToolTipGroup*)x[4].s_voidp,*(const QString *)x[5].s_voidp);
+	QToolTip::add((QWidget*)x[1].s_class,*(const QRect *)x[2].s_class,*(const QString *)x[3].s_voidp,(QToolTipGroup*)x[4].s_class,*(const QString *)x[5].s_voidp);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     static void x_9(Smoke::Stack x) {
 	// remove(QWidget*, const QRect&)
-	QToolTip::remove((QWidget*)x[1].s_voidp,*(const QRect *)x[2].s_voidp);
+	QToolTip::remove((QWidget*)x[1].s_class,*(const QRect *)x[2].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     static void x_10(Smoke::Stack x) {
 	// textFor(QWidget*, const QPoint&)
-	QString xret = QToolTip::textFor((QWidget*)x[1].s_voidp,*(const QPoint *)x[2].s_voidp);
+	QString xret = QToolTip::textFor((QWidget*)x[1].s_class,*(const QPoint *)x[2].s_class);
 	x[0].s_voidp = (void*)new QString(xret);
     }
     static void x_11(Smoke::Stack x) {
 	// textFor(QWidget*)
-	QString xret = QToolTip::textFor((QWidget*)x[1].s_voidp);
+	QString xret = QToolTip::textFor((QWidget*)x[1].s_class);
 	x[0].s_voidp = (void*)new QString(xret);
     }
     static void x_12(Smoke::Stack x) {
@@ -86,7 +86,7 @@ public:
     }
     static void x_14(Smoke::Stack x) {
 	// setFont(const QFont&)
-	QToolTip::setFont(*(const QFont *)x[1].s_voidp);
+	QToolTip::setFont(*(const QFont *)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     static void x_15(Smoke::Stack x) {
@@ -96,7 +96,7 @@ public:
     }
     static void x_16(Smoke::Stack x) {
 	// setPalette(const QPalette&)
-	QToolTip::setPalette(*(const QPalette *)x[1].s_voidp);
+	QToolTip::setPalette(*(const QPalette *)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     static void x_17(Smoke::Stack x) {
@@ -121,12 +121,12 @@ public:
     }
     void x_21(Smoke::Stack x) {
 	// tip(const QRect&, const QString&)
-	this->QToolTip::tip(*(const QRect *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
+	this->QToolTip::tip(*(const QRect *)x[1].s_class,*(const QString *)x[2].s_voidp);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_22(Smoke::Stack x) {
 	// tip(const QRect&, const QString&, const QString&)
-	this->QToolTip::tip(*(const QRect *)x[1].s_voidp,*(const QString *)x[2].s_voidp,*(const QString *)x[3].s_voidp);
+	this->QToolTip::tip(*(const QRect *)x[1].s_class,*(const QString *)x[2].s_voidp,*(const QString *)x[3].s_voidp);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_23(Smoke::Stack x) {
@@ -136,12 +136,12 @@ public:
     }
     virtual void maybeTip(const QPoint& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
-	qt_Smoke->callMethod(9051, (void*)this, x, true /*pure virtual*/);
+	x[1].s_class = (void*)&x1;
+	qt_Smoke->binding->callMethod(9051, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }
-    ~x_QToolTip() {}
+    ~x_QToolTip() { qt_Smoke->binding->deleted(333, (void*)this); }
 };
 void xcall_QToolTip(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QToolTip *xself = (x_QToolTip*)obj;

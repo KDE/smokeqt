@@ -17,7 +17,7 @@ public:
 	bool xret = this->QDragResponseEvent::dragAccepted();
 	x[0].s_bool = xret;
     }
-    ~x_QDragResponseEvent() {}
+    ~x_QDragResponseEvent() { qt_Smoke->binding->deleted(101, (void*)this); }
 };
 void xcall_QDragResponseEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QDragResponseEvent *xself = (x_QDragResponseEvent*)obj;

@@ -52,29 +52,29 @@ public:
     }
     static void x_11(Smoke::Stack x) {
 	// QFileInfo(const QFile&)
-	x_QFileInfo* xret = new x_QFileInfo(*(const QFile *)x[1].s_voidp);
+	x_QFileInfo* xret = new x_QFileInfo(*(const QFile *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QFileInfo(const QFile& x1) : QFileInfo(x1) {
     }
     static void x_12(Smoke::Stack x) {
 	// QFileInfo(const QDir&, const QString&)
-	x_QFileInfo* xret = new x_QFileInfo(*(const QDir *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
+	x_QFileInfo* xret = new x_QFileInfo(*(const QDir *)x[1].s_class,*(const QString *)x[2].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QFileInfo(const QDir& x1, const QString& x2) : QFileInfo(x1, x2) {
     }
     static void x_13(Smoke::Stack x) {
 	// QFileInfo(const QFileInfo&)
-	x_QFileInfo* xret = new x_QFileInfo(*(const QFileInfo *)x[1].s_voidp);
+	x_QFileInfo* xret = new x_QFileInfo(*(const QFileInfo *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QFileInfo(const QFileInfo& x1) : QFileInfo(x1) {
     }
     void x_14(Smoke::Stack x) {
 	// operator=(const QFileInfo&)
-	QFileInfo& xret = this->QFileInfo::operator=(*(const QFileInfo *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QFileInfo& xret = this->QFileInfo::operator=(*(const QFileInfo *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_15(Smoke::Stack x) {
 	// setFile(const QString&)
@@ -83,12 +83,12 @@ public:
     }
     void x_16(Smoke::Stack x) {
 	// setFile(const QFile&)
-	this->QFileInfo::setFile(*(const QFile *)x[1].s_voidp);
+	this->QFileInfo::setFile(*(const QFile *)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_17(Smoke::Stack x) {
 	// setFile(const QDir&, const QString&)
-	this->QFileInfo::setFile(*(const QDir *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
+	this->QFileInfo::setFile(*(const QDir *)x[1].s_class,*(const QString *)x[2].s_voidp);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_18(Smoke::Stack x) const {
@@ -256,7 +256,7 @@ public:
 	QDateTime xret = this->QFileInfo::lastRead();
 	x[0].s_class = (void*)new QDateTime(xret);
     }
-    ~x_QFileInfo() {}
+    ~x_QFileInfo() { qt_Smoke->binding->deleted(112, (void*)this); }
 };
 void xcall_QFileInfo(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QFileInfo *xself = (x_QFileInfo*)obj;

@@ -67,141 +67,141 @@ public:
     }
     static void x_18(Smoke::Stack x) {
 	// QColorGroup(const QColor&, const QColor&, const QColor&, const QColor&, const QColor&, const QColor&, const QColor&)
-	x_QColorGroup* xret = new x_QColorGroup(*(const QColor *)x[1].s_voidp,*(const QColor *)x[2].s_voidp,*(const QColor *)x[3].s_voidp,*(const QColor *)x[4].s_voidp,*(const QColor *)x[5].s_voidp,*(const QColor *)x[6].s_voidp,*(const QColor *)x[7].s_voidp);
+	x_QColorGroup* xret = new x_QColorGroup(*(const QColor *)x[1].s_class,*(const QColor *)x[2].s_class,*(const QColor *)x[3].s_class,*(const QColor *)x[4].s_class,*(const QColor *)x[5].s_class,*(const QColor *)x[6].s_class,*(const QColor *)x[7].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QColorGroup(const QColor& x1, const QColor& x2, const QColor& x3, const QColor& x4, const QColor& x5, const QColor& x6, const QColor& x7) : QColorGroup(x1, x2, x3, x4, x5, x6, x7) {
     }
     static void x_19(Smoke::Stack x) {
 	// QColorGroup(const QBrush&, const QBrush&, const QBrush&, const QBrush&, const QBrush&, const QBrush&, const QBrush&, const QBrush&, const QBrush&)
-	x_QColorGroup* xret = new x_QColorGroup(*(const QBrush *)x[1].s_voidp,*(const QBrush *)x[2].s_voidp,*(const QBrush *)x[3].s_voidp,*(const QBrush *)x[4].s_voidp,*(const QBrush *)x[5].s_voidp,*(const QBrush *)x[6].s_voidp,*(const QBrush *)x[7].s_voidp,*(const QBrush *)x[8].s_voidp,*(const QBrush *)x[9].s_voidp);
+	x_QColorGroup* xret = new x_QColorGroup(*(const QBrush *)x[1].s_class,*(const QBrush *)x[2].s_class,*(const QBrush *)x[3].s_class,*(const QBrush *)x[4].s_class,*(const QBrush *)x[5].s_class,*(const QBrush *)x[6].s_class,*(const QBrush *)x[7].s_class,*(const QBrush *)x[8].s_class,*(const QBrush *)x[9].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QColorGroup(const QBrush& x1, const QBrush& x2, const QBrush& x3, const QBrush& x4, const QBrush& x5, const QBrush& x6, const QBrush& x7, const QBrush& x8, const QBrush& x9) : QColorGroup(x1, x2, x3, x4, x5, x6, x7, x8, x9) {
     }
     static void x_20(Smoke::Stack x) {
 	// QColorGroup(const QColorGroup&)
-	x_QColorGroup* xret = new x_QColorGroup(*(const QColorGroup *)x[1].s_voidp);
+	x_QColorGroup* xret = new x_QColorGroup(*(const QColorGroup *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QColorGroup(const QColorGroup& x1) : QColorGroup(x1) {
     }
     void x_21(Smoke::Stack x) {
 	// operator =(const QColorGroup&)
-	QColorGroup& xret = this->QColorGroup::operator =(*(const QColorGroup *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QColorGroup& xret = this->QColorGroup::operator =(*(const QColorGroup *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_22(Smoke::Stack x) const {
 	// color(QColorGroup::ColorRole)
 	const QColor& xret = this->QColorGroup::color((QColorGroup::ColorRole)x[1].s_enum);
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_23(Smoke::Stack x) const {
 	// brush(QColorGroup::ColorRole)
 	const QBrush& xret = this->QColorGroup::brush((QColorGroup::ColorRole)x[1].s_enum);
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_24(Smoke::Stack x) {
 	// setColor(QColorGroup::ColorRole, const QColor&)
-	this->QColorGroup::setColor((QColorGroup::ColorRole)x[1].s_enum,*(const QColor *)x[2].s_voidp);
+	this->QColorGroup::setColor((QColorGroup::ColorRole)x[1].s_enum,*(const QColor *)x[2].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_25(Smoke::Stack x) {
 	// setBrush(QColorGroup::ColorRole, const QBrush&)
-	this->QColorGroup::setBrush((QColorGroup::ColorRole)x[1].s_enum,*(const QBrush *)x[2].s_voidp);
+	this->QColorGroup::setBrush((QColorGroup::ColorRole)x[1].s_enum,*(const QBrush *)x[2].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_26(Smoke::Stack x) const {
 	// foreground()
 	const QColor& xret = this->QColorGroup::foreground();
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_27(Smoke::Stack x) const {
 	// button()
 	const QColor& xret = this->QColorGroup::button();
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_28(Smoke::Stack x) const {
 	// light()
 	const QColor& xret = this->QColorGroup::light();
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_29(Smoke::Stack x) const {
 	// dark()
 	const QColor& xret = this->QColorGroup::dark();
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_30(Smoke::Stack x) const {
 	// mid()
 	const QColor& xret = this->QColorGroup::mid();
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_31(Smoke::Stack x) const {
 	// text()
 	const QColor& xret = this->QColorGroup::text();
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_32(Smoke::Stack x) const {
 	// base()
 	const QColor& xret = this->QColorGroup::base();
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_33(Smoke::Stack x) const {
 	// background()
 	const QColor& xret = this->QColorGroup::background();
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_34(Smoke::Stack x) const {
 	// midlight()
 	const QColor& xret = this->QColorGroup::midlight();
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_35(Smoke::Stack x) const {
 	// brightText()
 	const QColor& xret = this->QColorGroup::brightText();
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_36(Smoke::Stack x) const {
 	// buttonText()
 	const QColor& xret = this->QColorGroup::buttonText();
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_37(Smoke::Stack x) const {
 	// shadow()
 	const QColor& xret = this->QColorGroup::shadow();
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_38(Smoke::Stack x) const {
 	// highlight()
 	const QColor& xret = this->QColorGroup::highlight();
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_39(Smoke::Stack x) const {
 	// highlightedText()
 	const QColor& xret = this->QColorGroup::highlightedText();
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_40(Smoke::Stack x) const {
 	// link()
 	const QColor& xret = this->QColorGroup::link();
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_41(Smoke::Stack x) const {
 	// linkVisited()
 	const QColor& xret = this->QColorGroup::linkVisited();
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_42(Smoke::Stack x) const {
 	// operator==(const QColorGroup&)
-	bool xret = this->QColorGroup::operator==(*(const QColorGroup *)x[1].s_voidp);
+	bool xret = this->QColorGroup::operator==(*(const QColorGroup *)x[1].s_class);
 	x[0].s_bool = xret;
     }
     void x_43(Smoke::Stack x) const {
 	// operator!=(const QColorGroup&)
-	bool xret = this->QColorGroup::operator!=(*(const QColorGroup *)x[1].s_voidp);
+	bool xret = this->QColorGroup::operator!=(*(const QColorGroup *)x[1].s_class);
 	x[0].s_bool = xret;
     }
-    ~x_QColorGroup() {}
+    ~x_QColorGroup() { qt_Smoke->binding->deleted(44, (void*)this); }
 };
 void xcall_QColorGroup(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QColorGroup *xself = (x_QColorGroup*)obj;

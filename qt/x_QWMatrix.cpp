@@ -70,22 +70,22 @@ public:
     }
     void x_11(Smoke::Stack x) const {
 	// mapRect(const QRect&)
-	QRect xret = this->QWMatrix::mapRect(*(const QRect *)x[1].s_voidp);
+	QRect xret = this->QWMatrix::mapRect(*(const QRect *)x[1].s_class);
 	x[0].s_class = (void*)new QRect(xret);
     }
     void x_12(Smoke::Stack x) const {
 	// map(const QPoint&)
-	QPoint xret = this->QWMatrix::map(*(const QPoint *)x[1].s_voidp);
+	QPoint xret = this->QWMatrix::map(*(const QPoint *)x[1].s_class);
 	x[0].s_class = (void*)new QPoint(xret);
     }
     void x_13(Smoke::Stack x) const {
 	// map(const QRect&)
-	QRect xret = this->QWMatrix::map(*(const QRect *)x[1].s_voidp);
+	QRect xret = this->QWMatrix::map(*(const QRect *)x[1].s_class);
 	x[0].s_class = (void*)new QRect(xret);
     }
     void x_14(Smoke::Stack x) const {
 	// map(const QPointArray&)
-	QPointArray xret = this->QWMatrix::map(*(const QPointArray *)x[1].s_voidp);
+	QPointArray xret = this->QWMatrix::map(*(const QPointArray *)x[1].s_class);
 	x[0].s_class = (void*)new QPointArray(xret);
     }
     void x_15(Smoke::Stack x) {
@@ -101,22 +101,22 @@ public:
     void x_17(Smoke::Stack x) {
 	// translate(double, double)
 	QWMatrix& xret = this->QWMatrix::translate((double)x[1].s_double,(double)x[2].s_double);
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_18(Smoke::Stack x) {
 	// scale(double, double)
 	QWMatrix& xret = this->QWMatrix::scale((double)x[1].s_double,(double)x[2].s_double);
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_19(Smoke::Stack x) {
 	// shear(double, double)
 	QWMatrix& xret = this->QWMatrix::shear((double)x[1].s_double,(double)x[2].s_double);
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_20(Smoke::Stack x) {
 	// rotate(double)
 	QWMatrix& xret = this->QWMatrix::rotate((double)x[1].s_double);
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_21(Smoke::Stack x) const {
 	// isInvertible()
@@ -135,40 +135,40 @@ public:
     }
     void x_24(Smoke::Stack x) const {
 	// operator==(const QWMatrix&)
-	bool xret = this->QWMatrix::operator==(*(const QWMatrix *)x[1].s_voidp);
+	bool xret = this->QWMatrix::operator==(*(const QWMatrix *)x[1].s_class);
 	x[0].s_bool = xret;
     }
     void x_25(Smoke::Stack x) const {
 	// operator!=(const QWMatrix&)
-	bool xret = this->QWMatrix::operator!=(*(const QWMatrix *)x[1].s_voidp);
+	bool xret = this->QWMatrix::operator!=(*(const QWMatrix *)x[1].s_class);
 	x[0].s_bool = xret;
     }
     void x_26(Smoke::Stack x) {
 	// operator*=(const QWMatrix&)
-	QWMatrix& xret = this->QWMatrix::operator*=(*(const QWMatrix *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QWMatrix& xret = this->QWMatrix::operator*=(*(const QWMatrix *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_27(Smoke::Stack x) const {
 	// operator *(const QPoint&)
-	QPoint xret = this->QWMatrix::operator *(*(const QPoint *)x[1].s_voidp);
+	QPoint xret = this->QWMatrix::operator *(*(const QPoint *)x[1].s_class);
 	x[0].s_class = (void*)new QPoint(xret);
     }
     void x_28(Smoke::Stack x) const {
 	// operator *(const QRect&)
-	QRegion xret = this->QWMatrix::operator *(*(const QRect *)x[1].s_voidp);
+	QRegion xret = this->QWMatrix::operator *(*(const QRect *)x[1].s_class);
 	x[0].s_class = (void*)new QRegion(xret);
     }
     void x_29(Smoke::Stack x) const {
 	// operator *(const QRegion&)
-	QRegion xret = this->QWMatrix::operator *(*(const QRegion *)x[1].s_voidp);
+	QRegion xret = this->QWMatrix::operator *(*(const QRegion *)x[1].s_class);
 	x[0].s_class = (void*)new QRegion(xret);
     }
     void x_30(Smoke::Stack x) const {
 	// operator *(const QPointArray&)
-	QPointArray xret = this->QWMatrix::operator *(*(const QPointArray *)x[1].s_voidp);
+	QPointArray xret = this->QWMatrix::operator *(*(const QPointArray *)x[1].s_class);
 	x[0].s_class = (void*)new QPointArray(xret);
     }
-    ~x_QWMatrix() {}
+    ~x_QWMatrix() { qt_Smoke->binding->deleted(352, (void*)this); }
 };
 void xcall_QWMatrix(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QWMatrix *xself = (x_QWMatrix*)obj;

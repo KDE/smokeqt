@@ -37,24 +37,24 @@ public:
     }
     static void x_4(Smoke::Stack x) {
 	// QRegExp(const QRegExp&)
-	x_QRegExp* xret = new x_QRegExp(*(const QRegExp *)x[1].s_voidp);
+	x_QRegExp* xret = new x_QRegExp(*(const QRegExp *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QRegExp(const QRegExp& x1) : QRegExp(x1) {
     }
     void x_5(Smoke::Stack x) {
 	// operator=(const QRegExp&)
-	QRegExp& xret = this->QRegExp::operator=(*(const QRegExp *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QRegExp& xret = this->QRegExp::operator=(*(const QRegExp *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_6(Smoke::Stack x) const {
 	// operator==(const QRegExp&)
-	bool xret = this->QRegExp::operator==(*(const QRegExp *)x[1].s_voidp);
+	bool xret = this->QRegExp::operator==(*(const QRegExp *)x[1].s_class);
 	x[0].s_bool = xret;
     }
     void x_7(Smoke::Stack x) const {
 	// operator!=(const QRegExp&)
-	bool xret = this->QRegExp::operator!=(*(const QRegExp *)x[1].s_voidp);
+	bool xret = this->QRegExp::operator!=(*(const QRegExp *)x[1].s_class);
 	x[0].s_bool = xret;
     }
     void x_8(Smoke::Stack x) const {
@@ -182,7 +182,7 @@ public:
 	int xret = this->QRegExp::pos();
 	x[0].s_int = xret;
     }
-    ~x_QRegExp() {}
+    ~x_QRegExp() { qt_Smoke->binding->deleted(242, (void*)this); }
 };
 void xcall_QRegExp(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QRegExp *xself = (x_QRegExp*)obj;

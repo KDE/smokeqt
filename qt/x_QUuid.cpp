@@ -22,7 +22,7 @@ public:
     }
     static void x_2(Smoke::Stack x) {
 	// QUuid(const QUuid&)
-	x_QUuid* xret = new x_QUuid(*(const QUuid *)x[1].s_voidp);
+	x_QUuid* xret = new x_QUuid(*(const QUuid *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QUuid(const QUuid& x1) : QUuid(x1) {
@@ -51,20 +51,20 @@ public:
     }
     void x_7(Smoke::Stack x) {
 	// operator=(const QUuid&)
-	QUuid& xret = this->QUuid::operator=(*(const QUuid *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QUuid& xret = this->QUuid::operator=(*(const QUuid *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_8(Smoke::Stack x) const {
 	// operator==(const QUuid&)
-	bool xret = this->QUuid::operator==(*(const QUuid *)x[1].s_voidp);
+	bool xret = this->QUuid::operator==(*(const QUuid *)x[1].s_class);
 	x[0].s_bool = xret;
     }
     void x_9(Smoke::Stack x) const {
 	// operator!=(const QUuid&)
-	bool xret = this->QUuid::operator!=(*(const QUuid *)x[1].s_voidp);
+	bool xret = this->QUuid::operator!=(*(const QUuid *)x[1].s_class);
 	x[0].s_bool = xret;
     }
-    ~x_QUuid() {}
+    ~x_QUuid() { qt_Smoke->binding->deleted(344, (void*)this); }
 };
 void xcall_QUuid(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QUuid *xself = (x_QUuid*)obj;

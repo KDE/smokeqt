@@ -18,36 +18,36 @@ public:
     }
     static void x_1(Smoke::Stack x) {
 	// QUrlInfo(const QUrlOperator&, const QString&)
-	x_QUrlInfo* xret = new x_QUrlInfo(*(const QUrlOperator *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
+	x_QUrlInfo* xret = new x_QUrlInfo(*(const QUrlOperator *)x[1].s_class,*(const QString *)x[2].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QUrlInfo(const QUrlOperator& x1, const QString& x2) : QUrlInfo(x1, x2) {
     }
     static void x_2(Smoke::Stack x) {
 	// QUrlInfo(const QUrlInfo&)
-	x_QUrlInfo* xret = new x_QUrlInfo(*(const QUrlInfo *)x[1].s_voidp);
+	x_QUrlInfo* xret = new x_QUrlInfo(*(const QUrlInfo *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QUrlInfo(const QUrlInfo& x1) : QUrlInfo(x1) {
     }
     static void x_3(Smoke::Stack x) {
 	// QUrlInfo(const QString&, int, const QString&, const QString&, uint, const QDateTime&, const QDateTime&, bool, bool, bool, bool, bool, bool)
-	x_QUrlInfo* xret = new x_QUrlInfo(*(const QString *)x[1].s_voidp,(int)x[2].s_int,*(const QString *)x[3].s_voidp,*(const QString *)x[4].s_voidp,(uint)x[5].s_uint,*(const QDateTime *)x[6].s_voidp,*(const QDateTime *)x[7].s_voidp,(bool)x[8].s_bool,(bool)x[9].s_bool,(bool)x[10].s_bool,(bool)x[11].s_bool,(bool)x[12].s_bool,(bool)x[13].s_bool);
+	x_QUrlInfo* xret = new x_QUrlInfo(*(const QString *)x[1].s_voidp,(int)x[2].s_int,*(const QString *)x[3].s_voidp,*(const QString *)x[4].s_voidp,(uint)x[5].s_uint,*(const QDateTime *)x[6].s_class,*(const QDateTime *)x[7].s_class,(bool)x[8].s_bool,(bool)x[9].s_bool,(bool)x[10].s_bool,(bool)x[11].s_bool,(bool)x[12].s_bool,(bool)x[13].s_bool);
 	x[0].s_class = (void*)xret;
     }
     x_QUrlInfo(const QString& x1, int x2, const QString& x3, const QString& x4, uint x5, const QDateTime& x6, const QDateTime& x7, bool x8, bool x9, bool x10, bool x11, bool x12, bool x13) : QUrlInfo(x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11, x12, x13) {
     }
     static void x_4(Smoke::Stack x) {
 	// QUrlInfo(const QUrl&, int, const QString&, const QString&, uint, const QDateTime&, const QDateTime&, bool, bool, bool, bool, bool, bool)
-	x_QUrlInfo* xret = new x_QUrlInfo(*(const QUrl *)x[1].s_voidp,(int)x[2].s_int,*(const QString *)x[3].s_voidp,*(const QString *)x[4].s_voidp,(uint)x[5].s_uint,*(const QDateTime *)x[6].s_voidp,*(const QDateTime *)x[7].s_voidp,(bool)x[8].s_bool,(bool)x[9].s_bool,(bool)x[10].s_bool,(bool)x[11].s_bool,(bool)x[12].s_bool,(bool)x[13].s_bool);
+	x_QUrlInfo* xret = new x_QUrlInfo(*(const QUrl *)x[1].s_class,(int)x[2].s_int,*(const QString *)x[3].s_voidp,*(const QString *)x[4].s_voidp,(uint)x[5].s_uint,*(const QDateTime *)x[6].s_class,*(const QDateTime *)x[7].s_class,(bool)x[8].s_bool,(bool)x[9].s_bool,(bool)x[10].s_bool,(bool)x[11].s_bool,(bool)x[12].s_bool,(bool)x[13].s_bool);
 	x[0].s_class = (void*)xret;
     }
     x_QUrlInfo(const QUrl& x1, int x2, const QString& x3, const QString& x4, uint x5, const QDateTime& x6, const QDateTime& x7, bool x8, bool x9, bool x10, bool x11, bool x12, bool x13) : QUrlInfo(x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11, x12, x13) {
     }
     void x_5(Smoke::Stack x) {
 	// operator=(const QUrlInfo&)
-	QUrlInfo& xret = this->QUrlInfo::operator=(*(const QUrlInfo *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QUrlInfo& xret = this->QUrlInfo::operator=(*(const QUrlInfo *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_6(Smoke::Stack x) {
 	// setName(const QString&)
@@ -101,7 +101,7 @@ public:
     }
     void x_16(Smoke::Stack x) {
 	// setLastModified(const QDateTime&)
-	this->QUrlInfo::setLastModified(*(const QDateTime *)x[1].s_voidp);
+	this->QUrlInfo::setLastModified(*(const QDateTime *)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_17(Smoke::Stack x) const {
@@ -176,91 +176,91 @@ public:
     }
     void x_31(Smoke::Stack x) const {
 	// operator==(const QUrlInfo&)
-	bool xret = this->QUrlInfo::operator==(*(const QUrlInfo *)x[1].s_voidp);
+	bool xret = this->QUrlInfo::operator==(*(const QUrlInfo *)x[1].s_class);
 	x[0].s_bool = xret;
     }
     static void x_32(Smoke::Stack x) {
 	// greaterThan(const QUrlInfo&, const QUrlInfo&, int)
-	bool xret = QUrlInfo::greaterThan(*(const QUrlInfo *)x[1].s_voidp,*(const QUrlInfo *)x[2].s_voidp,(int)x[3].s_int);
+	bool xret = QUrlInfo::greaterThan(*(const QUrlInfo *)x[1].s_class,*(const QUrlInfo *)x[2].s_class,(int)x[3].s_int);
 	x[0].s_bool = xret;
     }
     static void x_33(Smoke::Stack x) {
 	// lessThan(const QUrlInfo&, const QUrlInfo&, int)
-	bool xret = QUrlInfo::lessThan(*(const QUrlInfo *)x[1].s_voidp,*(const QUrlInfo *)x[2].s_voidp,(int)x[3].s_int);
+	bool xret = QUrlInfo::lessThan(*(const QUrlInfo *)x[1].s_class,*(const QUrlInfo *)x[2].s_class,(int)x[3].s_int);
 	x[0].s_bool = xret;
     }
     static void x_34(Smoke::Stack x) {
 	// equal(const QUrlInfo&, const QUrlInfo&, int)
-	bool xret = QUrlInfo::equal(*(const QUrlInfo *)x[1].s_voidp,*(const QUrlInfo *)x[2].s_voidp,(int)x[3].s_int);
+	bool xret = QUrlInfo::equal(*(const QUrlInfo *)x[1].s_class,*(const QUrlInfo *)x[2].s_class,(int)x[3].s_int);
 	x[0].s_bool = xret;
     }
     virtual void setDir(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->callMethod(9201, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9201, (void*)this, x)) return;
 	this->QUrlInfo::setDir(x1);
     }
     virtual void setFile(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->callMethod(9202, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9202, (void*)this, x)) return;
 	this->QUrlInfo::setFile(x1);
     }
     virtual void setGroup(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->callMethod(9205, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9205, (void*)this, x)) return;
 	this->QUrlInfo::setGroup(x1);
     }
     virtual void setLastModified(const QDateTime& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->callMethod(9210, (void*)this, x)) return;
+	x[1].s_class = (void*)&x1;
+	if(qt_Smoke->binding->callMethod(9210, (void*)this, x)) return;
 	this->QUrlInfo::setLastModified(x1);
     }
     virtual void setName(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->callMethod(9200, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9200, (void*)this, x)) return;
 	this->QUrlInfo::setName(x1);
     }
     virtual void setOwner(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->callMethod(9204, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9204, (void*)this, x)) return;
 	this->QUrlInfo::setOwner(x1);
     }
     virtual void setPermissions(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->callMethod(9209, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9209, (void*)this, x)) return;
 	this->QUrlInfo::setPermissions(x1);
     }
     virtual void setReadable(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->callMethod(9208, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9208, (void*)this, x)) return;
 	this->QUrlInfo::setReadable(x1);
     }
     virtual void setSize(uint x1) {
 	Smoke::StackItem x[2];
 	x[1].s_uint = x1;
-	if(qt_Smoke->callMethod(9206, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9206, (void*)this, x)) return;
 	this->QUrlInfo::setSize(x1);
     }
     virtual void setSymLink(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->callMethod(9203, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9203, (void*)this, x)) return;
 	this->QUrlInfo::setSymLink(x1);
     }
     virtual void setWritable(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->callMethod(9207, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9207, (void*)this, x)) return;
 	this->QUrlInfo::setWritable(x1);
     }
-    ~x_QUrlInfo() {}
+    ~x_QUrlInfo() { qt_Smoke->binding->deleted(340, (void*)this); }
 };
 void xcall_QUrlInfo(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QUrlInfo *xself = (x_QUrlInfo*)obj;

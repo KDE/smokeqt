@@ -77,11 +77,11 @@ public:
     void x_11(Smoke::Stack x) const {
 	// image(int)
 	QCanvasPixmap* xret = this->QCanvasPixmapArray::image((int)x[1].s_int);
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_12(Smoke::Stack x) {
 	// setImage(int, QCanvasPixmap*)
-	this->QCanvasPixmapArray::setImage((int)x[1].s_int,(QCanvasPixmap*)x[2].s_voidp);
+	this->QCanvasPixmapArray::setImage((int)x[1].s_int,(QCanvasPixmap*)x[2].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     void x_13(Smoke::Stack x) const {
@@ -89,7 +89,7 @@ public:
 	uint xret = this->QCanvasPixmapArray::count();
 	x[0].s_uint = xret;
     }
-    ~x_QCanvasPixmapArray() {}
+    ~x_QCanvasPixmapArray() { qt_Smoke->binding->deleted(25, (void*)this); }
 };
 void xcall_QCanvasPixmapArray(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QCanvasPixmapArray *xself = (x_QCanvasPixmapArray*)obj;

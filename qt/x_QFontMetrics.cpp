@@ -11,22 +11,22 @@ class x_QFontMetrics : public QFontMetrics {
 public:
     static void x_0(Smoke::Stack x) {
 	// QFontMetrics(const QFont&)
-	x_QFontMetrics* xret = new x_QFontMetrics(*(const QFont *)x[1].s_voidp);
+	x_QFontMetrics* xret = new x_QFontMetrics(*(const QFont *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QFontMetrics(const QFont& x1) : QFontMetrics(x1) {
     }
     static void x_1(Smoke::Stack x) {
 	// QFontMetrics(const QFontMetrics&)
-	x_QFontMetrics* xret = new x_QFontMetrics(*(const QFontMetrics *)x[1].s_voidp);
+	x_QFontMetrics* xret = new x_QFontMetrics(*(const QFontMetrics *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QFontMetrics(const QFontMetrics& x1) : QFontMetrics(x1) {
     }
     void x_2(Smoke::Stack x) {
 	// operator=(const QFontMetrics&)
-	QFontMetrics& xret = this->QFontMetrics::operator=(*(const QFontMetrics *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QFontMetrics& xret = this->QFontMetrics::operator=(*(const QFontMetrics *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_3(Smoke::Stack x) const {
 	// ascent()
@@ -188,7 +188,7 @@ public:
 	int xret = this->QFontMetrics::lineWidth();
 	x[0].s_int = xret;
     }
-    ~x_QFontMetrics() {}
+    ~x_QFontMetrics() { qt_Smoke->binding->deleted(120, (void*)this); }
 };
 void xcall_QFontMetrics(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QFontMetrics *xself = (x_QFontMetrics*)obj;

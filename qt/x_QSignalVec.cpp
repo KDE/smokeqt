@@ -21,27 +21,27 @@ public:
     }
     static void x_2(Smoke::Stack x) {
 	// QSignalVec(const QSignalVec&)
-	x_QSignalVec* xret = new x_QSignalVec(*(const QSignalVec *)x[1].s_voidp);
+	x_QSignalVec* xret = new x_QSignalVec(*(const QSignalVec *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QSignalVec(const QSignalVec& x1) : QSignalVec(x1) {
     }
     void x_3(Smoke::Stack x) {
 	// operator=(const QSignalVec&)
-	QSignalVec& xret = this->QSignalVec::operator=(*(const QSignalVec *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QSignalVec& xret = this->QSignalVec::operator=(*(const QSignalVec *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_4(Smoke::Stack x) const {
 	// at(uint)
 	QConnectionList* xret = this->QSignalVec::at((uint)x[1].s_uint);
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_5(Smoke::Stack x) {
 	// insert(uint, const QConnectionList*)
-	bool xret = this->QSignalVec::insert((uint)x[1].s_uint,(const QConnectionList*)x[2].s_voidp);
+	bool xret = this->QSignalVec::insert((uint)x[1].s_uint,(const QConnectionList*)x[2].s_class);
 	x[0].s_bool = xret;
     }
-    ~x_QSignalVec() {}
+    ~x_QSignalVec() { qt_Smoke->binding->deleted(258, (void*)this); }
 };
 void xcall_QSignalVec(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QSignalVec *xself = (x_QSignalVec*)obj;

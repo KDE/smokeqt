@@ -71,7 +71,7 @@ public:
     }
     void x_15(Smoke::Stack x) const {
 	// keysToValue(const QStrList&)
-	int xret = this->QMetaProperty::keysToValue(*(const QStrList *)x[1].s_voidp);
+	int xret = this->QMetaProperty::keysToValue(*(const QStrList *)x[1].s_class);
 	x[0].s_int = xret;
     }
     void x_16(Smoke::Stack x) const {
@@ -81,22 +81,22 @@ public:
     }
     void x_17(Smoke::Stack x) const {
 	// designable(QObject*)
-	bool xret = this->QMetaProperty::designable((QObject*)x[1].s_voidp);
+	bool xret = this->QMetaProperty::designable((QObject*)x[1].s_class);
 	x[0].s_bool = xret;
     }
     void x_18(Smoke::Stack x) const {
 	// scriptable(QObject*)
-	bool xret = this->QMetaProperty::scriptable((QObject*)x[1].s_voidp);
+	bool xret = this->QMetaProperty::scriptable((QObject*)x[1].s_class);
 	x[0].s_bool = xret;
     }
     void x_19(Smoke::Stack x) const {
 	// stored(QObject*)
-	bool xret = this->QMetaProperty::stored((QObject*)x[1].s_voidp);
+	bool xret = this->QMetaProperty::stored((QObject*)x[1].s_class);
 	x[0].s_bool = xret;
     }
     void x_20(Smoke::Stack x) const {
 	// reset(QObject*)
-	bool xret = this->QMetaProperty::reset((QObject*)x[1].s_voidp);
+	bool xret = this->QMetaProperty::reset((QObject*)x[1].s_class);
 	x[0].s_bool = xret;
     }
     void x_21(Smoke::Stack x) const {
@@ -126,7 +126,7 @@ public:
     }
     x_QMetaProperty() : QMetaProperty() {
     }
-    ~x_QMetaProperty() {}
+    ~x_QMetaProperty() { qt_Smoke->binding->deleted(198, (void*)this); }
 };
 void xcall_QMetaProperty(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QMetaProperty *xself = (x_QMetaProperty*)obj;

@@ -23,7 +23,7 @@ public:
     }
     static void x_2(Smoke::Stack x) {
 	// QSqlRecordInfo(const QSqlRecord&)
-	x_QSqlRecordInfo* xret = new x_QSqlRecordInfo(*(const QSqlRecord *)x[1].s_voidp);
+	x_QSqlRecordInfo* xret = new x_QSqlRecordInfo(*(const QSqlRecord *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QSqlRecordInfo(const QSqlRecord& x1) : QSqlRecordInfo(x1) {
@@ -43,7 +43,7 @@ public:
 	QSqlRecord xret = this->QSqlRecordInfo::toRecord();
 	x[0].s_class = (void*)new QSqlRecord(xret);
     }
-    ~x_QSqlRecordInfo() {}
+    ~x_QSqlRecordInfo() { qt_Smoke->binding->deleted(288, (void*)this); }
 };
 void xcall_QSqlRecordInfo(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QSqlRecordInfo *xself = (x_QSqlRecordInfo*)obj;
