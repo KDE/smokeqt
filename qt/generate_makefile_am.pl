@@ -50,4 +50,6 @@ if ($? >> 8) {
 else {
     print STDERR "Makefile.am unchanged.\n";
 }
+system "rm -f $tempfile";
+
 exit 0;
