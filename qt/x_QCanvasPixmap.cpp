@@ -10,22 +10,22 @@ class x_QCanvasPixmap : public QCanvasPixmap {
 public:
     static void x_0(Smoke::Stack x) {
 	// QCanvasPixmap(const QString&)
-	x_QCanvasPixmap* xret = new x_QCanvasPixmap(*(const QString *)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QCanvasPixmap* xret = new x_QCanvasPixmap(*(const QString *)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QCanvasPixmap(const QString& x1) : QCanvasPixmap(x1) {
     }
     static void x_1(Smoke::Stack x) {
 	// QCanvasPixmap(const QImage&)
-	x_QCanvasPixmap* xret = new x_QCanvasPixmap(*(const QImage *)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QCanvasPixmap* xret = new x_QCanvasPixmap(*(const QImage *)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QCanvasPixmap(const QImage& x1) : QCanvasPixmap(x1) {
     }
     static void x_2(Smoke::Stack x) {
 	// QCanvasPixmap(const QPixmap&, const QPoint&)
-	x_QCanvasPixmap* xret = new x_QCanvasPixmap(*(const QPixmap *)x[1].s_voidp,*(const QPoint *)x[2].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QCanvasPixmap* xret = new x_QCanvasPixmap(*(const QPixmap *)x[1].s_class,*(const QPoint *)x[2].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QCanvasPixmap(const QPixmap& x1, const QPoint& x2) : QCanvasPixmap(x1, x2) {
     }
@@ -46,8 +46,8 @@ public:
     virtual bool cmd(int x1, QPainter* x2, QPDevCmdParam* x3) {
 	Smoke::StackItem x[4];
 	x[1].s_int = (int)x1;
-	x[2].s_voidp = (void*)x2;
-	x[3].s_voidp = (void*)x3;
+	x[2].s_class = (void*)x2;
+	x[3].s_class = (void*)x3;
 	if(call_method((void*)this, 5552, x)) return (bool)x[0].s_bool;
 	return this->QPaintDevice::cmd(x1, x2, x3);
     }
@@ -58,16 +58,16 @@ public:
     }
     virtual int fontInf(QFont* x1, int x2) const {
 	Smoke::StackItem x[3];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	x[2].s_int = (int)x2;
 	if(call_method((void*)this, 5557, x)) return (int)x[0].s_int;
 	return this->QPaintDevice::fontInf(x1, x2);
     }
     virtual int fontMet(QFont* x1, int x2, const char* x3, int x4) const {
 	Smoke::StackItem x[5];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	x[2].s_int = (int)x2;
-	x[3].s_voidp = (void*)x3;
+	x[3].s_class = (void*)x3;
 	x[4].s_int = (int)x4;
 	if(call_method((void*)this, 5554, x)) return (int)x[0].s_int;
 	return this->QPaintDevice::fontMet(x1, x2, x3, x4);

@@ -10,8 +10,8 @@ public:
     x_QTextDecoder(void *x) : xthis((QTextDecoder*)x) {}
     void x_0(Smoke::Stack x) {
 	// toUnicode(const char*, int)
-	QString xret = xthis->QTextDecoder::toUnicode((const char*)x[1].s_voidp,(int)x[2].s_int);
-	x[0].s_voidp = (void*)new QString(xret);
+	QString xret = xthis->QTextDecoder::toUnicode((const char*)x[1].s_class,(int)x[2].s_int);
+	x[0].s_class = (void*)new QString(xret);
     }
     ~x_QTextDecoder() {}
 };

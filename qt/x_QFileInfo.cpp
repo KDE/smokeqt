@@ -9,83 +9,83 @@
 class x_QFileInfo : public QFileInfo {
 public:
     static void x_0(Smoke::Stack x) {
-	x[0].s_long = (long)QFileInfo::ReadUser;
+	x[0].s_enum = (long)QFileInfo::ReadUser;
     }
     static void x_1(Smoke::Stack x) {
-	x[0].s_long = (long)QFileInfo::WriteUser;
+	x[0].s_enum = (long)QFileInfo::WriteUser;
     }
     static void x_2(Smoke::Stack x) {
-	x[0].s_long = (long)QFileInfo::ExeUser;
+	x[0].s_enum = (long)QFileInfo::ExeUser;
     }
     static void x_3(Smoke::Stack x) {
-	x[0].s_long = (long)QFileInfo::ReadGroup;
+	x[0].s_enum = (long)QFileInfo::ReadGroup;
     }
     static void x_4(Smoke::Stack x) {
-	x[0].s_long = (long)QFileInfo::WriteGroup;
+	x[0].s_enum = (long)QFileInfo::WriteGroup;
     }
     static void x_5(Smoke::Stack x) {
-	x[0].s_long = (long)QFileInfo::ExeGroup;
+	x[0].s_enum = (long)QFileInfo::ExeGroup;
     }
     static void x_6(Smoke::Stack x) {
-	x[0].s_long = (long)QFileInfo::ReadOther;
+	x[0].s_enum = (long)QFileInfo::ReadOther;
     }
     static void x_7(Smoke::Stack x) {
-	x[0].s_long = (long)QFileInfo::WriteOther;
+	x[0].s_enum = (long)QFileInfo::WriteOther;
     }
     static void x_8(Smoke::Stack x) {
-	x[0].s_long = (long)QFileInfo::ExeOther;
+	x[0].s_enum = (long)QFileInfo::ExeOther;
     }
     static void x_9(Smoke::Stack x) {
 	// QFileInfo()
 	x_QFileInfo* xret = new x_QFileInfo();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     x_QFileInfo() : QFileInfo() {
     }
     static void x_10(Smoke::Stack x) {
 	// QFileInfo(const QString&)
-	x_QFileInfo* xret = new x_QFileInfo(*(const QString *)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QFileInfo* xret = new x_QFileInfo(*(const QString *)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QFileInfo(const QString& x1) : QFileInfo(x1) {
     }
     static void x_11(Smoke::Stack x) {
 	// QFileInfo(const QFile&)
-	x_QFileInfo* xret = new x_QFileInfo(*(const QFile *)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QFileInfo* xret = new x_QFileInfo(*(const QFile *)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QFileInfo(const QFile& x1) : QFileInfo(x1) {
     }
     static void x_12(Smoke::Stack x) {
 	// QFileInfo(const QDir&, const QString&)
-	x_QFileInfo* xret = new x_QFileInfo(*(const QDir *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QFileInfo* xret = new x_QFileInfo(*(const QDir *)x[1].s_class,*(const QString *)x[2].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QFileInfo(const QDir& x1, const QString& x2) : QFileInfo(x1, x2) {
     }
     static void x_13(Smoke::Stack x) {
 	// QFileInfo(const QFileInfo&)
-	x_QFileInfo* xret = new x_QFileInfo(*(const QFileInfo *)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QFileInfo* xret = new x_QFileInfo(*(const QFileInfo *)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QFileInfo(const QFileInfo& x1) : QFileInfo(x1) {
     }
     void x_14(Smoke::Stack x) {
 	// operator=(const QFileInfo&)
-	QFileInfo& xret = this->QFileInfo::operator=(*(const QFileInfo *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QFileInfo& xret = this->QFileInfo::operator=(*(const QFileInfo *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_15(Smoke::Stack x) {
 	// setFile(const QString&)
-	this->QFileInfo::setFile(*(const QString *)x[1].s_voidp);
+	this->QFileInfo::setFile(*(const QString *)x[1].s_class);
     }
     void x_16(Smoke::Stack x) {
 	// setFile(const QFile&)
-	this->QFileInfo::setFile(*(const QFile *)x[1].s_voidp);
+	this->QFileInfo::setFile(*(const QFile *)x[1].s_class);
     }
     void x_17(Smoke::Stack x) {
 	// setFile(const QDir&, const QString&)
-	this->QFileInfo::setFile(*(const QDir *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
+	this->QFileInfo::setFile(*(const QDir *)x[1].s_class,*(const QString *)x[2].s_class);
     }
     void x_18(Smoke::Stack x) const {
 	// exists()
@@ -108,57 +108,57 @@ public:
     void x_22(Smoke::Stack x) const {
 	// filePath()
 	QString xret = this->QFileInfo::filePath();
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_23(Smoke::Stack x) const {
 	// fileName()
 	QString xret = this->QFileInfo::fileName();
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_24(Smoke::Stack x) const {
 	// absFilePath()
 	QString xret = this->QFileInfo::absFilePath();
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_25(Smoke::Stack x) const {
 	// baseName(bool)
 	QString xret = this->QFileInfo::baseName((bool)x[1].s_bool);
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_26(Smoke::Stack x) const {
 	// baseName()
 	QString xret = this->QFileInfo::baseName();
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_27(Smoke::Stack x) const {
 	// extension(bool)
 	QString xret = this->QFileInfo::extension((bool)x[1].s_bool);
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_28(Smoke::Stack x) const {
 	// extension()
 	QString xret = this->QFileInfo::extension();
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_29(Smoke::Stack x) const {
 	// dirPath(bool)
 	QString xret = this->QFileInfo::dirPath((bool)x[1].s_bool);
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_30(Smoke::Stack x) const {
 	// dirPath()
 	QString xret = this->QFileInfo::dirPath();
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_31(Smoke::Stack x) const {
 	// dir(bool)
 	QDir xret = this->QFileInfo::dir((bool)x[1].s_bool);
-	x[0].s_voidp = (void*)new QDir(xret);
+	x[0].s_class = (void*)new QDir(xret);
     }
     void x_32(Smoke::Stack x) const {
 	// dir()
 	QDir xret = this->QFileInfo::dir();
-	x[0].s_voidp = (void*)new QDir(xret);
+	x[0].s_class = (void*)new QDir(xret);
     }
     void x_33(Smoke::Stack x) const {
 	// isReadable()
@@ -203,12 +203,12 @@ public:
     void x_41(Smoke::Stack x) const {
 	// readLink()
 	QString xret = this->QFileInfo::readLink();
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_42(Smoke::Stack x) const {
 	// owner()
 	QString xret = this->QFileInfo::owner();
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_43(Smoke::Stack x) const {
 	// ownerId()
@@ -218,7 +218,7 @@ public:
     void x_44(Smoke::Stack x) const {
 	// group()
 	QString xret = this->QFileInfo::group();
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_45(Smoke::Stack x) const {
 	// groupId()
@@ -238,17 +238,17 @@ public:
     void x_48(Smoke::Stack x) const {
 	// created()
 	QDateTime xret = this->QFileInfo::created();
-	x[0].s_voidp = (void*)new QDateTime(xret);
+	x[0].s_class = (void*)new QDateTime(xret);
     }
     void x_49(Smoke::Stack x) const {
 	// lastModified()
 	QDateTime xret = this->QFileInfo::lastModified();
-	x[0].s_voidp = (void*)new QDateTime(xret);
+	x[0].s_class = (void*)new QDateTime(xret);
     }
     void x_50(Smoke::Stack x) const {
 	// lastRead()
 	QDateTime xret = this->QFileInfo::lastRead();
-	x[0].s_voidp = (void*)new QDateTime(xret);
+	x[0].s_class = (void*)new QDateTime(xret);
     }
     ~x_QFileInfo() {}
 };

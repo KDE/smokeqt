@@ -10,18 +10,18 @@ public:
     x_QXmlDTDHandler(void *x) : xthis((QXmlDTDHandler*)x) {}
     void x_0(Smoke::Stack x) {
 	// notationDecl(const QString&, const QString&, const QString&)
-	bool xret = xthis->QXmlDTDHandler::notationDecl(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,*(const QString *)x[3].s_voidp);
+	bool xret = xthis->QXmlDTDHandler::notationDecl(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,*(const QString *)x[3].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_1(Smoke::Stack x) {
 	// unparsedEntityDecl(const QString&, const QString&, const QString&, const QString&)
-	bool xret = xthis->QXmlDTDHandler::unparsedEntityDecl(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,*(const QString *)x[3].s_voidp,*(const QString *)x[4].s_voidp);
+	bool xret = xthis->QXmlDTDHandler::unparsedEntityDecl(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,*(const QString *)x[3].s_class,*(const QString *)x[4].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_2(Smoke::Stack x) {
 	// errorString()
 	QString xret = xthis->QXmlDTDHandler::errorString();
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     ~x_QXmlDTDHandler() {}
 };

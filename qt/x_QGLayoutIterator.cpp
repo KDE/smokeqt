@@ -10,17 +10,17 @@ public:
     void x_0(Smoke::Stack x) {
 	// next()
 	QLayoutItem* xret = xthis->QGLayoutIterator::next();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_1(Smoke::Stack x) {
 	// current()
 	QLayoutItem* xret = xthis->QGLayoutIterator::current();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_2(Smoke::Stack x) {
 	// takeCurrent()
 	QLayoutItem* xret = xthis->QGLayoutIterator::takeCurrent();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     ~x_QGLayoutIterator() {}
 };

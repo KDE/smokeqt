@@ -9,28 +9,28 @@ public:
     static void x_0(Smoke::Stack x) {
 	// QImageIO()
 	x_QImageIO* xret = new x_QImageIO();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     x_QImageIO() : QImageIO() {
     }
     static void x_1(Smoke::Stack x) {
 	// QImageIO(QIODevice*, const char*)
-	x_QImageIO* xret = new x_QImageIO((QIODevice*)x[1].s_voidp,(const char*)x[2].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QImageIO* xret = new x_QImageIO((QIODevice*)x[1].s_class,(const char*)x[2].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QImageIO(QIODevice* x1, const char* x2) : QImageIO(x1, x2) {
     }
     static void x_2(Smoke::Stack x) {
 	// QImageIO(const QString&, const char*)
-	x_QImageIO* xret = new x_QImageIO(*(const QString *)x[1].s_voidp,(const char*)x[2].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QImageIO* xret = new x_QImageIO(*(const QString *)x[1].s_class,(const char*)x[2].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QImageIO(const QString& x1, const char* x2) : QImageIO(x1, x2) {
     }
     void x_3(Smoke::Stack x) const {
 	// image()
 	const QImage& xret = this->QImageIO::image();
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_4(Smoke::Stack x) const {
 	// status()
@@ -40,17 +40,17 @@ public:
     void x_5(Smoke::Stack x) const {
 	// format()
 	const char* xret = this->QImageIO::format();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_6(Smoke::Stack x) const {
 	// ioDevice()
 	QIODevice* xret = this->QImageIO::ioDevice();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_7(Smoke::Stack x) const {
 	// fileName()
 	QString xret = this->QImageIO::fileName();
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_8(Smoke::Stack x) const {
 	// quality()
@@ -60,12 +60,12 @@ public:
     void x_9(Smoke::Stack x) const {
 	// description()
 	QString xret = this->QImageIO::description();
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_10(Smoke::Stack x) const {
 	// parameters()
 	const char* xret = this->QImageIO::parameters();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_11(Smoke::Stack x) const {
 	// gamma()
@@ -74,7 +74,7 @@ public:
     }
     void x_12(Smoke::Stack x) {
 	// setImage(const QImage&)
-	this->QImageIO::setImage(*(const QImage *)x[1].s_voidp);
+	this->QImageIO::setImage(*(const QImage *)x[1].s_class);
     }
     void x_13(Smoke::Stack x) {
 	// setStatus(int)
@@ -82,15 +82,15 @@ public:
     }
     void x_14(Smoke::Stack x) {
 	// setFormat(const char*)
-	this->QImageIO::setFormat((const char*)x[1].s_voidp);
+	this->QImageIO::setFormat((const char*)x[1].s_class);
     }
     void x_15(Smoke::Stack x) {
 	// setIODevice(QIODevice*)
-	this->QImageIO::setIODevice((QIODevice*)x[1].s_voidp);
+	this->QImageIO::setIODevice((QIODevice*)x[1].s_class);
     }
     void x_16(Smoke::Stack x) {
 	// setFileName(const QString&)
-	this->QImageIO::setFileName(*(const QString *)x[1].s_voidp);
+	this->QImageIO::setFileName(*(const QString *)x[1].s_class);
     }
     void x_17(Smoke::Stack x) {
 	// setQuality(int)
@@ -98,11 +98,11 @@ public:
     }
     void x_18(Smoke::Stack x) {
 	// setDescription(const QString&)
-	this->QImageIO::setDescription(*(const QString *)x[1].s_voidp);
+	this->QImageIO::setDescription(*(const QString *)x[1].s_class);
     }
     void x_19(Smoke::Stack x) {
 	// setParameters(const char*)
-	this->QImageIO::setParameters((const char*)x[1].s_voidp);
+	this->QImageIO::setParameters((const char*)x[1].s_class);
     }
     void x_20(Smoke::Stack x) {
 	// setGamma(float)
@@ -120,23 +120,23 @@ public:
     }
     static void x_23(Smoke::Stack x) {
 	// imageFormat(const QString&)
-	const char* xret = QImageIO::imageFormat(*(const QString *)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	const char* xret = QImageIO::imageFormat(*(const QString *)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     static void x_24(Smoke::Stack x) {
 	// imageFormat(QIODevice*)
-	const char* xret = QImageIO::imageFormat((QIODevice*)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	const char* xret = QImageIO::imageFormat((QIODevice*)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     static void x_25(Smoke::Stack x) {
 	// inputFormats()
 	QStrList xret = QImageIO::inputFormats();
-	x[0].s_voidp = (void*)new QStrList(xret);
+	x[0].s_class = (void*)new QStrList(xret);
     }
     static void x_26(Smoke::Stack x) {
 	// outputFormats()
 	QStrList xret = QImageIO::outputFormats();
-	x[0].s_voidp = (void*)new QStrList(xret);
+	x[0].s_class = (void*)new QStrList(xret);
     }
     ~x_QImageIO() {}
 };

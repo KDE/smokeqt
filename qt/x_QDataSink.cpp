@@ -14,7 +14,7 @@ public:
     }
     void x_1(Smoke::Stack x) {
 	// receive(const uchar*, int)
-	xthis->QDataSink::receive((const uchar*)x[1].s_voidp,(int)x[2].s_int);
+	xthis->QDataSink::receive((const uchar*)x[1].s_class,(int)x[2].s_int);
     }
     void x_2(Smoke::Stack x) {
 	// eof()

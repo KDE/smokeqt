@@ -5,208 +5,208 @@
 class x_QEvent : public QEvent {
 public:
     static void x_0(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::None;
+	x[0].s_enum = (long)QEvent::None;
     }
     static void x_1(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::Timer;
+	x[0].s_enum = (long)QEvent::Timer;
     }
     static void x_2(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::MouseButtonPress;
+	x[0].s_enum = (long)QEvent::MouseButtonPress;
     }
     static void x_3(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::MouseButtonRelease;
+	x[0].s_enum = (long)QEvent::MouseButtonRelease;
     }
     static void x_4(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::MouseButtonDblClick;
+	x[0].s_enum = (long)QEvent::MouseButtonDblClick;
     }
     static void x_5(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::MouseMove;
+	x[0].s_enum = (long)QEvent::MouseMove;
     }
     static void x_6(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::KeyPress;
+	x[0].s_enum = (long)QEvent::KeyPress;
     }
     static void x_7(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::KeyRelease;
+	x[0].s_enum = (long)QEvent::KeyRelease;
     }
     static void x_8(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::FocusIn;
+	x[0].s_enum = (long)QEvent::FocusIn;
     }
     static void x_9(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::FocusOut;
+	x[0].s_enum = (long)QEvent::FocusOut;
     }
     static void x_10(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::Enter;
+	x[0].s_enum = (long)QEvent::Enter;
     }
     static void x_11(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::Leave;
+	x[0].s_enum = (long)QEvent::Leave;
     }
     static void x_12(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::Paint;
+	x[0].s_enum = (long)QEvent::Paint;
     }
     static void x_13(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::Move;
+	x[0].s_enum = (long)QEvent::Move;
     }
     static void x_14(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::Resize;
+	x[0].s_enum = (long)QEvent::Resize;
     }
     static void x_15(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::Create;
+	x[0].s_enum = (long)QEvent::Create;
     }
     static void x_16(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::Destroy;
+	x[0].s_enum = (long)QEvent::Destroy;
     }
     static void x_17(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::Show;
+	x[0].s_enum = (long)QEvent::Show;
     }
     static void x_18(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::Hide;
+	x[0].s_enum = (long)QEvent::Hide;
     }
     static void x_19(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::Close;
+	x[0].s_enum = (long)QEvent::Close;
     }
     static void x_20(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::Quit;
+	x[0].s_enum = (long)QEvent::Quit;
     }
     static void x_21(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::Reparent;
+	x[0].s_enum = (long)QEvent::Reparent;
     }
     static void x_22(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::ShowMinimized;
+	x[0].s_enum = (long)QEvent::ShowMinimized;
     }
     static void x_23(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::ShowNormal;
+	x[0].s_enum = (long)QEvent::ShowNormal;
     }
     static void x_24(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::WindowActivate;
+	x[0].s_enum = (long)QEvent::WindowActivate;
     }
     static void x_25(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::WindowDeactivate;
+	x[0].s_enum = (long)QEvent::WindowDeactivate;
     }
     static void x_26(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::ShowToParent;
+	x[0].s_enum = (long)QEvent::ShowToParent;
     }
     static void x_27(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::HideToParent;
+	x[0].s_enum = (long)QEvent::HideToParent;
     }
     static void x_28(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::ShowMaximized;
+	x[0].s_enum = (long)QEvent::ShowMaximized;
     }
     static void x_29(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::ShowFullScreen;
+	x[0].s_enum = (long)QEvent::ShowFullScreen;
     }
     static void x_30(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::Accel;
+	x[0].s_enum = (long)QEvent::Accel;
     }
     static void x_31(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::Wheel;
+	x[0].s_enum = (long)QEvent::Wheel;
     }
     static void x_32(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::AccelAvailable;
+	x[0].s_enum = (long)QEvent::AccelAvailable;
     }
     static void x_33(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::CaptionChange;
+	x[0].s_enum = (long)QEvent::CaptionChange;
     }
     static void x_34(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::IconChange;
+	x[0].s_enum = (long)QEvent::IconChange;
     }
     static void x_35(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::ParentFontChange;
+	x[0].s_enum = (long)QEvent::ParentFontChange;
     }
     static void x_36(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::ApplicationFontChange;
+	x[0].s_enum = (long)QEvent::ApplicationFontChange;
     }
     static void x_37(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::ParentPaletteChange;
+	x[0].s_enum = (long)QEvent::ParentPaletteChange;
     }
     static void x_38(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::ApplicationPaletteChange;
+	x[0].s_enum = (long)QEvent::ApplicationPaletteChange;
     }
     static void x_39(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::PaletteChange;
+	x[0].s_enum = (long)QEvent::PaletteChange;
     }
     static void x_40(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::Clipboard;
+	x[0].s_enum = (long)QEvent::Clipboard;
     }
     static void x_41(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::Speech;
+	x[0].s_enum = (long)QEvent::Speech;
     }
     static void x_42(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::SockAct;
+	x[0].s_enum = (long)QEvent::SockAct;
     }
     static void x_43(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::AccelOverride;
+	x[0].s_enum = (long)QEvent::AccelOverride;
     }
     static void x_44(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::DeferredDelete;
+	x[0].s_enum = (long)QEvent::DeferredDelete;
     }
     static void x_45(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::DragEnter;
+	x[0].s_enum = (long)QEvent::DragEnter;
     }
     static void x_46(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::DragMove;
+	x[0].s_enum = (long)QEvent::DragMove;
     }
     static void x_47(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::DragLeave;
+	x[0].s_enum = (long)QEvent::DragLeave;
     }
     static void x_48(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::Drop;
+	x[0].s_enum = (long)QEvent::Drop;
     }
     static void x_49(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::DragResponse;
+	x[0].s_enum = (long)QEvent::DragResponse;
     }
     static void x_50(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::ChildInserted;
+	x[0].s_enum = (long)QEvent::ChildInserted;
     }
     static void x_51(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::ChildRemoved;
+	x[0].s_enum = (long)QEvent::ChildRemoved;
     }
     static void x_52(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::LayoutHint;
+	x[0].s_enum = (long)QEvent::LayoutHint;
     }
     static void x_53(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::ShowWindowRequest;
+	x[0].s_enum = (long)QEvent::ShowWindowRequest;
     }
     static void x_54(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::ActivateControl;
+	x[0].s_enum = (long)QEvent::ActivateControl;
     }
     static void x_55(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::DeactivateControl;
+	x[0].s_enum = (long)QEvent::DeactivateControl;
     }
     static void x_56(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::ContextMenu;
+	x[0].s_enum = (long)QEvent::ContextMenu;
     }
     static void x_57(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::IMStart;
+	x[0].s_enum = (long)QEvent::IMStart;
     }
     static void x_58(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::IMCompose;
+	x[0].s_enum = (long)QEvent::IMCompose;
     }
     static void x_59(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::IMEnd;
+	x[0].s_enum = (long)QEvent::IMEnd;
     }
     static void x_60(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::Accessibility;
+	x[0].s_enum = (long)QEvent::Accessibility;
     }
     static void x_61(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::Tablet;
+	x[0].s_enum = (long)QEvent::Tablet;
     }
     static void x_62(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::User;
+	x[0].s_enum = (long)QEvent::User;
     }
     static void x_63(Smoke::Stack x) {
-	x[0].s_long = (long)QEvent::MaxUser;
+	x[0].s_enum = (long)QEvent::MaxUser;
     }
     static void x_64(Smoke::Stack x) {
 	// QEvent(QEvent::Type)
-	x_QEvent* xret = new x_QEvent(*(QEvent::Type *)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QEvent* xret = new x_QEvent(*(QEvent::Type *)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QEvent(QEvent::Type x1) : QEvent(x1) {
     }
     void x_65(Smoke::Stack x) const {
 	// type()
 	QEvent::Type xret = this->QEvent::type();
-	x[0].s_voidp = (void*)new QEvent::Type(xret);
+	x[0].s_class = (void*)new QEvent::Type(xret);
     }
     void x_66(Smoke::Stack x) const {
 	// spontaneous()

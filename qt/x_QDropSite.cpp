@@ -6,8 +6,8 @@ class x_QDropSite : public QDropSite {
 public:
     static void x_0(Smoke::Stack x) {
 	// QDropSite(QWidget*)
-	x_QDropSite* xret = new x_QDropSite((QWidget*)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QDropSite* xret = new x_QDropSite((QWidget*)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QDropSite(QWidget* x1) : QDropSite(x1) {
     }

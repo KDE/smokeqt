@@ -8,59 +8,59 @@ class x_QSqlField : public QSqlField {
 public:
     static void x_0(Smoke::Stack x) {
 	// QSqlField(const QString&, QVariant::Type)
-	x_QSqlField* xret = new x_QSqlField(*(const QString *)x[1].s_voidp,*(QVariant::Type *)x[2].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QSqlField* xret = new x_QSqlField(*(const QString *)x[1].s_class,*(QVariant::Type *)x[2].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QSqlField(const QString& x1, QVariant::Type x2) : QSqlField(x1, x2) {
     }
     static void x_1(Smoke::Stack x) {
 	// QSqlField(const QString&)
-	x_QSqlField* xret = new x_QSqlField(*(const QString *)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QSqlField* xret = new x_QSqlField(*(const QString *)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QSqlField(const QString& x1) : QSqlField(x1) {
     }
     static void x_2(Smoke::Stack x) {
 	// QSqlField()
 	x_QSqlField* xret = new x_QSqlField();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     x_QSqlField() : QSqlField() {
     }
     static void x_3(Smoke::Stack x) {
 	// QSqlField(const QSqlField&)
-	x_QSqlField* xret = new x_QSqlField(*(const QSqlField *)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QSqlField* xret = new x_QSqlField(*(const QSqlField *)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QSqlField(const QSqlField& x1) : QSqlField(x1) {
     }
     void x_4(Smoke::Stack x) {
 	// operator=(const QSqlField&)
-	QSqlField& xret = this->QSqlField::operator=(*(const QSqlField *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QSqlField& xret = this->QSqlField::operator=(*(const QSqlField *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_5(Smoke::Stack x) const {
 	// operator==(const QSqlField&)
-	bool xret = this->QSqlField::operator==(*(const QSqlField *)x[1].s_voidp);
+	bool xret = this->QSqlField::operator==(*(const QSqlField *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_6(Smoke::Stack x) {
 	// setValue(const QVariant&)
-	this->QSqlField::setValue(*(const QVariant *)x[1].s_voidp);
+	this->QSqlField::setValue(*(const QVariant *)x[1].s_class);
     }
     void x_7(Smoke::Stack x) const {
 	// value()
 	QVariant xret = this->QSqlField::value();
-	x[0].s_voidp = (void*)new QVariant(xret);
+	x[0].s_class = (void*)new QVariant(xret);
     }
     void x_8(Smoke::Stack x) {
 	// setName(const QString&)
-	this->QSqlField::setName(*(const QString *)x[1].s_voidp);
+	this->QSqlField::setName(*(const QString *)x[1].s_class);
     }
     void x_9(Smoke::Stack x) const {
 	// name()
 	QString xret = this->QSqlField::name();
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_10(Smoke::Stack x) {
 	// setNull()
@@ -91,11 +91,11 @@ public:
     void x_16(Smoke::Stack x) const {
 	// type()
 	QVariant::Type xret = this->QSqlField::type();
-	x[0].s_voidp = (void*)new QVariant::Type(xret);
+	x[0].s_class = (void*)new QVariant::Type(xret);
     }
     virtual void setName(const QString& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 7416, x)) return;
 	this->QSqlField::setName(x1);
     }
@@ -112,14 +112,14 @@ public:
     }
     virtual void setValue(const QVariant& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 7414, x)) return;
 	this->QSqlField::setValue(x1);
     }
     virtual QVariant value() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 7415, x)) {
-	    QVariant *xptr = (QVariant *)x[0].s_voidp;
+	    QVariant *xptr = (QVariant *)x[0].s_class;
 	    QVariant xret(*xptr);
 	    delete xptr;
 	    return xret;

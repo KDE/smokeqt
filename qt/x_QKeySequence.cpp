@@ -8,44 +8,44 @@ public:
     static void x_0(Smoke::Stack x) {
 	// QKeySequence()
 	x_QKeySequence* xret = new x_QKeySequence();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     x_QKeySequence() : QKeySequence() {
     }
     static void x_1(Smoke::Stack x) {
 	// QKeySequence(const QString&)
-	x_QKeySequence* xret = new x_QKeySequence(*(const QString *)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QKeySequence* xret = new x_QKeySequence(*(const QString *)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QKeySequence(const QString& x1) : QKeySequence(x1) {
     }
     static void x_2(Smoke::Stack x) {
 	// QKeySequence(int)
 	x_QKeySequence* xret = new x_QKeySequence((int)x[1].s_int);
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     x_QKeySequence(int x1) : QKeySequence(x1) {
     }
     static void x_3(Smoke::Stack x) {
 	// QKeySequence(const QKeySequence&)
-	x_QKeySequence* xret = new x_QKeySequence(*(const QKeySequence *)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QKeySequence* xret = new x_QKeySequence(*(const QKeySequence *)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QKeySequence(const QKeySequence& x1) : QKeySequence(x1) {
     }
     void x_4(Smoke::Stack x) {
 	// operator=(const QKeySequence&)
-	QKeySequence& xret = this->QKeySequence::operator=(*(const QKeySequence *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QKeySequence& xret = this->QKeySequence::operator=(*(const QKeySequence *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_5(Smoke::Stack x) const {
 	// operator==(const QKeySequence&)
-	bool xret = this->QKeySequence::operator==(*(const QKeySequence *)x[1].s_voidp);
+	bool xret = this->QKeySequence::operator==(*(const QKeySequence *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_6(Smoke::Stack x) const {
 	// operator!=(const QKeySequence&)
-	bool xret = this->QKeySequence::operator!=(*(const QKeySequence *)x[1].s_voidp);
+	bool xret = this->QKeySequence::operator!=(*(const QKeySequence *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     ~x_QKeySequence() {}

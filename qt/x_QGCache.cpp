@@ -6,35 +6,35 @@
 class x_QGCache : public QGCache {
 public:
     static void x_0(Smoke::Stack x) {
-	x[0].s_long = (long)QGCache::StringKey;
+	x[0].s_enum = (long)QGCache::StringKey;
     }
     static void x_1(Smoke::Stack x) {
-	x[0].s_long = (long)QGCache::AsciiKey;
+	x[0].s_enum = (long)QGCache::AsciiKey;
     }
     static void x_2(Smoke::Stack x) {
-	x[0].s_long = (long)QGCache::IntKey;
+	x[0].s_enum = (long)QGCache::IntKey;
     }
     static void x_3(Smoke::Stack x) {
-	x[0].s_long = (long)QGCache::PtrKey;
+	x[0].s_enum = (long)QGCache::PtrKey;
     }
     static void x_4(Smoke::Stack x) {
 	// QGCache(int, uint, QGCache::KeyType, bool, bool)
-	x_QGCache* xret = new x_QGCache((int)x[1].s_int,(uint)x[2].s_uint,*(QGCache::KeyType *)x[3].s_voidp,(bool)x[4].s_bool,(bool)x[5].s_bool);
-	x[0].s_voidp = (void*)xret;
+	x_QGCache* xret = new x_QGCache((int)x[1].s_int,(uint)x[2].s_uint,*(QGCache::KeyType *)x[3].s_class,(bool)x[4].s_bool,(bool)x[5].s_bool);
+	x[0].s_class = (void*)xret;
     }
     x_QGCache(int x1, uint x2, QGCache::KeyType x3, bool x4, bool x5) : QGCache(x1, x2, x3, x4, x5) {
     }
     static void x_5(Smoke::Stack x) {
 	// QGCache(const QGCache&)
-	x_QGCache* xret = new x_QGCache(*(const QGCache *)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QGCache* xret = new x_QGCache(*(const QGCache *)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QGCache(const QGCache& x1) : QGCache(x1) {
     }
     void x_6(Smoke::Stack x) {
 	// operator=(const QGCache&)
-	QGCache& xret = this->QGCache::operator=(*(const QGCache *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QGCache& xret = this->QGCache::operator=(*(const QGCache *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_7(Smoke::Stack x) const {
 	// count()
@@ -66,53 +66,53 @@ public:
     }
     void x_13(Smoke::Stack x) {
 	// insert_string(const QString&, QPtrCollection::Item, int, int)
-	bool xret = this->QGCache::insert_string(*(const QString *)x[1].s_voidp,*(QPtrCollection::Item *)x[2].s_voidp,(int)x[3].s_int,(int)x[4].s_int);
+	bool xret = this->QGCache::insert_string(*(const QString *)x[1].s_class,*(QPtrCollection::Item *)x[2].s_class,(int)x[3].s_int,(int)x[4].s_int);
 	x[0].s_bool = (bool)xret;
     }
     void x_14(Smoke::Stack x) {
 	// insert_other(const char*, QPtrCollection::Item, int, int)
-	bool xret = this->QGCache::insert_other((const char*)x[1].s_voidp,*(QPtrCollection::Item *)x[2].s_voidp,(int)x[3].s_int,(int)x[4].s_int);
+	bool xret = this->QGCache::insert_other((const char*)x[1].s_class,*(QPtrCollection::Item *)x[2].s_class,(int)x[3].s_int,(int)x[4].s_int);
 	x[0].s_bool = (bool)xret;
     }
     void x_15(Smoke::Stack x) {
 	// remove_string(const QString&)
-	bool xret = this->QGCache::remove_string(*(const QString *)x[1].s_voidp);
+	bool xret = this->QGCache::remove_string(*(const QString *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_16(Smoke::Stack x) {
 	// remove_other(const char*)
-	bool xret = this->QGCache::remove_other((const char*)x[1].s_voidp);
+	bool xret = this->QGCache::remove_other((const char*)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_17(Smoke::Stack x) {
 	// take_string(const QString&)
-	QPtrCollection::Item xret = this->QGCache::take_string(*(const QString *)x[1].s_voidp);
-	x[0].s_voidp = (void*)new QPtrCollection::Item(xret);
+	QPtrCollection::Item xret = this->QGCache::take_string(*(const QString *)x[1].s_class);
+	x[0].s_class = (void*)new QPtrCollection::Item(xret);
     }
     void x_18(Smoke::Stack x) {
 	// take_other(const char*)
-	QPtrCollection::Item xret = this->QGCache::take_other((const char*)x[1].s_voidp);
-	x[0].s_voidp = (void*)new QPtrCollection::Item(xret);
+	QPtrCollection::Item xret = this->QGCache::take_other((const char*)x[1].s_class);
+	x[0].s_class = (void*)new QPtrCollection::Item(xret);
     }
     void x_19(Smoke::Stack x) const {
 	// find_string(const QString&, bool)
-	QPtrCollection::Item xret = this->QGCache::find_string(*(const QString *)x[1].s_voidp,(bool)x[2].s_bool);
-	x[0].s_voidp = (void*)new QPtrCollection::Item(xret);
+	QPtrCollection::Item xret = this->QGCache::find_string(*(const QString *)x[1].s_class,(bool)x[2].s_bool);
+	x[0].s_class = (void*)new QPtrCollection::Item(xret);
     }
     void x_20(Smoke::Stack x) const {
 	// find_string(const QString&)
-	QPtrCollection::Item xret = this->QGCache::find_string(*(const QString *)x[1].s_voidp);
-	x[0].s_voidp = (void*)new QPtrCollection::Item(xret);
+	QPtrCollection::Item xret = this->QGCache::find_string(*(const QString *)x[1].s_class);
+	x[0].s_class = (void*)new QPtrCollection::Item(xret);
     }
     void x_21(Smoke::Stack x) const {
 	// find_other(const char*, bool)
-	QPtrCollection::Item xret = this->QGCache::find_other((const char*)x[1].s_voidp,(bool)x[2].s_bool);
-	x[0].s_voidp = (void*)new QPtrCollection::Item(xret);
+	QPtrCollection::Item xret = this->QGCache::find_other((const char*)x[1].s_class,(bool)x[2].s_bool);
+	x[0].s_class = (void*)new QPtrCollection::Item(xret);
     }
     void x_22(Smoke::Stack x) const {
 	// find_other(const char*)
-	QPtrCollection::Item xret = this->QGCache::find_other((const char*)x[1].s_voidp);
-	x[0].s_voidp = (void*)new QPtrCollection::Item(xret);
+	QPtrCollection::Item xret = this->QGCache::find_other((const char*)x[1].s_class);
+	x[0].s_class = (void*)new QPtrCollection::Item(xret);
     }
     void x_23(Smoke::Stack x) const {
 	// statistics()
@@ -130,16 +130,16 @@ public:
     }
     virtual void deleteItem(Item x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	call_method_abstract((void*)this, 6283, x);
 	return;
 	// ABSTRACT
     }
     virtual Item newItem(Item x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 6282, x)) {
-	    Item *xptr = (Item *)x[0].s_voidp;
+	    Item *xptr = (Item *)x[0].s_class;
 	    Item xret(*xptr);
 	    delete xptr;
 	    return xret;

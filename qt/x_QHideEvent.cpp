@@ -7,7 +7,7 @@ public:
     static void x_0(Smoke::Stack x) {
 	// QHideEvent()
 	x_QHideEvent* xret = new x_QHideEvent();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     x_QHideEvent() : QHideEvent() {
     }

@@ -1,3 +1,3 @@
 SUBDIRS = qt
 
-include_HEADERS = smoke_types.h
+include_HEADERS = smoke.h

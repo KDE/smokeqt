@@ -6,33 +6,33 @@ class x_QImageFormatType : public QImageFormatType {
 public:
     void x_0(Smoke::Stack x) {
 	// decoderFor(const uchar*, int)
-	QImageFormat* xret = this->QImageFormatType::decoderFor((const uchar*)x[1].s_voidp,(int)x[2].s_int);
-	x[0].s_voidp = (void*)xret;
+	QImageFormat* xret = this->QImageFormatType::decoderFor((const uchar*)x[1].s_class,(int)x[2].s_int);
+	x[0].s_class = (void*)xret;
     }
     void x_1(Smoke::Stack x) const {
 	// formatName()
 	const char* xret = this->QImageFormatType::formatName();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     static void x_2(Smoke::Stack x) {
 	// QImageFormatType()
 	x_QImageFormatType* xret = new x_QImageFormatType();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     x_QImageFormatType() : QImageFormatType() {
     }
     virtual QImageFormat* decoderFor(const uchar* x1, int x2) {
 	Smoke::StackItem x[3];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	x[2].s_int = (int)x2;
 	call_method_abstract((void*)this, 3812, x);
-	return (QImageFormat*)x[0].s_voidp;
+	return (QImageFormat*)x[0].s_class;
 	// ABSTRACT
     }
     virtual const char* formatName() const {
 	Smoke::StackItem x[1];
 	call_method_abstract((void*)this, 3813, x);
-	return (const char*)x[0].s_voidp;
+	return (const char*)x[0].s_class;
 	// ABSTRACT
     }
     ~x_QImageFormatType() {}

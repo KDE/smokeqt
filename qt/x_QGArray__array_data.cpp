@@ -7,7 +7,7 @@ public:
     static void x_0(Smoke::Stack x) {
 	// array_data()
 	x_QGArray__array_data* xret = new x_QGArray__array_data();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     x_QGArray__array_data() : QGArray::array_data() {
     }

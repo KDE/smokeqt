@@ -15,7 +15,7 @@ public:
     }
     void x_1(Smoke::Stack x) {
 	// changed(const QRect&)
-	xthis->QImageConsumer::changed(*(const QRect *)x[1].s_voidp);
+	xthis->QImageConsumer::changed(*(const QRect *)x[1].s_class);
     }
     void x_2(Smoke::Stack x) {
 	// frameDone()
@@ -23,7 +23,7 @@ public:
     }
     void x_3(Smoke::Stack x) {
 	// frameDone(const QPoint&, const QRect&)
-	xthis->QImageConsumer::frameDone(*(const QPoint *)x[1].s_voidp,*(const QRect *)x[2].s_voidp);
+	xthis->QImageConsumer::frameDone(*(const QPoint *)x[1].s_class,*(const QRect *)x[2].s_class);
     }
     void x_4(Smoke::Stack x) {
 	// setLooping(int)

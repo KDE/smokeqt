@@ -9,105 +9,105 @@
 class x_QBoxLayout : public QBoxLayout {
 public:
     static void x_0(Smoke::Stack x) {
-	x[0].s_long = (long)QBoxLayout::LeftToRight;
+	x[0].s_enum = (long)QBoxLayout::LeftToRight;
     }
     static void x_1(Smoke::Stack x) {
-	x[0].s_long = (long)QBoxLayout::RightToLeft;
+	x[0].s_enum = (long)QBoxLayout::RightToLeft;
     }
     static void x_2(Smoke::Stack x) {
-	x[0].s_long = (long)QBoxLayout::TopToBottom;
+	x[0].s_enum = (long)QBoxLayout::TopToBottom;
     }
     static void x_3(Smoke::Stack x) {
-	x[0].s_long = (long)QBoxLayout::BottomToTop;
+	x[0].s_enum = (long)QBoxLayout::BottomToTop;
     }
     static void x_4(Smoke::Stack x) {
-	x[0].s_long = (long)QBoxLayout::Down;
+	x[0].s_enum = (long)QBoxLayout::Down;
     }
     static void x_5(Smoke::Stack x) {
-	x[0].s_long = (long)QBoxLayout::Up;
+	x[0].s_enum = (long)QBoxLayout::Up;
     }
     static void x_6(Smoke::Stack x) {
 	// QBoxLayout(QWidget*, QBoxLayout::Direction, int, int, const char*)
-	x_QBoxLayout* xret = new x_QBoxLayout((QWidget*)x[1].s_voidp,*(QBoxLayout::Direction *)x[2].s_voidp,(int)x[3].s_int,(int)x[4].s_int,(const char*)x[5].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QBoxLayout* xret = new x_QBoxLayout((QWidget*)x[1].s_class,*(QBoxLayout::Direction *)x[2].s_class,(int)x[3].s_int,(int)x[4].s_int,(const char*)x[5].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QBoxLayout(QWidget* x1, QBoxLayout::Direction x2, int x3, int x4, const char* x5) : QBoxLayout(x1, x2, x3, x4, x5) {
     }
     static void x_7(Smoke::Stack x) {
 	// QBoxLayout(QWidget*, QBoxLayout::Direction, int, int)
-	x_QBoxLayout* xret = new x_QBoxLayout((QWidget*)x[1].s_voidp,*(QBoxLayout::Direction *)x[2].s_voidp,(int)x[3].s_int,(int)x[4].s_int);
-	x[0].s_voidp = (void*)xret;
+	x_QBoxLayout* xret = new x_QBoxLayout((QWidget*)x[1].s_class,*(QBoxLayout::Direction *)x[2].s_class,(int)x[3].s_int,(int)x[4].s_int);
+	x[0].s_class = (void*)xret;
     }
     x_QBoxLayout(QWidget* x1, QBoxLayout::Direction x2, int x3, int x4) : QBoxLayout(x1, x2, x3, x4) {
     }
     static void x_8(Smoke::Stack x) {
 	// QBoxLayout(QWidget*, QBoxLayout::Direction, int)
-	x_QBoxLayout* xret = new x_QBoxLayout((QWidget*)x[1].s_voidp,*(QBoxLayout::Direction *)x[2].s_voidp,(int)x[3].s_int);
-	x[0].s_voidp = (void*)xret;
+	x_QBoxLayout* xret = new x_QBoxLayout((QWidget*)x[1].s_class,*(QBoxLayout::Direction *)x[2].s_class,(int)x[3].s_int);
+	x[0].s_class = (void*)xret;
     }
     x_QBoxLayout(QWidget* x1, QBoxLayout::Direction x2, int x3) : QBoxLayout(x1, x2, x3) {
     }
     static void x_9(Smoke::Stack x) {
 	// QBoxLayout(QWidget*, QBoxLayout::Direction)
-	x_QBoxLayout* xret = new x_QBoxLayout((QWidget*)x[1].s_voidp,*(QBoxLayout::Direction *)x[2].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QBoxLayout* xret = new x_QBoxLayout((QWidget*)x[1].s_class,*(QBoxLayout::Direction *)x[2].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QBoxLayout(QWidget* x1, QBoxLayout::Direction x2) : QBoxLayout(x1, x2) {
     }
     static void x_10(Smoke::Stack x) {
 	// QBoxLayout(QLayout*, QBoxLayout::Direction, int, const char*)
-	x_QBoxLayout* xret = new x_QBoxLayout((QLayout*)x[1].s_voidp,*(QBoxLayout::Direction *)x[2].s_voidp,(int)x[3].s_int,(const char*)x[4].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QBoxLayout* xret = new x_QBoxLayout((QLayout*)x[1].s_class,*(QBoxLayout::Direction *)x[2].s_class,(int)x[3].s_int,(const char*)x[4].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QBoxLayout(QLayout* x1, QBoxLayout::Direction x2, int x3, const char* x4) : QBoxLayout(x1, x2, x3, x4) {
     }
     static void x_11(Smoke::Stack x) {
 	// QBoxLayout(QLayout*, QBoxLayout::Direction, int)
-	x_QBoxLayout* xret = new x_QBoxLayout((QLayout*)x[1].s_voidp,*(QBoxLayout::Direction *)x[2].s_voidp,(int)x[3].s_int);
-	x[0].s_voidp = (void*)xret;
+	x_QBoxLayout* xret = new x_QBoxLayout((QLayout*)x[1].s_class,*(QBoxLayout::Direction *)x[2].s_class,(int)x[3].s_int);
+	x[0].s_class = (void*)xret;
     }
     x_QBoxLayout(QLayout* x1, QBoxLayout::Direction x2, int x3) : QBoxLayout(x1, x2, x3) {
     }
     static void x_12(Smoke::Stack x) {
 	// QBoxLayout(QLayout*, QBoxLayout::Direction)
-	x_QBoxLayout* xret = new x_QBoxLayout((QLayout*)x[1].s_voidp,*(QBoxLayout::Direction *)x[2].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QBoxLayout* xret = new x_QBoxLayout((QLayout*)x[1].s_class,*(QBoxLayout::Direction *)x[2].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QBoxLayout(QLayout* x1, QBoxLayout::Direction x2) : QBoxLayout(x1, x2) {
     }
     static void x_13(Smoke::Stack x) {
 	// QBoxLayout(QBoxLayout::Direction, int, const char*)
-	x_QBoxLayout* xret = new x_QBoxLayout(*(QBoxLayout::Direction *)x[1].s_voidp,(int)x[2].s_int,(const char*)x[3].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QBoxLayout* xret = new x_QBoxLayout(*(QBoxLayout::Direction *)x[1].s_class,(int)x[2].s_int,(const char*)x[3].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QBoxLayout(QBoxLayout::Direction x1, int x2, const char* x3) : QBoxLayout(x1, x2, x3) {
     }
     static void x_14(Smoke::Stack x) {
 	// QBoxLayout(QBoxLayout::Direction, int)
-	x_QBoxLayout* xret = new x_QBoxLayout(*(QBoxLayout::Direction *)x[1].s_voidp,(int)x[2].s_int);
-	x[0].s_voidp = (void*)xret;
+	x_QBoxLayout* xret = new x_QBoxLayout(*(QBoxLayout::Direction *)x[1].s_class,(int)x[2].s_int);
+	x[0].s_class = (void*)xret;
     }
     x_QBoxLayout(QBoxLayout::Direction x1, int x2) : QBoxLayout(x1, x2) {
     }
     static void x_15(Smoke::Stack x) {
 	// QBoxLayout(QBoxLayout::Direction)
-	x_QBoxLayout* xret = new x_QBoxLayout(*(QBoxLayout::Direction *)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QBoxLayout* xret = new x_QBoxLayout(*(QBoxLayout::Direction *)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QBoxLayout(QBoxLayout::Direction x1) : QBoxLayout(x1) {
     }
     void x_16(Smoke::Stack x) {
 	// addItem(QLayoutItem*)
-	this->QBoxLayout::addItem((QLayoutItem*)x[1].s_voidp);
+	this->QBoxLayout::addItem((QLayoutItem*)x[1].s_class);
     }
     void x_17(Smoke::Stack x) const {
 	// direction()
 	QBoxLayout::Direction xret = this->QBoxLayout::direction();
-	x[0].s_voidp = (void*)new QBoxLayout::Direction(xret);
+	x[0].s_class = (void*)new QBoxLayout::Direction(xret);
     }
     void x_18(Smoke::Stack x) {
 	// setDirection(QBoxLayout::Direction)
-	this->QBoxLayout::setDirection(*(QBoxLayout::Direction *)x[1].s_voidp);
+	this->QBoxLayout::setDirection(*(QBoxLayout::Direction *)x[1].s_class);
     }
     void x_19(Smoke::Stack x) {
 	// addSpacing(int)
@@ -123,23 +123,23 @@ public:
     }
     void x_22(Smoke::Stack x) {
 	// addWidget(QWidget*, int, int)
-	this->QBoxLayout::addWidget((QWidget*)x[1].s_voidp,(int)x[2].s_int,(int)x[3].s_int);
+	this->QBoxLayout::addWidget((QWidget*)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int);
     }
     void x_23(Smoke::Stack x) {
 	// addWidget(QWidget*, int)
-	this->QBoxLayout::addWidget((QWidget*)x[1].s_voidp,(int)x[2].s_int);
+	this->QBoxLayout::addWidget((QWidget*)x[1].s_class,(int)x[2].s_int);
     }
     void x_24(Smoke::Stack x) {
 	// addWidget(QWidget*)
-	this->QBoxLayout::addWidget((QWidget*)x[1].s_voidp);
+	this->QBoxLayout::addWidget((QWidget*)x[1].s_class);
     }
     void x_25(Smoke::Stack x) {
 	// addLayout(QLayout*, int)
-	this->QBoxLayout::addLayout((QLayout*)x[1].s_voidp,(int)x[2].s_int);
+	this->QBoxLayout::addLayout((QLayout*)x[1].s_class,(int)x[2].s_int);
     }
     void x_26(Smoke::Stack x) {
 	// addLayout(QLayout*)
-	this->QBoxLayout::addLayout((QLayout*)x[1].s_voidp);
+	this->QBoxLayout::addLayout((QLayout*)x[1].s_class);
     }
     void x_27(Smoke::Stack x) {
 	// addStrut(int)
@@ -159,48 +159,48 @@ public:
     }
     void x_31(Smoke::Stack x) {
 	// insertWidget(int, QWidget*, int, int)
-	this->QBoxLayout::insertWidget((int)x[1].s_int,(QWidget*)x[2].s_voidp,(int)x[3].s_int,(int)x[4].s_int);
+	this->QBoxLayout::insertWidget((int)x[1].s_int,(QWidget*)x[2].s_class,(int)x[3].s_int,(int)x[4].s_int);
     }
     void x_32(Smoke::Stack x) {
 	// insertWidget(int, QWidget*, int)
-	this->QBoxLayout::insertWidget((int)x[1].s_int,(QWidget*)x[2].s_voidp,(int)x[3].s_int);
+	this->QBoxLayout::insertWidget((int)x[1].s_int,(QWidget*)x[2].s_class,(int)x[3].s_int);
     }
     void x_33(Smoke::Stack x) {
 	// insertWidget(int, QWidget*)
-	this->QBoxLayout::insertWidget((int)x[1].s_int,(QWidget*)x[2].s_voidp);
+	this->QBoxLayout::insertWidget((int)x[1].s_int,(QWidget*)x[2].s_class);
     }
     void x_34(Smoke::Stack x) {
 	// insertLayout(int, QLayout*, int)
-	this->QBoxLayout::insertLayout((int)x[1].s_int,(QLayout*)x[2].s_voidp,(int)x[3].s_int);
+	this->QBoxLayout::insertLayout((int)x[1].s_int,(QLayout*)x[2].s_class,(int)x[3].s_int);
     }
     void x_35(Smoke::Stack x) {
 	// insertLayout(int, QLayout*)
-	this->QBoxLayout::insertLayout((int)x[1].s_int,(QLayout*)x[2].s_voidp);
+	this->QBoxLayout::insertLayout((int)x[1].s_int,(QLayout*)x[2].s_class);
     }
     void x_36(Smoke::Stack x) {
 	// setStretchFactor(QWidget*, int)
-	bool xret = this->QBoxLayout::setStretchFactor((QWidget*)x[1].s_voidp,(int)x[2].s_int);
+	bool xret = this->QBoxLayout::setStretchFactor((QWidget*)x[1].s_class,(int)x[2].s_int);
 	x[0].s_bool = (bool)xret;
     }
     void x_37(Smoke::Stack x) {
 	// setStretchFactor(QLayout*, int)
-	bool xret = this->QBoxLayout::setStretchFactor((QLayout*)x[1].s_voidp,(int)x[2].s_int);
+	bool xret = this->QBoxLayout::setStretchFactor((QLayout*)x[1].s_class,(int)x[2].s_int);
 	x[0].s_bool = (bool)xret;
     }
     void x_38(Smoke::Stack x) const {
 	// sizeHint()
 	QSize xret = this->QBoxLayout::sizeHint();
-	x[0].s_voidp = (void*)new QSize(xret);
+	x[0].s_class = (void*)new QSize(xret);
     }
     void x_39(Smoke::Stack x) const {
 	// minimumSize()
 	QSize xret = this->QBoxLayout::minimumSize();
-	x[0].s_voidp = (void*)new QSize(xret);
+	x[0].s_class = (void*)new QSize(xret);
     }
     void x_40(Smoke::Stack x) const {
 	// maximumSize()
 	QSize xret = this->QBoxLayout::maximumSize();
-	x[0].s_voidp = (void*)new QSize(xret);
+	x[0].s_class = (void*)new QSize(xret);
     }
     void x_41(Smoke::Stack x) const {
 	// hasHeightForWidth()
@@ -215,7 +215,7 @@ public:
     void x_43(Smoke::Stack x) const {
 	// expanding()
 	QSizePolicy::ExpandData xret = this->QBoxLayout::expanding();
-	x[0].s_voidp = (void*)new QSizePolicy::ExpandData(xret);
+	x[0].s_class = (void*)new QSizePolicy::ExpandData(xret);
     }
     void x_44(Smoke::Stack x) {
 	// invalidate()
@@ -224,76 +224,76 @@ public:
     void x_45(Smoke::Stack x) {
 	// iterator()
 	QLayoutIterator xret = this->QBoxLayout::iterator();
-	x[0].s_voidp = (void*)new QLayoutIterator(xret);
+	x[0].s_class = (void*)new QLayoutIterator(xret);
     }
     void x_46(Smoke::Stack x) {
 	// setGeometry(const QRect&)
-	this->QBoxLayout::setGeometry(*(const QRect *)x[1].s_voidp);
+	this->QBoxLayout::setGeometry(*(const QRect *)x[1].s_class);
     }
     void x_47(Smoke::Stack x) {
 	// findWidget(QWidget*)
-	int xret = this->QBoxLayout::findWidget((QWidget*)x[1].s_voidp);
+	int xret = this->QBoxLayout::findWidget((QWidget*)x[1].s_class);
 	x[0].s_int = (int)xret;
     }
     void x_48(Smoke::Stack x) {
 	// insertItem(int, QLayoutItem*)
-	this->QBoxLayout::insertItem((int)x[1].s_int,(QLayoutItem*)x[2].s_voidp);
+	this->QBoxLayout::insertItem((int)x[1].s_int,(QLayoutItem*)x[2].s_class);
     }
     virtual void addItem(QLayoutItem* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 278, x)) return;
 	this->QBoxLayout::addItem(x1);
     }
     virtual bool checkConnectArgs(const char* x1, const QObject* x2, const char* x3) {
 	Smoke::StackItem x[4];
-	x[1].s_voidp = (void*)x1;
-	x[2].s_voidp = (void*)x2;
-	x[3].s_voidp = (void*)x3;
+	x[1].s_class = (void*)x1;
+	x[2].s_class = (void*)x2;
+	x[3].s_class = (void*)x3;
 	if(call_method((void*)this, 5469, x)) return (bool)x[0].s_bool;
 	return this->QObject::checkConnectArgs(x1, x2, x3);
     }
     virtual void childEvent(QChildEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 4103, x)) return;
 	this->QLayout::childEvent(x1);
     }
     virtual void connectNotify(const char* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5467, x)) return;
 	this->QObject::connectNotify(x1);
     }
     virtual void customEvent(QCustomEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5466, x)) return;
 	this->QObject::customEvent(x1);
     }
     virtual void disconnectNotify(const char* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5468, x)) return;
 	this->QObject::disconnectNotify(x1);
     }
     virtual bool event(QEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5404, x)) return (bool)x[0].s_bool;
 	return this->QObject::event(x1);
     }
     virtual bool eventFilter(QObject* x1, QEvent* x2) {
 	Smoke::StackItem x[3];
-	x[1].s_voidp = (void*)x1;
-	x[2].s_voidp = (void*)x2;
+	x[1].s_class = (void*)x1;
+	x[2].s_class = (void*)x2;
 	if(call_method((void*)this, 4102, x)) return (bool)x[0].s_bool;
 	return this->QLayout::eventFilter(x1, x2);
     }
     virtual QSizePolicy::ExpandData expanding() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 305, x)) {
-	    QSizePolicy::ExpandData *xptr = (QSizePolicy::ExpandData *)x[0].s_voidp;
+	    QSizePolicy::ExpandData *xptr = (QSizePolicy::ExpandData *)x[0].s_class;
 	    QSizePolicy::ExpandData xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -303,7 +303,7 @@ public:
     virtual QRect geometry() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 4084, x)) {
-	    QRect *xptr = (QRect *)x[0].s_voidp;
+	    QRect *xptr = (QRect *)x[0].s_class;
 	    QRect xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -323,7 +323,7 @@ public:
     }
     virtual void insertChild(QObject* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5427, x)) return;
 	this->QObject::insertChild(x1);
     }
@@ -340,7 +340,7 @@ public:
     virtual QLayoutIterator iterator() {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 307, x)) {
-	    QLayoutIterator *xptr = (QLayoutIterator *)x[0].s_voidp;
+	    QLayoutIterator *xptr = (QLayoutIterator *)x[0].s_class;
 	    QLayoutIterator xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -349,13 +349,13 @@ public:
     }
     virtual QLayout* layout() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 4098, x)) 	return (QLayout*)x[0].s_voidp;
+	if(call_method((void*)this, 4098, x)) 	return (QLayout*)x[0].s_class;
 	return this->QLayout::layout();
     }
     virtual QSize maximumSize() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 302, x)) {
-	    QSize *xptr = (QSize *)x[0].s_voidp;
+	    QSize *xptr = (QSize *)x[0].s_class;
 	    QSize xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -365,7 +365,7 @@ public:
     virtual QSize minimumSize() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 301, x)) {
-	    QSize *xptr = (QSize *)x[0].s_voidp;
+	    QSize *xptr = (QSize *)x[0].s_class;
 	    QSize xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -374,9 +374,9 @@ public:
     }
     virtual QVariant property(const char* x1) const {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5441, x)) {
-	    QVariant *xptr = (QVariant *)x[0].s_voidp;
+	    QVariant *xptr = (QVariant *)x[0].s_class;
 	    QVariant xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -385,7 +385,7 @@ public:
     }
     virtual void removeChild(QObject* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5428, x)) return;
 	this->QObject::removeChild(x1);
     }
@@ -403,7 +403,7 @@ public:
     }
     virtual void setGeometry(const QRect& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 308, x)) return;
 	this->QBoxLayout::setGeometry(x1);
     }
@@ -415,20 +415,20 @@ public:
     }
     virtual void setMenuBar(QMenuBar* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 4077, x)) return;
 	this->QLayout::setMenuBar(x1);
     }
     virtual void setName(const char* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5410, x)) return;
 	this->QObject::setName(x1);
     }
     virtual bool setProperty(const char* x1, const QVariant& x2) {
 	Smoke::StackItem x[3];
-	x[1].s_voidp = (void*)x1;
-	x[2].s_voidp = (void*)&x2;
+	x[1].s_class = (void*)x1;
+	x[2].s_class = (void*)&x2;
 	if(call_method((void*)this, 5440, x)) return (bool)x[0].s_bool;
 	return this->QObject::setProperty(x1, x2);
     }
@@ -441,7 +441,7 @@ public:
     virtual QSize sizeHint() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 300, x)) {
-	    QSize *xptr = (QSize *)x[0].s_voidp;
+	    QSize *xptr = (QSize *)x[0].s_class;
 	    QSize xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -450,18 +450,18 @@ public:
     }
     virtual QSpacerItem* spacerItem() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 4124, x)) 	return (QSpacerItem*)x[0].s_voidp;
+	if(call_method((void*)this, 4124, x)) 	return (QSpacerItem*)x[0].s_class;
 	return this->QLayoutItem::spacerItem();
     }
     virtual void timerEvent(QTimerEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5464, x)) return;
 	this->QObject::timerEvent(x1);
     }
     virtual QWidget* widget() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 4121, x)) 	return (QWidget*)x[0].s_voidp;
+	if(call_method((void*)this, 4121, x)) 	return (QWidget*)x[0].s_class;
 	return this->QLayoutItem::widget();
     }
     ~x_QBoxLayout() {}

@@ -7,36 +7,36 @@ public:
     static void x_0(Smoke::Stack x) {
 	// QDomNodeList()
 	x_QDomNodeList* xret = new x_QDomNodeList();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     x_QDomNodeList() : QDomNodeList() {
     }
     static void x_1(Smoke::Stack x) {
 	// QDomNodeList(const QDomNodeList&)
-	x_QDomNodeList* xret = new x_QDomNodeList(*(const QDomNodeList *)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QDomNodeList* xret = new x_QDomNodeList(*(const QDomNodeList *)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QDomNodeList(const QDomNodeList& x1) : QDomNodeList(x1) {
     }
     void x_2(Smoke::Stack x) {
 	// operator=(const QDomNodeList&)
-	QDomNodeList& xret = this->QDomNodeList::operator=(*(const QDomNodeList *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QDomNodeList& xret = this->QDomNodeList::operator=(*(const QDomNodeList *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_3(Smoke::Stack x) const {
 	// operator==(const QDomNodeList&)
-	bool xret = this->QDomNodeList::operator==(*(const QDomNodeList *)x[1].s_voidp);
+	bool xret = this->QDomNodeList::operator==(*(const QDomNodeList *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_4(Smoke::Stack x) const {
 	// operator!=(const QDomNodeList&)
-	bool xret = this->QDomNodeList::operator!=(*(const QDomNodeList *)x[1].s_voidp);
+	bool xret = this->QDomNodeList::operator!=(*(const QDomNodeList *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_5(Smoke::Stack x) const {
 	// item(int)
 	QDomNode xret = this->QDomNodeList::item((int)x[1].s_int);
-	x[0].s_voidp = (void*)new QDomNode(xret);
+	x[0].s_class = (void*)new QDomNode(xret);
     }
     void x_6(Smoke::Stack x) const {
 	// length()
@@ -52,7 +52,7 @@ public:
 	Smoke::StackItem x[2];
 	x[1].s_int = (int)x1;
 	if(call_method((void*)this, 2247, x)) {
-	    QDomNode *xptr = (QDomNode *)x[0].s_voidp;
+	    QDomNode *xptr = (QDomNode *)x[0].s_class;
 	    QDomNode xret(*xptr);
 	    delete xptr;
 	    return xret;

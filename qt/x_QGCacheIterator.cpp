@@ -7,22 +7,22 @@ class x_QGCacheIterator : public QGCacheIterator {
 public:
     static void x_0(Smoke::Stack x) {
 	// QGCacheIterator(const QGCache&)
-	x_QGCacheIterator* xret = new x_QGCacheIterator(*(const QGCache *)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QGCacheIterator* xret = new x_QGCacheIterator(*(const QGCache *)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QGCacheIterator(const QGCache& x1) : QGCacheIterator(x1) {
     }
     static void x_1(Smoke::Stack x) {
 	// QGCacheIterator(const QGCacheIterator&)
-	x_QGCacheIterator* xret = new x_QGCacheIterator(*(const QGCacheIterator *)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QGCacheIterator* xret = new x_QGCacheIterator(*(const QGCacheIterator *)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QGCacheIterator(const QGCacheIterator& x1) : QGCacheIterator(x1) {
     }
     void x_2(Smoke::Stack x) {
 	// operator=(const QGCacheIterator&)
-	QGCacheIterator& xret = this->QGCacheIterator::operator=(*(const QGCacheIterator *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QGCacheIterator& xret = this->QGCacheIterator::operator=(*(const QGCacheIterator *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_3(Smoke::Stack x) const {
 	// count()
@@ -42,27 +42,27 @@ public:
     void x_6(Smoke::Stack x) {
 	// toFirst()
 	QPtrCollection::Item xret = this->QGCacheIterator::toFirst();
-	x[0].s_voidp = (void*)new QPtrCollection::Item(xret);
+	x[0].s_class = (void*)new QPtrCollection::Item(xret);
     }
     void x_7(Smoke::Stack x) {
 	// toLast()
 	QPtrCollection::Item xret = this->QGCacheIterator::toLast();
-	x[0].s_voidp = (void*)new QPtrCollection::Item(xret);
+	x[0].s_class = (void*)new QPtrCollection::Item(xret);
     }
     void x_8(Smoke::Stack x) const {
 	// get()
 	QPtrCollection::Item xret = this->QGCacheIterator::get();
-	x[0].s_voidp = (void*)new QPtrCollection::Item(xret);
+	x[0].s_class = (void*)new QPtrCollection::Item(xret);
     }
     void x_9(Smoke::Stack x) const {
 	// getKeyString()
 	QString xret = this->QGCacheIterator::getKeyString();
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_10(Smoke::Stack x) const {
 	// getKeyAscii()
 	const char* xret = this->QGCacheIterator::getKeyAscii();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_11(Smoke::Stack x) const {
 	// getKeyInt()
@@ -72,27 +72,27 @@ public:
     void x_12(Smoke::Stack x) {
 	// operator()()
 	QPtrCollection::Item xret = this->QGCacheIterator::operator()();
-	x[0].s_voidp = (void*)new QPtrCollection::Item(xret);
+	x[0].s_class = (void*)new QPtrCollection::Item(xret);
     }
     void x_13(Smoke::Stack x) {
 	// operator++()
 	QPtrCollection::Item xret = this->QGCacheIterator::operator++();
-	x[0].s_voidp = (void*)new QPtrCollection::Item(xret);
+	x[0].s_class = (void*)new QPtrCollection::Item(xret);
     }
     void x_14(Smoke::Stack x) {
 	// operator+=(uint)
 	QPtrCollection::Item xret = this->QGCacheIterator::operator+=((uint)x[1].s_uint);
-	x[0].s_voidp = (void*)new QPtrCollection::Item(xret);
+	x[0].s_class = (void*)new QPtrCollection::Item(xret);
     }
     void x_15(Smoke::Stack x) {
 	// operator--()
 	QPtrCollection::Item xret = this->QGCacheIterator::operator--();
-	x[0].s_voidp = (void*)new QPtrCollection::Item(xret);
+	x[0].s_class = (void*)new QPtrCollection::Item(xret);
     }
     void x_16(Smoke::Stack x) {
 	// operator-=(uint)
 	QPtrCollection::Item xret = this->QGCacheIterator::operator-=((uint)x[1].s_uint);
-	x[0].s_voidp = (void*)new QPtrCollection::Item(xret);
+	x[0].s_class = (void*)new QPtrCollection::Item(xret);
     }
     ~x_QGCacheIterator() {}
 };

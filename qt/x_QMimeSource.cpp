@@ -8,29 +8,29 @@ public:
     static void x_0(Smoke::Stack x) {
 	// QMimeSource()
 	x_QMimeSource* xret = new x_QMimeSource();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     x_QMimeSource() : QMimeSource() {
     }
     void x_1(Smoke::Stack x) const {
 	// format(int)
 	const char* xret = this->QMimeSource::format((int)x[1].s_int);
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_2(Smoke::Stack x) const {
 	// format()
 	const char* xret = this->QMimeSource::format();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_3(Smoke::Stack x) const {
 	// provides(const char*)
-	bool xret = this->QMimeSource::provides((const char*)x[1].s_voidp);
+	bool xret = this->QMimeSource::provides((const char*)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_4(Smoke::Stack x) const {
 	// encodedData(const char*)
-	QByteArray xret = this->QMimeSource::encodedData((const char*)x[1].s_voidp);
-	x[0].s_voidp = (void*)new QByteArray(xret);
+	QByteArray xret = this->QMimeSource::encodedData((const char*)x[1].s_class);
+	x[0].s_class = (void*)new QByteArray(xret);
     }
     void x_5(Smoke::Stack x) const {
 	// serialNumber()
@@ -39,9 +39,9 @@ public:
     }
     virtual QByteArray encodedData(const char* x1) const {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	call_method_abstract((void*)this, 5114, x);
-	QByteArray *xptr = (QByteArray *)x[0].s_voidp;
+	QByteArray *xptr = (QByteArray *)x[0].s_class;
 	QByteArray xret(*xptr);
 	delete xptr;
 	return xret;
@@ -51,12 +51,12 @@ public:
 	Smoke::StackItem x[2];
 	x[1].s_int = (int)x1;
 	call_method_abstract((void*)this, 5111, x);
-	return (const char*)x[0].s_voidp;
+	return (const char*)x[0].s_class;
 	// ABSTRACT
     }
     virtual bool provides(const char* x1) const {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5113, x)) return (bool)x[0].s_bool;
 	return this->QMimeSource::provides(x1);
     }

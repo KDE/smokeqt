@@ -8,1498 +8,1498 @@ private:
 public:
     x_Qt(void *x) : xthis((Qt*)x) {}
     static void x_0(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::NoButton;
+	x[0].s_enum = (long)Qt::NoButton;
     }
     static void x_1(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::LeftButton;
+	x[0].s_enum = (long)Qt::LeftButton;
     }
     static void x_2(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::RightButton;
+	x[0].s_enum = (long)Qt::RightButton;
     }
     static void x_3(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::MidButton;
+	x[0].s_enum = (long)Qt::MidButton;
     }
     static void x_4(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::MouseButtonMask;
+	x[0].s_enum = (long)Qt::MouseButtonMask;
     }
     static void x_5(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::ShiftButton;
+	x[0].s_enum = (long)Qt::ShiftButton;
     }
     static void x_6(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::ControlButton;
+	x[0].s_enum = (long)Qt::ControlButton;
     }
     static void x_7(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::AltButton;
+	x[0].s_enum = (long)Qt::AltButton;
     }
     static void x_8(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::MetaButton;
+	x[0].s_enum = (long)Qt::MetaButton;
     }
     static void x_9(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::KeyButtonMask;
+	x[0].s_enum = (long)Qt::KeyButtonMask;
     }
     static void x_10(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Keypad;
+	x[0].s_enum = (long)Qt::Keypad;
     }
     static void x_11(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Horizontal;
+	x[0].s_enum = (long)Qt::Horizontal;
     }
     static void x_12(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Vertical;
+	x[0].s_enum = (long)Qt::Vertical;
     }
     static void x_13(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::AlignAuto;
+	x[0].s_enum = (long)Qt::AlignAuto;
     }
     static void x_14(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::AlignLeft;
+	x[0].s_enum = (long)Qt::AlignLeft;
     }
     static void x_15(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::AlignRight;
+	x[0].s_enum = (long)Qt::AlignRight;
     }
     static void x_16(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::AlignHCenter;
+	x[0].s_enum = (long)Qt::AlignHCenter;
     }
     static void x_17(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::AlignJustify;
+	x[0].s_enum = (long)Qt::AlignJustify;
     }
     static void x_18(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::AlignHorizontal_Mask;
+	x[0].s_enum = (long)Qt::AlignHorizontal_Mask;
     }
     static void x_19(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::AlignTop;
+	x[0].s_enum = (long)Qt::AlignTop;
     }
     static void x_20(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::AlignBottom;
+	x[0].s_enum = (long)Qt::AlignBottom;
     }
     static void x_21(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::AlignVCenter;
+	x[0].s_enum = (long)Qt::AlignVCenter;
     }
     static void x_22(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::AlignVertical_Mask;
+	x[0].s_enum = (long)Qt::AlignVertical_Mask;
     }
     static void x_23(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::AlignCenter;
+	x[0].s_enum = (long)Qt::AlignCenter;
     }
     static void x_24(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::SingleLine;
+	x[0].s_enum = (long)Qt::SingleLine;
     }
     static void x_25(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::DontClip;
+	x[0].s_enum = (long)Qt::DontClip;
     }
     static void x_26(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::ExpandTabs;
+	x[0].s_enum = (long)Qt::ExpandTabs;
     }
     static void x_27(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::ShowPrefix;
+	x[0].s_enum = (long)Qt::ShowPrefix;
     }
     static void x_28(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WordBreak;
+	x[0].s_enum = (long)Qt::WordBreak;
     }
     static void x_29(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::BreakAnywhere;
+	x[0].s_enum = (long)Qt::BreakAnywhere;
     }
     static void x_30(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::DontPrint;
+	x[0].s_enum = (long)Qt::DontPrint;
     }
     static void x_31(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::NoAccel;
+	x[0].s_enum = (long)Qt::NoAccel;
     }
     static void x_32(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WState_Created;
+	x[0].s_enum = (long)Qt::WState_Created;
     }
     static void x_33(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WState_Disabled;
+	x[0].s_enum = (long)Qt::WState_Disabled;
     }
     static void x_34(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WState_Visible;
+	x[0].s_enum = (long)Qt::WState_Visible;
     }
     static void x_35(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WState_ForceHide;
+	x[0].s_enum = (long)Qt::WState_ForceHide;
     }
     static void x_36(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WState_OwnCursor;
+	x[0].s_enum = (long)Qt::WState_OwnCursor;
     }
     static void x_37(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WState_MouseTracking;
+	x[0].s_enum = (long)Qt::WState_MouseTracking;
     }
     static void x_38(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WState_CompressKeys;
+	x[0].s_enum = (long)Qt::WState_CompressKeys;
     }
     static void x_39(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WState_BlockUpdates;
+	x[0].s_enum = (long)Qt::WState_BlockUpdates;
     }
     static void x_40(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WState_InPaintEvent;
+	x[0].s_enum = (long)Qt::WState_InPaintEvent;
     }
     static void x_41(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WState_Reparented;
+	x[0].s_enum = (long)Qt::WState_Reparented;
     }
     static void x_42(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WState_ConfigPending;
+	x[0].s_enum = (long)Qt::WState_ConfigPending;
     }
     static void x_43(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WState_Resized;
+	x[0].s_enum = (long)Qt::WState_Resized;
     }
     static void x_44(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WState_AutoMask;
+	x[0].s_enum = (long)Qt::WState_AutoMask;
     }
     static void x_45(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WState_Polished;
+	x[0].s_enum = (long)Qt::WState_Polished;
     }
     static void x_46(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WState_DND;
+	x[0].s_enum = (long)Qt::WState_DND;
     }
     static void x_47(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WState_Reserved0;
+	x[0].s_enum = (long)Qt::WState_Reserved0;
     }
     static void x_48(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WState_Reserved1;
+	x[0].s_enum = (long)Qt::WState_Reserved1;
     }
     static void x_49(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WState_Reserved2;
+	x[0].s_enum = (long)Qt::WState_Reserved2;
     }
     static void x_50(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WState_Reserved3;
+	x[0].s_enum = (long)Qt::WState_Reserved3;
     }
     static void x_51(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WState_Maximized;
+	x[0].s_enum = (long)Qt::WState_Maximized;
     }
     static void x_52(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WState_Minimized;
+	x[0].s_enum = (long)Qt::WState_Minimized;
     }
     static void x_53(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WState_ForceDisabled;
+	x[0].s_enum = (long)Qt::WState_ForceDisabled;
     }
     static void x_54(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WState_Exposed;
+	x[0].s_enum = (long)Qt::WState_Exposed;
     }
     static void x_55(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WState_HasMouse;
+	x[0].s_enum = (long)Qt::WState_HasMouse;
     }
     static void x_56(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WType_TopLevel;
+	x[0].s_enum = (long)Qt::WType_TopLevel;
     }
     static void x_57(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WType_Dialog;
+	x[0].s_enum = (long)Qt::WType_Dialog;
     }
     static void x_58(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WType_Popup;
+	x[0].s_enum = (long)Qt::WType_Popup;
     }
     static void x_59(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WType_Desktop;
+	x[0].s_enum = (long)Qt::WType_Desktop;
     }
     static void x_60(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WType_Mask;
+	x[0].s_enum = (long)Qt::WType_Mask;
     }
     static void x_61(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WStyle_Customize;
+	x[0].s_enum = (long)Qt::WStyle_Customize;
     }
     static void x_62(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WStyle_NormalBorder;
+	x[0].s_enum = (long)Qt::WStyle_NormalBorder;
     }
     static void x_63(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WStyle_DialogBorder;
+	x[0].s_enum = (long)Qt::WStyle_DialogBorder;
     }
     static void x_64(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WStyle_NoBorder;
+	x[0].s_enum = (long)Qt::WStyle_NoBorder;
     }
     static void x_65(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WStyle_Title;
+	x[0].s_enum = (long)Qt::WStyle_Title;
     }
     static void x_66(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WStyle_SysMenu;
+	x[0].s_enum = (long)Qt::WStyle_SysMenu;
     }
     static void x_67(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WStyle_Minimize;
+	x[0].s_enum = (long)Qt::WStyle_Minimize;
     }
     static void x_68(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WStyle_Maximize;
+	x[0].s_enum = (long)Qt::WStyle_Maximize;
     }
     static void x_69(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WStyle_MinMax;
+	x[0].s_enum = (long)Qt::WStyle_MinMax;
     }
     static void x_70(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WStyle_Tool;
+	x[0].s_enum = (long)Qt::WStyle_Tool;
     }
     static void x_71(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WStyle_StaysOnTop;
+	x[0].s_enum = (long)Qt::WStyle_StaysOnTop;
     }
     static void x_72(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WStyle_ContextHelp;
+	x[0].s_enum = (long)Qt::WStyle_ContextHelp;
     }
     static void x_73(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WStyle_Reserved;
+	x[0].s_enum = (long)Qt::WStyle_Reserved;
     }
     static void x_74(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WStyle_Mask;
+	x[0].s_enum = (long)Qt::WStyle_Mask;
     }
     static void x_75(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WDestructiveClose;
+	x[0].s_enum = (long)Qt::WDestructiveClose;
     }
     static void x_76(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WPaintDesktop;
+	x[0].s_enum = (long)Qt::WPaintDesktop;
     }
     static void x_77(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WPaintUnclipped;
+	x[0].s_enum = (long)Qt::WPaintUnclipped;
     }
     static void x_78(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WPaintClever;
+	x[0].s_enum = (long)Qt::WPaintClever;
     }
     static void x_79(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WResizeNoErase;
+	x[0].s_enum = (long)Qt::WResizeNoErase;
     }
     static void x_80(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WMouseNoMask;
+	x[0].s_enum = (long)Qt::WMouseNoMask;
     }
     static void x_81(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WStaticContents;
+	x[0].s_enum = (long)Qt::WStaticContents;
     }
     static void x_82(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WRepaintNoErase;
+	x[0].s_enum = (long)Qt::WRepaintNoErase;
     }
     static void x_83(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WX11BypassWM;
+	x[0].s_enum = (long)Qt::WX11BypassWM;
     }
     static void x_84(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WWinOwnDC;
+	x[0].s_enum = (long)Qt::WWinOwnDC;
     }
     static void x_85(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WGroupLeader;
+	x[0].s_enum = (long)Qt::WGroupLeader;
     }
     static void x_86(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WShowModal;
+	x[0].s_enum = (long)Qt::WShowModal;
     }
     static void x_87(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WNoMousePropagation;
+	x[0].s_enum = (long)Qt::WNoMousePropagation;
     }
     static void x_88(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WSubWindow;
+	x[0].s_enum = (long)Qt::WSubWindow;
     }
     static void x_89(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WNorthWestGravity;
+	x[0].s_enum = (long)Qt::WNorthWestGravity;
     }
     static void x_90(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WType_Modal;
+	x[0].s_enum = (long)Qt::WType_Modal;
     }
     static void x_91(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WStyle_Dialog;
+	x[0].s_enum = (long)Qt::WStyle_Dialog;
     }
     static void x_92(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WStyle_NoBorderEx;
+	x[0].s_enum = (long)Qt::WStyle_NoBorderEx;
     }
     static void x_93(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::ColorMode_Mask;
+	x[0].s_enum = (long)Qt::ColorMode_Mask;
     }
     static void x_94(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::AutoColor;
+	x[0].s_enum = (long)Qt::AutoColor;
     }
     static void x_95(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::ColorOnly;
+	x[0].s_enum = (long)Qt::ColorOnly;
     }
     static void x_96(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::MonoOnly;
+	x[0].s_enum = (long)Qt::MonoOnly;
     }
     static void x_97(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::AlphaDither_Mask;
+	x[0].s_enum = (long)Qt::AlphaDither_Mask;
     }
     static void x_98(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::ThresholdAlphaDither;
+	x[0].s_enum = (long)Qt::ThresholdAlphaDither;
     }
     static void x_99(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::OrderedAlphaDither;
+	x[0].s_enum = (long)Qt::OrderedAlphaDither;
     }
     static void x_100(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::DiffuseAlphaDither;
+	x[0].s_enum = (long)Qt::DiffuseAlphaDither;
     }
     static void x_101(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::NoAlpha;
+	x[0].s_enum = (long)Qt::NoAlpha;
     }
     static void x_102(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Dither_Mask;
+	x[0].s_enum = (long)Qt::Dither_Mask;
     }
     static void x_103(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::DiffuseDither;
+	x[0].s_enum = (long)Qt::DiffuseDither;
     }
     static void x_104(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::OrderedDither;
+	x[0].s_enum = (long)Qt::OrderedDither;
     }
     static void x_105(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::ThresholdDither;
+	x[0].s_enum = (long)Qt::ThresholdDither;
     }
     static void x_106(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::DitherMode_Mask;
+	x[0].s_enum = (long)Qt::DitherMode_Mask;
     }
     static void x_107(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::AutoDither;
+	x[0].s_enum = (long)Qt::AutoDither;
     }
     static void x_108(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::PreferDither;
+	x[0].s_enum = (long)Qt::PreferDither;
     }
     static void x_109(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::AvoidDither;
+	x[0].s_enum = (long)Qt::AvoidDither;
     }
     static void x_110(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::TransparentMode;
+	x[0].s_enum = (long)Qt::TransparentMode;
     }
     static void x_111(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::OpaqueMode;
+	x[0].s_enum = (long)Qt::OpaqueMode;
     }
     static void x_112(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::PixelUnit;
+	x[0].s_enum = (long)Qt::PixelUnit;
     }
     static void x_113(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::LoMetricUnit;
+	x[0].s_enum = (long)Qt::LoMetricUnit;
     }
     static void x_114(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::HiMetricUnit;
+	x[0].s_enum = (long)Qt::HiMetricUnit;
     }
     static void x_115(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::LoEnglishUnit;
+	x[0].s_enum = (long)Qt::LoEnglishUnit;
     }
     static void x_116(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::HiEnglishUnit;
+	x[0].s_enum = (long)Qt::HiEnglishUnit;
     }
     static void x_117(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::TwipsUnit;
+	x[0].s_enum = (long)Qt::TwipsUnit;
     }
     static void x_118(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WindowsStyle;
+	x[0].s_enum = (long)Qt::WindowsStyle;
     }
     static void x_119(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::MotifStyle;
+	x[0].s_enum = (long)Qt::MotifStyle;
     }
     static void x_120(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::SHIFT;
+	x[0].s_enum = (long)Qt::SHIFT;
     }
     static void x_121(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::CTRL;
+	x[0].s_enum = (long)Qt::CTRL;
     }
     static void x_122(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::ALT;
+	x[0].s_enum = (long)Qt::ALT;
     }
     static void x_123(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::MODIFIER_MASK;
+	x[0].s_enum = (long)Qt::MODIFIER_MASK;
     }
     static void x_124(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::UNICODE_ACCEL;
+	x[0].s_enum = (long)Qt::UNICODE_ACCEL;
     }
     static void x_125(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::ASCII_ACCEL;
+	x[0].s_enum = (long)Qt::ASCII_ACCEL;
     }
     static void x_126(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Escape;
+	x[0].s_enum = (long)Qt::Key_Escape;
     }
     static void x_127(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Tab;
+	x[0].s_enum = (long)Qt::Key_Tab;
     }
     static void x_128(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Backtab;
+	x[0].s_enum = (long)Qt::Key_Backtab;
     }
     static void x_129(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_BackTab;
+	x[0].s_enum = (long)Qt::Key_BackTab;
     }
     static void x_130(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Backspace;
+	x[0].s_enum = (long)Qt::Key_Backspace;
     }
     static void x_131(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_BackSpace;
+	x[0].s_enum = (long)Qt::Key_BackSpace;
     }
     static void x_132(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Return;
+	x[0].s_enum = (long)Qt::Key_Return;
     }
     static void x_133(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Enter;
+	x[0].s_enum = (long)Qt::Key_Enter;
     }
     static void x_134(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Insert;
+	x[0].s_enum = (long)Qt::Key_Insert;
     }
     static void x_135(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Delete;
+	x[0].s_enum = (long)Qt::Key_Delete;
     }
     static void x_136(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Pause;
+	x[0].s_enum = (long)Qt::Key_Pause;
     }
     static void x_137(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Print;
+	x[0].s_enum = (long)Qt::Key_Print;
     }
     static void x_138(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_SysReq;
+	x[0].s_enum = (long)Qt::Key_SysReq;
     }
     static void x_139(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Home;
+	x[0].s_enum = (long)Qt::Key_Home;
     }
     static void x_140(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_End;
+	x[0].s_enum = (long)Qt::Key_End;
     }
     static void x_141(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Left;
+	x[0].s_enum = (long)Qt::Key_Left;
     }
     static void x_142(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Up;
+	x[0].s_enum = (long)Qt::Key_Up;
     }
     static void x_143(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Right;
+	x[0].s_enum = (long)Qt::Key_Right;
     }
     static void x_144(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Down;
+	x[0].s_enum = (long)Qt::Key_Down;
     }
     static void x_145(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Prior;
+	x[0].s_enum = (long)Qt::Key_Prior;
     }
     static void x_146(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_PageUp;
+	x[0].s_enum = (long)Qt::Key_PageUp;
     }
     static void x_147(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Next;
+	x[0].s_enum = (long)Qt::Key_Next;
     }
     static void x_148(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_PageDown;
+	x[0].s_enum = (long)Qt::Key_PageDown;
     }
     static void x_149(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Shift;
+	x[0].s_enum = (long)Qt::Key_Shift;
     }
     static void x_150(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Control;
+	x[0].s_enum = (long)Qt::Key_Control;
     }
     static void x_151(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Meta;
+	x[0].s_enum = (long)Qt::Key_Meta;
     }
     static void x_152(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Alt;
+	x[0].s_enum = (long)Qt::Key_Alt;
     }
     static void x_153(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_CapsLock;
+	x[0].s_enum = (long)Qt::Key_CapsLock;
     }
     static void x_154(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_NumLock;
+	x[0].s_enum = (long)Qt::Key_NumLock;
     }
     static void x_155(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_ScrollLock;
+	x[0].s_enum = (long)Qt::Key_ScrollLock;
     }
     static void x_156(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_F1;
+	x[0].s_enum = (long)Qt::Key_F1;
     }
     static void x_157(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_F2;
+	x[0].s_enum = (long)Qt::Key_F2;
     }
     static void x_158(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_F3;
+	x[0].s_enum = (long)Qt::Key_F3;
     }
     static void x_159(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_F4;
+	x[0].s_enum = (long)Qt::Key_F4;
     }
     static void x_160(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_F5;
+	x[0].s_enum = (long)Qt::Key_F5;
     }
     static void x_161(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_F6;
+	x[0].s_enum = (long)Qt::Key_F6;
     }
     static void x_162(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_F7;
+	x[0].s_enum = (long)Qt::Key_F7;
     }
     static void x_163(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_F8;
+	x[0].s_enum = (long)Qt::Key_F8;
     }
     static void x_164(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_F9;
+	x[0].s_enum = (long)Qt::Key_F9;
     }
     static void x_165(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_F10;
+	x[0].s_enum = (long)Qt::Key_F10;
     }
     static void x_166(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_F11;
+	x[0].s_enum = (long)Qt::Key_F11;
     }
     static void x_167(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_F12;
+	x[0].s_enum = (long)Qt::Key_F12;
     }
     static void x_168(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_F13;
+	x[0].s_enum = (long)Qt::Key_F13;
     }
     static void x_169(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_F14;
+	x[0].s_enum = (long)Qt::Key_F14;
     }
     static void x_170(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_F15;
+	x[0].s_enum = (long)Qt::Key_F15;
     }
     static void x_171(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_F16;
+	x[0].s_enum = (long)Qt::Key_F16;
     }
     static void x_172(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_F17;
+	x[0].s_enum = (long)Qt::Key_F17;
     }
     static void x_173(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_F18;
+	x[0].s_enum = (long)Qt::Key_F18;
     }
     static void x_174(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_F19;
+	x[0].s_enum = (long)Qt::Key_F19;
     }
     static void x_175(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_F20;
+	x[0].s_enum = (long)Qt::Key_F20;
     }
     static void x_176(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_F21;
+	x[0].s_enum = (long)Qt::Key_F21;
     }
     static void x_177(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_F22;
+	x[0].s_enum = (long)Qt::Key_F22;
     }
     static void x_178(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_F23;
+	x[0].s_enum = (long)Qt::Key_F23;
     }
     static void x_179(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_F24;
+	x[0].s_enum = (long)Qt::Key_F24;
     }
     static void x_180(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_F25;
+	x[0].s_enum = (long)Qt::Key_F25;
     }
     static void x_181(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_F26;
+	x[0].s_enum = (long)Qt::Key_F26;
     }
     static void x_182(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_F27;
+	x[0].s_enum = (long)Qt::Key_F27;
     }
     static void x_183(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_F28;
+	x[0].s_enum = (long)Qt::Key_F28;
     }
     static void x_184(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_F29;
+	x[0].s_enum = (long)Qt::Key_F29;
     }
     static void x_185(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_F30;
+	x[0].s_enum = (long)Qt::Key_F30;
     }
     static void x_186(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_F31;
+	x[0].s_enum = (long)Qt::Key_F31;
     }
     static void x_187(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_F32;
+	x[0].s_enum = (long)Qt::Key_F32;
     }
     static void x_188(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_F33;
+	x[0].s_enum = (long)Qt::Key_F33;
     }
     static void x_189(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_F34;
+	x[0].s_enum = (long)Qt::Key_F34;
     }
     static void x_190(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_F35;
+	x[0].s_enum = (long)Qt::Key_F35;
     }
     static void x_191(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Super_L;
+	x[0].s_enum = (long)Qt::Key_Super_L;
     }
     static void x_192(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Super_R;
+	x[0].s_enum = (long)Qt::Key_Super_R;
     }
     static void x_193(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Menu;
+	x[0].s_enum = (long)Qt::Key_Menu;
     }
     static void x_194(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Hyper_L;
+	x[0].s_enum = (long)Qt::Key_Hyper_L;
     }
     static void x_195(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Hyper_R;
+	x[0].s_enum = (long)Qt::Key_Hyper_R;
     }
     static void x_196(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Help;
+	x[0].s_enum = (long)Qt::Key_Help;
     }
     static void x_197(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Direction_L;
+	x[0].s_enum = (long)Qt::Key_Direction_L;
     }
     static void x_198(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Direction_R;
+	x[0].s_enum = (long)Qt::Key_Direction_R;
     }
     static void x_199(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Space;
+	x[0].s_enum = (long)Qt::Key_Space;
     }
     static void x_200(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Any;
+	x[0].s_enum = (long)Qt::Key_Any;
     }
     static void x_201(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Exclam;
+	x[0].s_enum = (long)Qt::Key_Exclam;
     }
     static void x_202(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_QuoteDbl;
+	x[0].s_enum = (long)Qt::Key_QuoteDbl;
     }
     static void x_203(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_NumberSign;
+	x[0].s_enum = (long)Qt::Key_NumberSign;
     }
     static void x_204(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Dollar;
+	x[0].s_enum = (long)Qt::Key_Dollar;
     }
     static void x_205(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Percent;
+	x[0].s_enum = (long)Qt::Key_Percent;
     }
     static void x_206(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Ampersand;
+	x[0].s_enum = (long)Qt::Key_Ampersand;
     }
     static void x_207(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Apostrophe;
+	x[0].s_enum = (long)Qt::Key_Apostrophe;
     }
     static void x_208(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_ParenLeft;
+	x[0].s_enum = (long)Qt::Key_ParenLeft;
     }
     static void x_209(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_ParenRight;
+	x[0].s_enum = (long)Qt::Key_ParenRight;
     }
     static void x_210(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Asterisk;
+	x[0].s_enum = (long)Qt::Key_Asterisk;
     }
     static void x_211(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Plus;
+	x[0].s_enum = (long)Qt::Key_Plus;
     }
     static void x_212(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Comma;
+	x[0].s_enum = (long)Qt::Key_Comma;
     }
     static void x_213(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Minus;
+	x[0].s_enum = (long)Qt::Key_Minus;
     }
     static void x_214(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Period;
+	x[0].s_enum = (long)Qt::Key_Period;
     }
     static void x_215(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Slash;
+	x[0].s_enum = (long)Qt::Key_Slash;
     }
     static void x_216(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_0;
+	x[0].s_enum = (long)Qt::Key_0;
     }
     static void x_217(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_1;
+	x[0].s_enum = (long)Qt::Key_1;
     }
     static void x_218(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_2;
+	x[0].s_enum = (long)Qt::Key_2;
     }
     static void x_219(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_3;
+	x[0].s_enum = (long)Qt::Key_3;
     }
     static void x_220(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_4;
+	x[0].s_enum = (long)Qt::Key_4;
     }
     static void x_221(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_5;
+	x[0].s_enum = (long)Qt::Key_5;
     }
     static void x_222(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_6;
+	x[0].s_enum = (long)Qt::Key_6;
     }
     static void x_223(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_7;
+	x[0].s_enum = (long)Qt::Key_7;
     }
     static void x_224(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_8;
+	x[0].s_enum = (long)Qt::Key_8;
     }
     static void x_225(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_9;
+	x[0].s_enum = (long)Qt::Key_9;
     }
     static void x_226(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Colon;
+	x[0].s_enum = (long)Qt::Key_Colon;
     }
     static void x_227(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Semicolon;
+	x[0].s_enum = (long)Qt::Key_Semicolon;
     }
     static void x_228(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Less;
+	x[0].s_enum = (long)Qt::Key_Less;
     }
     static void x_229(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Equal;
+	x[0].s_enum = (long)Qt::Key_Equal;
     }
     static void x_230(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Greater;
+	x[0].s_enum = (long)Qt::Key_Greater;
     }
     static void x_231(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Question;
+	x[0].s_enum = (long)Qt::Key_Question;
     }
     static void x_232(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_At;
+	x[0].s_enum = (long)Qt::Key_At;
     }
     static void x_233(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_A;
+	x[0].s_enum = (long)Qt::Key_A;
     }
     static void x_234(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_B;
+	x[0].s_enum = (long)Qt::Key_B;
     }
     static void x_235(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_C;
+	x[0].s_enum = (long)Qt::Key_C;
     }
     static void x_236(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_D;
+	x[0].s_enum = (long)Qt::Key_D;
     }
     static void x_237(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_E;
+	x[0].s_enum = (long)Qt::Key_E;
     }
     static void x_238(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_F;
+	x[0].s_enum = (long)Qt::Key_F;
     }
     static void x_239(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_G;
+	x[0].s_enum = (long)Qt::Key_G;
     }
     static void x_240(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_H;
+	x[0].s_enum = (long)Qt::Key_H;
     }
     static void x_241(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_I;
+	x[0].s_enum = (long)Qt::Key_I;
     }
     static void x_242(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_J;
+	x[0].s_enum = (long)Qt::Key_J;
     }
     static void x_243(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_K;
+	x[0].s_enum = (long)Qt::Key_K;
     }
     static void x_244(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_L;
+	x[0].s_enum = (long)Qt::Key_L;
     }
     static void x_245(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_M;
+	x[0].s_enum = (long)Qt::Key_M;
     }
     static void x_246(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_N;
+	x[0].s_enum = (long)Qt::Key_N;
     }
     static void x_247(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_O;
+	x[0].s_enum = (long)Qt::Key_O;
     }
     static void x_248(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_P;
+	x[0].s_enum = (long)Qt::Key_P;
     }
     static void x_249(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Q;
+	x[0].s_enum = (long)Qt::Key_Q;
     }
     static void x_250(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_R;
+	x[0].s_enum = (long)Qt::Key_R;
     }
     static void x_251(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_S;
+	x[0].s_enum = (long)Qt::Key_S;
     }
     static void x_252(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_T;
+	x[0].s_enum = (long)Qt::Key_T;
     }
     static void x_253(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_U;
+	x[0].s_enum = (long)Qt::Key_U;
     }
     static void x_254(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_V;
+	x[0].s_enum = (long)Qt::Key_V;
     }
     static void x_255(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_W;
+	x[0].s_enum = (long)Qt::Key_W;
     }
     static void x_256(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_X;
+	x[0].s_enum = (long)Qt::Key_X;
     }
     static void x_257(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Y;
+	x[0].s_enum = (long)Qt::Key_Y;
     }
     static void x_258(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Z;
+	x[0].s_enum = (long)Qt::Key_Z;
     }
     static void x_259(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_BracketLeft;
+	x[0].s_enum = (long)Qt::Key_BracketLeft;
     }
     static void x_260(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Backslash;
+	x[0].s_enum = (long)Qt::Key_Backslash;
     }
     static void x_261(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_BracketRight;
+	x[0].s_enum = (long)Qt::Key_BracketRight;
     }
     static void x_262(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_AsciiCircum;
+	x[0].s_enum = (long)Qt::Key_AsciiCircum;
     }
     static void x_263(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Underscore;
+	x[0].s_enum = (long)Qt::Key_Underscore;
     }
     static void x_264(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_QuoteLeft;
+	x[0].s_enum = (long)Qt::Key_QuoteLeft;
     }
     static void x_265(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_BraceLeft;
+	x[0].s_enum = (long)Qt::Key_BraceLeft;
     }
     static void x_266(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Bar;
+	x[0].s_enum = (long)Qt::Key_Bar;
     }
     static void x_267(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_BraceRight;
+	x[0].s_enum = (long)Qt::Key_BraceRight;
     }
     static void x_268(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_AsciiTilde;
+	x[0].s_enum = (long)Qt::Key_AsciiTilde;
     }
     static void x_269(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_nobreakspace;
+	x[0].s_enum = (long)Qt::Key_nobreakspace;
     }
     static void x_270(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_exclamdown;
+	x[0].s_enum = (long)Qt::Key_exclamdown;
     }
     static void x_271(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_cent;
+	x[0].s_enum = (long)Qt::Key_cent;
     }
     static void x_272(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_sterling;
+	x[0].s_enum = (long)Qt::Key_sterling;
     }
     static void x_273(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_currency;
+	x[0].s_enum = (long)Qt::Key_currency;
     }
     static void x_274(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_yen;
+	x[0].s_enum = (long)Qt::Key_yen;
     }
     static void x_275(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_brokenbar;
+	x[0].s_enum = (long)Qt::Key_brokenbar;
     }
     static void x_276(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_section;
+	x[0].s_enum = (long)Qt::Key_section;
     }
     static void x_277(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_diaeresis;
+	x[0].s_enum = (long)Qt::Key_diaeresis;
     }
     static void x_278(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_copyright;
+	x[0].s_enum = (long)Qt::Key_copyright;
     }
     static void x_279(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_ordfeminine;
+	x[0].s_enum = (long)Qt::Key_ordfeminine;
     }
     static void x_280(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_guillemotleft;
+	x[0].s_enum = (long)Qt::Key_guillemotleft;
     }
     static void x_281(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_notsign;
+	x[0].s_enum = (long)Qt::Key_notsign;
     }
     static void x_282(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_hyphen;
+	x[0].s_enum = (long)Qt::Key_hyphen;
     }
     static void x_283(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_registered;
+	x[0].s_enum = (long)Qt::Key_registered;
     }
     static void x_284(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_macron;
+	x[0].s_enum = (long)Qt::Key_macron;
     }
     static void x_285(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_degree;
+	x[0].s_enum = (long)Qt::Key_degree;
     }
     static void x_286(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_plusminus;
+	x[0].s_enum = (long)Qt::Key_plusminus;
     }
     static void x_287(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_twosuperior;
+	x[0].s_enum = (long)Qt::Key_twosuperior;
     }
     static void x_288(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_threesuperior;
+	x[0].s_enum = (long)Qt::Key_threesuperior;
     }
     static void x_289(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_acute;
+	x[0].s_enum = (long)Qt::Key_acute;
     }
     static void x_290(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_mu;
+	x[0].s_enum = (long)Qt::Key_mu;
     }
     static void x_291(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_paragraph;
+	x[0].s_enum = (long)Qt::Key_paragraph;
     }
     static void x_292(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_periodcentered;
+	x[0].s_enum = (long)Qt::Key_periodcentered;
     }
     static void x_293(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_cedilla;
+	x[0].s_enum = (long)Qt::Key_cedilla;
     }
     static void x_294(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_onesuperior;
+	x[0].s_enum = (long)Qt::Key_onesuperior;
     }
     static void x_295(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_masculine;
+	x[0].s_enum = (long)Qt::Key_masculine;
     }
     static void x_296(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_guillemotright;
+	x[0].s_enum = (long)Qt::Key_guillemotright;
     }
     static void x_297(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_onequarter;
+	x[0].s_enum = (long)Qt::Key_onequarter;
     }
     static void x_298(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_onehalf;
+	x[0].s_enum = (long)Qt::Key_onehalf;
     }
     static void x_299(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_threequarters;
+	x[0].s_enum = (long)Qt::Key_threequarters;
     }
     static void x_300(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_questiondown;
+	x[0].s_enum = (long)Qt::Key_questiondown;
     }
     static void x_301(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Agrave;
+	x[0].s_enum = (long)Qt::Key_Agrave;
     }
     static void x_302(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Aacute;
+	x[0].s_enum = (long)Qt::Key_Aacute;
     }
     static void x_303(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Acircumflex;
+	x[0].s_enum = (long)Qt::Key_Acircumflex;
     }
     static void x_304(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Atilde;
+	x[0].s_enum = (long)Qt::Key_Atilde;
     }
     static void x_305(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Adiaeresis;
+	x[0].s_enum = (long)Qt::Key_Adiaeresis;
     }
     static void x_306(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Aring;
+	x[0].s_enum = (long)Qt::Key_Aring;
     }
     static void x_307(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_AE;
+	x[0].s_enum = (long)Qt::Key_AE;
     }
     static void x_308(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Ccedilla;
+	x[0].s_enum = (long)Qt::Key_Ccedilla;
     }
     static void x_309(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Egrave;
+	x[0].s_enum = (long)Qt::Key_Egrave;
     }
     static void x_310(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Eacute;
+	x[0].s_enum = (long)Qt::Key_Eacute;
     }
     static void x_311(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Ecircumflex;
+	x[0].s_enum = (long)Qt::Key_Ecircumflex;
     }
     static void x_312(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Ediaeresis;
+	x[0].s_enum = (long)Qt::Key_Ediaeresis;
     }
     static void x_313(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Igrave;
+	x[0].s_enum = (long)Qt::Key_Igrave;
     }
     static void x_314(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Iacute;
+	x[0].s_enum = (long)Qt::Key_Iacute;
     }
     static void x_315(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Icircumflex;
+	x[0].s_enum = (long)Qt::Key_Icircumflex;
     }
     static void x_316(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Idiaeresis;
+	x[0].s_enum = (long)Qt::Key_Idiaeresis;
     }
     static void x_317(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_ETH;
+	x[0].s_enum = (long)Qt::Key_ETH;
     }
     static void x_318(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Ntilde;
+	x[0].s_enum = (long)Qt::Key_Ntilde;
     }
     static void x_319(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Ograve;
+	x[0].s_enum = (long)Qt::Key_Ograve;
     }
     static void x_320(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Oacute;
+	x[0].s_enum = (long)Qt::Key_Oacute;
     }
     static void x_321(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Ocircumflex;
+	x[0].s_enum = (long)Qt::Key_Ocircumflex;
     }
     static void x_322(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Otilde;
+	x[0].s_enum = (long)Qt::Key_Otilde;
     }
     static void x_323(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Odiaeresis;
+	x[0].s_enum = (long)Qt::Key_Odiaeresis;
     }
     static void x_324(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_multiply;
+	x[0].s_enum = (long)Qt::Key_multiply;
     }
     static void x_325(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Ooblique;
+	x[0].s_enum = (long)Qt::Key_Ooblique;
     }
     static void x_326(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Ugrave;
+	x[0].s_enum = (long)Qt::Key_Ugrave;
     }
     static void x_327(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Uacute;
+	x[0].s_enum = (long)Qt::Key_Uacute;
     }
     static void x_328(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Ucircumflex;
+	x[0].s_enum = (long)Qt::Key_Ucircumflex;
     }
     static void x_329(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Udiaeresis;
+	x[0].s_enum = (long)Qt::Key_Udiaeresis;
     }
     static void x_330(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_Yacute;
+	x[0].s_enum = (long)Qt::Key_Yacute;
     }
     static void x_331(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_THORN;
+	x[0].s_enum = (long)Qt::Key_THORN;
     }
     static void x_332(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_ssharp;
+	x[0].s_enum = (long)Qt::Key_ssharp;
     }
     static void x_333(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_agrave;
+	x[0].s_enum = (long)Qt::Key_agrave;
     }
     static void x_334(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_aacute;
+	x[0].s_enum = (long)Qt::Key_aacute;
     }
     static void x_335(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_acircumflex;
+	x[0].s_enum = (long)Qt::Key_acircumflex;
     }
     static void x_336(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_atilde;
+	x[0].s_enum = (long)Qt::Key_atilde;
     }
     static void x_337(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_adiaeresis;
+	x[0].s_enum = (long)Qt::Key_adiaeresis;
     }
     static void x_338(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_aring;
+	x[0].s_enum = (long)Qt::Key_aring;
     }
     static void x_339(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_ae;
+	x[0].s_enum = (long)Qt::Key_ae;
     }
     static void x_340(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_ccedilla;
+	x[0].s_enum = (long)Qt::Key_ccedilla;
     }
     static void x_341(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_egrave;
+	x[0].s_enum = (long)Qt::Key_egrave;
     }
     static void x_342(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_eacute;
+	x[0].s_enum = (long)Qt::Key_eacute;
     }
     static void x_343(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_ecircumflex;
+	x[0].s_enum = (long)Qt::Key_ecircumflex;
     }
     static void x_344(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_ediaeresis;
+	x[0].s_enum = (long)Qt::Key_ediaeresis;
     }
     static void x_345(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_igrave;
+	x[0].s_enum = (long)Qt::Key_igrave;
     }
     static void x_346(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_iacute;
+	x[0].s_enum = (long)Qt::Key_iacute;
     }
     static void x_347(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_icircumflex;
+	x[0].s_enum = (long)Qt::Key_icircumflex;
     }
     static void x_348(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_idiaeresis;
+	x[0].s_enum = (long)Qt::Key_idiaeresis;
     }
     static void x_349(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_eth;
+	x[0].s_enum = (long)Qt::Key_eth;
     }
     static void x_350(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_ntilde;
+	x[0].s_enum = (long)Qt::Key_ntilde;
     }
     static void x_351(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_ograve;
+	x[0].s_enum = (long)Qt::Key_ograve;
     }
     static void x_352(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_oacute;
+	x[0].s_enum = (long)Qt::Key_oacute;
     }
     static void x_353(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_ocircumflex;
+	x[0].s_enum = (long)Qt::Key_ocircumflex;
     }
     static void x_354(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_otilde;
+	x[0].s_enum = (long)Qt::Key_otilde;
     }
     static void x_355(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_odiaeresis;
+	x[0].s_enum = (long)Qt::Key_odiaeresis;
     }
     static void x_356(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_division;
+	x[0].s_enum = (long)Qt::Key_division;
     }
     static void x_357(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_oslash;
+	x[0].s_enum = (long)Qt::Key_oslash;
     }
     static void x_358(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_ugrave;
+	x[0].s_enum = (long)Qt::Key_ugrave;
     }
     static void x_359(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_uacute;
+	x[0].s_enum = (long)Qt::Key_uacute;
     }
     static void x_360(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_ucircumflex;
+	x[0].s_enum = (long)Qt::Key_ucircumflex;
     }
     static void x_361(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_udiaeresis;
+	x[0].s_enum = (long)Qt::Key_udiaeresis;
     }
     static void x_362(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_yacute;
+	x[0].s_enum = (long)Qt::Key_yacute;
     }
     static void x_363(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_thorn;
+	x[0].s_enum = (long)Qt::Key_thorn;
     }
     static void x_364(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_ydiaeresis;
+	x[0].s_enum = (long)Qt::Key_ydiaeresis;
     }
     static void x_365(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Key_unknown;
+	x[0].s_enum = (long)Qt::Key_unknown;
     }
     static void x_366(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::UpArrow;
+	x[0].s_enum = (long)Qt::UpArrow;
     }
     static void x_367(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::DownArrow;
+	x[0].s_enum = (long)Qt::DownArrow;
     }
     static void x_368(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::LeftArrow;
+	x[0].s_enum = (long)Qt::LeftArrow;
     }
     static void x_369(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::RightArrow;
+	x[0].s_enum = (long)Qt::RightArrow;
     }
     static void x_370(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::CopyROP;
+	x[0].s_enum = (long)Qt::CopyROP;
     }
     static void x_371(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::OrROP;
+	x[0].s_enum = (long)Qt::OrROP;
     }
     static void x_372(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::XorROP;
+	x[0].s_enum = (long)Qt::XorROP;
     }
     static void x_373(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::NotAndROP;
+	x[0].s_enum = (long)Qt::NotAndROP;
     }
     static void x_374(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::EraseROP;
+	x[0].s_enum = (long)Qt::EraseROP;
     }
     static void x_375(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::NotCopyROP;
+	x[0].s_enum = (long)Qt::NotCopyROP;
     }
     static void x_376(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::NotOrROP;
+	x[0].s_enum = (long)Qt::NotOrROP;
     }
     static void x_377(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::NotXorROP;
+	x[0].s_enum = (long)Qt::NotXorROP;
     }
     static void x_378(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::AndROP;
+	x[0].s_enum = (long)Qt::AndROP;
     }
     static void x_379(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::NotEraseROP;
+	x[0].s_enum = (long)Qt::NotEraseROP;
     }
     static void x_380(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::NotROP;
+	x[0].s_enum = (long)Qt::NotROP;
     }
     static void x_381(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::ClearROP;
+	x[0].s_enum = (long)Qt::ClearROP;
     }
     static void x_382(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::SetROP;
+	x[0].s_enum = (long)Qt::SetROP;
     }
     static void x_383(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::NopROP;
+	x[0].s_enum = (long)Qt::NopROP;
     }
     static void x_384(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::AndNotROP;
+	x[0].s_enum = (long)Qt::AndNotROP;
     }
     static void x_385(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::OrNotROP;
+	x[0].s_enum = (long)Qt::OrNotROP;
     }
     static void x_386(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::NandROP;
+	x[0].s_enum = (long)Qt::NandROP;
     }
     static void x_387(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::NorROP;
+	x[0].s_enum = (long)Qt::NorROP;
     }
     static void x_388(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::LastROP;
+	x[0].s_enum = (long)Qt::LastROP;
     }
     static void x_389(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::NoPen;
+	x[0].s_enum = (long)Qt::NoPen;
     }
     static void x_390(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::SolidLine;
+	x[0].s_enum = (long)Qt::SolidLine;
     }
     static void x_391(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::DashLine;
+	x[0].s_enum = (long)Qt::DashLine;
     }
     static void x_392(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::DotLine;
+	x[0].s_enum = (long)Qt::DotLine;
     }
     static void x_393(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::DashDotLine;
+	x[0].s_enum = (long)Qt::DashDotLine;
     }
     static void x_394(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::DashDotDotLine;
+	x[0].s_enum = (long)Qt::DashDotDotLine;
     }
     static void x_395(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::MPenStyle;
+	x[0].s_enum = (long)Qt::MPenStyle;
     }
     static void x_396(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::FlatCap;
+	x[0].s_enum = (long)Qt::FlatCap;
     }
     static void x_397(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::SquareCap;
+	x[0].s_enum = (long)Qt::SquareCap;
     }
     static void x_398(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::RoundCap;
+	x[0].s_enum = (long)Qt::RoundCap;
     }
     static void x_399(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::MPenCapStyle;
+	x[0].s_enum = (long)Qt::MPenCapStyle;
     }
     static void x_400(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::MiterJoin;
+	x[0].s_enum = (long)Qt::MiterJoin;
     }
     static void x_401(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::BevelJoin;
+	x[0].s_enum = (long)Qt::BevelJoin;
     }
     static void x_402(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::RoundJoin;
+	x[0].s_enum = (long)Qt::RoundJoin;
     }
     static void x_403(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::MPenJoinStyle;
+	x[0].s_enum = (long)Qt::MPenJoinStyle;
     }
     static void x_404(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::NoBrush;
+	x[0].s_enum = (long)Qt::NoBrush;
     }
     static void x_405(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::SolidPattern;
+	x[0].s_enum = (long)Qt::SolidPattern;
     }
     static void x_406(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Dense1Pattern;
+	x[0].s_enum = (long)Qt::Dense1Pattern;
     }
     static void x_407(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Dense2Pattern;
+	x[0].s_enum = (long)Qt::Dense2Pattern;
     }
     static void x_408(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Dense3Pattern;
+	x[0].s_enum = (long)Qt::Dense3Pattern;
     }
     static void x_409(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Dense4Pattern;
+	x[0].s_enum = (long)Qt::Dense4Pattern;
     }
     static void x_410(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Dense5Pattern;
+	x[0].s_enum = (long)Qt::Dense5Pattern;
     }
     static void x_411(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Dense6Pattern;
+	x[0].s_enum = (long)Qt::Dense6Pattern;
     }
     static void x_412(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Dense7Pattern;
+	x[0].s_enum = (long)Qt::Dense7Pattern;
     }
     static void x_413(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::HorPattern;
+	x[0].s_enum = (long)Qt::HorPattern;
     }
     static void x_414(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::VerPattern;
+	x[0].s_enum = (long)Qt::VerPattern;
     }
     static void x_415(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::CrossPattern;
+	x[0].s_enum = (long)Qt::CrossPattern;
     }
     static void x_416(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::BDiagPattern;
+	x[0].s_enum = (long)Qt::BDiagPattern;
     }
     static void x_417(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::FDiagPattern;
+	x[0].s_enum = (long)Qt::FDiagPattern;
     }
     static void x_418(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::DiagCrossPattern;
+	x[0].s_enum = (long)Qt::DiagCrossPattern;
     }
     static void x_419(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::CustomPattern;
+	x[0].s_enum = (long)Qt::CustomPattern;
     }
     static void x_420(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WV_32s;
+	x[0].s_enum = (long)Qt::WV_32s;
     }
     static void x_421(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WV_95;
+	x[0].s_enum = (long)Qt::WV_95;
     }
     static void x_422(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WV_98;
+	x[0].s_enum = (long)Qt::WV_98;
     }
     static void x_423(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WV_Me;
+	x[0].s_enum = (long)Qt::WV_Me;
     }
     static void x_424(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WV_DOS_based;
+	x[0].s_enum = (long)Qt::WV_DOS_based;
     }
     static void x_425(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WV_NT;
+	x[0].s_enum = (long)Qt::WV_NT;
     }
     static void x_426(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WV_2000;
+	x[0].s_enum = (long)Qt::WV_2000;
     }
     static void x_427(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WV_XP;
+	x[0].s_enum = (long)Qt::WV_XP;
     }
     static void x_428(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WV_NT_based;
+	x[0].s_enum = (long)Qt::WV_NT_based;
     }
     static void x_429(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::UI_General;
+	x[0].s_enum = (long)Qt::UI_General;
     }
     static void x_430(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::UI_AnimateMenu;
+	x[0].s_enum = (long)Qt::UI_AnimateMenu;
     }
     static void x_431(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::UI_FadeMenu;
+	x[0].s_enum = (long)Qt::UI_FadeMenu;
     }
     static void x_432(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::UI_AnimateCombo;
+	x[0].s_enum = (long)Qt::UI_AnimateCombo;
     }
     static void x_433(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::UI_AnimateTooltip;
+	x[0].s_enum = (long)Qt::UI_AnimateTooltip;
     }
     static void x_434(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::UI_FadeTooltip;
+	x[0].s_enum = (long)Qt::UI_FadeTooltip;
     }
     static void x_435(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::ArrowCursor;
+	x[0].s_enum = (long)Qt::ArrowCursor;
     }
     static void x_436(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::UpArrowCursor;
+	x[0].s_enum = (long)Qt::UpArrowCursor;
     }
     static void x_437(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::CrossCursor;
+	x[0].s_enum = (long)Qt::CrossCursor;
     }
     static void x_438(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WaitCursor;
+	x[0].s_enum = (long)Qt::WaitCursor;
     }
     static void x_439(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::IbeamCursor;
+	x[0].s_enum = (long)Qt::IbeamCursor;
     }
     static void x_440(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::SizeVerCursor;
+	x[0].s_enum = (long)Qt::SizeVerCursor;
     }
     static void x_441(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::SizeHorCursor;
+	x[0].s_enum = (long)Qt::SizeHorCursor;
     }
     static void x_442(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::SizeBDiagCursor;
+	x[0].s_enum = (long)Qt::SizeBDiagCursor;
     }
     static void x_443(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::SizeFDiagCursor;
+	x[0].s_enum = (long)Qt::SizeFDiagCursor;
     }
     static void x_444(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::SizeAllCursor;
+	x[0].s_enum = (long)Qt::SizeAllCursor;
     }
     static void x_445(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::BlankCursor;
+	x[0].s_enum = (long)Qt::BlankCursor;
     }
     static void x_446(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::SplitVCursor;
+	x[0].s_enum = (long)Qt::SplitVCursor;
     }
     static void x_447(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::SplitHCursor;
+	x[0].s_enum = (long)Qt::SplitHCursor;
     }
     static void x_448(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::PointingHandCursor;
+	x[0].s_enum = (long)Qt::PointingHandCursor;
     }
     static void x_449(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::ForbiddenCursor;
+	x[0].s_enum = (long)Qt::ForbiddenCursor;
     }
     static void x_450(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::WhatsThisCursor;
+	x[0].s_enum = (long)Qt::WhatsThisCursor;
     }
     static void x_451(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::LastCursor;
+	x[0].s_enum = (long)Qt::LastCursor;
     }
     static void x_452(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::BitmapCursor;
+	x[0].s_enum = (long)Qt::BitmapCursor;
     }
     static void x_453(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::PlainText;
+	x[0].s_enum = (long)Qt::PlainText;
     }
     static void x_454(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::RichText;
+	x[0].s_enum = (long)Qt::RichText;
     }
     static void x_455(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::AutoText;
+	x[0].s_enum = (long)Qt::AutoText;
     }
     static void x_456(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::DockUnmanaged;
+	x[0].s_enum = (long)Qt::DockUnmanaged;
     }
     static void x_457(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::DockTornOff;
+	x[0].s_enum = (long)Qt::DockTornOff;
     }
     static void x_458(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::DockTop;
+	x[0].s_enum = (long)Qt::DockTop;
     }
     static void x_459(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::DockBottom;
+	x[0].s_enum = (long)Qt::DockBottom;
     }
     static void x_460(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::DockRight;
+	x[0].s_enum = (long)Qt::DockRight;
     }
     static void x_461(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::DockLeft;
+	x[0].s_enum = (long)Qt::DockLeft;
     }
     static void x_462(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::DockMinimized;
+	x[0].s_enum = (long)Qt::DockMinimized;
     }
     static void x_463(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Unmanaged;
+	x[0].s_enum = (long)Qt::Unmanaged;
     }
     static void x_464(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::TornOff;
+	x[0].s_enum = (long)Qt::TornOff;
     }
     static void x_465(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Top;
+	x[0].s_enum = (long)Qt::Top;
     }
     static void x_466(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Bottom;
+	x[0].s_enum = (long)Qt::Bottom;
     }
     static void x_467(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Right;
+	x[0].s_enum = (long)Qt::Right;
     }
     static void x_468(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Left;
+	x[0].s_enum = (long)Qt::Left;
     }
     static void x_469(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Minimized;
+	x[0].s_enum = (long)Qt::Minimized;
     }
     static void x_470(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::TextDate;
+	x[0].s_enum = (long)Qt::TextDate;
     }
     static void x_471(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::ISODate;
+	x[0].s_enum = (long)Qt::ISODate;
     }
     static void x_472(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::LocalDate;
+	x[0].s_enum = (long)Qt::LocalDate;
     }
     static void x_473(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::FixedColor;
+	x[0].s_enum = (long)Qt::FixedColor;
     }
     static void x_474(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::FixedPixmap;
+	x[0].s_enum = (long)Qt::FixedPixmap;
     }
     static void x_475(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::NoBackground;
+	x[0].s_enum = (long)Qt::NoBackground;
     }
     static void x_476(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::PaletteForeground;
+	x[0].s_enum = (long)Qt::PaletteForeground;
     }
     static void x_477(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::PaletteButton;
+	x[0].s_enum = (long)Qt::PaletteButton;
     }
     static void x_478(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::PaletteLight;
+	x[0].s_enum = (long)Qt::PaletteLight;
     }
     static void x_479(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::PaletteMidlight;
+	x[0].s_enum = (long)Qt::PaletteMidlight;
     }
     static void x_480(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::PaletteDark;
+	x[0].s_enum = (long)Qt::PaletteDark;
     }
     static void x_481(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::PaletteMid;
+	x[0].s_enum = (long)Qt::PaletteMid;
     }
     static void x_482(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::PaletteText;
+	x[0].s_enum = (long)Qt::PaletteText;
     }
     static void x_483(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::PaletteBrightText;
+	x[0].s_enum = (long)Qt::PaletteBrightText;
     }
     static void x_484(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::PaletteBase;
+	x[0].s_enum = (long)Qt::PaletteBase;
     }
     static void x_485(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::PaletteBackground;
+	x[0].s_enum = (long)Qt::PaletteBackground;
     }
     static void x_486(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::PaletteShadow;
+	x[0].s_enum = (long)Qt::PaletteShadow;
     }
     static void x_487(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::PaletteHighlight;
+	x[0].s_enum = (long)Qt::PaletteHighlight;
     }
     static void x_488(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::PaletteHighlightedText;
+	x[0].s_enum = (long)Qt::PaletteHighlightedText;
     }
     static void x_489(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::PaletteButtonText;
+	x[0].s_enum = (long)Qt::PaletteButtonText;
     }
     static void x_490(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::PaletteLink;
+	x[0].s_enum = (long)Qt::PaletteLink;
     }
     static void x_491(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::PaletteLinkVisited;
+	x[0].s_enum = (long)Qt::PaletteLinkVisited;
     }
     static void x_492(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::X11ParentRelative;
+	x[0].s_enum = (long)Qt::X11ParentRelative;
     }
     static void x_493(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::CaseSensitive;
+	x[0].s_enum = (long)Qt::CaseSensitive;
     }
     static void x_494(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::BeginsWith;
+	x[0].s_enum = (long)Qt::BeginsWith;
     }
     static void x_495(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::EndsWith;
+	x[0].s_enum = (long)Qt::EndsWith;
     }
     static void x_496(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::Contains;
+	x[0].s_enum = (long)Qt::Contains;
     }
     static void x_497(Smoke::Stack x) {
-	x[0].s_long = (long)Qt::ExactMatch;
+	x[0].s_enum = (long)Qt::ExactMatch;
     }
     ~x_Qt() {}
 };

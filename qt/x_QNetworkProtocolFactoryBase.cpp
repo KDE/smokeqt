@@ -10,7 +10,7 @@ public:
     void x_0(Smoke::Stack x) {
 	// createObject()
 	QNetworkProtocol* xret = xthis->QNetworkProtocolFactoryBase::createObject();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     ~x_QNetworkProtocolFactoryBase() {}
 };

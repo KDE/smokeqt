@@ -9,7 +9,7 @@ public:
     x_QSenderObject(void *x) : xthis((QSenderObject*)x) {}
     void x_0(Smoke::Stack x) {
 	// setSender(QObject*)
-	xthis->QSenderObject::setSender((QObject*)x[1].s_voidp);
+	xthis->QSenderObject::setSender((QObject*)x[1].s_class);
     }
     ~x_QSenderObject() {}
 };

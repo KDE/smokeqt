@@ -10,25 +10,25 @@ public:
     static void x_0(Smoke::Stack x) {
 	// QBuffer()
 	x_QBuffer* xret = new x_QBuffer();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     x_QBuffer() : QBuffer() {
     }
     static void x_1(Smoke::Stack x) {
 	// QBuffer(QByteArray)
-	x_QBuffer* xret = new x_QBuffer(*(QByteArray *)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QBuffer* xret = new x_QBuffer(*(QByteArray *)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QBuffer(QByteArray x1) : QBuffer(x1) {
     }
     void x_2(Smoke::Stack x) const {
 	// buffer()
 	QByteArray xret = this->QBuffer::buffer();
-	x[0].s_voidp = (void*)new QByteArray(xret);
+	x[0].s_class = (void*)new QByteArray(xret);
     }
     void x_3(Smoke::Stack x) {
 	// setBuffer(QByteArray)
-	bool xret = this->QBuffer::setBuffer(*(QByteArray *)x[1].s_voidp);
+	bool xret = this->QBuffer::setBuffer(*(QByteArray *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_4(Smoke::Stack x) {
@@ -47,37 +47,37 @@ public:
     void x_7(Smoke::Stack x) const {
 	// size()
 	QIODevice::Offset xret = this->QBuffer::size();
-	x[0].s_voidp = (void*)new QIODevice::Offset(xret);
+	x[0].s_class = (void*)new QIODevice::Offset(xret);
     }
     void x_8(Smoke::Stack x) const {
 	// at()
 	QIODevice::Offset xret = this->QBuffer::at();
-	x[0].s_voidp = (void*)new QIODevice::Offset(xret);
+	x[0].s_class = (void*)new QIODevice::Offset(xret);
     }
     void x_9(Smoke::Stack x) {
 	// at(QIODevice::Offset)
-	bool xret = this->QBuffer::at(*(QIODevice::Offset *)x[1].s_voidp);
+	bool xret = this->QBuffer::at(*(QIODevice::Offset *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_10(Smoke::Stack x) {
 	// readBlock(char*, Q_ULONG)
-	Q_LONG xret = this->QBuffer::readBlock((char*)x[1].s_voidp,*(Q_ULONG *)x[2].s_voidp);
-	x[0].s_voidp = (void*)new Q_LONG(xret);
+	Q_LONG xret = this->QBuffer::readBlock((char*)x[1].s_class,*(Q_ULONG *)x[2].s_class);
+	x[0].s_class = (void*)new Q_LONG(xret);
     }
     void x_11(Smoke::Stack x) {
 	// writeBlock(const char*, Q_ULONG)
-	Q_LONG xret = this->QBuffer::writeBlock((const char*)x[1].s_voidp,*(Q_ULONG *)x[2].s_voidp);
-	x[0].s_voidp = (void*)new Q_LONG(xret);
+	Q_LONG xret = this->QBuffer::writeBlock((const char*)x[1].s_class,*(Q_ULONG *)x[2].s_class);
+	x[0].s_class = (void*)new Q_LONG(xret);
     }
     void x_12(Smoke::Stack x) {
 	// writeBlock(const QByteArray&)
-	Q_LONG xret = this->QBuffer::writeBlock(*(const QByteArray *)x[1].s_voidp);
-	x[0].s_voidp = (void*)new Q_LONG(xret);
+	Q_LONG xret = this->QBuffer::writeBlock(*(const QByteArray *)x[1].s_class);
+	x[0].s_class = (void*)new Q_LONG(xret);
     }
     void x_13(Smoke::Stack x) {
 	// readLine(char*, Q_ULONG)
-	Q_LONG xret = this->QBuffer::readLine((char*)x[1].s_voidp,*(Q_ULONG *)x[2].s_voidp);
-	x[0].s_voidp = (void*)new Q_LONG(xret);
+	Q_LONG xret = this->QBuffer::readLine((char*)x[1].s_class,*(Q_ULONG *)x[2].s_class);
+	x[0].s_class = (void*)new Q_LONG(xret);
     }
     void x_14(Smoke::Stack x) {
 	// getch()
@@ -97,7 +97,7 @@ public:
     virtual QIODevice::Offset at() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 336, x)) {
-	    QIODevice::Offset *xptr = (QIODevice::Offset *)x[0].s_voidp;
+	    QIODevice::Offset *xptr = (QIODevice::Offset *)x[0].s_class;
 	    QIODevice::Offset xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -106,7 +106,7 @@ public:
     }
     virtual bool at(QIODevice::Offset x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 337, x)) return (bool)x[0].s_bool;
 	return this->QBuffer::at(x1);
     }
@@ -145,7 +145,7 @@ public:
     virtual QByteArray readAll() {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 3393, x)) {
-	    QByteArray *xptr = (QByteArray *)x[0].s_voidp;
+	    QByteArray *xptr = (QByteArray *)x[0].s_class;
 	    QByteArray xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -154,10 +154,10 @@ public:
     }
     virtual Q_LONG readBlock(char* x1, Q_ULONG x2) {
 	Smoke::StackItem x[3];
-	x[1].s_voidp = (void*)x1;
-	x[2].s_voidp = (void*)&x2;
+	x[1].s_class = (void*)x1;
+	x[2].s_class = (void*)&x2;
 	if(call_method((void*)this, 338, x)) {
-	    Q_LONG *xptr = (Q_LONG *)x[0].s_voidp;
+	    Q_LONG *xptr = (Q_LONG *)x[0].s_class;
 	    Q_LONG xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -166,10 +166,10 @@ public:
     }
     virtual Q_LONG readLine(char* x1, Q_ULONG x2) {
 	Smoke::StackItem x[3];
-	x[1].s_voidp = (void*)x1;
-	x[2].s_voidp = (void*)&x2;
+	x[1].s_class = (void*)x1;
+	x[2].s_class = (void*)&x2;
 	if(call_method((void*)this, 341, x)) {
-	    Q_LONG *xptr = (Q_LONG *)x[0].s_voidp;
+	    Q_LONG *xptr = (Q_LONG *)x[0].s_class;
 	    Q_LONG xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -179,7 +179,7 @@ public:
     virtual QIODevice::Offset size() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 335, x)) {
-	    QIODevice::Offset *xptr = (QIODevice::Offset *)x[0].s_voidp;
+	    QIODevice::Offset *xptr = (QIODevice::Offset *)x[0].s_class;
 	    QIODevice::Offset xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -194,10 +194,10 @@ public:
     }
     virtual Q_LONG writeBlock(const char* x1, Q_ULONG x2) {
 	Smoke::StackItem x[3];
-	x[1].s_voidp = (void*)x1;
-	x[2].s_voidp = (void*)&x2;
+	x[1].s_class = (void*)x1;
+	x[2].s_class = (void*)&x2;
 	if(call_method((void*)this, 339, x)) {
-	    Q_LONG *xptr = (Q_LONG *)x[0].s_voidp;
+	    Q_LONG *xptr = (Q_LONG *)x[0].s_class;
 	    Q_LONG xret(*xptr);
 	    delete xptr;
 	    return xret;

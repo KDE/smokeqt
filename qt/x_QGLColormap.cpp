@@ -9,21 +9,21 @@ public:
     static void x_0(Smoke::Stack x) {
 	// QGLColormap()
 	x_QGLColormap* xret = new x_QGLColormap();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     x_QGLColormap() : QGLColormap() {
     }
     static void x_1(Smoke::Stack x) {
 	// QGLColormap(const QGLColormap&)
-	x_QGLColormap* xret = new x_QGLColormap(*(const QGLColormap *)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QGLColormap* xret = new x_QGLColormap(*(const QGLColormap *)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QGLColormap(const QGLColormap& x1) : QGLColormap(x1) {
     }
     void x_2(Smoke::Stack x) {
 	// operator=(const QGLColormap&)
-	QGLColormap& xret = this->QGLColormap::operator=(*(const QGLColormap *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QGLColormap& xret = this->QGLColormap::operator=(*(const QGLColormap *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_3(Smoke::Stack x) const {
 	// isEmpty()
@@ -41,38 +41,38 @@ public:
     }
     void x_6(Smoke::Stack x) {
 	// setEntries(int, const QRgb*, int)
-	this->QGLColormap::setEntries((int)x[1].s_int,(const QRgb*)x[2].s_voidp,(int)x[3].s_int);
+	this->QGLColormap::setEntries((int)x[1].s_int,(const QRgb*)x[2].s_class,(int)x[3].s_int);
     }
     void x_7(Smoke::Stack x) {
 	// setEntries(int, const QRgb*)
-	this->QGLColormap::setEntries((int)x[1].s_int,(const QRgb*)x[2].s_voidp);
+	this->QGLColormap::setEntries((int)x[1].s_int,(const QRgb*)x[2].s_class);
     }
     void x_8(Smoke::Stack x) {
 	// setEntry(int, QRgb)
-	this->QGLColormap::setEntry((int)x[1].s_int,*(QRgb *)x[2].s_voidp);
+	this->QGLColormap::setEntry((int)x[1].s_int,*(QRgb *)x[2].s_class);
     }
     void x_9(Smoke::Stack x) {
 	// setEntry(int, const QColor&)
-	this->QGLColormap::setEntry((int)x[1].s_int,*(const QColor *)x[2].s_voidp);
+	this->QGLColormap::setEntry((int)x[1].s_int,*(const QColor *)x[2].s_class);
     }
     void x_10(Smoke::Stack x) const {
 	// entryRgb(int)
 	QRgb xret = this->QGLColormap::entryRgb((int)x[1].s_int);
-	x[0].s_voidp = (void*)new QRgb(xret);
+	x[0].s_class = (void*)new QRgb(xret);
     }
     void x_11(Smoke::Stack x) const {
 	// entryColor(int)
 	QColor xret = this->QGLColormap::entryColor((int)x[1].s_int);
-	x[0].s_voidp = (void*)new QColor(xret);
+	x[0].s_class = (void*)new QColor(xret);
     }
     void x_12(Smoke::Stack x) const {
 	// find(QRgb)
-	int xret = this->QGLColormap::find(*(QRgb *)x[1].s_voidp);
+	int xret = this->QGLColormap::find(*(QRgb *)x[1].s_class);
 	x[0].s_int = (int)xret;
     }
     void x_13(Smoke::Stack x) const {
 	// findNearest(QRgb)
-	int xret = this->QGLColormap::findNearest(*(QRgb *)x[1].s_voidp);
+	int xret = this->QGLColormap::findNearest(*(QRgb *)x[1].s_class);
 	x[0].s_int = (int)xret;
     }
     ~x_QGLColormap() {}

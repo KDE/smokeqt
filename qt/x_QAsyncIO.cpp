@@ -9,7 +9,7 @@ public:
     x_QAsyncIO(void *x) : xthis((QAsyncIO*)x) {}
     void x_0(Smoke::Stack x) {
 	// connect(QObject*, const char*)
-	xthis->QAsyncIO::connect((QObject*)x[1].s_voidp,(const char*)x[2].s_voidp);
+	xthis->QAsyncIO::connect((QObject*)x[1].s_class,(const char*)x[2].s_class);
     }
     ~x_QAsyncIO() {}
 };

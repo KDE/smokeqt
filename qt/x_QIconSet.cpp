@@ -8,125 +8,125 @@
 class x_QIconSet : public QIconSet {
 public:
     static void x_0(Smoke::Stack x) {
-	x[0].s_long = (long)QIconSet::Automatic;
+	x[0].s_enum = (long)QIconSet::Automatic;
     }
     static void x_1(Smoke::Stack x) {
-	x[0].s_long = (long)QIconSet::Small;
+	x[0].s_enum = (long)QIconSet::Small;
     }
     static void x_2(Smoke::Stack x) {
-	x[0].s_long = (long)QIconSet::Large;
+	x[0].s_enum = (long)QIconSet::Large;
     }
     static void x_3(Smoke::Stack x) {
-	x[0].s_long = (long)QIconSet::Normal;
+	x[0].s_enum = (long)QIconSet::Normal;
     }
     static void x_4(Smoke::Stack x) {
-	x[0].s_long = (long)QIconSet::Disabled;
+	x[0].s_enum = (long)QIconSet::Disabled;
     }
     static void x_5(Smoke::Stack x) {
-	x[0].s_long = (long)QIconSet::Active;
+	x[0].s_enum = (long)QIconSet::Active;
     }
     static void x_6(Smoke::Stack x) {
-	x[0].s_long = (long)QIconSet::On;
+	x[0].s_enum = (long)QIconSet::On;
     }
     static void x_7(Smoke::Stack x) {
-	x[0].s_long = (long)QIconSet::Off;
+	x[0].s_enum = (long)QIconSet::Off;
     }
     static void x_8(Smoke::Stack x) {
 	// QIconSet()
 	x_QIconSet* xret = new x_QIconSet();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     x_QIconSet() : QIconSet() {
     }
     static void x_9(Smoke::Stack x) {
 	// QIconSet(const QPixmap&, QIconSet::Size)
-	x_QIconSet* xret = new x_QIconSet(*(const QPixmap *)x[1].s_voidp,*(QIconSet::Size *)x[2].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QIconSet* xret = new x_QIconSet(*(const QPixmap *)x[1].s_class,*(QIconSet::Size *)x[2].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QIconSet(const QPixmap& x1, QIconSet::Size x2) : QIconSet(x1, x2) {
     }
     static void x_10(Smoke::Stack x) {
 	// QIconSet(const QPixmap&)
-	x_QIconSet* xret = new x_QIconSet(*(const QPixmap *)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QIconSet* xret = new x_QIconSet(*(const QPixmap *)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QIconSet(const QPixmap& x1) : QIconSet(x1) {
     }
     static void x_11(Smoke::Stack x) {
 	// QIconSet(const QPixmap&, const QPixmap&)
-	x_QIconSet* xret = new x_QIconSet(*(const QPixmap *)x[1].s_voidp,*(const QPixmap *)x[2].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QIconSet* xret = new x_QIconSet(*(const QPixmap *)x[1].s_class,*(const QPixmap *)x[2].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QIconSet(const QPixmap& x1, const QPixmap& x2) : QIconSet(x1, x2) {
     }
     static void x_12(Smoke::Stack x) {
 	// QIconSet(const QIconSet&)
-	x_QIconSet* xret = new x_QIconSet(*(const QIconSet *)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QIconSet* xret = new x_QIconSet(*(const QIconSet *)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QIconSet(const QIconSet& x1) : QIconSet(x1) {
     }
     void x_13(Smoke::Stack x) {
 	// reset(const QPixmap&, QIconSet::Size)
-	this->QIconSet::reset(*(const QPixmap *)x[1].s_voidp,*(QIconSet::Size *)x[2].s_voidp);
+	this->QIconSet::reset(*(const QPixmap *)x[1].s_class,*(QIconSet::Size *)x[2].s_class);
     }
     void x_14(Smoke::Stack x) {
 	// setPixmap(const QPixmap&, QIconSet::Size, QIconSet::Mode, QIconSet::State)
-	this->QIconSet::setPixmap(*(const QPixmap *)x[1].s_voidp,*(QIconSet::Size *)x[2].s_voidp,*(QIconSet::Mode *)x[3].s_voidp,*(QIconSet::State *)x[4].s_voidp);
+	this->QIconSet::setPixmap(*(const QPixmap *)x[1].s_class,*(QIconSet::Size *)x[2].s_class,*(QIconSet::Mode *)x[3].s_class,*(QIconSet::State *)x[4].s_class);
     }
     void x_15(Smoke::Stack x) {
 	// setPixmap(const QPixmap&, QIconSet::Size, QIconSet::Mode)
-	this->QIconSet::setPixmap(*(const QPixmap *)x[1].s_voidp,*(QIconSet::Size *)x[2].s_voidp,*(QIconSet::Mode *)x[3].s_voidp);
+	this->QIconSet::setPixmap(*(const QPixmap *)x[1].s_class,*(QIconSet::Size *)x[2].s_class,*(QIconSet::Mode *)x[3].s_class);
     }
     void x_16(Smoke::Stack x) {
 	// setPixmap(const QPixmap&, QIconSet::Size)
-	this->QIconSet::setPixmap(*(const QPixmap *)x[1].s_voidp,*(QIconSet::Size *)x[2].s_voidp);
+	this->QIconSet::setPixmap(*(const QPixmap *)x[1].s_class,*(QIconSet::Size *)x[2].s_class);
     }
     void x_17(Smoke::Stack x) {
 	// setPixmap(const QString&, QIconSet::Size, QIconSet::Mode, QIconSet::State)
-	this->QIconSet::setPixmap(*(const QString *)x[1].s_voidp,*(QIconSet::Size *)x[2].s_voidp,*(QIconSet::Mode *)x[3].s_voidp,*(QIconSet::State *)x[4].s_voidp);
+	this->QIconSet::setPixmap(*(const QString *)x[1].s_class,*(QIconSet::Size *)x[2].s_class,*(QIconSet::Mode *)x[3].s_class,*(QIconSet::State *)x[4].s_class);
     }
     void x_18(Smoke::Stack x) {
 	// setPixmap(const QString&, QIconSet::Size, QIconSet::Mode)
-	this->QIconSet::setPixmap(*(const QString *)x[1].s_voidp,*(QIconSet::Size *)x[2].s_voidp,*(QIconSet::Mode *)x[3].s_voidp);
+	this->QIconSet::setPixmap(*(const QString *)x[1].s_class,*(QIconSet::Size *)x[2].s_class,*(QIconSet::Mode *)x[3].s_class);
     }
     void x_19(Smoke::Stack x) {
 	// setPixmap(const QString&, QIconSet::Size)
-	this->QIconSet::setPixmap(*(const QString *)x[1].s_voidp,*(QIconSet::Size *)x[2].s_voidp);
+	this->QIconSet::setPixmap(*(const QString *)x[1].s_class,*(QIconSet::Size *)x[2].s_class);
     }
     void x_20(Smoke::Stack x) const {
 	// pixmap(QIconSet::Size, QIconSet::Mode, QIconSet::State)
-	QPixmap xret = this->QIconSet::pixmap(*(QIconSet::Size *)x[1].s_voidp,*(QIconSet::Mode *)x[2].s_voidp,*(QIconSet::State *)x[3].s_voidp);
-	x[0].s_voidp = (void*)new QPixmap(xret);
+	QPixmap xret = this->QIconSet::pixmap(*(QIconSet::Size *)x[1].s_class,*(QIconSet::Mode *)x[2].s_class,*(QIconSet::State *)x[3].s_class);
+	x[0].s_class = (void*)new QPixmap(xret);
     }
     void x_21(Smoke::Stack x) const {
 	// pixmap(QIconSet::Size, QIconSet::Mode)
-	QPixmap xret = this->QIconSet::pixmap(*(QIconSet::Size *)x[1].s_voidp,*(QIconSet::Mode *)x[2].s_voidp);
-	x[0].s_voidp = (void*)new QPixmap(xret);
+	QPixmap xret = this->QIconSet::pixmap(*(QIconSet::Size *)x[1].s_class,*(QIconSet::Mode *)x[2].s_class);
+	x[0].s_class = (void*)new QPixmap(xret);
     }
     void x_22(Smoke::Stack x) const {
 	// pixmap(QIconSet::Size, bool, QIconSet::State)
-	QPixmap xret = this->QIconSet::pixmap(*(QIconSet::Size *)x[1].s_voidp,(bool)x[2].s_bool,*(QIconSet::State *)x[3].s_voidp);
-	x[0].s_voidp = (void*)new QPixmap(xret);
+	QPixmap xret = this->QIconSet::pixmap(*(QIconSet::Size *)x[1].s_class,(bool)x[2].s_bool,*(QIconSet::State *)x[3].s_class);
+	x[0].s_class = (void*)new QPixmap(xret);
     }
     void x_23(Smoke::Stack x) const {
 	// pixmap(QIconSet::Size, bool)
-	QPixmap xret = this->QIconSet::pixmap(*(QIconSet::Size *)x[1].s_voidp,(bool)x[2].s_bool);
-	x[0].s_voidp = (void*)new QPixmap(xret);
+	QPixmap xret = this->QIconSet::pixmap(*(QIconSet::Size *)x[1].s_class,(bool)x[2].s_bool);
+	x[0].s_class = (void*)new QPixmap(xret);
     }
     void x_24(Smoke::Stack x) const {
 	// pixmap()
 	QPixmap xret = this->QIconSet::pixmap();
-	x[0].s_voidp = (void*)new QPixmap(xret);
+	x[0].s_class = (void*)new QPixmap(xret);
     }
     void x_25(Smoke::Stack x) const {
 	// isGenerated(QIconSet::Size, QIconSet::Mode, QIconSet::State)
-	bool xret = this->QIconSet::isGenerated(*(QIconSet::Size *)x[1].s_voidp,*(QIconSet::Mode *)x[2].s_voidp,*(QIconSet::State *)x[3].s_voidp);
+	bool xret = this->QIconSet::isGenerated(*(QIconSet::Size *)x[1].s_class,*(QIconSet::Mode *)x[2].s_class,*(QIconSet::State *)x[3].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_26(Smoke::Stack x) const {
 	// isGenerated(QIconSet::Size, QIconSet::Mode)
-	bool xret = this->QIconSet::isGenerated(*(QIconSet::Size *)x[1].s_voidp,*(QIconSet::Mode *)x[2].s_voidp);
+	bool xret = this->QIconSet::isGenerated(*(QIconSet::Size *)x[1].s_class,*(QIconSet::Mode *)x[2].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_27(Smoke::Stack x) {
@@ -144,33 +144,33 @@ public:
     }
     void x_30(Smoke::Stack x) {
 	// operator=(const QIconSet&)
-	QIconSet& xret = this->QIconSet::operator=(*(const QIconSet *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QIconSet& xret = this->QIconSet::operator=(*(const QIconSet *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     static void x_31(Smoke::Stack x) {
 	// setIconSize(QIconSet::Size, const QSize&)
-	QIconSet::setIconSize(*(QIconSet::Size *)x[1].s_voidp,*(const QSize *)x[2].s_voidp);
+	QIconSet::setIconSize(*(QIconSet::Size *)x[1].s_class,*(const QSize *)x[2].s_class);
     }
     static void x_32(Smoke::Stack x) {
 	// iconSize(QIconSet::Size)
-	const QSize& xret = QIconSet::iconSize(*(QIconSet::Size *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	const QSize& xret = QIconSet::iconSize(*(QIconSet::Size *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     virtual void setPixmap(const QPixmap& x1, QIconSet::Size x2, QIconSet::Mode x3, QIconSet::State x4) {
 	Smoke::StackItem x[5];
-	x[1].s_voidp = (void*)&x1;
-	x[2].s_voidp = (void*)&x2;
-	x[3].s_voidp = (void*)&x3;
-	x[4].s_voidp = (void*)&x4;
+	x[1].s_class = (void*)&x1;
+	x[2].s_class = (void*)&x2;
+	x[3].s_class = (void*)&x3;
+	x[4].s_class = (void*)&x4;
 	if(call_method((void*)this, 3437, x)) return;
 	this->QIconSet::setPixmap(x1, x2, x3, x4);
     }
     virtual void setPixmap(const QString& x1, QIconSet::Size x2, QIconSet::Mode x3, QIconSet::State x4) {
 	Smoke::StackItem x[5];
-	x[1].s_voidp = (void*)&x1;
-	x[2].s_voidp = (void*)&x2;
-	x[3].s_voidp = (void*)&x3;
-	x[4].s_voidp = (void*)&x4;
+	x[1].s_class = (void*)&x1;
+	x[2].s_class = (void*)&x2;
+	x[3].s_class = (void*)&x3;
+	x[4].s_class = (void*)&x4;
 	if(call_method((void*)this, 3440, x)) return;
 	this->QIconSet::setPixmap(x1, x2, x3, x4);
     }

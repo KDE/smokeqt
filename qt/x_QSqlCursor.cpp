@@ -10,106 +10,106 @@
 class x_QSqlCursor : public QSqlCursor {
 public:
     static void x_0(Smoke::Stack x) {
-	x[0].s_long = (long)QSqlCursor::ReadOnly;
+	x[0].s_enum = (long)QSqlCursor::ReadOnly;
     }
     static void x_1(Smoke::Stack x) {
-	x[0].s_long = (long)QSqlCursor::Insert;
+	x[0].s_enum = (long)QSqlCursor::Insert;
     }
     static void x_2(Smoke::Stack x) {
-	x[0].s_long = (long)QSqlCursor::Update;
+	x[0].s_enum = (long)QSqlCursor::Update;
     }
     static void x_3(Smoke::Stack x) {
-	x[0].s_long = (long)QSqlCursor::Delete;
+	x[0].s_enum = (long)QSqlCursor::Delete;
     }
     static void x_4(Smoke::Stack x) {
-	x[0].s_long = (long)QSqlCursor::Writable;
+	x[0].s_enum = (long)QSqlCursor::Writable;
     }
     static void x_5(Smoke::Stack x) {
 	// QSqlCursor(const QString&, bool, QSqlDatabase*)
-	x_QSqlCursor* xret = new x_QSqlCursor(*(const QString *)x[1].s_voidp,(bool)x[2].s_bool,(QSqlDatabase*)x[3].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QSqlCursor* xret = new x_QSqlCursor(*(const QString *)x[1].s_class,(bool)x[2].s_bool,(QSqlDatabase*)x[3].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QSqlCursor(const QString& x1, bool x2, QSqlDatabase* x3) : QSqlCursor(x1, x2, x3) {
     }
     static void x_6(Smoke::Stack x) {
 	// QSqlCursor(const QString&, bool)
-	x_QSqlCursor* xret = new x_QSqlCursor(*(const QString *)x[1].s_voidp,(bool)x[2].s_bool);
-	x[0].s_voidp = (void*)xret;
+	x_QSqlCursor* xret = new x_QSqlCursor(*(const QString *)x[1].s_class,(bool)x[2].s_bool);
+	x[0].s_class = (void*)xret;
     }
     x_QSqlCursor(const QString& x1, bool x2) : QSqlCursor(x1, x2) {
     }
     static void x_7(Smoke::Stack x) {
 	// QSqlCursor(const QString&)
-	x_QSqlCursor* xret = new x_QSqlCursor(*(const QString *)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QSqlCursor* xret = new x_QSqlCursor(*(const QString *)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QSqlCursor(const QString& x1) : QSqlCursor(x1) {
     }
     static void x_8(Smoke::Stack x) {
 	// QSqlCursor()
 	x_QSqlCursor* xret = new x_QSqlCursor();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     x_QSqlCursor() : QSqlCursor() {
     }
     static void x_9(Smoke::Stack x) {
 	// QSqlCursor(const QSqlCursor&)
-	x_QSqlCursor* xret = new x_QSqlCursor(*(const QSqlCursor *)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QSqlCursor* xret = new x_QSqlCursor(*(const QSqlCursor *)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QSqlCursor(const QSqlCursor& x1) : QSqlCursor(x1) {
     }
     void x_10(Smoke::Stack x) {
 	// operator=(const QSqlCursor&)
-	QSqlCursor& xret = this->QSqlCursor::operator=(*(const QSqlCursor *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QSqlCursor& xret = this->QSqlCursor::operator=(*(const QSqlCursor *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_11(Smoke::Stack x) const {
 	// value(int)
 	QVariant xret = this->QSqlCursor::value((int)x[1].s_int);
-	x[0].s_voidp = (void*)new QVariant(xret);
+	x[0].s_class = (void*)new QVariant(xret);
     }
     void x_12(Smoke::Stack x) const {
 	// value(const QString&)
-	QVariant xret = this->QSqlCursor::value(*(const QString *)x[1].s_voidp);
-	x[0].s_voidp = (void*)new QVariant(xret);
+	QVariant xret = this->QSqlCursor::value(*(const QString *)x[1].s_class);
+	x[0].s_class = (void*)new QVariant(xret);
     }
     void x_13(Smoke::Stack x) const {
 	// primaryIndex(bool)
 	QSqlIndex xret = this->QSqlCursor::primaryIndex((bool)x[1].s_bool);
-	x[0].s_voidp = (void*)new QSqlIndex(xret);
+	x[0].s_class = (void*)new QSqlIndex(xret);
     }
     void x_14(Smoke::Stack x) const {
 	// primaryIndex()
 	QSqlIndex xret = this->QSqlCursor::primaryIndex();
-	x[0].s_voidp = (void*)new QSqlIndex(xret);
+	x[0].s_class = (void*)new QSqlIndex(xret);
     }
     void x_15(Smoke::Stack x) const {
 	// index(const QStringList&)
-	QSqlIndex xret = this->QSqlCursor::index(*(const QStringList *)x[1].s_voidp);
-	x[0].s_voidp = (void*)new QSqlIndex(xret);
+	QSqlIndex xret = this->QSqlCursor::index(*(const QStringList *)x[1].s_class);
+	x[0].s_class = (void*)new QSqlIndex(xret);
     }
     void x_16(Smoke::Stack x) const {
 	// index(const QString&)
-	QSqlIndex xret = this->QSqlCursor::index(*(const QString *)x[1].s_voidp);
-	x[0].s_voidp = (void*)new QSqlIndex(xret);
+	QSqlIndex xret = this->QSqlCursor::index(*(const QString *)x[1].s_class);
+	x[0].s_class = (void*)new QSqlIndex(xret);
     }
     void x_17(Smoke::Stack x) const {
 	// index(const char*)
-	QSqlIndex xret = this->QSqlCursor::index((const char*)x[1].s_voidp);
-	x[0].s_voidp = (void*)new QSqlIndex(xret);
+	QSqlIndex xret = this->QSqlCursor::index((const char*)x[1].s_class);
+	x[0].s_class = (void*)new QSqlIndex(xret);
     }
     void x_18(Smoke::Stack x) {
 	// setPrimaryIndex(const QSqlIndex&)
-	this->QSqlCursor::setPrimaryIndex(*(const QSqlIndex *)x[1].s_voidp);
+	this->QSqlCursor::setPrimaryIndex(*(const QSqlIndex *)x[1].s_class);
     }
     void x_19(Smoke::Stack x) {
 	// append(const QSqlFieldInfo&)
-	this->QSqlCursor::append(*(const QSqlFieldInfo *)x[1].s_voidp);
+	this->QSqlCursor::append(*(const QSqlFieldInfo *)x[1].s_class);
     }
     void x_20(Smoke::Stack x) {
 	// insert(int, const QSqlFieldInfo&)
-	this->QSqlCursor::insert((int)x[1].s_int,*(const QSqlFieldInfo *)x[2].s_voidp);
+	this->QSqlCursor::insert((int)x[1].s_int,*(const QSqlFieldInfo *)x[2].s_class);
     }
     void x_21(Smoke::Stack x) {
 	// remove(int)
@@ -121,7 +121,7 @@ public:
     }
     void x_23(Smoke::Stack x) {
 	// setGenerated(const QString&, bool)
-	this->QSqlCursor::setGenerated(*(const QString *)x[1].s_voidp,(bool)x[2].s_bool);
+	this->QSqlCursor::setGenerated(*(const QString *)x[1].s_class,(bool)x[2].s_bool);
     }
     void x_24(Smoke::Stack x) {
 	// setGenerated(int, bool)
@@ -130,27 +130,27 @@ public:
     void x_25(Smoke::Stack x) {
 	// editBuffer(bool)
 	QSqlRecord* xret = this->QSqlCursor::editBuffer((bool)x[1].s_bool);
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_26(Smoke::Stack x) {
 	// editBuffer()
 	QSqlRecord* xret = this->QSqlCursor::editBuffer();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_27(Smoke::Stack x) {
 	// primeInsert()
 	QSqlRecord* xret = this->QSqlCursor::primeInsert();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_28(Smoke::Stack x) {
 	// primeUpdate()
 	QSqlRecord* xret = this->QSqlCursor::primeUpdate();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_29(Smoke::Stack x) {
 	// primeDelete()
 	QSqlRecord* xret = this->QSqlCursor::primeDelete();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_30(Smoke::Stack x) {
 	// insert(bool)
@@ -193,20 +193,20 @@ public:
     }
     void x_38(Smoke::Stack x) {
 	// setCalculated(const QString&, bool)
-	this->QSqlCursor::setCalculated(*(const QString *)x[1].s_voidp,(bool)x[2].s_bool);
+	this->QSqlCursor::setCalculated(*(const QString *)x[1].s_class,(bool)x[2].s_bool);
     }
     void x_39(Smoke::Stack x) const {
 	// isCalculated(const QString&)
-	bool xret = this->QSqlCursor::isCalculated(*(const QString *)x[1].s_voidp);
+	bool xret = this->QSqlCursor::isCalculated(*(const QString *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_40(Smoke::Stack x) {
 	// setTrimmed(const QString&, bool)
-	this->QSqlCursor::setTrimmed(*(const QString *)x[1].s_voidp,(bool)x[2].s_bool);
+	this->QSqlCursor::setTrimmed(*(const QString *)x[1].s_class,(bool)x[2].s_bool);
     }
     void x_41(Smoke::Stack x) const {
 	// isTrimmed(const QString&)
-	bool xret = this->QSqlCursor::isTrimmed(*(const QString *)x[1].s_voidp);
+	bool xret = this->QSqlCursor::isTrimmed(*(const QString *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_42(Smoke::Stack x) const {
@@ -236,69 +236,69 @@ public:
     }
     void x_47(Smoke::Stack x) {
 	// select(const QSqlIndex&)
-	bool xret = this->QSqlCursor::select(*(const QSqlIndex *)x[1].s_voidp);
+	bool xret = this->QSqlCursor::select(*(const QSqlIndex *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_48(Smoke::Stack x) {
 	// select(const QSqlIndex&, const QSqlIndex&)
-	bool xret = this->QSqlCursor::select(*(const QSqlIndex *)x[1].s_voidp,*(const QSqlIndex *)x[2].s_voidp);
+	bool xret = this->QSqlCursor::select(*(const QSqlIndex *)x[1].s_class,*(const QSqlIndex *)x[2].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_49(Smoke::Stack x) {
 	// select(const QString&, const QSqlIndex&)
-	bool xret = this->QSqlCursor::select(*(const QString *)x[1].s_voidp,*(const QSqlIndex *)x[2].s_voidp);
+	bool xret = this->QSqlCursor::select(*(const QString *)x[1].s_class,*(const QSqlIndex *)x[2].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_50(Smoke::Stack x) {
 	// select(const QString&)
-	bool xret = this->QSqlCursor::select(*(const QString *)x[1].s_voidp);
+	bool xret = this->QSqlCursor::select(*(const QString *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_51(Smoke::Stack x) {
 	// setSort(const QSqlIndex&)
-	this->QSqlCursor::setSort(*(const QSqlIndex *)x[1].s_voidp);
+	this->QSqlCursor::setSort(*(const QSqlIndex *)x[1].s_class);
     }
     void x_52(Smoke::Stack x) const {
 	// sort()
 	QSqlIndex xret = this->QSqlCursor::sort();
-	x[0].s_voidp = (void*)new QSqlIndex(xret);
+	x[0].s_class = (void*)new QSqlIndex(xret);
     }
     void x_53(Smoke::Stack x) {
 	// setFilter(const QString&)
-	this->QSqlCursor::setFilter(*(const QString *)x[1].s_voidp);
+	this->QSqlCursor::setFilter(*(const QString *)x[1].s_class);
     }
     void x_54(Smoke::Stack x) const {
 	// filter()
 	QString xret = this->QSqlCursor::filter();
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_55(Smoke::Stack x) {
 	// setName(const QString&, bool)
-	this->QSqlCursor::setName(*(const QString *)x[1].s_voidp,(bool)x[2].s_bool);
+	this->QSqlCursor::setName(*(const QString *)x[1].s_class,(bool)x[2].s_bool);
     }
     void x_56(Smoke::Stack x) {
 	// setName(const QString&)
-	this->QSqlCursor::setName(*(const QString *)x[1].s_voidp);
+	this->QSqlCursor::setName(*(const QString *)x[1].s_class);
     }
     void x_57(Smoke::Stack x) const {
 	// name()
 	QString xret = this->QSqlCursor::name();
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_58(Smoke::Stack x) const {
 	// toString(const QString&, const QString&)
-	QString xret = this->QSqlCursor::toString(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
-	x[0].s_voidp = (void*)new QString(xret);
+	QString xret = this->QSqlCursor::toString(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_59(Smoke::Stack x) const {
 	// toString(const QString&)
-	QString xret = this->QSqlCursor::toString(*(const QString *)x[1].s_voidp);
-	x[0].s_voidp = (void*)new QString(xret);
+	QString xret = this->QSqlCursor::toString(*(const QString *)x[1].s_class);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_60(Smoke::Stack x) const {
 	// toString()
 	QString xret = this->QSqlCursor::toString();
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_61(Smoke::Stack x) {
 	// afterSeek()
@@ -306,48 +306,48 @@ public:
     }
     void x_62(Smoke::Stack x) {
 	// exec(const QString&)
-	bool xret = this->QSqlCursor::exec(*(const QString *)x[1].s_voidp);
+	bool xret = this->QSqlCursor::exec(*(const QString *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_63(Smoke::Stack x) {
 	// calculateField(const QString&)
-	QVariant xret = this->QSqlCursor::calculateField(*(const QString *)x[1].s_voidp);
-	x[0].s_voidp = (void*)new QVariant(xret);
+	QVariant xret = this->QSqlCursor::calculateField(*(const QString *)x[1].s_class);
+	x[0].s_class = (void*)new QVariant(xret);
     }
     void x_64(Smoke::Stack x) {
 	// update(const QString&, bool)
-	int xret = this->QSqlCursor::update(*(const QString *)x[1].s_voidp,(bool)x[2].s_bool);
+	int xret = this->QSqlCursor::update(*(const QString *)x[1].s_class,(bool)x[2].s_bool);
 	x[0].s_int = (int)xret;
     }
     void x_65(Smoke::Stack x) {
 	// update(const QString&)
-	int xret = this->QSqlCursor::update(*(const QString *)x[1].s_voidp);
+	int xret = this->QSqlCursor::update(*(const QString *)x[1].s_class);
 	x[0].s_int = (int)xret;
     }
     void x_66(Smoke::Stack x) {
 	// del(const QString&, bool)
-	int xret = this->QSqlCursor::del(*(const QString *)x[1].s_voidp,(bool)x[2].s_bool);
+	int xret = this->QSqlCursor::del(*(const QString *)x[1].s_class,(bool)x[2].s_bool);
 	x[0].s_int = (int)xret;
     }
     void x_67(Smoke::Stack x) {
 	// del(const QString&)
-	int xret = this->QSqlCursor::del(*(const QString *)x[1].s_voidp);
+	int xret = this->QSqlCursor::del(*(const QString *)x[1].s_class);
 	x[0].s_int = (int)xret;
     }
     void x_68(Smoke::Stack x) const {
 	// toString(const QString&, QSqlField*, const QString&)
-	QString xret = this->QSqlCursor::toString(*(const QString *)x[1].s_voidp,(QSqlField*)x[2].s_voidp,*(const QString *)x[3].s_voidp);
-	x[0].s_voidp = (void*)new QString(xret);
+	QString xret = this->QSqlCursor::toString(*(const QString *)x[1].s_class,(QSqlField*)x[2].s_class,*(const QString *)x[3].s_class);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_69(Smoke::Stack x) const {
 	// toString(QSqlRecord*, const QString&, const QString&, const QString&)
-	QString xret = this->QSqlCursor::toString((QSqlRecord*)x[1].s_voidp,*(const QString *)x[2].s_voidp,*(const QString *)x[3].s_voidp,*(const QString *)x[4].s_voidp);
-	x[0].s_voidp = (void*)new QString(xret);
+	QString xret = this->QSqlCursor::toString((QSqlRecord*)x[1].s_class,*(const QString *)x[2].s_class,*(const QString *)x[3].s_class,*(const QString *)x[4].s_class);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_70(Smoke::Stack x) const {
 	// toString(const QSqlIndex&, QSqlRecord*, const QString&, const QString&, const QString&)
-	QString xret = this->QSqlCursor::toString(*(const QSqlIndex *)x[1].s_voidp,(QSqlRecord*)x[2].s_voidp,*(const QString *)x[3].s_voidp,*(const QString *)x[4].s_voidp,*(const QString *)x[5].s_voidp);
-	x[0].s_voidp = (void*)new QString(xret);
+	QString xret = this->QSqlCursor::toString(*(const QSqlIndex *)x[1].s_class,(QSqlRecord*)x[2].s_class,*(const QString *)x[3].s_class,*(const QString *)x[4].s_class,*(const QString *)x[5].s_class);
+	x[0].s_class = (void*)new QString(xret);
     }
     virtual void afterSeek() {
 	Smoke::StackItem x[1];
@@ -356,7 +356,7 @@ public:
     }
     virtual void append(const QSqlFieldInfo& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 7245, x)) return;
 	this->QSqlCursor::append(x1);
     }
@@ -367,9 +367,9 @@ public:
     }
     virtual QVariant calculateField(const QString& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 7289, x)) {
-	    QVariant *xptr = (QVariant *)x[0].s_voidp;
+	    QVariant *xptr = (QVariant *)x[0].s_class;
 	    QVariant xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -395,7 +395,7 @@ public:
     }
     virtual int del(const QString& x1, bool x2) {
 	Smoke::StackItem x[3];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	x[2].s_bool = (bool)x2;
 	if(call_method((void*)this, 7292, x)) return (int)x[0].s_int;
 	return this->QSqlCursor::del(x1, x2);
@@ -403,12 +403,12 @@ public:
     virtual QSqlRecord* editBuffer(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = (bool)x1;
-	if(call_method((void*)this, 7251, x)) 	return (QSqlRecord*)x[0].s_voidp;
+	if(call_method((void*)this, 7251, x)) 	return (QSqlRecord*)x[0].s_class;
 	return this->QSqlCursor::editBuffer(x1);
     }
     virtual bool exec(const QString& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 7288, x)) return (bool)x[0].s_bool;
 	return this->QSqlCursor::exec(x1);
     }
@@ -419,9 +419,9 @@ public:
     }
     virtual QSqlIndex index(const QStringList& x1) const {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 7241, x)) {
-	    QSqlIndex *xptr = (QSqlIndex *)x[0].s_voidp;
+	    QSqlIndex *xptr = (QSqlIndex *)x[0].s_class;
 	    QSqlIndex xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -437,7 +437,7 @@ public:
     virtual void insert(int x1, const QSqlFieldInfo& x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = (int)x1;
-	x[2].s_voidp = (void*)&x2;
+	x[2].s_class = (void*)&x2;
 	if(call_method((void*)this, 7246, x)) return;
 	this->QSqlCursor::insert(x1, x2);
     }
@@ -460,7 +460,7 @@ public:
 	Smoke::StackItem x[2];
 	x[1].s_bool = (bool)x1;
 	if(call_method((void*)this, 7239, x)) {
-	    QSqlIndex *xptr = (QSqlIndex *)x[0].s_voidp;
+	    QSqlIndex *xptr = (QSqlIndex *)x[0].s_class;
 	    QSqlIndex xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -469,17 +469,17 @@ public:
     }
     virtual QSqlRecord* primeDelete() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 7255, x)) 	return (QSqlRecord*)x[0].s_voidp;
+	if(call_method((void*)this, 7255, x)) 	return (QSqlRecord*)x[0].s_class;
 	return this->QSqlCursor::primeDelete();
     }
     virtual QSqlRecord* primeInsert() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 7253, x)) 	return (QSqlRecord*)x[0].s_voidp;
+	if(call_method((void*)this, 7253, x)) 	return (QSqlRecord*)x[0].s_class;
 	return this->QSqlCursor::primeInsert();
     }
     virtual QSqlRecord* primeUpdate() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 7254, x)) 	return (QSqlRecord*)x[0].s_voidp;
+	if(call_method((void*)this, 7254, x)) 	return (QSqlRecord*)x[0].s_class;
 	return this->QSqlCursor::primeUpdate();
     }
     virtual void remove(int x1) {
@@ -497,27 +497,27 @@ public:
     }
     virtual bool select(const QString& x1, const QSqlIndex& x2) {
 	Smoke::StackItem x[3];
-	x[1].s_voidp = (void*)&x1;
-	x[2].s_voidp = (void*)&x2;
+	x[1].s_class = (void*)&x1;
+	x[2].s_class = (void*)&x2;
 	if(call_method((void*)this, 7275, x)) return (bool)x[0].s_bool;
 	return this->QSqlCursor::select(x1, x2);
     }
     virtual void setCalculated(const QString& x1, bool x2) {
 	Smoke::StackItem x[3];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	x[2].s_bool = (bool)x2;
 	if(call_method((void*)this, 7264, x)) return;
 	this->QSqlCursor::setCalculated(x1, x2);
     }
     virtual void setFilter(const QString& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 7279, x)) return;
 	this->QSqlCursor::setFilter(x1);
     }
     virtual void setGenerated(const QString& x1, bool x2) {
 	Smoke::StackItem x[3];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	x[2].s_bool = (bool)x2;
 	if(call_method((void*)this, 7249, x)) return;
 	this->QSqlCursor::setGenerated(x1, x2);
@@ -537,14 +537,14 @@ public:
     }
     virtual void setName(const QString& x1, bool x2) {
 	Smoke::StackItem x[3];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	x[2].s_bool = (bool)x2;
 	if(call_method((void*)this, 7281, x)) return;
 	this->QSqlCursor::setName(x1, x2);
     }
     virtual void setNull(const QString& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 7549, x)) return;
 	this->QSqlRecord::setNull(x1);
     }
@@ -556,45 +556,45 @@ public:
     }
     virtual void setPrimaryIndex(const QSqlIndex& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 7244, x)) return;
 	this->QSqlCursor::setPrimaryIndex(x1);
     }
     virtual void setSort(const QSqlIndex& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 7277, x)) return;
 	this->QSqlCursor::setSort(x1);
     }
     virtual void setTrimmed(const QString& x1, bool x2) {
 	Smoke::StackItem x[3];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	x[2].s_bool = (bool)x2;
 	if(call_method((void*)this, 7266, x)) return;
 	this->QSqlCursor::setTrimmed(x1, x2);
     }
     virtual void setValue(const QString& x1, const QVariant& x2) {
 	Smoke::StackItem x[3];
-	x[1].s_voidp = (void*)&x1;
-	x[2].s_voidp = (void*)&x2;
+	x[1].s_class = (void*)&x1;
+	x[2].s_class = (void*)&x2;
 	if(call_method((void*)this, 7543, x)) return;
 	this->QSqlRecord::setValue(x1, x2);
     }
     virtual void setValue(int x1, const QVariant& x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = (int)x1;
-	x[2].s_voidp = (void*)&x2;
+	x[2].s_class = (void*)&x2;
 	if(call_method((void*)this, 7542, x)) return;
 	this->QSqlRecord::setValue(x1, x2);
     }
     virtual QString toString(QSqlRecord* x1, const QString& x2, const QString& x3, const QString& x4) const {
 	Smoke::StackItem x[5];
-	x[1].s_voidp = (void*)x1;
-	x[2].s_voidp = (void*)&x2;
-	x[3].s_voidp = (void*)&x3;
-	x[4].s_voidp = (void*)&x4;
+	x[1].s_class = (void*)x1;
+	x[2].s_class = (void*)&x2;
+	x[3].s_class = (void*)&x3;
+	x[4].s_class = (void*)&x4;
 	if(call_method((void*)this, 7295, x)) {
-	    QString *xptr = (QString *)x[0].s_voidp;
+	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -603,13 +603,13 @@ public:
     }
     virtual QString toString(const QSqlIndex& x1, QSqlRecord* x2, const QString& x3, const QString& x4, const QString& x5) const {
 	Smoke::StackItem x[6];
-	x[1].s_voidp = (void*)&x1;
-	x[2].s_voidp = (void*)x2;
-	x[3].s_voidp = (void*)&x3;
-	x[4].s_voidp = (void*)&x4;
-	x[5].s_voidp = (void*)&x5;
+	x[1].s_class = (void*)&x1;
+	x[2].s_class = (void*)x2;
+	x[3].s_class = (void*)&x3;
+	x[4].s_class = (void*)&x4;
+	x[5].s_class = (void*)&x5;
 	if(call_method((void*)this, 7296, x)) {
-	    QString *xptr = (QString *)x[0].s_voidp;
+	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -618,11 +618,11 @@ public:
     }
     virtual QString toString(const QString& x1, QSqlField* x2, const QString& x3) const {
 	Smoke::StackItem x[4];
-	x[1].s_voidp = (void*)&x1;
-	x[2].s_voidp = (void*)x2;
-	x[3].s_voidp = (void*)&x3;
+	x[1].s_class = (void*)&x1;
+	x[2].s_class = (void*)x2;
+	x[3].s_class = (void*)&x3;
 	if(call_method((void*)this, 7294, x)) {
-	    QString *xptr = (QString *)x[0].s_voidp;
+	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -631,10 +631,10 @@ public:
     }
     virtual QString toString(const QString& x1, const QString& x2) const {
 	Smoke::StackItem x[3];
-	x[1].s_voidp = (void*)&x1;
-	x[2].s_voidp = (void*)&x2;
+	x[1].s_class = (void*)&x1;
+	x[2].s_class = (void*)&x2;
 	if(call_method((void*)this, 7284, x)) {
-	    QString *xptr = (QString *)x[0].s_voidp;
+	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -643,9 +643,9 @@ public:
     }
     virtual QStringList toStringList(const QString& x1) const {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 7570, x)) {
-	    QStringList *xptr = (QStringList *)x[0].s_voidp;
+	    QStringList *xptr = (QStringList *)x[0].s_class;
 	    QStringList xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -660,16 +660,16 @@ public:
     }
     virtual int update(const QString& x1, bool x2) {
 	Smoke::StackItem x[3];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	x[2].s_bool = (bool)x2;
 	if(call_method((void*)this, 7290, x)) return (int)x[0].s_int;
 	return this->QSqlCursor::update(x1, x2);
     }
     virtual QVariant value(const QString& x1) const {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 7238, x)) {
-	    QVariant *xptr = (QVariant *)x[0].s_voidp;
+	    QVariant *xptr = (QVariant *)x[0].s_class;
 	    QVariant xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -680,7 +680,7 @@ public:
 	Smoke::StackItem x[2];
 	x[1].s_int = (int)x1;
 	if(call_method((void*)this, 7237, x)) {
-	    QVariant *xptr = (QVariant *)x[0].s_voidp;
+	    QVariant *xptr = (QVariant *)x[0].s_class;
 	    QVariant xret(*xptr);
 	    delete xptr;
 	    return xret;

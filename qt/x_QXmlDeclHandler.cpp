@@ -10,23 +10,23 @@ public:
     x_QXmlDeclHandler(void *x) : xthis((QXmlDeclHandler*)x) {}
     void x_0(Smoke::Stack x) {
 	// attributeDecl(const QString&, const QString&, const QString&, const QString&, const QString&)
-	bool xret = xthis->QXmlDeclHandler::attributeDecl(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,*(const QString *)x[3].s_voidp,*(const QString *)x[4].s_voidp,*(const QString *)x[5].s_voidp);
+	bool xret = xthis->QXmlDeclHandler::attributeDecl(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,*(const QString *)x[3].s_class,*(const QString *)x[4].s_class,*(const QString *)x[5].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_1(Smoke::Stack x) {
 	// internalEntityDecl(const QString&, const QString&)
-	bool xret = xthis->QXmlDeclHandler::internalEntityDecl(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
+	bool xret = xthis->QXmlDeclHandler::internalEntityDecl(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_2(Smoke::Stack x) {
 	// externalEntityDecl(const QString&, const QString&, const QString&)
-	bool xret = xthis->QXmlDeclHandler::externalEntityDecl(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,*(const QString *)x[3].s_voidp);
+	bool xret = xthis->QXmlDeclHandler::externalEntityDecl(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,*(const QString *)x[3].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_3(Smoke::Stack x) {
 	// errorString()
 	QString xret = xthis->QXmlDeclHandler::errorString();
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     ~x_QXmlDeclHandler() {}
 };

@@ -6,341 +6,341 @@
 class x_QChar : public QChar {
 public:
     static void x_0(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::NoCategory;
+	x[0].s_enum = (long)QChar::NoCategory;
     }
     static void x_1(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Mark_NonSpacing;
+	x[0].s_enum = (long)QChar::Mark_NonSpacing;
     }
     static void x_2(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Mark_SpacingCombining;
+	x[0].s_enum = (long)QChar::Mark_SpacingCombining;
     }
     static void x_3(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Mark_Enclosing;
+	x[0].s_enum = (long)QChar::Mark_Enclosing;
     }
     static void x_4(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Number_DecimalDigit;
+	x[0].s_enum = (long)QChar::Number_DecimalDigit;
     }
     static void x_5(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Number_Letter;
+	x[0].s_enum = (long)QChar::Number_Letter;
     }
     static void x_6(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Number_Other;
+	x[0].s_enum = (long)QChar::Number_Other;
     }
     static void x_7(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Separator_Space;
+	x[0].s_enum = (long)QChar::Separator_Space;
     }
     static void x_8(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Separator_Line;
+	x[0].s_enum = (long)QChar::Separator_Line;
     }
     static void x_9(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Separator_Paragraph;
+	x[0].s_enum = (long)QChar::Separator_Paragraph;
     }
     static void x_10(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Other_Control;
+	x[0].s_enum = (long)QChar::Other_Control;
     }
     static void x_11(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Other_Format;
+	x[0].s_enum = (long)QChar::Other_Format;
     }
     static void x_12(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Other_Surrogate;
+	x[0].s_enum = (long)QChar::Other_Surrogate;
     }
     static void x_13(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Other_PrivateUse;
+	x[0].s_enum = (long)QChar::Other_PrivateUse;
     }
     static void x_14(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Other_NotAssigned;
+	x[0].s_enum = (long)QChar::Other_NotAssigned;
     }
     static void x_15(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Letter_Uppercase;
+	x[0].s_enum = (long)QChar::Letter_Uppercase;
     }
     static void x_16(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Letter_Lowercase;
+	x[0].s_enum = (long)QChar::Letter_Lowercase;
     }
     static void x_17(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Letter_Titlecase;
+	x[0].s_enum = (long)QChar::Letter_Titlecase;
     }
     static void x_18(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Letter_Modifier;
+	x[0].s_enum = (long)QChar::Letter_Modifier;
     }
     static void x_19(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Letter_Other;
+	x[0].s_enum = (long)QChar::Letter_Other;
     }
     static void x_20(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Punctuation_Connector;
+	x[0].s_enum = (long)QChar::Punctuation_Connector;
     }
     static void x_21(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Punctuation_Dash;
+	x[0].s_enum = (long)QChar::Punctuation_Dash;
     }
     static void x_22(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Punctuation_Dask;
+	x[0].s_enum = (long)QChar::Punctuation_Dask;
     }
     static void x_23(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Punctuation_Open;
+	x[0].s_enum = (long)QChar::Punctuation_Open;
     }
     static void x_24(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Punctuation_Close;
+	x[0].s_enum = (long)QChar::Punctuation_Close;
     }
     static void x_25(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Punctuation_InitialQuote;
+	x[0].s_enum = (long)QChar::Punctuation_InitialQuote;
     }
     static void x_26(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Punctuation_FinalQuote;
+	x[0].s_enum = (long)QChar::Punctuation_FinalQuote;
     }
     static void x_27(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Punctuation_Other;
+	x[0].s_enum = (long)QChar::Punctuation_Other;
     }
     static void x_28(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Symbol_Math;
+	x[0].s_enum = (long)QChar::Symbol_Math;
     }
     static void x_29(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Symbol_Currency;
+	x[0].s_enum = (long)QChar::Symbol_Currency;
     }
     static void x_30(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Symbol_Modifier;
+	x[0].s_enum = (long)QChar::Symbol_Modifier;
     }
     static void x_31(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Symbol_Other;
+	x[0].s_enum = (long)QChar::Symbol_Other;
     }
     static void x_32(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::DirL;
+	x[0].s_enum = (long)QChar::DirL;
     }
     static void x_33(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::DirR;
+	x[0].s_enum = (long)QChar::DirR;
     }
     static void x_34(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::DirEN;
+	x[0].s_enum = (long)QChar::DirEN;
     }
     static void x_35(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::DirES;
+	x[0].s_enum = (long)QChar::DirES;
     }
     static void x_36(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::DirET;
+	x[0].s_enum = (long)QChar::DirET;
     }
     static void x_37(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::DirAN;
+	x[0].s_enum = (long)QChar::DirAN;
     }
     static void x_38(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::DirCS;
+	x[0].s_enum = (long)QChar::DirCS;
     }
     static void x_39(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::DirB;
+	x[0].s_enum = (long)QChar::DirB;
     }
     static void x_40(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::DirS;
+	x[0].s_enum = (long)QChar::DirS;
     }
     static void x_41(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::DirWS;
+	x[0].s_enum = (long)QChar::DirWS;
     }
     static void x_42(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::DirON;
+	x[0].s_enum = (long)QChar::DirON;
     }
     static void x_43(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::DirLRE;
+	x[0].s_enum = (long)QChar::DirLRE;
     }
     static void x_44(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::DirLRO;
+	x[0].s_enum = (long)QChar::DirLRO;
     }
     static void x_45(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::DirAL;
+	x[0].s_enum = (long)QChar::DirAL;
     }
     static void x_46(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::DirRLE;
+	x[0].s_enum = (long)QChar::DirRLE;
     }
     static void x_47(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::DirRLO;
+	x[0].s_enum = (long)QChar::DirRLO;
     }
     static void x_48(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::DirPDF;
+	x[0].s_enum = (long)QChar::DirPDF;
     }
     static void x_49(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::DirNSM;
+	x[0].s_enum = (long)QChar::DirNSM;
     }
     static void x_50(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::DirBN;
+	x[0].s_enum = (long)QChar::DirBN;
     }
     static void x_51(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Single;
+	x[0].s_enum = (long)QChar::Single;
     }
     static void x_52(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Canonical;
+	x[0].s_enum = (long)QChar::Canonical;
     }
     static void x_53(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Font;
+	x[0].s_enum = (long)QChar::Font;
     }
     static void x_54(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::NoBreak;
+	x[0].s_enum = (long)QChar::NoBreak;
     }
     static void x_55(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Initial;
+	x[0].s_enum = (long)QChar::Initial;
     }
     static void x_56(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Medial;
+	x[0].s_enum = (long)QChar::Medial;
     }
     static void x_57(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Final;
+	x[0].s_enum = (long)QChar::Final;
     }
     static void x_58(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Isolated;
+	x[0].s_enum = (long)QChar::Isolated;
     }
     static void x_59(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Circle;
+	x[0].s_enum = (long)QChar::Circle;
     }
     static void x_60(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Super;
+	x[0].s_enum = (long)QChar::Super;
     }
     static void x_61(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Sub;
+	x[0].s_enum = (long)QChar::Sub;
     }
     static void x_62(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Vertical;
+	x[0].s_enum = (long)QChar::Vertical;
     }
     static void x_63(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Wide;
+	x[0].s_enum = (long)QChar::Wide;
     }
     static void x_64(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Narrow;
+	x[0].s_enum = (long)QChar::Narrow;
     }
     static void x_65(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Small;
+	x[0].s_enum = (long)QChar::Small;
     }
     static void x_66(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Square;
+	x[0].s_enum = (long)QChar::Square;
     }
     static void x_67(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Compat;
+	x[0].s_enum = (long)QChar::Compat;
     }
     static void x_68(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Fraction;
+	x[0].s_enum = (long)QChar::Fraction;
     }
     static void x_69(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::OtherJoining;
+	x[0].s_enum = (long)QChar::OtherJoining;
     }
     static void x_70(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Dual;
+	x[0].s_enum = (long)QChar::Dual;
     }
     static void x_71(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Right;
+	x[0].s_enum = (long)QChar::Right;
     }
     static void x_72(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Center;
+	x[0].s_enum = (long)QChar::Center;
     }
     static void x_73(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Combining_BelowLeftAttached;
+	x[0].s_enum = (long)QChar::Combining_BelowLeftAttached;
     }
     static void x_74(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Combining_BelowAttached;
+	x[0].s_enum = (long)QChar::Combining_BelowAttached;
     }
     static void x_75(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Combining_BelowRightAttached;
+	x[0].s_enum = (long)QChar::Combining_BelowRightAttached;
     }
     static void x_76(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Combining_LeftAttached;
+	x[0].s_enum = (long)QChar::Combining_LeftAttached;
     }
     static void x_77(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Combining_RightAttached;
+	x[0].s_enum = (long)QChar::Combining_RightAttached;
     }
     static void x_78(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Combining_AboveLeftAttached;
+	x[0].s_enum = (long)QChar::Combining_AboveLeftAttached;
     }
     static void x_79(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Combining_AboveAttached;
+	x[0].s_enum = (long)QChar::Combining_AboveAttached;
     }
     static void x_80(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Combining_AboveRightAttached;
+	x[0].s_enum = (long)QChar::Combining_AboveRightAttached;
     }
     static void x_81(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Combining_BelowLeft;
+	x[0].s_enum = (long)QChar::Combining_BelowLeft;
     }
     static void x_82(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Combining_Below;
+	x[0].s_enum = (long)QChar::Combining_Below;
     }
     static void x_83(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Combining_BelowRight;
+	x[0].s_enum = (long)QChar::Combining_BelowRight;
     }
     static void x_84(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Combining_Left;
+	x[0].s_enum = (long)QChar::Combining_Left;
     }
     static void x_85(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Combining_Right;
+	x[0].s_enum = (long)QChar::Combining_Right;
     }
     static void x_86(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Combining_AboveLeft;
+	x[0].s_enum = (long)QChar::Combining_AboveLeft;
     }
     static void x_87(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Combining_Above;
+	x[0].s_enum = (long)QChar::Combining_Above;
     }
     static void x_88(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Combining_AboveRight;
+	x[0].s_enum = (long)QChar::Combining_AboveRight;
     }
     static void x_89(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Combining_DoubleBelow;
+	x[0].s_enum = (long)QChar::Combining_DoubleBelow;
     }
     static void x_90(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Combining_DoubleAbove;
+	x[0].s_enum = (long)QChar::Combining_DoubleAbove;
     }
     static void x_91(Smoke::Stack x) {
-	x[0].s_long = (long)QChar::Combining_IotaSubscript;
+	x[0].s_enum = (long)QChar::Combining_IotaSubscript;
     }
     static void x_92(Smoke::Stack x) {
 	// QChar()
 	x_QChar* xret = new x_QChar();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     x_QChar() : QChar() {
     }
     static void x_93(Smoke::Stack x) {
 	// QChar(char)
 	x_QChar* xret = new x_QChar((char)x[1].s_char);
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     x_QChar(char x1) : QChar(x1) {
     }
     static void x_94(Smoke::Stack x) {
 	// QChar(uchar)
 	x_QChar* xret = new x_QChar((uchar)x[1].s_uchar);
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     x_QChar(uchar x1) : QChar(x1) {
     }
     static void x_95(Smoke::Stack x) {
 	// QChar(uchar, uchar)
 	x_QChar* xret = new x_QChar((uchar)x[1].s_uchar,(uchar)x[2].s_uchar);
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     x_QChar(uchar x1, uchar x2) : QChar(x1, x2) {
     }
     static void x_96(Smoke::Stack x) {
 	// QChar(const QChar&)
-	x_QChar* xret = new x_QChar(*(const QChar *)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QChar* xret = new x_QChar(*(const QChar *)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QChar(const QChar& x1) : QChar(x1) {
     }
     static void x_97(Smoke::Stack x) {
 	// QChar(ushort)
 	x_QChar* xret = new x_QChar((ushort)x[1].s_ushort);
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     x_QChar(ushort x1) : QChar(x1) {
     }
     static void x_98(Smoke::Stack x) {
 	// QChar(short)
 	x_QChar* xret = new x_QChar((short)x[1].s_short);
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     x_QChar(short x1) : QChar(x1) {
     }
     static void x_99(Smoke::Stack x) {
 	// QChar(uint)
 	x_QChar* xret = new x_QChar((uint)x[1].s_uint);
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     x_QChar(uint x1) : QChar(x1) {
     }
     static void x_100(Smoke::Stack x) {
 	// QChar(int)
 	x_QChar* xret = new x_QChar((int)x[1].s_int);
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     x_QChar(int x1) : QChar(x1) {
     }
@@ -352,27 +352,27 @@ public:
     void x_102(Smoke::Stack x) const {
 	// lower()
 	QChar xret = this->QChar::lower();
-	x[0].s_voidp = (void*)new QChar(xret);
+	x[0].s_class = (void*)new QChar(xret);
     }
     void x_103(Smoke::Stack x) const {
 	// upper()
 	QChar xret = this->QChar::upper();
-	x[0].s_voidp = (void*)new QChar(xret);
+	x[0].s_class = (void*)new QChar(xret);
     }
     void x_104(Smoke::Stack x) const {
 	// category()
 	QChar::Category xret = this->QChar::category();
-	x[0].s_voidp = (void*)new QChar::Category(xret);
+	x[0].s_class = (void*)new QChar::Category(xret);
     }
     void x_105(Smoke::Stack x) const {
 	// direction()
 	QChar::Direction xret = this->QChar::direction();
-	x[0].s_voidp = (void*)new QChar::Direction(xret);
+	x[0].s_class = (void*)new QChar::Direction(xret);
     }
     void x_106(Smoke::Stack x) const {
 	// joining()
 	QChar::Joining xret = this->QChar::joining();
-	x[0].s_voidp = (void*)new QChar::Joining(xret);
+	x[0].s_class = (void*)new QChar::Joining(xret);
     }
     void x_107(Smoke::Stack x) const {
 	// mirrored()
@@ -382,22 +382,22 @@ public:
     void x_108(Smoke::Stack x) const {
 	// mirroredChar()
 	QChar xret = this->QChar::mirroredChar();
-	x[0].s_voidp = (void*)new QChar(xret);
+	x[0].s_class = (void*)new QChar(xret);
     }
     void x_109(Smoke::Stack x) const {
 	// decomposition()
 	const QString& xret = this->QChar::decomposition();
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_110(Smoke::Stack x) const {
 	// decompositionTag()
 	QChar::Decomposition xret = this->QChar::decompositionTag();
-	x[0].s_voidp = (void*)new QChar::Decomposition(xret);
+	x[0].s_class = (void*)new QChar::Decomposition(xret);
     }
     void x_111(Smoke::Stack x) const {
 	// combiningClass()
 	unsigned char xret = this->QChar::combiningClass();
-	x[0].s_voidp = (void*)new unsigned char(xret);
+	x[0].s_class = (void*)new unsigned char(xret);
     }
     void x_112(Smoke::Stack x) const {
 	// latin1()
@@ -412,7 +412,7 @@ public:
     void x_114(Smoke::Stack x) {
 	// unicode()
 	ushort& xret = this->QChar::unicode();
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_115(Smoke::Stack x) const {
 	// isNull()

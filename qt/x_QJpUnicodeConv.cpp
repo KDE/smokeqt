@@ -5,37 +5,37 @@
 class x_QJpUnicodeConv : public QJpUnicodeConv {
 public:
     static void x_0(Smoke::Stack x) {
-	x[0].s_long = (long)QJpUnicodeConv::Default;
+	x[0].s_enum = (long)QJpUnicodeConv::Default;
     }
     static void x_1(Smoke::Stack x) {
-	x[0].s_long = (long)QJpUnicodeConv::Unicode;
+	x[0].s_enum = (long)QJpUnicodeConv::Unicode;
     }
     static void x_2(Smoke::Stack x) {
-	x[0].s_long = (long)QJpUnicodeConv::Unicode_JISX0201;
+	x[0].s_enum = (long)QJpUnicodeConv::Unicode_JISX0201;
     }
     static void x_3(Smoke::Stack x) {
-	x[0].s_long = (long)QJpUnicodeConv::Unicode_ASCII;
+	x[0].s_enum = (long)QJpUnicodeConv::Unicode_ASCII;
     }
     static void x_4(Smoke::Stack x) {
-	x[0].s_long = (long)QJpUnicodeConv::JISX0221_JISX0201;
+	x[0].s_enum = (long)QJpUnicodeConv::JISX0221_JISX0201;
     }
     static void x_5(Smoke::Stack x) {
-	x[0].s_long = (long)QJpUnicodeConv::JISX0221_ASCII;
+	x[0].s_enum = (long)QJpUnicodeConv::JISX0221_ASCII;
     }
     static void x_6(Smoke::Stack x) {
-	x[0].s_long = (long)QJpUnicodeConv::Sun_JDK117;
+	x[0].s_enum = (long)QJpUnicodeConv::Sun_JDK117;
     }
     static void x_7(Smoke::Stack x) {
-	x[0].s_long = (long)QJpUnicodeConv::Microsoft_CP932;
+	x[0].s_enum = (long)QJpUnicodeConv::Microsoft_CP932;
     }
     static void x_8(Smoke::Stack x) {
-	x[0].s_long = (long)QJpUnicodeConv::NEC_VDC;
+	x[0].s_enum = (long)QJpUnicodeConv::NEC_VDC;
     }
     static void x_9(Smoke::Stack x) {
-	x[0].s_long = (long)QJpUnicodeConv::UDC;
+	x[0].s_enum = (long)QJpUnicodeConv::UDC;
     }
     static void x_10(Smoke::Stack x) {
-	x[0].s_long = (long)QJpUnicodeConv::IBM_VDC;
+	x[0].s_enum = (long)QJpUnicodeConv::IBM_VDC;
     }
     void x_11(Smoke::Stack x) const {
 	// asciiToUnicode(uint, uint)
@@ -180,12 +180,12 @@ public:
     static void x_39(Smoke::Stack x) {
 	// newConverter(int)
 	QJpUnicodeConv* xret = QJpUnicodeConv::newConverter((int)x[1].s_int);
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     static void x_40(Smoke::Stack x) {
 	// QJpUnicodeConv(int)
 	x_QJpUnicodeConv* xret = new x_QJpUnicodeConv((int)x[1].s_int);
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     x_QJpUnicodeConv(int x1) : QJpUnicodeConv(x1) {
     }

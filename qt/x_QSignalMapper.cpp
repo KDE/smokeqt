@@ -8,29 +8,29 @@ class x_QSignalMapper : public QSignalMapper {
 public:
     static void x_0(Smoke::Stack x) {
 	// QSignalMapper(QObject*, const char*)
-	x_QSignalMapper* xret = new x_QSignalMapper((QObject*)x[1].s_voidp,(const char*)x[2].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QSignalMapper* xret = new x_QSignalMapper((QObject*)x[1].s_class,(const char*)x[2].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QSignalMapper(QObject* x1, const char* x2) : QSignalMapper(x1, x2) {
     }
     static void x_1(Smoke::Stack x) {
 	// QSignalMapper(QObject*)
-	x_QSignalMapper* xret = new x_QSignalMapper((QObject*)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QSignalMapper* xret = new x_QSignalMapper((QObject*)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QSignalMapper(QObject* x1) : QSignalMapper(x1) {
     }
     void x_2(Smoke::Stack x) {
 	// setMapping(const QObject*, int)
-	this->QSignalMapper::setMapping((const QObject*)x[1].s_voidp,(int)x[2].s_int);
+	this->QSignalMapper::setMapping((const QObject*)x[1].s_class,(int)x[2].s_int);
     }
     void x_3(Smoke::Stack x) {
 	// setMapping(const QObject*, const QString&)
-	this->QSignalMapper::setMapping((const QObject*)x[1].s_voidp,*(const QString *)x[2].s_voidp);
+	this->QSignalMapper::setMapping((const QObject*)x[1].s_class,*(const QString *)x[2].s_class);
     }
     void x_4(Smoke::Stack x) {
 	// removeMappings(const QObject*)
-	this->QSignalMapper::removeMappings((const QObject*)x[1].s_voidp);
+	this->QSignalMapper::removeMappings((const QObject*)x[1].s_class);
     }
     void x_5(Smoke::Stack x) {
 	// map()
@@ -42,64 +42,64 @@ public:
     }
     void x_7(Smoke::Stack x) {
 	// mapped(const QString&)
-	this->QSignalMapper::mapped(*(const QString *)x[1].s_voidp);
+	this->QSignalMapper::mapped(*(const QString *)x[1].s_class);
     }
     virtual bool checkConnectArgs(const char* x1, const QObject* x2, const char* x3) {
 	Smoke::StackItem x[4];
-	x[1].s_voidp = (void*)x1;
-	x[2].s_voidp = (void*)x2;
-	x[3].s_voidp = (void*)x3;
+	x[1].s_class = (void*)x1;
+	x[2].s_class = (void*)x2;
+	x[3].s_class = (void*)x3;
 	if(call_method((void*)this, 5469, x)) return (bool)x[0].s_bool;
 	return this->QObject::checkConnectArgs(x1, x2, x3);
     }
     virtual void childEvent(QChildEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5465, x)) return;
 	this->QObject::childEvent(x1);
     }
     virtual void connectNotify(const char* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5467, x)) return;
 	this->QObject::connectNotify(x1);
     }
     virtual void customEvent(QCustomEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5466, x)) return;
 	this->QObject::customEvent(x1);
     }
     virtual void disconnectNotify(const char* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5468, x)) return;
 	this->QObject::disconnectNotify(x1);
     }
     virtual bool event(QEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5404, x)) return (bool)x[0].s_bool;
 	return this->QObject::event(x1);
     }
     virtual bool eventFilter(QObject* x1, QEvent* x2) {
 	Smoke::StackItem x[3];
-	x[1].s_voidp = (void*)x1;
-	x[2].s_voidp = (void*)x2;
+	x[1].s_class = (void*)x1;
+	x[2].s_class = (void*)x2;
 	if(call_method((void*)this, 5405, x)) return (bool)x[0].s_bool;
 	return this->QObject::eventFilter(x1, x2);
     }
     virtual void insertChild(QObject* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5427, x)) return;
 	this->QObject::insertChild(x1);
     }
     virtual QVariant property(const char* x1) const {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5441, x)) {
-	    QVariant *xptr = (QVariant *)x[0].s_voidp;
+	    QVariant *xptr = (QVariant *)x[0].s_class;
 	    QVariant xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -108,40 +108,40 @@ public:
     }
     virtual void removeChild(QObject* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5428, x)) return;
 	this->QObject::removeChild(x1);
     }
     virtual void setMapping(const QObject* x1, const QString& x2) {
 	Smoke::StackItem x[3];
-	x[1].s_voidp = (void*)x1;
-	x[2].s_voidp = (void*)&x2;
+	x[1].s_class = (void*)x1;
+	x[2].s_class = (void*)&x2;
 	if(call_method((void*)this, 6795, x)) return;
 	this->QSignalMapper::setMapping(x1, x2);
     }
     virtual void setMapping(const QObject* x1, int x2) {
 	Smoke::StackItem x[3];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	x[2].s_int = (int)x2;
 	if(call_method((void*)this, 6794, x)) return;
 	this->QSignalMapper::setMapping(x1, x2);
     }
     virtual void setName(const char* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5410, x)) return;
 	this->QObject::setName(x1);
     }
     virtual bool setProperty(const char* x1, const QVariant& x2) {
 	Smoke::StackItem x[3];
-	x[1].s_voidp = (void*)x1;
-	x[2].s_voidp = (void*)&x2;
+	x[1].s_class = (void*)x1;
+	x[2].s_class = (void*)&x2;
 	if(call_method((void*)this, 5440, x)) return (bool)x[0].s_bool;
 	return this->QObject::setProperty(x1, x2);
     }
     virtual void timerEvent(QTimerEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5464, x)) return;
 	this->QObject::timerEvent(x1);
     }

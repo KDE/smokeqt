@@ -6,28 +6,28 @@
 class x_QTabletEvent : public QTabletEvent {
 public:
     static void x_0(Smoke::Stack x) {
-	x[0].s_long = (long)QTabletEvent::NoDevice;
+	x[0].s_enum = (long)QTabletEvent::NoDevice;
     }
     static void x_1(Smoke::Stack x) {
-	x[0].s_long = (long)QTabletEvent::Puck;
+	x[0].s_enum = (long)QTabletEvent::Puck;
     }
     static void x_2(Smoke::Stack x) {
-	x[0].s_long = (long)QTabletEvent::Stylus;
+	x[0].s_enum = (long)QTabletEvent::Stylus;
     }
     static void x_3(Smoke::Stack x) {
-	x[0].s_long = (long)QTabletEvent::Eraser;
+	x[0].s_enum = (long)QTabletEvent::Eraser;
     }
     static void x_4(Smoke::Stack x) {
 	// QTabletEvent(const QPoint&, int, int, int, int, const QPair<int, int>&)
-	x_QTabletEvent* xret = new x_QTabletEvent(*(const QPoint *)x[1].s_voidp,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int,*(const QPair<int, int> *)x[6].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QTabletEvent* xret = new x_QTabletEvent(*(const QPoint *)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int,*(const QPair<int, int> *)x[6].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QTabletEvent(const QPoint& x1, int x2, int x3, int x4, int x5, const QPair<int, int>& x6) : QTabletEvent(x1, x2, x3, x4, x5, x6) {
     }
     static void x_5(Smoke::Stack x) {
 	// QTabletEvent(const QPoint&, const QPoint&, int, int, int, int, const QPair<int, int>&)
-	x_QTabletEvent* xret = new x_QTabletEvent(*(const QPoint *)x[1].s_voidp,*(const QPoint *)x[2].s_voidp,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int,(int)x[6].s_int,*(const QPair<int, int> *)x[7].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QTabletEvent* xret = new x_QTabletEvent(*(const QPoint *)x[1].s_class,*(const QPoint *)x[2].s_class,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int,(int)x[6].s_int,*(const QPair<int, int> *)x[7].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QTabletEvent(const QPoint& x1, const QPoint& x2, int x3, int x4, int x5, int x6, const QPair<int, int>& x7) : QTabletEvent(x1, x2, x3, x4, x5, x6, x7) {
     }
@@ -49,12 +49,12 @@ public:
     void x_9(Smoke::Stack x) const {
 	// pos()
 	const QPoint& xret = this->QTabletEvent::pos();
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_10(Smoke::Stack x) const {
 	// globalPos()
 	const QPoint& xret = this->QTabletEvent::globalPos();
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_11(Smoke::Stack x) const {
 	// x()
@@ -79,7 +79,7 @@ public:
     void x_15(Smoke::Stack x) const {
 	// device()
 	QTabletEvent::TabletDevice xret = this->QTabletEvent::device();
-	x[0].s_voidp = (void*)new QTabletEvent::TabletDevice(xret);
+	x[0].s_class = (void*)new QTabletEvent::TabletDevice(xret);
     }
     void x_16(Smoke::Stack x) const {
 	// isAccepted()
@@ -97,7 +97,7 @@ public:
     void x_19(Smoke::Stack x) {
 	// uniqueId()
 	QPair<int,int> xret = this->QTabletEvent::uniqueId();
-	x[0].s_voidp = (void*)new QPair<int,int>(xret);
+	x[0].s_class = (void*)new QPair<int,int>(xret);
     }
     ~x_QTabletEvent() {}
 };

@@ -11,103 +11,103 @@ class x_QColorDrag : public QColorDrag {
 public:
     static void x_0(Smoke::Stack x) {
 	// QColorDrag(const QColor&, QWidget*, const char*)
-	x_QColorDrag* xret = new x_QColorDrag(*(const QColor *)x[1].s_voidp,(QWidget*)x[2].s_voidp,(const char*)x[3].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QColorDrag* xret = new x_QColorDrag(*(const QColor *)x[1].s_class,(QWidget*)x[2].s_class,(const char*)x[3].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QColorDrag(const QColor& x1, QWidget* x2, const char* x3) : QColorDrag(x1, x2, x3) {
     }
     static void x_1(Smoke::Stack x) {
 	// QColorDrag(const QColor&, QWidget*)
-	x_QColorDrag* xret = new x_QColorDrag(*(const QColor *)x[1].s_voidp,(QWidget*)x[2].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QColorDrag* xret = new x_QColorDrag(*(const QColor *)x[1].s_class,(QWidget*)x[2].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QColorDrag(const QColor& x1, QWidget* x2) : QColorDrag(x1, x2) {
     }
     static void x_2(Smoke::Stack x) {
 	// QColorDrag(const QColor&)
-	x_QColorDrag* xret = new x_QColorDrag(*(const QColor *)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QColorDrag* xret = new x_QColorDrag(*(const QColor *)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QColorDrag(const QColor& x1) : QColorDrag(x1) {
     }
     static void x_3(Smoke::Stack x) {
 	// QColorDrag(QWidget*, const char*)
-	x_QColorDrag* xret = new x_QColorDrag((QWidget*)x[1].s_voidp,(const char*)x[2].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QColorDrag* xret = new x_QColorDrag((QWidget*)x[1].s_class,(const char*)x[2].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QColorDrag(QWidget* x1, const char* x2) : QColorDrag(x1, x2) {
     }
     static void x_4(Smoke::Stack x) {
 	// QColorDrag(QWidget*)
-	x_QColorDrag* xret = new x_QColorDrag((QWidget*)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QColorDrag* xret = new x_QColorDrag((QWidget*)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QColorDrag(QWidget* x1) : QColorDrag(x1) {
     }
     static void x_5(Smoke::Stack x) {
 	// QColorDrag()
 	x_QColorDrag* xret = new x_QColorDrag();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     x_QColorDrag() : QColorDrag() {
     }
     void x_6(Smoke::Stack x) {
 	// setColor(const QColor&)
-	this->QColorDrag::setColor(*(const QColor *)x[1].s_voidp);
+	this->QColorDrag::setColor(*(const QColor *)x[1].s_class);
     }
     static void x_7(Smoke::Stack x) {
 	// canDecode(QMimeSource*)
-	bool xret = QColorDrag::canDecode((QMimeSource*)x[1].s_voidp);
+	bool xret = QColorDrag::canDecode((QMimeSource*)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     static void x_8(Smoke::Stack x) {
 	// decode(QMimeSource*, QColor&)
-	bool xret = QColorDrag::decode((QMimeSource*)x[1].s_voidp,*(QColor *)x[2].s_voidp);
+	bool xret = QColorDrag::decode((QMimeSource*)x[1].s_class,*(QColor *)x[2].s_class);
 	x[0].s_bool = (bool)xret;
     }
     virtual bool checkConnectArgs(const char* x1, const QObject* x2, const char* x3) {
 	Smoke::StackItem x[4];
-	x[1].s_voidp = (void*)x1;
-	x[2].s_voidp = (void*)x2;
-	x[3].s_voidp = (void*)x3;
+	x[1].s_class = (void*)x1;
+	x[2].s_class = (void*)x2;
+	x[3].s_class = (void*)x3;
 	if(call_method((void*)this, 5469, x)) return (bool)x[0].s_bool;
 	return this->QObject::checkConnectArgs(x1, x2, x3);
     }
     virtual void childEvent(QChildEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5465, x)) return;
 	this->QObject::childEvent(x1);
     }
     virtual void connectNotify(const char* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5467, x)) return;
 	this->QObject::connectNotify(x1);
     }
     virtual void customEvent(QCustomEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5466, x)) return;
 	this->QObject::customEvent(x1);
     }
     virtual void disconnectNotify(const char* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5468, x)) return;
 	this->QObject::disconnectNotify(x1);
     }
     virtual bool drag(QDragObject::DragMode x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 2318, x)) return (bool)x[0].s_bool;
 	return this->QDragObject::drag(x1);
     }
     virtual QByteArray encodedData(const char* x1) const {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 7626, x)) {
-	    QByteArray *xptr = (QByteArray *)x[0].s_voidp;
+	    QByteArray *xptr = (QByteArray *)x[0].s_class;
 	    QByteArray xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -116,34 +116,34 @@ public:
     }
     virtual bool event(QEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5404, x)) return (bool)x[0].s_bool;
 	return this->QObject::event(x1);
     }
     virtual bool eventFilter(QObject* x1, QEvent* x2) {
 	Smoke::StackItem x[3];
-	x[1].s_voidp = (void*)x1;
-	x[2].s_voidp = (void*)x2;
+	x[1].s_class = (void*)x1;
+	x[2].s_class = (void*)x2;
 	if(call_method((void*)this, 5405, x)) return (bool)x[0].s_bool;
 	return this->QObject::eventFilter(x1, x2);
     }
     virtual const char* format(int x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_int = (int)x1;
-	if(call_method((void*)this, 7625, x)) 	return (const char*)x[0].s_voidp;
+	if(call_method((void*)this, 7625, x)) 	return (const char*)x[0].s_class;
 	return this->QStoredDrag::format(x1);
     }
     virtual void insertChild(QObject* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5427, x)) return;
 	this->QObject::insertChild(x1);
     }
     virtual QVariant property(const char* x1) const {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5441, x)) {
-	    QVariant *xptr = (QVariant *)x[0].s_voidp;
+	    QVariant *xptr = (QVariant *)x[0].s_class;
 	    QVariant xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -152,51 +152,51 @@ public:
     }
     virtual bool provides(const char* x1) const {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5113, x)) return (bool)x[0].s_bool;
 	return this->QMimeSource::provides(x1);
     }
     virtual void removeChild(QObject* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5428, x)) return;
 	this->QObject::removeChild(x1);
     }
     virtual void setEncodedData(const QByteArray& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 7624, x)) return;
 	this->QStoredDrag::setEncodedData(x1);
     }
     virtual void setName(const char* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5410, x)) return;
 	this->QObject::setName(x1);
     }
     virtual void setPixmap(QPixmap x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 2311, x)) return;
 	this->QDragObject::setPixmap(x1);
     }
     virtual void setPixmap(QPixmap x1, const QPoint& x2) {
 	Smoke::StackItem x[3];
-	x[1].s_voidp = (void*)&x1;
-	x[2].s_voidp = (void*)&x2;
+	x[1].s_class = (void*)&x1;
+	x[2].s_class = (void*)&x2;
 	if(call_method((void*)this, 2312, x)) return;
 	this->QDragObject::setPixmap(x1, x2);
     }
     virtual bool setProperty(const char* x1, const QVariant& x2) {
 	Smoke::StackItem x[3];
-	x[1].s_voidp = (void*)x1;
-	x[2].s_voidp = (void*)&x2;
+	x[1].s_class = (void*)x1;
+	x[2].s_class = (void*)&x2;
 	if(call_method((void*)this, 5440, x)) return (bool)x[0].s_bool;
 	return this->QObject::setProperty(x1, x2);
     }
     virtual void timerEvent(QTimerEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5464, x)) return;
 	this->QObject::timerEvent(x1);
     }

@@ -7,14 +7,14 @@ class x_QLibrary : public QLibrary {
 public:
     static void x_0(Smoke::Stack x) {
 	// QLibrary(const QString&)
-	x_QLibrary* xret = new x_QLibrary(*(const QString *)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QLibrary* xret = new x_QLibrary(*(const QString *)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QLibrary(const QString& x1) : QLibrary(x1) {
     }
     void x_1(Smoke::Stack x) {
 	// resolve(const char*)
-	void* xret = this->QLibrary::resolve((const char*)x[1].s_voidp);
+	void* xret = this->QLibrary::resolve((const char*)x[1].s_class);
 	x[0].s_voidp = (void*)xret;
     }
     void x_2(Smoke::Stack x) {
@@ -44,11 +44,11 @@ public:
     void x_7(Smoke::Stack x) const {
 	// library()
 	QString xret = this->QLibrary::library();
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     static void x_8(Smoke::Stack x) {
 	// resolve(const QString&, const char*)
-	void* xret = QLibrary::resolve(*(const QString *)x[1].s_voidp,(const char*)x[2].s_voidp);
+	void* xret = QLibrary::resolve(*(const QString *)x[1].s_class,(const char*)x[2].s_class);
 	x[0].s_voidp = (void*)xret;
     }
     virtual bool unload() {

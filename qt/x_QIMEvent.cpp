@@ -7,15 +7,15 @@ class x_QIMEvent : public QIMEvent {
 public:
     static void x_0(Smoke::Stack x) {
 	// QIMEvent(QEvent::Type, const QString&, int)
-	x_QIMEvent* xret = new x_QIMEvent(*(QEvent::Type *)x[1].s_voidp,*(const QString *)x[2].s_voidp,(int)x[3].s_int);
-	x[0].s_voidp = (void*)xret;
+	x_QIMEvent* xret = new x_QIMEvent(*(QEvent::Type *)x[1].s_class,*(const QString *)x[2].s_class,(int)x[3].s_int);
+	x[0].s_class = (void*)xret;
     }
     x_QIMEvent(QEvent::Type x1, const QString& x2, int x3) : QIMEvent(x1, x2, x3) {
     }
     void x_1(Smoke::Stack x) const {
 	// text()
 	const QString& xret = this->QIMEvent::text();
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_2(Smoke::Stack x) const {
 	// cursorPos()

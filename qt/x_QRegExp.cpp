@@ -9,51 +9,51 @@ public:
     static void x_0(Smoke::Stack x) {
 	// QRegExp()
 	x_QRegExp* xret = new x_QRegExp();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     x_QRegExp() : QRegExp() {
     }
     static void x_1(Smoke::Stack x) {
 	// QRegExp(const QString&, bool, bool)
-	x_QRegExp* xret = new x_QRegExp(*(const QString *)x[1].s_voidp,(bool)x[2].s_bool,(bool)x[3].s_bool);
-	x[0].s_voidp = (void*)xret;
+	x_QRegExp* xret = new x_QRegExp(*(const QString *)x[1].s_class,(bool)x[2].s_bool,(bool)x[3].s_bool);
+	x[0].s_class = (void*)xret;
     }
     x_QRegExp(const QString& x1, bool x2, bool x3) : QRegExp(x1, x2, x3) {
     }
     static void x_2(Smoke::Stack x) {
 	// QRegExp(const QString&, bool)
-	x_QRegExp* xret = new x_QRegExp(*(const QString *)x[1].s_voidp,(bool)x[2].s_bool);
-	x[0].s_voidp = (void*)xret;
+	x_QRegExp* xret = new x_QRegExp(*(const QString *)x[1].s_class,(bool)x[2].s_bool);
+	x[0].s_class = (void*)xret;
     }
     x_QRegExp(const QString& x1, bool x2) : QRegExp(x1, x2) {
     }
     static void x_3(Smoke::Stack x) {
 	// QRegExp(const QString&)
-	x_QRegExp* xret = new x_QRegExp(*(const QString *)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QRegExp* xret = new x_QRegExp(*(const QString *)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QRegExp(const QString& x1) : QRegExp(x1) {
     }
     static void x_4(Smoke::Stack x) {
 	// QRegExp(const QRegExp&)
-	x_QRegExp* xret = new x_QRegExp(*(const QRegExp *)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QRegExp* xret = new x_QRegExp(*(const QRegExp *)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QRegExp(const QRegExp& x1) : QRegExp(x1) {
     }
     void x_5(Smoke::Stack x) {
 	// operator=(const QRegExp&)
-	QRegExp& xret = this->QRegExp::operator=(*(const QRegExp *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QRegExp& xret = this->QRegExp::operator=(*(const QRegExp *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_6(Smoke::Stack x) const {
 	// operator==(const QRegExp&)
-	bool xret = this->QRegExp::operator==(*(const QRegExp *)x[1].s_voidp);
+	bool xret = this->QRegExp::operator==(*(const QRegExp *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_7(Smoke::Stack x) const {
 	// operator!=(const QRegExp&)
-	bool xret = this->QRegExp::operator!=(*(const QRegExp *)x[1].s_voidp);
+	bool xret = this->QRegExp::operator!=(*(const QRegExp *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_8(Smoke::Stack x) const {
@@ -69,11 +69,11 @@ public:
     void x_10(Smoke::Stack x) const {
 	// pattern()
 	QString xret = this->QRegExp::pattern();
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_11(Smoke::Stack x) {
 	// setPattern(const QString&)
-	this->QRegExp::setPattern(*(const QString *)x[1].s_voidp);
+	this->QRegExp::setPattern(*(const QString *)x[1].s_class);
     }
     void x_12(Smoke::Stack x) const {
 	// caseSensitive()
@@ -104,47 +104,47 @@ public:
     }
     void x_18(Smoke::Stack x) const {
 	// exactMatch(const QString&)
-	bool xret = this->QRegExp::exactMatch(*(const QString *)x[1].s_voidp);
+	bool xret = this->QRegExp::exactMatch(*(const QString *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_19(Smoke::Stack x) const {
 	// match(const QString&, int, int*, bool)
-	int xret = this->QRegExp::match(*(const QString *)x[1].s_voidp,(int)x[2].s_int,(int*)x[3].s_voidp,(bool)x[4].s_bool);
+	int xret = this->QRegExp::match(*(const QString *)x[1].s_class,(int)x[2].s_int,(int*)x[3].s_class,(bool)x[4].s_bool);
 	x[0].s_int = (int)xret;
     }
     void x_20(Smoke::Stack x) const {
 	// match(const QString&, int, int*)
-	int xret = this->QRegExp::match(*(const QString *)x[1].s_voidp,(int)x[2].s_int,(int*)x[3].s_voidp);
+	int xret = this->QRegExp::match(*(const QString *)x[1].s_class,(int)x[2].s_int,(int*)x[3].s_class);
 	x[0].s_int = (int)xret;
     }
     void x_21(Smoke::Stack x) const {
 	// match(const QString&, int)
-	int xret = this->QRegExp::match(*(const QString *)x[1].s_voidp,(int)x[2].s_int);
+	int xret = this->QRegExp::match(*(const QString *)x[1].s_class,(int)x[2].s_int);
 	x[0].s_int = (int)xret;
     }
     void x_22(Smoke::Stack x) const {
 	// match(const QString&)
-	int xret = this->QRegExp::match(*(const QString *)x[1].s_voidp);
+	int xret = this->QRegExp::match(*(const QString *)x[1].s_class);
 	x[0].s_int = (int)xret;
     }
     void x_23(Smoke::Stack x) const {
 	// search(const QString&, int)
-	int xret = this->QRegExp::search(*(const QString *)x[1].s_voidp,(int)x[2].s_int);
+	int xret = this->QRegExp::search(*(const QString *)x[1].s_class,(int)x[2].s_int);
 	x[0].s_int = (int)xret;
     }
     void x_24(Smoke::Stack x) const {
 	// search(const QString&)
-	int xret = this->QRegExp::search(*(const QString *)x[1].s_voidp);
+	int xret = this->QRegExp::search(*(const QString *)x[1].s_class);
 	x[0].s_int = (int)xret;
     }
     void x_25(Smoke::Stack x) const {
 	// searchRev(const QString&, int)
-	int xret = this->QRegExp::searchRev(*(const QString *)x[1].s_voidp,(int)x[2].s_int);
+	int xret = this->QRegExp::searchRev(*(const QString *)x[1].s_class,(int)x[2].s_int);
 	x[0].s_int = (int)xret;
     }
     void x_26(Smoke::Stack x) const {
 	// searchRev(const QString&)
-	int xret = this->QRegExp::searchRev(*(const QString *)x[1].s_voidp);
+	int xret = this->QRegExp::searchRev(*(const QString *)x[1].s_class);
 	x[0].s_int = (int)xret;
     }
     void x_27(Smoke::Stack x) const {
@@ -155,17 +155,17 @@ public:
     void x_28(Smoke::Stack x) {
 	// capturedTexts()
 	QStringList xret = this->QRegExp::capturedTexts();
-	x[0].s_voidp = (void*)new QStringList(xret);
+	x[0].s_class = (void*)new QStringList(xret);
     }
     void x_29(Smoke::Stack x) {
 	// cap(int)
 	QString xret = this->QRegExp::cap((int)x[1].s_int);
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_30(Smoke::Stack x) {
 	// cap()
 	QString xret = this->QRegExp::cap();
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_31(Smoke::Stack x) {
 	// pos(int)

@@ -8,27 +8,27 @@ class x_QFontInfo : public QFontInfo {
 public:
     static void x_0(Smoke::Stack x) {
 	// QFontInfo(const QFont&)
-	x_QFontInfo* xret = new x_QFontInfo(*(const QFont *)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QFontInfo* xret = new x_QFontInfo(*(const QFont *)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QFontInfo(const QFont& x1) : QFontInfo(x1) {
     }
     static void x_1(Smoke::Stack x) {
 	// QFontInfo(const QFontInfo&)
-	x_QFontInfo* xret = new x_QFontInfo(*(const QFontInfo *)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QFontInfo* xret = new x_QFontInfo(*(const QFontInfo *)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QFontInfo(const QFontInfo& x1) : QFontInfo(x1) {
     }
     void x_2(Smoke::Stack x) {
 	// operator=(const QFontInfo&)
-	QFontInfo& xret = this->QFontInfo::operator=(*(const QFontInfo *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QFontInfo& xret = this->QFontInfo::operator=(*(const QFontInfo *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_3(Smoke::Stack x) const {
 	// family()
 	QString xret = this->QFontInfo::family();
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_4(Smoke::Stack x) const {
 	// pixelSize()
@@ -73,7 +73,7 @@ public:
     void x_12(Smoke::Stack x) const {
 	// styleHint()
 	QFont::StyleHint xret = this->QFontInfo::styleHint();
-	x[0].s_voidp = (void*)new QFont::StyleHint(xret);
+	x[0].s_class = (void*)new QFont::StyleHint(xret);
     }
     void x_13(Smoke::Stack x) const {
 	// rawMode()

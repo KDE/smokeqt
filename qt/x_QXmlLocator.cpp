@@ -7,7 +7,7 @@ public:
     static void x_0(Smoke::Stack x) {
 	// QXmlLocator()
 	x_QXmlLocator* xret = new x_QXmlLocator();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     x_QXmlLocator() : QXmlLocator() {
     }

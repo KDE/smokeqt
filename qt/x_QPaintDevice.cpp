@@ -5,151 +5,151 @@
 class x_QPaintDevice : public QPaintDevice {
 public:
     static void x_0(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDevice::PdcNOP;
+	x[0].s_enum = (long)QPaintDevice::PdcNOP;
     }
     static void x_1(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDevice::PdcDrawPoint;
+	x[0].s_enum = (long)QPaintDevice::PdcDrawPoint;
     }
     static void x_2(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDevice::PdcDrawFirst;
+	x[0].s_enum = (long)QPaintDevice::PdcDrawFirst;
     }
     static void x_3(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDevice::PdcMoveTo;
+	x[0].s_enum = (long)QPaintDevice::PdcMoveTo;
     }
     static void x_4(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDevice::PdcLineTo;
+	x[0].s_enum = (long)QPaintDevice::PdcLineTo;
     }
     static void x_5(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDevice::PdcDrawLine;
+	x[0].s_enum = (long)QPaintDevice::PdcDrawLine;
     }
     static void x_6(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDevice::PdcDrawRect;
+	x[0].s_enum = (long)QPaintDevice::PdcDrawRect;
     }
     static void x_7(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDevice::PdcDrawRoundRect;
+	x[0].s_enum = (long)QPaintDevice::PdcDrawRoundRect;
     }
     static void x_8(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDevice::PdcDrawEllipse;
+	x[0].s_enum = (long)QPaintDevice::PdcDrawEllipse;
     }
     static void x_9(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDevice::PdcDrawArc;
+	x[0].s_enum = (long)QPaintDevice::PdcDrawArc;
     }
     static void x_10(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDevice::PdcDrawPie;
+	x[0].s_enum = (long)QPaintDevice::PdcDrawPie;
     }
     static void x_11(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDevice::PdcDrawChord;
+	x[0].s_enum = (long)QPaintDevice::PdcDrawChord;
     }
     static void x_12(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDevice::PdcDrawLineSegments;
+	x[0].s_enum = (long)QPaintDevice::PdcDrawLineSegments;
     }
     static void x_13(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDevice::PdcDrawPolyline;
+	x[0].s_enum = (long)QPaintDevice::PdcDrawPolyline;
     }
     static void x_14(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDevice::PdcDrawPolygon;
+	x[0].s_enum = (long)QPaintDevice::PdcDrawPolygon;
     }
     static void x_15(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDevice::PdcDrawCubicBezier;
+	x[0].s_enum = (long)QPaintDevice::PdcDrawCubicBezier;
     }
     static void x_16(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDevice::PdcDrawText;
+	x[0].s_enum = (long)QPaintDevice::PdcDrawText;
     }
     static void x_17(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDevice::PdcDrawTextFormatted;
+	x[0].s_enum = (long)QPaintDevice::PdcDrawTextFormatted;
     }
     static void x_18(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDevice::PdcDrawPixmap;
+	x[0].s_enum = (long)QPaintDevice::PdcDrawPixmap;
     }
     static void x_19(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDevice::PdcDrawImage;
+	x[0].s_enum = (long)QPaintDevice::PdcDrawImage;
     }
     static void x_20(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDevice::PdcDrawText2;
+	x[0].s_enum = (long)QPaintDevice::PdcDrawText2;
     }
     static void x_21(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDevice::PdcDrawText2Formatted;
+	x[0].s_enum = (long)QPaintDevice::PdcDrawText2Formatted;
     }
     static void x_22(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDevice::PdcDrawLast;
+	x[0].s_enum = (long)QPaintDevice::PdcDrawLast;
     }
     static void x_23(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDevice::PdcBegin;
+	x[0].s_enum = (long)QPaintDevice::PdcBegin;
     }
     static void x_24(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDevice::PdcEnd;
+	x[0].s_enum = (long)QPaintDevice::PdcEnd;
     }
     static void x_25(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDevice::PdcSave;
+	x[0].s_enum = (long)QPaintDevice::PdcSave;
     }
     static void x_26(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDevice::PdcRestore;
+	x[0].s_enum = (long)QPaintDevice::PdcRestore;
     }
     static void x_27(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDevice::PdcSetdev;
+	x[0].s_enum = (long)QPaintDevice::PdcSetdev;
     }
     static void x_28(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDevice::PdcSetBkColor;
+	x[0].s_enum = (long)QPaintDevice::PdcSetBkColor;
     }
     static void x_29(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDevice::PdcSetBkMode;
+	x[0].s_enum = (long)QPaintDevice::PdcSetBkMode;
     }
     static void x_30(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDevice::PdcSetROP;
+	x[0].s_enum = (long)QPaintDevice::PdcSetROP;
     }
     static void x_31(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDevice::PdcSetBrushOrigin;
+	x[0].s_enum = (long)QPaintDevice::PdcSetBrushOrigin;
     }
     static void x_32(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDevice::PdcSetFont;
+	x[0].s_enum = (long)QPaintDevice::PdcSetFont;
     }
     static void x_33(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDevice::PdcSetPen;
+	x[0].s_enum = (long)QPaintDevice::PdcSetPen;
     }
     static void x_34(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDevice::PdcSetBrush;
+	x[0].s_enum = (long)QPaintDevice::PdcSetBrush;
     }
     static void x_35(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDevice::PdcSetTabStops;
+	x[0].s_enum = (long)QPaintDevice::PdcSetTabStops;
     }
     static void x_36(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDevice::PdcSetTabArray;
+	x[0].s_enum = (long)QPaintDevice::PdcSetTabArray;
     }
     static void x_37(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDevice::PdcSetUnit;
+	x[0].s_enum = (long)QPaintDevice::PdcSetUnit;
     }
     static void x_38(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDevice::PdcSetVXform;
+	x[0].s_enum = (long)QPaintDevice::PdcSetVXform;
     }
     static void x_39(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDevice::PdcSetWindow;
+	x[0].s_enum = (long)QPaintDevice::PdcSetWindow;
     }
     static void x_40(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDevice::PdcSetViewport;
+	x[0].s_enum = (long)QPaintDevice::PdcSetViewport;
     }
     static void x_41(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDevice::PdcSetWXform;
+	x[0].s_enum = (long)QPaintDevice::PdcSetWXform;
     }
     static void x_42(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDevice::PdcSetWMatrix;
+	x[0].s_enum = (long)QPaintDevice::PdcSetWMatrix;
     }
     static void x_43(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDevice::PdcSaveWMatrix;
+	x[0].s_enum = (long)QPaintDevice::PdcSaveWMatrix;
     }
     static void x_44(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDevice::PdcRestoreWMatrix;
+	x[0].s_enum = (long)QPaintDevice::PdcRestoreWMatrix;
     }
     static void x_45(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDevice::PdcSetClip;
+	x[0].s_enum = (long)QPaintDevice::PdcSetClip;
     }
     static void x_46(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDevice::PdcSetClipRegion;
+	x[0].s_enum = (long)QPaintDevice::PdcSetClipRegion;
     }
     static void x_47(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDevice::PdcReservedStart;
+	x[0].s_enum = (long)QPaintDevice::PdcReservedStart;
     }
     static void x_48(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDevice::PdcReservedStop;
+	x[0].s_enum = (long)QPaintDevice::PdcReservedStop;
     }
     void x_49(Smoke::Stack x) const {
 	// devType()
@@ -178,13 +178,13 @@ public:
     static void x_54(Smoke::Stack x) {
 	// QPaintDevice(uint)
 	x_QPaintDevice* xret = new x_QPaintDevice((uint)x[1].s_uint);
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     x_QPaintDevice(uint x1) : QPaintDevice(x1) {
     }
     void x_55(Smoke::Stack x) {
 	// cmd(int, QPainter*, QPDevCmdParam*)
-	bool xret = this->QPaintDevice::cmd((int)x[1].s_int,(QPainter*)x[2].s_voidp,(QPDevCmdParam*)x[3].s_voidp);
+	bool xret = this->QPaintDevice::cmd((int)x[1].s_int,(QPainter*)x[2].s_class,(QPDevCmdParam*)x[3].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_56(Smoke::Stack x) const {
@@ -194,44 +194,44 @@ public:
     }
     void x_57(Smoke::Stack x) const {
 	// fontMet(QFont*, int, const char*, int)
-	int xret = this->QPaintDevice::fontMet((QFont*)x[1].s_voidp,(int)x[2].s_int,(const char*)x[3].s_voidp,(int)x[4].s_int);
+	int xret = this->QPaintDevice::fontMet((QFont*)x[1].s_class,(int)x[2].s_int,(const char*)x[3].s_class,(int)x[4].s_int);
 	x[0].s_int = (int)xret;
     }
     void x_58(Smoke::Stack x) const {
 	// fontMet(QFont*, int, const char*)
-	int xret = this->QPaintDevice::fontMet((QFont*)x[1].s_voidp,(int)x[2].s_int,(const char*)x[3].s_voidp);
+	int xret = this->QPaintDevice::fontMet((QFont*)x[1].s_class,(int)x[2].s_int,(const char*)x[3].s_class);
 	x[0].s_int = (int)xret;
     }
     void x_59(Smoke::Stack x) const {
 	// fontMet(QFont*, int)
-	int xret = this->QPaintDevice::fontMet((QFont*)x[1].s_voidp,(int)x[2].s_int);
+	int xret = this->QPaintDevice::fontMet((QFont*)x[1].s_class,(int)x[2].s_int);
 	x[0].s_int = (int)xret;
     }
     void x_60(Smoke::Stack x) const {
 	// fontInf(QFont*, int)
-	int xret = this->QPaintDevice::fontInf((QFont*)x[1].s_voidp,(int)x[2].s_int);
+	int xret = this->QPaintDevice::fontInf((QFont*)x[1].s_class,(int)x[2].s_int);
 	x[0].s_int = (int)xret;
     }
     virtual bool cmd(int x1, QPainter* x2, QPDevCmdParam* x3) {
 	Smoke::StackItem x[4];
 	x[1].s_int = (int)x1;
-	x[2].s_voidp = (void*)x2;
-	x[3].s_voidp = (void*)x3;
+	x[2].s_class = (void*)x2;
+	x[3].s_class = (void*)x3;
 	if(call_method((void*)this, 5552, x)) return (bool)x[0].s_bool;
 	return this->QPaintDevice::cmd(x1, x2, x3);
     }
     virtual int fontInf(QFont* x1, int x2) const {
 	Smoke::StackItem x[3];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	x[2].s_int = (int)x2;
 	if(call_method((void*)this, 5557, x)) return (int)x[0].s_int;
 	return this->QPaintDevice::fontInf(x1, x2);
     }
     virtual int fontMet(QFont* x1, int x2, const char* x3, int x4) const {
 	Smoke::StackItem x[5];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	x[2].s_int = (int)x2;
-	x[3].s_voidp = (void*)x3;
+	x[3].s_class = (void*)x3;
 	x[4].s_int = (int)x4;
 	if(call_method((void*)this, 5554, x)) return (int)x[0].s_int;
 	return this->QPaintDevice::fontMet(x1, x2, x3, x4);

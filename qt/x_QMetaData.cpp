@@ -8,13 +8,13 @@ private:
 public:
     x_QMetaData(void *x) : xthis((QMetaData*)x) {}
     static void x_0(Smoke::Stack x) {
-	x[0].s_long = (long)QMetaData::Private;
+	x[0].s_enum = (long)QMetaData::Private;
     }
     static void x_1(Smoke::Stack x) {
-	x[0].s_long = (long)QMetaData::Protected;
+	x[0].s_enum = (long)QMetaData::Protected;
     }
     static void x_2(Smoke::Stack x) {
-	x[0].s_long = (long)QMetaData::Public;
+	x[0].s_enum = (long)QMetaData::Public;
     }
     ~x_QMetaData() {}
 };

@@ -10,7 +10,7 @@ public:
     static void x_0(Smoke::Stack x) {
 	// QCustomMenuItem()
 	x_QCustomMenuItem* xret = new x_QCustomMenuItem();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     x_QCustomMenuItem() : QCustomMenuItem() {
     }
@@ -26,16 +26,16 @@ public:
     }
     void x_3(Smoke::Stack x) {
 	// setFont(const QFont&)
-	this->QCustomMenuItem::setFont(*(const QFont *)x[1].s_voidp);
+	this->QCustomMenuItem::setFont(*(const QFont *)x[1].s_class);
     }
     void x_4(Smoke::Stack x) {
 	// paint(QPainter*, const QColorGroup&, bool, bool, int, int, int, int)
-	this->QCustomMenuItem::paint((QPainter*)x[1].s_voidp,*(const QColorGroup *)x[2].s_voidp,(bool)x[3].s_bool,(bool)x[4].s_bool,(int)x[5].s_int,(int)x[6].s_int,(int)x[7].s_int,(int)x[8].s_int);
+	this->QCustomMenuItem::paint((QPainter*)x[1].s_class,*(const QColorGroup *)x[2].s_class,(bool)x[3].s_bool,(bool)x[4].s_bool,(int)x[5].s_int,(int)x[6].s_int,(int)x[7].s_int,(int)x[8].s_int);
     }
     void x_5(Smoke::Stack x) {
 	// sizeHint()
 	QSize xret = this->QCustomMenuItem::sizeHint();
-	x[0].s_voidp = (void*)new QSize(xret);
+	x[0].s_class = (void*)new QSize(xret);
     }
     virtual bool fullSpan() const {
 	Smoke::StackItem x[1];
@@ -49,8 +49,8 @@ public:
     }
     virtual void paint(QPainter* x1, const QColorGroup& x2, bool x3, bool x4, int x5, int x6, int x7, int x8) {
 	Smoke::StackItem x[9];
-	x[1].s_voidp = (void*)x1;
-	x[2].s_voidp = (void*)&x2;
+	x[1].s_class = (void*)x1;
+	x[2].s_class = (void*)&x2;
 	x[3].s_bool = (bool)x3;
 	x[4].s_bool = (bool)x4;
 	x[5].s_int = (int)x5;
@@ -63,14 +63,14 @@ public:
     }
     virtual void setFont(const QFont& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 1241, x)) return;
 	this->QCustomMenuItem::setFont(x1);
     }
     virtual QSize sizeHint() {
 	Smoke::StackItem x[1];
 	call_method_abstract((void*)this, 1243, x);
-	QSize *xptr = (QSize *)x[0].s_voidp;
+	QSize *xptr = (QSize *)x[0].s_class;
 	QSize xret(*xptr);
 	delete xptr;
 	return xret;

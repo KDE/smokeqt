@@ -7,304 +7,304 @@
 class x_QFont : public QFont {
 public:
     static void x_0(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::Helvetica;
+	x[0].s_enum = (long)QFont::Helvetica;
     }
     static void x_1(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::SansSerif;
+	x[0].s_enum = (long)QFont::SansSerif;
     }
     static void x_2(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::Times;
+	x[0].s_enum = (long)QFont::Times;
     }
     static void x_3(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::Serif;
+	x[0].s_enum = (long)QFont::Serif;
     }
     static void x_4(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::Courier;
+	x[0].s_enum = (long)QFont::Courier;
     }
     static void x_5(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::TypeWriter;
+	x[0].s_enum = (long)QFont::TypeWriter;
     }
     static void x_6(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::OldEnglish;
+	x[0].s_enum = (long)QFont::OldEnglish;
     }
     static void x_7(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::Decorative;
+	x[0].s_enum = (long)QFont::Decorative;
     }
     static void x_8(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::System;
+	x[0].s_enum = (long)QFont::System;
     }
     static void x_9(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::AnyStyle;
+	x[0].s_enum = (long)QFont::AnyStyle;
     }
     static void x_10(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::PreferDefault;
+	x[0].s_enum = (long)QFont::PreferDefault;
     }
     static void x_11(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::PreferBitmap;
+	x[0].s_enum = (long)QFont::PreferBitmap;
     }
     static void x_12(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::PreferDevice;
+	x[0].s_enum = (long)QFont::PreferDevice;
     }
     static void x_13(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::PreferOutline;
+	x[0].s_enum = (long)QFont::PreferOutline;
     }
     static void x_14(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::ForceOutline;
+	x[0].s_enum = (long)QFont::ForceOutline;
     }
     static void x_15(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::PreferMatch;
+	x[0].s_enum = (long)QFont::PreferMatch;
     }
     static void x_16(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::PreferQuality;
+	x[0].s_enum = (long)QFont::PreferQuality;
     }
     static void x_17(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::PreferAntialias;
+	x[0].s_enum = (long)QFont::PreferAntialias;
     }
     static void x_18(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::NoAntialias;
+	x[0].s_enum = (long)QFont::NoAntialias;
     }
     static void x_19(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::Light;
+	x[0].s_enum = (long)QFont::Light;
     }
     static void x_20(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::Normal;
+	x[0].s_enum = (long)QFont::Normal;
     }
     static void x_21(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::DemiBold;
+	x[0].s_enum = (long)QFont::DemiBold;
     }
     static void x_22(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::Bold;
+	x[0].s_enum = (long)QFont::Bold;
     }
     static void x_23(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::Black;
+	x[0].s_enum = (long)QFont::Black;
     }
     static void x_24(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::Latin;
+	x[0].s_enum = (long)QFont::Latin;
     }
     static void x_25(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::Greek;
+	x[0].s_enum = (long)QFont::Greek;
     }
     static void x_26(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::Cyrillic;
+	x[0].s_enum = (long)QFont::Cyrillic;
     }
     static void x_27(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::Armenian;
+	x[0].s_enum = (long)QFont::Armenian;
     }
     static void x_28(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::Georgian;
+	x[0].s_enum = (long)QFont::Georgian;
     }
     static void x_29(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::Runic;
+	x[0].s_enum = (long)QFont::Runic;
     }
     static void x_30(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::Ogham;
+	x[0].s_enum = (long)QFont::Ogham;
     }
     static void x_31(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::SpacingModifiers;
+	x[0].s_enum = (long)QFont::SpacingModifiers;
     }
     static void x_32(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::CombiningMarks;
+	x[0].s_enum = (long)QFont::CombiningMarks;
     }
     static void x_33(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::Hebrew;
+	x[0].s_enum = (long)QFont::Hebrew;
     }
     static void x_34(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::Arabic;
+	x[0].s_enum = (long)QFont::Arabic;
     }
     static void x_35(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::Syriac;
+	x[0].s_enum = (long)QFont::Syriac;
     }
     static void x_36(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::Thaana;
+	x[0].s_enum = (long)QFont::Thaana;
     }
     static void x_37(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::Devanagari;
+	x[0].s_enum = (long)QFont::Devanagari;
     }
     static void x_38(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::Bengali;
+	x[0].s_enum = (long)QFont::Bengali;
     }
     static void x_39(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::Gurmukhi;
+	x[0].s_enum = (long)QFont::Gurmukhi;
     }
     static void x_40(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::Gujarati;
+	x[0].s_enum = (long)QFont::Gujarati;
     }
     static void x_41(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::Oriya;
+	x[0].s_enum = (long)QFont::Oriya;
     }
     static void x_42(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::Tamil;
+	x[0].s_enum = (long)QFont::Tamil;
     }
     static void x_43(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::Telugu;
+	x[0].s_enum = (long)QFont::Telugu;
     }
     static void x_44(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::Kannada;
+	x[0].s_enum = (long)QFont::Kannada;
     }
     static void x_45(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::Malayalam;
+	x[0].s_enum = (long)QFont::Malayalam;
     }
     static void x_46(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::Sinhala;
+	x[0].s_enum = (long)QFont::Sinhala;
     }
     static void x_47(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::Thai;
+	x[0].s_enum = (long)QFont::Thai;
     }
     static void x_48(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::Lao;
+	x[0].s_enum = (long)QFont::Lao;
     }
     static void x_49(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::Tibetan;
+	x[0].s_enum = (long)QFont::Tibetan;
     }
     static void x_50(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::Myanmar;
+	x[0].s_enum = (long)QFont::Myanmar;
     }
     static void x_51(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::Khmer;
+	x[0].s_enum = (long)QFont::Khmer;
     }
     static void x_52(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::Han;
+	x[0].s_enum = (long)QFont::Han;
     }
     static void x_53(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::Hiragana;
+	x[0].s_enum = (long)QFont::Hiragana;
     }
     static void x_54(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::Katakana;
+	x[0].s_enum = (long)QFont::Katakana;
     }
     static void x_55(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::Hangul;
+	x[0].s_enum = (long)QFont::Hangul;
     }
     static void x_56(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::Bopomofo;
+	x[0].s_enum = (long)QFont::Bopomofo;
     }
     static void x_57(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::Yi;
+	x[0].s_enum = (long)QFont::Yi;
     }
     static void x_58(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::Ethiopic;
+	x[0].s_enum = (long)QFont::Ethiopic;
     }
     static void x_59(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::Cherokee;
+	x[0].s_enum = (long)QFont::Cherokee;
     }
     static void x_60(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::CanadianAboriginal;
+	x[0].s_enum = (long)QFont::CanadianAboriginal;
     }
     static void x_61(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::Mongolian;
+	x[0].s_enum = (long)QFont::Mongolian;
     }
     static void x_62(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::CurrencySymbols;
+	x[0].s_enum = (long)QFont::CurrencySymbols;
     }
     static void x_63(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::LetterlikeSymbols;
+	x[0].s_enum = (long)QFont::LetterlikeSymbols;
     }
     static void x_64(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::NumberForms;
+	x[0].s_enum = (long)QFont::NumberForms;
     }
     static void x_65(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::MathematicalOperators;
+	x[0].s_enum = (long)QFont::MathematicalOperators;
     }
     static void x_66(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::TechnicalSymbols;
+	x[0].s_enum = (long)QFont::TechnicalSymbols;
     }
     static void x_67(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::GeometricSymbols;
+	x[0].s_enum = (long)QFont::GeometricSymbols;
     }
     static void x_68(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::MiscellaneousSymbols;
+	x[0].s_enum = (long)QFont::MiscellaneousSymbols;
     }
     static void x_69(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::EnclosedAndSquare;
+	x[0].s_enum = (long)QFont::EnclosedAndSquare;
     }
     static void x_70(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::Braille;
+	x[0].s_enum = (long)QFont::Braille;
     }
     static void x_71(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::Unicode;
+	x[0].s_enum = (long)QFont::Unicode;
     }
     static void x_72(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::NScripts;
+	x[0].s_enum = (long)QFont::NScripts;
     }
     static void x_73(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::UnknownScript;
+	x[0].s_enum = (long)QFont::UnknownScript;
     }
     static void x_74(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::NoScript;
+	x[0].s_enum = (long)QFont::NoScript;
     }
     static void x_75(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::HanX11;
+	x[0].s_enum = (long)QFont::HanX11;
     }
     static void x_76(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::LatinBasic;
+	x[0].s_enum = (long)QFont::LatinBasic;
     }
     static void x_77(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::LatinExtendedA_2;
+	x[0].s_enum = (long)QFont::LatinExtendedA_2;
     }
     static void x_78(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::LatinExtendedA_3;
+	x[0].s_enum = (long)QFont::LatinExtendedA_3;
     }
     static void x_79(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::LatinExtendedA_4;
+	x[0].s_enum = (long)QFont::LatinExtendedA_4;
     }
     static void x_80(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::LatinExtendedA_14;
+	x[0].s_enum = (long)QFont::LatinExtendedA_14;
     }
     static void x_81(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::LatinExtendedA_15;
+	x[0].s_enum = (long)QFont::LatinExtendedA_15;
     }
     static void x_82(Smoke::Stack x) {
-	x[0].s_long = (long)QFont::LastPrivateScript;
+	x[0].s_enum = (long)QFont::LastPrivateScript;
     }
     static void x_83(Smoke::Stack x) {
 	// QFont()
 	x_QFont* xret = new x_QFont();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     x_QFont() : QFont() {
     }
     static void x_84(Smoke::Stack x) {
 	// QFont(const QString&, int, int, bool)
-	x_QFont* xret = new x_QFont(*(const QString *)x[1].s_voidp,(int)x[2].s_int,(int)x[3].s_int,(bool)x[4].s_bool);
-	x[0].s_voidp = (void*)xret;
+	x_QFont* xret = new x_QFont(*(const QString *)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int,(bool)x[4].s_bool);
+	x[0].s_class = (void*)xret;
     }
     x_QFont(const QString& x1, int x2, int x3, bool x4) : QFont(x1, x2, x3, x4) {
     }
     static void x_85(Smoke::Stack x) {
 	// QFont(const QString&, int, int)
-	x_QFont* xret = new x_QFont(*(const QString *)x[1].s_voidp,(int)x[2].s_int,(int)x[3].s_int);
-	x[0].s_voidp = (void*)xret;
+	x_QFont* xret = new x_QFont(*(const QString *)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int);
+	x[0].s_class = (void*)xret;
     }
     x_QFont(const QString& x1, int x2, int x3) : QFont(x1, x2, x3) {
     }
     static void x_86(Smoke::Stack x) {
 	// QFont(const QString&, int)
-	x_QFont* xret = new x_QFont(*(const QString *)x[1].s_voidp,(int)x[2].s_int);
-	x[0].s_voidp = (void*)xret;
+	x_QFont* xret = new x_QFont(*(const QString *)x[1].s_class,(int)x[2].s_int);
+	x[0].s_class = (void*)xret;
     }
     x_QFont(const QString& x1, int x2) : QFont(x1, x2) {
     }
     static void x_87(Smoke::Stack x) {
 	// QFont(const QString&)
-	x_QFont* xret = new x_QFont(*(const QString *)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QFont* xret = new x_QFont(*(const QString *)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QFont(const QString& x1) : QFont(x1) {
     }
     static void x_88(Smoke::Stack x) {
 	// QFont(const QFont&)
-	x_QFont* xret = new x_QFont(*(const QFont *)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QFont* xret = new x_QFont(*(const QFont *)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QFont(const QFont& x1) : QFont(x1) {
     }
     void x_89(Smoke::Stack x) const {
 	// family()
 	QString xret = this->QFont::family();
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_90(Smoke::Stack x) {
 	// setFamily(const QString&)
-	this->QFont::setFamily(*(const QString *)x[1].s_voidp);
+	this->QFont::setFamily(*(const QString *)x[1].s_class);
     }
     void x_91(Smoke::Stack x) const {
 	// pointSize()
@@ -394,24 +394,24 @@ public:
     void x_110(Smoke::Stack x) const {
 	// styleHint()
 	QFont::StyleHint xret = this->QFont::styleHint();
-	x[0].s_voidp = (void*)new QFont::StyleHint(xret);
+	x[0].s_class = (void*)new QFont::StyleHint(xret);
     }
     void x_111(Smoke::Stack x) const {
 	// styleStrategy()
 	QFont::StyleStrategy xret = this->QFont::styleStrategy();
-	x[0].s_voidp = (void*)new QFont::StyleStrategy(xret);
+	x[0].s_class = (void*)new QFont::StyleStrategy(xret);
     }
     void x_112(Smoke::Stack x) {
 	// setStyleHint(QFont::StyleHint, QFont::StyleStrategy)
-	this->QFont::setStyleHint(*(QFont::StyleHint *)x[1].s_voidp,*(QFont::StyleStrategy *)x[2].s_voidp);
+	this->QFont::setStyleHint(*(QFont::StyleHint *)x[1].s_class,*(QFont::StyleStrategy *)x[2].s_class);
     }
     void x_113(Smoke::Stack x) {
 	// setStyleHint(QFont::StyleHint)
-	this->QFont::setStyleHint(*(QFont::StyleHint *)x[1].s_voidp);
+	this->QFont::setStyleHint(*(QFont::StyleHint *)x[1].s_class);
     }
     void x_114(Smoke::Stack x) {
 	// setStyleStrategy(QFont::StyleStrategy)
-	this->QFont::setStyleStrategy(*(QFont::StyleStrategy *)x[1].s_voidp);
+	this->QFont::setStyleStrategy(*(QFont::StyleStrategy *)x[1].s_class);
     }
     void x_115(Smoke::Stack x) const {
 	// rawMode()
@@ -429,94 +429,94 @@ public:
     }
     void x_118(Smoke::Stack x) {
 	// operator=(const QFont&)
-	QFont& xret = this->QFont::operator=(*(const QFont *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QFont& xret = this->QFont::operator=(*(const QFont *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_119(Smoke::Stack x) const {
 	// operator==(const QFont&)
-	bool xret = this->QFont::operator==(*(const QFont *)x[1].s_voidp);
+	bool xret = this->QFont::operator==(*(const QFont *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_120(Smoke::Stack x) const {
 	// operator!=(const QFont&)
-	bool xret = this->QFont::operator!=(*(const QFont *)x[1].s_voidp);
+	bool xret = this->QFont::operator!=(*(const QFont *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_121(Smoke::Stack x) const {
 	// isCopyOf(const QFont&)
-	bool xret = this->QFont::isCopyOf(*(const QFont *)x[1].s_voidp);
+	bool xret = this->QFont::isCopyOf(*(const QFont *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_122(Smoke::Stack x) const {
 	// handle()
 	Qt::HANDLE xret = this->QFont::handle();
-	x[0].s_voidp = (void*)new Qt::HANDLE(xret);
+	x[0].s_class = (void*)new Qt::HANDLE(xret);
     }
     void x_123(Smoke::Stack x) {
 	// setRawName(const QString&)
-	this->QFont::setRawName(*(const QString *)x[1].s_voidp);
+	this->QFont::setRawName(*(const QString *)x[1].s_class);
     }
     void x_124(Smoke::Stack x) const {
 	// rawName()
 	QString xret = this->QFont::rawName();
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_125(Smoke::Stack x) const {
 	// key()
 	QString xret = this->QFont::key();
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_126(Smoke::Stack x) const {
 	// toString()
 	QString xret = this->QFont::toString();
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_127(Smoke::Stack x) {
 	// fromString(const QString&)
-	bool xret = this->QFont::fromString(*(const QString *)x[1].s_voidp);
+	bool xret = this->QFont::fromString(*(const QString *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_128(Smoke::Stack x) const {
 	// defaultFamily()
 	QString xret = this->QFont::defaultFamily();
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_129(Smoke::Stack x) const {
 	// lastResortFamily()
 	QString xret = this->QFont::lastResortFamily();
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_130(Smoke::Stack x) const {
 	// lastResortFont()
 	QString xret = this->QFont::lastResortFont();
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     static void x_131(Smoke::Stack x) {
 	// substitute(const QString&)
-	QString xret = QFont::substitute(*(const QString *)x[1].s_voidp);
-	x[0].s_voidp = (void*)new QString(xret);
+	QString xret = QFont::substitute(*(const QString *)x[1].s_class);
+	x[0].s_class = (void*)new QString(xret);
     }
     static void x_132(Smoke::Stack x) {
 	// substitutes(const QString&)
-	QStringList xret = QFont::substitutes(*(const QString *)x[1].s_voidp);
-	x[0].s_voidp = (void*)new QStringList(xret);
+	QStringList xret = QFont::substitutes(*(const QString *)x[1].s_class);
+	x[0].s_class = (void*)new QStringList(xret);
     }
     static void x_133(Smoke::Stack x) {
 	// substitutions()
 	QStringList xret = QFont::substitutions();
-	x[0].s_voidp = (void*)new QStringList(xret);
+	x[0].s_class = (void*)new QStringList(xret);
     }
     static void x_134(Smoke::Stack x) {
 	// insertSubstitution(const QString&, const QString&)
-	QFont::insertSubstitution(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
+	QFont::insertSubstitution(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class);
     }
     static void x_135(Smoke::Stack x) {
 	// insertSubstitutions(const QString&, const QStringList&)
-	QFont::insertSubstitutions(*(const QString *)x[1].s_voidp,*(const QStringList *)x[2].s_voidp);
+	QFont::insertSubstitutions(*(const QString *)x[1].s_class,*(const QStringList *)x[2].s_class);
     }
     static void x_136(Smoke::Stack x) {
 	// removeSubstitution(const QString&)
-	QFont::removeSubstitution(*(const QString *)x[1].s_voidp);
+	QFont::removeSubstitution(*(const QString *)x[1].s_class);
     }
     static void x_137(Smoke::Stack x) {
 	// initialize()
@@ -533,11 +533,11 @@ public:
     static void x_140(Smoke::Stack x) {
 	// defaultFont()
 	QFont xret = QFont::defaultFont();
-	x[0].s_voidp = (void*)new QFont(xret);
+	x[0].s_class = (void*)new QFont(xret);
     }
     static void x_141(Smoke::Stack x) {
 	// setDefaultFont(const QFont&)
-	QFont::setDefaultFont(*(const QFont *)x[1].s_voidp);
+	QFont::setDefaultFont(*(const QFont *)x[1].s_class);
     }
     void x_142(Smoke::Stack x) const {
 	// dirty()

@@ -8,14 +8,14 @@ public:
     static void x_0(Smoke::Stack x) {
 	// QPoint()
 	x_QPoint* xret = new x_QPoint();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     x_QPoint() : QPoint() {
     }
     static void x_1(Smoke::Stack x) {
 	// QPoint(int, int)
 	x_QPoint* xret = new x_QPoint((int)x[1].s_int,(int)x[2].s_int);
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     x_QPoint(int x1, int x2) : QPoint(x1, x2) {
     }
@@ -50,42 +50,42 @@ public:
     void x_8(Smoke::Stack x) {
 	// rx()
 	QCOORD& xret = this->QPoint::rx();
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_9(Smoke::Stack x) {
 	// ry()
 	QCOORD& xret = this->QPoint::ry();
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_10(Smoke::Stack x) {
 	// operator+=(const QPoint&)
-	QPoint& xret = this->QPoint::operator+=(*(const QPoint *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QPoint& xret = this->QPoint::operator+=(*(const QPoint *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_11(Smoke::Stack x) {
 	// operator-=(const QPoint&)
-	QPoint& xret = this->QPoint::operator-=(*(const QPoint *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QPoint& xret = this->QPoint::operator-=(*(const QPoint *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_12(Smoke::Stack x) {
 	// operator*=(int)
 	QPoint& xret = this->QPoint::operator*=((int)x[1].s_int);
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_13(Smoke::Stack x) {
 	// operator*=(double)
 	QPoint& xret = this->QPoint::operator*=((double)x[1].s_double);
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_14(Smoke::Stack x) {
 	// operator/=(int)
 	QPoint& xret = this->QPoint::operator/=((int)x[1].s_int);
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_15(Smoke::Stack x) {
 	// operator/=(double)
 	QPoint& xret = this->QPoint::operator/=((double)x[1].s_double);
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     ~x_QPoint() {}
 };

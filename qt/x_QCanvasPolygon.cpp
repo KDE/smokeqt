@@ -11,19 +11,19 @@ class x_QCanvasPolygon : public QCanvasPolygon {
 public:
     static void x_0(Smoke::Stack x) {
 	// QCanvasPolygon(QCanvas*)
-	x_QCanvasPolygon* xret = new x_QCanvasPolygon((QCanvas*)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QCanvasPolygon* xret = new x_QCanvasPolygon((QCanvas*)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QCanvasPolygon(QCanvas* x1) : QCanvasPolygon(x1) {
     }
     void x_1(Smoke::Stack x) {
 	// setPoints(QPointArray)
-	this->QCanvasPolygon::setPoints(*(QPointArray *)x[1].s_voidp);
+	this->QCanvasPolygon::setPoints(*(QPointArray *)x[1].s_class);
     }
     void x_2(Smoke::Stack x) const {
 	// points()
 	QPointArray xret = this->QCanvasPolygon::points();
-	x[0].s_voidp = (void*)new QPointArray(xret);
+	x[0].s_class = (void*)new QPointArray(xret);
     }
     void x_3(Smoke::Stack x) {
 	// moveBy(double, double)
@@ -32,7 +32,7 @@ public:
     void x_4(Smoke::Stack x) const {
 	// areaPoints()
 	QPointArray xret = this->QCanvasPolygon::areaPoints();
-	x[0].s_voidp = (void*)new QPointArray(xret);
+	x[0].s_class = (void*)new QPointArray(xret);
     }
     void x_5(Smoke::Stack x) const {
 	// rtti()
@@ -41,7 +41,7 @@ public:
     }
     void x_6(Smoke::Stack x) {
 	// drawShape(QPainter&)
-	this->QCanvasPolygon::drawShape(*(QPainter *)x[1].s_voidp);
+	this->QCanvasPolygon::drawShape(*(QPainter *)x[1].s_class);
     }
     virtual void advance(int x1) {
 	Smoke::StackItem x[2];
@@ -52,7 +52,7 @@ public:
     virtual QPointArray areaPoints() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 604, x)) {
-	    QPointArray *xptr = (QPointArray *)x[0].s_voidp;
+	    QPointArray *xptr = (QPointArray *)x[0].s_class;
 	    QPointArray xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -62,7 +62,7 @@ public:
     virtual QPointArray areaPointsAdvanced() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 615, x)) {
-	    QPointArray *xptr = (QPointArray *)x[0].s_voidp;
+	    QPointArray *xptr = (QPointArray *)x[0].s_class;
 	    QPointArray xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -72,7 +72,7 @@ public:
     virtual QRect boundingRect() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 616, x)) {
-	    QRect *xptr = (QRect *)x[0].s_voidp;
+	    QRect *xptr = (QRect *)x[0].s_class;
 	    QRect xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -82,7 +82,7 @@ public:
     virtual QRect boundingRectAdvanced() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 565, x)) {
-	    QRect *xptr = (QRect *)x[0].s_voidp;
+	    QRect *xptr = (QRect *)x[0].s_class;
 	    QRect xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -91,19 +91,19 @@ public:
     }
     virtual bool collidesWith(const QCanvasItem* x1) const {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 609, x)) return (bool)x[0].s_bool;
 	return this->QCanvasPolygonalItem::collidesWith(x1);
     }
     virtual void draw(QPainter& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 618, x)) return;
 	this->QCanvasPolygonalItem::draw(x1);
     }
     virtual void drawShape(QPainter& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 606, x)) return;
 	this->QCanvasPolygon::drawShape(x1);
     }
@@ -133,13 +133,13 @@ public:
     }
     virtual void setBrush(QBrush x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 611, x)) return;
 	this->QCanvasPolygonalItem::setBrush(x1);
     }
     virtual void setCanvas(QCanvas* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 547, x)) return;
 	this->QCanvasItem::setCanvas(x1);
     }
@@ -151,7 +151,7 @@ public:
     }
     virtual void setPen(QPen x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 610, x)) return;
 	this->QCanvasPolygonalItem::setPen(x1);
     }

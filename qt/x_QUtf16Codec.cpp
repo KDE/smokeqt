@@ -15,21 +15,21 @@ public:
     void x_1(Smoke::Stack x) const {
 	// name()
 	const char* xret = xthis->QUtf16Codec::name();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_2(Smoke::Stack x) const {
 	// makeDecoder()
 	QTextDecoder* xret = xthis->QUtf16Codec::makeDecoder();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_3(Smoke::Stack x) const {
 	// makeEncoder()
 	QTextEncoder* xret = xthis->QUtf16Codec::makeEncoder();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_4(Smoke::Stack x) const {
 	// heuristicContentMatch(const char*, int)
-	int xret = xthis->QUtf16Codec::heuristicContentMatch((const char*)x[1].s_voidp,(int)x[2].s_int);
+	int xret = xthis->QUtf16Codec::heuristicContentMatch((const char*)x[1].s_class,(int)x[2].s_int);
 	x[0].s_int = (int)xret;
     }
     ~x_QUtf16Codec() {}

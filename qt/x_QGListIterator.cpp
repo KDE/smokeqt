@@ -6,22 +6,22 @@ class x_QGListIterator : public QGListIterator {
 public:
     static void x_0(Smoke::Stack x) {
 	// QGListIterator(const QGList&)
-	x_QGListIterator* xret = new x_QGListIterator(*(const QGList *)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QGListIterator* xret = new x_QGListIterator(*(const QGList *)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QGListIterator(const QGList& x1) : QGListIterator(x1) {
     }
     static void x_1(Smoke::Stack x) {
 	// QGListIterator(const QGListIterator&)
-	x_QGListIterator* xret = new x_QGListIterator(*(const QGListIterator *)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QGListIterator* xret = new x_QGListIterator(*(const QGListIterator *)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QGListIterator(const QGListIterator& x1) : QGListIterator(x1) {
     }
     void x_2(Smoke::Stack x) {
 	// operator=(const QGListIterator&)
-	QGListIterator& xret = this->QGListIterator::operator=(*(const QGListIterator *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QGListIterator& xret = this->QGListIterator::operator=(*(const QGListIterator *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_3(Smoke::Stack x) const {
 	// atFirst()
@@ -36,42 +36,42 @@ public:
     void x_5(Smoke::Stack x) {
 	// toFirst()
 	QPtrCollection::Item xret = this->QGListIterator::toFirst();
-	x[0].s_voidp = (void*)new QPtrCollection::Item(xret);
+	x[0].s_class = (void*)new QPtrCollection::Item(xret);
     }
     void x_6(Smoke::Stack x) {
 	// toLast()
 	QPtrCollection::Item xret = this->QGListIterator::toLast();
-	x[0].s_voidp = (void*)new QPtrCollection::Item(xret);
+	x[0].s_class = (void*)new QPtrCollection::Item(xret);
     }
     void x_7(Smoke::Stack x) const {
 	// get()
 	QPtrCollection::Item xret = this->QGListIterator::get();
-	x[0].s_voidp = (void*)new QPtrCollection::Item(xret);
+	x[0].s_class = (void*)new QPtrCollection::Item(xret);
     }
     void x_8(Smoke::Stack x) {
 	// operator()()
 	QPtrCollection::Item xret = this->QGListIterator::operator()();
-	x[0].s_voidp = (void*)new QPtrCollection::Item(xret);
+	x[0].s_class = (void*)new QPtrCollection::Item(xret);
     }
     void x_9(Smoke::Stack x) {
 	// operator++()
 	QPtrCollection::Item xret = this->QGListIterator::operator++();
-	x[0].s_voidp = (void*)new QPtrCollection::Item(xret);
+	x[0].s_class = (void*)new QPtrCollection::Item(xret);
     }
     void x_10(Smoke::Stack x) {
 	// operator+=(uint)
 	QPtrCollection::Item xret = this->QGListIterator::operator+=((uint)x[1].s_uint);
-	x[0].s_voidp = (void*)new QPtrCollection::Item(xret);
+	x[0].s_class = (void*)new QPtrCollection::Item(xret);
     }
     void x_11(Smoke::Stack x) {
 	// operator--()
 	QPtrCollection::Item xret = this->QGListIterator::operator--();
-	x[0].s_voidp = (void*)new QPtrCollection::Item(xret);
+	x[0].s_class = (void*)new QPtrCollection::Item(xret);
     }
     void x_12(Smoke::Stack x) {
 	// operator-=(uint)
 	QPtrCollection::Item xret = this->QGListIterator::operator-=((uint)x[1].s_uint);
-	x[0].s_voidp = (void*)new QPtrCollection::Item(xret);
+	x[0].s_class = (void*)new QPtrCollection::Item(xret);
     }
     ~x_QGListIterator() {}
 };

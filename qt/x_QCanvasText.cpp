@@ -11,51 +11,51 @@ class x_QCanvasText : public QCanvasText {
 public:
     static void x_0(Smoke::Stack x) {
 	// QCanvasText(QCanvas*)
-	x_QCanvasText* xret = new x_QCanvasText((QCanvas*)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QCanvasText* xret = new x_QCanvasText((QCanvas*)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QCanvasText(QCanvas* x1) : QCanvasText(x1) {
     }
     static void x_1(Smoke::Stack x) {
 	// QCanvasText(const QString&, QCanvas*)
-	x_QCanvasText* xret = new x_QCanvasText(*(const QString *)x[1].s_voidp,(QCanvas*)x[2].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QCanvasText* xret = new x_QCanvasText(*(const QString *)x[1].s_class,(QCanvas*)x[2].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QCanvasText(const QString& x1, QCanvas* x2) : QCanvasText(x1, x2) {
     }
     static void x_2(Smoke::Stack x) {
 	// QCanvasText(const QString&, QFont, QCanvas*)
-	x_QCanvasText* xret = new x_QCanvasText(*(const QString *)x[1].s_voidp,*(QFont *)x[2].s_voidp,(QCanvas*)x[3].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QCanvasText* xret = new x_QCanvasText(*(const QString *)x[1].s_class,*(QFont *)x[2].s_class,(QCanvas*)x[3].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QCanvasText(const QString& x1, QFont x2, QCanvas* x3) : QCanvasText(x1, x2, x3) {
     }
     void x_3(Smoke::Stack x) {
 	// setText(const QString&)
-	this->QCanvasText::setText(*(const QString *)x[1].s_voidp);
+	this->QCanvasText::setText(*(const QString *)x[1].s_class);
     }
     void x_4(Smoke::Stack x) {
 	// setFont(const QFont&)
-	this->QCanvasText::setFont(*(const QFont *)x[1].s_voidp);
+	this->QCanvasText::setFont(*(const QFont *)x[1].s_class);
     }
     void x_5(Smoke::Stack x) {
 	// setColor(const QColor&)
-	this->QCanvasText::setColor(*(const QColor *)x[1].s_voidp);
+	this->QCanvasText::setColor(*(const QColor *)x[1].s_class);
     }
     void x_6(Smoke::Stack x) const {
 	// text()
 	QString xret = this->QCanvasText::text();
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_7(Smoke::Stack x) const {
 	// font()
 	QFont xret = this->QCanvasText::font();
-	x[0].s_voidp = (void*)new QFont(xret);
+	x[0].s_class = (void*)new QFont(xret);
     }
     void x_8(Smoke::Stack x) const {
 	// color()
 	QColor xret = this->QCanvasText::color();
-	x[0].s_voidp = (void*)new QColor(xret);
+	x[0].s_class = (void*)new QColor(xret);
     }
     void x_9(Smoke::Stack x) {
 	// moveBy(double, double)
@@ -73,11 +73,11 @@ public:
     void x_12(Smoke::Stack x) const {
 	// boundingRect()
 	QRect xret = this->QCanvasText::boundingRect();
-	x[0].s_voidp = (void*)new QRect(xret);
+	x[0].s_class = (void*)new QRect(xret);
     }
     void x_13(Smoke::Stack x) const {
 	// collidesWith(const QCanvasItem*)
-	bool xret = this->QCanvasText::collidesWith((const QCanvasItem*)x[1].s_voidp);
+	bool xret = this->QCanvasText::collidesWith((const QCanvasItem*)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_14(Smoke::Stack x) const {
@@ -87,7 +87,7 @@ public:
     }
     void x_15(Smoke::Stack x) {
 	// draw(QPainter&)
-	this->QCanvasText::draw(*(QPainter *)x[1].s_voidp);
+	this->QCanvasText::draw(*(QPainter *)x[1].s_class);
     }
     virtual void advance(int x1) {
 	Smoke::StackItem x[2];
@@ -98,7 +98,7 @@ public:
     virtual QRect boundingRect() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 688, x)) {
-	    QRect *xptr = (QRect *)x[0].s_voidp;
+	    QRect *xptr = (QRect *)x[0].s_class;
 	    QRect xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -108,7 +108,7 @@ public:
     virtual QRect boundingRectAdvanced() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 565, x)) {
-	    QRect *xptr = (QRect *)x[0].s_voidp;
+	    QRect *xptr = (QRect *)x[0].s_class;
 	    QRect xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -117,13 +117,13 @@ public:
     }
     virtual bool collidesWith(const QCanvasItem* x1) const {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 689, x)) return (bool)x[0].s_bool;
 	return this->QCanvasText::collidesWith(x1);
     }
     virtual void draw(QPainter& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 691, x)) return;
 	this->QCanvasText::draw(x1);
     }
@@ -153,7 +153,7 @@ public:
     }
     virtual void setCanvas(QCanvas* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 547, x)) return;
 	this->QCanvasItem::setCanvas(x1);
     }

@@ -7,158 +7,158 @@
 class x_QSettings : public QSettings {
 public:
     static void x_0(Smoke::Stack x) {
-	x[0].s_long = (long)QSettings::Unix;
+	x[0].s_enum = (long)QSettings::Unix;
     }
     static void x_1(Smoke::Stack x) {
-	x[0].s_long = (long)QSettings::Windows;
+	x[0].s_enum = (long)QSettings::Windows;
     }
     static void x_2(Smoke::Stack x) {
-	x[0].s_long = (long)QSettings::Mac;
+	x[0].s_enum = (long)QSettings::Mac;
     }
     static void x_3(Smoke::Stack x) {
 	// QSettings()
 	x_QSettings* xret = new x_QSettings();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     x_QSettings() : QSettings() {
     }
     void x_4(Smoke::Stack x) {
 	// writeEntry(const QString&, bool)
-	bool xret = this->QSettings::writeEntry(*(const QString *)x[1].s_voidp,(bool)x[2].s_bool);
+	bool xret = this->QSettings::writeEntry(*(const QString *)x[1].s_class,(bool)x[2].s_bool);
 	x[0].s_bool = (bool)xret;
     }
     void x_5(Smoke::Stack x) {
 	// writeEntry(const QString&, double)
-	bool xret = this->QSettings::writeEntry(*(const QString *)x[1].s_voidp,(double)x[2].s_double);
+	bool xret = this->QSettings::writeEntry(*(const QString *)x[1].s_class,(double)x[2].s_double);
 	x[0].s_bool = (bool)xret;
     }
     void x_6(Smoke::Stack x) {
 	// writeEntry(const QString&, int)
-	bool xret = this->QSettings::writeEntry(*(const QString *)x[1].s_voidp,(int)x[2].s_int);
+	bool xret = this->QSettings::writeEntry(*(const QString *)x[1].s_class,(int)x[2].s_int);
 	x[0].s_bool = (bool)xret;
     }
     void x_7(Smoke::Stack x) {
 	// writeEntry(const QString&, const char*)
-	bool xret = this->QSettings::writeEntry(*(const QString *)x[1].s_voidp,(const char*)x[2].s_voidp);
+	bool xret = this->QSettings::writeEntry(*(const QString *)x[1].s_class,(const char*)x[2].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_8(Smoke::Stack x) {
 	// writeEntry(const QString&, const QString&)
-	bool xret = this->QSettings::writeEntry(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
+	bool xret = this->QSettings::writeEntry(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_9(Smoke::Stack x) {
 	// writeEntry(const QString&, const QStringList&)
-	bool xret = this->QSettings::writeEntry(*(const QString *)x[1].s_voidp,*(const QStringList *)x[2].s_voidp);
+	bool xret = this->QSettings::writeEntry(*(const QString *)x[1].s_class,*(const QStringList *)x[2].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_10(Smoke::Stack x) {
 	// writeEntry(const QString&, const QStringList&, const QChar&)
-	bool xret = this->QSettings::writeEntry(*(const QString *)x[1].s_voidp,*(const QStringList *)x[2].s_voidp,*(const QChar *)x[3].s_voidp);
+	bool xret = this->QSettings::writeEntry(*(const QString *)x[1].s_class,*(const QStringList *)x[2].s_class,*(const QChar *)x[3].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_11(Smoke::Stack x) const {
 	// entryList(const QString&)
-	QStringList xret = this->QSettings::entryList(*(const QString *)x[1].s_voidp);
-	x[0].s_voidp = (void*)new QStringList(xret);
+	QStringList xret = this->QSettings::entryList(*(const QString *)x[1].s_class);
+	x[0].s_class = (void*)new QStringList(xret);
     }
     void x_12(Smoke::Stack x) const {
 	// subkeyList(const QString&)
-	QStringList xret = this->QSettings::subkeyList(*(const QString *)x[1].s_voidp);
-	x[0].s_voidp = (void*)new QStringList(xret);
+	QStringList xret = this->QSettings::subkeyList(*(const QString *)x[1].s_class);
+	x[0].s_class = (void*)new QStringList(xret);
     }
     void x_13(Smoke::Stack x) {
 	// readListEntry(const QString&, bool*)
-	QStringList xret = this->QSettings::readListEntry(*(const QString *)x[1].s_voidp,(bool*)x[2].s_voidp);
-	x[0].s_voidp = (void*)new QStringList(xret);
+	QStringList xret = this->QSettings::readListEntry(*(const QString *)x[1].s_class,(bool*)x[2].s_class);
+	x[0].s_class = (void*)new QStringList(xret);
     }
     void x_14(Smoke::Stack x) {
 	// readListEntry(const QString&)
-	QStringList xret = this->QSettings::readListEntry(*(const QString *)x[1].s_voidp);
-	x[0].s_voidp = (void*)new QStringList(xret);
+	QStringList xret = this->QSettings::readListEntry(*(const QString *)x[1].s_class);
+	x[0].s_class = (void*)new QStringList(xret);
     }
     void x_15(Smoke::Stack x) {
 	// readListEntry(const QString&, const QChar&, bool*)
-	QStringList xret = this->QSettings::readListEntry(*(const QString *)x[1].s_voidp,*(const QChar *)x[2].s_voidp,(bool*)x[3].s_voidp);
-	x[0].s_voidp = (void*)new QStringList(xret);
+	QStringList xret = this->QSettings::readListEntry(*(const QString *)x[1].s_class,*(const QChar *)x[2].s_class,(bool*)x[3].s_class);
+	x[0].s_class = (void*)new QStringList(xret);
     }
     void x_16(Smoke::Stack x) {
 	// readListEntry(const QString&, const QChar&)
-	QStringList xret = this->QSettings::readListEntry(*(const QString *)x[1].s_voidp,*(const QChar *)x[2].s_voidp);
-	x[0].s_voidp = (void*)new QStringList(xret);
+	QStringList xret = this->QSettings::readListEntry(*(const QString *)x[1].s_class,*(const QChar *)x[2].s_class);
+	x[0].s_class = (void*)new QStringList(xret);
     }
     void x_17(Smoke::Stack x) {
 	// readEntry(const QString&, const QString&, bool*)
-	QString xret = this->QSettings::readEntry(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,(bool*)x[3].s_voidp);
-	x[0].s_voidp = (void*)new QString(xret);
+	QString xret = this->QSettings::readEntry(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,(bool*)x[3].s_class);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_18(Smoke::Stack x) {
 	// readEntry(const QString&, const QString&)
-	QString xret = this->QSettings::readEntry(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
-	x[0].s_voidp = (void*)new QString(xret);
+	QString xret = this->QSettings::readEntry(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_19(Smoke::Stack x) {
 	// readEntry(const QString&)
-	QString xret = this->QSettings::readEntry(*(const QString *)x[1].s_voidp);
-	x[0].s_voidp = (void*)new QString(xret);
+	QString xret = this->QSettings::readEntry(*(const QString *)x[1].s_class);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_20(Smoke::Stack x) {
 	// readNumEntry(const QString&, int, bool*)
-	int xret = this->QSettings::readNumEntry(*(const QString *)x[1].s_voidp,(int)x[2].s_int,(bool*)x[3].s_voidp);
+	int xret = this->QSettings::readNumEntry(*(const QString *)x[1].s_class,(int)x[2].s_int,(bool*)x[3].s_class);
 	x[0].s_int = (int)xret;
     }
     void x_21(Smoke::Stack x) {
 	// readNumEntry(const QString&, int)
-	int xret = this->QSettings::readNumEntry(*(const QString *)x[1].s_voidp,(int)x[2].s_int);
+	int xret = this->QSettings::readNumEntry(*(const QString *)x[1].s_class,(int)x[2].s_int);
 	x[0].s_int = (int)xret;
     }
     void x_22(Smoke::Stack x) {
 	// readNumEntry(const QString&)
-	int xret = this->QSettings::readNumEntry(*(const QString *)x[1].s_voidp);
+	int xret = this->QSettings::readNumEntry(*(const QString *)x[1].s_class);
 	x[0].s_int = (int)xret;
     }
     void x_23(Smoke::Stack x) {
 	// readDoubleEntry(const QString&, double, bool*)
-	double xret = this->QSettings::readDoubleEntry(*(const QString *)x[1].s_voidp,(double)x[2].s_double,(bool*)x[3].s_voidp);
+	double xret = this->QSettings::readDoubleEntry(*(const QString *)x[1].s_class,(double)x[2].s_double,(bool*)x[3].s_class);
 	x[0].s_double = (double)xret;
     }
     void x_24(Smoke::Stack x) {
 	// readDoubleEntry(const QString&, double)
-	double xret = this->QSettings::readDoubleEntry(*(const QString *)x[1].s_voidp,(double)x[2].s_double);
+	double xret = this->QSettings::readDoubleEntry(*(const QString *)x[1].s_class,(double)x[2].s_double);
 	x[0].s_double = (double)xret;
     }
     void x_25(Smoke::Stack x) {
 	// readDoubleEntry(const QString&)
-	double xret = this->QSettings::readDoubleEntry(*(const QString *)x[1].s_voidp);
+	double xret = this->QSettings::readDoubleEntry(*(const QString *)x[1].s_class);
 	x[0].s_double = (double)xret;
     }
     void x_26(Smoke::Stack x) {
 	// readBoolEntry(const QString&, bool, bool*)
-	bool xret = this->QSettings::readBoolEntry(*(const QString *)x[1].s_voidp,(bool)x[2].s_bool,(bool*)x[3].s_voidp);
+	bool xret = this->QSettings::readBoolEntry(*(const QString *)x[1].s_class,(bool)x[2].s_bool,(bool*)x[3].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_27(Smoke::Stack x) {
 	// readBoolEntry(const QString&, bool)
-	bool xret = this->QSettings::readBoolEntry(*(const QString *)x[1].s_voidp,(bool)x[2].s_bool);
+	bool xret = this->QSettings::readBoolEntry(*(const QString *)x[1].s_class,(bool)x[2].s_bool);
 	x[0].s_bool = (bool)xret;
     }
     void x_28(Smoke::Stack x) {
 	// readBoolEntry(const QString&)
-	bool xret = this->QSettings::readBoolEntry(*(const QString *)x[1].s_voidp);
+	bool xret = this->QSettings::readBoolEntry(*(const QString *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_29(Smoke::Stack x) {
 	// removeEntry(const QString&)
-	bool xret = this->QSettings::removeEntry(*(const QString *)x[1].s_voidp);
+	bool xret = this->QSettings::removeEntry(*(const QString *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_30(Smoke::Stack x) {
 	// insertSearchPath(QSettings::System, const QString&)
-	this->QSettings::insertSearchPath(*(QSettings::System *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
+	this->QSettings::insertSearchPath(*(QSettings::System *)x[1].s_class,*(const QString *)x[2].s_class);
     }
     void x_31(Smoke::Stack x) {
 	// removeSearchPath(QSettings::System, const QString&)
-	this->QSettings::removeSearchPath(*(QSettings::System *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
+	this->QSettings::removeSearchPath(*(QSettings::System *)x[1].s_class,*(const QString *)x[2].s_class);
     }
     ~x_QSettings() {}
 };

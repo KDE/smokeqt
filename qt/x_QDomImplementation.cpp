@@ -8,46 +8,46 @@ public:
     static void x_0(Smoke::Stack x) {
 	// QDomImplementation()
 	x_QDomImplementation* xret = new x_QDomImplementation();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     x_QDomImplementation() : QDomImplementation() {
     }
     static void x_1(Smoke::Stack x) {
 	// QDomImplementation(const QDomImplementation&)
-	x_QDomImplementation* xret = new x_QDomImplementation(*(const QDomImplementation *)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QDomImplementation* xret = new x_QDomImplementation(*(const QDomImplementation *)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QDomImplementation(const QDomImplementation& x1) : QDomImplementation(x1) {
     }
     void x_2(Smoke::Stack x) {
 	// operator=(const QDomImplementation&)
-	QDomImplementation& xret = this->QDomImplementation::operator=(*(const QDomImplementation *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QDomImplementation& xret = this->QDomImplementation::operator=(*(const QDomImplementation *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_3(Smoke::Stack x) const {
 	// operator==(const QDomImplementation&)
-	bool xret = this->QDomImplementation::operator==(*(const QDomImplementation *)x[1].s_voidp);
+	bool xret = this->QDomImplementation::operator==(*(const QDomImplementation *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_4(Smoke::Stack x) const {
 	// operator!=(const QDomImplementation&)
-	bool xret = this->QDomImplementation::operator!=(*(const QDomImplementation *)x[1].s_voidp);
+	bool xret = this->QDomImplementation::operator!=(*(const QDomImplementation *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_5(Smoke::Stack x) {
 	// hasFeature(const QString&, const QString&)
-	bool xret = this->QDomImplementation::hasFeature(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
+	bool xret = this->QDomImplementation::hasFeature(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_6(Smoke::Stack x) {
 	// createDocumentType(const QString&, const QString&, const QString&)
-	QDomDocumentType xret = this->QDomImplementation::createDocumentType(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,*(const QString *)x[3].s_voidp);
-	x[0].s_voidp = (void*)new QDomDocumentType(xret);
+	QDomDocumentType xret = this->QDomImplementation::createDocumentType(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,*(const QString *)x[3].s_class);
+	x[0].s_class = (void*)new QDomDocumentType(xret);
     }
     void x_7(Smoke::Stack x) {
 	// createDocument(const QString&, const QString&, const QDomDocumentType&)
-	QDomDocument xret = this->QDomImplementation::createDocument(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,*(const QDomDocumentType *)x[3].s_voidp);
-	x[0].s_voidp = (void*)new QDomDocument(xret);
+	QDomDocument xret = this->QDomImplementation::createDocument(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,*(const QDomDocumentType *)x[3].s_class);
+	x[0].s_class = (void*)new QDomDocument(xret);
     }
     void x_8(Smoke::Stack x) {
 	// isNull()
@@ -56,11 +56,11 @@ public:
     }
     virtual QDomDocument createDocument(const QString& x1, const QString& x2, const QDomDocumentType& x3) {
 	Smoke::StackItem x[4];
-	x[1].s_voidp = (void*)&x1;
-	x[2].s_voidp = (void*)&x2;
-	x[3].s_voidp = (void*)&x3;
+	x[1].s_class = (void*)&x1;
+	x[2].s_class = (void*)&x2;
+	x[3].s_class = (void*)&x3;
 	if(call_method((void*)this, 2145, x)) {
-	    QDomDocument *xptr = (QDomDocument *)x[0].s_voidp;
+	    QDomDocument *xptr = (QDomDocument *)x[0].s_class;
 	    QDomDocument xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -69,11 +69,11 @@ public:
     }
     virtual QDomDocumentType createDocumentType(const QString& x1, const QString& x2, const QString& x3) {
 	Smoke::StackItem x[4];
-	x[1].s_voidp = (void*)&x1;
-	x[2].s_voidp = (void*)&x2;
-	x[3].s_voidp = (void*)&x3;
+	x[1].s_class = (void*)&x1;
+	x[2].s_class = (void*)&x2;
+	x[3].s_class = (void*)&x3;
 	if(call_method((void*)this, 2144, x)) {
-	    QDomDocumentType *xptr = (QDomDocumentType *)x[0].s_voidp;
+	    QDomDocumentType *xptr = (QDomDocumentType *)x[0].s_class;
 	    QDomDocumentType xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -82,8 +82,8 @@ public:
     }
     virtual bool hasFeature(const QString& x1, const QString& x2) {
 	Smoke::StackItem x[3];
-	x[1].s_voidp = (void*)&x1;
-	x[2].s_voidp = (void*)&x2;
+	x[1].s_class = (void*)&x1;
+	x[2].s_class = (void*)&x2;
 	if(call_method((void*)this, 2143, x)) return (bool)x[0].s_bool;
 	return this->QDomImplementation::hasFeature(x1, x2);
     }

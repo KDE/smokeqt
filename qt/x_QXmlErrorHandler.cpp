@@ -10,23 +10,23 @@ public:
     x_QXmlErrorHandler(void *x) : xthis((QXmlErrorHandler*)x) {}
     void x_0(Smoke::Stack x) {
 	// warning(const QXmlParseException&)
-	bool xret = xthis->QXmlErrorHandler::warning(*(const QXmlParseException *)x[1].s_voidp);
+	bool xret = xthis->QXmlErrorHandler::warning(*(const QXmlParseException *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_1(Smoke::Stack x) {
 	// error(const QXmlParseException&)
-	bool xret = xthis->QXmlErrorHandler::error(*(const QXmlParseException *)x[1].s_voidp);
+	bool xret = xthis->QXmlErrorHandler::error(*(const QXmlParseException *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_2(Smoke::Stack x) {
 	// fatalError(const QXmlParseException&)
-	bool xret = xthis->QXmlErrorHandler::fatalError(*(const QXmlParseException *)x[1].s_voidp);
+	bool xret = xthis->QXmlErrorHandler::fatalError(*(const QXmlParseException *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_3(Smoke::Stack x) {
 	// errorString()
 	QString xret = xthis->QXmlErrorHandler::errorString();
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     ~x_QXmlErrorHandler() {}
 };

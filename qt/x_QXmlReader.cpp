@@ -10,104 +10,104 @@ public:
     x_QXmlReader(void *x) : xthis((QXmlReader*)x) {}
     void x_0(Smoke::Stack x) const {
 	// feature(const QString&, bool*)
-	bool xret = xthis->QXmlReader::feature(*(const QString *)x[1].s_voidp,(bool*)x[2].s_voidp);
+	bool xret = xthis->QXmlReader::feature(*(const QString *)x[1].s_class,(bool*)x[2].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_1(Smoke::Stack x) const {
 	// feature(const QString&)
-	bool xret = xthis->QXmlReader::feature(*(const QString *)x[1].s_voidp);
+	bool xret = xthis->QXmlReader::feature(*(const QString *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_2(Smoke::Stack x) {
 	// setFeature(const QString&, bool)
-	xthis->QXmlReader::setFeature(*(const QString *)x[1].s_voidp,(bool)x[2].s_bool);
+	xthis->QXmlReader::setFeature(*(const QString *)x[1].s_class,(bool)x[2].s_bool);
     }
     void x_3(Smoke::Stack x) const {
 	// hasFeature(const QString&)
-	bool xret = xthis->QXmlReader::hasFeature(*(const QString *)x[1].s_voidp);
+	bool xret = xthis->QXmlReader::hasFeature(*(const QString *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_4(Smoke::Stack x) const {
 	// property(const QString&, bool*)
-	void* xret = xthis->QXmlReader::property(*(const QString *)x[1].s_voidp,(bool*)x[2].s_voidp);
+	void* xret = xthis->QXmlReader::property(*(const QString *)x[1].s_class,(bool*)x[2].s_class);
 	x[0].s_voidp = (void*)xret;
     }
     void x_5(Smoke::Stack x) const {
 	// property(const QString&)
-	void* xret = xthis->QXmlReader::property(*(const QString *)x[1].s_voidp);
+	void* xret = xthis->QXmlReader::property(*(const QString *)x[1].s_class);
 	x[0].s_voidp = (void*)xret;
     }
     void x_6(Smoke::Stack x) {
 	// setProperty(const QString&, void*)
-	xthis->QXmlReader::setProperty(*(const QString *)x[1].s_voidp,(void*)x[2].s_voidp);
+	xthis->QXmlReader::setProperty(*(const QString *)x[1].s_class,(void*)x[2].s_voidp);
     }
     void x_7(Smoke::Stack x) const {
 	// hasProperty(const QString&)
-	bool xret = xthis->QXmlReader::hasProperty(*(const QString *)x[1].s_voidp);
+	bool xret = xthis->QXmlReader::hasProperty(*(const QString *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_8(Smoke::Stack x) {
 	// setEntityResolver(QXmlEntityResolver*)
-	xthis->QXmlReader::setEntityResolver((QXmlEntityResolver*)x[1].s_voidp);
+	xthis->QXmlReader::setEntityResolver((QXmlEntityResolver*)x[1].s_class);
     }
     void x_9(Smoke::Stack x) const {
 	// entityResolver()
 	QXmlEntityResolver* xret = xthis->QXmlReader::entityResolver();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_10(Smoke::Stack x) {
 	// setDTDHandler(QXmlDTDHandler*)
-	xthis->QXmlReader::setDTDHandler((QXmlDTDHandler*)x[1].s_voidp);
+	xthis->QXmlReader::setDTDHandler((QXmlDTDHandler*)x[1].s_class);
     }
     void x_11(Smoke::Stack x) const {
 	// DTDHandler()
 	QXmlDTDHandler* xret = xthis->QXmlReader::DTDHandler();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_12(Smoke::Stack x) {
 	// setContentHandler(QXmlContentHandler*)
-	xthis->QXmlReader::setContentHandler((QXmlContentHandler*)x[1].s_voidp);
+	xthis->QXmlReader::setContentHandler((QXmlContentHandler*)x[1].s_class);
     }
     void x_13(Smoke::Stack x) const {
 	// contentHandler()
 	QXmlContentHandler* xret = xthis->QXmlReader::contentHandler();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_14(Smoke::Stack x) {
 	// setErrorHandler(QXmlErrorHandler*)
-	xthis->QXmlReader::setErrorHandler((QXmlErrorHandler*)x[1].s_voidp);
+	xthis->QXmlReader::setErrorHandler((QXmlErrorHandler*)x[1].s_class);
     }
     void x_15(Smoke::Stack x) const {
 	// errorHandler()
 	QXmlErrorHandler* xret = xthis->QXmlReader::errorHandler();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_16(Smoke::Stack x) {
 	// setLexicalHandler(QXmlLexicalHandler*)
-	xthis->QXmlReader::setLexicalHandler((QXmlLexicalHandler*)x[1].s_voidp);
+	xthis->QXmlReader::setLexicalHandler((QXmlLexicalHandler*)x[1].s_class);
     }
     void x_17(Smoke::Stack x) const {
 	// lexicalHandler()
 	QXmlLexicalHandler* xret = xthis->QXmlReader::lexicalHandler();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_18(Smoke::Stack x) {
 	// setDeclHandler(QXmlDeclHandler*)
-	xthis->QXmlReader::setDeclHandler((QXmlDeclHandler*)x[1].s_voidp);
+	xthis->QXmlReader::setDeclHandler((QXmlDeclHandler*)x[1].s_class);
     }
     void x_19(Smoke::Stack x) const {
 	// declHandler()
 	QXmlDeclHandler* xret = xthis->QXmlReader::declHandler();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_20(Smoke::Stack x) {
 	// parse(const QXmlInputSource&)
-	bool xret = xthis->QXmlReader::parse(*(const QXmlInputSource *)x[1].s_voidp);
+	bool xret = xthis->QXmlReader::parse(*(const QXmlInputSource *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_21(Smoke::Stack x) {
 	// parse(const QXmlInputSource*)
-	bool xret = xthis->QXmlReader::parse((const QXmlInputSource*)x[1].s_voidp);
+	bool xret = xthis->QXmlReader::parse((const QXmlInputSource*)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     ~x_QXmlReader() {}

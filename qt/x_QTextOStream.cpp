@@ -7,15 +7,15 @@ class x_QTextOStream : public QTextOStream {
 public:
     static void x_0(Smoke::Stack x) {
 	// QTextOStream(QString*)
-	x_QTextOStream* xret = new x_QTextOStream((QString*)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QTextOStream* xret = new x_QTextOStream((QString*)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QTextOStream(QString* x1) : QTextOStream(x1) {
     }
     static void x_1(Smoke::Stack x) {
 	// QTextOStream(QByteArray)
-	x_QTextOStream* xret = new x_QTextOStream(*(QByteArray *)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QTextOStream* xret = new x_QTextOStream(*(QByteArray *)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QTextOStream(QByteArray x1) : QTextOStream(x1) {
     }

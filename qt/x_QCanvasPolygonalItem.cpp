@@ -11,48 +11,48 @@ class x_QCanvasPolygonalItem : public QCanvasPolygonalItem {
 public:
     static void x_0(Smoke::Stack x) {
 	// QCanvasPolygonalItem(QCanvas*)
-	x_QCanvasPolygonalItem* xret = new x_QCanvasPolygonalItem((QCanvas*)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QCanvasPolygonalItem* xret = new x_QCanvasPolygonalItem((QCanvas*)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QCanvasPolygonalItem(QCanvas* x1) : QCanvasPolygonalItem(x1) {
     }
     void x_1(Smoke::Stack x) const {
 	// collidesWith(const QCanvasItem*)
-	bool xret = this->QCanvasPolygonalItem::collidesWith((const QCanvasItem*)x[1].s_voidp);
+	bool xret = this->QCanvasPolygonalItem::collidesWith((const QCanvasItem*)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_2(Smoke::Stack x) {
 	// setPen(QPen)
-	this->QCanvasPolygonalItem::setPen(*(QPen *)x[1].s_voidp);
+	this->QCanvasPolygonalItem::setPen(*(QPen *)x[1].s_class);
     }
     void x_3(Smoke::Stack x) {
 	// setBrush(QBrush)
-	this->QCanvasPolygonalItem::setBrush(*(QBrush *)x[1].s_voidp);
+	this->QCanvasPolygonalItem::setBrush(*(QBrush *)x[1].s_class);
     }
     void x_4(Smoke::Stack x) const {
 	// pen()
 	QPen xret = this->QCanvasPolygonalItem::pen();
-	x[0].s_voidp = (void*)new QPen(xret);
+	x[0].s_class = (void*)new QPen(xret);
     }
     void x_5(Smoke::Stack x) const {
 	// brush()
 	QBrush xret = this->QCanvasPolygonalItem::brush();
-	x[0].s_voidp = (void*)new QBrush(xret);
+	x[0].s_class = (void*)new QBrush(xret);
     }
     void x_6(Smoke::Stack x) const {
 	// areaPoints()
 	QPointArray xret = this->QCanvasPolygonalItem::areaPoints();
-	x[0].s_voidp = (void*)new QPointArray(xret);
+	x[0].s_class = (void*)new QPointArray(xret);
     }
     void x_7(Smoke::Stack x) const {
 	// areaPointsAdvanced()
 	QPointArray xret = this->QCanvasPolygonalItem::areaPointsAdvanced();
-	x[0].s_voidp = (void*)new QPointArray(xret);
+	x[0].s_class = (void*)new QPointArray(xret);
     }
     void x_8(Smoke::Stack x) const {
 	// boundingRect()
 	QRect xret = this->QCanvasPolygonalItem::boundingRect();
-	x[0].s_voidp = (void*)new QRect(xret);
+	x[0].s_class = (void*)new QRect(xret);
     }
     void x_9(Smoke::Stack x) const {
 	// rtti()
@@ -61,11 +61,11 @@ public:
     }
     void x_10(Smoke::Stack x) {
 	// draw(QPainter&)
-	this->QCanvasPolygonalItem::draw(*(QPainter *)x[1].s_voidp);
+	this->QCanvasPolygonalItem::draw(*(QPainter *)x[1].s_class);
     }
     void x_11(Smoke::Stack x) {
 	// drawShape(QPainter&)
-	this->QCanvasPolygonalItem::drawShape(*(QPainter *)x[1].s_voidp);
+	this->QCanvasPolygonalItem::drawShape(*(QPainter *)x[1].s_class);
     }
     void x_12(Smoke::Stack x) const {
 	// winding()
@@ -85,7 +85,7 @@ public:
     virtual QPointArray areaPoints() const {
 	Smoke::StackItem x[1];
 	call_method_abstract((void*)this, 614, x);
-	QPointArray *xptr = (QPointArray *)x[0].s_voidp;
+	QPointArray *xptr = (QPointArray *)x[0].s_class;
 	QPointArray xret(*xptr);
 	delete xptr;
 	return xret;
@@ -94,7 +94,7 @@ public:
     virtual QPointArray areaPointsAdvanced() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 615, x)) {
-	    QPointArray *xptr = (QPointArray *)x[0].s_voidp;
+	    QPointArray *xptr = (QPointArray *)x[0].s_class;
 	    QPointArray xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -104,7 +104,7 @@ public:
     virtual QRect boundingRect() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 616, x)) {
-	    QRect *xptr = (QRect *)x[0].s_voidp;
+	    QRect *xptr = (QRect *)x[0].s_class;
 	    QRect xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -114,7 +114,7 @@ public:
     virtual QRect boundingRectAdvanced() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 565, x)) {
-	    QRect *xptr = (QRect *)x[0].s_voidp;
+	    QRect *xptr = (QRect *)x[0].s_class;
 	    QRect xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -123,19 +123,19 @@ public:
     }
     virtual bool collidesWith(const QCanvasItem* x1) const {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 609, x)) return (bool)x[0].s_bool;
 	return this->QCanvasPolygonalItem::collidesWith(x1);
     }
     virtual void draw(QPainter& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 618, x)) return;
 	this->QCanvasPolygonalItem::draw(x1);
     }
     virtual void drawShape(QPainter& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	call_method_abstract((void*)this, 619, x);
 	return;
 	// ABSTRACT
@@ -166,13 +166,13 @@ public:
     }
     virtual void setBrush(QBrush x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 611, x)) return;
 	this->QCanvasPolygonalItem::setBrush(x1);
     }
     virtual void setCanvas(QCanvas* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 547, x)) return;
 	this->QCanvasItem::setCanvas(x1);
     }
@@ -184,7 +184,7 @@ public:
     }
     virtual void setPen(QPen x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 610, x)) return;
 	this->QCanvasPolygonalItem::setPen(x1);
     }

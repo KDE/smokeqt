@@ -7,117 +7,117 @@
 class x_QStyleSheetItem : public QStyleSheetItem {
 public:
     static void x_0(Smoke::Stack x) {
-	x[0].s_long = (long)QStyleSheetItem::Undefined;
+	x[0].s_enum = (long)QStyleSheetItem::Undefined;
     }
     static void x_1(Smoke::Stack x) {
-	x[0].s_long = (long)QStyleSheetItem::DisplayBlock;
+	x[0].s_enum = (long)QStyleSheetItem::DisplayBlock;
     }
     static void x_2(Smoke::Stack x) {
-	x[0].s_long = (long)QStyleSheetItem::DisplayInline;
+	x[0].s_enum = (long)QStyleSheetItem::DisplayInline;
     }
     static void x_3(Smoke::Stack x) {
-	x[0].s_long = (long)QStyleSheetItem::DisplayListItem;
+	x[0].s_enum = (long)QStyleSheetItem::DisplayListItem;
     }
     static void x_4(Smoke::Stack x) {
-	x[0].s_long = (long)QStyleSheetItem::DisplayNone;
+	x[0].s_enum = (long)QStyleSheetItem::DisplayNone;
     }
     static void x_5(Smoke::Stack x) {
-	x[0].s_long = (long)QStyleSheetItem::VAlignBaseline;
+	x[0].s_enum = (long)QStyleSheetItem::VAlignBaseline;
     }
     static void x_6(Smoke::Stack x) {
-	x[0].s_long = (long)QStyleSheetItem::VAlignSub;
+	x[0].s_enum = (long)QStyleSheetItem::VAlignSub;
     }
     static void x_7(Smoke::Stack x) {
-	x[0].s_long = (long)QStyleSheetItem::VAlignSuper;
+	x[0].s_enum = (long)QStyleSheetItem::VAlignSuper;
     }
     static void x_8(Smoke::Stack x) {
-	x[0].s_long = (long)QStyleSheetItem::WhiteSpaceNormal;
+	x[0].s_enum = (long)QStyleSheetItem::WhiteSpaceNormal;
     }
     static void x_9(Smoke::Stack x) {
-	x[0].s_long = (long)QStyleSheetItem::WhiteSpacePre;
+	x[0].s_enum = (long)QStyleSheetItem::WhiteSpacePre;
     }
     static void x_10(Smoke::Stack x) {
-	x[0].s_long = (long)QStyleSheetItem::WhiteSpaceNoWrap;
+	x[0].s_enum = (long)QStyleSheetItem::WhiteSpaceNoWrap;
     }
     static void x_11(Smoke::Stack x) {
-	x[0].s_long = (long)QStyleSheetItem::MarginLeft;
+	x[0].s_enum = (long)QStyleSheetItem::MarginLeft;
     }
     static void x_12(Smoke::Stack x) {
-	x[0].s_long = (long)QStyleSheetItem::MarginRight;
+	x[0].s_enum = (long)QStyleSheetItem::MarginRight;
     }
     static void x_13(Smoke::Stack x) {
-	x[0].s_long = (long)QStyleSheetItem::MarginTop;
+	x[0].s_enum = (long)QStyleSheetItem::MarginTop;
     }
     static void x_14(Smoke::Stack x) {
-	x[0].s_long = (long)QStyleSheetItem::MarginBottom;
+	x[0].s_enum = (long)QStyleSheetItem::MarginBottom;
     }
     static void x_15(Smoke::Stack x) {
-	x[0].s_long = (long)QStyleSheetItem::MarginFirstLine;
+	x[0].s_enum = (long)QStyleSheetItem::MarginFirstLine;
     }
     static void x_16(Smoke::Stack x) {
-	x[0].s_long = (long)QStyleSheetItem::MarginAll;
+	x[0].s_enum = (long)QStyleSheetItem::MarginAll;
     }
     static void x_17(Smoke::Stack x) {
-	x[0].s_long = (long)QStyleSheetItem::MarginVertical;
+	x[0].s_enum = (long)QStyleSheetItem::MarginVertical;
     }
     static void x_18(Smoke::Stack x) {
-	x[0].s_long = (long)QStyleSheetItem::MarginHorizontal;
+	x[0].s_enum = (long)QStyleSheetItem::MarginHorizontal;
     }
     static void x_19(Smoke::Stack x) {
-	x[0].s_long = (long)QStyleSheetItem::ListDisc;
+	x[0].s_enum = (long)QStyleSheetItem::ListDisc;
     }
     static void x_20(Smoke::Stack x) {
-	x[0].s_long = (long)QStyleSheetItem::ListCircle;
+	x[0].s_enum = (long)QStyleSheetItem::ListCircle;
     }
     static void x_21(Smoke::Stack x) {
-	x[0].s_long = (long)QStyleSheetItem::ListSquare;
+	x[0].s_enum = (long)QStyleSheetItem::ListSquare;
     }
     static void x_22(Smoke::Stack x) {
-	x[0].s_long = (long)QStyleSheetItem::ListDecimal;
+	x[0].s_enum = (long)QStyleSheetItem::ListDecimal;
     }
     static void x_23(Smoke::Stack x) {
-	x[0].s_long = (long)QStyleSheetItem::ListLowerAlpha;
+	x[0].s_enum = (long)QStyleSheetItem::ListLowerAlpha;
     }
     static void x_24(Smoke::Stack x) {
-	x[0].s_long = (long)QStyleSheetItem::ListUpperAlpha;
+	x[0].s_enum = (long)QStyleSheetItem::ListUpperAlpha;
     }
     static void x_25(Smoke::Stack x) {
 	// QStyleSheetItem(QStyleSheet*, const QString&)
-	x_QStyleSheetItem* xret = new x_QStyleSheetItem((QStyleSheet*)x[1].s_voidp,*(const QString *)x[2].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QStyleSheetItem* xret = new x_QStyleSheetItem((QStyleSheet*)x[1].s_class,*(const QString *)x[2].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QStyleSheetItem(QStyleSheet* x1, const QString& x2) : QStyleSheetItem(x1, x2) {
     }
     static void x_26(Smoke::Stack x) {
 	// QStyleSheetItem(const QStyleSheetItem&)
-	x_QStyleSheetItem* xret = new x_QStyleSheetItem(*(const QStyleSheetItem *)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QStyleSheetItem* xret = new x_QStyleSheetItem(*(const QStyleSheetItem *)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QStyleSheetItem(const QStyleSheetItem& x1) : QStyleSheetItem(x1) {
     }
     void x_27(Smoke::Stack x) const {
 	// name()
 	QString xret = this->QStyleSheetItem::name();
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_28(Smoke::Stack x) {
 	// styleSheet()
 	QStyleSheet* xret = this->QStyleSheetItem::styleSheet();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_29(Smoke::Stack x) const {
 	// styleSheet()
 	const QStyleSheet* xret = this->QStyleSheetItem::styleSheet();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_30(Smoke::Stack x) const {
 	// displayMode()
 	QStyleSheetItem::DisplayMode xret = this->QStyleSheetItem::displayMode();
-	x[0].s_voidp = (void*)new QStyleSheetItem::DisplayMode(xret);
+	x[0].s_class = (void*)new QStyleSheetItem::DisplayMode(xret);
     }
     void x_31(Smoke::Stack x) {
 	// setDisplayMode(QStyleSheetItem::DisplayMode)
-	this->QStyleSheetItem::setDisplayMode(*(QStyleSheetItem::DisplayMode *)x[1].s_voidp);
+	this->QStyleSheetItem::setDisplayMode(*(QStyleSheetItem::DisplayMode *)x[1].s_class);
     }
     void x_32(Smoke::Stack x) const {
 	// alignment()
@@ -131,11 +131,11 @@ public:
     void x_34(Smoke::Stack x) const {
 	// verticalAlignment()
 	QStyleSheetItem::VerticalAlignment xret = this->QStyleSheetItem::verticalAlignment();
-	x[0].s_voidp = (void*)new QStyleSheetItem::VerticalAlignment(xret);
+	x[0].s_class = (void*)new QStyleSheetItem::VerticalAlignment(xret);
     }
     void x_35(Smoke::Stack x) {
 	// setVerticalAlignment(QStyleSheetItem::VerticalAlignment)
-	this->QStyleSheetItem::setVerticalAlignment(*(QStyleSheetItem::VerticalAlignment *)x[1].s_voidp);
+	this->QStyleSheetItem::setVerticalAlignment(*(QStyleSheetItem::VerticalAlignment *)x[1].s_class);
     }
     void x_36(Smoke::Stack x) const {
 	// fontWeight()
@@ -176,11 +176,11 @@ public:
     void x_44(Smoke::Stack x) const {
 	// fontFamily()
 	QString xret = this->QStyleSheetItem::fontFamily();
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_45(Smoke::Stack x) {
 	// setFontFamily(const QString&)
-	this->QStyleSheetItem::setFontFamily(*(const QString *)x[1].s_voidp);
+	this->QStyleSheetItem::setFontFamily(*(const QString *)x[1].s_class);
     }
     void x_46(Smoke::Stack x) const {
 	// numberOfColumns()
@@ -194,11 +194,11 @@ public:
     void x_48(Smoke::Stack x) const {
 	// color()
 	QColor xret = this->QStyleSheetItem::color();
-	x[0].s_voidp = (void*)new QColor(xret);
+	x[0].s_class = (void*)new QColor(xret);
     }
     void x_49(Smoke::Stack x) {
 	// setColor(const QColor&)
-	this->QStyleSheetItem::setColor(*(const QColor *)x[1].s_voidp);
+	this->QStyleSheetItem::setColor(*(const QColor *)x[1].s_class);
     }
     void x_50(Smoke::Stack x) const {
 	// fontItalic()
@@ -240,42 +240,42 @@ public:
     void x_58(Smoke::Stack x) const {
 	// whiteSpaceMode()
 	QStyleSheetItem::WhiteSpaceMode xret = this->QStyleSheetItem::whiteSpaceMode();
-	x[0].s_voidp = (void*)new QStyleSheetItem::WhiteSpaceMode(xret);
+	x[0].s_class = (void*)new QStyleSheetItem::WhiteSpaceMode(xret);
     }
     void x_59(Smoke::Stack x) {
 	// setWhiteSpaceMode(QStyleSheetItem::WhiteSpaceMode)
-	this->QStyleSheetItem::setWhiteSpaceMode(*(QStyleSheetItem::WhiteSpaceMode *)x[1].s_voidp);
+	this->QStyleSheetItem::setWhiteSpaceMode(*(QStyleSheetItem::WhiteSpaceMode *)x[1].s_class);
     }
     void x_60(Smoke::Stack x) const {
 	// margin(QStyleSheetItem::Margin)
-	int xret = this->QStyleSheetItem::margin(*(QStyleSheetItem::Margin *)x[1].s_voidp);
+	int xret = this->QStyleSheetItem::margin(*(QStyleSheetItem::Margin *)x[1].s_class);
 	x[0].s_int = (int)xret;
     }
     void x_61(Smoke::Stack x) {
 	// setMargin(QStyleSheetItem::Margin, int)
-	this->QStyleSheetItem::setMargin(*(QStyleSheetItem::Margin *)x[1].s_voidp,(int)x[2].s_int);
+	this->QStyleSheetItem::setMargin(*(QStyleSheetItem::Margin *)x[1].s_class,(int)x[2].s_int);
     }
     void x_62(Smoke::Stack x) const {
 	// listStyle()
 	QStyleSheetItem::ListStyle xret = this->QStyleSheetItem::listStyle();
-	x[0].s_voidp = (void*)new QStyleSheetItem::ListStyle(xret);
+	x[0].s_class = (void*)new QStyleSheetItem::ListStyle(xret);
     }
     void x_63(Smoke::Stack x) {
 	// setListStyle(QStyleSheetItem::ListStyle)
-	this->QStyleSheetItem::setListStyle(*(QStyleSheetItem::ListStyle *)x[1].s_voidp);
+	this->QStyleSheetItem::setListStyle(*(QStyleSheetItem::ListStyle *)x[1].s_class);
     }
     void x_64(Smoke::Stack x) const {
 	// contexts()
 	QString xret = this->QStyleSheetItem::contexts();
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_65(Smoke::Stack x) {
 	// setContexts(const QString&)
-	this->QStyleSheetItem::setContexts(*(const QString *)x[1].s_voidp);
+	this->QStyleSheetItem::setContexts(*(const QString *)x[1].s_class);
     }
     void x_66(Smoke::Stack x) const {
 	// allowedInContext(const QStyleSheetItem*)
-	bool xret = this->QStyleSheetItem::allowedInContext((const QStyleSheetItem*)x[1].s_voidp);
+	bool xret = this->QStyleSheetItem::allowedInContext((const QStyleSheetItem*)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_67(Smoke::Stack x) const {

@@ -11,7 +11,7 @@ public:
     static void x_0(Smoke::Stack x) {
 	// QMenuData()
 	x_QMenuData* xret = new x_QMenuData();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     x_QMenuData() : QMenuData() {
     }
@@ -22,247 +22,247 @@ public:
     }
     void x_2(Smoke::Stack x) {
 	// insertItem(const QString&, const QObject*, const char*, const QKeySequence&, int, int)
-	int xret = this->QMenuData::insertItem(*(const QString *)x[1].s_voidp,(const QObject*)x[2].s_voidp,(const char*)x[3].s_voidp,*(const QKeySequence *)x[4].s_voidp,(int)x[5].s_int,(int)x[6].s_int);
+	int xret = this->QMenuData::insertItem(*(const QString *)x[1].s_class,(const QObject*)x[2].s_class,(const char*)x[3].s_class,*(const QKeySequence *)x[4].s_class,(int)x[5].s_int,(int)x[6].s_int);
 	x[0].s_int = (int)xret;
     }
     void x_3(Smoke::Stack x) {
 	// insertItem(const QString&, const QObject*, const char*, const QKeySequence&, int)
-	int xret = this->QMenuData::insertItem(*(const QString *)x[1].s_voidp,(const QObject*)x[2].s_voidp,(const char*)x[3].s_voidp,*(const QKeySequence *)x[4].s_voidp,(int)x[5].s_int);
+	int xret = this->QMenuData::insertItem(*(const QString *)x[1].s_class,(const QObject*)x[2].s_class,(const char*)x[3].s_class,*(const QKeySequence *)x[4].s_class,(int)x[5].s_int);
 	x[0].s_int = (int)xret;
     }
     void x_4(Smoke::Stack x) {
 	// insertItem(const QString&, const QObject*, const char*, const QKeySequence&)
-	int xret = this->QMenuData::insertItem(*(const QString *)x[1].s_voidp,(const QObject*)x[2].s_voidp,(const char*)x[3].s_voidp,*(const QKeySequence *)x[4].s_voidp);
+	int xret = this->QMenuData::insertItem(*(const QString *)x[1].s_class,(const QObject*)x[2].s_class,(const char*)x[3].s_class,*(const QKeySequence *)x[4].s_class);
 	x[0].s_int = (int)xret;
     }
     void x_5(Smoke::Stack x) {
 	// insertItem(const QString&, const QObject*, const char*)
-	int xret = this->QMenuData::insertItem(*(const QString *)x[1].s_voidp,(const QObject*)x[2].s_voidp,(const char*)x[3].s_voidp);
+	int xret = this->QMenuData::insertItem(*(const QString *)x[1].s_class,(const QObject*)x[2].s_class,(const char*)x[3].s_class);
 	x[0].s_int = (int)xret;
     }
     void x_6(Smoke::Stack x) {
 	// insertItem(const QIconSet&, const QString&, const QObject*, const char*, const QKeySequence&, int, int)
-	int xret = this->QMenuData::insertItem(*(const QIconSet *)x[1].s_voidp,*(const QString *)x[2].s_voidp,(const QObject*)x[3].s_voidp,(const char*)x[4].s_voidp,*(const QKeySequence *)x[5].s_voidp,(int)x[6].s_int,(int)x[7].s_int);
+	int xret = this->QMenuData::insertItem(*(const QIconSet *)x[1].s_class,*(const QString *)x[2].s_class,(const QObject*)x[3].s_class,(const char*)x[4].s_class,*(const QKeySequence *)x[5].s_class,(int)x[6].s_int,(int)x[7].s_int);
 	x[0].s_int = (int)xret;
     }
     void x_7(Smoke::Stack x) {
 	// insertItem(const QIconSet&, const QString&, const QObject*, const char*, const QKeySequence&, int)
-	int xret = this->QMenuData::insertItem(*(const QIconSet *)x[1].s_voidp,*(const QString *)x[2].s_voidp,(const QObject*)x[3].s_voidp,(const char*)x[4].s_voidp,*(const QKeySequence *)x[5].s_voidp,(int)x[6].s_int);
+	int xret = this->QMenuData::insertItem(*(const QIconSet *)x[1].s_class,*(const QString *)x[2].s_class,(const QObject*)x[3].s_class,(const char*)x[4].s_class,*(const QKeySequence *)x[5].s_class,(int)x[6].s_int);
 	x[0].s_int = (int)xret;
     }
     void x_8(Smoke::Stack x) {
 	// insertItem(const QIconSet&, const QString&, const QObject*, const char*, const QKeySequence&)
-	int xret = this->QMenuData::insertItem(*(const QIconSet *)x[1].s_voidp,*(const QString *)x[2].s_voidp,(const QObject*)x[3].s_voidp,(const char*)x[4].s_voidp,*(const QKeySequence *)x[5].s_voidp);
+	int xret = this->QMenuData::insertItem(*(const QIconSet *)x[1].s_class,*(const QString *)x[2].s_class,(const QObject*)x[3].s_class,(const char*)x[4].s_class,*(const QKeySequence *)x[5].s_class);
 	x[0].s_int = (int)xret;
     }
     void x_9(Smoke::Stack x) {
 	// insertItem(const QIconSet&, const QString&, const QObject*, const char*)
-	int xret = this->QMenuData::insertItem(*(const QIconSet *)x[1].s_voidp,*(const QString *)x[2].s_voidp,(const QObject*)x[3].s_voidp,(const char*)x[4].s_voidp);
+	int xret = this->QMenuData::insertItem(*(const QIconSet *)x[1].s_class,*(const QString *)x[2].s_class,(const QObject*)x[3].s_class,(const char*)x[4].s_class);
 	x[0].s_int = (int)xret;
     }
     void x_10(Smoke::Stack x) {
 	// insertItem(const QPixmap&, const QObject*, const char*, const QKeySequence&, int, int)
-	int xret = this->QMenuData::insertItem(*(const QPixmap *)x[1].s_voidp,(const QObject*)x[2].s_voidp,(const char*)x[3].s_voidp,*(const QKeySequence *)x[4].s_voidp,(int)x[5].s_int,(int)x[6].s_int);
+	int xret = this->QMenuData::insertItem(*(const QPixmap *)x[1].s_class,(const QObject*)x[2].s_class,(const char*)x[3].s_class,*(const QKeySequence *)x[4].s_class,(int)x[5].s_int,(int)x[6].s_int);
 	x[0].s_int = (int)xret;
     }
     void x_11(Smoke::Stack x) {
 	// insertItem(const QPixmap&, const QObject*, const char*, const QKeySequence&, int)
-	int xret = this->QMenuData::insertItem(*(const QPixmap *)x[1].s_voidp,(const QObject*)x[2].s_voidp,(const char*)x[3].s_voidp,*(const QKeySequence *)x[4].s_voidp,(int)x[5].s_int);
+	int xret = this->QMenuData::insertItem(*(const QPixmap *)x[1].s_class,(const QObject*)x[2].s_class,(const char*)x[3].s_class,*(const QKeySequence *)x[4].s_class,(int)x[5].s_int);
 	x[0].s_int = (int)xret;
     }
     void x_12(Smoke::Stack x) {
 	// insertItem(const QPixmap&, const QObject*, const char*, const QKeySequence&)
-	int xret = this->QMenuData::insertItem(*(const QPixmap *)x[1].s_voidp,(const QObject*)x[2].s_voidp,(const char*)x[3].s_voidp,*(const QKeySequence *)x[4].s_voidp);
+	int xret = this->QMenuData::insertItem(*(const QPixmap *)x[1].s_class,(const QObject*)x[2].s_class,(const char*)x[3].s_class,*(const QKeySequence *)x[4].s_class);
 	x[0].s_int = (int)xret;
     }
     void x_13(Smoke::Stack x) {
 	// insertItem(const QPixmap&, const QObject*, const char*)
-	int xret = this->QMenuData::insertItem(*(const QPixmap *)x[1].s_voidp,(const QObject*)x[2].s_voidp,(const char*)x[3].s_voidp);
+	int xret = this->QMenuData::insertItem(*(const QPixmap *)x[1].s_class,(const QObject*)x[2].s_class,(const char*)x[3].s_class);
 	x[0].s_int = (int)xret;
     }
     void x_14(Smoke::Stack x) {
 	// insertItem(const QIconSet&, const QPixmap&, const QObject*, const char*, const QKeySequence&, int, int)
-	int xret = this->QMenuData::insertItem(*(const QIconSet *)x[1].s_voidp,*(const QPixmap *)x[2].s_voidp,(const QObject*)x[3].s_voidp,(const char*)x[4].s_voidp,*(const QKeySequence *)x[5].s_voidp,(int)x[6].s_int,(int)x[7].s_int);
+	int xret = this->QMenuData::insertItem(*(const QIconSet *)x[1].s_class,*(const QPixmap *)x[2].s_class,(const QObject*)x[3].s_class,(const char*)x[4].s_class,*(const QKeySequence *)x[5].s_class,(int)x[6].s_int,(int)x[7].s_int);
 	x[0].s_int = (int)xret;
     }
     void x_15(Smoke::Stack x) {
 	// insertItem(const QIconSet&, const QPixmap&, const QObject*, const char*, const QKeySequence&, int)
-	int xret = this->QMenuData::insertItem(*(const QIconSet *)x[1].s_voidp,*(const QPixmap *)x[2].s_voidp,(const QObject*)x[3].s_voidp,(const char*)x[4].s_voidp,*(const QKeySequence *)x[5].s_voidp,(int)x[6].s_int);
+	int xret = this->QMenuData::insertItem(*(const QIconSet *)x[1].s_class,*(const QPixmap *)x[2].s_class,(const QObject*)x[3].s_class,(const char*)x[4].s_class,*(const QKeySequence *)x[5].s_class,(int)x[6].s_int);
 	x[0].s_int = (int)xret;
     }
     void x_16(Smoke::Stack x) {
 	// insertItem(const QIconSet&, const QPixmap&, const QObject*, const char*, const QKeySequence&)
-	int xret = this->QMenuData::insertItem(*(const QIconSet *)x[1].s_voidp,*(const QPixmap *)x[2].s_voidp,(const QObject*)x[3].s_voidp,(const char*)x[4].s_voidp,*(const QKeySequence *)x[5].s_voidp);
+	int xret = this->QMenuData::insertItem(*(const QIconSet *)x[1].s_class,*(const QPixmap *)x[2].s_class,(const QObject*)x[3].s_class,(const char*)x[4].s_class,*(const QKeySequence *)x[5].s_class);
 	x[0].s_int = (int)xret;
     }
     void x_17(Smoke::Stack x) {
 	// insertItem(const QIconSet&, const QPixmap&, const QObject*, const char*)
-	int xret = this->QMenuData::insertItem(*(const QIconSet *)x[1].s_voidp,*(const QPixmap *)x[2].s_voidp,(const QObject*)x[3].s_voidp,(const char*)x[4].s_voidp);
+	int xret = this->QMenuData::insertItem(*(const QIconSet *)x[1].s_class,*(const QPixmap *)x[2].s_class,(const QObject*)x[3].s_class,(const char*)x[4].s_class);
 	x[0].s_int = (int)xret;
     }
     void x_18(Smoke::Stack x) {
 	// insertItem(const QString&, int, int)
-	int xret = this->QMenuData::insertItem(*(const QString *)x[1].s_voidp,(int)x[2].s_int,(int)x[3].s_int);
+	int xret = this->QMenuData::insertItem(*(const QString *)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int);
 	x[0].s_int = (int)xret;
     }
     void x_19(Smoke::Stack x) {
 	// insertItem(const QString&, int)
-	int xret = this->QMenuData::insertItem(*(const QString *)x[1].s_voidp,(int)x[2].s_int);
+	int xret = this->QMenuData::insertItem(*(const QString *)x[1].s_class,(int)x[2].s_int);
 	x[0].s_int = (int)xret;
     }
     void x_20(Smoke::Stack x) {
 	// insertItem(const QString&)
-	int xret = this->QMenuData::insertItem(*(const QString *)x[1].s_voidp);
+	int xret = this->QMenuData::insertItem(*(const QString *)x[1].s_class);
 	x[0].s_int = (int)xret;
     }
     void x_21(Smoke::Stack x) {
 	// insertItem(const QIconSet&, const QString&, int, int)
-	int xret = this->QMenuData::insertItem(*(const QIconSet *)x[1].s_voidp,*(const QString *)x[2].s_voidp,(int)x[3].s_int,(int)x[4].s_int);
+	int xret = this->QMenuData::insertItem(*(const QIconSet *)x[1].s_class,*(const QString *)x[2].s_class,(int)x[3].s_int,(int)x[4].s_int);
 	x[0].s_int = (int)xret;
     }
     void x_22(Smoke::Stack x) {
 	// insertItem(const QIconSet&, const QString&, int)
-	int xret = this->QMenuData::insertItem(*(const QIconSet *)x[1].s_voidp,*(const QString *)x[2].s_voidp,(int)x[3].s_int);
+	int xret = this->QMenuData::insertItem(*(const QIconSet *)x[1].s_class,*(const QString *)x[2].s_class,(int)x[3].s_int);
 	x[0].s_int = (int)xret;
     }
     void x_23(Smoke::Stack x) {
 	// insertItem(const QIconSet&, const QString&)
-	int xret = this->QMenuData::insertItem(*(const QIconSet *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
+	int xret = this->QMenuData::insertItem(*(const QIconSet *)x[1].s_class,*(const QString *)x[2].s_class);
 	x[0].s_int = (int)xret;
     }
     void x_24(Smoke::Stack x) {
 	// insertItem(const QString&, QPopupMenu*, int, int)
-	int xret = this->QMenuData::insertItem(*(const QString *)x[1].s_voidp,(QPopupMenu*)x[2].s_voidp,(int)x[3].s_int,(int)x[4].s_int);
+	int xret = this->QMenuData::insertItem(*(const QString *)x[1].s_class,(QPopupMenu*)x[2].s_class,(int)x[3].s_int,(int)x[4].s_int);
 	x[0].s_int = (int)xret;
     }
     void x_25(Smoke::Stack x) {
 	// insertItem(const QString&, QPopupMenu*, int)
-	int xret = this->QMenuData::insertItem(*(const QString *)x[1].s_voidp,(QPopupMenu*)x[2].s_voidp,(int)x[3].s_int);
+	int xret = this->QMenuData::insertItem(*(const QString *)x[1].s_class,(QPopupMenu*)x[2].s_class,(int)x[3].s_int);
 	x[0].s_int = (int)xret;
     }
     void x_26(Smoke::Stack x) {
 	// insertItem(const QString&, QPopupMenu*)
-	int xret = this->QMenuData::insertItem(*(const QString *)x[1].s_voidp,(QPopupMenu*)x[2].s_voidp);
+	int xret = this->QMenuData::insertItem(*(const QString *)x[1].s_class,(QPopupMenu*)x[2].s_class);
 	x[0].s_int = (int)xret;
     }
     void x_27(Smoke::Stack x) {
 	// insertItem(const QIconSet&, const QString&, QPopupMenu*, int, int)
-	int xret = this->QMenuData::insertItem(*(const QIconSet *)x[1].s_voidp,*(const QString *)x[2].s_voidp,(QPopupMenu*)x[3].s_voidp,(int)x[4].s_int,(int)x[5].s_int);
+	int xret = this->QMenuData::insertItem(*(const QIconSet *)x[1].s_class,*(const QString *)x[2].s_class,(QPopupMenu*)x[3].s_class,(int)x[4].s_int,(int)x[5].s_int);
 	x[0].s_int = (int)xret;
     }
     void x_28(Smoke::Stack x) {
 	// insertItem(const QIconSet&, const QString&, QPopupMenu*, int)
-	int xret = this->QMenuData::insertItem(*(const QIconSet *)x[1].s_voidp,*(const QString *)x[2].s_voidp,(QPopupMenu*)x[3].s_voidp,(int)x[4].s_int);
+	int xret = this->QMenuData::insertItem(*(const QIconSet *)x[1].s_class,*(const QString *)x[2].s_class,(QPopupMenu*)x[3].s_class,(int)x[4].s_int);
 	x[0].s_int = (int)xret;
     }
     void x_29(Smoke::Stack x) {
 	// insertItem(const QIconSet&, const QString&, QPopupMenu*)
-	int xret = this->QMenuData::insertItem(*(const QIconSet *)x[1].s_voidp,*(const QString *)x[2].s_voidp,(QPopupMenu*)x[3].s_voidp);
+	int xret = this->QMenuData::insertItem(*(const QIconSet *)x[1].s_class,*(const QString *)x[2].s_class,(QPopupMenu*)x[3].s_class);
 	x[0].s_int = (int)xret;
     }
     void x_30(Smoke::Stack x) {
 	// insertItem(const QPixmap&, int, int)
-	int xret = this->QMenuData::insertItem(*(const QPixmap *)x[1].s_voidp,(int)x[2].s_int,(int)x[3].s_int);
+	int xret = this->QMenuData::insertItem(*(const QPixmap *)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int);
 	x[0].s_int = (int)xret;
     }
     void x_31(Smoke::Stack x) {
 	// insertItem(const QPixmap&, int)
-	int xret = this->QMenuData::insertItem(*(const QPixmap *)x[1].s_voidp,(int)x[2].s_int);
+	int xret = this->QMenuData::insertItem(*(const QPixmap *)x[1].s_class,(int)x[2].s_int);
 	x[0].s_int = (int)xret;
     }
     void x_32(Smoke::Stack x) {
 	// insertItem(const QPixmap&)
-	int xret = this->QMenuData::insertItem(*(const QPixmap *)x[1].s_voidp);
+	int xret = this->QMenuData::insertItem(*(const QPixmap *)x[1].s_class);
 	x[0].s_int = (int)xret;
     }
     void x_33(Smoke::Stack x) {
 	// insertItem(const QIconSet&, const QPixmap&, int, int)
-	int xret = this->QMenuData::insertItem(*(const QIconSet *)x[1].s_voidp,*(const QPixmap *)x[2].s_voidp,(int)x[3].s_int,(int)x[4].s_int);
+	int xret = this->QMenuData::insertItem(*(const QIconSet *)x[1].s_class,*(const QPixmap *)x[2].s_class,(int)x[3].s_int,(int)x[4].s_int);
 	x[0].s_int = (int)xret;
     }
     void x_34(Smoke::Stack x) {
 	// insertItem(const QIconSet&, const QPixmap&, int)
-	int xret = this->QMenuData::insertItem(*(const QIconSet *)x[1].s_voidp,*(const QPixmap *)x[2].s_voidp,(int)x[3].s_int);
+	int xret = this->QMenuData::insertItem(*(const QIconSet *)x[1].s_class,*(const QPixmap *)x[2].s_class,(int)x[3].s_int);
 	x[0].s_int = (int)xret;
     }
     void x_35(Smoke::Stack x) {
 	// insertItem(const QIconSet&, const QPixmap&)
-	int xret = this->QMenuData::insertItem(*(const QIconSet *)x[1].s_voidp,*(const QPixmap *)x[2].s_voidp);
+	int xret = this->QMenuData::insertItem(*(const QIconSet *)x[1].s_class,*(const QPixmap *)x[2].s_class);
 	x[0].s_int = (int)xret;
     }
     void x_36(Smoke::Stack x) {
 	// insertItem(const QPixmap&, QPopupMenu*, int, int)
-	int xret = this->QMenuData::insertItem(*(const QPixmap *)x[1].s_voidp,(QPopupMenu*)x[2].s_voidp,(int)x[3].s_int,(int)x[4].s_int);
+	int xret = this->QMenuData::insertItem(*(const QPixmap *)x[1].s_class,(QPopupMenu*)x[2].s_class,(int)x[3].s_int,(int)x[4].s_int);
 	x[0].s_int = (int)xret;
     }
     void x_37(Smoke::Stack x) {
 	// insertItem(const QPixmap&, QPopupMenu*, int)
-	int xret = this->QMenuData::insertItem(*(const QPixmap *)x[1].s_voidp,(QPopupMenu*)x[2].s_voidp,(int)x[3].s_int);
+	int xret = this->QMenuData::insertItem(*(const QPixmap *)x[1].s_class,(QPopupMenu*)x[2].s_class,(int)x[3].s_int);
 	x[0].s_int = (int)xret;
     }
     void x_38(Smoke::Stack x) {
 	// insertItem(const QPixmap&, QPopupMenu*)
-	int xret = this->QMenuData::insertItem(*(const QPixmap *)x[1].s_voidp,(QPopupMenu*)x[2].s_voidp);
+	int xret = this->QMenuData::insertItem(*(const QPixmap *)x[1].s_class,(QPopupMenu*)x[2].s_class);
 	x[0].s_int = (int)xret;
     }
     void x_39(Smoke::Stack x) {
 	// insertItem(const QIconSet&, const QPixmap&, QPopupMenu*, int, int)
-	int xret = this->QMenuData::insertItem(*(const QIconSet *)x[1].s_voidp,*(const QPixmap *)x[2].s_voidp,(QPopupMenu*)x[3].s_voidp,(int)x[4].s_int,(int)x[5].s_int);
+	int xret = this->QMenuData::insertItem(*(const QIconSet *)x[1].s_class,*(const QPixmap *)x[2].s_class,(QPopupMenu*)x[3].s_class,(int)x[4].s_int,(int)x[5].s_int);
 	x[0].s_int = (int)xret;
     }
     void x_40(Smoke::Stack x) {
 	// insertItem(const QIconSet&, const QPixmap&, QPopupMenu*, int)
-	int xret = this->QMenuData::insertItem(*(const QIconSet *)x[1].s_voidp,*(const QPixmap *)x[2].s_voidp,(QPopupMenu*)x[3].s_voidp,(int)x[4].s_int);
+	int xret = this->QMenuData::insertItem(*(const QIconSet *)x[1].s_class,*(const QPixmap *)x[2].s_class,(QPopupMenu*)x[3].s_class,(int)x[4].s_int);
 	x[0].s_int = (int)xret;
     }
     void x_41(Smoke::Stack x) {
 	// insertItem(const QIconSet&, const QPixmap&, QPopupMenu*)
-	int xret = this->QMenuData::insertItem(*(const QIconSet *)x[1].s_voidp,*(const QPixmap *)x[2].s_voidp,(QPopupMenu*)x[3].s_voidp);
+	int xret = this->QMenuData::insertItem(*(const QIconSet *)x[1].s_class,*(const QPixmap *)x[2].s_class,(QPopupMenu*)x[3].s_class);
 	x[0].s_int = (int)xret;
     }
     void x_42(Smoke::Stack x) {
 	// insertItem(QWidget*, int, int)
-	int xret = this->QMenuData::insertItem((QWidget*)x[1].s_voidp,(int)x[2].s_int,(int)x[3].s_int);
+	int xret = this->QMenuData::insertItem((QWidget*)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int);
 	x[0].s_int = (int)xret;
     }
     void x_43(Smoke::Stack x) {
 	// insertItem(QWidget*, int)
-	int xret = this->QMenuData::insertItem((QWidget*)x[1].s_voidp,(int)x[2].s_int);
+	int xret = this->QMenuData::insertItem((QWidget*)x[1].s_class,(int)x[2].s_int);
 	x[0].s_int = (int)xret;
     }
     void x_44(Smoke::Stack x) {
 	// insertItem(QWidget*)
-	int xret = this->QMenuData::insertItem((QWidget*)x[1].s_voidp);
+	int xret = this->QMenuData::insertItem((QWidget*)x[1].s_class);
 	x[0].s_int = (int)xret;
     }
     void x_45(Smoke::Stack x) {
 	// insertItem(const QIconSet&, QCustomMenuItem*, int, int)
-	int xret = this->QMenuData::insertItem(*(const QIconSet *)x[1].s_voidp,(QCustomMenuItem*)x[2].s_voidp,(int)x[3].s_int,(int)x[4].s_int);
+	int xret = this->QMenuData::insertItem(*(const QIconSet *)x[1].s_class,(QCustomMenuItem*)x[2].s_class,(int)x[3].s_int,(int)x[4].s_int);
 	x[0].s_int = (int)xret;
     }
     void x_46(Smoke::Stack x) {
 	// insertItem(const QIconSet&, QCustomMenuItem*, int)
-	int xret = this->QMenuData::insertItem(*(const QIconSet *)x[1].s_voidp,(QCustomMenuItem*)x[2].s_voidp,(int)x[3].s_int);
+	int xret = this->QMenuData::insertItem(*(const QIconSet *)x[1].s_class,(QCustomMenuItem*)x[2].s_class,(int)x[3].s_int);
 	x[0].s_int = (int)xret;
     }
     void x_47(Smoke::Stack x) {
 	// insertItem(const QIconSet&, QCustomMenuItem*)
-	int xret = this->QMenuData::insertItem(*(const QIconSet *)x[1].s_voidp,(QCustomMenuItem*)x[2].s_voidp);
+	int xret = this->QMenuData::insertItem(*(const QIconSet *)x[1].s_class,(QCustomMenuItem*)x[2].s_class);
 	x[0].s_int = (int)xret;
     }
     void x_48(Smoke::Stack x) {
 	// insertItem(QCustomMenuItem*, int, int)
-	int xret = this->QMenuData::insertItem((QCustomMenuItem*)x[1].s_voidp,(int)x[2].s_int,(int)x[3].s_int);
+	int xret = this->QMenuData::insertItem((QCustomMenuItem*)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int);
 	x[0].s_int = (int)xret;
     }
     void x_49(Smoke::Stack x) {
 	// insertItem(QCustomMenuItem*, int)
-	int xret = this->QMenuData::insertItem((QCustomMenuItem*)x[1].s_voidp,(int)x[2].s_int);
+	int xret = this->QMenuData::insertItem((QCustomMenuItem*)x[1].s_class,(int)x[2].s_int);
 	x[0].s_int = (int)xret;
     }
     void x_50(Smoke::Stack x) {
 	// insertItem(QCustomMenuItem*)
-	int xret = this->QMenuData::insertItem((QCustomMenuItem*)x[1].s_voidp);
+	int xret = this->QMenuData::insertItem((QCustomMenuItem*)x[1].s_class);
 	x[0].s_int = (int)xret;
     }
     void x_51(Smoke::Stack x) {
@@ -290,63 +290,63 @@ public:
     void x_56(Smoke::Stack x) const {
 	// accel(int)
 	QKeySequence xret = this->QMenuData::accel((int)x[1].s_int);
-	x[0].s_voidp = (void*)new QKeySequence(xret);
+	x[0].s_class = (void*)new QKeySequence(xret);
     }
     void x_57(Smoke::Stack x) {
 	// setAccel(const QKeySequence&, int)
-	this->QMenuData::setAccel(*(const QKeySequence *)x[1].s_voidp,(int)x[2].s_int);
+	this->QMenuData::setAccel(*(const QKeySequence *)x[1].s_class,(int)x[2].s_int);
     }
     void x_58(Smoke::Stack x) const {
 	// iconSet(int)
 	QIconSet* xret = this->QMenuData::iconSet((int)x[1].s_int);
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_59(Smoke::Stack x) const {
 	// text(int)
 	QString xret = this->QMenuData::text((int)x[1].s_int);
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_60(Smoke::Stack x) const {
 	// pixmap(int)
 	QPixmap* xret = this->QMenuData::pixmap((int)x[1].s_int);
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_61(Smoke::Stack x) {
 	// setWhatsThis(int, const QString&)
-	this->QMenuData::setWhatsThis((int)x[1].s_int,*(const QString *)x[2].s_voidp);
+	this->QMenuData::setWhatsThis((int)x[1].s_int,*(const QString *)x[2].s_class);
     }
     void x_62(Smoke::Stack x) const {
 	// whatsThis(int)
 	QString xret = this->QMenuData::whatsThis((int)x[1].s_int);
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_63(Smoke::Stack x) {
 	// changeItem(int, const QString&)
-	this->QMenuData::changeItem((int)x[1].s_int,*(const QString *)x[2].s_voidp);
+	this->QMenuData::changeItem((int)x[1].s_int,*(const QString *)x[2].s_class);
     }
     void x_64(Smoke::Stack x) {
 	// changeItem(int, const QPixmap&)
-	this->QMenuData::changeItem((int)x[1].s_int,*(const QPixmap *)x[2].s_voidp);
+	this->QMenuData::changeItem((int)x[1].s_int,*(const QPixmap *)x[2].s_class);
     }
     void x_65(Smoke::Stack x) {
 	// changeItem(int, const QIconSet&, const QString&)
-	this->QMenuData::changeItem((int)x[1].s_int,*(const QIconSet *)x[2].s_voidp,*(const QString *)x[3].s_voidp);
+	this->QMenuData::changeItem((int)x[1].s_int,*(const QIconSet *)x[2].s_class,*(const QString *)x[3].s_class);
     }
     void x_66(Smoke::Stack x) {
 	// changeItem(int, const QIconSet&, const QPixmap&)
-	this->QMenuData::changeItem((int)x[1].s_int,*(const QIconSet *)x[2].s_voidp,*(const QPixmap *)x[3].s_voidp);
+	this->QMenuData::changeItem((int)x[1].s_int,*(const QIconSet *)x[2].s_class,*(const QPixmap *)x[3].s_class);
     }
     void x_67(Smoke::Stack x) {
 	// changeItem(const QString&, int)
-	this->QMenuData::changeItem(*(const QString *)x[1].s_voidp,(int)x[2].s_int);
+	this->QMenuData::changeItem(*(const QString *)x[1].s_class,(int)x[2].s_int);
     }
     void x_68(Smoke::Stack x) {
 	// changeItem(const QPixmap&, int)
-	this->QMenuData::changeItem(*(const QPixmap *)x[1].s_voidp,(int)x[2].s_int);
+	this->QMenuData::changeItem(*(const QPixmap *)x[1].s_class,(int)x[2].s_int);
     }
     void x_69(Smoke::Stack x) {
 	// changeItem(const QIconSet&, const QString&, int)
-	this->QMenuData::changeItem(*(const QIconSet *)x[1].s_voidp,*(const QString *)x[2].s_voidp,(int)x[3].s_int);
+	this->QMenuData::changeItem(*(const QIconSet *)x[1].s_class,*(const QString *)x[2].s_class,(int)x[3].s_int);
     }
     void x_70(Smoke::Stack x) const {
 	// isItemActive(int)
@@ -391,12 +391,12 @@ public:
     }
     void x_79(Smoke::Stack x) {
 	// connectItem(int, const QObject*, const char*)
-	bool xret = this->QMenuData::connectItem((int)x[1].s_int,(const QObject*)x[2].s_voidp,(const char*)x[3].s_voidp);
+	bool xret = this->QMenuData::connectItem((int)x[1].s_int,(const QObject*)x[2].s_class,(const char*)x[3].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_80(Smoke::Stack x) {
 	// disconnectItem(int, const QObject*, const char*)
-	bool xret = this->QMenuData::disconnectItem((int)x[1].s_int,(const QObject*)x[2].s_voidp,(const char*)x[3].s_voidp);
+	bool xret = this->QMenuData::disconnectItem((int)x[1].s_int,(const QObject*)x[2].s_class,(const char*)x[3].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_81(Smoke::Stack x) {
@@ -412,22 +412,22 @@ public:
     void x_83(Smoke::Stack x) const {
 	// findItem(int)
 	QMenuItem* xret = this->QMenuData::findItem((int)x[1].s_int);
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_84(Smoke::Stack x) const {
 	// findItem(int, QMenuData**)
-	QMenuItem* xret = this->QMenuData::findItem((int)x[1].s_int,(QMenuData**)x[2].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	QMenuItem* xret = this->QMenuData::findItem((int)x[1].s_int,(QMenuData**)x[2].s_class);
+	x[0].s_class = (void*)xret;
     }
     void x_85(Smoke::Stack x) {
 	// findPopup(QPopupMenu*, int*)
-	QMenuItem* xret = this->QMenuData::findPopup((QPopupMenu*)x[1].s_voidp,(int*)x[2].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	QMenuItem* xret = this->QMenuData::findPopup((QPopupMenu*)x[1].s_class,(int*)x[2].s_class);
+	x[0].s_class = (void*)xret;
     }
     void x_86(Smoke::Stack x) {
 	// findPopup(QPopupMenu*)
-	QMenuItem* xret = this->QMenuData::findPopup((QPopupMenu*)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	QMenuItem* xret = this->QMenuData::findPopup((QPopupMenu*)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     void x_87(Smoke::Stack x) {
 	// activateItemAt(int)
@@ -443,11 +443,11 @@ public:
     }
     void x_90(Smoke::Stack x) {
 	// menuInsPopup(QPopupMenu*)
-	this->QMenuData::menuInsPopup((QPopupMenu*)x[1].s_voidp);
+	this->QMenuData::menuInsPopup((QPopupMenu*)x[1].s_class);
     }
     void x_91(Smoke::Stack x) {
 	// menuDelPopup(QPopupMenu*)
-	this->QMenuData::menuDelPopup((QPopupMenu*)x[1].s_voidp);
+	this->QMenuData::menuDelPopup((QPopupMenu*)x[1].s_class);
     }
     virtual void activateItemAt(int x1) {
 	Smoke::StackItem x[2];
@@ -462,13 +462,13 @@ public:
     }
     virtual void menuDelPopup(QPopupMenu* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 4931, x)) return;
 	this->QMenuData::menuDelPopup(x1);
     }
     virtual void menuInsPopup(QPopupMenu* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 4930, x)) return;
 	this->QMenuData::menuInsPopup(x1);
     }

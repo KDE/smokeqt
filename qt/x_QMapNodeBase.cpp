@@ -8,20 +8,20 @@ private:
 public:
     x_QMapNodeBase(void *x) : xthis((QMapNodeBase*)x) {}
     static void x_0(Smoke::Stack x) {
-	x[0].s_long = (long)QMapNodeBase::Red;
+	x[0].s_enum = (long)QMapNodeBase::Red;
     }
     static void x_1(Smoke::Stack x) {
-	x[0].s_long = (long)QMapNodeBase::Black;
+	x[0].s_enum = (long)QMapNodeBase::Black;
     }
     void x_2(Smoke::Stack x) {
 	// minimum()
 	QMapNodeBase* xret = xthis->QMapNodeBase::minimum();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_3(Smoke::Stack x) {
 	// maximum()
 	QMapNodeBase* xret = xthis->QMapNodeBase::maximum();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     ~x_QMapNodeBase() {}
 };

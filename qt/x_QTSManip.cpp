@@ -6,14 +6,14 @@ class x_QTSManip : public QTSManip {
 public:
     static void x_0(Smoke::Stack x) {
 	// QTSManip(QTSMFI, int)
-	x_QTSManip* xret = new x_QTSManip(*(QTSMFI *)x[1].s_voidp,(int)x[2].s_int);
-	x[0].s_voidp = (void*)xret;
+	x_QTSManip* xret = new x_QTSManip(*(QTSMFI *)x[1].s_class,(int)x[2].s_int);
+	x[0].s_class = (void*)xret;
     }
     x_QTSManip(QTSMFI x1, int x2) : QTSManip(x1, x2) {
     }
     void x_1(Smoke::Stack x) {
 	// exec(QTextStream&)
-	this->QTSManip::exec(*(QTextStream *)x[1].s_voidp);
+	this->QTSManip::exec(*(QTextStream *)x[1].s_class);
     }
     ~x_QTSManip() {}
 };

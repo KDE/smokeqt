@@ -14,60 +14,60 @@ class x_QCanvas : public QCanvas {
 public:
     static void x_0(Smoke::Stack x) {
 	// QCanvas(QObject*, const char*)
-	x_QCanvas* xret = new x_QCanvas((QObject*)x[1].s_voidp,(const char*)x[2].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QCanvas* xret = new x_QCanvas((QObject*)x[1].s_class,(const char*)x[2].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QCanvas(QObject* x1, const char* x2) : QCanvas(x1, x2) {
     }
     static void x_1(Smoke::Stack x) {
 	// QCanvas(QObject*)
-	x_QCanvas* xret = new x_QCanvas((QObject*)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QCanvas* xret = new x_QCanvas((QObject*)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QCanvas(QObject* x1) : QCanvas(x1) {
     }
     static void x_2(Smoke::Stack x) {
 	// QCanvas()
 	x_QCanvas* xret = new x_QCanvas();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     x_QCanvas() : QCanvas() {
     }
     static void x_3(Smoke::Stack x) {
 	// QCanvas(int, int)
 	x_QCanvas* xret = new x_QCanvas((int)x[1].s_int,(int)x[2].s_int);
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     x_QCanvas(int x1, int x2) : QCanvas(x1, x2) {
     }
     static void x_4(Smoke::Stack x) {
 	// QCanvas(QPixmap, int, int, int, int)
-	x_QCanvas* xret = new x_QCanvas(*(QPixmap *)x[1].s_voidp,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int);
-	x[0].s_voidp = (void*)xret;
+	x_QCanvas* xret = new x_QCanvas(*(QPixmap *)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int);
+	x[0].s_class = (void*)xret;
     }
     x_QCanvas(QPixmap x1, int x2, int x3, int x4, int x5) : QCanvas(x1, x2, x3, x4, x5) {
     }
     void x_5(Smoke::Stack x) {
 	// setTiles(QPixmap, int, int, int, int)
-	this->QCanvas::setTiles(*(QPixmap *)x[1].s_voidp,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int);
+	this->QCanvas::setTiles(*(QPixmap *)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int);
     }
     void x_6(Smoke::Stack x) {
 	// setBackgroundPixmap(const QPixmap&)
-	this->QCanvas::setBackgroundPixmap(*(const QPixmap *)x[1].s_voidp);
+	this->QCanvas::setBackgroundPixmap(*(const QPixmap *)x[1].s_class);
     }
     void x_7(Smoke::Stack x) const {
 	// backgroundPixmap()
 	QPixmap xret = this->QCanvas::backgroundPixmap();
-	x[0].s_voidp = (void*)new QPixmap(xret);
+	x[0].s_class = (void*)new QPixmap(xret);
     }
     void x_8(Smoke::Stack x) {
 	// setBackgroundColor(const QColor&)
-	this->QCanvas::setBackgroundColor(*(const QColor *)x[1].s_voidp);
+	this->QCanvas::setBackgroundColor(*(const QColor *)x[1].s_class);
     }
     void x_9(Smoke::Stack x) const {
 	// backgroundColor()
 	QColor xret = this->QCanvas::backgroundColor();
-	x[0].s_voidp = (void*)new QColor(xret);
+	x[0].s_class = (void*)new QColor(xret);
     }
     void x_10(Smoke::Stack x) {
 	// setTile(int, int, int)
@@ -115,12 +115,12 @@ public:
     void x_19(Smoke::Stack x) const {
 	// size()
 	QSize xret = this->QCanvas::size();
-	x[0].s_voidp = (void*)new QSize(xret);
+	x[0].s_class = (void*)new QSize(xret);
     }
     void x_20(Smoke::Stack x) const {
 	// rect()
 	QRect xret = this->QCanvas::rect();
-	x[0].s_voidp = (void*)new QRect(xret);
+	x[0].s_class = (void*)new QRect(xret);
     }
     void x_21(Smoke::Stack x) const {
 	// onCanvas(int, int)
@@ -129,7 +129,7 @@ public:
     }
     void x_22(Smoke::Stack x) const {
 	// onCanvas(const QPoint&)
-	bool xret = this->QCanvas::onCanvas(*(const QPoint *)x[1].s_voidp);
+	bool xret = this->QCanvas::onCanvas(*(const QPoint *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_23(Smoke::Stack x) const {
@@ -139,7 +139,7 @@ public:
     }
     void x_24(Smoke::Stack x) const {
 	// validChunk(const QPoint&)
-	bool xret = this->QCanvas::validChunk(*(const QPoint *)x[1].s_voidp);
+	bool xret = this->QCanvas::validChunk(*(const QPoint *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_25(Smoke::Stack x) const {
@@ -174,95 +174,95 @@ public:
     }
     void x_32(Smoke::Stack x) {
 	// setChanged(const QRect&)
-	this->QCanvas::setChanged(*(const QRect *)x[1].s_voidp);
+	this->QCanvas::setChanged(*(const QRect *)x[1].s_class);
     }
     void x_33(Smoke::Stack x) {
 	// setUnchanged(const QRect&)
-	this->QCanvas::setUnchanged(*(const QRect *)x[1].s_voidp);
+	this->QCanvas::setUnchanged(*(const QRect *)x[1].s_class);
     }
     void x_34(Smoke::Stack x) {
 	// addItemToChunk(QCanvasItem*, int, int)
-	this->QCanvas::addItemToChunk((QCanvasItem*)x[1].s_voidp,(int)x[2].s_int,(int)x[3].s_int);
+	this->QCanvas::addItemToChunk((QCanvasItem*)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int);
     }
     void x_35(Smoke::Stack x) {
 	// removeItemFromChunk(QCanvasItem*, int, int)
-	this->QCanvas::removeItemFromChunk((QCanvasItem*)x[1].s_voidp,(int)x[2].s_int,(int)x[3].s_int);
+	this->QCanvas::removeItemFromChunk((QCanvasItem*)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int);
     }
     void x_36(Smoke::Stack x) {
 	// addItemToChunkContaining(QCanvasItem*, int, int)
-	this->QCanvas::addItemToChunkContaining((QCanvasItem*)x[1].s_voidp,(int)x[2].s_int,(int)x[3].s_int);
+	this->QCanvas::addItemToChunkContaining((QCanvasItem*)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int);
     }
     void x_37(Smoke::Stack x) {
 	// removeItemFromChunkContaining(QCanvasItem*, int, int)
-	this->QCanvas::removeItemFromChunkContaining((QCanvasItem*)x[1].s_voidp,(int)x[2].s_int,(int)x[3].s_int);
+	this->QCanvas::removeItemFromChunkContaining((QCanvasItem*)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int);
     }
     void x_38(Smoke::Stack x) {
 	// allItems()
 	QCanvasItemList xret = this->QCanvas::allItems();
-	x[0].s_voidp = (void*)new QCanvasItemList(xret);
+	x[0].s_class = (void*)new QCanvasItemList(xret);
     }
     void x_39(Smoke::Stack x) const {
 	// collisions(const QPoint&)
-	QCanvasItemList xret = this->QCanvas::collisions(*(const QPoint *)x[1].s_voidp);
-	x[0].s_voidp = (void*)new QCanvasItemList(xret);
+	QCanvasItemList xret = this->QCanvas::collisions(*(const QPoint *)x[1].s_class);
+	x[0].s_class = (void*)new QCanvasItemList(xret);
     }
     void x_40(Smoke::Stack x) const {
 	// collisions(const QRect&)
-	QCanvasItemList xret = this->QCanvas::collisions(*(const QRect *)x[1].s_voidp);
-	x[0].s_voidp = (void*)new QCanvasItemList(xret);
+	QCanvasItemList xret = this->QCanvas::collisions(*(const QRect *)x[1].s_class);
+	x[0].s_class = (void*)new QCanvasItemList(xret);
     }
     void x_41(Smoke::Stack x) const {
 	// collisions(const QPointArray&, const QCanvasItem*, bool)
-	QCanvasItemList xret = this->QCanvas::collisions(*(const QPointArray *)x[1].s_voidp,(const QCanvasItem*)x[2].s_voidp,(bool)x[3].s_bool);
-	x[0].s_voidp = (void*)new QCanvasItemList(xret);
+	QCanvasItemList xret = this->QCanvas::collisions(*(const QPointArray *)x[1].s_class,(const QCanvasItem*)x[2].s_class,(bool)x[3].s_bool);
+	x[0].s_class = (void*)new QCanvasItemList(xret);
     }
     void x_42(Smoke::Stack x) {
 	// drawArea(const QRect&, QPainter*, bool)
-	this->QCanvas::drawArea(*(const QRect *)x[1].s_voidp,(QPainter*)x[2].s_voidp,(bool)x[3].s_bool);
+	this->QCanvas::drawArea(*(const QRect *)x[1].s_class,(QPainter*)x[2].s_class,(bool)x[3].s_bool);
     }
     void x_43(Smoke::Stack x) {
 	// drawArea(const QRect&, QPainter*)
-	this->QCanvas::drawArea(*(const QRect *)x[1].s_voidp,(QPainter*)x[2].s_voidp);
+	this->QCanvas::drawArea(*(const QRect *)x[1].s_class,(QPainter*)x[2].s_class);
     }
     void x_44(Smoke::Stack x) {
 	// addView(QCanvasView*)
-	this->QCanvas::addView((QCanvasView*)x[1].s_voidp);
+	this->QCanvas::addView((QCanvasView*)x[1].s_class);
     }
     void x_45(Smoke::Stack x) {
 	// removeView(QCanvasView*)
-	this->QCanvas::removeView((QCanvasView*)x[1].s_voidp);
+	this->QCanvas::removeView((QCanvasView*)x[1].s_class);
     }
     void x_46(Smoke::Stack x) {
 	// drawCanvasArea(const QRect&, QPainter*, bool)
-	this->QCanvas::drawCanvasArea(*(const QRect *)x[1].s_voidp,(QPainter*)x[2].s_voidp,(bool)x[3].s_bool);
+	this->QCanvas::drawCanvasArea(*(const QRect *)x[1].s_class,(QPainter*)x[2].s_class,(bool)x[3].s_bool);
     }
     void x_47(Smoke::Stack x) {
 	// drawCanvasArea(const QRect&, QPainter*)
-	this->QCanvas::drawCanvasArea(*(const QRect *)x[1].s_voidp,(QPainter*)x[2].s_voidp);
+	this->QCanvas::drawCanvasArea(*(const QRect *)x[1].s_class,(QPainter*)x[2].s_class);
     }
     void x_48(Smoke::Stack x) {
 	// drawCanvasArea(const QRect&)
-	this->QCanvas::drawCanvasArea(*(const QRect *)x[1].s_voidp);
+	this->QCanvas::drawCanvasArea(*(const QRect *)x[1].s_class);
     }
     void x_49(Smoke::Stack x) {
 	// drawViewArea(QCanvasView*, QPainter*, const QRect&, bool)
-	this->QCanvas::drawViewArea((QCanvasView*)x[1].s_voidp,(QPainter*)x[2].s_voidp,*(const QRect *)x[3].s_voidp,(bool)x[4].s_bool);
+	this->QCanvas::drawViewArea((QCanvasView*)x[1].s_class,(QPainter*)x[2].s_class,*(const QRect *)x[3].s_class,(bool)x[4].s_bool);
     }
     void x_50(Smoke::Stack x) {
 	// addItem(QCanvasItem*)
-	this->QCanvas::addItem((QCanvasItem*)x[1].s_voidp);
+	this->QCanvas::addItem((QCanvasItem*)x[1].s_class);
     }
     void x_51(Smoke::Stack x) {
 	// addAnimation(QCanvasItem*)
-	this->QCanvas::addAnimation((QCanvasItem*)x[1].s_voidp);
+	this->QCanvas::addAnimation((QCanvasItem*)x[1].s_class);
     }
     void x_52(Smoke::Stack x) {
 	// removeItem(QCanvasItem*)
-	this->QCanvas::removeItem((QCanvasItem*)x[1].s_voidp);
+	this->QCanvas::removeItem((QCanvasItem*)x[1].s_class);
     }
     void x_53(Smoke::Stack x) {
 	// removeAnimation(QCanvasItem*)
-	this->QCanvas::removeAnimation((QCanvasItem*)x[1].s_voidp);
+	this->QCanvas::removeAnimation((QCanvasItem*)x[1].s_class);
     }
     void x_54(Smoke::Stack x) {
 	// setAdvancePeriod(int)
@@ -290,27 +290,27 @@ public:
     }
     void x_60(Smoke::Stack x) {
 	// drawBackground(QPainter&, const QRect&)
-	this->QCanvas::drawBackground(*(QPainter *)x[1].s_voidp,*(const QRect *)x[2].s_voidp);
+	this->QCanvas::drawBackground(*(QPainter *)x[1].s_class,*(const QRect *)x[2].s_class);
     }
     void x_61(Smoke::Stack x) {
 	// drawForeground(QPainter&, const QRect&)
-	this->QCanvas::drawForeground(*(QPainter *)x[1].s_voidp,*(const QRect *)x[2].s_voidp);
+	this->QCanvas::drawForeground(*(QPainter *)x[1].s_class,*(const QRect *)x[2].s_class);
     }
     virtual void addAnimation(QCanvasItem* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 493, x)) return;
 	this->QCanvas::addAnimation(x1);
     }
     virtual void addItem(QCanvasItem* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 492, x)) return;
 	this->QCanvas::addItem(x1);
     }
     virtual void addView(QCanvasView* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 486, x)) return;
 	this->QCanvas::addView(x1);
     }
@@ -321,74 +321,74 @@ public:
     }
     virtual bool checkConnectArgs(const char* x1, const QObject* x2, const char* x3) {
 	Smoke::StackItem x[4];
-	x[1].s_voidp = (void*)x1;
-	x[2].s_voidp = (void*)x2;
-	x[3].s_voidp = (void*)x3;
+	x[1].s_class = (void*)x1;
+	x[2].s_class = (void*)x2;
+	x[3].s_class = (void*)x3;
 	if(call_method((void*)this, 5469, x)) return (bool)x[0].s_bool;
 	return this->QObject::checkConnectArgs(x1, x2, x3);
     }
     virtual void childEvent(QChildEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5465, x)) return;
 	this->QObject::childEvent(x1);
     }
     virtual void connectNotify(const char* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5467, x)) return;
 	this->QObject::connectNotify(x1);
     }
     virtual void customEvent(QCustomEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5466, x)) return;
 	this->QObject::customEvent(x1);
     }
     virtual void disconnectNotify(const char* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5468, x)) return;
 	this->QObject::disconnectNotify(x1);
     }
     virtual void drawBackground(QPainter& x1, const QRect& x2) {
 	Smoke::StackItem x[3];
-	x[1].s_voidp = (void*)&x1;
-	x[2].s_voidp = (void*)&x2;
+	x[1].s_class = (void*)&x1;
+	x[2].s_class = (void*)&x2;
 	if(call_method((void*)this, 502, x)) return;
 	this->QCanvas::drawBackground(x1, x2);
     }
     virtual void drawForeground(QPainter& x1, const QRect& x2) {
 	Smoke::StackItem x[3];
-	x[1].s_voidp = (void*)&x1;
-	x[2].s_voidp = (void*)&x2;
+	x[1].s_class = (void*)&x1;
+	x[2].s_class = (void*)&x2;
 	if(call_method((void*)this, 503, x)) return;
 	this->QCanvas::drawForeground(x1, x2);
     }
     virtual bool event(QEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5404, x)) return (bool)x[0].s_bool;
 	return this->QObject::event(x1);
     }
     virtual bool eventFilter(QObject* x1, QEvent* x2) {
 	Smoke::StackItem x[3];
-	x[1].s_voidp = (void*)x1;
-	x[2].s_voidp = (void*)x2;
+	x[1].s_class = (void*)x1;
+	x[2].s_class = (void*)x2;
 	if(call_method((void*)this, 5405, x)) return (bool)x[0].s_bool;
 	return this->QObject::eventFilter(x1, x2);
     }
     virtual void insertChild(QObject* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5427, x)) return;
 	this->QObject::insertChild(x1);
     }
     virtual QVariant property(const char* x1) const {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5441, x)) {
-	    QVariant *xptr = (QVariant *)x[0].s_voidp;
+	    QVariant *xptr = (QVariant *)x[0].s_class;
 	    QVariant xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -397,25 +397,25 @@ public:
     }
     virtual void removeAnimation(QCanvasItem* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 495, x)) return;
 	this->QCanvas::removeAnimation(x1);
     }
     virtual void removeChild(QObject* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5428, x)) return;
 	this->QObject::removeChild(x1);
     }
     virtual void removeItem(QCanvasItem* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 494, x)) return;
 	this->QCanvas::removeItem(x1);
     }
     virtual void removeView(QCanvasView* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 487, x)) return;
 	this->QCanvas::removeView(x1);
     }
@@ -446,19 +446,19 @@ public:
     }
     virtual void setBackgroundColor(const QColor& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 450, x)) return;
 	this->QCanvas::setBackgroundColor(x1);
     }
     virtual void setBackgroundPixmap(const QPixmap& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 448, x)) return;
 	this->QCanvas::setBackgroundPixmap(x1);
     }
     virtual void setChanged(const QRect& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 474, x)) return;
 	this->QCanvas::setChanged(x1);
     }
@@ -484,14 +484,14 @@ public:
     }
     virtual void setName(const char* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5410, x)) return;
 	this->QObject::setName(x1);
     }
     virtual bool setProperty(const char* x1, const QVariant& x2) {
 	Smoke::StackItem x[3];
-	x[1].s_voidp = (void*)x1;
-	x[2].s_voidp = (void*)&x2;
+	x[1].s_class = (void*)x1;
+	x[2].s_class = (void*)&x2;
 	if(call_method((void*)this, 5440, x)) return (bool)x[0].s_bool;
 	return this->QObject::setProperty(x1, x2);
     }
@@ -505,7 +505,7 @@ public:
     }
     virtual void setTiles(QPixmap x1, int x2, int x3, int x4, int x5) {
 	Smoke::StackItem x[6];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	x[2].s_int = (int)x2;
 	x[3].s_int = (int)x3;
 	x[4].s_int = (int)x4;
@@ -515,7 +515,7 @@ public:
     }
     virtual void setUnchanged(const QRect& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 475, x)) return;
 	this->QCanvas::setUnchanged(x1);
     }
@@ -527,7 +527,7 @@ public:
     }
     virtual void timerEvent(QTimerEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5464, x)) return;
 	this->QObject::timerEvent(x1);
     }

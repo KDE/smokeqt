@@ -11,8 +11,8 @@ public:
     x_QTextEncoder(void *x) : xthis((QTextEncoder*)x) {}
     void x_0(Smoke::Stack x) {
 	// fromUnicode(const QString&, int&)
-	QCString xret = xthis->QTextEncoder::fromUnicode(*(const QString *)x[1].s_voidp,*(int *)x[2].s_voidp);
-	x[0].s_voidp = (void*)new QCString(xret);
+	QCString xret = xthis->QTextEncoder::fromUnicode(*(const QString *)x[1].s_class,*(int *)x[2].s_class);
+	x[0].s_class = (void*)new QCString(xret);
     }
     ~x_QTextEncoder() {}
 };

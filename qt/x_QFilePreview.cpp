@@ -8,17 +8,17 @@ public:
     static void x_0(Smoke::Stack x) {
 	// QFilePreview()
 	x_QFilePreview* xret = new x_QFilePreview();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     x_QFilePreview() : QFilePreview() {
     }
     void x_1(Smoke::Stack x) {
 	// previewUrl(const QUrl&)
-	this->QFilePreview::previewUrl(*(const QUrl *)x[1].s_voidp);
+	this->QFilePreview::previewUrl(*(const QUrl *)x[1].s_class);
     }
     virtual void previewUrl(const QUrl& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	call_method_abstract((void*)this, 2632, x);
 	return;
 	// ABSTRACT

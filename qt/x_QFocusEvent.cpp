@@ -5,30 +5,30 @@
 class x_QFocusEvent : public QFocusEvent {
 public:
     static void x_0(Smoke::Stack x) {
-	x[0].s_long = (long)QFocusEvent::Mouse;
+	x[0].s_enum = (long)QFocusEvent::Mouse;
     }
     static void x_1(Smoke::Stack x) {
-	x[0].s_long = (long)QFocusEvent::Tab;
+	x[0].s_enum = (long)QFocusEvent::Tab;
     }
     static void x_2(Smoke::Stack x) {
-	x[0].s_long = (long)QFocusEvent::Backtab;
+	x[0].s_enum = (long)QFocusEvent::Backtab;
     }
     static void x_3(Smoke::Stack x) {
-	x[0].s_long = (long)QFocusEvent::ActiveWindow;
+	x[0].s_enum = (long)QFocusEvent::ActiveWindow;
     }
     static void x_4(Smoke::Stack x) {
-	x[0].s_long = (long)QFocusEvent::Popup;
+	x[0].s_enum = (long)QFocusEvent::Popup;
     }
     static void x_5(Smoke::Stack x) {
-	x[0].s_long = (long)QFocusEvent::Shortcut;
+	x[0].s_enum = (long)QFocusEvent::Shortcut;
     }
     static void x_6(Smoke::Stack x) {
-	x[0].s_long = (long)QFocusEvent::Other;
+	x[0].s_enum = (long)QFocusEvent::Other;
     }
     static void x_7(Smoke::Stack x) {
 	// QFocusEvent(QEvent::Type)
-	x_QFocusEvent* xret = new x_QFocusEvent(*(QEvent::Type *)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QFocusEvent* xret = new x_QFocusEvent(*(QEvent::Type *)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QFocusEvent(QEvent::Type x1) : QFocusEvent(x1) {
     }
@@ -45,11 +45,11 @@ public:
     static void x_10(Smoke::Stack x) {
 	// reason()
 	QFocusEvent::Reason xret = QFocusEvent::reason();
-	x[0].s_voidp = (void*)new QFocusEvent::Reason(xret);
+	x[0].s_class = (void*)new QFocusEvent::Reason(xret);
     }
     static void x_11(Smoke::Stack x) {
 	// setReason(QFocusEvent::Reason)
-	QFocusEvent::setReason(*(QFocusEvent::Reason *)x[1].s_voidp);
+	QFocusEvent::setReason(*(QFocusEvent::Reason *)x[1].s_class);
     }
     static void x_12(Smoke::Stack x) {
 	// resetReason()

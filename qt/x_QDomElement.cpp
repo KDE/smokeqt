@@ -8,140 +8,140 @@ public:
     static void x_0(Smoke::Stack x) {
 	// QDomElement()
 	x_QDomElement* xret = new x_QDomElement();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     x_QDomElement() : QDomElement() {
     }
     static void x_1(Smoke::Stack x) {
 	// QDomElement(const QDomElement&)
-	x_QDomElement* xret = new x_QDomElement(*(const QDomElement *)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QDomElement* xret = new x_QDomElement(*(const QDomElement *)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QDomElement(const QDomElement& x1) : QDomElement(x1) {
     }
     void x_2(Smoke::Stack x) {
 	// operator=(const QDomElement&)
-	QDomElement& xret = this->QDomElement::operator=(*(const QDomElement *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QDomElement& xret = this->QDomElement::operator=(*(const QDomElement *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_3(Smoke::Stack x) const {
 	// attribute(const QString&, const QString&)
-	QString xret = this->QDomElement::attribute(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
-	x[0].s_voidp = (void*)new QString(xret);
+	QString xret = this->QDomElement::attribute(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_4(Smoke::Stack x) const {
 	// attribute(const QString&)
-	QString xret = this->QDomElement::attribute(*(const QString *)x[1].s_voidp);
-	x[0].s_voidp = (void*)new QString(xret);
+	QString xret = this->QDomElement::attribute(*(const QString *)x[1].s_class);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_5(Smoke::Stack x) {
 	// setAttribute(const QString&, const QString&)
-	this->QDomElement::setAttribute(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
+	this->QDomElement::setAttribute(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class);
     }
     void x_6(Smoke::Stack x) {
 	// setAttribute(const QString&, int)
-	this->QDomElement::setAttribute(*(const QString *)x[1].s_voidp,(int)x[2].s_int);
+	this->QDomElement::setAttribute(*(const QString *)x[1].s_class,(int)x[2].s_int);
     }
     void x_7(Smoke::Stack x) {
 	// setAttribute(const QString&, uint)
-	this->QDomElement::setAttribute(*(const QString *)x[1].s_voidp,(uint)x[2].s_uint);
+	this->QDomElement::setAttribute(*(const QString *)x[1].s_class,(uint)x[2].s_uint);
     }
     void x_8(Smoke::Stack x) {
 	// setAttribute(const QString&, double)
-	this->QDomElement::setAttribute(*(const QString *)x[1].s_voidp,(double)x[2].s_double);
+	this->QDomElement::setAttribute(*(const QString *)x[1].s_class,(double)x[2].s_double);
     }
     void x_9(Smoke::Stack x) {
 	// removeAttribute(const QString&)
-	this->QDomElement::removeAttribute(*(const QString *)x[1].s_voidp);
+	this->QDomElement::removeAttribute(*(const QString *)x[1].s_class);
     }
     void x_10(Smoke::Stack x) {
 	// attributeNode(const QString&)
-	QDomAttr xret = this->QDomElement::attributeNode(*(const QString *)x[1].s_voidp);
-	x[0].s_voidp = (void*)new QDomAttr(xret);
+	QDomAttr xret = this->QDomElement::attributeNode(*(const QString *)x[1].s_class);
+	x[0].s_class = (void*)new QDomAttr(xret);
     }
     void x_11(Smoke::Stack x) {
 	// setAttributeNode(const QDomAttr&)
-	QDomAttr xret = this->QDomElement::setAttributeNode(*(const QDomAttr *)x[1].s_voidp);
-	x[0].s_voidp = (void*)new QDomAttr(xret);
+	QDomAttr xret = this->QDomElement::setAttributeNode(*(const QDomAttr *)x[1].s_class);
+	x[0].s_class = (void*)new QDomAttr(xret);
     }
     void x_12(Smoke::Stack x) {
 	// removeAttributeNode(const QDomAttr&)
-	QDomAttr xret = this->QDomElement::removeAttributeNode(*(const QDomAttr *)x[1].s_voidp);
-	x[0].s_voidp = (void*)new QDomAttr(xret);
+	QDomAttr xret = this->QDomElement::removeAttributeNode(*(const QDomAttr *)x[1].s_class);
+	x[0].s_class = (void*)new QDomAttr(xret);
     }
     void x_13(Smoke::Stack x) const {
 	// elementsByTagName(const QString&)
-	QDomNodeList xret = this->QDomElement::elementsByTagName(*(const QString *)x[1].s_voidp);
-	x[0].s_voidp = (void*)new QDomNodeList(xret);
+	QDomNodeList xret = this->QDomElement::elementsByTagName(*(const QString *)x[1].s_class);
+	x[0].s_class = (void*)new QDomNodeList(xret);
     }
     void x_14(Smoke::Stack x) const {
 	// hasAttribute(const QString&)
-	bool xret = this->QDomElement::hasAttribute(*(const QString *)x[1].s_voidp);
+	bool xret = this->QDomElement::hasAttribute(*(const QString *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_15(Smoke::Stack x) const {
 	// attributeNS(const QString, const QString&, const QString&)
-	QString xret = this->QDomElement::attributeNS(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,*(const QString *)x[3].s_voidp);
-	x[0].s_voidp = (void*)new QString(xret);
+	QString xret = this->QDomElement::attributeNS(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,*(const QString *)x[3].s_class);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_16(Smoke::Stack x) {
 	// setAttributeNS(const QString, const QString&, const QString&)
-	this->QDomElement::setAttributeNS(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,*(const QString *)x[3].s_voidp);
+	this->QDomElement::setAttributeNS(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,*(const QString *)x[3].s_class);
     }
     void x_17(Smoke::Stack x) {
 	// setAttributeNS(const QString, const QString&, int)
-	this->QDomElement::setAttributeNS(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,(int)x[3].s_int);
+	this->QDomElement::setAttributeNS(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,(int)x[3].s_int);
     }
     void x_18(Smoke::Stack x) {
 	// setAttributeNS(const QString, const QString&, uint)
-	this->QDomElement::setAttributeNS(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,(uint)x[3].s_uint);
+	this->QDomElement::setAttributeNS(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,(uint)x[3].s_uint);
     }
     void x_19(Smoke::Stack x) {
 	// setAttributeNS(const QString, const QString&, double)
-	this->QDomElement::setAttributeNS(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,(double)x[3].s_double);
+	this->QDomElement::setAttributeNS(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,(double)x[3].s_double);
     }
     void x_20(Smoke::Stack x) {
 	// removeAttributeNS(const QString&, const QString&)
-	this->QDomElement::removeAttributeNS(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
+	this->QDomElement::removeAttributeNS(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class);
     }
     void x_21(Smoke::Stack x) {
 	// attributeNodeNS(const QString&, const QString&)
-	QDomAttr xret = this->QDomElement::attributeNodeNS(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
-	x[0].s_voidp = (void*)new QDomAttr(xret);
+	QDomAttr xret = this->QDomElement::attributeNodeNS(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class);
+	x[0].s_class = (void*)new QDomAttr(xret);
     }
     void x_22(Smoke::Stack x) {
 	// setAttributeNodeNS(const QDomAttr&)
-	QDomAttr xret = this->QDomElement::setAttributeNodeNS(*(const QDomAttr *)x[1].s_voidp);
-	x[0].s_voidp = (void*)new QDomAttr(xret);
+	QDomAttr xret = this->QDomElement::setAttributeNodeNS(*(const QDomAttr *)x[1].s_class);
+	x[0].s_class = (void*)new QDomAttr(xret);
     }
     void x_23(Smoke::Stack x) const {
 	// elementsByTagNameNS(const QString&, const QString&)
-	QDomNodeList xret = this->QDomElement::elementsByTagNameNS(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
-	x[0].s_voidp = (void*)new QDomNodeList(xret);
+	QDomNodeList xret = this->QDomElement::elementsByTagNameNS(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class);
+	x[0].s_class = (void*)new QDomNodeList(xret);
     }
     void x_24(Smoke::Stack x) const {
 	// hasAttributeNS(const QString&, const QString&)
-	bool xret = this->QDomElement::hasAttributeNS(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
+	bool xret = this->QDomElement::hasAttributeNS(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_25(Smoke::Stack x) const {
 	// tagName()
 	QString xret = this->QDomElement::tagName();
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_26(Smoke::Stack x) {
 	// setTagName(const QString&)
-	this->QDomElement::setTagName(*(const QString *)x[1].s_voidp);
+	this->QDomElement::setTagName(*(const QString *)x[1].s_class);
     }
     void x_27(Smoke::Stack x) const {
 	// attributes()
 	QDomNamedNodeMap xret = this->QDomElement::attributes();
-	x[0].s_voidp = (void*)new QDomNamedNodeMap(xret);
+	x[0].s_class = (void*)new QDomNamedNodeMap(xret);
     }
     void x_28(Smoke::Stack x) const {
 	// nodeType()
 	QDomNode::NodeType xret = this->QDomElement::nodeType();
-	x[0].s_voidp = (void*)new QDomNode::NodeType(xret);
+	x[0].s_class = (void*)new QDomNode::NodeType(xret);
     }
     void x_29(Smoke::Stack x) const {
 	// isElement()
@@ -151,13 +151,13 @@ public:
     void x_30(Smoke::Stack x) const {
 	// text()
 	QString xret = this->QDomElement::text();
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     virtual QDomNode appendChild(const QDomNode& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 2187, x)) {
-	    QDomNode *xptr = (QDomNode *)x[0].s_voidp;
+	    QDomNode *xptr = (QDomNode *)x[0].s_class;
 	    QDomNode xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -167,7 +167,7 @@ public:
     virtual QDomNamedNodeMap attributes() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 2118, x)) {
-	    QDomNamedNodeMap *xptr = (QDomNamedNodeMap *)x[0].s_voidp;
+	    QDomNamedNodeMap *xptr = (QDomNamedNodeMap *)x[0].s_class;
 	    QDomNamedNodeMap xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -177,7 +177,7 @@ public:
     virtual QDomNodeList childNodes() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 2196, x)) {
-	    QDomNodeList *xptr = (QDomNodeList *)x[0].s_voidp;
+	    QDomNodeList *xptr = (QDomNodeList *)x[0].s_class;
 	    QDomNodeList xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -188,7 +188,7 @@ public:
 	Smoke::StackItem x[2];
 	x[1].s_bool = (bool)x1;
 	if(call_method((void*)this, 2189, x)) {
-	    QDomNode *xptr = (QDomNode *)x[0].s_voidp;
+	    QDomNode *xptr = (QDomNode *)x[0].s_class;
 	    QDomNode xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -197,9 +197,9 @@ public:
     }
     virtual QDomNodeList elementsByTagName(const QString& x1) const {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 2104, x)) {
-	    QDomNodeList *xptr = (QDomNodeList *)x[0].s_voidp;
+	    QDomNodeList *xptr = (QDomNodeList *)x[0].s_class;
 	    QDomNodeList xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -208,10 +208,10 @@ public:
     }
     virtual QDomNodeList elementsByTagNameNS(const QString& x1, const QString& x2) const {
 	Smoke::StackItem x[3];
-	x[1].s_voidp = (void*)&x1;
-	x[2].s_voidp = (void*)&x2;
+	x[1].s_class = (void*)&x1;
+	x[2].s_class = (void*)&x2;
 	if(call_method((void*)this, 2114, x)) {
-	    QDomNodeList *xptr = (QDomNodeList *)x[0].s_voidp;
+	    QDomNodeList *xptr = (QDomNodeList *)x[0].s_class;
 	    QDomNodeList xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -221,7 +221,7 @@ public:
     virtual QDomNode firstChild() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 2197, x)) {
-	    QDomNode *xptr = (QDomNode *)x[0].s_voidp;
+	    QDomNode *xptr = (QDomNode *)x[0].s_class;
 	    QDomNode xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -240,10 +240,10 @@ public:
     }
     virtual QDomNode insertAfter(const QDomNode& x1, const QDomNode& x2) {
 	Smoke::StackItem x[3];
-	x[1].s_voidp = (void*)&x1;
-	x[2].s_voidp = (void*)&x2;
+	x[1].s_class = (void*)&x1;
+	x[2].s_class = (void*)&x2;
 	if(call_method((void*)this, 2184, x)) {
-	    QDomNode *xptr = (QDomNode *)x[0].s_voidp;
+	    QDomNode *xptr = (QDomNode *)x[0].s_class;
 	    QDomNode xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -252,10 +252,10 @@ public:
     }
     virtual QDomNode insertBefore(const QDomNode& x1, const QDomNode& x2) {
 	Smoke::StackItem x[3];
-	x[1].s_voidp = (void*)&x1;
-	x[2].s_voidp = (void*)&x2;
+	x[1].s_class = (void*)&x1;
+	x[2].s_class = (void*)&x2;
 	if(call_method((void*)this, 2183, x)) {
-	    QDomNode *xptr = (QDomNode *)x[0].s_voidp;
+	    QDomNode *xptr = (QDomNode *)x[0].s_class;
 	    QDomNode xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -324,8 +324,8 @@ public:
     }
     virtual bool isSupported(const QString& x1, const QString& x2) const {
 	Smoke::StackItem x[3];
-	x[1].s_voidp = (void*)&x1;
-	x[2].s_voidp = (void*)&x2;
+	x[1].s_class = (void*)&x1;
+	x[2].s_class = (void*)&x2;
 	if(call_method((void*)this, 2192, x)) return (bool)x[0].s_bool;
 	return this->QDomNode::isSupported(x1, x2);
     }
@@ -337,7 +337,7 @@ public:
     virtual QDomNode lastChild() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 2198, x)) {
-	    QDomNode *xptr = (QDomNode *)x[0].s_voidp;
+	    QDomNode *xptr = (QDomNode *)x[0].s_class;
 	    QDomNode xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -347,7 +347,7 @@ public:
     virtual QString localName() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 2204, x)) {
-	    QString *xptr = (QString *)x[0].s_voidp;
+	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -357,7 +357,7 @@ public:
     virtual QString namespaceURI() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 2203, x)) {
-	    QString *xptr = (QString *)x[0].s_voidp;
+	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -367,7 +367,7 @@ public:
     virtual QDomNode nextSibling() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 2200, x)) {
-	    QDomNode *xptr = (QDomNode *)x[0].s_voidp;
+	    QDomNode *xptr = (QDomNode *)x[0].s_class;
 	    QDomNode xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -377,7 +377,7 @@ public:
     virtual QString nodeName() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 2193, x)) {
-	    QString *xptr = (QString *)x[0].s_voidp;
+	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -387,7 +387,7 @@ public:
     virtual QDomNode::NodeType nodeType() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 2119, x)) {
-	    QDomNode::NodeType *xptr = (QDomNode::NodeType *)x[0].s_voidp;
+	    QDomNode::NodeType *xptr = (QDomNode::NodeType *)x[0].s_class;
 	    QDomNode::NodeType xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -397,7 +397,7 @@ public:
     virtual QString nodeValue() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 2206, x)) {
-	    QString *xptr = (QString *)x[0].s_voidp;
+	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -412,7 +412,7 @@ public:
     virtual QDomDocument ownerDocument() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 2202, x)) {
-	    QDomDocument *xptr = (QDomDocument *)x[0].s_voidp;
+	    QDomDocument *xptr = (QDomDocument *)x[0].s_class;
 	    QDomDocument xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -422,7 +422,7 @@ public:
     virtual QDomNode parentNode() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 2195, x)) {
-	    QDomNode *xptr = (QDomNode *)x[0].s_voidp;
+	    QDomNode *xptr = (QDomNode *)x[0].s_class;
 	    QDomNode xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -432,7 +432,7 @@ public:
     virtual QString prefix() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 2208, x)) {
-	    QString *xptr = (QString *)x[0].s_voidp;
+	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -442,7 +442,7 @@ public:
     virtual QDomNode previousSibling() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 2199, x)) {
-	    QDomNode *xptr = (QDomNode *)x[0].s_voidp;
+	    QDomNode *xptr = (QDomNode *)x[0].s_class;
 	    QDomNode xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -451,9 +451,9 @@ public:
     }
     virtual QDomNode removeChild(const QDomNode& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 2186, x)) {
-	    QDomNode *xptr = (QDomNode *)x[0].s_voidp;
+	    QDomNode *xptr = (QDomNode *)x[0].s_class;
 	    QDomNode xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -462,10 +462,10 @@ public:
     }
     virtual QDomNode replaceChild(const QDomNode& x1, const QDomNode& x2) {
 	Smoke::StackItem x[3];
-	x[1].s_voidp = (void*)&x1;
-	x[2].s_voidp = (void*)&x2;
+	x[1].s_class = (void*)&x1;
+	x[2].s_class = (void*)&x2;
 	if(call_method((void*)this, 2185, x)) {
-	    QDomNode *xptr = (QDomNode *)x[0].s_voidp;
+	    QDomNode *xptr = (QDomNode *)x[0].s_class;
 	    QDomNode xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -474,13 +474,13 @@ public:
     }
     virtual void setNodeValue(const QString& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 2207, x)) return;
 	this->QDomNode::setNodeValue(x1);
     }
     virtual void setPrefix(const QString& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 2209, x)) return;
 	this->QDomNode::setPrefix(x1);
     }

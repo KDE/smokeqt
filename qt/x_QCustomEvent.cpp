@@ -7,14 +7,14 @@ public:
     static void x_0(Smoke::Stack x) {
 	// QCustomEvent(int)
 	x_QCustomEvent* xret = new x_QCustomEvent((int)x[1].s_int);
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     x_QCustomEvent(int x1) : QCustomEvent(x1) {
     }
     static void x_1(Smoke::Stack x) {
 	// QCustomEvent(QEvent::Type, void*)
-	x_QCustomEvent* xret = new x_QCustomEvent(*(QEvent::Type *)x[1].s_voidp,(void*)x[2].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QCustomEvent* xret = new x_QCustomEvent(*(QEvent::Type *)x[1].s_class,(void*)x[2].s_voidp);
+	x[0].s_class = (void*)xret;
     }
     x_QCustomEvent(QEvent::Type x1, void* x2) : QCustomEvent(x1, x2) {
     }

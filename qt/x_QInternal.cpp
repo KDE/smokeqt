@@ -8,31 +8,31 @@ private:
 public:
     x_QInternal(void *x) : xthis((QInternal*)x) {}
     static void x_0(Smoke::Stack x) {
-	x[0].s_long = (long)QInternal::UndefinedDevice;
+	x[0].s_enum = (long)QInternal::UndefinedDevice;
     }
     static void x_1(Smoke::Stack x) {
-	x[0].s_long = (long)QInternal::Widget;
+	x[0].s_enum = (long)QInternal::Widget;
     }
     static void x_2(Smoke::Stack x) {
-	x[0].s_long = (long)QInternal::Pixmap;
+	x[0].s_enum = (long)QInternal::Pixmap;
     }
     static void x_3(Smoke::Stack x) {
-	x[0].s_long = (long)QInternal::Printer;
+	x[0].s_enum = (long)QInternal::Printer;
     }
     static void x_4(Smoke::Stack x) {
-	x[0].s_long = (long)QInternal::Picture;
+	x[0].s_enum = (long)QInternal::Picture;
     }
     static void x_5(Smoke::Stack x) {
-	x[0].s_long = (long)QInternal::System;
+	x[0].s_enum = (long)QInternal::System;
     }
     static void x_6(Smoke::Stack x) {
-	x[0].s_long = (long)QInternal::DeviceTypeMask;
+	x[0].s_enum = (long)QInternal::DeviceTypeMask;
     }
     static void x_7(Smoke::Stack x) {
-	x[0].s_long = (long)QInternal::ExternalDevice;
+	x[0].s_enum = (long)QInternal::ExternalDevice;
     }
     static void x_8(Smoke::Stack x) {
-	x[0].s_long = (long)QInternal::CompatibilityMode;
+	x[0].s_enum = (long)QInternal::CompatibilityMode;
     }
     ~x_QInternal() {}
 };

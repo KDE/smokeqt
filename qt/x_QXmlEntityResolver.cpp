@@ -11,7 +11,7 @@ public:
     void x_0(Smoke::Stack x) {
 	// errorString()
 	QString xret = xthis->QXmlEntityResolver::errorString();
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     ~x_QXmlEntityResolver() {}
 };

@@ -9,21 +9,21 @@ public:
     static void x_0(Smoke::Stack x) {
 	// QPicture(int)
 	x_QPicture* xret = new x_QPicture((int)x[1].s_int);
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     x_QPicture(int x1) : QPicture(x1) {
     }
     static void x_1(Smoke::Stack x) {
 	// QPicture()
 	x_QPicture* xret = new x_QPicture();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     x_QPicture() : QPicture() {
     }
     static void x_2(Smoke::Stack x) {
 	// QPicture(const QPicture&)
-	x_QPicture* xret = new x_QPicture(*(const QPicture *)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QPicture* xret = new x_QPicture(*(const QPicture *)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QPicture(const QPicture& x1) : QPicture(x1) {
     }
@@ -40,70 +40,70 @@ public:
     void x_5(Smoke::Stack x) const {
 	// data()
 	const char* xret = this->QPicture::data();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_6(Smoke::Stack x) {
 	// setData(const char*, uint)
-	this->QPicture::setData((const char*)x[1].s_voidp,(uint)x[2].s_uint);
+	this->QPicture::setData((const char*)x[1].s_class,(uint)x[2].s_uint);
     }
     void x_7(Smoke::Stack x) {
 	// play(QPainter*)
-	bool xret = this->QPicture::play((QPainter*)x[1].s_voidp);
+	bool xret = this->QPicture::play((QPainter*)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_8(Smoke::Stack x) {
 	// load(QIODevice*, const char*)
-	bool xret = this->QPicture::load((QIODevice*)x[1].s_voidp,(const char*)x[2].s_voidp);
+	bool xret = this->QPicture::load((QIODevice*)x[1].s_class,(const char*)x[2].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_9(Smoke::Stack x) {
 	// load(QIODevice*)
-	bool xret = this->QPicture::load((QIODevice*)x[1].s_voidp);
+	bool xret = this->QPicture::load((QIODevice*)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_10(Smoke::Stack x) {
 	// load(const QString&, const char*)
-	bool xret = this->QPicture::load(*(const QString *)x[1].s_voidp,(const char*)x[2].s_voidp);
+	bool xret = this->QPicture::load(*(const QString *)x[1].s_class,(const char*)x[2].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_11(Smoke::Stack x) {
 	// load(const QString&)
-	bool xret = this->QPicture::load(*(const QString *)x[1].s_voidp);
+	bool xret = this->QPicture::load(*(const QString *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_12(Smoke::Stack x) {
 	// save(QIODevice*, const char*)
-	bool xret = this->QPicture::save((QIODevice*)x[1].s_voidp,(const char*)x[2].s_voidp);
+	bool xret = this->QPicture::save((QIODevice*)x[1].s_class,(const char*)x[2].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_13(Smoke::Stack x) {
 	// save(QIODevice*)
-	bool xret = this->QPicture::save((QIODevice*)x[1].s_voidp);
+	bool xret = this->QPicture::save((QIODevice*)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_14(Smoke::Stack x) {
 	// save(const QString&, const char*)
-	bool xret = this->QPicture::save(*(const QString *)x[1].s_voidp,(const char*)x[2].s_voidp);
+	bool xret = this->QPicture::save(*(const QString *)x[1].s_class,(const char*)x[2].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_15(Smoke::Stack x) {
 	// save(const QString&)
-	bool xret = this->QPicture::save(*(const QString *)x[1].s_voidp);
+	bool xret = this->QPicture::save(*(const QString *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_16(Smoke::Stack x) const {
 	// boundingRect()
 	QRect xret = this->QPicture::boundingRect();
-	x[0].s_voidp = (void*)new QRect(xret);
+	x[0].s_class = (void*)new QRect(xret);
     }
     void x_17(Smoke::Stack x) {
 	// operator=(const QPicture&)
-	QPicture& xret = this->QPicture::operator=(*(const QPicture *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QPicture& xret = this->QPicture::operator=(*(const QPicture *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_18(Smoke::Stack x) {
 	// cmd(int, QPainter*, QPDevCmdParam*)
-	bool xret = this->QPicture::cmd((int)x[1].s_int,(QPainter*)x[2].s_voidp,(QPDevCmdParam*)x[3].s_voidp);
+	bool xret = this->QPicture::cmd((int)x[1].s_int,(QPainter*)x[2].s_class,(QPDevCmdParam*)x[3].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_19(Smoke::Stack x) const {
@@ -118,28 +118,28 @@ public:
     void x_21(Smoke::Stack x) const {
 	// copy()
 	QPicture xret = this->QPicture::copy();
-	x[0].s_voidp = (void*)new QPicture(xret);
+	x[0].s_class = (void*)new QPicture(xret);
     }
     virtual bool cmd(int x1, QPainter* x2, QPDevCmdParam* x3) {
 	Smoke::StackItem x[4];
 	x[1].s_int = (int)x1;
-	x[2].s_voidp = (void*)x2;
-	x[3].s_voidp = (void*)x3;
+	x[2].s_class = (void*)x2;
+	x[3].s_class = (void*)x3;
 	if(call_method((void*)this, 5852, x)) return (bool)x[0].s_bool;
 	return this->QPicture::cmd(x1, x2, x3);
     }
     virtual int fontInf(QFont* x1, int x2) const {
 	Smoke::StackItem x[3];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	x[2].s_int = (int)x2;
 	if(call_method((void*)this, 5557, x)) return (int)x[0].s_int;
 	return this->QPaintDevice::fontInf(x1, x2);
     }
     virtual int fontMet(QFont* x1, int x2, const char* x3, int x4) const {
 	Smoke::StackItem x[5];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	x[2].s_int = (int)x2;
-	x[3].s_voidp = (void*)x3;
+	x[3].s_class = (void*)x3;
 	x[4].s_int = (int)x4;
 	if(call_method((void*)this, 5554, x)) return (int)x[0].s_int;
 	return this->QPaintDevice::fontMet(x1, x2, x3, x4);
@@ -157,7 +157,7 @@ public:
     }
     virtual void setData(const char* x1, uint x2) {
 	Smoke::StackItem x[3];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	x[2].s_uint = (uint)x2;
 	if(call_method((void*)this, 5840, x)) return;
 	this->QPicture::setData(x1, x2);

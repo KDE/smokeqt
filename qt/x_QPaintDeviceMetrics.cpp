@@ -5,39 +5,39 @@
 class x_QPaintDeviceMetrics : public QPaintDeviceMetrics {
 public:
     static void x_0(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDeviceMetrics::PdmWidth;
+	x[0].s_enum = (long)QPaintDeviceMetrics::PdmWidth;
     }
     static void x_1(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDeviceMetrics::PdmHeight;
+	x[0].s_enum = (long)QPaintDeviceMetrics::PdmHeight;
     }
     static void x_2(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDeviceMetrics::PdmWidthMM;
+	x[0].s_enum = (long)QPaintDeviceMetrics::PdmWidthMM;
     }
     static void x_3(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDeviceMetrics::PdmHeightMM;
+	x[0].s_enum = (long)QPaintDeviceMetrics::PdmHeightMM;
     }
     static void x_4(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDeviceMetrics::PdmNumColors;
+	x[0].s_enum = (long)QPaintDeviceMetrics::PdmNumColors;
     }
     static void x_5(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDeviceMetrics::PdmDepth;
+	x[0].s_enum = (long)QPaintDeviceMetrics::PdmDepth;
     }
     static void x_6(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDeviceMetrics::PdmDpiX;
+	x[0].s_enum = (long)QPaintDeviceMetrics::PdmDpiX;
     }
     static void x_7(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDeviceMetrics::PdmDpiY;
+	x[0].s_enum = (long)QPaintDeviceMetrics::PdmDpiY;
     }
     static void x_8(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDeviceMetrics::PdmPhysicalDpiX;
+	x[0].s_enum = (long)QPaintDeviceMetrics::PdmPhysicalDpiX;
     }
     static void x_9(Smoke::Stack x) {
-	x[0].s_long = (long)QPaintDeviceMetrics::PdmPhysicalDpiY;
+	x[0].s_enum = (long)QPaintDeviceMetrics::PdmPhysicalDpiY;
     }
     static void x_10(Smoke::Stack x) {
 	// QPaintDeviceMetrics(const QPaintDevice*)
-	x_QPaintDeviceMetrics* xret = new x_QPaintDeviceMetrics((const QPaintDevice*)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QPaintDeviceMetrics* xret = new x_QPaintDeviceMetrics((const QPaintDevice*)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QPaintDeviceMetrics(const QPaintDevice* x1) : QPaintDeviceMetrics(x1) {
     }

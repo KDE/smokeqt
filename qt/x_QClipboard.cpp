@@ -42,43 +42,43 @@ public:
     void x_6(Smoke::Stack x) const {
 	// data()
 	QMimeSource* xret = xthis->QClipboard::data();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_7(Smoke::Stack x) {
 	// setData(QMimeSource*)
-	xthis->QClipboard::setData((QMimeSource*)x[1].s_voidp);
+	xthis->QClipboard::setData((QMimeSource*)x[1].s_class);
     }
     void x_8(Smoke::Stack x) const {
 	// text()
 	QString xret = xthis->QClipboard::text();
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_9(Smoke::Stack x) const {
 	// text(QCString&)
-	QString xret = xthis->QClipboard::text(*(QCString *)x[1].s_voidp);
-	x[0].s_voidp = (void*)new QString(xret);
+	QString xret = xthis->QClipboard::text(*(QCString *)x[1].s_class);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_10(Smoke::Stack x) {
 	// setText(const QString&)
-	xthis->QClipboard::setText(*(const QString *)x[1].s_voidp);
+	xthis->QClipboard::setText(*(const QString *)x[1].s_class);
     }
     void x_11(Smoke::Stack x) const {
 	// image()
 	QImage xret = xthis->QClipboard::image();
-	x[0].s_voidp = (void*)new QImage(xret);
+	x[0].s_class = (void*)new QImage(xret);
     }
     void x_12(Smoke::Stack x) const {
 	// pixmap()
 	QPixmap xret = xthis->QClipboard::pixmap();
-	x[0].s_voidp = (void*)new QPixmap(xret);
+	x[0].s_class = (void*)new QPixmap(xret);
     }
     void x_13(Smoke::Stack x) {
 	// setImage(const QImage&)
-	xthis->QClipboard::setImage(*(const QImage *)x[1].s_voidp);
+	xthis->QClipboard::setImage(*(const QImage *)x[1].s_class);
     }
     void x_14(Smoke::Stack x) {
 	// setPixmap(const QPixmap&)
-	xthis->QClipboard::setPixmap(*(const QPixmap *)x[1].s_voidp);
+	xthis->QClipboard::setPixmap(*(const QPixmap *)x[1].s_class);
     }
     ~x_QClipboard() {}
 };

@@ -7,7 +7,7 @@ public:
     static void x_0(Smoke::Stack x) {
 	// QDragResponseEvent(bool)
 	x_QDragResponseEvent* xret = new x_QDragResponseEvent((bool)x[1].s_bool);
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     x_QDragResponseEvent(bool x1) : QDragResponseEvent(x1) {
     }

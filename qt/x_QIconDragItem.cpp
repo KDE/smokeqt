@@ -8,28 +8,28 @@ public:
     static void x_0(Smoke::Stack x) {
 	// QIconDragItem()
 	x_QIconDragItem* xret = new x_QIconDragItem();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     x_QIconDragItem() : QIconDragItem() {
     }
     void x_1(Smoke::Stack x) const {
 	// data()
 	QByteArray xret = this->QIconDragItem::data();
-	x[0].s_voidp = (void*)new QByteArray(xret);
+	x[0].s_class = (void*)new QByteArray(xret);
     }
     void x_2(Smoke::Stack x) {
 	// setData(const QByteArray&)
-	this->QIconDragItem::setData(*(const QByteArray *)x[1].s_voidp);
+	this->QIconDragItem::setData(*(const QByteArray *)x[1].s_class);
     }
     void x_3(Smoke::Stack x) const {
 	// operator==(const QIconDragItem&)
-	bool xret = this->QIconDragItem::operator==(*(const QIconDragItem *)x[1].s_voidp);
+	bool xret = this->QIconDragItem::operator==(*(const QIconDragItem *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     virtual QByteArray data() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 3419, x)) {
-	    QByteArray *xptr = (QByteArray *)x[0].s_voidp;
+	    QByteArray *xptr = (QByteArray *)x[0].s_class;
 	    QByteArray xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -38,7 +38,7 @@ public:
     }
     virtual void setData(const QByteArray& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 3420, x)) return;
 	this->QIconDragItem::setData(x1);
     }

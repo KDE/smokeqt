@@ -6,37 +6,37 @@ class x_QLayoutIterator : public QLayoutIterator {
 public:
     static void x_0(Smoke::Stack x) {
 	// QLayoutIterator(QGLayoutIterator*)
-	x_QLayoutIterator* xret = new x_QLayoutIterator((QGLayoutIterator*)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QLayoutIterator* xret = new x_QLayoutIterator((QGLayoutIterator*)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QLayoutIterator(QGLayoutIterator* x1) : QLayoutIterator(x1) {
     }
     static void x_1(Smoke::Stack x) {
 	// QLayoutIterator(const QLayoutIterator&)
-	x_QLayoutIterator* xret = new x_QLayoutIterator(*(const QLayoutIterator *)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QLayoutIterator* xret = new x_QLayoutIterator(*(const QLayoutIterator *)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QLayoutIterator(const QLayoutIterator& x1) : QLayoutIterator(x1) {
     }
     void x_2(Smoke::Stack x) {
 	// operator=(const QLayoutIterator&)
-	QLayoutIterator& xret = this->QLayoutIterator::operator=(*(const QLayoutIterator *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QLayoutIterator& xret = this->QLayoutIterator::operator=(*(const QLayoutIterator *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_3(Smoke::Stack x) {
 	// operator++()
 	QLayoutItem* xret = this->QLayoutIterator::operator++();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_4(Smoke::Stack x) {
 	// current()
 	QLayoutItem* xret = this->QLayoutIterator::current();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_5(Smoke::Stack x) {
 	// takeCurrent()
 	QLayoutItem* xret = this->QLayoutIterator::takeCurrent();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_6(Smoke::Stack x) {
 	// deleteCurrent()

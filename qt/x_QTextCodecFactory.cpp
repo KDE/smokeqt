@@ -10,13 +10,13 @@ public:
     x_QTextCodecFactory(void *x) : xthis((QTextCodecFactory*)x) {}
     static void x_0(Smoke::Stack x) {
 	// createForName(const QString&)
-	QTextCodec* xret = QTextCodecFactory::createForName(*(const QString *)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	QTextCodec* xret = QTextCodecFactory::createForName(*(const QString *)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     static void x_1(Smoke::Stack x) {
 	// createForMib(int)
 	QTextCodec* xret = QTextCodecFactory::createForMib((int)x[1].s_int);
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     ~x_QTextCodecFactory() {}
 };

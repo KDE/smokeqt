@@ -6,15 +6,15 @@ class x_QIODeviceSource : public QIODeviceSource {
 public:
     static void x_0(Smoke::Stack x) {
 	// QIODeviceSource(QIODevice*, int)
-	x_QIODeviceSource* xret = new x_QIODeviceSource((QIODevice*)x[1].s_voidp,(int)x[2].s_int);
-	x[0].s_voidp = (void*)xret;
+	x_QIODeviceSource* xret = new x_QIODeviceSource((QIODevice*)x[1].s_class,(int)x[2].s_int);
+	x[0].s_class = (void*)xret;
     }
     x_QIODeviceSource(QIODevice* x1, int x2) : QIODeviceSource(x1, x2) {
     }
     static void x_1(Smoke::Stack x) {
 	// QIODeviceSource(QIODevice*)
-	x_QIODeviceSource* xret = new x_QIODeviceSource((QIODevice*)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QIODeviceSource* xret = new x_QIODeviceSource((QIODevice*)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QIODeviceSource(QIODevice* x1) : QIODeviceSource(x1) {
     }
@@ -25,7 +25,7 @@ public:
     }
     void x_3(Smoke::Stack x) {
 	// sendTo(QDataSink*, int)
-	this->QIODeviceSource::sendTo((QDataSink*)x[1].s_voidp,(int)x[2].s_int);
+	this->QIODeviceSource::sendTo((QDataSink*)x[1].s_class,(int)x[2].s_int);
     }
     void x_4(Smoke::Stack x) const {
 	// rewindable()
@@ -63,7 +63,7 @@ public:
     }
     virtual void sendTo(QDataSink* x1, int x2) {
 	Smoke::StackItem x[3];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	x[2].s_int = (int)x2;
 	if(call_method((void*)this, 3406, x)) return;
 	this->QIODeviceSource::sendTo(x1, x2);

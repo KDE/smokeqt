@@ -8,41 +8,41 @@ public:
     static void x_0(Smoke::Stack x) {
 	// QDomEntity()
 	x_QDomEntity* xret = new x_QDomEntity();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     x_QDomEntity() : QDomEntity() {
     }
     static void x_1(Smoke::Stack x) {
 	// QDomEntity(const QDomEntity&)
-	x_QDomEntity* xret = new x_QDomEntity(*(const QDomEntity *)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QDomEntity* xret = new x_QDomEntity(*(const QDomEntity *)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QDomEntity(const QDomEntity& x1) : QDomEntity(x1) {
     }
     void x_2(Smoke::Stack x) {
 	// operator=(const QDomEntity&)
-	QDomEntity& xret = this->QDomEntity::operator=(*(const QDomEntity *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QDomEntity& xret = this->QDomEntity::operator=(*(const QDomEntity *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_3(Smoke::Stack x) const {
 	// publicId()
 	QString xret = this->QDomEntity::publicId();
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_4(Smoke::Stack x) const {
 	// systemId()
 	QString xret = this->QDomEntity::systemId();
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_5(Smoke::Stack x) const {
 	// notationName()
 	QString xret = this->QDomEntity::notationName();
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_6(Smoke::Stack x) const {
 	// nodeType()
 	QDomNode::NodeType xret = this->QDomEntity::nodeType();
-	x[0].s_voidp = (void*)new QDomNode::NodeType(xret);
+	x[0].s_class = (void*)new QDomNode::NodeType(xret);
     }
     void x_7(Smoke::Stack x) const {
 	// isEntity()
@@ -51,9 +51,9 @@ public:
     }
     virtual QDomNode appendChild(const QDomNode& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 2187, x)) {
-	    QDomNode *xptr = (QDomNode *)x[0].s_voidp;
+	    QDomNode *xptr = (QDomNode *)x[0].s_class;
 	    QDomNode xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -63,7 +63,7 @@ public:
     virtual QDomNamedNodeMap attributes() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 2201, x)) {
-	    QDomNamedNodeMap *xptr = (QDomNamedNodeMap *)x[0].s_voidp;
+	    QDomNamedNodeMap *xptr = (QDomNamedNodeMap *)x[0].s_class;
 	    QDomNamedNodeMap xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -73,7 +73,7 @@ public:
     virtual QDomNodeList childNodes() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 2196, x)) {
-	    QDomNodeList *xptr = (QDomNodeList *)x[0].s_voidp;
+	    QDomNodeList *xptr = (QDomNodeList *)x[0].s_class;
 	    QDomNodeList xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -84,7 +84,7 @@ public:
 	Smoke::StackItem x[2];
 	x[1].s_bool = (bool)x1;
 	if(call_method((void*)this, 2189, x)) {
-	    QDomNode *xptr = (QDomNode *)x[0].s_voidp;
+	    QDomNode *xptr = (QDomNode *)x[0].s_class;
 	    QDomNode xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -94,7 +94,7 @@ public:
     virtual QDomNode firstChild() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 2197, x)) {
-	    QDomNode *xptr = (QDomNode *)x[0].s_voidp;
+	    QDomNode *xptr = (QDomNode *)x[0].s_class;
 	    QDomNode xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -113,10 +113,10 @@ public:
     }
     virtual QDomNode insertAfter(const QDomNode& x1, const QDomNode& x2) {
 	Smoke::StackItem x[3];
-	x[1].s_voidp = (void*)&x1;
-	x[2].s_voidp = (void*)&x2;
+	x[1].s_class = (void*)&x1;
+	x[2].s_class = (void*)&x2;
 	if(call_method((void*)this, 2184, x)) {
-	    QDomNode *xptr = (QDomNode *)x[0].s_voidp;
+	    QDomNode *xptr = (QDomNode *)x[0].s_class;
 	    QDomNode xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -125,10 +125,10 @@ public:
     }
     virtual QDomNode insertBefore(const QDomNode& x1, const QDomNode& x2) {
 	Smoke::StackItem x[3];
-	x[1].s_voidp = (void*)&x1;
-	x[2].s_voidp = (void*)&x2;
+	x[1].s_class = (void*)&x1;
+	x[2].s_class = (void*)&x2;
 	if(call_method((void*)this, 2183, x)) {
-	    QDomNode *xptr = (QDomNode *)x[0].s_voidp;
+	    QDomNode *xptr = (QDomNode *)x[0].s_class;
 	    QDomNode xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -197,8 +197,8 @@ public:
     }
     virtual bool isSupported(const QString& x1, const QString& x2) const {
 	Smoke::StackItem x[3];
-	x[1].s_voidp = (void*)&x1;
-	x[2].s_voidp = (void*)&x2;
+	x[1].s_class = (void*)&x1;
+	x[2].s_class = (void*)&x2;
 	if(call_method((void*)this, 2192, x)) return (bool)x[0].s_bool;
 	return this->QDomNode::isSupported(x1, x2);
     }
@@ -210,7 +210,7 @@ public:
     virtual QDomNode lastChild() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 2198, x)) {
-	    QDomNode *xptr = (QDomNode *)x[0].s_voidp;
+	    QDomNode *xptr = (QDomNode *)x[0].s_class;
 	    QDomNode xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -220,7 +220,7 @@ public:
     virtual QString localName() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 2204, x)) {
-	    QString *xptr = (QString *)x[0].s_voidp;
+	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -230,7 +230,7 @@ public:
     virtual QString namespaceURI() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 2203, x)) {
-	    QString *xptr = (QString *)x[0].s_voidp;
+	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -240,7 +240,7 @@ public:
     virtual QDomNode nextSibling() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 2200, x)) {
-	    QDomNode *xptr = (QDomNode *)x[0].s_voidp;
+	    QDomNode *xptr = (QDomNode *)x[0].s_class;
 	    QDomNode xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -250,7 +250,7 @@ public:
     virtual QString nodeName() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 2193, x)) {
-	    QString *xptr = (QString *)x[0].s_voidp;
+	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -260,7 +260,7 @@ public:
     virtual QDomNode::NodeType nodeType() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 2129, x)) {
-	    QDomNode::NodeType *xptr = (QDomNode::NodeType *)x[0].s_voidp;
+	    QDomNode::NodeType *xptr = (QDomNode::NodeType *)x[0].s_class;
 	    QDomNode::NodeType xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -270,7 +270,7 @@ public:
     virtual QString nodeValue() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 2206, x)) {
-	    QString *xptr = (QString *)x[0].s_voidp;
+	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -285,7 +285,7 @@ public:
     virtual QString notationName() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 2128, x)) {
-	    QString *xptr = (QString *)x[0].s_voidp;
+	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -295,7 +295,7 @@ public:
     virtual QDomDocument ownerDocument() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 2202, x)) {
-	    QDomDocument *xptr = (QDomDocument *)x[0].s_voidp;
+	    QDomDocument *xptr = (QDomDocument *)x[0].s_class;
 	    QDomDocument xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -305,7 +305,7 @@ public:
     virtual QDomNode parentNode() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 2195, x)) {
-	    QDomNode *xptr = (QDomNode *)x[0].s_voidp;
+	    QDomNode *xptr = (QDomNode *)x[0].s_class;
 	    QDomNode xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -315,7 +315,7 @@ public:
     virtual QString prefix() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 2208, x)) {
-	    QString *xptr = (QString *)x[0].s_voidp;
+	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -325,7 +325,7 @@ public:
     virtual QDomNode previousSibling() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 2199, x)) {
-	    QDomNode *xptr = (QDomNode *)x[0].s_voidp;
+	    QDomNode *xptr = (QDomNode *)x[0].s_class;
 	    QDomNode xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -335,7 +335,7 @@ public:
     virtual QString publicId() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 2126, x)) {
-	    QString *xptr = (QString *)x[0].s_voidp;
+	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -344,9 +344,9 @@ public:
     }
     virtual QDomNode removeChild(const QDomNode& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 2186, x)) {
-	    QDomNode *xptr = (QDomNode *)x[0].s_voidp;
+	    QDomNode *xptr = (QDomNode *)x[0].s_class;
 	    QDomNode xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -355,10 +355,10 @@ public:
     }
     virtual QDomNode replaceChild(const QDomNode& x1, const QDomNode& x2) {
 	Smoke::StackItem x[3];
-	x[1].s_voidp = (void*)&x1;
-	x[2].s_voidp = (void*)&x2;
+	x[1].s_class = (void*)&x1;
+	x[2].s_class = (void*)&x2;
 	if(call_method((void*)this, 2185, x)) {
-	    QDomNode *xptr = (QDomNode *)x[0].s_voidp;
+	    QDomNode *xptr = (QDomNode *)x[0].s_class;
 	    QDomNode xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -367,20 +367,20 @@ public:
     }
     virtual void setNodeValue(const QString& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 2207, x)) return;
 	this->QDomNode::setNodeValue(x1);
     }
     virtual void setPrefix(const QString& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 2209, x)) return;
 	this->QDomNode::setPrefix(x1);
     }
     virtual QString systemId() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 2127, x)) {
-	    QString *xptr = (QString *)x[0].s_voidp;
+	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;
 	    return xret;

@@ -20,42 +20,42 @@ public:
     void x_2(Smoke::Stack x) {
 	// operator=(char)
 	QCharRef xret = xthis->QCharRef::operator=((char)x[1].s_char);
-	x[0].s_voidp = (void*)new QCharRef(xret);
+	x[0].s_class = (void*)new QCharRef(xret);
     }
     void x_3(Smoke::Stack x) {
 	// operator=(uchar)
 	QCharRef xret = xthis->QCharRef::operator=((uchar)x[1].s_uchar);
-	x[0].s_voidp = (void*)new QCharRef(xret);
+	x[0].s_class = (void*)new QCharRef(xret);
     }
     void x_4(Smoke::Stack x) {
 	// operator=(QChar)
-	QCharRef xret = xthis->QCharRef::operator=(*(QChar *)x[1].s_voidp);
-	x[0].s_voidp = (void*)new QCharRef(xret);
+	QCharRef xret = xthis->QCharRef::operator=(*(QChar *)x[1].s_class);
+	x[0].s_class = (void*)new QCharRef(xret);
     }
     void x_5(Smoke::Stack x) {
 	// operator=(const QCharRef&)
-	QCharRef xret = xthis->QCharRef::operator=(*(const QCharRef *)x[1].s_voidp);
-	x[0].s_voidp = (void*)new QCharRef(xret);
+	QCharRef xret = xthis->QCharRef::operator=(*(const QCharRef *)x[1].s_class);
+	x[0].s_class = (void*)new QCharRef(xret);
     }
     void x_6(Smoke::Stack x) {
 	// operator=(ushort)
 	QCharRef xret = xthis->QCharRef::operator=((ushort)x[1].s_ushort);
-	x[0].s_voidp = (void*)new QCharRef(xret);
+	x[0].s_class = (void*)new QCharRef(xret);
     }
     void x_7(Smoke::Stack x) {
 	// operator=(short)
 	QCharRef xret = xthis->QCharRef::operator=((short)x[1].s_short);
-	x[0].s_voidp = (void*)new QCharRef(xret);
+	x[0].s_class = (void*)new QCharRef(xret);
     }
     void x_8(Smoke::Stack x) {
 	// operator=(uint)
 	QCharRef xret = xthis->QCharRef::operator=((uint)x[1].s_uint);
-	x[0].s_voidp = (void*)new QCharRef(xret);
+	x[0].s_class = (void*)new QCharRef(xret);
     }
     void x_9(Smoke::Stack x) {
 	// operator=(int)
 	QCharRef xret = xthis->QCharRef::operator=((int)x[1].s_int);
-	x[0].s_voidp = (void*)new QCharRef(xret);
+	x[0].s_class = (void*)new QCharRef(xret);
     }
     void x_10(Smoke::Stack x) const {
 	// isNull()
@@ -110,27 +110,27 @@ public:
     void x_20(Smoke::Stack x) const {
 	// lower()
 	QChar xret = xthis->QCharRef::lower();
-	x[0].s_voidp = (void*)new QChar(xret);
+	x[0].s_class = (void*)new QChar(xret);
     }
     void x_21(Smoke::Stack x) const {
 	// upper()
 	QChar xret = xthis->QCharRef::upper();
-	x[0].s_voidp = (void*)new QChar(xret);
+	x[0].s_class = (void*)new QChar(xret);
     }
     void x_22(Smoke::Stack x) const {
 	// category()
 	QChar::Category xret = xthis->QCharRef::category();
-	x[0].s_voidp = (void*)new QChar::Category(xret);
+	x[0].s_class = (void*)new QChar::Category(xret);
     }
     void x_23(Smoke::Stack x) const {
 	// direction()
 	QChar::Direction xret = xthis->QCharRef::direction();
-	x[0].s_voidp = (void*)new QChar::Direction(xret);
+	x[0].s_class = (void*)new QChar::Direction(xret);
     }
     void x_24(Smoke::Stack x) const {
 	// joining()
 	QChar::Joining xret = xthis->QCharRef::joining();
-	x[0].s_voidp = (void*)new QChar::Joining(xret);
+	x[0].s_class = (void*)new QChar::Joining(xret);
     }
     void x_25(Smoke::Stack x) const {
 	// mirrored()
@@ -140,22 +140,22 @@ public:
     void x_26(Smoke::Stack x) const {
 	// mirroredChar()
 	QChar xret = xthis->QCharRef::mirroredChar();
-	x[0].s_voidp = (void*)new QChar(xret);
+	x[0].s_class = (void*)new QChar(xret);
     }
     void x_27(Smoke::Stack x) const {
 	// decomposition()
 	const QString& xret = xthis->QCharRef::decomposition();
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_28(Smoke::Stack x) const {
 	// decompositionTag()
 	QChar::Decomposition xret = xthis->QCharRef::decompositionTag();
-	x[0].s_voidp = (void*)new QChar::Decomposition(xret);
+	x[0].s_class = (void*)new QChar::Decomposition(xret);
     }
     void x_29(Smoke::Stack x) const {
 	// combiningClass()
 	unsigned char xret = xthis->QCharRef::combiningClass();
-	x[0].s_voidp = (void*)new unsigned char(xret);
+	x[0].s_class = (void*)new unsigned char(xret);
     }
     void x_30(Smoke::Stack x) const {
 	// cell()

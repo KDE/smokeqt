@@ -7,7 +7,7 @@ public:
     static void x_0(Smoke::Stack x) {
 	// QTableSelection()
 	x_QTableSelection* xret = new x_QTableSelection();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     x_QTableSelection() : QTableSelection() {
     }
@@ -21,12 +21,12 @@ public:
     }
     void x_3(Smoke::Stack x) const {
 	// operator==(const QTableSelection&)
-	bool xret = this->QTableSelection::operator==(*(const QTableSelection *)x[1].s_voidp);
+	bool xret = this->QTableSelection::operator==(*(const QTableSelection *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_4(Smoke::Stack x) const {
 	// operator!=(const QTableSelection&)
-	bool xret = this->QTableSelection::operator!=(*(const QTableSelection *)x[1].s_voidp);
+	bool xret = this->QTableSelection::operator!=(*(const QTableSelection *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_5(Smoke::Stack x) const {

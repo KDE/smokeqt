@@ -5,36 +5,36 @@
 class x_QSql : public QSql {
 public:
     static void x_0(Smoke::Stack x) {
-	x[0].s_long = (long)QSql::None;
+	x[0].s_enum = (long)QSql::None;
     }
     static void x_1(Smoke::Stack x) {
-	x[0].s_long = (long)QSql::Insert;
+	x[0].s_enum = (long)QSql::Insert;
     }
     static void x_2(Smoke::Stack x) {
-	x[0].s_long = (long)QSql::Update;
+	x[0].s_enum = (long)QSql::Update;
     }
     static void x_3(Smoke::Stack x) {
-	x[0].s_long = (long)QSql::Delete;
+	x[0].s_enum = (long)QSql::Delete;
     }
     static void x_4(Smoke::Stack x) {
-	x[0].s_long = (long)QSql::BeforeFirst;
+	x[0].s_enum = (long)QSql::BeforeFirst;
     }
     static void x_5(Smoke::Stack x) {
-	x[0].s_long = (long)QSql::AfterLast;
+	x[0].s_enum = (long)QSql::AfterLast;
     }
     static void x_6(Smoke::Stack x) {
-	x[0].s_long = (long)QSql::Cancel;
+	x[0].s_enum = (long)QSql::Cancel;
     }
     static void x_7(Smoke::Stack x) {
-	x[0].s_long = (long)QSql::No;
+	x[0].s_enum = (long)QSql::No;
     }
     static void x_8(Smoke::Stack x) {
-	x[0].s_long = (long)QSql::Yes;
+	x[0].s_enum = (long)QSql::Yes;
     }
     static void x_9(Smoke::Stack x) {
 	// QSql()
 	x_QSql* xret = new x_QSql();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     x_QSql() : QSql() {
     }

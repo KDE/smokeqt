@@ -7,7 +7,7 @@ public:
     static void x_0(Smoke::Stack x) {
 	// QShared()
 	x_QShared* xret = new x_QShared();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     x_QShared() : QShared() {
     }

@@ -13,57 +13,57 @@ class x_QIconViewItem : public QIconViewItem {
 public:
     static void x_0(Smoke::Stack x) {
 	// QIconViewItem(QIconView*)
-	x_QIconViewItem* xret = new x_QIconViewItem((QIconView*)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QIconViewItem* xret = new x_QIconViewItem((QIconView*)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QIconViewItem(QIconView* x1) : QIconViewItem(x1) {
     }
     static void x_1(Smoke::Stack x) {
 	// QIconViewItem(QIconView*, QIconViewItem*)
-	x_QIconViewItem* xret = new x_QIconViewItem((QIconView*)x[1].s_voidp,(QIconViewItem*)x[2].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QIconViewItem* xret = new x_QIconViewItem((QIconView*)x[1].s_class,(QIconViewItem*)x[2].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QIconViewItem(QIconView* x1, QIconViewItem* x2) : QIconViewItem(x1, x2) {
     }
     static void x_2(Smoke::Stack x) {
 	// QIconViewItem(QIconView*, const QString&)
-	x_QIconViewItem* xret = new x_QIconViewItem((QIconView*)x[1].s_voidp,*(const QString *)x[2].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QIconViewItem* xret = new x_QIconViewItem((QIconView*)x[1].s_class,*(const QString *)x[2].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QIconViewItem(QIconView* x1, const QString& x2) : QIconViewItem(x1, x2) {
     }
     static void x_3(Smoke::Stack x) {
 	// QIconViewItem(QIconView*, QIconViewItem*, const QString&)
-	x_QIconViewItem* xret = new x_QIconViewItem((QIconView*)x[1].s_voidp,(QIconViewItem*)x[2].s_voidp,*(const QString *)x[3].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QIconViewItem* xret = new x_QIconViewItem((QIconView*)x[1].s_class,(QIconViewItem*)x[2].s_class,*(const QString *)x[3].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QIconViewItem(QIconView* x1, QIconViewItem* x2, const QString& x3) : QIconViewItem(x1, x2, x3) {
     }
     static void x_4(Smoke::Stack x) {
 	// QIconViewItem(QIconView*, const QString&, const QPixmap&)
-	x_QIconViewItem* xret = new x_QIconViewItem((QIconView*)x[1].s_voidp,*(const QString *)x[2].s_voidp,*(const QPixmap *)x[3].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QIconViewItem* xret = new x_QIconViewItem((QIconView*)x[1].s_class,*(const QString *)x[2].s_class,*(const QPixmap *)x[3].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QIconViewItem(QIconView* x1, const QString& x2, const QPixmap& x3) : QIconViewItem(x1, x2, x3) {
     }
     static void x_5(Smoke::Stack x) {
 	// QIconViewItem(QIconView*, QIconViewItem*, const QString&, const QPixmap&)
-	x_QIconViewItem* xret = new x_QIconViewItem((QIconView*)x[1].s_voidp,(QIconViewItem*)x[2].s_voidp,*(const QString *)x[3].s_voidp,*(const QPixmap *)x[4].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QIconViewItem* xret = new x_QIconViewItem((QIconView*)x[1].s_class,(QIconViewItem*)x[2].s_class,*(const QString *)x[3].s_class,*(const QPixmap *)x[4].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QIconViewItem(QIconView* x1, QIconViewItem* x2, const QString& x3, const QPixmap& x4) : QIconViewItem(x1, x2, x3, x4) {
     }
     static void x_6(Smoke::Stack x) {
 	// QIconViewItem(QIconView*, const QString&, const QPicture&)
-	x_QIconViewItem* xret = new x_QIconViewItem((QIconView*)x[1].s_voidp,*(const QString *)x[2].s_voidp,*(const QPicture *)x[3].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QIconViewItem* xret = new x_QIconViewItem((QIconView*)x[1].s_class,*(const QString *)x[2].s_class,*(const QPicture *)x[3].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QIconViewItem(QIconView* x1, const QString& x2, const QPicture& x3) : QIconViewItem(x1, x2, x3) {
     }
     static void x_7(Smoke::Stack x) {
 	// QIconViewItem(QIconView*, QIconViewItem*, const QString&, const QPicture&)
-	x_QIconViewItem* xret = new x_QIconViewItem((QIconView*)x[1].s_voidp,(QIconViewItem*)x[2].s_voidp,*(const QString *)x[3].s_voidp,*(const QPicture *)x[4].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QIconViewItem* xret = new x_QIconViewItem((QIconView*)x[1].s_class,(QIconViewItem*)x[2].s_class,*(const QString *)x[3].s_class,*(const QPicture *)x[4].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QIconViewItem(QIconView* x1, QIconViewItem* x2, const QString& x3, const QPicture& x4) : QIconViewItem(x1, x2, x3, x4) {
     }
@@ -82,22 +82,22 @@ public:
     void x_11(Smoke::Stack x) const {
 	// text()
 	QString xret = this->QIconViewItem::text();
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_12(Smoke::Stack x) const {
 	// pixmap()
 	QPixmap* xret = this->QIconViewItem::pixmap();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_13(Smoke::Stack x) const {
 	// picture()
 	QPicture* xret = this->QIconViewItem::picture();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_14(Smoke::Stack x) const {
 	// key()
 	QString xret = this->QIconViewItem::key();
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_15(Smoke::Stack x) const {
 	// renameEnabled()
@@ -117,17 +117,17 @@ public:
     void x_18(Smoke::Stack x) const {
 	// iconView()
 	QIconView* xret = this->QIconViewItem::iconView();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_19(Smoke::Stack x) const {
 	// prevItem()
 	QIconViewItem* xret = this->QIconViewItem::prevItem();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_20(Smoke::Stack x) const {
 	// nextItem()
 	QIconViewItem* xret = this->QIconViewItem::nextItem();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_21(Smoke::Stack x) const {
 	// index()
@@ -171,17 +171,17 @@ public:
     }
     void x_30(Smoke::Stack x) {
 	// move(const QPoint&)
-	bool xret = this->QIconViewItem::move(*(const QPoint *)x[1].s_voidp);
+	bool xret = this->QIconViewItem::move(*(const QPoint *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_31(Smoke::Stack x) {
 	// moveBy(const QPoint&)
-	this->QIconViewItem::moveBy(*(const QPoint *)x[1].s_voidp);
+	this->QIconViewItem::moveBy(*(const QPoint *)x[1].s_class);
     }
     void x_32(Smoke::Stack x) const {
 	// rect()
 	QRect xret = this->QIconViewItem::rect();
-	x[0].s_voidp = (void*)new QRect(xret);
+	x[0].s_class = (void*)new QRect(xret);
     }
     void x_33(Smoke::Stack x) const {
 	// x()
@@ -206,46 +206,46 @@ public:
     void x_37(Smoke::Stack x) const {
 	// size()
 	QSize xret = this->QIconViewItem::size();
-	x[0].s_voidp = (void*)new QSize(xret);
+	x[0].s_class = (void*)new QSize(xret);
     }
     void x_38(Smoke::Stack x) const {
 	// pos()
 	QPoint xret = this->QIconViewItem::pos();
-	x[0].s_voidp = (void*)new QPoint(xret);
+	x[0].s_class = (void*)new QPoint(xret);
     }
     void x_39(Smoke::Stack x) const {
 	// textRect(bool)
 	QRect xret = this->QIconViewItem::textRect((bool)x[1].s_bool);
-	x[0].s_voidp = (void*)new QRect(xret);
+	x[0].s_class = (void*)new QRect(xret);
     }
     void x_40(Smoke::Stack x) const {
 	// textRect()
 	QRect xret = this->QIconViewItem::textRect();
-	x[0].s_voidp = (void*)new QRect(xret);
+	x[0].s_class = (void*)new QRect(xret);
     }
     void x_41(Smoke::Stack x) const {
 	// pixmapRect(bool)
 	QRect xret = this->QIconViewItem::pixmapRect((bool)x[1].s_bool);
-	x[0].s_voidp = (void*)new QRect(xret);
+	x[0].s_class = (void*)new QRect(xret);
     }
     void x_42(Smoke::Stack x) const {
 	// pixmapRect()
 	QRect xret = this->QIconViewItem::pixmapRect();
-	x[0].s_voidp = (void*)new QRect(xret);
+	x[0].s_class = (void*)new QRect(xret);
     }
     void x_43(Smoke::Stack x) const {
 	// contains(const QPoint&)
-	bool xret = this->QIconViewItem::contains(*(const QPoint *)x[1].s_voidp);
+	bool xret = this->QIconViewItem::contains(*(const QPoint *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_44(Smoke::Stack x) const {
 	// intersects(const QRect&)
-	bool xret = this->QIconViewItem::intersects(*(const QRect *)x[1].s_voidp);
+	bool xret = this->QIconViewItem::intersects(*(const QRect *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_45(Smoke::Stack x) const {
 	// acceptDrop(const QMimeSource*)
-	bool xret = this->QIconViewItem::acceptDrop((const QMimeSource*)x[1].s_voidp);
+	bool xret = this->QIconViewItem::acceptDrop((const QMimeSource*)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_46(Smoke::Stack x) {
@@ -254,40 +254,40 @@ public:
     }
     void x_47(Smoke::Stack x) const {
 	// compare(QIconViewItem*)
-	int xret = this->QIconViewItem::compare((QIconViewItem*)x[1].s_voidp);
+	int xret = this->QIconViewItem::compare((QIconViewItem*)x[1].s_class);
 	x[0].s_int = (int)xret;
     }
     void x_48(Smoke::Stack x) {
 	// setText(const QString&)
-	this->QIconViewItem::setText(*(const QString *)x[1].s_voidp);
+	this->QIconViewItem::setText(*(const QString *)x[1].s_class);
     }
     void x_49(Smoke::Stack x) {
 	// setPixmap(const QPixmap&)
-	this->QIconViewItem::setPixmap(*(const QPixmap *)x[1].s_voidp);
+	this->QIconViewItem::setPixmap(*(const QPixmap *)x[1].s_class);
     }
     void x_50(Smoke::Stack x) {
 	// setPicture(const QPicture&)
-	this->QIconViewItem::setPicture(*(const QPicture *)x[1].s_voidp);
+	this->QIconViewItem::setPicture(*(const QPicture *)x[1].s_class);
     }
     void x_51(Smoke::Stack x) {
 	// setText(const QString&, bool, bool)
-	this->QIconViewItem::setText(*(const QString *)x[1].s_voidp,(bool)x[2].s_bool,(bool)x[3].s_bool);
+	this->QIconViewItem::setText(*(const QString *)x[1].s_class,(bool)x[2].s_bool,(bool)x[3].s_bool);
     }
     void x_52(Smoke::Stack x) {
 	// setText(const QString&, bool)
-	this->QIconViewItem::setText(*(const QString *)x[1].s_voidp,(bool)x[2].s_bool);
+	this->QIconViewItem::setText(*(const QString *)x[1].s_class,(bool)x[2].s_bool);
     }
     void x_53(Smoke::Stack x) {
 	// setPixmap(const QPixmap&, bool, bool)
-	this->QIconViewItem::setPixmap(*(const QPixmap *)x[1].s_voidp,(bool)x[2].s_bool,(bool)x[3].s_bool);
+	this->QIconViewItem::setPixmap(*(const QPixmap *)x[1].s_class,(bool)x[2].s_bool,(bool)x[3].s_bool);
     }
     void x_54(Smoke::Stack x) {
 	// setPixmap(const QPixmap&, bool)
-	this->QIconViewItem::setPixmap(*(const QPixmap *)x[1].s_voidp,(bool)x[2].s_bool);
+	this->QIconViewItem::setPixmap(*(const QPixmap *)x[1].s_class,(bool)x[2].s_bool);
     }
     void x_55(Smoke::Stack x) {
 	// setKey(const QString&)
-	this->QIconViewItem::setKey(*(const QString *)x[1].s_voidp);
+	this->QIconViewItem::setKey(*(const QString *)x[1].s_class);
     }
     void x_56(Smoke::Stack x) const {
 	// rtti()
@@ -300,7 +300,7 @@ public:
     }
     void x_58(Smoke::Stack x) {
 	// calcRect(const QString&)
-	this->QIconViewItem::calcRect(*(const QString *)x[1].s_voidp);
+	this->QIconViewItem::calcRect(*(const QString *)x[1].s_class);
     }
     void x_59(Smoke::Stack x) {
 	// calcRect()
@@ -308,15 +308,15 @@ public:
     }
     void x_60(Smoke::Stack x) {
 	// paintItem(QPainter*, const QColorGroup&)
-	this->QIconViewItem::paintItem((QPainter*)x[1].s_voidp,*(const QColorGroup *)x[2].s_voidp);
+	this->QIconViewItem::paintItem((QPainter*)x[1].s_class,*(const QColorGroup *)x[2].s_class);
     }
     void x_61(Smoke::Stack x) {
 	// paintFocus(QPainter*, const QColorGroup&)
-	this->QIconViewItem::paintFocus((QPainter*)x[1].s_voidp,*(const QColorGroup *)x[2].s_voidp);
+	this->QIconViewItem::paintFocus((QPainter*)x[1].s_class,*(const QColorGroup *)x[2].s_class);
     }
     void x_62(Smoke::Stack x) {
 	// dropped(QDropEvent*, const QValueList<QIconDragItem>&)
-	this->QIconViewItem::dropped((QDropEvent*)x[1].s_voidp,*(const QValueList<QIconDragItem> *)x[2].s_voidp);
+	this->QIconViewItem::dropped((QDropEvent*)x[1].s_class,*(const QValueList<QIconDragItem> *)x[2].s_class);
     }
     void x_63(Smoke::Stack x) {
 	// dragEntered()
@@ -328,15 +328,15 @@ public:
     }
     void x_65(Smoke::Stack x) {
 	// setItemRect(const QRect&)
-	this->QIconViewItem::setItemRect(*(const QRect *)x[1].s_voidp);
+	this->QIconViewItem::setItemRect(*(const QRect *)x[1].s_class);
     }
     void x_66(Smoke::Stack x) {
 	// setTextRect(const QRect&)
-	this->QIconViewItem::setTextRect(*(const QRect *)x[1].s_voidp);
+	this->QIconViewItem::setTextRect(*(const QRect *)x[1].s_class);
     }
     void x_67(Smoke::Stack x) {
 	// setPixmapRect(const QRect&)
-	this->QIconViewItem::setPixmapRect(*(const QRect *)x[1].s_voidp);
+	this->QIconViewItem::setPixmapRect(*(const QRect *)x[1].s_class);
     }
     void x_68(Smoke::Stack x) {
 	// calcTmpText()
@@ -344,19 +344,19 @@ public:
     }
     virtual bool acceptDrop(const QMimeSource* x1) const {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 3635, x)) return (bool)x[0].s_bool;
 	return this->QIconViewItem::acceptDrop(x1);
     }
     virtual void calcRect(const QString& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 3648, x)) return;
 	this->QIconViewItem::calcRect(x1);
     }
     virtual int compare(QIconViewItem* x1) const {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 3637, x)) return (int)x[0].s_int;
 	return this->QIconViewItem::compare(x1);
     }
@@ -372,15 +372,15 @@ public:
     }
     virtual void dropped(QDropEvent* x1, const QValueList<QIconDragItem>& x2) {
 	Smoke::StackItem x[3];
-	x[1].s_voidp = (void*)x1;
-	x[2].s_voidp = (void*)&x2;
+	x[1].s_class = (void*)x1;
+	x[2].s_class = (void*)&x2;
 	if(call_method((void*)this, 3652, x)) return;
 	this->QIconViewItem::dropped(x1, x2);
     }
     virtual QString key() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 3604, x)) {
-	    QString *xptr = (QString *)x[0].s_voidp;
+	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -389,7 +389,7 @@ public:
     }
     virtual bool move(const QPoint& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 3620, x)) return (bool)x[0].s_bool;
 	return this->QIconViewItem::move(x1);
     }
@@ -402,7 +402,7 @@ public:
     }
     virtual void moveBy(const QPoint& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 3621, x)) return;
 	this->QIconViewItem::moveBy(x1);
     }
@@ -415,26 +415,26 @@ public:
     }
     virtual void paintFocus(QPainter* x1, const QColorGroup& x2) {
 	Smoke::StackItem x[3];
-	x[1].s_voidp = (void*)x1;
-	x[2].s_voidp = (void*)&x2;
+	x[1].s_class = (void*)x1;
+	x[2].s_class = (void*)&x2;
 	if(call_method((void*)this, 3651, x)) return;
 	this->QIconViewItem::paintFocus(x1, x2);
     }
     virtual void paintItem(QPainter* x1, const QColorGroup& x2) {
 	Smoke::StackItem x[3];
-	x[1].s_voidp = (void*)x1;
-	x[2].s_voidp = (void*)&x2;
+	x[1].s_class = (void*)x1;
+	x[2].s_class = (void*)&x2;
 	if(call_method((void*)this, 3650, x)) return;
 	this->QIconViewItem::paintItem(x1, x2);
     }
     virtual QPicture* picture() const {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 3603, x)) 	return (QPicture*)x[0].s_voidp;
+	if(call_method((void*)this, 3603, x)) 	return (QPicture*)x[0].s_class;
 	return this->QIconViewItem::picture();
     }
     virtual QPixmap* pixmap() const {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 3602, x)) 	return (QPixmap*)x[0].s_voidp;
+	if(call_method((void*)this, 3602, x)) 	return (QPixmap*)x[0].s_class;
 	return this->QIconViewItem::pixmap();
     }
     virtual void removeRenameBox() {
@@ -466,25 +466,25 @@ public:
     }
     virtual void setKey(const QString& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 3645, x)) return;
 	this->QIconViewItem::setKey(x1);
     }
     virtual void setPicture(const QPicture& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 3640, x)) return;
 	this->QIconViewItem::setPicture(x1);
     }
     virtual void setPixmap(const QPixmap& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 3639, x)) return;
 	this->QIconViewItem::setPixmap(x1);
     }
     virtual void setPixmap(const QPixmap& x1, bool x2, bool x3) {
 	Smoke::StackItem x[4];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	x[2].s_bool = (bool)x2;
 	x[3].s_bool = (bool)x3;
 	if(call_method((void*)this, 3643, x)) return;
@@ -517,13 +517,13 @@ public:
     }
     virtual void setText(const QString& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 3638, x)) return;
 	this->QIconViewItem::setText(x1);
     }
     virtual void setText(const QString& x1, bool x2, bool x3) {
 	Smoke::StackItem x[4];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	x[2].s_bool = (bool)x2;
 	x[3].s_bool = (bool)x3;
 	if(call_method((void*)this, 3641, x)) return;
@@ -532,7 +532,7 @@ public:
     virtual QString text() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 3601, x)) {
-	    QString *xptr = (QString *)x[0].s_voidp;
+	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;
 	    return xret;

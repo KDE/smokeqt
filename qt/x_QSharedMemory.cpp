@@ -8,14 +8,14 @@ public:
     static void x_0(Smoke::Stack x) {
 	// QSharedMemory()
 	x_QSharedMemory* xret = new x_QSharedMemory();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     x_QSharedMemory() : QSharedMemory() {
     }
     static void x_1(Smoke::Stack x) {
 	// QSharedMemory(int, QString)
-	x_QSharedMemory* xret = new x_QSharedMemory((int)x[1].s_int,*(QString *)x[2].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QSharedMemory* xret = new x_QSharedMemory((int)x[1].s_int,*(QString *)x[2].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QSharedMemory(int x1, QString x2) : QSharedMemory(x1, x2) {
     }
@@ -39,7 +39,7 @@ public:
     }
     void x_6(Smoke::Stack x) {
 	// setPermissions(mode_t)
-	this->QSharedMemory::setPermissions(*(mode_t *)x[1].s_voidp);
+	this->QSharedMemory::setPermissions(*(mode_t *)x[1].s_class);
     }
     void x_7(Smoke::Stack x) {
 	// base()

@@ -10,21 +10,21 @@ private:
 public:
     x_QSessionManager(void *x) : xthis((QSessionManager*)x) {}
     static void x_0(Smoke::Stack x) {
-	x[0].s_long = (long)QSessionManager::RestartIfRunning;
+	x[0].s_enum = (long)QSessionManager::RestartIfRunning;
     }
     static void x_1(Smoke::Stack x) {
-	x[0].s_long = (long)QSessionManager::RestartAnyway;
+	x[0].s_enum = (long)QSessionManager::RestartAnyway;
     }
     static void x_2(Smoke::Stack x) {
-	x[0].s_long = (long)QSessionManager::RestartImmediately;
+	x[0].s_enum = (long)QSessionManager::RestartImmediately;
     }
     static void x_3(Smoke::Stack x) {
-	x[0].s_long = (long)QSessionManager::RestartNever;
+	x[0].s_enum = (long)QSessionManager::RestartNever;
     }
     void x_4(Smoke::Stack x) const {
 	// sessionId()
 	QString xret = xthis->QSessionManager::sessionId();
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_5(Smoke::Stack x) {
 	// allowsInteraction()
@@ -46,38 +46,38 @@ public:
     }
     void x_9(Smoke::Stack x) {
 	// setRestartHint(QSessionManager::RestartHint)
-	xthis->QSessionManager::setRestartHint(*(QSessionManager::RestartHint *)x[1].s_voidp);
+	xthis->QSessionManager::setRestartHint(*(QSessionManager::RestartHint *)x[1].s_class);
     }
     void x_10(Smoke::Stack x) const {
 	// restartHint()
 	QSessionManager::RestartHint xret = xthis->QSessionManager::restartHint();
-	x[0].s_voidp = (void*)new QSessionManager::RestartHint(xret);
+	x[0].s_class = (void*)new QSessionManager::RestartHint(xret);
     }
     void x_11(Smoke::Stack x) {
 	// setRestartCommand(const QStringList&)
-	xthis->QSessionManager::setRestartCommand(*(const QStringList *)x[1].s_voidp);
+	xthis->QSessionManager::setRestartCommand(*(const QStringList *)x[1].s_class);
     }
     void x_12(Smoke::Stack x) const {
 	// restartCommand()
 	QStringList xret = xthis->QSessionManager::restartCommand();
-	x[0].s_voidp = (void*)new QStringList(xret);
+	x[0].s_class = (void*)new QStringList(xret);
     }
     void x_13(Smoke::Stack x) {
 	// setDiscardCommand(const QStringList&)
-	xthis->QSessionManager::setDiscardCommand(*(const QStringList *)x[1].s_voidp);
+	xthis->QSessionManager::setDiscardCommand(*(const QStringList *)x[1].s_class);
     }
     void x_14(Smoke::Stack x) const {
 	// discardCommand()
 	QStringList xret = xthis->QSessionManager::discardCommand();
-	x[0].s_voidp = (void*)new QStringList(xret);
+	x[0].s_class = (void*)new QStringList(xret);
     }
     void x_15(Smoke::Stack x) {
 	// setManagerProperty(const QString&, const QString&)
-	xthis->QSessionManager::setManagerProperty(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
+	xthis->QSessionManager::setManagerProperty(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class);
     }
     void x_16(Smoke::Stack x) {
 	// setManagerProperty(const QString&, const QStringList&)
-	xthis->QSessionManager::setManagerProperty(*(const QString *)x[1].s_voidp,*(const QStringList *)x[2].s_voidp);
+	xthis->QSessionManager::setManagerProperty(*(const QString *)x[1].s_class,*(const QStringList *)x[2].s_class);
     }
     void x_17(Smoke::Stack x) const {
 	// isPhase2()

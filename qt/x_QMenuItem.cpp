@@ -9,7 +9,7 @@ public:
     static void x_0(Smoke::Stack x) {
 	// QMenuItem()
 	x_QMenuItem* xret = new x_QMenuItem();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     x_QMenuItem() : QMenuItem() {
     }
@@ -21,47 +21,47 @@ public:
     void x_2(Smoke::Stack x) const {
 	// iconSet()
 	QIconSet* xret = this->QMenuItem::iconSet();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_3(Smoke::Stack x) const {
 	// text()
 	QString xret = this->QMenuItem::text();
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_4(Smoke::Stack x) const {
 	// whatsThis()
 	QString xret = this->QMenuItem::whatsThis();
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_5(Smoke::Stack x) const {
 	// pixmap()
 	QPixmap* xret = this->QMenuItem::pixmap();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_6(Smoke::Stack x) const {
 	// popup()
 	QPopupMenu* xret = this->QMenuItem::popup();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_7(Smoke::Stack x) const {
 	// widget()
 	QWidget* xret = this->QMenuItem::widget();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_8(Smoke::Stack x) const {
 	// custom()
 	QCustomMenuItem* xret = this->QMenuItem::custom();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_9(Smoke::Stack x) const {
 	// key()
 	QKeySequence xret = this->QMenuItem::key();
-	x[0].s_voidp = (void*)new QKeySequence(xret);
+	x[0].s_class = (void*)new QKeySequence(xret);
     }
     void x_10(Smoke::Stack x) const {
 	// signal()
 	QSignal* xret = this->QMenuItem::signal();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_11(Smoke::Stack x) const {
 	// isSeparator()
@@ -85,7 +85,7 @@ public:
     }
     void x_15(Smoke::Stack x) {
 	// setText(const QString&)
-	this->QMenuItem::setText(*(const QString *)x[1].s_voidp);
+	this->QMenuItem::setText(*(const QString *)x[1].s_class);
     }
     void x_16(Smoke::Stack x) {
 	// setDirty(bool)
@@ -93,7 +93,7 @@ public:
     }
     void x_17(Smoke::Stack x) {
 	// setWhatsThis(const QString&)
-	this->QMenuItem::setWhatsThis(*(const QString *)x[1].s_voidp);
+	this->QMenuItem::setWhatsThis(*(const QString *)x[1].s_class);
     }
     ~x_QMenuItem() {}
 };

@@ -8,29 +8,29 @@ class x_QWheelEvent : public QWheelEvent {
 public:
     static void x_0(Smoke::Stack x) {
 	// QWheelEvent(const QPoint&, int, int, Qt::Orientation)
-	x_QWheelEvent* xret = new x_QWheelEvent(*(const QPoint *)x[1].s_voidp,(int)x[2].s_int,(int)x[3].s_int,*(Qt::Orientation *)x[4].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QWheelEvent* xret = new x_QWheelEvent(*(const QPoint *)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int,*(Qt::Orientation *)x[4].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QWheelEvent(const QPoint& x1, int x2, int x3, Qt::Orientation x4) : QWheelEvent(x1, x2, x3, x4) {
     }
     static void x_1(Smoke::Stack x) {
 	// QWheelEvent(const QPoint&, int, int)
-	x_QWheelEvent* xret = new x_QWheelEvent(*(const QPoint *)x[1].s_voidp,(int)x[2].s_int,(int)x[3].s_int);
-	x[0].s_voidp = (void*)xret;
+	x_QWheelEvent* xret = new x_QWheelEvent(*(const QPoint *)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int);
+	x[0].s_class = (void*)xret;
     }
     x_QWheelEvent(const QPoint& x1, int x2, int x3) : QWheelEvent(x1, x2, x3) {
     }
     static void x_2(Smoke::Stack x) {
 	// QWheelEvent(const QPoint&, const QPoint&, int, int, Qt::Orientation)
-	x_QWheelEvent* xret = new x_QWheelEvent(*(const QPoint *)x[1].s_voidp,*(const QPoint *)x[2].s_voidp,(int)x[3].s_int,(int)x[4].s_int,*(Qt::Orientation *)x[5].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QWheelEvent* xret = new x_QWheelEvent(*(const QPoint *)x[1].s_class,*(const QPoint *)x[2].s_class,(int)x[3].s_int,(int)x[4].s_int,*(Qt::Orientation *)x[5].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QWheelEvent(const QPoint& x1, const QPoint& x2, int x3, int x4, Qt::Orientation x5) : QWheelEvent(x1, x2, x3, x4, x5) {
     }
     static void x_3(Smoke::Stack x) {
 	// QWheelEvent(const QPoint&, const QPoint&, int, int)
-	x_QWheelEvent* xret = new x_QWheelEvent(*(const QPoint *)x[1].s_voidp,*(const QPoint *)x[2].s_voidp,(int)x[3].s_int,(int)x[4].s_int);
-	x[0].s_voidp = (void*)xret;
+	x_QWheelEvent* xret = new x_QWheelEvent(*(const QPoint *)x[1].s_class,*(const QPoint *)x[2].s_class,(int)x[3].s_int,(int)x[4].s_int);
+	x[0].s_class = (void*)xret;
     }
     x_QWheelEvent(const QPoint& x1, const QPoint& x2, int x3, int x4) : QWheelEvent(x1, x2, x3, x4) {
     }
@@ -42,12 +42,12 @@ public:
     void x_5(Smoke::Stack x) const {
 	// pos()
 	const QPoint& xret = this->QWheelEvent::pos();
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_6(Smoke::Stack x) const {
 	// globalPos()
 	const QPoint& xret = this->QWheelEvent::globalPos();
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_7(Smoke::Stack x) const {
 	// x()
@@ -72,12 +72,12 @@ public:
     void x_11(Smoke::Stack x) const {
 	// state()
 	Qt::ButtonState xret = this->QWheelEvent::state();
-	x[0].s_voidp = (void*)new Qt::ButtonState(xret);
+	x[0].s_class = (void*)new Qt::ButtonState(xret);
     }
     void x_12(Smoke::Stack x) const {
 	// orientation()
 	Qt::Orientation xret = this->QWheelEvent::orientation();
-	x[0].s_voidp = (void*)new Qt::Orientation(xret);
+	x[0].s_class = (void*)new Qt::Orientation(xret);
     }
     void x_13(Smoke::Stack x) const {
 	// isAccepted()

@@ -7,70 +7,70 @@ public:
     static void x_0(Smoke::Stack x) {
 	// QListViewItemIterator()
 	x_QListViewItemIterator* xret = new x_QListViewItemIterator();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     x_QListViewItemIterator() : QListViewItemIterator() {
     }
     static void x_1(Smoke::Stack x) {
 	// QListViewItemIterator(QListViewItem*)
-	x_QListViewItemIterator* xret = new x_QListViewItemIterator((QListViewItem*)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QListViewItemIterator* xret = new x_QListViewItemIterator((QListViewItem*)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QListViewItemIterator(QListViewItem* x1) : QListViewItemIterator(x1) {
     }
     static void x_2(Smoke::Stack x) {
 	// QListViewItemIterator(const QListViewItemIterator&)
-	x_QListViewItemIterator* xret = new x_QListViewItemIterator(*(const QListViewItemIterator *)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QListViewItemIterator* xret = new x_QListViewItemIterator(*(const QListViewItemIterator *)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QListViewItemIterator(const QListViewItemIterator& x1) : QListViewItemIterator(x1) {
     }
     static void x_3(Smoke::Stack x) {
 	// QListViewItemIterator(QListView*)
-	x_QListViewItemIterator* xret = new x_QListViewItemIterator((QListView*)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QListViewItemIterator* xret = new x_QListViewItemIterator((QListView*)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QListViewItemIterator(QListView* x1) : QListViewItemIterator(x1) {
     }
     void x_4(Smoke::Stack x) {
 	// operator=(const QListViewItemIterator&)
-	QListViewItemIterator& xret = this->QListViewItemIterator::operator=(*(const QListViewItemIterator *)x[1].s_voidp);
-	x[0].s_voidp = (void*)&xret;
+	QListViewItemIterator& xret = this->QListViewItemIterator::operator=(*(const QListViewItemIterator *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
     }
     void x_5(Smoke::Stack x) {
 	// operator++()
 	QListViewItemIterator& xret = this->QListViewItemIterator::operator++();
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_6(Smoke::Stack x) {
 	// operator++(int)
 	const QListViewItemIterator xret = this->QListViewItemIterator::operator++((int)x[1].s_int);
-	x[0].s_voidp = (void*)new QListViewItemIterator(xret);
+	x[0].s_class = (void*)new QListViewItemIterator(xret);
     }
     void x_7(Smoke::Stack x) {
 	// operator+=(int)
 	QListViewItemIterator& xret = this->QListViewItemIterator::operator+=((int)x[1].s_int);
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_8(Smoke::Stack x) {
 	// operator--()
 	QListViewItemIterator& xret = this->QListViewItemIterator::operator--();
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_9(Smoke::Stack x) {
 	// operator--(int)
 	const QListViewItemIterator xret = this->QListViewItemIterator::operator--((int)x[1].s_int);
-	x[0].s_voidp = (void*)new QListViewItemIterator(xret);
+	x[0].s_class = (void*)new QListViewItemIterator(xret);
     }
     void x_10(Smoke::Stack x) {
 	// operator-=(int)
 	QListViewItemIterator& xret = this->QListViewItemIterator::operator-=((int)x[1].s_int);
-	x[0].s_voidp = (void*)&xret;
+	x[0].s_class = (void*)&xret;
     }
     void x_11(Smoke::Stack x) const {
 	// current()
 	QListViewItem* xret = this->QListViewItemIterator::current();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     ~x_QListViewItemIterator() {}
 };

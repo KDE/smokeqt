@@ -8,22 +8,22 @@ class x_QDns__MailServer : public QDns::MailServer {
 public:
     static void x_0(Smoke::Stack x) {
 	// MailServer(const QString&, Q_UINT16)
-	x_QDns__MailServer* xret = new x_QDns__MailServer(*(const QString *)x[1].s_voidp,*(Q_UINT16 *)x[2].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QDns__MailServer* xret = new x_QDns__MailServer(*(const QString *)x[1].s_class,*(Q_UINT16 *)x[2].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QDns__MailServer(const QString& x1, Q_UINT16 x2) : QDns::MailServer(x1, x2) {
     }
     static void x_1(Smoke::Stack x) {
 	// MailServer(const QString&)
-	x_QDns__MailServer* xret = new x_QDns__MailServer(*(const QString *)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QDns__MailServer* xret = new x_QDns__MailServer(*(const QString *)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QDns__MailServer(const QString& x1) : QDns::MailServer(x1) {
     }
     static void x_2(Smoke::Stack x) {
 	// MailServer()
 	x_QDns__MailServer* xret = new x_QDns__MailServer();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     x_QDns__MailServer() : QDns::MailServer() {
     }

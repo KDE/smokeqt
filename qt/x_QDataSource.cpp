@@ -14,7 +14,7 @@ public:
     }
     void x_1(Smoke::Stack x) {
 	// sendTo(QDataSink*, int)
-	xthis->QDataSource::sendTo((QDataSink*)x[1].s_voidp,(int)x[2].s_int);
+	xthis->QDataSource::sendTo((QDataSink*)x[1].s_class,(int)x[2].s_int);
     }
     void x_2(Smoke::Stack x) {
 	// maybeReady()

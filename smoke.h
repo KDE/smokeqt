@@ -1,6 +1,8 @@
 #ifndef SMOKE_H
 #define SMOKE_H
 
+#include <string.h>
+
 /*
  *   Copyright (C) 2002, Ashley Winters <qaqortog@nwlink.com>
  */
@@ -59,13 +61,15 @@ public:
     };
 
     enum TypeFlags {
+        // The first 4 bits indicate the TypeId value, i.e. which field
+        // of the StackItem union is used.
+        tf_elem = 0x0F,
+
 	// Always only one of the next three flags should be set
-	tf_stack = 0x01, 	// Stored on the stack, 'type'
-	tf_ptr = 0x02,   	// Pointer, 'type*'
-	tf_ref = 0x03,   	// Reference, 'type&'
+	tf_stack = 0x10, 	// Stored on the stack, 'type'
+	tf_ptr = 0x20,   	// Pointer, 'type*'
+	tf_ref = 0x30,   	// Reference, 'type&'
 	// Can | whatever ones of these apply
-	tf_class = 0x04, 	// is class
-	tf_enum = 0x08,  	// is enum
 	tf_copy = 0x10   	// use new allocated copy (pass by value)
     };
     /**
@@ -81,6 +85,7 @@ public:
     // We could just pass everything around using void* (pass-by-reference)
     // I don't want to, though. -aw
     union StackItem {
+	void* s_voidp;
 	bool s_bool;
 	char s_char;
 	unsigned char s_uchar;
@@ -92,10 +97,11 @@ public:
 	unsigned long s_ulong;
 	float s_float;
 	double s_double;
-	void* s_voidp;
+        long s_enum;
+        void* s_class;
     };
-    enum {
-	t_void,
+    enum TypeId {
+	t_voidp,
 	t_bool,
 	t_char,
 	t_uchar,
@@ -107,6 +113,8 @@ public:
 	t_ulong,
 	t_float,
 	t_double,
+        t_enum,
+        t_class,
 	t_last		// number of pre-defined types
     };
 
@@ -215,7 +223,7 @@ public:
 
 	return (!icmp) ? icur : 0;
     }
-    
+
     inline Index idMethodName(const char *m) {
 	Index imax = numMethodNames;
 	Index imin = 0;
@@ -234,7 +242,7 @@ public:
 
 	return (!icmp) ? icur : -1;
     }
- 
+
     inline Index idMethod(Index c, Index name) {
 	if(c == 0 || name < 0) return -1;
 	Index imax = numMethods;

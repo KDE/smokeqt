@@ -7,31 +7,31 @@
 class x_QCanvasItem : public QCanvasItem {
 public:
     static void x_0(Smoke::Stack x) {
-	x[0].s_long = (long)QCanvasItem::Rtti_Item;
+	x[0].s_enum = (long)QCanvasItem::Rtti_Item;
     }
     static void x_1(Smoke::Stack x) {
-	x[0].s_long = (long)QCanvasItem::Rtti_Sprite;
+	x[0].s_enum = (long)QCanvasItem::Rtti_Sprite;
     }
     static void x_2(Smoke::Stack x) {
-	x[0].s_long = (long)QCanvasItem::Rtti_PolygonalItem;
+	x[0].s_enum = (long)QCanvasItem::Rtti_PolygonalItem;
     }
     static void x_3(Smoke::Stack x) {
-	x[0].s_long = (long)QCanvasItem::Rtti_Text;
+	x[0].s_enum = (long)QCanvasItem::Rtti_Text;
     }
     static void x_4(Smoke::Stack x) {
-	x[0].s_long = (long)QCanvasItem::Rtti_Polygon;
+	x[0].s_enum = (long)QCanvasItem::Rtti_Polygon;
     }
     static void x_5(Smoke::Stack x) {
-	x[0].s_long = (long)QCanvasItem::Rtti_Rectangle;
+	x[0].s_enum = (long)QCanvasItem::Rtti_Rectangle;
     }
     static void x_6(Smoke::Stack x) {
-	x[0].s_long = (long)QCanvasItem::Rtti_Ellipse;
+	x[0].s_enum = (long)QCanvasItem::Rtti_Ellipse;
     }
     static void x_7(Smoke::Stack x) {
-	x[0].s_long = (long)QCanvasItem::Rtti_Line;
+	x[0].s_enum = (long)QCanvasItem::Rtti_Line;
     }
     static void x_8(Smoke::Stack x) {
-	x[0].s_long = (long)QCanvasItem::Rtti_Spline;
+	x[0].s_enum = (long)QCanvasItem::Rtti_Spline;
     }
     x_QCanvasItem(QCanvas* x1) : QCanvasItem(x1) {}
     void x_10(Smoke::Stack x) const {
@@ -106,21 +106,21 @@ public:
     }
     void x_26(Smoke::Stack x) const {
 	// collidesWith(const QCanvasItem*)
-	bool xret = this->QCanvasItem::collidesWith((const QCanvasItem*)x[1].s_voidp);
+	bool xret = this->QCanvasItem::collidesWith((const QCanvasItem*)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_27(Smoke::Stack x) const {
 	// collisions(bool)
 	QCanvasItemList xret = this->QCanvasItem::collisions((bool)x[1].s_bool);
-	x[0].s_voidp = (void*)new QCanvasItemList(xret);
+	x[0].s_class = (void*)new QCanvasItemList(xret);
     }
     void x_28(Smoke::Stack x) {
 	// setCanvas(QCanvas*)
-	this->QCanvasItem::setCanvas((QCanvas*)x[1].s_voidp);
+	this->QCanvasItem::setCanvas((QCanvas*)x[1].s_class);
     }
     void x_29(Smoke::Stack x) {
 	// draw(QPainter&)
-	this->QCanvasItem::draw(*(QPainter *)x[1].s_voidp);
+	this->QCanvasItem::draw(*(QPainter *)x[1].s_class);
     }
     void x_30(Smoke::Stack x) {
 	// show()
@@ -194,17 +194,17 @@ public:
     void x_45(Smoke::Stack x) const {
 	// boundingRect()
 	QRect xret = this->QCanvasItem::boundingRect();
-	x[0].s_voidp = (void*)new QRect(xret);
+	x[0].s_class = (void*)new QRect(xret);
     }
     void x_46(Smoke::Stack x) const {
 	// boundingRectAdvanced()
 	QRect xret = this->QCanvasItem::boundingRectAdvanced();
-	x[0].s_voidp = (void*)new QRect(xret);
+	x[0].s_class = (void*)new QRect(xret);
     }
     void x_47(Smoke::Stack x) const {
 	// canvas()
 	QCanvas* xret = this->QCanvasItem::canvas();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_48(Smoke::Stack x) {
 	// update()

@@ -9,40 +9,40 @@ private:
 public:
     x_QPolygonScanner(void *x) : xthis((QPolygonScanner*)x) {}
     static void x_0(Smoke::Stack x) {
-	x[0].s_long = (long)QPolygonScanner::Left;
+	x[0].s_enum = (long)QPolygonScanner::Left;
     }
     static void x_1(Smoke::Stack x) {
-	x[0].s_long = (long)QPolygonScanner::Right;
+	x[0].s_enum = (long)QPolygonScanner::Right;
     }
     static void x_2(Smoke::Stack x) {
-	x[0].s_long = (long)QPolygonScanner::Top;
+	x[0].s_enum = (long)QPolygonScanner::Top;
     }
     static void x_3(Smoke::Stack x) {
-	x[0].s_long = (long)QPolygonScanner::Bottom;
+	x[0].s_enum = (long)QPolygonScanner::Bottom;
     }
     void x_4(Smoke::Stack x) {
 	// scan(const QPointArray&, bool, int, int)
-	xthis->QPolygonScanner::scan(*(const QPointArray *)x[1].s_voidp,(bool)x[2].s_bool,(int)x[3].s_int,(int)x[4].s_int);
+	xthis->QPolygonScanner::scan(*(const QPointArray *)x[1].s_class,(bool)x[2].s_bool,(int)x[3].s_int,(int)x[4].s_int);
     }
     void x_5(Smoke::Stack x) {
 	// scan(const QPointArray&, bool, int)
-	xthis->QPolygonScanner::scan(*(const QPointArray *)x[1].s_voidp,(bool)x[2].s_bool,(int)x[3].s_int);
+	xthis->QPolygonScanner::scan(*(const QPointArray *)x[1].s_class,(bool)x[2].s_bool,(int)x[3].s_int);
     }
     void x_6(Smoke::Stack x) {
 	// scan(const QPointArray&, bool)
-	xthis->QPolygonScanner::scan(*(const QPointArray *)x[1].s_voidp,(bool)x[2].s_bool);
+	xthis->QPolygonScanner::scan(*(const QPointArray *)x[1].s_class,(bool)x[2].s_bool);
     }
     void x_7(Smoke::Stack x) {
 	// scan(const QPointArray&, bool, int, int, bool)
-	xthis->QPolygonScanner::scan(*(const QPointArray *)x[1].s_voidp,(bool)x[2].s_bool,(int)x[3].s_int,(int)x[4].s_int,(bool)x[5].s_bool);
+	xthis->QPolygonScanner::scan(*(const QPointArray *)x[1].s_class,(bool)x[2].s_bool,(int)x[3].s_int,(int)x[4].s_int,(bool)x[5].s_bool);
     }
     void x_8(Smoke::Stack x) {
 	// scan(const QPointArray&, bool, int, int, QPolygonScanner::Edge)
-	xthis->QPolygonScanner::scan(*(const QPointArray *)x[1].s_voidp,(bool)x[2].s_bool,(int)x[3].s_int,(int)x[4].s_int,*(QPolygonScanner::Edge *)x[5].s_voidp);
+	xthis->QPolygonScanner::scan(*(const QPointArray *)x[1].s_class,(bool)x[2].s_bool,(int)x[3].s_int,(int)x[4].s_int,*(QPolygonScanner::Edge *)x[5].s_class);
     }
     void x_9(Smoke::Stack x) {
 	// processSpans(int, QPoint*, int*)
-	xthis->QPolygonScanner::processSpans((int)x[1].s_int,(QPoint*)x[2].s_voidp,(int*)x[3].s_voidp);
+	xthis->QPolygonScanner::processSpans((int)x[1].s_int,(QPoint*)x[2].s_class,(int*)x[3].s_class);
     }
     ~x_QPolygonScanner() {}
 };

@@ -12,8 +12,8 @@ class x_QCanvasLine : public QCanvasLine {
 public:
     static void x_0(Smoke::Stack x) {
 	// QCanvasLine(QCanvas*)
-	x_QCanvasLine* xret = new x_QCanvasLine((QCanvas*)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QCanvasLine* xret = new x_QCanvasLine((QCanvas*)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QCanvasLine(QCanvas* x1) : QCanvasLine(x1) {
     }
@@ -24,12 +24,12 @@ public:
     void x_2(Smoke::Stack x) const {
 	// startPoint()
 	QPoint xret = this->QCanvasLine::startPoint();
-	x[0].s_voidp = (void*)new QPoint(xret);
+	x[0].s_class = (void*)new QPoint(xret);
     }
     void x_3(Smoke::Stack x) const {
 	// endPoint()
 	QPoint xret = this->QCanvasLine::endPoint();
-	x[0].s_voidp = (void*)new QPoint(xret);
+	x[0].s_class = (void*)new QPoint(xret);
     }
     void x_4(Smoke::Stack x) const {
 	// rtti()
@@ -38,16 +38,16 @@ public:
     }
     void x_5(Smoke::Stack x) {
 	// setPen(QPen)
-	this->QCanvasLine::setPen(*(QPen *)x[1].s_voidp);
+	this->QCanvasLine::setPen(*(QPen *)x[1].s_class);
     }
     void x_6(Smoke::Stack x) {
 	// drawShape(QPainter&)
-	this->QCanvasLine::drawShape(*(QPainter *)x[1].s_voidp);
+	this->QCanvasLine::drawShape(*(QPainter *)x[1].s_class);
     }
     void x_7(Smoke::Stack x) const {
 	// areaPoints()
 	QPointArray xret = this->QCanvasLine::areaPoints();
-	x[0].s_voidp = (void*)new QPointArray(xret);
+	x[0].s_class = (void*)new QPointArray(xret);
     }
     virtual void advance(int x1) {
 	Smoke::StackItem x[2];
@@ -58,7 +58,7 @@ public:
     virtual QPointArray areaPoints() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 576, x)) {
-	    QPointArray *xptr = (QPointArray *)x[0].s_voidp;
+	    QPointArray *xptr = (QPointArray *)x[0].s_class;
 	    QPointArray xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -68,7 +68,7 @@ public:
     virtual QPointArray areaPointsAdvanced() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 615, x)) {
-	    QPointArray *xptr = (QPointArray *)x[0].s_voidp;
+	    QPointArray *xptr = (QPointArray *)x[0].s_class;
 	    QPointArray xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -78,7 +78,7 @@ public:
     virtual QRect boundingRect() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 616, x)) {
-	    QRect *xptr = (QRect *)x[0].s_voidp;
+	    QRect *xptr = (QRect *)x[0].s_class;
 	    QRect xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -88,7 +88,7 @@ public:
     virtual QRect boundingRectAdvanced() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 565, x)) {
-	    QRect *xptr = (QRect *)x[0].s_voidp;
+	    QRect *xptr = (QRect *)x[0].s_class;
 	    QRect xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -97,19 +97,19 @@ public:
     }
     virtual bool collidesWith(const QCanvasItem* x1) const {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 609, x)) return (bool)x[0].s_bool;
 	return this->QCanvasPolygonalItem::collidesWith(x1);
     }
     virtual void draw(QPainter& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 618, x)) return;
 	this->QCanvasPolygonalItem::draw(x1);
     }
     virtual void drawShape(QPainter& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 575, x)) return;
 	this->QCanvasLine::drawShape(x1);
     }
@@ -139,13 +139,13 @@ public:
     }
     virtual void setBrush(QBrush x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 611, x)) return;
 	this->QCanvasPolygonalItem::setBrush(x1);
     }
     virtual void setCanvas(QCanvas* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 547, x)) return;
 	this->QCanvasItem::setCanvas(x1);
     }
@@ -157,7 +157,7 @@ public:
     }
     virtual void setPen(QPen x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 574, x)) return;
 	this->QCanvasLine::setPen(x1);
     }

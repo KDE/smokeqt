@@ -9,14 +9,14 @@ public:
     static void x_0(Smoke::Stack x) {
 	// QDate()
 	x_QDate* xret = new x_QDate();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     x_QDate() : QDate() {
     }
     static void x_1(Smoke::Stack x) {
 	// QDate(int, int, int)
 	x_QDate* xret = new x_QDate((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int);
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     x_QDate(int x1, int x2, int x3) : QDate(x1, x2, x3) {
     }
@@ -67,18 +67,18 @@ public:
     }
     void x_11(Smoke::Stack x) const {
 	// toString(Qt::DateFormat)
-	QString xret = this->QDate::toString(*(Qt::DateFormat *)x[1].s_voidp);
-	x[0].s_voidp = (void*)new QString(xret);
+	QString xret = this->QDate::toString(*(Qt::DateFormat *)x[1].s_class);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_12(Smoke::Stack x) const {
 	// toString()
 	QString xret = this->QDate::toString();
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_13(Smoke::Stack x) const {
 	// toString(const QString&)
-	QString xret = this->QDate::toString(*(const QString *)x[1].s_voidp);
-	x[0].s_voidp = (void*)new QString(xret);
+	QString xret = this->QDate::toString(*(const QString *)x[1].s_class);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_14(Smoke::Stack x) {
 	// setYMD(int, int, int)
@@ -88,97 +88,97 @@ public:
     void x_15(Smoke::Stack x) const {
 	// addDays(int)
 	QDate xret = this->QDate::addDays((int)x[1].s_int);
-	x[0].s_voidp = (void*)new QDate(xret);
+	x[0].s_class = (void*)new QDate(xret);
     }
     void x_16(Smoke::Stack x) const {
 	// addMonths(int)
 	QDate xret = this->QDate::addMonths((int)x[1].s_int);
-	x[0].s_voidp = (void*)new QDate(xret);
+	x[0].s_class = (void*)new QDate(xret);
     }
     void x_17(Smoke::Stack x) const {
 	// addYears(int)
 	QDate xret = this->QDate::addYears((int)x[1].s_int);
-	x[0].s_voidp = (void*)new QDate(xret);
+	x[0].s_class = (void*)new QDate(xret);
     }
     void x_18(Smoke::Stack x) const {
 	// daysTo(const QDate&)
-	int xret = this->QDate::daysTo(*(const QDate *)x[1].s_voidp);
+	int xret = this->QDate::daysTo(*(const QDate *)x[1].s_class);
 	x[0].s_int = (int)xret;
     }
     void x_19(Smoke::Stack x) const {
 	// operator==(const QDate&)
-	bool xret = this->QDate::operator==(*(const QDate *)x[1].s_voidp);
+	bool xret = this->QDate::operator==(*(const QDate *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_20(Smoke::Stack x) const {
 	// operator!=(const QDate&)
-	bool xret = this->QDate::operator!=(*(const QDate *)x[1].s_voidp);
+	bool xret = this->QDate::operator!=(*(const QDate *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_21(Smoke::Stack x) const {
 	// operator<(const QDate&)
-	bool xret = this->QDate::operator<(*(const QDate *)x[1].s_voidp);
+	bool xret = this->QDate::operator<(*(const QDate *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_22(Smoke::Stack x) const {
 	// operator<=(const QDate&)
-	bool xret = this->QDate::operator<=(*(const QDate *)x[1].s_voidp);
+	bool xret = this->QDate::operator<=(*(const QDate *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_23(Smoke::Stack x) const {
 	// operator>(const QDate&)
-	bool xret = this->QDate::operator>(*(const QDate *)x[1].s_voidp);
+	bool xret = this->QDate::operator>(*(const QDate *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_24(Smoke::Stack x) const {
 	// operator>=(const QDate&)
-	bool xret = this->QDate::operator>=(*(const QDate *)x[1].s_voidp);
+	bool xret = this->QDate::operator>=(*(const QDate *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     static void x_25(Smoke::Stack x) {
 	// monthName(int)
 	QString xret = QDate::monthName((int)x[1].s_int);
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     static void x_26(Smoke::Stack x) {
 	// dayName(int)
 	QString xret = QDate::dayName((int)x[1].s_int);
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     static void x_27(Smoke::Stack x) {
 	// shortMonthName(int)
 	QString xret = QDate::shortMonthName((int)x[1].s_int);
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     static void x_28(Smoke::Stack x) {
 	// shortDayName(int)
 	QString xret = QDate::shortDayName((int)x[1].s_int);
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     static void x_29(Smoke::Stack x) {
 	// longMonthName(int)
 	QString xret = QDate::longMonthName((int)x[1].s_int);
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     static void x_30(Smoke::Stack x) {
 	// longDayName(int)
 	QString xret = QDate::longDayName((int)x[1].s_int);
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     static void x_31(Smoke::Stack x) {
 	// currentDate()
 	QDate xret = QDate::currentDate();
-	x[0].s_voidp = (void*)new QDate(xret);
+	x[0].s_class = (void*)new QDate(xret);
     }
     static void x_32(Smoke::Stack x) {
 	// fromString(const QString&, Qt::DateFormat)
-	QDate xret = QDate::fromString(*(const QString *)x[1].s_voidp,*(Qt::DateFormat *)x[2].s_voidp);
-	x[0].s_voidp = (void*)new QDate(xret);
+	QDate xret = QDate::fromString(*(const QString *)x[1].s_class,*(Qt::DateFormat *)x[2].s_class);
+	x[0].s_class = (void*)new QDate(xret);
     }
     static void x_33(Smoke::Stack x) {
 	// fromString(const QString&)
-	QDate xret = QDate::fromString(*(const QString *)x[1].s_voidp);
-	x[0].s_voidp = (void*)new QDate(xret);
+	QDate xret = QDate::fromString(*(const QString *)x[1].s_class);
+	x[0].s_class = (void*)new QDate(xret);
     }
     static void x_34(Smoke::Stack x) {
 	// isValid(int, int, int)
@@ -197,7 +197,7 @@ public:
     }
     static void x_37(Smoke::Stack x) {
 	// julianToGregorian(uint, int&, int&, int&)
-	QDate::julianToGregorian((uint)x[1].s_uint,*(int *)x[2].s_voidp,*(int *)x[3].s_voidp,*(int *)x[4].s_voidp);
+	QDate::julianToGregorian((uint)x[1].s_uint,*(int *)x[2].s_class,*(int *)x[3].s_class,*(int *)x[4].s_class);
     }
     ~x_QDate() {}
 };

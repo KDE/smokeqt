@@ -25,111 +25,111 @@
 class x_QFileDialog : public QFileDialog {
 public:
     static void x_0(Smoke::Stack x) {
-	x[0].s_long = (long)QFileDialog::AnyFile;
+	x[0].s_enum = (long)QFileDialog::AnyFile;
     }
     static void x_1(Smoke::Stack x) {
-	x[0].s_long = (long)QFileDialog::ExistingFile;
+	x[0].s_enum = (long)QFileDialog::ExistingFile;
     }
     static void x_2(Smoke::Stack x) {
-	x[0].s_long = (long)QFileDialog::Directory;
+	x[0].s_enum = (long)QFileDialog::Directory;
     }
     static void x_3(Smoke::Stack x) {
-	x[0].s_long = (long)QFileDialog::ExistingFiles;
+	x[0].s_enum = (long)QFileDialog::ExistingFiles;
     }
     static void x_4(Smoke::Stack x) {
-	x[0].s_long = (long)QFileDialog::DirectoryOnly;
+	x[0].s_enum = (long)QFileDialog::DirectoryOnly;
     }
     static void x_5(Smoke::Stack x) {
-	x[0].s_long = (long)QFileDialog::Detail;
+	x[0].s_enum = (long)QFileDialog::Detail;
     }
     static void x_6(Smoke::Stack x) {
-	x[0].s_long = (long)QFileDialog::List;
+	x[0].s_enum = (long)QFileDialog::List;
     }
     static void x_7(Smoke::Stack x) {
-	x[0].s_long = (long)QFileDialog::NoPreview;
+	x[0].s_enum = (long)QFileDialog::NoPreview;
     }
     static void x_8(Smoke::Stack x) {
-	x[0].s_long = (long)QFileDialog::Contents;
+	x[0].s_enum = (long)QFileDialog::Contents;
     }
     static void x_9(Smoke::Stack x) {
-	x[0].s_long = (long)QFileDialog::Info;
+	x[0].s_enum = (long)QFileDialog::Info;
     }
     static void x_10(Smoke::Stack x) {
 	// QFileDialog(const QString&, const QString&, QWidget*, const char*, bool)
-	x_QFileDialog* xret = new x_QFileDialog(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,(QWidget*)x[3].s_voidp,(const char*)x[4].s_voidp,(bool)x[5].s_bool);
-	x[0].s_voidp = (void*)xret;
+	x_QFileDialog* xret = new x_QFileDialog(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,(QWidget*)x[3].s_class,(const char*)x[4].s_class,(bool)x[5].s_bool);
+	x[0].s_class = (void*)xret;
     }
     x_QFileDialog(const QString& x1, const QString& x2, QWidget* x3, const char* x4, bool x5) : QFileDialog(x1, x2, x3, x4, x5) {
     }
     static void x_11(Smoke::Stack x) {
 	// QFileDialog(const QString&, const QString&, QWidget*, const char*)
-	x_QFileDialog* xret = new x_QFileDialog(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,(QWidget*)x[3].s_voidp,(const char*)x[4].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QFileDialog* xret = new x_QFileDialog(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,(QWidget*)x[3].s_class,(const char*)x[4].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QFileDialog(const QString& x1, const QString& x2, QWidget* x3, const char* x4) : QFileDialog(x1, x2, x3, x4) {
     }
     static void x_12(Smoke::Stack x) {
 	// QFileDialog(const QString&, const QString&, QWidget*)
-	x_QFileDialog* xret = new x_QFileDialog(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,(QWidget*)x[3].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QFileDialog* xret = new x_QFileDialog(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,(QWidget*)x[3].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QFileDialog(const QString& x1, const QString& x2, QWidget* x3) : QFileDialog(x1, x2, x3) {
     }
     static void x_13(Smoke::Stack x) {
 	// QFileDialog(const QString&, const QString&)
-	x_QFileDialog* xret = new x_QFileDialog(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QFileDialog* xret = new x_QFileDialog(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QFileDialog(const QString& x1, const QString& x2) : QFileDialog(x1, x2) {
     }
     static void x_14(Smoke::Stack x) {
 	// QFileDialog(const QString&)
-	x_QFileDialog* xret = new x_QFileDialog(*(const QString *)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QFileDialog* xret = new x_QFileDialog(*(const QString *)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QFileDialog(const QString& x1) : QFileDialog(x1) {
     }
     static void x_15(Smoke::Stack x) {
 	// QFileDialog(QWidget*, const char*, bool)
-	x_QFileDialog* xret = new x_QFileDialog((QWidget*)x[1].s_voidp,(const char*)x[2].s_voidp,(bool)x[3].s_bool);
-	x[0].s_voidp = (void*)xret;
+	x_QFileDialog* xret = new x_QFileDialog((QWidget*)x[1].s_class,(const char*)x[2].s_class,(bool)x[3].s_bool);
+	x[0].s_class = (void*)xret;
     }
     x_QFileDialog(QWidget* x1, const char* x2, bool x3) : QFileDialog(x1, x2, x3) {
     }
     static void x_16(Smoke::Stack x) {
 	// QFileDialog(QWidget*, const char*)
-	x_QFileDialog* xret = new x_QFileDialog((QWidget*)x[1].s_voidp,(const char*)x[2].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QFileDialog* xret = new x_QFileDialog((QWidget*)x[1].s_class,(const char*)x[2].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QFileDialog(QWidget* x1, const char* x2) : QFileDialog(x1, x2) {
     }
     static void x_17(Smoke::Stack x) {
 	// QFileDialog(QWidget*)
-	x_QFileDialog* xret = new x_QFileDialog((QWidget*)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QFileDialog* xret = new x_QFileDialog((QWidget*)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QFileDialog(QWidget* x1) : QFileDialog(x1) {
     }
     static void x_18(Smoke::Stack x) {
 	// QFileDialog()
 	x_QFileDialog* xret = new x_QFileDialog();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     x_QFileDialog() : QFileDialog() {
     }
     void x_19(Smoke::Stack x) const {
 	// selectedFile()
 	QString xret = this->QFileDialog::selectedFile();
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_20(Smoke::Stack x) const {
 	// selectedFilter()
 	QString xret = this->QFileDialog::selectedFilter();
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_21(Smoke::Stack x) {
 	// setSelectedFilter(const QString&)
-	this->QFileDialog::setSelectedFilter(*(const QString *)x[1].s_voidp);
+	this->QFileDialog::setSelectedFilter(*(const QString *)x[1].s_class);
     }
     void x_22(Smoke::Stack x) {
 	// setSelectedFilter(int)
@@ -137,7 +137,7 @@ public:
     }
     void x_23(Smoke::Stack x) {
 	// setSelection(const QString&)
-	this->QFileDialog::setSelection(*(const QString *)x[1].s_voidp);
+	this->QFileDialog::setSelection(*(const QString *)x[1].s_class);
     }
     void x_24(Smoke::Stack x) {
 	// selectAll(bool)
@@ -146,21 +146,21 @@ public:
     void x_25(Smoke::Stack x) const {
 	// selectedFiles()
 	QStringList xret = this->QFileDialog::selectedFiles();
-	x[0].s_voidp = (void*)new QStringList(xret);
+	x[0].s_class = (void*)new QStringList(xret);
     }
     void x_26(Smoke::Stack x) const {
 	// dirPath()
 	QString xret = this->QFileDialog::dirPath();
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_27(Smoke::Stack x) {
 	// setDir(const QDir&)
-	this->QFileDialog::setDir(*(const QDir *)x[1].s_voidp);
+	this->QFileDialog::setDir(*(const QDir *)x[1].s_class);
     }
     void x_28(Smoke::Stack x) const {
 	// dir()
 	const QDir* xret = this->QFileDialog::dir();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_29(Smoke::Stack x) {
 	// setShowHiddenFiles(bool)
@@ -181,34 +181,34 @@ public:
     }
     void x_33(Smoke::Stack x) {
 	// setMode(QFileDialog::Mode)
-	this->QFileDialog::setMode(*(QFileDialog::Mode *)x[1].s_voidp);
+	this->QFileDialog::setMode(*(QFileDialog::Mode *)x[1].s_class);
     }
     void x_34(Smoke::Stack x) const {
 	// mode()
 	QFileDialog::Mode xret = this->QFileDialog::mode();
-	x[0].s_voidp = (void*)new QFileDialog::Mode(xret);
+	x[0].s_class = (void*)new QFileDialog::Mode(xret);
     }
     void x_35(Smoke::Stack x) {
 	// setViewMode(QFileDialog::ViewMode)
-	this->QFileDialog::setViewMode(*(QFileDialog::ViewMode *)x[1].s_voidp);
+	this->QFileDialog::setViewMode(*(QFileDialog::ViewMode *)x[1].s_class);
     }
     void x_36(Smoke::Stack x) const {
 	// viewMode()
 	QFileDialog::ViewMode xret = this->QFileDialog::viewMode();
-	x[0].s_voidp = (void*)new QFileDialog::ViewMode(xret);
+	x[0].s_class = (void*)new QFileDialog::ViewMode(xret);
     }
     void x_37(Smoke::Stack x) {
 	// setPreviewMode(QFileDialog::PreviewMode)
-	this->QFileDialog::setPreviewMode(*(QFileDialog::PreviewMode *)x[1].s_voidp);
+	this->QFileDialog::setPreviewMode(*(QFileDialog::PreviewMode *)x[1].s_class);
     }
     void x_38(Smoke::Stack x) const {
 	// previewMode()
 	QFileDialog::PreviewMode xret = this->QFileDialog::previewMode();
-	x[0].s_voidp = (void*)new QFileDialog::PreviewMode(xret);
+	x[0].s_class = (void*)new QFileDialog::PreviewMode(xret);
     }
     void x_39(Smoke::Stack x) {
 	// eventFilter(QObject*, QEvent*)
-	bool xret = this->QFileDialog::eventFilter((QObject*)x[1].s_voidp,(QEvent*)x[2].s_voidp);
+	bool xret = this->QFileDialog::eventFilter((QObject*)x[1].s_class,(QEvent*)x[2].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_40(Smoke::Stack x) const {
@@ -231,20 +231,20 @@ public:
     }
     void x_44(Smoke::Stack x) {
 	// setInfoPreview(QWidget*, QFilePreview*)
-	this->QFileDialog::setInfoPreview((QWidget*)x[1].s_voidp,(QFilePreview*)x[2].s_voidp);
+	this->QFileDialog::setInfoPreview((QWidget*)x[1].s_class,(QFilePreview*)x[2].s_class);
     }
     void x_45(Smoke::Stack x) {
 	// setContentsPreview(QWidget*, QFilePreview*)
-	this->QFileDialog::setContentsPreview((QWidget*)x[1].s_voidp,(QFilePreview*)x[2].s_voidp);
+	this->QFileDialog::setContentsPreview((QWidget*)x[1].s_class,(QFilePreview*)x[2].s_class);
     }
     void x_46(Smoke::Stack x) const {
 	// url()
 	QUrl xret = this->QFileDialog::url();
-	x[0].s_voidp = (void*)new QUrl(xret);
+	x[0].s_class = (void*)new QUrl(xret);
     }
     void x_47(Smoke::Stack x) {
 	// addFilter(const QString&)
-	this->QFileDialog::addFilter(*(const QString *)x[1].s_voidp);
+	this->QFileDialog::addFilter(*(const QString *)x[1].s_class);
     }
     void x_48(Smoke::Stack x) {
 	// done(int)
@@ -252,239 +252,239 @@ public:
     }
     void x_49(Smoke::Stack x) {
 	// setDir(const QString&)
-	this->QFileDialog::setDir(*(const QString *)x[1].s_voidp);
+	this->QFileDialog::setDir(*(const QString *)x[1].s_class);
     }
     void x_50(Smoke::Stack x) {
 	// setUrl(const QUrlOperator&)
-	this->QFileDialog::setUrl(*(const QUrlOperator *)x[1].s_voidp);
+	this->QFileDialog::setUrl(*(const QUrlOperator *)x[1].s_class);
     }
     void x_51(Smoke::Stack x) {
 	// setFilter(const QString&)
-	this->QFileDialog::setFilter(*(const QString *)x[1].s_voidp);
+	this->QFileDialog::setFilter(*(const QString *)x[1].s_class);
     }
     void x_52(Smoke::Stack x) {
 	// setFilters(const QString&)
-	this->QFileDialog::setFilters(*(const QString *)x[1].s_voidp);
+	this->QFileDialog::setFilters(*(const QString *)x[1].s_class);
     }
     void x_53(Smoke::Stack x) {
 	// setFilters(const char**)
-	this->QFileDialog::setFilters((const char**)x[1].s_voidp);
+	this->QFileDialog::setFilters((const char**)x[1].s_class);
     }
     void x_54(Smoke::Stack x) {
 	// setFilters(const QStringList&)
-	this->QFileDialog::setFilters(*(const QStringList *)x[1].s_voidp);
+	this->QFileDialog::setFilters(*(const QStringList *)x[1].s_class);
     }
     void x_55(Smoke::Stack x) {
 	// fileHighlighted(const QString&)
-	this->QFileDialog::fileHighlighted(*(const QString *)x[1].s_voidp);
+	this->QFileDialog::fileHighlighted(*(const QString *)x[1].s_class);
     }
     void x_56(Smoke::Stack x) {
 	// fileSelected(const QString&)
-	this->QFileDialog::fileSelected(*(const QString *)x[1].s_voidp);
+	this->QFileDialog::fileSelected(*(const QString *)x[1].s_class);
     }
     void x_57(Smoke::Stack x) {
 	// filesSelected(const QStringList&)
-	this->QFileDialog::filesSelected(*(const QStringList *)x[1].s_voidp);
+	this->QFileDialog::filesSelected(*(const QStringList *)x[1].s_class);
     }
     void x_58(Smoke::Stack x) {
 	// dirEntered(const QString&)
-	this->QFileDialog::dirEntered(*(const QString *)x[1].s_voidp);
+	this->QFileDialog::dirEntered(*(const QString *)x[1].s_class);
     }
     void x_59(Smoke::Stack x) {
 	// filterSelected(const QString&)
-	this->QFileDialog::filterSelected(*(const QString *)x[1].s_voidp);
+	this->QFileDialog::filterSelected(*(const QString *)x[1].s_class);
     }
     static void x_60(Smoke::Stack x) {
 	// getOpenFileName(const QString&, const QString&, QWidget*, const char*, const QString&, QString*, bool)
-	QString xret = QFileDialog::getOpenFileName(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,(QWidget*)x[3].s_voidp,(const char*)x[4].s_voidp,*(const QString *)x[5].s_voidp,(QString*)x[6].s_voidp,(bool)x[7].s_bool);
-	x[0].s_voidp = (void*)new QString(xret);
+	QString xret = QFileDialog::getOpenFileName(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,(QWidget*)x[3].s_class,(const char*)x[4].s_class,*(const QString *)x[5].s_class,(QString*)x[6].s_class,(bool)x[7].s_bool);
+	x[0].s_class = (void*)new QString(xret);
     }
     static void x_61(Smoke::Stack x) {
 	// getOpenFileName(const QString&, const QString&, QWidget*, const char*, const QString&, QString*)
-	QString xret = QFileDialog::getOpenFileName(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,(QWidget*)x[3].s_voidp,(const char*)x[4].s_voidp,*(const QString *)x[5].s_voidp,(QString*)x[6].s_voidp);
-	x[0].s_voidp = (void*)new QString(xret);
+	QString xret = QFileDialog::getOpenFileName(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,(QWidget*)x[3].s_class,(const char*)x[4].s_class,*(const QString *)x[5].s_class,(QString*)x[6].s_class);
+	x[0].s_class = (void*)new QString(xret);
     }
     static void x_62(Smoke::Stack x) {
 	// getOpenFileName(const QString&, const QString&, QWidget*, const char*, const QString&)
-	QString xret = QFileDialog::getOpenFileName(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,(QWidget*)x[3].s_voidp,(const char*)x[4].s_voidp,*(const QString *)x[5].s_voidp);
-	x[0].s_voidp = (void*)new QString(xret);
+	QString xret = QFileDialog::getOpenFileName(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,(QWidget*)x[3].s_class,(const char*)x[4].s_class,*(const QString *)x[5].s_class);
+	x[0].s_class = (void*)new QString(xret);
     }
     static void x_63(Smoke::Stack x) {
 	// getOpenFileName(const QString&, const QString&, QWidget*, const char*)
-	QString xret = QFileDialog::getOpenFileName(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,(QWidget*)x[3].s_voidp,(const char*)x[4].s_voidp);
-	x[0].s_voidp = (void*)new QString(xret);
+	QString xret = QFileDialog::getOpenFileName(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,(QWidget*)x[3].s_class,(const char*)x[4].s_class);
+	x[0].s_class = (void*)new QString(xret);
     }
     static void x_64(Smoke::Stack x) {
 	// getOpenFileName(const QString&, const QString&, QWidget*)
-	QString xret = QFileDialog::getOpenFileName(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,(QWidget*)x[3].s_voidp);
-	x[0].s_voidp = (void*)new QString(xret);
+	QString xret = QFileDialog::getOpenFileName(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,(QWidget*)x[3].s_class);
+	x[0].s_class = (void*)new QString(xret);
     }
     static void x_65(Smoke::Stack x) {
 	// getOpenFileName(const QString&, const QString&)
-	QString xret = QFileDialog::getOpenFileName(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
-	x[0].s_voidp = (void*)new QString(xret);
+	QString xret = QFileDialog::getOpenFileName(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class);
+	x[0].s_class = (void*)new QString(xret);
     }
     static void x_66(Smoke::Stack x) {
 	// getOpenFileName(const QString&)
-	QString xret = QFileDialog::getOpenFileName(*(const QString *)x[1].s_voidp);
-	x[0].s_voidp = (void*)new QString(xret);
+	QString xret = QFileDialog::getOpenFileName(*(const QString *)x[1].s_class);
+	x[0].s_class = (void*)new QString(xret);
     }
     static void x_67(Smoke::Stack x) {
 	// getOpenFileName()
 	QString xret = QFileDialog::getOpenFileName();
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     static void x_68(Smoke::Stack x) {
 	// getSaveFileName(const QString&, const QString&, QWidget*, const char*, const QString&, QString*, bool)
-	QString xret = QFileDialog::getSaveFileName(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,(QWidget*)x[3].s_voidp,(const char*)x[4].s_voidp,*(const QString *)x[5].s_voidp,(QString*)x[6].s_voidp,(bool)x[7].s_bool);
-	x[0].s_voidp = (void*)new QString(xret);
+	QString xret = QFileDialog::getSaveFileName(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,(QWidget*)x[3].s_class,(const char*)x[4].s_class,*(const QString *)x[5].s_class,(QString*)x[6].s_class,(bool)x[7].s_bool);
+	x[0].s_class = (void*)new QString(xret);
     }
     static void x_69(Smoke::Stack x) {
 	// getSaveFileName(const QString&, const QString&, QWidget*, const char*, const QString&, QString*)
-	QString xret = QFileDialog::getSaveFileName(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,(QWidget*)x[3].s_voidp,(const char*)x[4].s_voidp,*(const QString *)x[5].s_voidp,(QString*)x[6].s_voidp);
-	x[0].s_voidp = (void*)new QString(xret);
+	QString xret = QFileDialog::getSaveFileName(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,(QWidget*)x[3].s_class,(const char*)x[4].s_class,*(const QString *)x[5].s_class,(QString*)x[6].s_class);
+	x[0].s_class = (void*)new QString(xret);
     }
     static void x_70(Smoke::Stack x) {
 	// getSaveFileName(const QString&, const QString&, QWidget*, const char*, const QString&)
-	QString xret = QFileDialog::getSaveFileName(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,(QWidget*)x[3].s_voidp,(const char*)x[4].s_voidp,*(const QString *)x[5].s_voidp);
-	x[0].s_voidp = (void*)new QString(xret);
+	QString xret = QFileDialog::getSaveFileName(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,(QWidget*)x[3].s_class,(const char*)x[4].s_class,*(const QString *)x[5].s_class);
+	x[0].s_class = (void*)new QString(xret);
     }
     static void x_71(Smoke::Stack x) {
 	// getSaveFileName(const QString&, const QString&, QWidget*, const char*)
-	QString xret = QFileDialog::getSaveFileName(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,(QWidget*)x[3].s_voidp,(const char*)x[4].s_voidp);
-	x[0].s_voidp = (void*)new QString(xret);
+	QString xret = QFileDialog::getSaveFileName(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,(QWidget*)x[3].s_class,(const char*)x[4].s_class);
+	x[0].s_class = (void*)new QString(xret);
     }
     static void x_72(Smoke::Stack x) {
 	// getSaveFileName(const QString&, const QString&, QWidget*)
-	QString xret = QFileDialog::getSaveFileName(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,(QWidget*)x[3].s_voidp);
-	x[0].s_voidp = (void*)new QString(xret);
+	QString xret = QFileDialog::getSaveFileName(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,(QWidget*)x[3].s_class);
+	x[0].s_class = (void*)new QString(xret);
     }
     static void x_73(Smoke::Stack x) {
 	// getSaveFileName(const QString&, const QString&)
-	QString xret = QFileDialog::getSaveFileName(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
-	x[0].s_voidp = (void*)new QString(xret);
+	QString xret = QFileDialog::getSaveFileName(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class);
+	x[0].s_class = (void*)new QString(xret);
     }
     static void x_74(Smoke::Stack x) {
 	// getSaveFileName(const QString&)
-	QString xret = QFileDialog::getSaveFileName(*(const QString *)x[1].s_voidp);
-	x[0].s_voidp = (void*)new QString(xret);
+	QString xret = QFileDialog::getSaveFileName(*(const QString *)x[1].s_class);
+	x[0].s_class = (void*)new QString(xret);
     }
     static void x_75(Smoke::Stack x) {
 	// getSaveFileName()
 	QString xret = QFileDialog::getSaveFileName();
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     static void x_76(Smoke::Stack x) {
 	// getExistingDirectory(const QString&, QWidget*, const char*, const QString&, bool, bool)
-	QString xret = QFileDialog::getExistingDirectory(*(const QString *)x[1].s_voidp,(QWidget*)x[2].s_voidp,(const char*)x[3].s_voidp,*(const QString *)x[4].s_voidp,(bool)x[5].s_bool,(bool)x[6].s_bool);
-	x[0].s_voidp = (void*)new QString(xret);
+	QString xret = QFileDialog::getExistingDirectory(*(const QString *)x[1].s_class,(QWidget*)x[2].s_class,(const char*)x[3].s_class,*(const QString *)x[4].s_class,(bool)x[5].s_bool,(bool)x[6].s_bool);
+	x[0].s_class = (void*)new QString(xret);
     }
     static void x_77(Smoke::Stack x) {
 	// getExistingDirectory(const QString&, QWidget*, const char*, const QString&, bool)
-	QString xret = QFileDialog::getExistingDirectory(*(const QString *)x[1].s_voidp,(QWidget*)x[2].s_voidp,(const char*)x[3].s_voidp,*(const QString *)x[4].s_voidp,(bool)x[5].s_bool);
-	x[0].s_voidp = (void*)new QString(xret);
+	QString xret = QFileDialog::getExistingDirectory(*(const QString *)x[1].s_class,(QWidget*)x[2].s_class,(const char*)x[3].s_class,*(const QString *)x[4].s_class,(bool)x[5].s_bool);
+	x[0].s_class = (void*)new QString(xret);
     }
     static void x_78(Smoke::Stack x) {
 	// getExistingDirectory(const QString&, QWidget*, const char*, const QString&)
-	QString xret = QFileDialog::getExistingDirectory(*(const QString *)x[1].s_voidp,(QWidget*)x[2].s_voidp,(const char*)x[3].s_voidp,*(const QString *)x[4].s_voidp);
-	x[0].s_voidp = (void*)new QString(xret);
+	QString xret = QFileDialog::getExistingDirectory(*(const QString *)x[1].s_class,(QWidget*)x[2].s_class,(const char*)x[3].s_class,*(const QString *)x[4].s_class);
+	x[0].s_class = (void*)new QString(xret);
     }
     static void x_79(Smoke::Stack x) {
 	// getExistingDirectory(const QString&, QWidget*, const char*)
-	QString xret = QFileDialog::getExistingDirectory(*(const QString *)x[1].s_voidp,(QWidget*)x[2].s_voidp,(const char*)x[3].s_voidp);
-	x[0].s_voidp = (void*)new QString(xret);
+	QString xret = QFileDialog::getExistingDirectory(*(const QString *)x[1].s_class,(QWidget*)x[2].s_class,(const char*)x[3].s_class);
+	x[0].s_class = (void*)new QString(xret);
     }
     static void x_80(Smoke::Stack x) {
 	// getExistingDirectory(const QString&, QWidget*)
-	QString xret = QFileDialog::getExistingDirectory(*(const QString *)x[1].s_voidp,(QWidget*)x[2].s_voidp);
-	x[0].s_voidp = (void*)new QString(xret);
+	QString xret = QFileDialog::getExistingDirectory(*(const QString *)x[1].s_class,(QWidget*)x[2].s_class);
+	x[0].s_class = (void*)new QString(xret);
     }
     static void x_81(Smoke::Stack x) {
 	// getExistingDirectory(const QString&)
-	QString xret = QFileDialog::getExistingDirectory(*(const QString *)x[1].s_voidp);
-	x[0].s_voidp = (void*)new QString(xret);
+	QString xret = QFileDialog::getExistingDirectory(*(const QString *)x[1].s_class);
+	x[0].s_class = (void*)new QString(xret);
     }
     static void x_82(Smoke::Stack x) {
 	// getExistingDirectory()
 	QString xret = QFileDialog::getExistingDirectory();
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     static void x_83(Smoke::Stack x) {
 	// getOpenFileNames(const QString&, const QString&, QWidget*, const char*, const QString&, QString*, bool)
-	QStringList xret = QFileDialog::getOpenFileNames(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,(QWidget*)x[3].s_voidp,(const char*)x[4].s_voidp,*(const QString *)x[5].s_voidp,(QString*)x[6].s_voidp,(bool)x[7].s_bool);
-	x[0].s_voidp = (void*)new QStringList(xret);
+	QStringList xret = QFileDialog::getOpenFileNames(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,(QWidget*)x[3].s_class,(const char*)x[4].s_class,*(const QString *)x[5].s_class,(QString*)x[6].s_class,(bool)x[7].s_bool);
+	x[0].s_class = (void*)new QStringList(xret);
     }
     static void x_84(Smoke::Stack x) {
 	// getOpenFileNames(const QString&, const QString&, QWidget*, const char*, const QString&, QString*)
-	QStringList xret = QFileDialog::getOpenFileNames(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,(QWidget*)x[3].s_voidp,(const char*)x[4].s_voidp,*(const QString *)x[5].s_voidp,(QString*)x[6].s_voidp);
-	x[0].s_voidp = (void*)new QStringList(xret);
+	QStringList xret = QFileDialog::getOpenFileNames(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,(QWidget*)x[3].s_class,(const char*)x[4].s_class,*(const QString *)x[5].s_class,(QString*)x[6].s_class);
+	x[0].s_class = (void*)new QStringList(xret);
     }
     static void x_85(Smoke::Stack x) {
 	// getOpenFileNames(const QString&, const QString&, QWidget*, const char*, const QString&)
-	QStringList xret = QFileDialog::getOpenFileNames(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,(QWidget*)x[3].s_voidp,(const char*)x[4].s_voidp,*(const QString *)x[5].s_voidp);
-	x[0].s_voidp = (void*)new QStringList(xret);
+	QStringList xret = QFileDialog::getOpenFileNames(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,(QWidget*)x[3].s_class,(const char*)x[4].s_class,*(const QString *)x[5].s_class);
+	x[0].s_class = (void*)new QStringList(xret);
     }
     static void x_86(Smoke::Stack x) {
 	// getOpenFileNames(const QString&, const QString&, QWidget*, const char*)
-	QStringList xret = QFileDialog::getOpenFileNames(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,(QWidget*)x[3].s_voidp,(const char*)x[4].s_voidp);
-	x[0].s_voidp = (void*)new QStringList(xret);
+	QStringList xret = QFileDialog::getOpenFileNames(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,(QWidget*)x[3].s_class,(const char*)x[4].s_class);
+	x[0].s_class = (void*)new QStringList(xret);
     }
     static void x_87(Smoke::Stack x) {
 	// getOpenFileNames(const QString&, const QString&, QWidget*)
-	QStringList xret = QFileDialog::getOpenFileNames(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,(QWidget*)x[3].s_voidp);
-	x[0].s_voidp = (void*)new QStringList(xret);
+	QStringList xret = QFileDialog::getOpenFileNames(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,(QWidget*)x[3].s_class);
+	x[0].s_class = (void*)new QStringList(xret);
     }
     static void x_88(Smoke::Stack x) {
 	// getOpenFileNames(const QString&, const QString&)
-	QStringList xret = QFileDialog::getOpenFileNames(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
-	x[0].s_voidp = (void*)new QStringList(xret);
+	QStringList xret = QFileDialog::getOpenFileNames(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class);
+	x[0].s_class = (void*)new QStringList(xret);
     }
     static void x_89(Smoke::Stack x) {
 	// getOpenFileNames(const QString&)
-	QStringList xret = QFileDialog::getOpenFileNames(*(const QString *)x[1].s_voidp);
-	x[0].s_voidp = (void*)new QStringList(xret);
+	QStringList xret = QFileDialog::getOpenFileNames(*(const QString *)x[1].s_class);
+	x[0].s_class = (void*)new QStringList(xret);
     }
     static void x_90(Smoke::Stack x) {
 	// getOpenFileNames()
 	QStringList xret = QFileDialog::getOpenFileNames();
-	x[0].s_voidp = (void*)new QStringList(xret);
+	x[0].s_class = (void*)new QStringList(xret);
     }
     static void x_91(Smoke::Stack x) {
 	// setIconProvider(QFileIconProvider*)
-	QFileDialog::setIconProvider((QFileIconProvider*)x[1].s_voidp);
+	QFileDialog::setIconProvider((QFileIconProvider*)x[1].s_class);
     }
     static void x_92(Smoke::Stack x) {
 	// iconProvider()
 	QFileIconProvider* xret = QFileDialog::iconProvider();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_93(Smoke::Stack x) {
 	// resizeEvent(QResizeEvent*)
-	this->QFileDialog::resizeEvent((QResizeEvent*)x[1].s_voidp);
+	this->QFileDialog::resizeEvent((QResizeEvent*)x[1].s_class);
     }
     void x_94(Smoke::Stack x) {
 	// keyPressEvent(QKeyEvent*)
-	this->QFileDialog::keyPressEvent((QKeyEvent*)x[1].s_voidp);
+	this->QFileDialog::keyPressEvent((QKeyEvent*)x[1].s_class);
     }
     void x_95(Smoke::Stack x) {
 	// addWidgets(QLabel*, QWidget*, QPushButton*)
-	this->QFileDialog::addWidgets((QLabel*)x[1].s_voidp,(QWidget*)x[2].s_voidp,(QPushButton*)x[3].s_voidp);
+	this->QFileDialog::addWidgets((QLabel*)x[1].s_class,(QWidget*)x[2].s_class,(QPushButton*)x[3].s_class);
     }
     void x_96(Smoke::Stack x) {
 	// addToolButton(QButton*, bool)
-	this->QFileDialog::addToolButton((QButton*)x[1].s_voidp,(bool)x[2].s_bool);
+	this->QFileDialog::addToolButton((QButton*)x[1].s_class,(bool)x[2].s_bool);
     }
     void x_97(Smoke::Stack x) {
 	// addToolButton(QButton*)
-	this->QFileDialog::addToolButton((QButton*)x[1].s_voidp);
+	this->QFileDialog::addToolButton((QButton*)x[1].s_class);
     }
     void x_98(Smoke::Stack x) {
 	// addLeftWidget(QWidget*)
-	this->QFileDialog::addLeftWidget((QWidget*)x[1].s_voidp);
+	this->QFileDialog::addLeftWidget((QWidget*)x[1].s_class);
     }
     void x_99(Smoke::Stack x) {
 	// addRightWidget(QWidget*)
-	this->QFileDialog::addRightWidget((QWidget*)x[1].s_voidp);
+	this->QFileDialog::addRightWidget((QWidget*)x[1].s_class);
     }
     virtual void accept() {
 	Smoke::StackItem x[1];
@@ -498,15 +498,15 @@ public:
     }
     virtual bool checkConnectArgs(const char* x1, const QObject* x2, const char* x3) {
 	Smoke::StackItem x[4];
-	x[1].s_voidp = (void*)x1;
-	x[2].s_voidp = (void*)x2;
-	x[3].s_voidp = (void*)x3;
+	x[1].s_class = (void*)x1;
+	x[2].s_class = (void*)x2;
+	x[3].s_class = (void*)x3;
 	if(call_method((void*)this, 5469, x)) return (bool)x[0].s_bool;
 	return this->QObject::checkConnectArgs(x1, x2, x3);
     }
     virtual void childEvent(QChildEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5465, x)) return;
 	this->QObject::childEvent(x1);
     }
@@ -518,33 +518,33 @@ public:
     }
     virtual void closeEvent(QCloseEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 1719, x)) return;
 	this->QDialog::closeEvent(x1);
     }
     virtual bool cmd(int x1, QPainter* x2, QPDevCmdParam* x3) {
 	Smoke::StackItem x[4];
 	x[1].s_int = (int)x1;
-	x[2].s_voidp = (void*)x2;
-	x[3].s_voidp = (void*)x3;
+	x[2].s_class = (void*)x2;
+	x[3].s_class = (void*)x3;
 	if(call_method((void*)this, 5552, x)) return (bool)x[0].s_bool;
 	return this->QPaintDevice::cmd(x1, x2, x3);
     }
     virtual void connectNotify(const char* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5467, x)) return;
 	this->QObject::connectNotify(x1);
     }
     virtual void contextMenuEvent(QContextMenuEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 1721, x)) return;
 	this->QDialog::contextMenuEvent(x1);
     }
     virtual void create(WId x1, bool x2, bool x3) {
 	Smoke::StackItem x[4];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	x[2].s_bool = (bool)x2;
 	x[3].s_bool = (bool)x3;
 	if(call_method((void*)this, 9724, x)) return;
@@ -552,7 +552,7 @@ public:
     }
     virtual void customEvent(QCustomEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5466, x)) return;
 	this->QObject::customEvent(x1);
     }
@@ -570,7 +570,7 @@ public:
     }
     virtual void disconnectNotify(const char* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5468, x)) return;
 	this->QObject::disconnectNotify(x1);
     }
@@ -582,25 +582,25 @@ public:
     }
     virtual void dragEnterEvent(QDragEnterEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 9710, x)) return;
 	this->QWidget::dragEnterEvent(x1);
     }
     virtual void dragLeaveEvent(QDragLeaveEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 9712, x)) return;
 	this->QWidget::dragLeaveEvent(x1);
     }
     virtual void dragMoveEvent(QDragMoveEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 9711, x)) return;
 	this->QWidget::dragMoveEvent(x1);
     }
     virtual void dropEvent(QDropEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 9713, x)) return;
 	this->QWidget::dropEvent(x1);
     }
@@ -612,26 +612,26 @@ public:
     }
     virtual void enterEvent(QEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 9699, x)) return;
 	this->QWidget::enterEvent(x1);
     }
     virtual bool event(QEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 9689, x)) return (bool)x[0].s_bool;
 	return this->QWidget::event(x1);
     }
     virtual bool eventFilter(QObject* x1, QEvent* x2) {
 	Smoke::StackItem x[3];
-	x[1].s_voidp = (void*)x1;
-	x[2].s_voidp = (void*)x2;
+	x[1].s_class = (void*)x1;
+	x[2].s_class = (void*)x2;
 	if(call_method((void*)this, 2514, x)) return (bool)x[0].s_bool;
 	return this->QFileDialog::eventFilter(x1, x2);
     }
     virtual void focusInEvent(QFocusEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 9697, x)) return;
 	this->QWidget::focusInEvent(x1);
     }
@@ -643,28 +643,28 @@ public:
     }
     virtual void focusOutEvent(QFocusEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 9698, x)) return;
 	this->QWidget::focusOutEvent(x1);
     }
     virtual void fontChange(const QFont& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 9720, x)) return;
 	this->QWidget::fontChange(x1);
     }
     virtual int fontInf(QFont* x1, int x2) const {
 	Smoke::StackItem x[3];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	x[2].s_int = (int)x2;
 	if(call_method((void*)this, 5557, x)) return (int)x[0].s_int;
 	return this->QPaintDevice::fontInf(x1, x2);
     }
     virtual int fontMet(QFont* x1, int x2, const char* x3, int x4) const {
 	Smoke::StackItem x[5];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	x[2].s_int = (int)x2;
-	x[3].s_voidp = (void*)x3;
+	x[3].s_class = (void*)x3;
 	x[4].s_int = (int)x4;
 	if(call_method((void*)this, 5554, x)) return (int)x[0].s_int;
 	return this->QPaintDevice::fontMet(x1, x2, x3, x4);
@@ -682,49 +682,49 @@ public:
     }
     virtual void hideEvent(QHideEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 9715, x)) return;
 	this->QWidget::hideEvent(x1);
     }
     virtual void imComposeEvent(QIMEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 9707, x)) return;
 	this->QWidget::imComposeEvent(x1);
     }
     virtual void imEndEvent(QIMEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 9708, x)) return;
 	this->QWidget::imEndEvent(x1);
     }
     virtual void imStartEvent(QIMEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 9706, x)) return;
 	this->QWidget::imStartEvent(x1);
     }
     virtual void insertChild(QObject* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5427, x)) return;
 	this->QObject::insertChild(x1);
     }
     virtual void keyPressEvent(QKeyEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 2569, x)) return;
 	this->QFileDialog::keyPressEvent(x1);
     }
     virtual void keyReleaseEvent(QKeyEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 9696, x)) return;
 	this->QWidget::keyReleaseEvent(x1);
     }
     virtual void leaveEvent(QEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 9700, x)) return;
 	this->QWidget::leaveEvent(x1);
     }
@@ -737,7 +737,7 @@ public:
     virtual QSize minimumSizeHint() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 1713, x)) {
-	    QSize *xptr = (QSize *)x[0].s_voidp;
+	    QSize *xptr = (QSize *)x[0].s_class;
 	    QSize xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -746,25 +746,25 @@ public:
     }
     virtual void mouseDoubleClickEvent(QMouseEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 9692, x)) return;
 	this->QWidget::mouseDoubleClickEvent(x1);
     }
     virtual void mouseMoveEvent(QMouseEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 9693, x)) return;
 	this->QWidget::mouseMoveEvent(x1);
     }
     virtual void mousePressEvent(QMouseEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 9690, x)) return;
 	this->QWidget::mousePressEvent(x1);
     }
     virtual void mouseReleaseEvent(QMouseEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 9691, x)) return;
 	this->QWidget::mouseReleaseEvent(x1);
     }
@@ -777,19 +777,19 @@ public:
     }
     virtual void moveEvent(QMoveEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 9702, x)) return;
 	this->QWidget::moveEvent(x1);
     }
     virtual void paintEvent(QPaintEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 9701, x)) return;
 	this->QWidget::paintEvent(x1);
     }
     virtual void paletteChange(const QPalette& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 9719, x)) return;
 	this->QWidget::paletteChange(x1);
     }
@@ -800,9 +800,9 @@ public:
     }
     virtual QVariant property(const char* x1) const {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5441, x)) {
-	    QVariant *xptr = (QVariant *)x[0].s_voidp;
+	    QVariant *xptr = (QVariant *)x[0].s_class;
 	    QVariant xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -816,15 +816,15 @@ public:
     }
     virtual void removeChild(QObject* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5428, x)) return;
 	this->QObject::removeChild(x1);
     }
     virtual void reparent(QWidget* x1, Qt::WFlags x2, const QPoint& x3, bool x4) {
 	Smoke::StackItem x[5];
-	x[1].s_voidp = (void*)x1;
-	x[2].s_voidp = (void*)&x2;
-	x[3].s_voidp = (void*)&x3;
+	x[1].s_class = (void*)x1;
+	x[2].s_class = (void*)&x2;
+	x[3].s_class = (void*)&x3;
 	x[4].s_bool = (bool)x4;
 	if(call_method((void*)this, 9612, x)) return;
 	this->QWidget::reparent(x1, x2, x3, x4);
@@ -838,7 +838,7 @@ public:
     }
     virtual void resizeEvent(QResizeEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 2568, x)) return;
 	this->QFileDialog::resizeEvent(x1);
     }
@@ -866,37 +866,37 @@ public:
     }
     virtual void setBackgroundColor(const QColor& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 9579, x)) return;
 	this->QWidget::setBackgroundColor(x1);
     }
     virtual void setBackgroundMode(Qt::BackgroundMode x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 9541, x)) return;
 	this->QWidget::setBackgroundMode(x1);
     }
     virtual void setBackgroundOrigin(QWidget::BackgroundOrigin x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 9632, x)) return;
 	this->QWidget::setBackgroundOrigin(x1);
     }
     virtual void setBackgroundPixmap(const QPixmap& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 9581, x)) return;
 	this->QWidget::setBackgroundPixmap(x1);
     }
     virtual void setCaption(const QString& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 9647, x)) return;
 	this->QWidget::setCaption(x1);
     }
     virtual void setCursor(const QCursor& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 9568, x)) return;
 	this->QWidget::setCursor(x1);
     }
@@ -908,13 +908,13 @@ public:
     }
     virtual void setEraseColor(const QColor& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 9545, x)) return;
 	this->QWidget::setEraseColor(x1);
     }
     virtual void setErasePixmap(const QPixmap& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 9547, x)) return;
 	this->QWidget::setErasePixmap(x1);
     }
@@ -925,25 +925,25 @@ public:
     }
     virtual void setFocusPolicy(QWidget::FocusPolicy x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 9586, x)) return;
 	this->QWidget::setFocusPolicy(x1);
     }
     virtual void setFocusProxy(QWidget* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 9588, x)) return;
 	this->QWidget::setFocusProxy(x1);
     }
     virtual void setFont(const QFont& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 9562, x)) return;
 	this->QWidget::setFont(x1);
     }
     virtual void setGeometry(const QRect& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 1707, x)) return;
 	this->QDialog::setGeometry(x1);
     }
@@ -958,13 +958,13 @@ public:
     }
     virtual void setIcon(const QPixmap& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 9648, x)) return;
 	this->QWidget::setIcon(x1);
     }
     virtual void setIconText(const QString& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 9649, x)) return;
 	this->QWidget::setIconText(x1);
     }
@@ -976,13 +976,13 @@ public:
     }
     virtual void setMask(const QBitmap& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 9575, x)) return;
 	this->QWidget::setMask(x1);
     }
     virtual void setMask(const QRegion& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 9576, x)) return;
 	this->QWidget::setMask(x1);
     }
@@ -1000,7 +1000,7 @@ public:
 	x[3].s_int = (int)x3;
 	x[4].s_int = (int)x4;
 	x[5].s_bool = (bool)x5;
-	x[6].s_voidp = (void*)x6;
+	x[6].s_class = (void*)x6;
 	if(call_method((void*)this, 9742, x)) return;
 	this->QWidget::setMicroFocusHint(x1, x2, x3, x4, x5, x6);
     }
@@ -1019,32 +1019,32 @@ public:
     }
     virtual void setName(const char* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 9485, x)) return;
 	this->QWidget::setName(x1);
     }
     virtual void setPalette(const QPalette& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 9551, x)) return;
 	this->QWidget::setPalette(x1);
     }
     virtual void setPaletteBackgroundColor(const QColor& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 9556, x)) return;
 	this->QWidget::setPaletteBackgroundColor(x1);
     }
     virtual void setPaletteBackgroundPixmap(const QPixmap& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 9558, x)) return;
 	this->QWidget::setPaletteBackgroundPixmap(x1);
     }
     virtual bool setProperty(const char* x1, const QVariant& x2) {
 	Smoke::StackItem x[3];
-	x[1].s_voidp = (void*)x1;
-	x[2].s_voidp = (void*)&x2;
+	x[1].s_class = (void*)x1;
+	x[2].s_class = (void*)&x2;
 	if(call_method((void*)this, 5440, x)) return (bool)x[0].s_bool;
 	return this->QObject::setProperty(x1, x2);
     }
@@ -1056,7 +1056,7 @@ public:
     }
     virtual void setSelectedFilter(const QString& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 2496, x)) return;
 	this->QFileDialog::setSelectedFilter(x1);
     }
@@ -1075,7 +1075,7 @@ public:
     }
     virtual void setSizePolicy(QSizePolicy x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 9607, x)) return;
 	this->QWidget::setSizePolicy(x1);
     }
@@ -1087,7 +1087,7 @@ public:
     }
     virtual void setWFlags(Qt::WFlags x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 9735, x)) return;
 	this->QWidget::setWFlags(x1);
     }
@@ -1104,7 +1104,7 @@ public:
     }
     virtual void showEvent(QShowEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 9714, x)) return;
 	this->QWidget::showEvent(x1);
     }
@@ -1126,7 +1126,7 @@ public:
     virtual QSize sizeHint() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 1712, x)) {
-	    QSize *xptr = (QSize *)x[0].s_voidp;
+	    QSize *xptr = (QSize *)x[0].s_class;
 	    QSize xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -1136,7 +1136,7 @@ public:
     virtual QSizePolicy sizePolicy() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 9606, x)) {
-	    QSizePolicy *xptr = (QSizePolicy *)x[0].s_voidp;
+	    QSizePolicy *xptr = (QSizePolicy *)x[0].s_class;
 	    QSizePolicy xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -1145,19 +1145,19 @@ public:
     }
     virtual void styleChange(QStyle& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 9717, x)) return;
 	this->QWidget::styleChange(x1);
     }
     virtual void tabletEvent(QTabletEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 9709, x)) return;
 	this->QWidget::tabletEvent(x1);
     }
     virtual void timerEvent(QTimerEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5464, x)) return;
 	this->QObject::timerEvent(x1);
     }
@@ -1173,7 +1173,7 @@ public:
     }
     virtual void wheelEvent(QWheelEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 9694, x)) return;
 	this->QWidget::wheelEvent(x1);
     }

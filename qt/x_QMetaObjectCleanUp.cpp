@@ -7,13 +7,13 @@ public:
     static void x_0(Smoke::Stack x) {
 	// QMetaObjectCleanUp()
 	x_QMetaObjectCleanUp* xret = new x_QMetaObjectCleanUp();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     x_QMetaObjectCleanUp() : QMetaObjectCleanUp() {
     }
     void x_1(Smoke::Stack x) {
 	// setMetaObject(QMetaObject*&)
-	this->QMetaObjectCleanUp::setMetaObject(*(QMetaObject* *)x[1].s_voidp);
+	this->QMetaObjectCleanUp::setMetaObject(*(QMetaObject* *)x[1].s_class);
     }
     ~x_QMetaObjectCleanUp() {}
 };

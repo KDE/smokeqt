@@ -10,53 +10,53 @@
 class x_QTableItem : public QTableItem {
 public:
     static void x_0(Smoke::Stack x) {
-	x[0].s_long = (long)QTableItem::Never;
+	x[0].s_enum = (long)QTableItem::Never;
     }
     static void x_1(Smoke::Stack x) {
-	x[0].s_long = (long)QTableItem::OnTyping;
+	x[0].s_enum = (long)QTableItem::OnTyping;
     }
     static void x_2(Smoke::Stack x) {
-	x[0].s_long = (long)QTableItem::WhenCurrent;
+	x[0].s_enum = (long)QTableItem::WhenCurrent;
     }
     static void x_3(Smoke::Stack x) {
-	x[0].s_long = (long)QTableItem::Always;
+	x[0].s_enum = (long)QTableItem::Always;
     }
     static void x_4(Smoke::Stack x) {
 	// QTableItem(QTable*, QTableItem::EditType, const QString&)
-	x_QTableItem* xret = new x_QTableItem((QTable*)x[1].s_voidp,*(QTableItem::EditType *)x[2].s_voidp,*(const QString *)x[3].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QTableItem* xret = new x_QTableItem((QTable*)x[1].s_class,*(QTableItem::EditType *)x[2].s_class,*(const QString *)x[3].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QTableItem(QTable* x1, QTableItem::EditType x2, const QString& x3) : QTableItem(x1, x2, x3) {
     }
     static void x_5(Smoke::Stack x) {
 	// QTableItem(QTable*, QTableItem::EditType, const QString&, const QPixmap&)
-	x_QTableItem* xret = new x_QTableItem((QTable*)x[1].s_voidp,*(QTableItem::EditType *)x[2].s_voidp,*(const QString *)x[3].s_voidp,*(const QPixmap *)x[4].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QTableItem* xret = new x_QTableItem((QTable*)x[1].s_class,*(QTableItem::EditType *)x[2].s_class,*(const QString *)x[3].s_class,*(const QPixmap *)x[4].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QTableItem(QTable* x1, QTableItem::EditType x2, const QString& x3, const QPixmap& x4) : QTableItem(x1, x2, x3, x4) {
     }
     void x_6(Smoke::Stack x) const {
 	// pixmap()
 	QPixmap xret = this->QTableItem::pixmap();
-	x[0].s_voidp = (void*)new QPixmap(xret);
+	x[0].s_class = (void*)new QPixmap(xret);
     }
     void x_7(Smoke::Stack x) const {
 	// text()
 	QString xret = this->QTableItem::text();
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_8(Smoke::Stack x) {
 	// setPixmap(const QPixmap&)
-	this->QTableItem::setPixmap(*(const QPixmap *)x[1].s_voidp);
+	this->QTableItem::setPixmap(*(const QPixmap *)x[1].s_class);
     }
     void x_9(Smoke::Stack x) {
 	// setText(const QString&)
-	this->QTableItem::setText(*(const QString *)x[1].s_voidp);
+	this->QTableItem::setText(*(const QString *)x[1].s_class);
     }
     void x_10(Smoke::Stack x) const {
 	// table()
 	QTable* xret = this->QTableItem::table();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_11(Smoke::Stack x) const {
 	// alignment()
@@ -75,16 +75,16 @@ public:
     void x_14(Smoke::Stack x) const {
 	// editType()
 	QTableItem::EditType xret = this->QTableItem::editType();
-	x[0].s_voidp = (void*)new QTableItem::EditType(xret);
+	x[0].s_class = (void*)new QTableItem::EditType(xret);
     }
     void x_15(Smoke::Stack x) const {
 	// createEditor()
 	QWidget* xret = this->QTableItem::createEditor();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_16(Smoke::Stack x) {
 	// setContentFromEditor(QWidget*)
-	this->QTableItem::setContentFromEditor((QWidget*)x[1].s_voidp);
+	this->QTableItem::setContentFromEditor((QWidget*)x[1].s_class);
     }
     void x_17(Smoke::Stack x) {
 	// setReplaceable(bool)
@@ -98,12 +98,12 @@ public:
     void x_19(Smoke::Stack x) const {
 	// key()
 	QString xret = this->QTableItem::key();
-	x[0].s_voidp = (void*)new QString(xret);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_20(Smoke::Stack x) const {
 	// sizeHint()
 	QSize xret = this->QTableItem::sizeHint();
-	x[0].s_voidp = (void*)new QSize(xret);
+	x[0].s_class = (void*)new QSize(xret);
     }
     void x_21(Smoke::Stack x) {
 	// setSpan(int, int)
@@ -139,7 +139,7 @@ public:
     }
     void x_28(Smoke::Stack x) {
 	// paint(QPainter*, const QColorGroup&, const QRect&, bool)
-	this->QTableItem::paint((QPainter*)x[1].s_voidp,*(const QColorGroup *)x[2].s_voidp,*(const QRect *)x[3].s_voidp,(bool)x[4].s_bool);
+	this->QTableItem::paint((QPainter*)x[1].s_class,*(const QColorGroup *)x[2].s_class,*(const QRect *)x[3].s_class,(bool)x[4].s_bool);
     }
     void x_29(Smoke::Stack x) {
 	// updateEditor(int, int)
@@ -166,13 +166,13 @@ public:
     }
     virtual QWidget* createEditor() const {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 8381, x)) 	return (QWidget*)x[0].s_voidp;
+	if(call_method((void*)this, 8381, x)) 	return (QWidget*)x[0].s_class;
 	return this->QTableItem::createEditor();
     }
     virtual QString key() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 8385, x)) {
-	    QString *xptr = (QString *)x[0].s_voidp;
+	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -181,9 +181,9 @@ public:
     }
     virtual void paint(QPainter* x1, const QColorGroup& x2, const QRect& x3, bool x4) {
 	Smoke::StackItem x[5];
-	x[1].s_voidp = (void*)x1;
-	x[2].s_voidp = (void*)&x2;
-	x[3].s_voidp = (void*)&x3;
+	x[1].s_class = (void*)x1;
+	x[2].s_class = (void*)&x2;
+	x[3].s_class = (void*)&x3;
 	x[4].s_bool = (bool)x4;
 	if(call_method((void*)this, 8394, x)) return;
 	this->QTableItem::paint(x1, x2, x3, x4);
@@ -191,7 +191,7 @@ public:
     virtual QPixmap pixmap() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 8372, x)) {
-	    QPixmap *xptr = (QPixmap *)x[0].s_voidp;
+	    QPixmap *xptr = (QPixmap *)x[0].s_class;
 	    QPixmap xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -211,7 +211,7 @@ public:
     }
     virtual void setContentFromEditor(QWidget* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 8382, x)) return;
 	this->QTableItem::setContentFromEditor(x1);
     }
@@ -223,7 +223,7 @@ public:
     }
     virtual void setPixmap(const QPixmap& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 8374, x)) return;
 	this->QTableItem::setPixmap(x1);
     }
@@ -248,7 +248,7 @@ public:
     }
     virtual void setText(const QString& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 8375, x)) return;
 	this->QTableItem::setText(x1);
     }
@@ -261,7 +261,7 @@ public:
     virtual QSize sizeHint() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 8386, x)) {
-	    QSize *xptr = (QSize *)x[0].s_voidp;
+	    QSize *xptr = (QSize *)x[0].s_class;
 	    QSize xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -271,7 +271,7 @@ public:
     virtual QString text() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 8373, x)) {
-	    QString *xptr = (QString *)x[0].s_voidp;
+	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;
 	    return xret;

@@ -10,7 +10,7 @@ public:
     x_QImageFormat(void *x) : xthis((QImageFormat*)x) {}
     void x_0(Smoke::Stack x) {
 	// decode(QImage&, QImageConsumer*, const uchar*, int)
-	int xret = xthis->QImageFormat::decode(*(QImage *)x[1].s_voidp,(QImageConsumer*)x[2].s_voidp,(const uchar*)x[3].s_voidp,(int)x[4].s_int);
+	int xret = xthis->QImageFormat::decode(*(QImage *)x[1].s_class,(QImageConsumer*)x[2].s_class,(const uchar*)x[3].s_class,(int)x[4].s_int);
 	x[0].s_int = (int)xret;
     }
     ~x_QImageFormat() {}

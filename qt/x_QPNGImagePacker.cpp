@@ -7,8 +7,8 @@ class x_QPNGImagePacker : public QPNGImagePacker {
 public:
     static void x_0(Smoke::Stack x) {
 	// QPNGImagePacker(QIODevice*, int, int)
-	x_QPNGImagePacker* xret = new x_QPNGImagePacker((QIODevice*)x[1].s_voidp,(int)x[2].s_int,(int)x[3].s_int);
-	x[0].s_voidp = (void*)xret;
+	x_QPNGImagePacker* xret = new x_QPNGImagePacker((QIODevice*)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int);
+	x[0].s_class = (void*)xret;
     }
     x_QPNGImagePacker(QIODevice* x1, int x2, int x3) : QPNGImagePacker(x1, x2, x3) {
     }
@@ -18,7 +18,7 @@ public:
     }
     void x_2(Smoke::Stack x) {
 	// packImage(const QImage&)
-	bool xret = this->QPNGImagePacker::packImage(*(const QImage *)x[1].s_voidp);
+	bool xret = this->QPNGImagePacker::packImage(*(const QImage *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     ~x_QPNGImagePacker() {}

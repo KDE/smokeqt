@@ -6,27 +6,27 @@
 class x_QPNGImageWriter : public QPNGImageWriter {
 public:
     static void x_0(Smoke::Stack x) {
-	x[0].s_long = (long)QPNGImageWriter::Unspecified;
+	x[0].s_enum = (long)QPNGImageWriter::Unspecified;
     }
     static void x_1(Smoke::Stack x) {
-	x[0].s_long = (long)QPNGImageWriter::NoDisposal;
+	x[0].s_enum = (long)QPNGImageWriter::NoDisposal;
     }
     static void x_2(Smoke::Stack x) {
-	x[0].s_long = (long)QPNGImageWriter::RestoreBackground;
+	x[0].s_enum = (long)QPNGImageWriter::RestoreBackground;
     }
     static void x_3(Smoke::Stack x) {
-	x[0].s_long = (long)QPNGImageWriter::RestoreImage;
+	x[0].s_enum = (long)QPNGImageWriter::RestoreImage;
     }
     static void x_4(Smoke::Stack x) {
 	// QPNGImageWriter(QIODevice*)
-	x_QPNGImageWriter* xret = new x_QPNGImageWriter((QIODevice*)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QPNGImageWriter* xret = new x_QPNGImageWriter((QIODevice*)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QPNGImageWriter(QIODevice* x1) : QPNGImageWriter(x1) {
     }
     void x_5(Smoke::Stack x) {
 	// setDisposalMethod(QPNGImageWriter::DisposalMethod)
-	this->QPNGImageWriter::setDisposalMethod(*(QPNGImageWriter::DisposalMethod *)x[1].s_voidp);
+	this->QPNGImageWriter::setDisposalMethod(*(QPNGImageWriter::DisposalMethod *)x[1].s_class);
     }
     void x_6(Smoke::Stack x) {
 	// setLooping(int)
@@ -46,28 +46,28 @@ public:
     }
     void x_10(Smoke::Stack x) {
 	// writeImage(const QImage&, int, int)
-	bool xret = this->QPNGImageWriter::writeImage(*(const QImage *)x[1].s_voidp,(int)x[2].s_int,(int)x[3].s_int);
+	bool xret = this->QPNGImageWriter::writeImage(*(const QImage *)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int);
 	x[0].s_bool = (bool)xret;
     }
     void x_11(Smoke::Stack x) {
 	// writeImage(const QImage&, int, int, int)
-	bool xret = this->QPNGImageWriter::writeImage(*(const QImage *)x[1].s_voidp,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int);
+	bool xret = this->QPNGImageWriter::writeImage(*(const QImage *)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int);
 	x[0].s_bool = (bool)xret;
     }
     void x_12(Smoke::Stack x) {
 	// writeImage(const QImage&)
-	bool xret = this->QPNGImageWriter::writeImage(*(const QImage *)x[1].s_voidp);
+	bool xret = this->QPNGImageWriter::writeImage(*(const QImage *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_13(Smoke::Stack x) {
 	// writeImage(const QImage&, int)
-	bool xret = this->QPNGImageWriter::writeImage(*(const QImage *)x[1].s_voidp,(int)x[2].s_int);
+	bool xret = this->QPNGImageWriter::writeImage(*(const QImage *)x[1].s_class,(int)x[2].s_int);
 	x[0].s_bool = (bool)xret;
     }
     void x_14(Smoke::Stack x) {
 	// device()
 	QIODevice* xret = this->QPNGImageWriter::device();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     ~x_QPNGImageWriter() {}
 };

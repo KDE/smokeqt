@@ -7,14 +7,14 @@ public:
     static void x_0(Smoke::Stack x) {
 	// QRangeControl()
 	x_QRangeControl* xret = new x_QRangeControl();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     x_QRangeControl() : QRangeControl() {
     }
     static void x_1(Smoke::Stack x) {
 	// QRangeControl(int, int, int, int, int)
 	x_QRangeControl* xret = new x_QRangeControl((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int);
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     x_QRangeControl(int x1, int x2, int x3, int x4, int x5) : QRangeControl(x1, x2, x3, x4, x5) {
     }

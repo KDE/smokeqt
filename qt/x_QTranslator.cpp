@@ -7,58 +7,58 @@
 class x_QTranslator : public QTranslator {
 public:
     static void x_0(Smoke::Stack x) {
-	x[0].s_long = (long)QTranslator::Everything;
+	x[0].s_enum = (long)QTranslator::Everything;
     }
     static void x_1(Smoke::Stack x) {
-	x[0].s_long = (long)QTranslator::Stripped;
+	x[0].s_enum = (long)QTranslator::Stripped;
     }
     static void x_2(Smoke::Stack x) {
 	// QTranslator(QObject*, const char*)
-	x_QTranslator* xret = new x_QTranslator((QObject*)x[1].s_voidp,(const char*)x[2].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QTranslator* xret = new x_QTranslator((QObject*)x[1].s_class,(const char*)x[2].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QTranslator(QObject* x1, const char* x2) : QTranslator(x1, x2) {
     }
     static void x_3(Smoke::Stack x) {
 	// QTranslator(QObject*)
-	x_QTranslator* xret = new x_QTranslator((QObject*)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QTranslator* xret = new x_QTranslator((QObject*)x[1].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QTranslator(QObject* x1) : QTranslator(x1) {
     }
     void x_4(Smoke::Stack x) const {
 	// find(const char*, const char*, const char*)
-	QString xret = this->QTranslator::find((const char*)x[1].s_voidp,(const char*)x[2].s_voidp,(const char*)x[3].s_voidp);
-	x[0].s_voidp = (void*)new QString(xret);
+	QString xret = this->QTranslator::find((const char*)x[1].s_class,(const char*)x[2].s_class,(const char*)x[3].s_class);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_5(Smoke::Stack x) const {
 	// find(const char*, const char*)
-	QString xret = this->QTranslator::find((const char*)x[1].s_voidp,(const char*)x[2].s_voidp);
-	x[0].s_voidp = (void*)new QString(xret);
+	QString xret = this->QTranslator::find((const char*)x[1].s_class,(const char*)x[2].s_class);
+	x[0].s_class = (void*)new QString(xret);
     }
     void x_6(Smoke::Stack x) const {
 	// findMessage(const char*, const char*, const char*)
-	QTranslatorMessage xret = this->QTranslator::findMessage((const char*)x[1].s_voidp,(const char*)x[2].s_voidp,(const char*)x[3].s_voidp);
-	x[0].s_voidp = (void*)new QTranslatorMessage(xret);
+	QTranslatorMessage xret = this->QTranslator::findMessage((const char*)x[1].s_class,(const char*)x[2].s_class,(const char*)x[3].s_class);
+	x[0].s_class = (void*)new QTranslatorMessage(xret);
     }
     void x_7(Smoke::Stack x) {
 	// load(const QString&, const QString&, const QString&, const QString&)
-	bool xret = this->QTranslator::load(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,*(const QString *)x[3].s_voidp,*(const QString *)x[4].s_voidp);
+	bool xret = this->QTranslator::load(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,*(const QString *)x[3].s_class,*(const QString *)x[4].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_8(Smoke::Stack x) {
 	// load(const QString&, const QString&, const QString&)
-	bool xret = this->QTranslator::load(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,*(const QString *)x[3].s_voidp);
+	bool xret = this->QTranslator::load(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,*(const QString *)x[3].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_9(Smoke::Stack x) {
 	// load(const QString&, const QString&)
-	bool xret = this->QTranslator::load(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
+	bool xret = this->QTranslator::load(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_10(Smoke::Stack x) {
 	// load(const QString&)
-	bool xret = this->QTranslator::load(*(const QString *)x[1].s_voidp);
+	bool xret = this->QTranslator::load(*(const QString *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_11(Smoke::Stack x) {
@@ -67,43 +67,43 @@ public:
     }
     void x_12(Smoke::Stack x) {
 	// save(const QString&, QTranslator::SaveMode)
-	bool xret = this->QTranslator::save(*(const QString *)x[1].s_voidp,*(QTranslator::SaveMode *)x[2].s_voidp);
+	bool xret = this->QTranslator::save(*(const QString *)x[1].s_class,*(QTranslator::SaveMode *)x[2].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_13(Smoke::Stack x) {
 	// save(const QString&)
-	bool xret = this->QTranslator::save(*(const QString *)x[1].s_voidp);
+	bool xret = this->QTranslator::save(*(const QString *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_14(Smoke::Stack x) {
 	// insert(const QTranslatorMessage&)
-	this->QTranslator::insert(*(const QTranslatorMessage *)x[1].s_voidp);
+	this->QTranslator::insert(*(const QTranslatorMessage *)x[1].s_class);
     }
     void x_15(Smoke::Stack x) {
 	// insert(const char*, const char*, const QString&)
-	this->QTranslator::insert((const char*)x[1].s_voidp,(const char*)x[2].s_voidp,*(const QString *)x[3].s_voidp);
+	this->QTranslator::insert((const char*)x[1].s_class,(const char*)x[2].s_class,*(const QString *)x[3].s_class);
     }
     void x_16(Smoke::Stack x) {
 	// remove(const QTranslatorMessage&)
-	this->QTranslator::remove(*(const QTranslatorMessage *)x[1].s_voidp);
+	this->QTranslator::remove(*(const QTranslatorMessage *)x[1].s_class);
     }
     void x_17(Smoke::Stack x) {
 	// remove(const char*, const char*)
-	this->QTranslator::remove((const char*)x[1].s_voidp,(const char*)x[2].s_voidp);
+	this->QTranslator::remove((const char*)x[1].s_class,(const char*)x[2].s_class);
     }
     void x_18(Smoke::Stack x) const {
 	// contains(const char*, const char*, const char*)
-	bool xret = this->QTranslator::contains((const char*)x[1].s_voidp,(const char*)x[2].s_voidp,(const char*)x[3].s_voidp);
+	bool xret = this->QTranslator::contains((const char*)x[1].s_class,(const char*)x[2].s_class,(const char*)x[3].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_19(Smoke::Stack x) const {
 	// contains(const char*, const char*)
-	bool xret = this->QTranslator::contains((const char*)x[1].s_voidp,(const char*)x[2].s_voidp);
+	bool xret = this->QTranslator::contains((const char*)x[1].s_class,(const char*)x[2].s_class);
 	x[0].s_bool = (bool)xret;
     }
     void x_20(Smoke::Stack x) {
 	// squeeze(QTranslator::SaveMode)
-	this->QTranslator::squeeze(*(QTranslator::SaveMode *)x[1].s_voidp);
+	this->QTranslator::squeeze(*(QTranslator::SaveMode *)x[1].s_class);
     }
     void x_21(Smoke::Stack x) {
 	// squeeze()
@@ -116,60 +116,60 @@ public:
     void x_23(Smoke::Stack x) const {
 	// messages()
 	QValueList<QTranslatorMessage> xret = this->QTranslator::messages();
-	x[0].s_voidp = (void*)new QValueList<QTranslatorMessage>(xret);
+	x[0].s_class = (void*)new QValueList<QTranslatorMessage>(xret);
     }
     virtual bool checkConnectArgs(const char* x1, const QObject* x2, const char* x3) {
 	Smoke::StackItem x[4];
-	x[1].s_voidp = (void*)x1;
-	x[2].s_voidp = (void*)x2;
-	x[3].s_voidp = (void*)x3;
+	x[1].s_class = (void*)x1;
+	x[2].s_class = (void*)x2;
+	x[3].s_class = (void*)x3;
 	if(call_method((void*)this, 5469, x)) return (bool)x[0].s_bool;
 	return this->QObject::checkConnectArgs(x1, x2, x3);
     }
     virtual void childEvent(QChildEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5465, x)) return;
 	this->QObject::childEvent(x1);
     }
     virtual void connectNotify(const char* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5467, x)) return;
 	this->QObject::connectNotify(x1);
     }
     virtual void customEvent(QCustomEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5466, x)) return;
 	this->QObject::customEvent(x1);
     }
     virtual void disconnectNotify(const char* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5468, x)) return;
 	this->QObject::disconnectNotify(x1);
     }
     virtual bool event(QEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5404, x)) return (bool)x[0].s_bool;
 	return this->QObject::event(x1);
     }
     virtual bool eventFilter(QObject* x1, QEvent* x2) {
 	Smoke::StackItem x[3];
-	x[1].s_voidp = (void*)x1;
-	x[2].s_voidp = (void*)x2;
+	x[1].s_class = (void*)x1;
+	x[2].s_class = (void*)x2;
 	if(call_method((void*)this, 5405, x)) return (bool)x[0].s_bool;
 	return this->QObject::eventFilter(x1, x2);
     }
     virtual QTranslatorMessage findMessage(const char* x1, const char* x2, const char* x3) const {
 	Smoke::StackItem x[4];
-	x[1].s_voidp = (void*)x1;
-	x[2].s_voidp = (void*)x2;
-	x[3].s_voidp = (void*)x3;
+	x[1].s_class = (void*)x1;
+	x[2].s_class = (void*)x2;
+	x[3].s_class = (void*)x3;
 	if(call_method((void*)this, 8992, x)) {
-	    QTranslatorMessage *xptr = (QTranslatorMessage *)x[0].s_voidp;
+	    QTranslatorMessage *xptr = (QTranslatorMessage *)x[0].s_class;
 	    QTranslatorMessage xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -178,15 +178,15 @@ public:
     }
     virtual void insertChild(QObject* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5427, x)) return;
 	this->QObject::insertChild(x1);
     }
     virtual QVariant property(const char* x1) const {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5441, x)) {
-	    QVariant *xptr = (QVariant *)x[0].s_voidp;
+	    QVariant *xptr = (QVariant *)x[0].s_class;
 	    QVariant xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -195,26 +195,26 @@ public:
     }
     virtual void removeChild(QObject* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5428, x)) return;
 	this->QObject::removeChild(x1);
     }
     virtual void setName(const char* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5410, x)) return;
 	this->QObject::setName(x1);
     }
     virtual bool setProperty(const char* x1, const QVariant& x2) {
 	Smoke::StackItem x[3];
-	x[1].s_voidp = (void*)x1;
-	x[2].s_voidp = (void*)&x2;
+	x[1].s_class = (void*)x1;
+	x[2].s_class = (void*)&x2;
 	if(call_method((void*)this, 5440, x)) return (bool)x[0].s_bool;
 	return this->QObject::setProperty(x1, x2);
     }
     virtual void timerEvent(QTimerEvent* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 5464, x)) return;
 	this->QObject::timerEvent(x1);
     }

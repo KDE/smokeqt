@@ -11,23 +11,23 @@ class x_QCheckTableItem : public QCheckTableItem {
 public:
     static void x_0(Smoke::Stack x) {
 	// QCheckTableItem(QTable*, const QString&)
-	x_QCheckTableItem* xret = new x_QCheckTableItem((QTable*)x[1].s_voidp,*(const QString *)x[2].s_voidp);
-	x[0].s_voidp = (void*)xret;
+	x_QCheckTableItem* xret = new x_QCheckTableItem((QTable*)x[1].s_class,*(const QString *)x[2].s_class);
+	x[0].s_class = (void*)xret;
     }
     x_QCheckTableItem(QTable* x1, const QString& x2) : QCheckTableItem(x1, x2) {
     }
     void x_1(Smoke::Stack x) const {
 	// createEditor()
 	QWidget* xret = this->QCheckTableItem::createEditor();
-	x[0].s_voidp = (void*)xret;
+	x[0].s_class = (void*)xret;
     }
     void x_2(Smoke::Stack x) {
 	// setContentFromEditor(QWidget*)
-	this->QCheckTableItem::setContentFromEditor((QWidget*)x[1].s_voidp);
+	this->QCheckTableItem::setContentFromEditor((QWidget*)x[1].s_class);
     }
     void x_3(Smoke::Stack x) {
 	// paint(QPainter*, const QColorGroup&, const QRect&, bool)
-	this->QCheckTableItem::paint((QPainter*)x[1].s_voidp,*(const QColorGroup *)x[2].s_voidp,*(const QRect *)x[3].s_voidp,(bool)x[4].s_bool);
+	this->QCheckTableItem::paint((QPainter*)x[1].s_class,*(const QColorGroup *)x[2].s_class,*(const QRect *)x[3].s_class,(bool)x[4].s_bool);
     }
     void x_4(Smoke::Stack x) {
 	// setChecked(bool)
@@ -50,13 +50,13 @@ public:
     }
     virtual QWidget* createEditor() const {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 913, x)) 	return (QWidget*)x[0].s_voidp;
+	if(call_method((void*)this, 913, x)) 	return (QWidget*)x[0].s_class;
 	return this->QCheckTableItem::createEditor();
     }
     virtual QString key() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 8385, x)) {
-	    QString *xptr = (QString *)x[0].s_voidp;
+	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -65,9 +65,9 @@ public:
     }
     virtual void paint(QPainter* x1, const QColorGroup& x2, const QRect& x3, bool x4) {
 	Smoke::StackItem x[5];
-	x[1].s_voidp = (void*)x1;
-	x[2].s_voidp = (void*)&x2;
-	x[3].s_voidp = (void*)&x3;
+	x[1].s_class = (void*)x1;
+	x[2].s_class = (void*)&x2;
+	x[3].s_class = (void*)&x3;
 	x[4].s_bool = (bool)x4;
 	if(call_method((void*)this, 915, x)) return;
 	this->QCheckTableItem::paint(x1, x2, x3, x4);
@@ -75,7 +75,7 @@ public:
     virtual QPixmap pixmap() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 8372, x)) {
-	    QPixmap *xptr = (QPixmap *)x[0].s_voidp;
+	    QPixmap *xptr = (QPixmap *)x[0].s_class;
 	    QPixmap xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -101,7 +101,7 @@ public:
     }
     virtual void setContentFromEditor(QWidget* x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)x1;
+	x[1].s_class = (void*)x1;
 	if(call_method((void*)this, 914, x)) return;
 	this->QCheckTableItem::setContentFromEditor(x1);
     }
@@ -113,7 +113,7 @@ public:
     }
     virtual void setPixmap(const QPixmap& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 8374, x)) return;
 	this->QTableItem::setPixmap(x1);
     }
@@ -138,7 +138,7 @@ public:
     }
     virtual void setText(const QString& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_voidp = (void*)&x1;
+	x[1].s_class = (void*)&x1;
 	if(call_method((void*)this, 8375, x)) return;
 	this->QTableItem::setText(x1);
     }
@@ -151,7 +151,7 @@ public:
     virtual QSize sizeHint() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 8386, x)) {
-	    QSize *xptr = (QSize *)x[0].s_voidp;
+	    QSize *xptr = (QSize *)x[0].s_class;
 	    QSize xret(*xptr);
 	    delete xptr;
 	    return xret;
@@ -161,7 +161,7 @@ public:
     virtual QString text() const {
 	Smoke::StackItem x[1];
 	if(call_method((void*)this, 8373, x)) {
-	    QString *xptr = (QString *)x[0].s_voidp;
+	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;
 	    return xret;
