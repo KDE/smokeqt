@@ -92,29 +92,25 @@ my %kdeexcludes = (
 	'kglobal.h' => 1,
 
 #	These headers currently give problems	
+	'kicontheme.h' => 1,
 	'kscreensaver.h' => 1,
-	'kbufferedio.h' => 1,
-	'kasyncio.h' => 1,
 	'kdirnotify_stub.h' => 1,
 	'kio/uiserver_stub.h' => 1,
 	'kio/uiserver.h' => 1,
 	'kio/kdesasl.h' => 1,
 	'kio/kpac.h' => 1,
-	'kio/observer.h' => 1,
 	'kio/thumbcreator.h' => 1,
 	'kio/file.h' => 1,
-	'kio/authinfo.h' => 1,
 	'kio/chmodjob.h' => 1,
 	'kparts/genericfactory.h' => 1,
 	'kparts/partmanager.h' => 1,
 	'kparts/pluginselectormodule.h' => 1,
 	'kopenssl.h' => 1,
 	'kautomount.h' => 1,
-	'kdirlister.h' => 1,
 	'kimagefilepreview.h' => 1,
 	'kpropertiesdialog.h' => 1,
 	'knotifydialog.h' => 1,
-	'ksockaddr.h' => 1
+	'ksockaddr.h' => 1,
 );
 
 # Some systems have a QTDIR = KDEDIR = PREFIX
