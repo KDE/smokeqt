@@ -4,7 +4,7 @@ lib_LTLIBRARIES = libsmokeqt.la
 INCLUDES         = -I$(srcdir)/.. $(all_includes)
 
 # the library search path. 
-libsmokeqt_la_LDFLAGS = -version-info 1:0 -no-undefined $(all_libraries)
+libsmokeqt_la_LDFLAGS = -version-info 3:0:2 -no-undefined $(all_libraries)
 
 # the libraries to link against.
 libsmokeqt_la_LIBADD   = $(LIB_QT)
