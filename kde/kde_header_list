@@ -128,7 +128,6 @@ kdirsize.h
 kdirwatch.h
 kdiskfreesp.h
 kdockwidget.h
-kdockwidget_p.h
 kdockwindow.h
 kdrawutil.h
 kdualcolorbtn.h
@@ -428,4 +427,3 @@ kio/uiserver.h
 kio/uiserver_stub.h
 netwm_def.h
 netwm.h
-
