@@ -107,7 +107,6 @@ my %kdeexcludes = (
 	'kio/file.h' => 1,
 	'kio/authinfo.h' => 1,
 	'kio/chmodjob.h' => 1,
-	'kparts/browserextension.h' => 1,
 	'kparts/browserrun.h' => 1,
 	'kparts/genericfactory.h' => 1,
 	'kparts/partmanager.h' => 1,
