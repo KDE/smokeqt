@@ -131,6 +131,7 @@ qlabel.h
 qlayout.h
 qlcdnumber.h
 qlcdnum.h
+qlocale.h
 qlibrary.h
 qlined.h
 qlineedit.h
@@ -263,6 +264,7 @@ qsqlpropertymap.h
 qsqlquery.h
 qsqlrecord.h
 qsqlresult.h
+qsqlselectcursor.h
 qstack.h
 qstatusbar.h
 qstring.h

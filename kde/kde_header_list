@@ -211,6 +211,7 @@ kmdilistiterator.h
 kmdimainfrm.h
 kmdinulliterator.h
 kmditaskbar.h
+kmditoolviewaccessor.h
 kmenubar.h
 kmessagebox.h
 kmimemagic.h
