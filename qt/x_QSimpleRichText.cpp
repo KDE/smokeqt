@@ -131,7 +131,7 @@ public:
 	bool xret = this->QSimpleRichText::inText(*(const QPoint *)x[1].s_class);
 	x[0].s_bool = xret;
     }
-    ~x_QSimpleRichText() { qt_Smoke->binding->deleted(262, (void*)this); }
+    ~x_QSimpleRichText() { qt_Smoke->binding->deleted(268, (void*)this); }
 };
 void xcall_QSimpleRichText(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QSimpleRichText *xself = (x_QSimpleRichText*)obj;

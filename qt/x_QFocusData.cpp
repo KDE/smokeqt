@@ -29,11 +29,21 @@ public:
 	x[0].s_class = (void*)xret;
     }
     void x_4(Smoke::Stack x) const {
+	// first()
+	QWidget* xret = xthis->QFocusData::first();
+	x[0].s_class = (void*)xret;
+    }
+    void x_5(Smoke::Stack x) const {
+	// last()
+	QWidget* xret = xthis->QFocusData::last();
+	x[0].s_class = (void*)xret;
+    }
+    void x_6(Smoke::Stack x) const {
 	// count()
 	int xret = xthis->QFocusData::count();
 	x[0].s_int = xret;
     }
-    ~x_QFocusData() { qt_Smoke->binding->deleted(116, (void*)this); }
+    ~x_QFocusData() { qt_Smoke->binding->deleted(114, (void*)this); }
 };
 void xcall_QFocusData(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QFocusData xtmp(obj), *xself = &xtmp;
@@ -43,5 +53,7 @@ void xcall_QFocusData(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 2: xself->x_2(args);	break;
 	case 3: xself->x_3(args);	break;
 	case 4: xself->x_4(args);	break;
+	case 5: xself->x_5(args);	break;
+	case 6: xself->x_6(args);	break;
     }
 }

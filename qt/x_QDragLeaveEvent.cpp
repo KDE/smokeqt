@@ -19,7 +19,7 @@ public:
     }
     x_QDragLeaveEvent(const QDragLeaveEvent& x1) : QDragLeaveEvent(x1) {
     }
-    ~x_QDragLeaveEvent() { qt_Smoke->binding->deleted(99, (void*)this); }
+    ~x_QDragLeaveEvent() { qt_Smoke->binding->deleted(96, (void*)this); }
 };
 void xcall_QDragLeaveEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QDragLeaveEvent *xself = (x_QDragLeaveEvent*)obj;

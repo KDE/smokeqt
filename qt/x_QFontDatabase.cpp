@@ -187,7 +187,7 @@ public:
 	QString xret = QFontDatabase::scriptSample((QFont::Script)x[1].s_enum);
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    ~x_QFontDatabase() { qt_Smoke->binding->deleted(119, (void*)this); }
+    ~x_QFontDatabase() { qt_Smoke->binding->deleted(117, (void*)this); }
 };
 void xcall_QFontDatabase(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QFontDatabase *xself = (x_QFontDatabase*)obj;

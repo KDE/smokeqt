@@ -95,7 +95,7 @@ public:
 	bool xret = this->QBrush::operator!=(*(const QBrush *)x[1].s_class);
 	x[0].s_bool = xret;
     }
-    ~x_QBrush() { qt_Smoke->binding->deleted(14, (void*)this); }
+    ~x_QBrush() { qt_Smoke->binding->deleted(15, (void*)this); }
 };
 void xcall_QBrush(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QBrush *xself = (x_QBrush*)obj;

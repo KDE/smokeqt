@@ -84,7 +84,7 @@ public:
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {
-	  case 404: //QPNGImageWriter::DisposalMethod
+	  case 421: //QPNGImageWriter::DisposalMethod
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QPNGImageWriter::DisposalMethod;
@@ -102,7 +102,7 @@ public:
 	    break;
 	}
     }
-    ~x_QPNGImageWriter() { qt_Smoke->binding->deleted(219, (void*)this); }
+    ~x_QPNGImageWriter() { qt_Smoke->binding->deleted(226, (void*)this); }
 };
 void xenum_QPNGImageWriter(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
     x_QPNGImageWriter::xenum_operation(xop, xtype, xdata, xvalue);

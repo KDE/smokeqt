@@ -97,7 +97,7 @@ public:
     }
     x_QPoint(const QPoint& x1) : QPoint(x1) {
     }
-    ~x_QPoint() { qt_Smoke->binding->deleted(230, (void*)this); }
+    ~x_QPoint() { qt_Smoke->binding->deleted(237, (void*)this); }
 };
 void xcall_QPoint(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QPoint *xself = (x_QPoint*)obj;

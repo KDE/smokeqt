@@ -254,321 +254,324 @@ public:
 	x[0].s_enum = (long)QFont::LatinExtendedA_15;
     }
     static void x_82(Smoke::Stack x) {
-	x[0].s_enum = (long)QFont::LastPrivateScript;
+	x[0].s_enum = (long)QFont::KatakanaHalfWidth;
     }
     static void x_83(Smoke::Stack x) {
+	x[0].s_enum = (long)QFont::LastPrivateScript;
+    }
+    static void x_84(Smoke::Stack x) {
 	// QFont()
 	x_QFont* xret = new x_QFont();
 	x[0].s_class = (void*)xret;
     }
     x_QFont() : QFont() {
     }
-    static void x_84(Smoke::Stack x) {
+    static void x_85(Smoke::Stack x) {
 	// QFont(const QString&, int, int, bool)
 	x_QFont* xret = new x_QFont(*(const QString *)x[1].s_voidp,(int)x[2].s_int,(int)x[3].s_int,(bool)x[4].s_bool);
 	x[0].s_class = (void*)xret;
     }
     x_QFont(const QString& x1, int x2, int x3, bool x4) : QFont(x1, x2, x3, x4) {
     }
-    static void x_85(Smoke::Stack x) {
+    static void x_86(Smoke::Stack x) {
 	// QFont(const QString&, int, int)
 	x_QFont* xret = new x_QFont(*(const QString *)x[1].s_voidp,(int)x[2].s_int,(int)x[3].s_int);
 	x[0].s_class = (void*)xret;
     }
     x_QFont(const QString& x1, int x2, int x3) : QFont(x1, x2, x3) {
     }
-    static void x_86(Smoke::Stack x) {
+    static void x_87(Smoke::Stack x) {
 	// QFont(const QString&, int)
 	x_QFont* xret = new x_QFont(*(const QString *)x[1].s_voidp,(int)x[2].s_int);
 	x[0].s_class = (void*)xret;
     }
     x_QFont(const QString& x1, int x2) : QFont(x1, x2) {
     }
-    static void x_87(Smoke::Stack x) {
+    static void x_88(Smoke::Stack x) {
 	// QFont(const QString&)
 	x_QFont* xret = new x_QFont(*(const QString *)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QFont(const QString& x1) : QFont(x1) {
     }
-    static void x_88(Smoke::Stack x) {
+    static void x_89(Smoke::Stack x) {
 	// QFont(const QFont&)
 	x_QFont* xret = new x_QFont(*(const QFont *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QFont(const QFont& x1) : QFont(x1) {
     }
-    void x_89(Smoke::Stack x) const {
+    void x_90(Smoke::Stack x) const {
 	// family()
 	QString xret = this->QFont::family();
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    void x_90(Smoke::Stack x) {
+    void x_91(Smoke::Stack x) {
 	// setFamily(const QString&)
 	this->QFont::setFamily(*(const QString *)x[1].s_voidp);
 	(void)x; // noop (for compiler warning)
     }
-    void x_91(Smoke::Stack x) const {
+    void x_92(Smoke::Stack x) const {
 	// pointSize()
 	int xret = this->QFont::pointSize();
 	x[0].s_int = xret;
     }
-    void x_92(Smoke::Stack x) const {
+    void x_93(Smoke::Stack x) const {
 	// pointSizeFloat()
 	float xret = this->QFont::pointSizeFloat();
 	x[0].s_float = xret;
     }
-    void x_93(Smoke::Stack x) {
+    void x_94(Smoke::Stack x) {
 	// setPointSize(int)
 	this->QFont::setPointSize((int)x[1].s_int);
 	(void)x; // noop (for compiler warning)
     }
-    void x_94(Smoke::Stack x) {
+    void x_95(Smoke::Stack x) {
 	// setPointSizeFloat(float)
 	this->QFont::setPointSizeFloat((float)x[1].s_float);
 	(void)x; // noop (for compiler warning)
     }
-    void x_95(Smoke::Stack x) const {
+    void x_96(Smoke::Stack x) const {
 	// pixelSize()
 	int xret = this->QFont::pixelSize();
 	x[0].s_int = xret;
     }
-    void x_96(Smoke::Stack x) {
+    void x_97(Smoke::Stack x) {
 	// setPixelSize(int)
 	this->QFont::setPixelSize((int)x[1].s_int);
 	(void)x; // noop (for compiler warning)
     }
-    void x_97(Smoke::Stack x) {
+    void x_98(Smoke::Stack x) {
 	// setPixelSizeFloat(float)
 	this->QFont::setPixelSizeFloat((float)x[1].s_float);
 	(void)x; // noop (for compiler warning)
     }
-    void x_98(Smoke::Stack x) const {
+    void x_99(Smoke::Stack x) const {
 	// weight()
 	int xret = this->QFont::weight();
 	x[0].s_int = xret;
     }
-    void x_99(Smoke::Stack x) {
+    void x_100(Smoke::Stack x) {
 	// setWeight(int)
 	this->QFont::setWeight((int)x[1].s_int);
 	(void)x; // noop (for compiler warning)
     }
-    void x_100(Smoke::Stack x) const {
+    void x_101(Smoke::Stack x) const {
 	// bold()
 	bool xret = this->QFont::bold();
 	x[0].s_bool = xret;
     }
-    void x_101(Smoke::Stack x) {
+    void x_102(Smoke::Stack x) {
 	// setBold(bool)
 	this->QFont::setBold((bool)x[1].s_bool);
 	(void)x; // noop (for compiler warning)
     }
-    void x_102(Smoke::Stack x) const {
+    void x_103(Smoke::Stack x) const {
 	// italic()
 	bool xret = this->QFont::italic();
 	x[0].s_bool = xret;
     }
-    void x_103(Smoke::Stack x) {
+    void x_104(Smoke::Stack x) {
 	// setItalic(bool)
 	this->QFont::setItalic((bool)x[1].s_bool);
 	(void)x; // noop (for compiler warning)
     }
-    void x_104(Smoke::Stack x) const {
+    void x_105(Smoke::Stack x) const {
 	// underline()
 	bool xret = this->QFont::underline();
 	x[0].s_bool = xret;
     }
-    void x_105(Smoke::Stack x) {
+    void x_106(Smoke::Stack x) {
 	// setUnderline(bool)
 	this->QFont::setUnderline((bool)x[1].s_bool);
 	(void)x; // noop (for compiler warning)
     }
-    void x_106(Smoke::Stack x) const {
+    void x_107(Smoke::Stack x) const {
 	// strikeOut()
 	bool xret = this->QFont::strikeOut();
 	x[0].s_bool = xret;
     }
-    void x_107(Smoke::Stack x) {
+    void x_108(Smoke::Stack x) {
 	// setStrikeOut(bool)
 	this->QFont::setStrikeOut((bool)x[1].s_bool);
 	(void)x; // noop (for compiler warning)
     }
-    void x_108(Smoke::Stack x) const {
+    void x_109(Smoke::Stack x) const {
 	// fixedPitch()
 	bool xret = this->QFont::fixedPitch();
 	x[0].s_bool = xret;
     }
-    void x_109(Smoke::Stack x) {
+    void x_110(Smoke::Stack x) {
 	// setFixedPitch(bool)
 	this->QFont::setFixedPitch((bool)x[1].s_bool);
 	(void)x; // noop (for compiler warning)
     }
-    void x_110(Smoke::Stack x) const {
+    void x_111(Smoke::Stack x) const {
 	// styleHint()
 	QFont::StyleHint xret = this->QFont::styleHint();
 	x[0].s_enum = xret;
     }
-    void x_111(Smoke::Stack x) const {
+    void x_112(Smoke::Stack x) const {
 	// styleStrategy()
 	QFont::StyleStrategy xret = this->QFont::styleStrategy();
 	x[0].s_enum = xret;
     }
-    void x_112(Smoke::Stack x) {
+    void x_113(Smoke::Stack x) {
 	// setStyleHint(QFont::StyleHint, QFont::StyleStrategy)
 	this->QFont::setStyleHint((QFont::StyleHint)x[1].s_enum,(QFont::StyleStrategy)x[2].s_enum);
 	(void)x; // noop (for compiler warning)
     }
-    void x_113(Smoke::Stack x) {
+    void x_114(Smoke::Stack x) {
 	// setStyleHint(QFont::StyleHint)
 	this->QFont::setStyleHint((QFont::StyleHint)x[1].s_enum);
 	(void)x; // noop (for compiler warning)
     }
-    void x_114(Smoke::Stack x) {
+    void x_115(Smoke::Stack x) {
 	// setStyleStrategy(QFont::StyleStrategy)
 	this->QFont::setStyleStrategy((QFont::StyleStrategy)x[1].s_enum);
 	(void)x; // noop (for compiler warning)
     }
-    void x_115(Smoke::Stack x) const {
+    void x_116(Smoke::Stack x) const {
 	// rawMode()
 	bool xret = this->QFont::rawMode();
 	x[0].s_bool = xret;
     }
-    void x_116(Smoke::Stack x) {
+    void x_117(Smoke::Stack x) {
 	// setRawMode(bool)
 	this->QFont::setRawMode((bool)x[1].s_bool);
 	(void)x; // noop (for compiler warning)
     }
-    void x_117(Smoke::Stack x) const {
+    void x_118(Smoke::Stack x) const {
 	// exactMatch()
 	bool xret = this->QFont::exactMatch();
 	x[0].s_bool = xret;
     }
-    void x_118(Smoke::Stack x) {
+    void x_119(Smoke::Stack x) {
 	// operator=(const QFont&)
 	QFont& xret = this->QFont::operator=(*(const QFont *)x[1].s_class);
 	x[0].s_class = (void*)&xret;
     }
-    void x_119(Smoke::Stack x) const {
+    void x_120(Smoke::Stack x) const {
 	// operator==(const QFont&)
 	bool xret = this->QFont::operator==(*(const QFont *)x[1].s_class);
 	x[0].s_bool = xret;
     }
-    void x_120(Smoke::Stack x) const {
+    void x_121(Smoke::Stack x) const {
 	// operator!=(const QFont&)
 	bool xret = this->QFont::operator!=(*(const QFont *)x[1].s_class);
 	x[0].s_bool = xret;
     }
-    void x_121(Smoke::Stack x) const {
+    void x_122(Smoke::Stack x) const {
 	// isCopyOf(const QFont&)
 	bool xret = this->QFont::isCopyOf(*(const QFont *)x[1].s_class);
 	x[0].s_bool = xret;
     }
-    void x_122(Smoke::Stack x) const {
+    void x_123(Smoke::Stack x) const {
 	// handle()
 	Qt::HANDLE xret = this->QFont::handle();
 	x[0].s_uint = xret;
     }
-    void x_123(Smoke::Stack x) {
+    void x_124(Smoke::Stack x) {
 	// setRawName(const QString&)
 	this->QFont::setRawName(*(const QString *)x[1].s_voidp);
 	(void)x; // noop (for compiler warning)
     }
-    void x_124(Smoke::Stack x) const {
+    void x_125(Smoke::Stack x) const {
 	// rawName()
 	QString xret = this->QFont::rawName();
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    void x_125(Smoke::Stack x) const {
+    void x_126(Smoke::Stack x) const {
 	// key()
 	QString xret = this->QFont::key();
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    void x_126(Smoke::Stack x) const {
+    void x_127(Smoke::Stack x) const {
 	// toString()
 	QString xret = this->QFont::toString();
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    void x_127(Smoke::Stack x) {
+    void x_128(Smoke::Stack x) {
 	// fromString(const QString&)
 	bool xret = this->QFont::fromString(*(const QString *)x[1].s_voidp);
 	x[0].s_bool = xret;
     }
-    void x_128(Smoke::Stack x) const {
+    void x_129(Smoke::Stack x) const {
 	// defaultFamily()
 	QString xret = this->QFont::defaultFamily();
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    void x_129(Smoke::Stack x) const {
+    void x_130(Smoke::Stack x) const {
 	// lastResortFamily()
 	QString xret = this->QFont::lastResortFamily();
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    void x_130(Smoke::Stack x) const {
+    void x_131(Smoke::Stack x) const {
 	// lastResortFont()
 	QString xret = this->QFont::lastResortFont();
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    static void x_131(Smoke::Stack x) {
+    static void x_132(Smoke::Stack x) {
 	// substitute(const QString&)
 	QString xret = QFont::substitute(*(const QString *)x[1].s_voidp);
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    static void x_132(Smoke::Stack x) {
+    static void x_133(Smoke::Stack x) {
 	// substitutes(const QString&)
 	QStringList xret = QFont::substitutes(*(const QString *)x[1].s_voidp);
 	x[0].s_voidp = (void*)new QStringList(xret);
     }
-    static void x_133(Smoke::Stack x) {
+    static void x_134(Smoke::Stack x) {
 	// substitutions()
 	QStringList xret = QFont::substitutions();
 	x[0].s_voidp = (void*)new QStringList(xret);
     }
-    static void x_134(Smoke::Stack x) {
+    static void x_135(Smoke::Stack x) {
 	// insertSubstitution(const QString&, const QString&)
 	QFont::insertSubstitution(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
 	(void)x; // noop (for compiler warning)
     }
-    static void x_135(Smoke::Stack x) {
+    static void x_136(Smoke::Stack x) {
 	// insertSubstitutions(const QString&, const QStringList&)
 	QFont::insertSubstitutions(*(const QString *)x[1].s_voidp,*(const QStringList *)x[2].s_voidp);
 	(void)x; // noop (for compiler warning)
     }
-    static void x_136(Smoke::Stack x) {
+    static void x_137(Smoke::Stack x) {
 	// removeSubstitution(const QString&)
 	QFont::removeSubstitution(*(const QString *)x[1].s_voidp);
 	(void)x; // noop (for compiler warning)
     }
-    static void x_137(Smoke::Stack x) {
+    static void x_138(Smoke::Stack x) {
 	// initialize()
 	QFont::initialize();
 	(void)x; // noop (for compiler warning)
     }
-    static void x_138(Smoke::Stack x) {
+    static void x_139(Smoke::Stack x) {
 	// cleanup()
 	QFont::cleanup();
 	(void)x; // noop (for compiler warning)
     }
-    static void x_139(Smoke::Stack x) {
+    static void x_140(Smoke::Stack x) {
 	// cacheStatistics()
 	QFont::cacheStatistics();
 	(void)x; // noop (for compiler warning)
     }
-    static void x_140(Smoke::Stack x) {
+    static void x_141(Smoke::Stack x) {
 	// defaultFont()
 	QFont xret = QFont::defaultFont();
 	x[0].s_class = (void*)new QFont(xret);
     }
-    static void x_141(Smoke::Stack x) {
+    static void x_142(Smoke::Stack x) {
 	// setDefaultFont(const QFont&)
 	QFont::setDefaultFont(*(const QFont *)x[1].s_class);
 	(void)x; // noop (for compiler warning)
     }
-    void x_142(Smoke::Stack x) const {
+    void x_143(Smoke::Stack x) const {
 	// dirty()
 	bool xret = this->QFont::dirty();
 	x[0].s_bool = xret;
     }
-    void x_143(Smoke::Stack x) const {
+    void x_144(Smoke::Stack x) const {
 	// deciPointSize()
 	int xret = this->QFont::deciPointSize();
 	x[0].s_int = xret;
@@ -641,7 +644,7 @@ public:
 	    break;
 	}
     }
-    ~x_QFont() { qt_Smoke->binding->deleted(118, (void*)this); }
+    ~x_QFont() { qt_Smoke->binding->deleted(116, (void*)this); }
 };
 void xenum_QFont(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
     x_QFont::xenum_operation(xop, xtype, xdata, xvalue);
@@ -738,7 +741,7 @@ void xcall_QFont(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 86: x_QFont::x_86(args);	break;
 	case 87: x_QFont::x_87(args);	break;
 	case 88: x_QFont::x_88(args);	break;
-	case 89: xself->x_89(args);	break;
+	case 89: x_QFont::x_89(args);	break;
 	case 90: xself->x_90(args);	break;
 	case 91: xself->x_91(args);	break;
 	case 92: xself->x_92(args);	break;
@@ -780,7 +783,7 @@ void xcall_QFont(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 128: xself->x_128(args);	break;
 	case 129: xself->x_129(args);	break;
 	case 130: xself->x_130(args);	break;
-	case 131: x_QFont::x_131(args);	break;
+	case 131: xself->x_131(args);	break;
 	case 132: x_QFont::x_132(args);	break;
 	case 133: x_QFont::x_133(args);	break;
 	case 134: x_QFont::x_134(args);	break;
@@ -791,8 +794,9 @@ void xcall_QFont(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 139: x_QFont::x_139(args);	break;
 	case 140: x_QFont::x_140(args);	break;
 	case 141: x_QFont::x_141(args);	break;
-	case 142: xself->x_142(args);	break;
+	case 142: x_QFont::x_142(args);	break;
 	case 143: xself->x_143(args);	break;
-	case 144: delete (QFont*)xself;	break;
+	case 144: xself->x_144(args);	break;
+	case 145: delete (QFont*)xself;	break;
     }
 }

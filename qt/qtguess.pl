@@ -427,6 +427,7 @@ our %tests = (
 	"QT_NO_STYLE_MOTIFPLUS" =>	["qmotifplusstyle.h", "QMotifPlusStyle foo;", 16],
 	"QT_NO_STYLE_SGI" =>		["qsgistyle.h", "QSGIStyle foo;", 16],
 	"QT_NO_STYLE_WINDOWS" =>	["qwindowsstyle.h", "QWindowsStyle foo;", 16],
+	"QT_NO_STYLE_WINDOWSXP" =>	["qwindowsxpstyle.h", "QWindowsXPStyle foo;", 16],
         "QT_NO_TABBAR" =>               ["qtabbar.h", "QTabBar foo;", 10],
         "QT_NO_TABDIALOG" =>            ["qtabdialog.h", "QTabDialog foo;", 12],
         "QT_NO_TABLE" =>                ["qtable.h", "QTable foo;", 10],

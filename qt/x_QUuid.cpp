@@ -34,37 +34,44 @@ public:
     }
     x_QUuid(const QString& x1) : QUuid(x1) {
     }
-    void x_4(Smoke::Stack x) const {
+    static void x_4(Smoke::Stack x) {
+	// QUuid(const char*)
+	x_QUuid* xret = new x_QUuid((const char*)x[1].s_voidp);
+	x[0].s_class = (void*)xret;
+    }
+    x_QUuid(const char* x1) : QUuid(x1) {
+    }
+    void x_5(Smoke::Stack x) const {
 	// toString()
 	QString xret = this->QUuid::toString();
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    void x_5(Smoke::Stack x) const {
+    void x_6(Smoke::Stack x) const {
 	// operator QString()
 	this->QUuid::operator QString();
 	(void)x; // noop (for compiler warning)
     }
-    void x_6(Smoke::Stack x) const {
+    void x_7(Smoke::Stack x) const {
 	// isNull()
 	bool xret = this->QUuid::isNull();
 	x[0].s_bool = xret;
     }
-    void x_7(Smoke::Stack x) {
+    void x_8(Smoke::Stack x) {
 	// operator=(const QUuid&)
 	QUuid& xret = this->QUuid::operator=(*(const QUuid *)x[1].s_class);
 	x[0].s_class = (void*)&xret;
     }
-    void x_8(Smoke::Stack x) const {
+    void x_9(Smoke::Stack x) const {
 	// operator==(const QUuid&)
 	bool xret = this->QUuid::operator==(*(const QUuid *)x[1].s_class);
 	x[0].s_bool = xret;
     }
-    void x_9(Smoke::Stack x) const {
+    void x_10(Smoke::Stack x) const {
 	// operator!=(const QUuid&)
 	bool xret = this->QUuid::operator!=(*(const QUuid *)x[1].s_class);
 	x[0].s_bool = xret;
     }
-    ~x_QUuid() { qt_Smoke->binding->deleted(345, (void*)this); }
+    ~x_QUuid() { qt_Smoke->binding->deleted(353, (void*)this); }
 };
 void xcall_QUuid(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QUuid *xself = (x_QUuid*)obj;
@@ -73,12 +80,13 @@ void xcall_QUuid(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 1: x_QUuid::x_1(args);	break;
 	case 2: x_QUuid::x_2(args);	break;
 	case 3: x_QUuid::x_3(args);	break;
-	case 4: xself->x_4(args);	break;
+	case 4: x_QUuid::x_4(args);	break;
 	case 5: xself->x_5(args);	break;
 	case 6: xself->x_6(args);	break;
 	case 7: xself->x_7(args);	break;
 	case 8: xself->x_8(args);	break;
 	case 9: xself->x_9(args);	break;
-	case 10: delete (QUuid*)xself;	break;
+	case 10: xself->x_10(args);	break;
+	case 11: delete (QUuid*)xself;	break;
     }
 }

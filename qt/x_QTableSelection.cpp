@@ -12,75 +12,82 @@ public:
     }
     x_QTableSelection() : QTableSelection() {
     }
-    void x_1(Smoke::Stack x) {
+    static void x_1(Smoke::Stack x) {
+	// QTableSelection(int, int, int, int)
+	x_QTableSelection* xret = new x_QTableSelection((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int);
+	x[0].s_class = (void*)xret;
+    }
+    x_QTableSelection(int x1, int x2, int x3, int x4) : QTableSelection(x1, x2, x3, x4) {
+    }
+    void x_2(Smoke::Stack x) {
 	// init(int, int)
 	this->QTableSelection::init((int)x[1].s_int,(int)x[2].s_int);
 	(void)x; // noop (for compiler warning)
     }
-    void x_2(Smoke::Stack x) {
+    void x_3(Smoke::Stack x) {
 	// expandTo(int, int)
 	this->QTableSelection::expandTo((int)x[1].s_int,(int)x[2].s_int);
 	(void)x; // noop (for compiler warning)
     }
-    void x_3(Smoke::Stack x) const {
+    void x_4(Smoke::Stack x) const {
 	// operator==(const QTableSelection&)
 	bool xret = this->QTableSelection::operator==(*(const QTableSelection *)x[1].s_class);
 	x[0].s_bool = xret;
     }
-    void x_4(Smoke::Stack x) const {
+    void x_5(Smoke::Stack x) const {
 	// operator!=(const QTableSelection&)
 	bool xret = this->QTableSelection::operator!=(*(const QTableSelection *)x[1].s_class);
 	x[0].s_bool = xret;
     }
-    void x_5(Smoke::Stack x) const {
+    void x_6(Smoke::Stack x) const {
 	// topRow()
 	int xret = this->QTableSelection::topRow();
 	x[0].s_int = xret;
     }
-    void x_6(Smoke::Stack x) const {
+    void x_7(Smoke::Stack x) const {
 	// bottomRow()
 	int xret = this->QTableSelection::bottomRow();
 	x[0].s_int = xret;
     }
-    void x_7(Smoke::Stack x) const {
+    void x_8(Smoke::Stack x) const {
 	// leftCol()
 	int xret = this->QTableSelection::leftCol();
 	x[0].s_int = xret;
     }
-    void x_8(Smoke::Stack x) const {
+    void x_9(Smoke::Stack x) const {
 	// rightCol()
 	int xret = this->QTableSelection::rightCol();
 	x[0].s_int = xret;
     }
-    void x_9(Smoke::Stack x) const {
+    void x_10(Smoke::Stack x) const {
 	// anchorRow()
 	int xret = this->QTableSelection::anchorRow();
 	x[0].s_int = xret;
     }
-    void x_10(Smoke::Stack x) const {
+    void x_11(Smoke::Stack x) const {
 	// anchorCol()
 	int xret = this->QTableSelection::anchorCol();
 	x[0].s_int = xret;
     }
-    void x_11(Smoke::Stack x) const {
+    void x_12(Smoke::Stack x) const {
 	// isActive()
 	bool xret = this->QTableSelection::isActive();
 	x[0].s_bool = xret;
     }
-    static void x_12(Smoke::Stack x) {
+    static void x_13(Smoke::Stack x) {
 	// QTableSelection(const QTableSelection&)
 	x_QTableSelection* xret = new x_QTableSelection(*(const QTableSelection *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QTableSelection(const QTableSelection& x1) : QTableSelection(x1) {
     }
-    ~x_QTableSelection() { qt_Smoke->binding->deleted(314, (void*)this); }
+    ~x_QTableSelection() { qt_Smoke->binding->deleted(322, (void*)this); }
 };
 void xcall_QTableSelection(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QTableSelection *xself = (x_QTableSelection*)obj;
     switch(xi) {
 	case 0: x_QTableSelection::x_0(args);	break;
-	case 1: xself->x_1(args);	break;
+	case 1: x_QTableSelection::x_1(args);	break;
 	case 2: xself->x_2(args);	break;
 	case 3: xself->x_3(args);	break;
 	case 4: xself->x_4(args);	break;
@@ -91,7 +98,8 @@ void xcall_QTableSelection(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 9: xself->x_9(args);	break;
 	case 10: xself->x_10(args);	break;
 	case 11: xself->x_11(args);	break;
-	case 12: x_QTableSelection::x_12(args);	break;
-	case 13: delete (QTableSelection*)xself;	break;
+	case 12: xself->x_12(args);	break;
+	case 13: x_QTableSelection::x_13(args);	break;
+	case 14: delete (QTableSelection*)xself;	break;
     }
 }

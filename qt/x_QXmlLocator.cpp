@@ -21,17 +21,17 @@ public:
     }
     virtual int columnNumber() {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(11989, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(12505, (void*)this, x, true /*pure virtual*/);
 	return (int)x[0].s_int;
 	// ABSTRACT
     }
     virtual int lineNumber() {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(11990, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(12506, (void*)this, x, true /*pure virtual*/);
 	return (int)x[0].s_int;
 	// ABSTRACT
     }
-    ~x_QXmlLocator() { qt_Smoke->binding->deleted(378, (void*)this); }
+    ~x_QXmlLocator() { qt_Smoke->binding->deleted(386, (void*)this); }
 };
 void xcall_QXmlLocator(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QXmlLocator *xself = (x_QXmlLocator*)obj;

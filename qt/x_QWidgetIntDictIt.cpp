@@ -17,7 +17,7 @@ public:
 	QWidgetIntDictIt& xret = this->QWidgetIntDictIt::operator=(*(const QWidgetIntDictIt *)x[1].s_class);
 	x[0].s_class = (void*)&xret;
     }
-    ~x_QWidgetIntDictIt() { qt_Smoke->binding->deleted(360, (void*)this); }
+    ~x_QWidgetIntDictIt() { qt_Smoke->binding->deleted(368, (void*)this); }
 };
 void xcall_QWidgetIntDictIt(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QWidgetIntDictIt *xself = (x_QWidgetIntDictIt*)obj;

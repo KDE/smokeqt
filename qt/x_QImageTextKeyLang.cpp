@@ -36,7 +36,7 @@ public:
     }
     x_QImageTextKeyLang(const QImageTextKeyLang& x1) : QImageTextKeyLang(x1) {
     }
-    ~x_QImageTextKeyLang() { qt_Smoke->binding->deleted(164, (void*)this); }
+    ~x_QImageTextKeyLang() { qt_Smoke->binding->deleted(170, (void*)this); }
 };
 void xcall_QImageTextKeyLang(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QImageTextKeyLang *xself = (x_QImageTextKeyLang*)obj;

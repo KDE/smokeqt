@@ -30,7 +30,7 @@ public:
     }
     x_QResizeEvent(const QResizeEvent& x1) : QResizeEvent(x1) {
     }
-    ~x_QResizeEvent() { qt_Smoke->binding->deleted(248, (void*)this); }
+    ~x_QResizeEvent() { qt_Smoke->binding->deleted(255, (void*)this); }
 };
 void xcall_QResizeEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QResizeEvent *xself = (x_QResizeEvent*)obj;

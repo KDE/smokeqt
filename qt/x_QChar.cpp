@@ -512,7 +512,7 @@ public:
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {
-	  case 64: //QChar::Joining
+	  case 65: //QChar::Joining
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QChar::Joining;
@@ -528,7 +528,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 61: //QChar::CombiningClass
+	  case 62: //QChar::CombiningClass
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QChar::CombiningClass;
@@ -544,7 +544,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 63: //QChar::Direction
+	  case 64: //QChar::Direction
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QChar::Direction;
@@ -560,7 +560,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 62: //QChar::Decomposition
+	  case 63: //QChar::Decomposition
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QChar::Decomposition;
@@ -576,7 +576,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 60: //QChar::Category
+	  case 61: //QChar::Category
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QChar::Category;
@@ -594,7 +594,7 @@ public:
 	    break;
 	}
     }
-    ~x_QChar() { qt_Smoke->binding->deleted(33, (void*)this); }
+    ~x_QChar() { qt_Smoke->binding->deleted(34, (void*)this); }
 };
 void xenum_QChar(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
     x_QChar::xenum_operation(xop, xtype, xdata, xvalue);

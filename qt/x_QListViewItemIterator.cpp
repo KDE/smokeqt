@@ -68,12 +68,17 @@ public:
 	QListViewItemIterator& xret = this->QListViewItemIterator::operator-=((int)x[1].s_int);
 	x[0].s_class = (void*)&xret;
     }
-    void x_11(Smoke::Stack x) const {
+    void x_11(Smoke::Stack x) {
+	// operator*()
+	QListViewItem* xret = this->QListViewItemIterator::operator*();
+	x[0].s_class = (void*)xret;
+    }
+    void x_12(Smoke::Stack x) const {
 	// current()
 	QListViewItem* xret = this->QListViewItemIterator::current();
 	x[0].s_class = (void*)xret;
     }
-    ~x_QListViewItemIterator() { qt_Smoke->binding->deleted(187, (void*)this); }
+    ~x_QListViewItemIterator() { qt_Smoke->binding->deleted(193, (void*)this); }
 };
 void xcall_QListViewItemIterator(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QListViewItemIterator *xself = (x_QListViewItemIterator*)obj;
@@ -90,6 +95,7 @@ void xcall_QListViewItemIterator(Smoke::Index xi, void *obj, Smoke::Stack args) 
 	case 9: xself->x_9(args);	break;
 	case 10: xself->x_10(args);	break;
 	case 11: xself->x_11(args);	break;
-	case 12: delete (QListViewItemIterator*)xself;	break;
+	case 12: xself->x_12(args);	break;
+	case 13: delete (QListViewItemIterator*)xself;	break;
     }
 }

@@ -19,7 +19,7 @@ public:
     }
     x_QVFbKeyData(const QVFbKeyData& x1) : QVFbKeyData(x1) {
     }
-    ~x_QVFbKeyData() { qt_Smoke->binding->deleted(350, (void*)this); }
+    ~x_QVFbKeyData() { qt_Smoke->binding->deleted(358, (void*)this); }
 };
 void xcall_QVFbKeyData(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QVFbKeyData *xself = (x_QVFbKeyData*)obj;

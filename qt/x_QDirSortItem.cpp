@@ -19,7 +19,7 @@ public:
     }
     x_QDirSortItem(const QDirSortItem& x1) : QDirSortItem(x1) {
     }
-    ~x_QDirSortItem() { qt_Smoke->binding->deleted(72, (void*)this); }
+    ~x_QDirSortItem() { qt_Smoke->binding->deleted(73, (void*)this); }
 };
 void xcall_QDirSortItem(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QDirSortItem *xself = (x_QDirSortItem*)obj;

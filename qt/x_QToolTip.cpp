@@ -126,17 +126,32 @@ public:
 	bool xret = QToolTip::isGloballyEnabled();
 	x[0].s_bool = xret;
     }
-    void x_22(Smoke::Stack x) {
+    static void x_22(Smoke::Stack x) {
+	// setWakeUpDelay(int)
+	QToolTip::setWakeUpDelay((int)x[1].s_int);
+	(void)x; // noop (for compiler warning)
+    }
+    void x_23(Smoke::Stack x) {
 	// tip(const QRect&, const QString&)
 	this->QToolTip::tip(*(const QRect *)x[1].s_class,*(const QString *)x[2].s_voidp);
 	(void)x; // noop (for compiler warning)
     }
-    void x_23(Smoke::Stack x) {
+    void x_24(Smoke::Stack x) {
 	// tip(const QRect&, const QString&, const QString&)
 	this->QToolTip::tip(*(const QRect *)x[1].s_class,*(const QString *)x[2].s_voidp,*(const QString *)x[3].s_voidp);
 	(void)x; // noop (for compiler warning)
     }
-    void x_24(Smoke::Stack x) {
+    void x_25(Smoke::Stack x) {
+	// tip(const QRect&, const QString&, const QRect&)
+	this->QToolTip::tip(*(const QRect *)x[1].s_class,*(const QString *)x[2].s_voidp,*(const QRect *)x[3].s_class);
+	(void)x; // noop (for compiler warning)
+    }
+    void x_26(Smoke::Stack x) {
+	// tip(const QRect&, const QString&, const QString&, const QRect&)
+	this->QToolTip::tip(*(const QRect *)x[1].s_class,*(const QString *)x[2].s_voidp,*(const QString *)x[3].s_voidp,*(const QRect *)x[4].s_class);
+	(void)x; // noop (for compiler warning)
+    }
+    void x_27(Smoke::Stack x) {
 	// clear()
 	this->QToolTip::clear();
 	(void)x; // noop (for compiler warning)
@@ -144,11 +159,11 @@ public:
     virtual void maybeTip(const QPoint& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	qt_Smoke->binding->callMethod(10745, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(11227, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }
-    ~x_QToolTip() { qt_Smoke->binding->deleted(334, (void*)this); }
+    ~x_QToolTip() { qt_Smoke->binding->deleted(342, (void*)this); }
 };
 void xcall_QToolTip(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QToolTip *xself = (x_QToolTip*)obj;
@@ -175,9 +190,12 @@ void xcall_QToolTip(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 19: x_QToolTip::x_19(args);	break;
 	case 20: x_QToolTip::x_20(args);	break;
 	case 21: x_QToolTip::x_21(args);	break;
-	case 22: xself->x_22(args);	break;
+	case 22: x_QToolTip::x_22(args);	break;
 	case 23: xself->x_23(args);	break;
 	case 24: xself->x_24(args);	break;
-	case 25: delete (QToolTip*)xself;	break;
+	case 25: xself->x_25(args);	break;
+	case 26: xself->x_26(args);	break;
+	case 27: xself->x_27(args);	break;
+	case 28: delete (QToolTip*)xself;	break;
     }
 }

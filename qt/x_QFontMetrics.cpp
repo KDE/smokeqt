@@ -188,7 +188,7 @@ public:
 	int xret = this->QFontMetrics::lineWidth();
 	x[0].s_int = xret;
     }
-    ~x_QFontMetrics() { qt_Smoke->binding->deleted(122, (void*)this); }
+    ~x_QFontMetrics() { qt_Smoke->binding->deleted(120, (void*)this); }
 };
 void xcall_QFontMetrics(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QFontMetrics *xself = (x_QFontMetrics*)obj;

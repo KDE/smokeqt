@@ -34,7 +34,7 @@ public:
     }
     x_QChildEvent(const QChildEvent& x1) : QChildEvent(x1) {
     }
-    ~x_QChildEvent() { qt_Smoke->binding->deleted(38, (void*)this); }
+    ~x_QChildEvent() { qt_Smoke->binding->deleted(39, (void*)this); }
 };
 void xcall_QChildEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QChildEvent *xself = (x_QChildEvent*)obj;

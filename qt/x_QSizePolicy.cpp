@@ -36,13 +36,13 @@ public:
 	x[0].s_enum = (long)QSizePolicy::Vertically;
     }
     static void x_10(Smoke::Stack x) {
-	x[0].s_enum = (long)QSizePolicy::BothDirections;
-    }
-    static void x_11(Smoke::Stack x) {
 	x[0].s_enum = (long)QSizePolicy::Horizontal;
     }
-    static void x_12(Smoke::Stack x) {
+    static void x_11(Smoke::Stack x) {
 	x[0].s_enum = (long)QSizePolicy::Vertical;
+    }
+    static void x_12(Smoke::Stack x) {
+	x[0].s_enum = (long)QSizePolicy::BothDirections;
     }
     static void x_13(Smoke::Stack x) {
 	// QSizePolicy()
@@ -164,7 +164,12 @@ public:
 	this->QSizePolicy::setVerStretch((uchar)x[1].s_uchar);
 	(void)x; // noop (for compiler warning)
     }
-    static void x_35(Smoke::Stack x) {
+    void x_35(Smoke::Stack x) {
+	// transpose()
+	this->QSizePolicy::transpose();
+	(void)x; // noop (for compiler warning)
+    }
+    static void x_36(Smoke::Stack x) {
 	// QSizePolicy(const QSizePolicy&)
 	x_QSizePolicy* xret = new x_QSizePolicy(*(const QSizePolicy *)x[1].s_class);
 	x[0].s_class = (void*)xret;
@@ -173,7 +178,7 @@ public:
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {
-	  case 509: //QSizePolicy::ExpandData
+	  case 529: //QSizePolicy::ExpandData
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QSizePolicy::ExpandData;
@@ -189,7 +194,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 510: //QSizePolicy::SizeType
+	  case 530: //QSizePolicy::SizeType
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QSizePolicy::SizeType;
@@ -207,7 +212,7 @@ public:
 	    break;
 	}
     }
-    ~x_QSizePolicy() { qt_Smoke->binding->deleted(265, (void*)this); }
+    ~x_QSizePolicy() { qt_Smoke->binding->deleted(271, (void*)this); }
 };
 void xenum_QSizePolicy(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
     x_QSizePolicy::xenum_operation(xop, xtype, xdata, xvalue);
@@ -250,7 +255,8 @@ void xcall_QSizePolicy(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 32: xself->x_32(args);	break;
 	case 33: xself->x_33(args);	break;
 	case 34: xself->x_34(args);	break;
-	case 35: x_QSizePolicy::x_35(args);	break;
-	case 36: delete (QSizePolicy*)xself;	break;
+	case 35: xself->x_35(args);	break;
+	case 36: x_QSizePolicy::x_36(args);	break;
+	case 37: delete (QSizePolicy*)xself;	break;
     }
 }

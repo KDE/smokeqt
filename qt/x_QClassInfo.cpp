@@ -19,7 +19,7 @@ public:
     }
     x_QClassInfo(const QClassInfo& x1) : QClassInfo(x1) {
     }
-    ~x_QClassInfo() { qt_Smoke->binding->deleted(39, (void*)this); }
+    ~x_QClassInfo() { qt_Smoke->binding->deleted(40, (void*)this); }
 };
 void xcall_QClassInfo(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QClassInfo *xself = (x_QClassInfo*)obj;

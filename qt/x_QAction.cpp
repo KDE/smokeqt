@@ -197,72 +197,82 @@ public:
 	bool xret = this->QAction::isEnabled();
 	x[0].s_bool = xret;
     }
-    void x_34(Smoke::Stack x) {
+    void x_34(Smoke::Stack x) const {
+	// isVisible()
+	bool xret = this->QAction::isVisible();
+	x[0].s_bool = xret;
+    }
+    void x_35(Smoke::Stack x) {
 	// addTo(QWidget*)
 	bool xret = this->QAction::addTo((QWidget*)x[1].s_class);
 	x[0].s_bool = xret;
     }
-    void x_35(Smoke::Stack x) {
+    void x_36(Smoke::Stack x) {
 	// removeFrom(QWidget*)
 	bool xret = this->QAction::removeFrom((QWidget*)x[1].s_class);
 	x[0].s_bool = xret;
     }
-    void x_36(Smoke::Stack x) {
+    void x_37(Smoke::Stack x) {
 	// toggle()
 	this->QAction::toggle();
 	(void)x; // noop (for compiler warning)
     }
-    void x_37(Smoke::Stack x) {
+    void x_38(Smoke::Stack x) {
 	// setOn(bool)
 	this->QAction::setOn((bool)x[1].s_bool);
 	(void)x; // noop (for compiler warning)
     }
-    void x_38(Smoke::Stack x) {
+    void x_39(Smoke::Stack x) {
 	// setEnabled(bool)
 	this->QAction::setEnabled((bool)x[1].s_bool);
 	(void)x; // noop (for compiler warning)
     }
-    void x_39(Smoke::Stack x) {
+    void x_40(Smoke::Stack x) {
+	// setVisible(bool)
+	this->QAction::setVisible((bool)x[1].s_bool);
+	(void)x; // noop (for compiler warning)
+    }
+    void x_41(Smoke::Stack x) {
 	// activated()
 	this->QAction::activated();
 	(void)x; // noop (for compiler warning)
     }
-    void x_40(Smoke::Stack x) {
+    void x_42(Smoke::Stack x) {
 	// toggled(bool)
 	this->QAction::toggled((bool)x[1].s_bool);
 	(void)x; // noop (for compiler warning)
     }
-    static void x_41(Smoke::Stack x) {
+    static void x_43(Smoke::Stack x) {
 	// staticMetaObject()
 	QMetaObject* xret = QAction::staticMetaObject();
 	x[0].s_class = (void*)xret;
     }
-    static void x_42(Smoke::Stack x) {
+    static void x_44(Smoke::Stack x) {
 	// tr(const char*, const char*)
 	QString xret = QAction::tr((const char*)x[1].s_voidp,(const char*)x[2].s_voidp);
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    static void x_43(Smoke::Stack x) {
+    static void x_45(Smoke::Stack x) {
 	// tr(const char*)
 	QString xret = QAction::tr((const char*)x[1].s_voidp);
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    static void x_44(Smoke::Stack x) {
+    static void x_46(Smoke::Stack x) {
 	// trUtf8(const char*, const char*)
 	QString xret = QAction::trUtf8((const char*)x[1].s_voidp,(const char*)x[2].s_voidp);
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    static void x_45(Smoke::Stack x) {
+    static void x_47(Smoke::Stack x) {
 	// trUtf8(const char*)
 	QString xret = QAction::trUtf8((const char*)x[1].s_voidp);
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    void x_46(Smoke::Stack x) {
+    void x_48(Smoke::Stack x) {
 	// addedTo(QWidget*, QWidget*)
 	this->QAction::addedTo((QWidget*)x[1].s_class,(QWidget*)x[2].s_class);
 	(void)x; // noop (for compiler warning)
     }
-    void x_47(Smoke::Stack x) {
+    void x_49(Smoke::Stack x) {
 	// addedTo(int, QPopupMenu*)
 	this->QAction::addedTo((int)x[1].s_int,(QPopupMenu*)x[2].s_class);
 	(void)x; // noop (for compiler warning)
@@ -270,21 +280,21 @@ public:
     virtual bool addTo(QWidget* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(75, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(77, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QAction::addTo(x1);
     }
     virtual void addedTo(QWidget* x1, QWidget* x2) {
 	Smoke::StackItem x[3];
 	x[1].s_class = (void*)x1;
 	x[2].s_class = (void*)x2;
-	if(qt_Smoke->binding->callMethod(87, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(90, (void*)this, x)) return;
 	this->QAction::addedTo(x1, x2);
     }
     virtual void addedTo(int x1, QPopupMenu* x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_class = (void*)x2;
-	if(qt_Smoke->binding->callMethod(88, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(91, (void*)this, x)) return;
 	this->QAction::addedTo(x1, x2);
     }
     virtual bool checkConnectArgs(const char* x1, const QObject* x2, const char* x3) {
@@ -292,66 +302,66 @@ public:
 	x[1].s_voidp = (void*)x1;
 	x[2].s_class = (void*)x2;
 	x[3].s_voidp = (void*)x3;
-	if(qt_Smoke->binding->callMethod(6519, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(6819, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QObject::checkConnectArgs(x1, x2, x3);
     }
     virtual void childEvent(QChildEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(6515, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6815, (void*)this, x)) return;
 	this->QObject::childEvent(x1);
     }
     virtual const char* className() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(41, (void*)this, x)) return (const char*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(42, (void*)this, x)) return (const char*)x[0].s_class;
 	return this->QAction::className();
     }
     virtual void connectNotify(const char* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(6517, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6817, (void*)this, x)) return;
 	this->QObject::connectNotify(x1);
     }
     virtual void customEvent(QCustomEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(6516, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6816, (void*)this, x)) return;
 	this->QObject::customEvent(x1);
     }
     virtual void disconnectNotify(const char* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(6518, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6818, (void*)this, x)) return;
 	this->QObject::disconnectNotify(x1);
     }
     virtual bool event(QEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(6453, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(6749, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QObject::event(x1);
     }
     virtual bool eventFilter(QObject* x1, QEvent* x2) {
 	Smoke::StackItem x[3];
 	x[1].s_class = (void*)x1;
 	x[2].s_class = (void*)x2;
-	if(qt_Smoke->binding->callMethod(6454, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(6750, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QObject::eventFilter(x1, x2);
     }
     virtual void insertChild(QObject* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(6476, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6772, (void*)this, x)) return;
 	this->QObject::insertChild(x1);
     }
     virtual QMetaObject* metaObject() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(40, (void*)this, x)) return (QMetaObject*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(41, (void*)this, x)) return (QMetaObject*)x[0].s_class;
 	return this->QAction::metaObject();
     }
     virtual QVariant property(const char* x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(6490, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(6786, (void*)this, x)) {
 	    QVariant *xptr = (QVariant *)x[0].s_class;
 	    QVariant xret(*xptr);
 	    delete xptr;
@@ -362,21 +372,21 @@ public:
     virtual void* qt_cast(const char* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(42, (void*)this, x)) return (void*)x[0].s_voidp;
+	if(qt_Smoke->binding->callMethod(43, (void*)this, x)) return (void*)x[0].s_voidp;
 	return this->QAction::qt_cast(x1);
     }
     virtual bool qt_emit(int x1, QUObject* x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_voidp = (void*)x2;
-	if(qt_Smoke->binding->callMethod(44, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(45, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QAction::qt_emit(x1, x2);
     }
     virtual bool qt_invoke(int x1, QUObject* x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_voidp = (void*)x2;
-	if(qt_Smoke->binding->callMethod(43, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(44, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QAction::qt_invoke(x1, x2);
     }
     virtual bool qt_property(int x1, int x2, QVariant* x3) {
@@ -384,98 +394,98 @@ public:
 	x[1].s_int = x1;
 	x[2].s_int = x2;
 	x[3].s_class = (void*)x3;
-	if(qt_Smoke->binding->callMethod(45, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(46, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QAction::qt_property(x1, x2, x3);
     }
     virtual void removeChild(QObject* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(6477, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6773, (void*)this, x)) return;
 	this->QObject::removeChild(x1);
     }
     virtual bool removeFrom(QWidget* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(76, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(78, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QAction::removeFrom(x1);
     }
     virtual void setAccel(const QKeySequence& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(69, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(70, (void*)this, x)) return;
 	this->QAction::setAccel(x1);
     }
     virtual void setEnabled(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(79, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(81, (void*)this, x)) return;
 	this->QAction::setEnabled(x1);
     }
     virtual void setIconSet(const QIconSet& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(57, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(58, (void*)this, x)) return;
 	this->QAction::setIconSet(x1);
     }
     virtual void setMenuText(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(61, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(62, (void*)this, x)) return;
 	this->QAction::setMenuText(x1);
     }
     virtual void setName(const char* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(6459, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6755, (void*)this, x)) return;
 	this->QObject::setName(x1);
     }
     virtual void setOn(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(78, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(80, (void*)this, x)) return;
 	this->QAction::setOn(x1);
     }
     virtual bool setProperty(const char* x1, const QVariant& x2) {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)x1;
 	x[2].s_class = (void*)&x2;
-	if(qt_Smoke->binding->callMethod(6489, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(6785, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QObject::setProperty(x1, x2);
     }
     virtual void setStatusTip(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(65, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(66, (void*)this, x)) return;
 	this->QAction::setStatusTip(x1);
     }
     virtual void setText(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(59, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(60, (void*)this, x)) return;
 	this->QAction::setText(x1);
     }
     virtual void setToggleAction(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(71, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(72, (void*)this, x)) return;
 	this->QAction::setToggleAction(x1);
     }
     virtual void setToolTip(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(63, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(64, (void*)this, x)) return;
 	this->QAction::setToolTip(x1);
     }
     virtual void setWhatsThis(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(67, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(68, (void*)this, x)) return;
 	this->QAction::setWhatsThis(x1);
     }
     virtual void timerEvent(QTimerEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(6514, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6814, (void*)this, x)) return;
 	this->QObject::timerEvent(x1);
     }
     ~x_QAction() { qt_Smoke->binding->deleted(2, (void*)this); }
@@ -524,13 +534,15 @@ void xcall_QAction(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 38: xself->x_38(args);	break;
 	case 39: xself->x_39(args);	break;
 	case 40: xself->x_40(args);	break;
-	case 41: x_QAction::x_41(args);	break;
-	case 42: x_QAction::x_42(args);	break;
+	case 41: xself->x_41(args);	break;
+	case 42: xself->x_42(args);	break;
 	case 43: x_QAction::x_43(args);	break;
 	case 44: x_QAction::x_44(args);	break;
 	case 45: x_QAction::x_45(args);	break;
-	case 46: xself->x_46(args);	break;
-	case 47: xself->x_47(args);	break;
-	case 48: delete (QAction*)xself;	break;
+	case 46: x_QAction::x_46(args);	break;
+	case 47: x_QAction::x_47(args);	break;
+	case 48: xself->x_48(args);	break;
+	case 49: xself->x_49(args);	break;
+	case 50: delete (QAction*)xself;	break;
     }
 }

@@ -25,7 +25,7 @@ public:
     }
     x_QPtrBucket(const QPtrBucket& x1) : QPtrBucket(x1) {
     }
-    ~x_QPtrBucket() { qt_Smoke->binding->deleted(239, (void*)this); }
+    ~x_QPtrBucket() { qt_Smoke->binding->deleted(246, (void*)this); }
 };
 void xcall_QPtrBucket(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QPtrBucket *xself = (x_QPtrBucket*)obj;

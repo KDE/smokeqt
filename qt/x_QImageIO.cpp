@@ -148,7 +148,7 @@ public:
 	QStrList xret = QImageIO::outputFormats();
 	x[0].s_voidp = (void*)new QStrList(xret);
     }
-    ~x_QImageIO() { qt_Smoke->binding->deleted(163, (void*)this); }
+    ~x_QImageIO() { qt_Smoke->binding->deleted(169, (void*)this); }
 };
 void xcall_QImageIO(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QImageIO *xself = (x_QImageIO*)obj;

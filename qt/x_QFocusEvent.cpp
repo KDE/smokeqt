@@ -85,7 +85,7 @@ public:
 	    break;
 	}
     }
-    ~x_QFocusEvent() { qt_Smoke->binding->deleted(117, (void*)this); }
+    ~x_QFocusEvent() { qt_Smoke->binding->deleted(115, (void*)this); }
 };
 void xenum_QFocusEvent(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
     x_QFocusEvent::xenum_operation(xop, xtype, xdata, xvalue);

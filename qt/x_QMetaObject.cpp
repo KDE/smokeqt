@@ -219,26 +219,56 @@ public:
 	x[0].s_int = xret;
     }
     void x_42(Smoke::Stack x) const {
+	// enumeratorNames(bool)
+	QStrList xret = this->QMetaObject::enumeratorNames((bool)x[1].s_bool);
+	x[0].s_voidp = (void*)new QStrList(xret);
+    }
+    void x_43(Smoke::Stack x) const {
+	// enumeratorNames()
+	QStrList xret = this->QMetaObject::enumeratorNames();
+	x[0].s_voidp = (void*)new QStrList(xret);
+    }
+    void x_44(Smoke::Stack x) const {
+	// numEnumerators(bool)
+	int xret = this->QMetaObject::numEnumerators((bool)x[1].s_bool);
+	x[0].s_int = xret;
+    }
+    void x_45(Smoke::Stack x) const {
+	// numEnumerators()
+	int xret = this->QMetaObject::numEnumerators();
+	x[0].s_int = xret;
+    }
+    void x_46(Smoke::Stack x) const {
 	// enumerator(const char*, bool)
 	const QMetaEnum* xret = this->QMetaObject::enumerator((const char*)x[1].s_voidp,(bool)x[2].s_bool);
 	x[0].s_class = (void*)xret;
     }
-    void x_43(Smoke::Stack x) const {
+    void x_47(Smoke::Stack x) const {
 	// enumerator(const char*)
 	const QMetaEnum* xret = this->QMetaObject::enumerator((const char*)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
-    static void x_44(Smoke::Stack x) {
+    void x_48(Smoke::Stack x) {
+	// qt_static_property(QObject*, int, int, QVariant*)
+	bool xret = this->QMetaObject::qt_static_property((QObject*)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int,(QVariant*)x[4].s_class);
+	x[0].s_bool = xret;
+    }
+    static void x_49(Smoke::Stack x) {
 	// new_metaobject(const char*, QMetaObject*, const QMetaData*, int, const QMetaData*, int, const QMetaProperty* const, int, const QMetaEnum* const, int, const QClassInfo* const, int)
 	QMetaObject* xret = QMetaObject::new_metaobject((const char*)x[1].s_voidp,(QMetaObject*)x[2].s_class,(const QMetaData*)x[3].s_class,(int)x[4].s_int,(const QMetaData*)x[5].s_class,(int)x[6].s_int,(const QMetaProperty*)x[7].s_class,(int)x[8].s_int,(const QMetaEnum*)x[9].s_class,(int)x[10].s_int,(const QClassInfo*)x[11].s_class,(int)x[12].s_int);
 	x[0].s_class = (void*)xret;
     }
-    static void x_45(Smoke::Stack x) {
+    static void x_50(Smoke::Stack x) {
 	// metaObject(const char*)
 	QMetaObject* xret = QMetaObject::metaObject((const char*)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
-    ~x_QMetaObject() { qt_Smoke->binding->deleted(199, (void*)this); }
+    static void x_51(Smoke::Stack x) {
+	// hasMetaObject(const char*)
+	bool xret = QMetaObject::hasMetaObject((const char*)x[1].s_voidp);
+	x[0].s_bool = xret;
+    }
+    ~x_QMetaObject() { qt_Smoke->binding->deleted(205, (void*)this); }
 };
 void xcall_QMetaObject(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QMetaObject *xself = (x_QMetaObject*)obj;
@@ -287,8 +317,14 @@ void xcall_QMetaObject(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 41: xself->x_41(args);	break;
 	case 42: xself->x_42(args);	break;
 	case 43: xself->x_43(args);	break;
-	case 44: x_QMetaObject::x_44(args);	break;
-	case 45: x_QMetaObject::x_45(args);	break;
-	case 46: delete (QMetaObject*)xself;	break;
+	case 44: xself->x_44(args);	break;
+	case 45: xself->x_45(args);	break;
+	case 46: xself->x_46(args);	break;
+	case 47: xself->x_47(args);	break;
+	case 48: xself->x_48(args);	break;
+	case 49: x_QMetaObject::x_49(args);	break;
+	case 50: x_QMetaObject::x_50(args);	break;
+	case 51: x_QMetaObject::x_51(args);	break;
+	case 52: delete (QMetaObject*)xself;	break;
     }
 }

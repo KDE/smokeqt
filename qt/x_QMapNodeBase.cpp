@@ -37,7 +37,7 @@ public:
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {
-	  case 355: //QMapNodeBase::Color
+	  case 371: //QMapNodeBase::Color
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QMapNodeBase::Color;
@@ -55,7 +55,7 @@ public:
 	    break;
 	}
     }
-    ~x_QMapNodeBase() { qt_Smoke->binding->deleted(190, (void*)this); }
+    ~x_QMapNodeBase() { qt_Smoke->binding->deleted(196, (void*)this); }
 };
 void xenum_QMapNodeBase(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
     x_QMapNodeBase::xenum_operation(xop, xtype, xdata, xvalue);

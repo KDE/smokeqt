@@ -99,7 +99,7 @@ public:
     }
     x_QPaintDeviceMetrics(const QPaintDeviceMetrics& x1) : QPaintDeviceMetrics(x1) {
     }
-    ~x_QPaintDeviceMetrics() { qt_Smoke->binding->deleted(221, (void*)this); }
+    ~x_QPaintDeviceMetrics() { qt_Smoke->binding->deleted(228, (void*)this); }
 };
 void xcall_QPaintDeviceMetrics(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QPaintDeviceMetrics *xself = (x_QPaintDeviceMetrics*)obj;

@@ -2,6 +2,7 @@
 #include <smoke.h>
 #include <qt_smoke.h>
 #include <qfile.h>
+#include <qiodevice.h>
 #include <qdir.h>
 #include <qfileinfo.h>
 #include <qstring.h>
@@ -182,76 +183,81 @@ public:
 	x[0].s_bool = xret;
     }
     void x_36(Smoke::Stack x) const {
+	// isHidden()
+	bool xret = this->QFileInfo::isHidden();
+	x[0].s_bool = xret;
+    }
+    void x_37(Smoke::Stack x) const {
 	// isRelative()
 	bool xret = this->QFileInfo::isRelative();
 	x[0].s_bool = xret;
     }
-    void x_37(Smoke::Stack x) {
+    void x_38(Smoke::Stack x) {
 	// convertToAbs()
 	bool xret = this->QFileInfo::convertToAbs();
 	x[0].s_bool = xret;
     }
-    void x_38(Smoke::Stack x) const {
+    void x_39(Smoke::Stack x) const {
 	// isFile()
 	bool xret = this->QFileInfo::isFile();
 	x[0].s_bool = xret;
     }
-    void x_39(Smoke::Stack x) const {
+    void x_40(Smoke::Stack x) const {
 	// isDir()
 	bool xret = this->QFileInfo::isDir();
 	x[0].s_bool = xret;
     }
-    void x_40(Smoke::Stack x) const {
+    void x_41(Smoke::Stack x) const {
 	// isSymLink()
 	bool xret = this->QFileInfo::isSymLink();
 	x[0].s_bool = xret;
     }
-    void x_41(Smoke::Stack x) const {
+    void x_42(Smoke::Stack x) const {
 	// readLink()
 	QString xret = this->QFileInfo::readLink();
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    void x_42(Smoke::Stack x) const {
+    void x_43(Smoke::Stack x) const {
 	// owner()
 	QString xret = this->QFileInfo::owner();
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    void x_43(Smoke::Stack x) const {
+    void x_44(Smoke::Stack x) const {
 	// ownerId()
 	uint xret = this->QFileInfo::ownerId();
 	x[0].s_uint = xret;
     }
-    void x_44(Smoke::Stack x) const {
+    void x_45(Smoke::Stack x) const {
 	// group()
 	QString xret = this->QFileInfo::group();
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    void x_45(Smoke::Stack x) const {
+    void x_46(Smoke::Stack x) const {
 	// groupId()
 	uint xret = this->QFileInfo::groupId();
 	x[0].s_uint = xret;
     }
-    void x_46(Smoke::Stack x) const {
+    void x_47(Smoke::Stack x) const {
 	// permission(int)
 	bool xret = this->QFileInfo::permission((int)x[1].s_int);
 	x[0].s_bool = xret;
     }
-    void x_47(Smoke::Stack x) const {
-	// size()
-	uint xret = this->QFileInfo::size();
-	x[0].s_uint = xret;
-    }
     void x_48(Smoke::Stack x) const {
+	// size()
+	QIODevice::Offset xret = this->QFileInfo::size();
+	x[0].s_ulong = xret;
+    }
+    void x_49(Smoke::Stack x) const {
 	// created()
 	QDateTime xret = this->QFileInfo::created();
 	x[0].s_class = (void*)new QDateTime(xret);
     }
-    void x_49(Smoke::Stack x) const {
+    void x_50(Smoke::Stack x) const {
 	// lastModified()
 	QDateTime xret = this->QFileInfo::lastModified();
 	x[0].s_class = (void*)new QDateTime(xret);
     }
-    void x_50(Smoke::Stack x) const {
+    void x_51(Smoke::Stack x) const {
 	// lastRead()
 	QDateTime xret = this->QFileInfo::lastRead();
 	x[0].s_class = (void*)new QDateTime(xret);
@@ -276,7 +282,7 @@ public:
 	    break;
 	}
     }
-    ~x_QFileInfo() { qt_Smoke->binding->deleted(114, (void*)this); }
+    ~x_QFileInfo() { qt_Smoke->binding->deleted(112, (void*)this); }
 };
 void xenum_QFileInfo(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
     x_QFileInfo::xenum_operation(xop, xtype, xdata, xvalue);
@@ -335,6 +341,7 @@ void xcall_QFileInfo(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 48: xself->x_48(args);	break;
 	case 49: xself->x_49(args);	break;
 	case 50: xself->x_50(args);	break;
-	case 51: delete (QFileInfo*)xself;	break;
+	case 51: xself->x_51(args);	break;
+	case 52: delete (QFileInfo*)xself;	break;
     }
 }

@@ -205,7 +205,7 @@ public:
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {
-	  case 477: //QRegion::RegionType
+	  case 495: //QRegion::RegionType
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QRegion::RegionType;
@@ -223,7 +223,7 @@ public:
 	    break;
 	}
     }
-    ~x_QRegion() { qt_Smoke->binding->deleted(247, (void*)this); }
+    ~x_QRegion() { qt_Smoke->binding->deleted(254, (void*)this); }
 };
 void xenum_QRegion(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
     x_QRegion::xenum_operation(xop, xtype, xdata, xvalue);

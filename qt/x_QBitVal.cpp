@@ -34,7 +34,7 @@ public:
     }
     x_QBitVal(const QBitVal& x1) : QBitVal(x1) {
     }
-    ~x_QBitVal() { qt_Smoke->binding->deleted(11, (void*)this); }
+    ~x_QBitVal() { qt_Smoke->binding->deleted(12, (void*)this); }
 };
 void xcall_QBitVal(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QBitVal *xself = (x_QBitVal*)obj;

@@ -60,7 +60,7 @@ public:
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_voidp = (void*)&x2;
 	x[3].s_class = (void*)&x3;
-	if(qt_Smoke->binding->callMethod(2607, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(2605, (void*)this, x)) {
 	    QDomDocument *xptr = (QDomDocument *)x[0].s_class;
 	    QDomDocument xret(*xptr);
 	    delete xptr;
@@ -73,7 +73,7 @@ public:
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_voidp = (void*)&x2;
 	x[3].s_voidp = (void*)&x3;
-	if(qt_Smoke->binding->callMethod(2606, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(2604, (void*)this, x)) {
 	    QDomDocumentType *xptr = (QDomDocumentType *)x[0].s_class;
 	    QDomDocumentType xret(*xptr);
 	    delete xptr;
@@ -85,10 +85,10 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_voidp = (void*)&x2;
-	if(qt_Smoke->binding->callMethod(2605, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(2603, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QDomImplementation::hasFeature(x1, x2);
     }
-    ~x_QDomImplementation() { qt_Smoke->binding->deleted(90, (void*)this); }
+    ~x_QDomImplementation() { qt_Smoke->binding->deleted(87, (void*)this); }
 };
 void xcall_QDomImplementation(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QDomImplementation *xself = (x_QDomImplementation*)obj;

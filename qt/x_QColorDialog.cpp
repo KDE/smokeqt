@@ -126,7 +126,12 @@ public:
 	QColorDialog::setCustomColor((int)x[1].s_int,(QRgb)x[2].s_uint);
 	(void)x; // noop (for compiler warning)
     }
-    ~x_QColorDialog() { qt_Smoke->binding->deleted(43, (void*)this); }
+    static void x_23(Smoke::Stack x) {
+	// setStandardColor(int, QRgb)
+	QColorDialog::setStandardColor((int)x[1].s_int,(QRgb)x[2].s_uint);
+	(void)x; // noop (for compiler warning)
+    }
+    ~x_QColorDialog() { qt_Smoke->binding->deleted(44, (void*)this); }
 };
 void xcall_QColorDialog(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QColorDialog xtmp(obj), *xself = &xtmp;
@@ -154,5 +159,6 @@ void xcall_QColorDialog(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 20: x_QColorDialog::x_20(args);	break;
 	case 21: x_QColorDialog::x_21(args);	break;
 	case 22: x_QColorDialog::x_22(args);	break;
+	case 23: x_QColorDialog::x_23(args);	break;
     }
 }

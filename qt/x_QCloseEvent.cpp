@@ -34,7 +34,7 @@ public:
     }
     x_QCloseEvent(const QCloseEvent& x1) : QCloseEvent(x1) {
     }
-    ~x_QCloseEvent() { qt_Smoke->binding->deleted(41, (void*)this); }
+    ~x_QCloseEvent() { qt_Smoke->binding->deleted(42, (void*)this); }
 };
 void xcall_QCloseEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QCloseEvent *xself = (x_QCloseEvent*)obj;

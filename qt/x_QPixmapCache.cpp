@@ -56,7 +56,7 @@ public:
 	QPixmapCache::clear();
 	(void)x; // noop (for compiler warning)
     }
-    ~x_QPixmapCache() { qt_Smoke->binding->deleted(228, (void*)this); }
+    ~x_QPixmapCache() { qt_Smoke->binding->deleted(235, (void*)this); }
 };
 void xcall_QPixmapCache(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QPixmapCache *xself = (x_QPixmapCache*)obj;

@@ -92,7 +92,7 @@ public:
     }
     x_QKeyEvent(const QKeyEvent& x1) : QKeyEvent(x1) {
     }
-    ~x_QKeyEvent() { qt_Smoke->binding->deleted(171, (void*)this); }
+    ~x_QKeyEvent() { qt_Smoke->binding->deleted(177, (void*)this); }
 };
 void xcall_QKeyEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QKeyEvent *xself = (x_QKeyEvent*)obj;

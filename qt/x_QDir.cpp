@@ -417,72 +417,77 @@ public:
 	bool xret = this->QDir::exists(*(const QString *)x[1].s_voidp);
 	x[0].s_bool = xret;
     }
-    static void x_89(Smoke::Stack x) {
+    void x_89(Smoke::Stack x) const {
+	// refresh()
+	this->QDir::refresh();
+	(void)x; // noop (for compiler warning)
+    }
+    static void x_90(Smoke::Stack x) {
 	// convertSeparators(const QString&)
 	QString xret = QDir::convertSeparators(*(const QString *)x[1].s_voidp);
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    static void x_90(Smoke::Stack x) {
+    static void x_91(Smoke::Stack x) {
 	// drives()
 	const QFileInfoList* xret = QDir::drives();
 	x[0].s_voidp = (void*)xret;
     }
-    static void x_91(Smoke::Stack x) {
+    static void x_92(Smoke::Stack x) {
 	// separator()
 	char xret = QDir::separator();
 	x[0].s_char = xret;
     }
-    static void x_92(Smoke::Stack x) {
+    static void x_93(Smoke::Stack x) {
 	// setCurrent(const QString&)
 	bool xret = QDir::setCurrent(*(const QString *)x[1].s_voidp);
 	x[0].s_bool = xret;
     }
-    static void x_93(Smoke::Stack x) {
+    static void x_94(Smoke::Stack x) {
 	// current()
 	QDir xret = QDir::current();
 	x[0].s_class = (void*)new QDir(xret);
     }
-    static void x_94(Smoke::Stack x) {
+    static void x_95(Smoke::Stack x) {
 	// home()
 	QDir xret = QDir::home();
 	x[0].s_class = (void*)new QDir(xret);
     }
-    static void x_95(Smoke::Stack x) {
+    static void x_96(Smoke::Stack x) {
 	// root()
 	QDir xret = QDir::root();
 	x[0].s_class = (void*)new QDir(xret);
     }
-    static void x_96(Smoke::Stack x) {
+    static void x_97(Smoke::Stack x) {
 	// currentDirPath()
 	QString xret = QDir::currentDirPath();
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    static void x_97(Smoke::Stack x) {
+    static void x_98(Smoke::Stack x) {
 	// homeDirPath()
 	QString xret = QDir::homeDirPath();
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    static void x_98(Smoke::Stack x) {
+    static void x_99(Smoke::Stack x) {
 	// rootDirPath()
 	QString xret = QDir::rootDirPath();
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    static void x_99(Smoke::Stack x) {
+    static void x_100(Smoke::Stack x) {
 	// match(const QStringList&, const QString&)
 	bool xret = QDir::match(*(const QStringList *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
 	x[0].s_bool = xret;
     }
-    static void x_100(Smoke::Stack x) {
+    static void x_101(Smoke::Stack x) {
 	// match(const QString&, const QString&)
 	bool xret = QDir::match(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
 	x[0].s_bool = xret;
     }
-    static void x_101(Smoke::Stack x) {
+    static void x_102(Smoke::Stack x) {
 	// cleanDirPath(const QString&)
 	QString xret = QDir::cleanDirPath(*(const QString *)x[1].s_voidp);
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    static void x_102(Smoke::Stack x) {
+    static void x_103(Smoke::Stack x) {
 	// isRelativePath(const QString&)
 	bool xret = QDir::isRelativePath(*(const QString *)x[1].s_voidp);
 	x[0].s_bool = xret;
@@ -491,7 +496,7 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_bool = x2;
-	if(qt_Smoke->binding->callMethod(2165, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(2223, (void*)this, x)) {
 	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;
@@ -501,7 +506,7 @@ public:
     }
     virtual QString absPath() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(2160, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(2218, (void*)this, x)) {
 	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;
@@ -511,7 +516,7 @@ public:
     }
     virtual QString canonicalPath() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(2161, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(2219, (void*)this, x)) {
 	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;
@@ -523,22 +528,22 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_bool = x2;
-	if(qt_Smoke->binding->callMethod(2167, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(2225, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QDir::cd(x1, x2);
     }
     virtual bool cdUp() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(2169, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(2227, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QDir::cdUp();
     }
     virtual void convertToAbs() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(2206, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(2264, (void*)this, x)) return;
 	this->QDir::convertToAbs();
     }
     virtual QString dirName() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(2162, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(2220, (void*)this, x)) {
 	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;
@@ -551,7 +556,7 @@ public:
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_int = x2;
 	x[3].s_int = x3;
-	if(qt_Smoke->binding->callMethod(2183, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(2241, (void*)this, x)) {
 	    QStrList *xptr = (QStrList *)x[0].s_class;
 	    QStrList xret(*xptr);
 	    delete xptr;
@@ -563,7 +568,7 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_int = x2;
-	if(qt_Smoke->binding->callMethod(2180, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(2238, (void*)this, x)) {
 	    QStrList *xptr = (QStrList *)x[0].s_class;
 	    QStrList xret(*xptr);
 	    delete xptr;
@@ -576,14 +581,14 @@ public:
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_int = x2;
 	x[3].s_int = x3;
-	if(qt_Smoke->binding->callMethod(2195, (void*)this, x)) return (const QFileInfoList*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(2253, (void*)this, x)) return (const QFileInfoList*)x[0].s_class;
 	return this->QDir::entryInfoList(x1, x2, x3);
     }
     virtual const QFileInfoList* entryInfoList(int x1, int x2) const {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_int = x2;
-	if(qt_Smoke->binding->callMethod(2192, (void*)this, x)) return (const QFileInfoList*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(2250, (void*)this, x)) return (const QFileInfoList*)x[0].s_class;
 	return this->QDir::entryInfoList(x1, x2);
     }
     virtual QStringList entryList(const QString& x1, int x2, int x3) const {
@@ -591,7 +596,7 @@ public:
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_int = x2;
 	x[3].s_int = x3;
-	if(qt_Smoke->binding->callMethod(2189, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(2247, (void*)this, x)) {
 	    QStringList *xptr = (QStringList *)x[0].s_class;
 	    QStringList xret(*xptr);
 	    delete xptr;
@@ -603,7 +608,7 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_int = x2;
-	if(qt_Smoke->binding->callMethod(2186, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(2244, (void*)this, x)) {
 	    QStringList *xptr = (QStringList *)x[0].s_class;
 	    QStringList xret(*xptr);
 	    delete xptr;
@@ -613,21 +618,21 @@ public:
     }
     virtual bool exists() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(2203, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(2261, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QDir::exists();
     }
     virtual bool exists(const QString& x1, bool x2) {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_bool = x2;
-	if(qt_Smoke->binding->callMethod(2213, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(2271, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QDir::exists(x1, x2);
     }
     virtual QString filePath(const QString& x1, bool x2) const {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_bool = x2;
-	if(qt_Smoke->binding->callMethod(2163, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(2221, (void*)this, x)) {
 	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;
@@ -637,41 +642,41 @@ public:
     }
     virtual bool isReadable() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(2202, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(2260, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QDir::isReadable();
     }
     virtual bool isRelative() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(2205, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(2263, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QDir::isRelative();
     }
     virtual bool isRoot() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(2204, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(2262, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QDir::isRoot();
     }
     virtual bool mkdir(const QString& x1, bool x2) const {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_bool = x2;
-	if(qt_Smoke->binding->callMethod(2198, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(2256, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QDir::mkdir(x1, x2);
     }
     virtual bool operator!=(const QDir& x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(2208, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(2266, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QDir::operator!=(x1);
     }
     virtual bool operator==(const QDir& x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(2207, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(2265, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QDir::operator==(x1);
     }
     virtual QString path() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(2159, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(2217, (void*)this, x)) {
 	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;
@@ -683,7 +688,7 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_bool = x2;
-	if(qt_Smoke->binding->callMethod(2209, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(2267, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QDir::remove(x1, x2);
     }
     virtual bool rename(const QString& x1, const QString& x2, bool x3) {
@@ -691,49 +696,49 @@ public:
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_voidp = (void*)&x2;
 	x[3].s_bool = x3;
-	if(qt_Smoke->binding->callMethod(2211, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(2269, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QDir::rename(x1, x2, x3);
     }
     virtual bool rmdir(const QString& x1, bool x2) const {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_bool = x2;
-	if(qt_Smoke->binding->callMethod(2200, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(2258, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QDir::rmdir(x1, x2);
     }
     virtual void setFilter(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(2173, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(2231, (void*)this, x)) return;
 	this->QDir::setFilter(x1);
     }
     virtual void setMatchAllDirs(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(2177, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(2235, (void*)this, x)) return;
 	this->QDir::setMatchAllDirs(x1);
     }
     virtual void setNameFilter(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(2171, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(2229, (void*)this, x)) return;
 	this->QDir::setNameFilter(x1);
     }
     virtual void setPath(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(2158, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(2216, (void*)this, x)) return;
 	this->QDir::setPath(x1);
     }
     virtual void setSorting(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(2175, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(2233, (void*)this, x)) return;
 	this->QDir::setSorting(x1);
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {
-	  case 127: //QDir::FilterSpec
+	  case 129: //QDir::FilterSpec
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QDir::FilterSpec;
@@ -749,7 +754,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 128: //QDir::SortSpec
+	  case 130: //QDir::SortSpec
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QDir::SortSpec;
@@ -767,7 +772,7 @@ public:
 	    break;
 	}
     }
-    ~x_QDir() { qt_Smoke->binding->deleted(71, (void*)this); }
+    ~x_QDir() { qt_Smoke->binding->deleted(72, (void*)this); }
 };
 void xenum_QDir(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
     x_QDir::xenum_operation(xop, xtype, xdata, xvalue);
@@ -864,7 +869,7 @@ void xcall_QDir(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 86: xself->x_86(args);	break;
 	case 87: xself->x_87(args);	break;
 	case 88: xself->x_88(args);	break;
-	case 89: x_QDir::x_89(args);	break;
+	case 89: xself->x_89(args);	break;
 	case 90: x_QDir::x_90(args);	break;
 	case 91: x_QDir::x_91(args);	break;
 	case 92: x_QDir::x_92(args);	break;
@@ -878,6 +883,7 @@ void xcall_QDir(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 100: x_QDir::x_100(args);	break;
 	case 101: x_QDir::x_101(args);	break;
 	case 102: x_QDir::x_102(args);	break;
-	case 103: delete (QDir*)xself;	break;
+	case 103: x_QDir::x_103(args);	break;
+	case 104: delete (QDir*)xself;	break;
     }
 }

@@ -21,180 +21,192 @@ public:
     static void x_2(Smoke::Stack x) {
 	x[0].s_enum = (long)QSqlDriver::BLOB;
     }
-    void x_3(Smoke::Stack x) const {
+    static void x_3(Smoke::Stack x) {
+	x[0].s_enum = (long)QSqlDriver::Unicode;
+    }
+    static void x_4(Smoke::Stack x) {
+	x[0].s_enum = (long)QSqlDriver::PreparedQueries;
+    }
+    static void x_5(Smoke::Stack x) {
+	x[0].s_enum = (long)QSqlDriver::OracleBindingStyle;
+    }
+    static void x_6(Smoke::Stack x) {
+	x[0].s_enum = (long)QSqlDriver::ODBCBindingStyle;
+    }
+    void x_7(Smoke::Stack x) const {
 	// metaObject()
 	QMetaObject* xret = this->QSqlDriver::metaObject();
 	x[0].s_class = (void*)xret;
     }
-    void x_4(Smoke::Stack x) const {
+    void x_8(Smoke::Stack x) const {
 	// className()
 	const char* xret = this->QSqlDriver::className();
 	x[0].s_voidp = (void*)xret;
     }
-    void x_5(Smoke::Stack x) {
+    void x_9(Smoke::Stack x) {
 	// qt_cast(const char*)
 	void* xret = this->QSqlDriver::qt_cast((const char*)x[1].s_voidp);
 	x[0].s_voidp = (void*)xret;
     }
-    void x_6(Smoke::Stack x) {
+    void x_10(Smoke::Stack x) {
 	// qt_invoke(int, QUObject*)
 	bool xret = this->QSqlDriver::qt_invoke((int)x[1].s_int,(QUObject*)x[2].s_voidp);
 	x[0].s_bool = xret;
     }
-    void x_7(Smoke::Stack x) {
+    void x_11(Smoke::Stack x) {
 	// qt_emit(int, QUObject*)
 	bool xret = this->QSqlDriver::qt_emit((int)x[1].s_int,(QUObject*)x[2].s_voidp);
 	x[0].s_bool = xret;
     }
-    void x_8(Smoke::Stack x) {
+    void x_12(Smoke::Stack x) {
 	// qt_property(int, int, QVariant*)
 	bool xret = this->QSqlDriver::qt_property((int)x[1].s_int,(int)x[2].s_int,(QVariant*)x[3].s_class);
 	x[0].s_bool = xret;
     }
-    void x_9(Smoke::Stack x) {
+    void x_13(Smoke::Stack x) {
 	// qObject()
 	QObject* xret = this->QSqlDriver::qObject();
 	x[0].s_class = (void*)xret;
     }
-    static void x_10(Smoke::Stack x) {
+    static void x_14(Smoke::Stack x) {
 	// QSqlDriver(QObject*, const char*)
 	x_QSqlDriver* xret = new x_QSqlDriver((QObject*)x[1].s_class,(const char*)x[2].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QSqlDriver(QObject* x1, const char* x2) : QSqlDriver(x1, x2) {
     }
-    static void x_11(Smoke::Stack x) {
+    static void x_15(Smoke::Stack x) {
 	// QSqlDriver(QObject*)
 	x_QSqlDriver* xret = new x_QSqlDriver((QObject*)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QSqlDriver(QObject* x1) : QSqlDriver(x1) {
     }
-    static void x_12(Smoke::Stack x) {
+    static void x_16(Smoke::Stack x) {
 	// QSqlDriver()
 	x_QSqlDriver* xret = new x_QSqlDriver();
 	x[0].s_class = (void*)xret;
     }
     x_QSqlDriver() : QSqlDriver() {
     }
-    void x_13(Smoke::Stack x) const {
+    void x_17(Smoke::Stack x) const {
 	// isOpen()
 	bool xret = this->QSqlDriver::isOpen();
 	x[0].s_bool = xret;
     }
-    void x_14(Smoke::Stack x) const {
+    void x_18(Smoke::Stack x) const {
 	// isOpenError()
 	bool xret = this->QSqlDriver::isOpenError();
 	x[0].s_bool = xret;
     }
-    void x_15(Smoke::Stack x) {
+    void x_19(Smoke::Stack x) {
 	// beginTransaction()
 	bool xret = this->QSqlDriver::beginTransaction();
 	x[0].s_bool = xret;
     }
-    void x_16(Smoke::Stack x) {
+    void x_20(Smoke::Stack x) {
 	// commitTransaction()
 	bool xret = this->QSqlDriver::commitTransaction();
 	x[0].s_bool = xret;
     }
-    void x_17(Smoke::Stack x) {
+    void x_21(Smoke::Stack x) {
 	// rollbackTransaction()
 	bool xret = this->QSqlDriver::rollbackTransaction();
 	x[0].s_bool = xret;
     }
-    void x_18(Smoke::Stack x) const {
+    void x_22(Smoke::Stack x) const {
 	// tables(const QString&)
 	QStringList xret = this->QSqlDriver::tables(*(const QString *)x[1].s_voidp);
 	x[0].s_voidp = (void*)new QStringList(xret);
     }
-    void x_19(Smoke::Stack x) const {
+    void x_23(Smoke::Stack x) const {
 	// primaryIndex(const QString&)
 	QSqlIndex xret = this->QSqlDriver::primaryIndex(*(const QString *)x[1].s_voidp);
 	x[0].s_class = (void*)new QSqlIndex(xret);
     }
-    void x_20(Smoke::Stack x) const {
+    void x_24(Smoke::Stack x) const {
 	// record(const QString&)
 	QSqlRecord xret = this->QSqlDriver::record(*(const QString *)x[1].s_voidp);
 	x[0].s_class = (void*)new QSqlRecord(xret);
     }
-    void x_21(Smoke::Stack x) const {
+    void x_25(Smoke::Stack x) const {
 	// record(const QSqlQuery&)
 	QSqlRecord xret = this->QSqlDriver::record(*(const QSqlQuery *)x[1].s_class);
 	x[0].s_class = (void*)new QSqlRecord(xret);
     }
-    void x_22(Smoke::Stack x) const {
+    void x_26(Smoke::Stack x) const {
 	// recordInfo(const QString&)
 	QSqlRecordInfo xret = this->QSqlDriver::recordInfo(*(const QString *)x[1].s_voidp);
 	x[0].s_class = (void*)new QSqlRecordInfo(xret);
     }
-    void x_23(Smoke::Stack x) const {
+    void x_27(Smoke::Stack x) const {
 	// recordInfo(const QSqlQuery&)
 	QSqlRecordInfo xret = this->QSqlDriver::recordInfo(*(const QSqlQuery *)x[1].s_class);
 	x[0].s_class = (void*)new QSqlRecordInfo(xret);
     }
-    void x_24(Smoke::Stack x) const {
+    void x_28(Smoke::Stack x) const {
 	// nullText()
 	QString xret = this->QSqlDriver::nullText();
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    void x_25(Smoke::Stack x) const {
+    void x_29(Smoke::Stack x) const {
 	// formatValue(const QSqlField*, bool)
 	QString xret = this->QSqlDriver::formatValue((const QSqlField*)x[1].s_class,(bool)x[2].s_bool);
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    void x_26(Smoke::Stack x) const {
+    void x_30(Smoke::Stack x) const {
 	// formatValue(const QSqlField*)
 	QString xret = this->QSqlDriver::formatValue((const QSqlField*)x[1].s_class);
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    void x_27(Smoke::Stack x) const {
+    void x_31(Smoke::Stack x) const {
 	// lastError()
 	QSqlError xret = this->QSqlDriver::lastError();
 	x[0].s_class = (void*)new QSqlError(xret);
     }
-    static void x_28(Smoke::Stack x) {
+    static void x_32(Smoke::Stack x) {
 	// staticMetaObject()
 	QMetaObject* xret = QSqlDriver::staticMetaObject();
 	x[0].s_class = (void*)xret;
     }
-    static void x_29(Smoke::Stack x) {
+    static void x_33(Smoke::Stack x) {
 	// tr(const char*, const char*)
 	QString xret = QSqlDriver::tr((const char*)x[1].s_voidp,(const char*)x[2].s_voidp);
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    static void x_30(Smoke::Stack x) {
+    static void x_34(Smoke::Stack x) {
 	// tr(const char*)
 	QString xret = QSqlDriver::tr((const char*)x[1].s_voidp);
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    static void x_31(Smoke::Stack x) {
+    static void x_35(Smoke::Stack x) {
 	// trUtf8(const char*, const char*)
 	QString xret = QSqlDriver::trUtf8((const char*)x[1].s_voidp,(const char*)x[2].s_voidp);
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    static void x_32(Smoke::Stack x) {
+    static void x_36(Smoke::Stack x) {
 	// trUtf8(const char*)
 	QString xret = QSqlDriver::trUtf8((const char*)x[1].s_voidp);
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    void x_33(Smoke::Stack x) {
+    void x_37(Smoke::Stack x) {
 	// setOpen(bool)
 	this->QSqlDriver::setOpen((bool)x[1].s_bool);
 	(void)x; // noop (for compiler warning)
     }
-    void x_34(Smoke::Stack x) {
+    void x_38(Smoke::Stack x) {
 	// setOpenError(bool)
 	this->QSqlDriver::setOpenError((bool)x[1].s_bool);
 	(void)x; // noop (for compiler warning)
     }
-    void x_35(Smoke::Stack x) {
+    void x_39(Smoke::Stack x) {
 	// setLastError(const QSqlError&)
 	this->QSqlDriver::setLastError(*(const QSqlError *)x[1].s_class);
 	(void)x; // noop (for compiler warning)
     }
     virtual bool beginTransaction() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(8811, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(9195, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QSqlDriver::beginTransaction();
     }
     virtual bool checkConnectArgs(const char* x1, const QObject* x2, const char* x3) {
@@ -202,40 +214,40 @@ public:
 	x[1].s_voidp = (void*)x1;
 	x[2].s_class = (void*)x2;
 	x[3].s_voidp = (void*)x3;
-	if(qt_Smoke->binding->callMethod(6519, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(6819, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QObject::checkConnectArgs(x1, x2, x3);
     }
     virtual void childEvent(QChildEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(6515, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6815, (void*)this, x)) return;
 	this->QObject::childEvent(x1);
     }
     virtual const char* className() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(8799, (void*)this, x)) return (const char*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(9183, (void*)this, x)) return (const char*)x[0].s_class;
 	return this->QSqlDriver::className();
     }
     virtual void close() {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(8830, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(9214, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }
     virtual bool commitTransaction() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(8812, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(9196, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QSqlDriver::commitTransaction();
     }
     virtual void connectNotify(const char* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(6517, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6817, (void*)this, x)) return;
 	this->QObject::connectNotify(x1);
     }
     virtual QSqlQuery createQuery() const {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(8831, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(9215, (void*)this, x, true /*pure virtual*/);
 	QSqlQuery *xptr = (QSqlQuery *)x[0].s_class;
 	QSqlQuery xret(*xptr);
 	delete xptr;
@@ -245,33 +257,33 @@ public:
     virtual void customEvent(QCustomEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(6516, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6816, (void*)this, x)) return;
 	this->QObject::customEvent(x1);
     }
     virtual void disconnectNotify(const char* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(6518, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6818, (void*)this, x)) return;
 	this->QObject::disconnectNotify(x1);
     }
     virtual bool event(QEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(6453, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(6749, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QObject::event(x1);
     }
     virtual bool eventFilter(QObject* x1, QEvent* x2) {
 	Smoke::StackItem x[3];
 	x[1].s_class = (void*)x1;
 	x[2].s_class = (void*)x2;
-	if(qt_Smoke->binding->callMethod(6454, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(6750, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QObject::eventFilter(x1, x2);
     }
     virtual QString formatValue(const QSqlField* x1, bool x2) const {
 	Smoke::StackItem x[3];
 	x[1].s_class = (void*)x1;
 	x[2].s_bool = x2;
-	if(qt_Smoke->binding->callMethod(8821, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(9205, (void*)this, x)) {
 	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;
@@ -282,24 +294,24 @@ public:
     virtual bool hasFeature(QSqlDriver::DriverFeature x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_enum = x1;
-	qt_Smoke->binding->callMethod(8824, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(9208, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
     virtual void insertChild(QObject* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(6476, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6772, (void*)this, x)) return;
 	this->QObject::insertChild(x1);
     }
     virtual QMetaObject* metaObject() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(8798, (void*)this, x)) return (QMetaObject*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(9182, (void*)this, x)) return (QMetaObject*)x[0].s_class;
 	return this->QSqlDriver::metaObject();
     }
     virtual QString nullText() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(8820, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(9204, (void*)this, x)) {
 	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;
@@ -314,14 +326,14 @@ public:
 	x[3].s_voidp = (void*)&x3;
 	x[4].s_voidp = (void*)&x4;
 	x[5].s_int = x5;
-	qt_Smoke->binding->callMethod(8825, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(9209, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
     virtual QSqlIndex primaryIndex(const QString& x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(8815, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(9199, (void*)this, x)) {
 	    QSqlIndex *xptr = (QSqlIndex *)x[0].s_class;
 	    QSqlIndex xret(*xptr);
 	    delete xptr;
@@ -332,7 +344,7 @@ public:
     virtual QVariant property(const char* x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(6490, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(6786, (void*)this, x)) {
 	    QVariant *xptr = (QVariant *)x[0].s_class;
 	    QVariant xret(*xptr);
 	    delete xptr;
@@ -343,21 +355,21 @@ public:
     virtual void* qt_cast(const char* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(8800, (void*)this, x)) return (void*)x[0].s_voidp;
+	if(qt_Smoke->binding->callMethod(9184, (void*)this, x)) return (void*)x[0].s_voidp;
 	return this->QSqlDriver::qt_cast(x1);
     }
     virtual bool qt_emit(int x1, QUObject* x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_voidp = (void*)x2;
-	if(qt_Smoke->binding->callMethod(8802, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(9186, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QSqlDriver::qt_emit(x1, x2);
     }
     virtual bool qt_invoke(int x1, QUObject* x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_voidp = (void*)x2;
-	if(qt_Smoke->binding->callMethod(8801, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(9185, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QSqlDriver::qt_invoke(x1, x2);
     }
     virtual bool qt_property(int x1, int x2, QVariant* x3) {
@@ -365,13 +377,13 @@ public:
 	x[1].s_int = x1;
 	x[2].s_int = x2;
 	x[3].s_class = (void*)x3;
-	if(qt_Smoke->binding->callMethod(8803, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(9187, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QSqlDriver::qt_property(x1, x2, x3);
     }
     virtual QSqlRecord record(const QSqlQuery& x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(8817, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(9201, (void*)this, x)) {
 	    QSqlRecord *xptr = (QSqlRecord *)x[0].s_class;
 	    QSqlRecord xret(*xptr);
 	    delete xptr;
@@ -382,7 +394,7 @@ public:
     virtual QSqlRecord record(const QString& x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(8816, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(9200, (void*)this, x)) {
 	    QSqlRecord *xptr = (QSqlRecord *)x[0].s_class;
 	    QSqlRecord xret(*xptr);
 	    delete xptr;
@@ -393,7 +405,7 @@ public:
     virtual QSqlRecordInfo recordInfo(const QSqlQuery& x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(8819, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(9203, (void*)this, x)) {
 	    QSqlRecordInfo *xptr = (QSqlRecordInfo *)x[0].s_class;
 	    QSqlRecordInfo xret(*xptr);
 	    delete xptr;
@@ -404,7 +416,7 @@ public:
     virtual QSqlRecordInfo recordInfo(const QString& x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(8818, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(9202, (void*)this, x)) {
 	    QSqlRecordInfo *xptr = (QSqlRecordInfo *)x[0].s_class;
 	    QSqlRecordInfo xret(*xptr);
 	    delete xptr;
@@ -415,49 +427,49 @@ public:
     virtual void removeChild(QObject* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(6477, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6773, (void*)this, x)) return;
 	this->QObject::removeChild(x1);
     }
     virtual bool rollbackTransaction() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(8813, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(9197, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QSqlDriver::rollbackTransaction();
     }
     virtual void setLastError(const QSqlError& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(8839, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9223, (void*)this, x)) return;
 	this->QSqlDriver::setLastError(x1);
     }
     virtual void setName(const char* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(6459, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6755, (void*)this, x)) return;
 	this->QObject::setName(x1);
     }
     virtual void setOpen(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(8837, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9221, (void*)this, x)) return;
 	this->QSqlDriver::setOpen(x1);
     }
     virtual void setOpenError(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(8838, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9222, (void*)this, x)) return;
 	this->QSqlDriver::setOpenError(x1);
     }
     virtual bool setProperty(const char* x1, const QVariant& x2) {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)x1;
 	x[2].s_class = (void*)&x2;
-	if(qt_Smoke->binding->callMethod(6489, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(6785, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QObject::setProperty(x1, x2);
     }
     virtual QStringList tables(const QString& x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(8814, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(9198, (void*)this, x)) {
 	    QStringList *xptr = (QStringList *)x[0].s_class;
 	    QStringList xret(*xptr);
 	    delete xptr;
@@ -468,12 +480,12 @@ public:
     virtual void timerEvent(QTimerEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(6514, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6814, (void*)this, x)) return;
 	this->QObject::timerEvent(x1);
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {
-	  case 541: //QSqlDriver::DriverFeature
+	  case 561: //QSqlDriver::DriverFeature
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QSqlDriver::DriverFeature;
@@ -491,7 +503,7 @@ public:
 	    break;
 	}
     }
-    ~x_QSqlDriver() { qt_Smoke->binding->deleted(279, (void*)this); }
+    ~x_QSqlDriver() { qt_Smoke->binding->deleted(285, (void*)this); }
 };
 void xenum_QSqlDriver(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
     x_QSqlDriver::xenum_operation(xop, xtype, xdata, xvalue);
@@ -502,20 +514,20 @@ void xcall_QSqlDriver(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 0: x_QSqlDriver::x_0(args);	break;
 	case 1: x_QSqlDriver::x_1(args);	break;
 	case 2: x_QSqlDriver::x_2(args);	break;
-	case 3: xself->x_3(args);	break;
-	case 4: xself->x_4(args);	break;
-	case 5: xself->x_5(args);	break;
-	case 6: xself->x_6(args);	break;
+	case 3: x_QSqlDriver::x_3(args);	break;
+	case 4: x_QSqlDriver::x_4(args);	break;
+	case 5: x_QSqlDriver::x_5(args);	break;
+	case 6: x_QSqlDriver::x_6(args);	break;
 	case 7: xself->x_7(args);	break;
 	case 8: xself->x_8(args);	break;
 	case 9: xself->x_9(args);	break;
-	case 10: x_QSqlDriver::x_10(args);	break;
-	case 11: x_QSqlDriver::x_11(args);	break;
-	case 12: x_QSqlDriver::x_12(args);	break;
+	case 10: xself->x_10(args);	break;
+	case 11: xself->x_11(args);	break;
+	case 12: xself->x_12(args);	break;
 	case 13: xself->x_13(args);	break;
-	case 14: xself->x_14(args);	break;
-	case 15: xself->x_15(args);	break;
-	case 16: xself->x_16(args);	break;
+	case 14: x_QSqlDriver::x_14(args);	break;
+	case 15: x_QSqlDriver::x_15(args);	break;
+	case 16: x_QSqlDriver::x_16(args);	break;
 	case 17: xself->x_17(args);	break;
 	case 18: xself->x_18(args);	break;
 	case 19: xself->x_19(args);	break;
@@ -527,14 +539,18 @@ void xcall_QSqlDriver(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 25: xself->x_25(args);	break;
 	case 26: xself->x_26(args);	break;
 	case 27: xself->x_27(args);	break;
-	case 28: x_QSqlDriver::x_28(args);	break;
-	case 29: x_QSqlDriver::x_29(args);	break;
-	case 30: x_QSqlDriver::x_30(args);	break;
-	case 31: x_QSqlDriver::x_31(args);	break;
+	case 28: xself->x_28(args);	break;
+	case 29: xself->x_29(args);	break;
+	case 30: xself->x_30(args);	break;
+	case 31: xself->x_31(args);	break;
 	case 32: x_QSqlDriver::x_32(args);	break;
-	case 33: xself->x_33(args);	break;
-	case 34: xself->x_34(args);	break;
-	case 35: xself->x_35(args);	break;
-	case 36: delete (QSqlDriver*)xself;	break;
+	case 33: x_QSqlDriver::x_33(args);	break;
+	case 34: x_QSqlDriver::x_34(args);	break;
+	case 35: x_QSqlDriver::x_35(args);	break;
+	case 36: x_QSqlDriver::x_36(args);	break;
+	case 37: xself->x_37(args);	break;
+	case 38: xself->x_38(args);	break;
+	case 39: xself->x_39(args);	break;
+	case 40: delete (QSqlDriver*)xself;	break;
     }
 }

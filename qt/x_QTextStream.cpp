@@ -89,289 +89,294 @@ public:
 	this->QTextStream::setCodec((QTextCodec*)x[1].s_class);
 	(void)x; // noop (for compiler warning)
     }
-    static void x_26(Smoke::Stack x) {
+    void x_26(Smoke::Stack x) {
+	// codec()
+	QTextCodec* xret = this->QTextStream::codec();
+	x[0].s_class = (void*)xret;
+    }
+    static void x_27(Smoke::Stack x) {
 	// QTextStream()
 	x_QTextStream* xret = new x_QTextStream();
 	x[0].s_class = (void*)xret;
     }
     x_QTextStream() : QTextStream() {
     }
-    static void x_27(Smoke::Stack x) {
+    static void x_28(Smoke::Stack x) {
 	// QTextStream(QIODevice*)
 	x_QTextStream* xret = new x_QTextStream((QIODevice*)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QTextStream(QIODevice* x1) : QTextStream(x1) {
     }
-    static void x_28(Smoke::Stack x) {
+    static void x_29(Smoke::Stack x) {
 	// QTextStream(QString*, int)
 	x_QTextStream* xret = new x_QTextStream((QString*)x[1].s_voidp,(int)x[2].s_int);
 	x[0].s_class = (void*)xret;
     }
     x_QTextStream(QString* x1, int x2) : QTextStream(x1, x2) {
     }
-    static void x_29(Smoke::Stack x) {
+    static void x_30(Smoke::Stack x) {
 	// QTextStream(QString&, int)
 	x_QTextStream* xret = new x_QTextStream(*(QString *)x[1].s_voidp,(int)x[2].s_int);
 	x[0].s_class = (void*)xret;
     }
     x_QTextStream(QString& x1, int x2) : QTextStream(x1, x2) {
     }
-    static void x_30(Smoke::Stack x) {
+    static void x_31(Smoke::Stack x) {
 	// QTextStream(QByteArray, int)
 	x_QTextStream* xret = new x_QTextStream(*(QByteArray *)x[1].s_voidp,(int)x[2].s_int);
 	x[0].s_class = (void*)xret;
     }
     x_QTextStream(QByteArray x1, int x2) : QTextStream(x1, x2) {
     }
-    void x_31(Smoke::Stack x) const {
+    void x_32(Smoke::Stack x) const {
 	// device()
 	QIODevice* xret = this->QTextStream::device();
 	x[0].s_class = (void*)xret;
     }
-    void x_32(Smoke::Stack x) {
+    void x_33(Smoke::Stack x) {
 	// setDevice(QIODevice*)
 	this->QTextStream::setDevice((QIODevice*)x[1].s_class);
 	(void)x; // noop (for compiler warning)
     }
-    void x_33(Smoke::Stack x) {
+    void x_34(Smoke::Stack x) {
 	// unsetDevice()
 	this->QTextStream::unsetDevice();
 	(void)x; // noop (for compiler warning)
     }
-    void x_34(Smoke::Stack x) const {
+    void x_35(Smoke::Stack x) const {
 	// atEnd()
 	bool xret = this->QTextStream::atEnd();
 	x[0].s_bool = xret;
     }
-    void x_35(Smoke::Stack x) const {
+    void x_36(Smoke::Stack x) const {
 	// eof()
 	bool xret = this->QTextStream::eof();
 	x[0].s_bool = xret;
     }
-    void x_36(Smoke::Stack x) {
+    void x_37(Smoke::Stack x) {
 	// operator>>(QChar&)
 	QTextStream& xret = this->QTextStream::operator>>(*(QChar *)x[1].s_class);
 	x[0].s_class = (void*)&xret;
     }
-    void x_37(Smoke::Stack x) {
+    void x_38(Smoke::Stack x) {
 	// operator>>(char&)
 	QTextStream& xret = this->QTextStream::operator>>(*(char *)x[1].s_voidp);
 	x[0].s_class = (void*)&xret;
     }
-    void x_38(Smoke::Stack x) {
+    void x_39(Smoke::Stack x) {
 	// operator>>(signed short&)
 	QTextStream& xret = this->QTextStream::operator>>(*(signed short *)x[1].s_voidp);
 	x[0].s_class = (void*)&xret;
     }
-    void x_39(Smoke::Stack x) {
+    void x_40(Smoke::Stack x) {
 	// operator>>(unsigned short&)
 	QTextStream& xret = this->QTextStream::operator>>(*(unsigned short *)x[1].s_voidp);
 	x[0].s_class = (void*)&xret;
     }
-    void x_40(Smoke::Stack x) {
+    void x_41(Smoke::Stack x) {
 	// operator>>(signed int&)
 	QTextStream& xret = this->QTextStream::operator>>(*(signed int *)x[1].s_voidp);
 	x[0].s_class = (void*)&xret;
     }
-    void x_41(Smoke::Stack x) {
+    void x_42(Smoke::Stack x) {
 	// operator>>(unsigned int&)
 	QTextStream& xret = this->QTextStream::operator>>(*(unsigned int *)x[1].s_voidp);
 	x[0].s_class = (void*)&xret;
     }
-    void x_42(Smoke::Stack x) {
+    void x_43(Smoke::Stack x) {
 	// operator>>(signed long&)
 	QTextStream& xret = this->QTextStream::operator>>(*(signed long *)x[1].s_voidp);
 	x[0].s_class = (void*)&xret;
     }
-    void x_43(Smoke::Stack x) {
+    void x_44(Smoke::Stack x) {
 	// operator>>(unsigned long&)
 	QTextStream& xret = this->QTextStream::operator>>(*(unsigned long *)x[1].s_voidp);
 	x[0].s_class = (void*)&xret;
     }
-    void x_44(Smoke::Stack x) {
+    void x_45(Smoke::Stack x) {
 	// operator>>(float&)
 	QTextStream& xret = this->QTextStream::operator>>(*(float *)x[1].s_voidp);
 	x[0].s_class = (void*)&xret;
     }
-    void x_45(Smoke::Stack x) {
+    void x_46(Smoke::Stack x) {
 	// operator>>(double&)
 	QTextStream& xret = this->QTextStream::operator>>(*(double *)x[1].s_voidp);
 	x[0].s_class = (void*)&xret;
     }
-    void x_46(Smoke::Stack x) {
+    void x_47(Smoke::Stack x) {
 	// operator>>(char*)
 	QTextStream& xret = this->QTextStream::operator>>((char*)x[1].s_voidp);
 	x[0].s_class = (void*)&xret;
     }
-    void x_47(Smoke::Stack x) {
+    void x_48(Smoke::Stack x) {
 	// operator>>(QString&)
 	QTextStream& xret = this->QTextStream::operator>>(*(QString *)x[1].s_voidp);
 	x[0].s_class = (void*)&xret;
     }
-    void x_48(Smoke::Stack x) {
+    void x_49(Smoke::Stack x) {
 	// operator>>(QCString&)
 	QTextStream& xret = this->QTextStream::operator>>(*(QCString *)x[1].s_voidp);
 	x[0].s_class = (void*)&xret;
     }
-    void x_49(Smoke::Stack x) {
+    void x_50(Smoke::Stack x) {
 	// operator<<(QChar)
 	QTextStream& xret = this->QTextStream::operator<<(*(QChar *)x[1].s_class);
 	x[0].s_class = (void*)&xret;
     }
-    void x_50(Smoke::Stack x) {
+    void x_51(Smoke::Stack x) {
 	// operator<<(char)
 	QTextStream& xret = this->QTextStream::operator<<((char)x[1].s_char);
 	x[0].s_class = (void*)&xret;
     }
-    void x_51(Smoke::Stack x) {
+    void x_52(Smoke::Stack x) {
 	// operator<<(signed)
 	QTextStream& xret = this->QTextStream::operator<<((signed)x[1].s_int);
-	x[0].s_class = (void*)&xret;
-    }
-    void x_52(Smoke::Stack x) {
-	// operator<<(unsigned)
-	QTextStream& xret = this->QTextStream::operator<<((unsigned)x[1].s_uint);
 	x[0].s_class = (void*)&xret;
     }
     void x_53(Smoke::Stack x) {
-	// operator<<(signed)
-	QTextStream& xret = this->QTextStream::operator<<((signed)x[1].s_int);
+	// operator<<(unsigned)
+	QTextStream& xret = this->QTextStream::operator<<((unsigned)x[1].s_uint);
 	x[0].s_class = (void*)&xret;
     }
     void x_54(Smoke::Stack x) {
-	// operator<<(unsigned)
-	QTextStream& xret = this->QTextStream::operator<<((unsigned)x[1].s_uint);
-	x[0].s_class = (void*)&xret;
-    }
-    void x_55(Smoke::Stack x) {
 	// operator<<(signed)
 	QTextStream& xret = this->QTextStream::operator<<((signed)x[1].s_int);
 	x[0].s_class = (void*)&xret;
     }
-    void x_56(Smoke::Stack x) {
+    void x_55(Smoke::Stack x) {
 	// operator<<(unsigned)
 	QTextStream& xret = this->QTextStream::operator<<((unsigned)x[1].s_uint);
 	x[0].s_class = (void*)&xret;
     }
+    void x_56(Smoke::Stack x) {
+	// operator<<(signed)
+	QTextStream& xret = this->QTextStream::operator<<((signed)x[1].s_int);
+	x[0].s_class = (void*)&xret;
+    }
     void x_57(Smoke::Stack x) {
+	// operator<<(unsigned)
+	QTextStream& xret = this->QTextStream::operator<<((unsigned)x[1].s_uint);
+	x[0].s_class = (void*)&xret;
+    }
+    void x_58(Smoke::Stack x) {
 	// operator<<(float)
 	QTextStream& xret = this->QTextStream::operator<<((float)x[1].s_float);
 	x[0].s_class = (void*)&xret;
     }
-    void x_58(Smoke::Stack x) {
+    void x_59(Smoke::Stack x) {
 	// operator<<(double)
 	QTextStream& xret = this->QTextStream::operator<<((double)x[1].s_double);
 	x[0].s_class = (void*)&xret;
     }
-    void x_59(Smoke::Stack x) {
+    void x_60(Smoke::Stack x) {
 	// operator<<(const char*)
 	QTextStream& xret = this->QTextStream::operator<<((const char*)x[1].s_voidp);
 	x[0].s_class = (void*)&xret;
     }
-    void x_60(Smoke::Stack x) {
+    void x_61(Smoke::Stack x) {
 	// operator<<(const QString&)
 	QTextStream& xret = this->QTextStream::operator<<(*(const QString *)x[1].s_voidp);
 	x[0].s_class = (void*)&xret;
     }
-    void x_61(Smoke::Stack x) {
+    void x_62(Smoke::Stack x) {
 	// operator<<(const QCString&)
 	QTextStream& xret = this->QTextStream::operator<<(*(const QCString *)x[1].s_voidp);
 	x[0].s_class = (void*)&xret;
     }
-    void x_62(Smoke::Stack x) {
+    void x_63(Smoke::Stack x) {
 	// operator<<(void*)
 	QTextStream& xret = this->QTextStream::operator<<((void*)x[1].s_voidp);
 	x[0].s_class = (void*)&xret;
     }
-    void x_63(Smoke::Stack x) {
+    void x_64(Smoke::Stack x) {
 	// readRawBytes(char*, uint)
 	QTextStream& xret = this->QTextStream::readRawBytes((char*)x[1].s_voidp,(uint)x[2].s_uint);
 	x[0].s_class = (void*)&xret;
     }
-    void x_64(Smoke::Stack x) {
+    void x_65(Smoke::Stack x) {
 	// writeRawBytes(const char*, uint)
 	QTextStream& xret = this->QTextStream::writeRawBytes((const char*)x[1].s_voidp,(uint)x[2].s_uint);
 	x[0].s_class = (void*)&xret;
     }
-    void x_65(Smoke::Stack x) {
+    void x_66(Smoke::Stack x) {
 	// readLine()
 	QString xret = this->QTextStream::readLine();
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    void x_66(Smoke::Stack x) {
+    void x_67(Smoke::Stack x) {
 	// read()
 	QString xret = this->QTextStream::read();
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    void x_67(Smoke::Stack x) {
+    void x_68(Smoke::Stack x) {
 	// skipWhiteSpace()
 	this->QTextStream::skipWhiteSpace();
 	(void)x; // noop (for compiler warning)
     }
-    void x_68(Smoke::Stack x) const {
+    void x_69(Smoke::Stack x) const {
 	// flags()
 	int xret = this->QTextStream::flags();
 	x[0].s_int = xret;
     }
-    void x_69(Smoke::Stack x) {
+    void x_70(Smoke::Stack x) {
 	// flags(int)
 	int xret = this->QTextStream::flags((int)x[1].s_int);
 	x[0].s_int = xret;
     }
-    void x_70(Smoke::Stack x) {
+    void x_71(Smoke::Stack x) {
 	// setf(int)
 	int xret = this->QTextStream::setf((int)x[1].s_int);
 	x[0].s_int = xret;
     }
-    void x_71(Smoke::Stack x) {
+    void x_72(Smoke::Stack x) {
 	// setf(int, int)
 	int xret = this->QTextStream::setf((int)x[1].s_int,(int)x[2].s_int);
 	x[0].s_int = xret;
     }
-    void x_72(Smoke::Stack x) {
+    void x_73(Smoke::Stack x) {
 	// unsetf(int)
 	int xret = this->QTextStream::unsetf((int)x[1].s_int);
 	x[0].s_int = xret;
     }
-    void x_73(Smoke::Stack x) {
+    void x_74(Smoke::Stack x) {
 	// reset()
 	this->QTextStream::reset();
 	(void)x; // noop (for compiler warning)
     }
-    void x_74(Smoke::Stack x) const {
+    void x_75(Smoke::Stack x) const {
 	// width()
 	int xret = this->QTextStream::width();
 	x[0].s_int = xret;
     }
-    void x_75(Smoke::Stack x) {
+    void x_76(Smoke::Stack x) {
 	// width(int)
 	int xret = this->QTextStream::width((int)x[1].s_int);
 	x[0].s_int = xret;
     }
-    void x_76(Smoke::Stack x) const {
+    void x_77(Smoke::Stack x) const {
 	// fill()
 	int xret = this->QTextStream::fill();
 	x[0].s_int = xret;
     }
-    void x_77(Smoke::Stack x) {
+    void x_78(Smoke::Stack x) {
 	// fill(int)
 	int xret = this->QTextStream::fill((int)x[1].s_int);
 	x[0].s_int = xret;
     }
-    void x_78(Smoke::Stack x) const {
+    void x_79(Smoke::Stack x) const {
 	// precision()
 	int xret = this->QTextStream::precision();
 	x[0].s_int = xret;
     }
-    void x_79(Smoke::Stack x) {
+    void x_80(Smoke::Stack x) {
 	// precision(int)
 	int xret = this->QTextStream::precision((int)x[1].s_int);
 	x[0].s_int = xret;
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {
-	  case 658: //QTextStream::Encoding
+	  case 684: //QTextStream::Encoding
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QTextStream::Encoding;
@@ -389,7 +394,7 @@ public:
 	    break;
 	}
     }
-    ~x_QTextStream() { qt_Smoke->binding->deleted(326, (void*)this); }
+    ~x_QTextStream() { qt_Smoke->binding->deleted(334, (void*)this); }
 };
 void xenum_QTextStream(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
     x_QTextStream::xenum_operation(xop, xtype, xdata, xvalue);
@@ -423,12 +428,12 @@ void xcall_QTextStream(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 23: x_QTextStream::x_23(args);	break;
 	case 24: xself->x_24(args);	break;
 	case 25: xself->x_25(args);	break;
-	case 26: x_QTextStream::x_26(args);	break;
+	case 26: xself->x_26(args);	break;
 	case 27: x_QTextStream::x_27(args);	break;
 	case 28: x_QTextStream::x_28(args);	break;
 	case 29: x_QTextStream::x_29(args);	break;
 	case 30: x_QTextStream::x_30(args);	break;
-	case 31: xself->x_31(args);	break;
+	case 31: x_QTextStream::x_31(args);	break;
 	case 32: xself->x_32(args);	break;
 	case 33: xself->x_33(args);	break;
 	case 34: xself->x_34(args);	break;
@@ -477,6 +482,7 @@ void xcall_QTextStream(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 77: xself->x_77(args);	break;
 	case 78: xself->x_78(args);	break;
 	case 79: xself->x_79(args);	break;
-	case 80: delete (QTextStream*)xself;	break;
+	case 80: xself->x_80(args);	break;
+	case 81: delete (QTextStream*)xself;	break;
     }
 }

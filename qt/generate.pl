@@ -37,11 +37,17 @@ chdir "$kalyptusdir" or die "Couldn't go to $kalyptusdir (edit script to change 
 my %excludes = (
     'qaccessible.h' => 1,  # Accessibility support is not compiled by defaut
     'qxt.h' => 1, # Xt
+    'qxtwidget.h' => 1, # Xt
+    'qmotif.h' => 1, # Motif
+    'qmotifdialog.h' => 1, # Motif
+    'qmotifwidget.h' => 1, # Motif
     'qgl.h' => 1, # OpenGL
     'qnp.h' => 1, # NSPlugin
+    'qdns.h' => 1, # internal
     'qttableview.h' => 1,  # Not in Qt anymore...
     'qtmultilineedit.h' => 1,  # Not in Qt anymore...
-    'qwidgetfactory.h' => 1,  # Just an interface
+    'qwidgetfactory.h' => 1,  # Part of designer uilib, not of qt
+    'qassistantclient.h' => 1,  # Part of assistant lib, not of qt
     'qsharedmemory.h' => 1 # "not part of the Qt API" they say
 );
 

@@ -24,7 +24,7 @@ public:
     }
     x_QDragResponseEvent(const QDragResponseEvent& x1) : QDragResponseEvent(x1) {
     }
-    ~x_QDragResponseEvent() { qt_Smoke->binding->deleted(103, (void*)this); }
+    ~x_QDragResponseEvent() { qt_Smoke->binding->deleted(100, (void*)this); }
 };
 void xcall_QDragResponseEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QDragResponseEvent *xself = (x_QDragResponseEvent*)obj;

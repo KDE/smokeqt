@@ -29,14 +29,7 @@ public:
 	this->QStringData::setDirty();
 	(void)x; // noop (for compiler warning)
     }
-    static void x_4(Smoke::Stack x) {
-	// QStringData(const QStringData&)
-	x_QStringData* xret = new x_QStringData(*(const QStringData *)x[1].s_class);
-	x[0].s_class = (void*)xret;
-    }
-    x_QStringData(const QStringData& x1) : QStringData(x1) {
-    }
-    ~x_QStringData() { qt_Smoke->binding->deleted(299, (void*)this); }
+    ~x_QStringData() { qt_Smoke->binding->deleted(306, (void*)this); }
 };
 void xcall_QStringData(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QStringData *xself = (x_QStringData*)obj;
@@ -45,7 +38,6 @@ void xcall_QStringData(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 1: x_QStringData::x_1(args);	break;
 	case 2: xself->x_2(args);	break;
 	case 3: xself->x_3(args);	break;
-	case 4: x_QStringData::x_4(args);	break;
-	case 5: delete (QStringData*)xself;	break;
+	case 4: delete (QStringData*)xself;	break;
     }
 }

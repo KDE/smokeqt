@@ -367,306 +367,356 @@ public:
 	(void)x; // noop (for compiler warning)
     }
     void x_70(Smoke::Stack x) {
+	// isHorizontalSliderPressed()
+	bool xret = this->QScrollView::isHorizontalSliderPressed();
+	x[0].s_bool = xret;
+    }
+    void x_71(Smoke::Stack x) {
+	// isVerticalSliderPressed()
+	bool xret = this->QScrollView::isVerticalSliderPressed();
+	x[0].s_bool = xret;
+    }
+    void x_72(Smoke::Stack x) {
 	// setDragAutoScroll(bool)
 	this->QScrollView::setDragAutoScroll((bool)x[1].s_bool);
 	(void)x; // noop (for compiler warning)
     }
-    void x_71(Smoke::Stack x) const {
+    void x_73(Smoke::Stack x) const {
 	// dragAutoScroll()
 	bool xret = this->QScrollView::dragAutoScroll();
 	x[0].s_bool = xret;
     }
-    void x_72(Smoke::Stack x) {
+    void x_74(Smoke::Stack x) {
+	// disableSizeHintCaching()
+	this->QScrollView::disableSizeHintCaching();
+	(void)x; // noop (for compiler warning)
+    }
+    void x_75(Smoke::Stack x) {
 	// resizeContents(int, int)
 	this->QScrollView::resizeContents((int)x[1].s_int,(int)x[2].s_int);
 	(void)x; // noop (for compiler warning)
     }
-    void x_73(Smoke::Stack x) {
+    void x_76(Smoke::Stack x) {
 	// scrollBy(int, int)
 	this->QScrollView::scrollBy((int)x[1].s_int,(int)x[2].s_int);
 	(void)x; // noop (for compiler warning)
     }
-    void x_74(Smoke::Stack x) {
+    void x_77(Smoke::Stack x) {
 	// setContentsPos(int, int)
 	this->QScrollView::setContentsPos((int)x[1].s_int,(int)x[2].s_int);
 	(void)x; // noop (for compiler warning)
     }
-    void x_75(Smoke::Stack x) {
+    void x_78(Smoke::Stack x) {
 	// ensureVisible(int, int)
 	this->QScrollView::ensureVisible((int)x[1].s_int,(int)x[2].s_int);
 	(void)x; // noop (for compiler warning)
     }
-    void x_76(Smoke::Stack x) {
+    void x_79(Smoke::Stack x) {
 	// ensureVisible(int, int, int, int)
 	this->QScrollView::ensureVisible((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int);
 	(void)x; // noop (for compiler warning)
     }
-    void x_77(Smoke::Stack x) {
+    void x_80(Smoke::Stack x) {
 	// center(int, int)
 	this->QScrollView::center((int)x[1].s_int,(int)x[2].s_int);
 	(void)x; // noop (for compiler warning)
     }
-    void x_78(Smoke::Stack x) {
+    void x_81(Smoke::Stack x) {
 	// center(int, int, float, float)
 	this->QScrollView::center((int)x[1].s_int,(int)x[2].s_int,(float)x[3].s_float,(float)x[4].s_float);
 	(void)x; // noop (for compiler warning)
     }
-    void x_79(Smoke::Stack x) {
+    void x_82(Smoke::Stack x) {
 	// updateScrollBars()
 	this->QScrollView::updateScrollBars();
 	(void)x; // noop (for compiler warning)
     }
-    void x_80(Smoke::Stack x) {
+    void x_83(Smoke::Stack x) {
 	// setEnabled(bool)
 	this->QScrollView::setEnabled((bool)x[1].s_bool);
 	(void)x; // noop (for compiler warning)
     }
-    void x_81(Smoke::Stack x) {
+    void x_84(Smoke::Stack x) {
 	// contentsMoving(int, int)
 	this->QScrollView::contentsMoving((int)x[1].s_int,(int)x[2].s_int);
 	(void)x; // noop (for compiler warning)
     }
-    static void x_82(Smoke::Stack x) {
+    void x_85(Smoke::Stack x) {
+	// horizontalSliderPressed()
+	this->QScrollView::horizontalSliderPressed();
+	(void)x; // noop (for compiler warning)
+    }
+    void x_86(Smoke::Stack x) {
+	// horizontalSliderReleased()
+	this->QScrollView::horizontalSliderReleased();
+	(void)x; // noop (for compiler warning)
+    }
+    void x_87(Smoke::Stack x) {
+	// verticalSliderPressed()
+	this->QScrollView::verticalSliderPressed();
+	(void)x; // noop (for compiler warning)
+    }
+    void x_88(Smoke::Stack x) {
+	// verticalSliderReleased()
+	this->QScrollView::verticalSliderReleased();
+	(void)x; // noop (for compiler warning)
+    }
+    static void x_89(Smoke::Stack x) {
 	// staticMetaObject()
 	QMetaObject* xret = QScrollView::staticMetaObject();
 	x[0].s_class = (void*)xret;
     }
-    static void x_83(Smoke::Stack x) {
+    static void x_90(Smoke::Stack x) {
 	// tr(const char*, const char*)
 	QString xret = QScrollView::tr((const char*)x[1].s_voidp,(const char*)x[2].s_voidp);
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    static void x_84(Smoke::Stack x) {
+    static void x_91(Smoke::Stack x) {
 	// tr(const char*)
 	QString xret = QScrollView::tr((const char*)x[1].s_voidp);
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    static void x_85(Smoke::Stack x) {
+    static void x_92(Smoke::Stack x) {
 	// trUtf8(const char*, const char*)
 	QString xret = QScrollView::trUtf8((const char*)x[1].s_voidp,(const char*)x[2].s_voidp);
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    static void x_86(Smoke::Stack x) {
+    static void x_93(Smoke::Stack x) {
 	// trUtf8(const char*)
 	QString xret = QScrollView::trUtf8((const char*)x[1].s_voidp);
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    void x_87(Smoke::Stack x) {
+    void x_94(Smoke::Stack x) {
 	// drawContents(QPainter*, int, int, int, int)
 	this->QScrollView::drawContents((QPainter*)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int);
 	(void)x; // noop (for compiler warning)
     }
-    void x_88(Smoke::Stack x) {
+    void x_95(Smoke::Stack x) {
 	// drawContentsOffset(QPainter*, int, int, int, int, int, int)
 	this->QScrollView::drawContentsOffset((QPainter*)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int,(int)x[6].s_int,(int)x[7].s_int);
 	(void)x; // noop (for compiler warning)
     }
-    void x_89(Smoke::Stack x) {
+    void x_96(Smoke::Stack x) {
 	// contentsMousePressEvent(QMouseEvent*)
 	this->QScrollView::contentsMousePressEvent((QMouseEvent*)x[1].s_class);
 	(void)x; // noop (for compiler warning)
     }
-    void x_90(Smoke::Stack x) {
+    void x_97(Smoke::Stack x) {
 	// contentsMouseReleaseEvent(QMouseEvent*)
 	this->QScrollView::contentsMouseReleaseEvent((QMouseEvent*)x[1].s_class);
 	(void)x; // noop (for compiler warning)
     }
-    void x_91(Smoke::Stack x) {
+    void x_98(Smoke::Stack x) {
 	// contentsMouseDoubleClickEvent(QMouseEvent*)
 	this->QScrollView::contentsMouseDoubleClickEvent((QMouseEvent*)x[1].s_class);
 	(void)x; // noop (for compiler warning)
     }
-    void x_92(Smoke::Stack x) {
+    void x_99(Smoke::Stack x) {
 	// contentsMouseMoveEvent(QMouseEvent*)
 	this->QScrollView::contentsMouseMoveEvent((QMouseEvent*)x[1].s_class);
 	(void)x; // noop (for compiler warning)
     }
-    void x_93(Smoke::Stack x) {
+    void x_100(Smoke::Stack x) {
 	// contentsDragEnterEvent(QDragEnterEvent*)
 	this->QScrollView::contentsDragEnterEvent((QDragEnterEvent*)x[1].s_class);
 	(void)x; // noop (for compiler warning)
     }
-    void x_94(Smoke::Stack x) {
+    void x_101(Smoke::Stack x) {
 	// contentsDragMoveEvent(QDragMoveEvent*)
 	this->QScrollView::contentsDragMoveEvent((QDragMoveEvent*)x[1].s_class);
 	(void)x; // noop (for compiler warning)
     }
-    void x_95(Smoke::Stack x) {
+    void x_102(Smoke::Stack x) {
 	// contentsDragLeaveEvent(QDragLeaveEvent*)
 	this->QScrollView::contentsDragLeaveEvent((QDragLeaveEvent*)x[1].s_class);
 	(void)x; // noop (for compiler warning)
     }
-    void x_96(Smoke::Stack x) {
+    void x_103(Smoke::Stack x) {
 	// contentsDropEvent(QDropEvent*)
 	this->QScrollView::contentsDropEvent((QDropEvent*)x[1].s_class);
 	(void)x; // noop (for compiler warning)
     }
-    void x_97(Smoke::Stack x) {
+    void x_104(Smoke::Stack x) {
 	// contentsWheelEvent(QWheelEvent*)
 	this->QScrollView::contentsWheelEvent((QWheelEvent*)x[1].s_class);
 	(void)x; // noop (for compiler warning)
     }
-    void x_98(Smoke::Stack x) {
+    void x_105(Smoke::Stack x) {
 	// contentsContextMenuEvent(QContextMenuEvent*)
 	this->QScrollView::contentsContextMenuEvent((QContextMenuEvent*)x[1].s_class);
 	(void)x; // noop (for compiler warning)
     }
-    void x_99(Smoke::Stack x) {
+    void x_106(Smoke::Stack x) {
 	// viewportPaintEvent(QPaintEvent*)
 	this->QScrollView::viewportPaintEvent((QPaintEvent*)x[1].s_class);
 	(void)x; // noop (for compiler warning)
     }
-    void x_100(Smoke::Stack x) {
+    void x_107(Smoke::Stack x) {
 	// viewportResizeEvent(QResizeEvent*)
 	this->QScrollView::viewportResizeEvent((QResizeEvent*)x[1].s_class);
 	(void)x; // noop (for compiler warning)
     }
-    void x_101(Smoke::Stack x) {
+    void x_108(Smoke::Stack x) {
 	// viewportMousePressEvent(QMouseEvent*)
 	this->QScrollView::viewportMousePressEvent((QMouseEvent*)x[1].s_class);
 	(void)x; // noop (for compiler warning)
     }
-    void x_102(Smoke::Stack x) {
+    void x_109(Smoke::Stack x) {
 	// viewportMouseReleaseEvent(QMouseEvent*)
 	this->QScrollView::viewportMouseReleaseEvent((QMouseEvent*)x[1].s_class);
 	(void)x; // noop (for compiler warning)
     }
-    void x_103(Smoke::Stack x) {
+    void x_110(Smoke::Stack x) {
 	// viewportMouseDoubleClickEvent(QMouseEvent*)
 	this->QScrollView::viewportMouseDoubleClickEvent((QMouseEvent*)x[1].s_class);
 	(void)x; // noop (for compiler warning)
     }
-    void x_104(Smoke::Stack x) {
+    void x_111(Smoke::Stack x) {
 	// viewportMouseMoveEvent(QMouseEvent*)
 	this->QScrollView::viewportMouseMoveEvent((QMouseEvent*)x[1].s_class);
 	(void)x; // noop (for compiler warning)
     }
-    void x_105(Smoke::Stack x) {
+    void x_112(Smoke::Stack x) {
 	// viewportDragEnterEvent(QDragEnterEvent*)
 	this->QScrollView::viewportDragEnterEvent((QDragEnterEvent*)x[1].s_class);
 	(void)x; // noop (for compiler warning)
     }
-    void x_106(Smoke::Stack x) {
+    void x_113(Smoke::Stack x) {
 	// viewportDragMoveEvent(QDragMoveEvent*)
 	this->QScrollView::viewportDragMoveEvent((QDragMoveEvent*)x[1].s_class);
 	(void)x; // noop (for compiler warning)
     }
-    void x_107(Smoke::Stack x) {
+    void x_114(Smoke::Stack x) {
 	// viewportDragLeaveEvent(QDragLeaveEvent*)
 	this->QScrollView::viewportDragLeaveEvent((QDragLeaveEvent*)x[1].s_class);
 	(void)x; // noop (for compiler warning)
     }
-    void x_108(Smoke::Stack x) {
+    void x_115(Smoke::Stack x) {
 	// viewportDropEvent(QDropEvent*)
 	this->QScrollView::viewportDropEvent((QDropEvent*)x[1].s_class);
 	(void)x; // noop (for compiler warning)
     }
-    void x_109(Smoke::Stack x) {
+    void x_116(Smoke::Stack x) {
 	// viewportWheelEvent(QWheelEvent*)
 	this->QScrollView::viewportWheelEvent((QWheelEvent*)x[1].s_class);
 	(void)x; // noop (for compiler warning)
     }
-    void x_110(Smoke::Stack x) {
+    void x_117(Smoke::Stack x) {
 	// viewportContextMenuEvent(QContextMenuEvent*)
 	this->QScrollView::viewportContextMenuEvent((QContextMenuEvent*)x[1].s_class);
 	(void)x; // noop (for compiler warning)
     }
-    void x_111(Smoke::Stack x) {
+    void x_118(Smoke::Stack x) {
 	// frameChanged()
 	this->QScrollView::frameChanged();
 	(void)x; // noop (for compiler warning)
     }
-    void x_112(Smoke::Stack x) {
+    void x_119(Smoke::Stack x) {
 	// setMargins(int, int, int, int)
 	this->QScrollView::setMargins((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int);
 	(void)x; // noop (for compiler warning)
     }
-    void x_113(Smoke::Stack x) const {
+    void x_120(Smoke::Stack x) const {
 	// leftMargin()
 	int xret = this->QScrollView::leftMargin();
 	x[0].s_int = xret;
     }
-    void x_114(Smoke::Stack x) const {
+    void x_121(Smoke::Stack x) const {
 	// topMargin()
 	int xret = this->QScrollView::topMargin();
 	x[0].s_int = xret;
     }
-    void x_115(Smoke::Stack x) const {
+    void x_122(Smoke::Stack x) const {
 	// rightMargin()
 	int xret = this->QScrollView::rightMargin();
 	x[0].s_int = xret;
     }
-    void x_116(Smoke::Stack x) const {
+    void x_123(Smoke::Stack x) const {
 	// bottomMargin()
 	int xret = this->QScrollView::bottomMargin();
 	x[0].s_int = xret;
     }
-    void x_117(Smoke::Stack x) {
+    void x_124(Smoke::Stack x) {
 	// focusNextPrevChild(bool)
 	bool xret = this->QScrollView::focusNextPrevChild((bool)x[1].s_bool);
 	x[0].s_bool = xret;
     }
-    void x_118(Smoke::Stack x) {
+    void x_125(Smoke::Stack x) {
 	// setHBarGeometry(QScrollBar&, int, int, int, int)
 	this->QScrollView::setHBarGeometry(*(QScrollBar *)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int);
 	(void)x; // noop (for compiler warning)
     }
-    void x_119(Smoke::Stack x) {
+    void x_126(Smoke::Stack x) {
 	// setVBarGeometry(QScrollBar&, int, int, int, int)
 	this->QScrollView::setVBarGeometry(*(QScrollBar *)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int);
 	(void)x; // noop (for compiler warning)
     }
-    void x_120(Smoke::Stack x) {
+    void x_127(Smoke::Stack x) {
 	// resizeEvent(QResizeEvent*)
 	this->QScrollView::resizeEvent((QResizeEvent*)x[1].s_class);
 	(void)x; // noop (for compiler warning)
     }
-    void x_121(Smoke::Stack x) {
+    void x_128(Smoke::Stack x) {
 	// mousePressEvent(QMouseEvent*)
 	this->QScrollView::mousePressEvent((QMouseEvent*)x[1].s_class);
 	(void)x; // noop (for compiler warning)
     }
-    void x_122(Smoke::Stack x) {
+    void x_129(Smoke::Stack x) {
 	// mouseReleaseEvent(QMouseEvent*)
 	this->QScrollView::mouseReleaseEvent((QMouseEvent*)x[1].s_class);
 	(void)x; // noop (for compiler warning)
     }
-    void x_123(Smoke::Stack x) {
+    void x_130(Smoke::Stack x) {
 	// mouseDoubleClickEvent(QMouseEvent*)
 	this->QScrollView::mouseDoubleClickEvent((QMouseEvent*)x[1].s_class);
 	(void)x; // noop (for compiler warning)
     }
-    void x_124(Smoke::Stack x) {
+    void x_131(Smoke::Stack x) {
 	// mouseMoveEvent(QMouseEvent*)
 	this->QScrollView::mouseMoveEvent((QMouseEvent*)x[1].s_class);
 	(void)x; // noop (for compiler warning)
     }
-    void x_125(Smoke::Stack x) {
+    void x_132(Smoke::Stack x) {
 	// wheelEvent(QWheelEvent*)
 	this->QScrollView::wheelEvent((QWheelEvent*)x[1].s_class);
 	(void)x; // noop (for compiler warning)
     }
-    void x_126(Smoke::Stack x) {
+    void x_133(Smoke::Stack x) {
 	// contextMenuEvent(QContextMenuEvent*)
 	this->QScrollView::contextMenuEvent((QContextMenuEvent*)x[1].s_class);
 	(void)x; // noop (for compiler warning)
     }
-    void x_127(Smoke::Stack x) {
+    void x_134(Smoke::Stack x) {
 	// eventFilter(QObject*, QEvent*)
 	bool xret = this->QScrollView::eventFilter((QObject*)x[1].s_class,(QEvent*)x[2].s_class);
 	x[0].s_bool = xret;
+    }
+    void x_135(Smoke::Stack x) const {
+	// setCachedSizeHint(const QSize&)
+	this->QScrollView::setCachedSizeHint(*(const QSize *)x[1].s_class);
+	(void)x; // noop (for compiler warning)
+    }
+    void x_136(Smoke::Stack x) const {
+	// cachedSizeHint()
+	QSize xret = this->QScrollView::cachedSizeHint();
+	x[0].s_class = (void*)new QSize(xret);
+    }
+    void x_137(Smoke::Stack x) {
+	// fontChange(const QFont&)
+	this->QScrollView::fontChange(*(const QFont *)x[1].s_class);
+	(void)x; // noop (for compiler warning)
     }
     virtual void addChild(QWidget* x1, int x2, int x3) {
 	Smoke::StackItem x[4];
 	x[1].s_class = (void*)x1;
 	x[2].s_int = x2;
 	x[3].s_int = x3;
-	if(qt_Smoke->binding->callMethod(7851, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8179, (void*)this, x)) return;
 	this->QScrollView::addChild(x1, x2, x3);
     }
     virtual void adjustSize() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(11523, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12111, (void*)this, x)) return;
 	this->QWidget::adjustSize();
     }
     virtual bool checkConnectArgs(const char* x1, const QObject* x2, const char* x3) {
@@ -674,30 +724,30 @@ public:
 	x[1].s_voidp = (void*)x1;
 	x[2].s_class = (void*)x2;
 	x[3].s_voidp = (void*)x3;
-	if(qt_Smoke->binding->callMethod(6519, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(6819, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QObject::checkConnectArgs(x1, x2, x3);
     }
     virtual void childEvent(QChildEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(6515, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6815, (void*)this, x)) return;
 	this->QObject::childEvent(x1);
     }
     virtual const char* className() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(7836, (void*)this, x)) return (const char*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(8164, (void*)this, x)) return (const char*)x[0].s_class;
 	return this->QScrollView::className();
     }
     virtual bool close(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(11510, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(12017, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QWidget::close(x1);
     }
     virtual void closeEvent(QCloseEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(11623, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12137, (void*)this, x)) return;
 	this->QWidget::closeEvent(x1);
     }
     virtual bool cmd(int x1, QPainter* x2, QPDevCmdParam* x3) {
@@ -705,79 +755,79 @@ public:
 	x[1].s_int = x1;
 	x[2].s_class = (void*)x2;
 	x[3].s_voidp = (void*)x3;
-	if(qt_Smoke->binding->callMethod(6631, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(6934, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QPaintDevice::cmd(x1, x2, x3);
     }
     virtual void connectNotify(const char* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(6517, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6817, (void*)this, x)) return;
 	this->QObject::connectNotify(x1);
     }
     virtual void contentsContextMenuEvent(QContextMenuEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(7927, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8262, (void*)this, x)) return;
 	this->QScrollView::contentsContextMenuEvent(x1);
     }
     virtual void contentsDragEnterEvent(QDragEnterEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(7922, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8257, (void*)this, x)) return;
 	this->QScrollView::contentsDragEnterEvent(x1);
     }
     virtual void contentsDragLeaveEvent(QDragLeaveEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(7924, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8259, (void*)this, x)) return;
 	this->QScrollView::contentsDragLeaveEvent(x1);
     }
     virtual void contentsDragMoveEvent(QDragMoveEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(7923, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8258, (void*)this, x)) return;
 	this->QScrollView::contentsDragMoveEvent(x1);
     }
     virtual void contentsDropEvent(QDropEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(7925, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8260, (void*)this, x)) return;
 	this->QScrollView::contentsDropEvent(x1);
     }
     virtual void contentsMouseDoubleClickEvent(QMouseEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(7920, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8255, (void*)this, x)) return;
 	this->QScrollView::contentsMouseDoubleClickEvent(x1);
     }
     virtual void contentsMouseMoveEvent(QMouseEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(7921, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8256, (void*)this, x)) return;
 	this->QScrollView::contentsMouseMoveEvent(x1);
     }
     virtual void contentsMousePressEvent(QMouseEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(7918, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8253, (void*)this, x)) return;
 	this->QScrollView::contentsMousePressEvent(x1);
     }
     virtual void contentsMouseReleaseEvent(QMouseEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(7919, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8254, (void*)this, x)) return;
 	this->QScrollView::contentsMouseReleaseEvent(x1);
     }
     virtual void contentsWheelEvent(QWheelEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(7926, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8261, (void*)this, x)) return;
 	this->QScrollView::contentsWheelEvent(x1);
     }
     virtual void contextMenuEvent(QContextMenuEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(7955, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8290, (void*)this, x)) return;
 	this->QScrollView::contextMenuEvent(x1);
     }
     virtual void create(WId x1, bool x2, bool x3) {
@@ -785,49 +835,49 @@ public:
 	x[1].s_ulong = x1;
 	x[2].s_bool = x2;
 	x[3].s_bool = x3;
-	if(qt_Smoke->binding->callMethod(11643, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12157, (void*)this, x)) return;
 	this->QWidget::create(x1, x2, x3);
     }
     virtual void customEvent(QCustomEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(6516, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6816, (void*)this, x)) return;
 	this->QObject::customEvent(x1);
     }
     virtual bool customWhatsThis() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(11548, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(12059, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QWidget::customWhatsThis();
     }
     virtual void destroy(bool x1, bool x2) {
 	Smoke::StackItem x[3];
 	x[1].s_bool = x1;
 	x[2].s_bool = x2;
-	if(qt_Smoke->binding->callMethod(11647, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12161, (void*)this, x)) return;
 	this->QWidget::destroy(x1, x2);
     }
     virtual void disconnectNotify(const char* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(6518, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6818, (void*)this, x)) return;
 	this->QObject::disconnectNotify(x1);
     }
     virtual void dragEnterEvent(QDragEnterEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(11629, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12143, (void*)this, x)) return;
 	this->QWidget::dragEnterEvent(x1);
     }
     virtual void dragLeaveEvent(QDragLeaveEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(11631, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12145, (void*)this, x)) return;
 	this->QWidget::dragLeaveEvent(x1);
     }
     virtual void dragMoveEvent(QDragMoveEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(11630, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12144, (void*)this, x)) return;
 	this->QWidget::dragMoveEvent(x1);
     }
     virtual void drawContents(QPainter* x1, int x2, int x3, int x4, int x5) {
@@ -837,7 +887,7 @@ public:
 	x[3].s_int = x3;
 	x[4].s_int = x4;
 	x[5].s_int = x5;
-	if(qt_Smoke->binding->callMethod(7916, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8251, (void*)this, x)) return;
 	this->QScrollView::drawContents(x1, x2, x3, x4, x5);
     }
     virtual void drawContentsOffset(QPainter* x1, int x2, int x3, int x4, int x5, int x6, int x7) {
@@ -849,75 +899,75 @@ public:
 	x[5].s_int = x5;
 	x[6].s_int = x6;
 	x[7].s_int = x7;
-	if(qt_Smoke->binding->callMethod(7917, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8252, (void*)this, x)) return;
 	this->QScrollView::drawContentsOffset(x1, x2, x3, x4, x5, x6, x7);
     }
     virtual void drawFrame(QPainter* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(3511, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(3558, (void*)this, x)) return;
 	this->QFrame::drawFrame(x1);
     }
     virtual void dropEvent(QDropEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(11632, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12146, (void*)this, x)) return;
 	this->QWidget::dropEvent(x1);
     }
     virtual void enabledChange(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(11637, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12151, (void*)this, x)) return;
 	this->QWidget::enabledChange(x1);
     }
     virtual void enterEvent(QEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(11618, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12132, (void*)this, x)) return;
 	this->QWidget::enterEvent(x1);
     }
     virtual bool event(QEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(11608, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(12122, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QWidget::event(x1);
     }
     virtual bool eventFilter(QObject* x1, QEvent* x2) {
 	Smoke::StackItem x[3];
 	x[1].s_class = (void*)x1;
 	x[2].s_class = (void*)x2;
-	if(qt_Smoke->binding->callMethod(7956, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(8291, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QScrollView::eventFilter(x1, x2);
     }
     virtual void focusInEvent(QFocusEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(11616, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12130, (void*)this, x)) return;
 	this->QWidget::focusInEvent(x1);
     }
     virtual bool focusNextPrevChild(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(7946, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(8281, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QScrollView::focusNextPrevChild(x1);
     }
     virtual void focusOutEvent(QFocusEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(11617, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12131, (void*)this, x)) return;
 	this->QWidget::focusOutEvent(x1);
     }
     virtual void fontChange(const QFont& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(11639, (void*)this, x)) return;
-	this->QWidget::fontChange(x1);
+	if(qt_Smoke->binding->callMethod(8294, (void*)this, x)) return;
+	this->QScrollView::fontChange(x1);
     }
     virtual int fontInf(QFont* x1, int x2) const {
 	Smoke::StackItem x[3];
 	x[1].s_class = (void*)x1;
 	x[2].s_int = x2;
-	if(qt_Smoke->binding->callMethod(6636, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(6939, (void*)this, x)) return (int)x[0].s_int;
 	return this->QPaintDevice::fontInf(x1, x2);
     }
     virtual int fontMet(QFont* x1, int x2, const char* x3, int x4) const {
@@ -926,87 +976,87 @@ public:
 	x[2].s_int = x2;
 	x[3].s_voidp = (void*)x3;
 	x[4].s_int = x4;
-	if(qt_Smoke->binding->callMethod(6633, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(6936, (void*)this, x)) return (int)x[0].s_int;
 	return this->QPaintDevice::fontMet(x1, x2, x3, x4);
     }
     virtual void frameChanged() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(7940, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8275, (void*)this, x)) return;
 	this->QScrollView::frameChanged();
     }
     virtual int heightForWidth(int x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(11522, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(12033, (void*)this, x)) return (int)x[0].s_int;
 	return this->QWidget::heightForWidth(x1);
     }
     virtual void hide() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(11580, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12091, (void*)this, x)) return;
 	this->QWidget::hide();
     }
     virtual void hideEvent(QHideEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(11634, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12148, (void*)this, x)) return;
 	this->QWidget::hideEvent(x1);
     }
     virtual void imComposeEvent(QIMEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(11626, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12140, (void*)this, x)) return;
 	this->QWidget::imComposeEvent(x1);
     }
     virtual void imEndEvent(QIMEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(11627, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12141, (void*)this, x)) return;
 	this->QWidget::imEndEvent(x1);
     }
     virtual void imStartEvent(QIMEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(11625, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12139, (void*)this, x)) return;
 	this->QWidget::imStartEvent(x1);
     }
     virtual void insertChild(QObject* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(6476, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6772, (void*)this, x)) return;
 	this->QObject::insertChild(x1);
     }
     virtual void keyPressEvent(QKeyEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(11614, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12128, (void*)this, x)) return;
 	this->QWidget::keyPressEvent(x1);
     }
     virtual void keyReleaseEvent(QKeyEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(11615, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12129, (void*)this, x)) return;
 	this->QWidget::keyReleaseEvent(x1);
     }
     virtual void leaveEvent(QEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(11619, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12133, (void*)this, x)) return;
 	this->QWidget::leaveEvent(x1);
     }
     virtual QMetaObject* metaObject() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(7835, (void*)this, x)) return (QMetaObject*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(8163, (void*)this, x)) return (QMetaObject*)x[0].s_class;
 	return this->QScrollView::metaObject();
     }
     virtual int metric(int x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(11641, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(12155, (void*)this, x)) return (int)x[0].s_int;
 	return this->QWidget::metric(x1);
     }
     virtual QSize minimumSizeHint() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(7897, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(8225, (void*)this, x)) {
 	    QSize *xptr = (QSize *)x[0].s_class;
 	    QSize xret(*xptr);
 	    delete xptr;
@@ -1017,32 +1067,32 @@ public:
     virtual void mouseDoubleClickEvent(QMouseEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(7952, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8287, (void*)this, x)) return;
 	this->QScrollView::mouseDoubleClickEvent(x1);
     }
     virtual void mouseMoveEvent(QMouseEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(7953, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8288, (void*)this, x)) return;
 	this->QScrollView::mouseMoveEvent(x1);
     }
     virtual void mousePressEvent(QMouseEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(7950, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8285, (void*)this, x)) return;
 	this->QScrollView::mousePressEvent(x1);
     }
     virtual void mouseReleaseEvent(QMouseEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(7951, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8286, (void*)this, x)) return;
 	this->QScrollView::mouseReleaseEvent(x1);
     }
     virtual void move(int x1, int x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_int = x2;
-	if(qt_Smoke->binding->callMethod(11592, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12105, (void*)this, x)) return;
 	this->QWidget::move(x1, x2);
     }
     virtual void moveChild(QWidget* x1, int x2, int x3) {
@@ -1050,36 +1100,36 @@ public:
 	x[1].s_class = (void*)x1;
 	x[2].s_int = x2;
 	x[3].s_int = x3;
-	if(qt_Smoke->binding->callMethod(7854, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8182, (void*)this, x)) return;
 	this->QScrollView::moveChild(x1, x2, x3);
     }
     virtual void moveEvent(QMoveEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(11621, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12135, (void*)this, x)) return;
 	this->QWidget::moveEvent(x1);
     }
     virtual void paintEvent(QPaintEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(3509, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(3556, (void*)this, x)) return;
 	this->QFrame::paintEvent(x1);
     }
     virtual void paletteChange(const QPalette& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(11638, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12152, (void*)this, x)) return;
 	this->QWidget::paletteChange(x1);
     }
     virtual void polish() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(11586, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12099, (void*)this, x)) return;
 	this->QWidget::polish();
     }
     virtual QVariant property(const char* x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(6490, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(6786, (void*)this, x)) {
 	    QVariant *xptr = (QVariant *)x[0].s_class;
 	    QVariant xret(*xptr);
 	    delete xptr;
@@ -1090,21 +1140,21 @@ public:
     virtual void* qt_cast(const char* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(7837, (void*)this, x)) return (void*)x[0].s_voidp;
+	if(qt_Smoke->binding->callMethod(8165, (void*)this, x)) return (void*)x[0].s_voidp;
 	return this->QScrollView::qt_cast(x1);
     }
     virtual bool qt_emit(int x1, QUObject* x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_voidp = (void*)x2;
-	if(qt_Smoke->binding->callMethod(7839, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(8167, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QScrollView::qt_emit(x1, x2);
     }
     virtual bool qt_invoke(int x1, QUObject* x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_voidp = (void*)x2;
-	if(qt_Smoke->binding->callMethod(7838, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(8166, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QScrollView::qt_invoke(x1, x2);
     }
     virtual bool qt_property(int x1, int x2, QVariant* x3) {
@@ -1112,13 +1162,13 @@ public:
 	x[1].s_int = x1;
 	x[2].s_int = x2;
 	x[3].s_class = (void*)x3;
-	if(qt_Smoke->binding->callMethod(7840, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(8168, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QScrollView::qt_property(x1, x2, x3);
     }
     virtual void removeChild(QObject* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(7898, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8226, (void*)this, x)) return;
 	this->QScrollView::removeChild(x1);
     }
     virtual void reparent(QWidget* x1, Qt::WFlags x2, const QPoint& x3, bool x4) {
@@ -1127,163 +1177,163 @@ public:
 	x[2].s_int = x2;
 	x[3].s_class = (void*)&x3;
 	x[4].s_bool = x4;
-	if(qt_Smoke->binding->callMethod(11526, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12036, (void*)this, x)) return;
 	this->QWidget::reparent(x1, x2, x3, x4);
     }
     virtual void resize(int x1, int x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_int = x2;
-	if(qt_Smoke->binding->callMethod(7876, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8204, (void*)this, x)) return;
 	this->QScrollView::resize(x1, x2);
     }
     virtual void resizeContents(int x1, int x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_int = x2;
-	if(qt_Smoke->binding->callMethod(7901, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8232, (void*)this, x)) return;
 	this->QScrollView::resizeContents(x1, x2);
     }
     virtual void resizeEvent(QResizeEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(7949, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8284, (void*)this, x)) return;
 	this->QScrollView::resizeEvent(x1);
     }
     virtual int resolution() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(6629, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(6932, (void*)this, x)) return (int)x[0].s_int;
 	return this->QPaintDevice::resolution();
     }
     virtual void setAcceptDrops(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(11543, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12053, (void*)this, x)) return;
 	this->QWidget::setAcceptDrops(x1);
     }
     virtual void setActiveWindow() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(11497, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12004, (void*)this, x)) return;
 	this->QWidget::setActiveWindow();
     }
     virtual void setAutoMask(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(11544, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12054, (void*)this, x)) return;
 	this->QWidget::setAutoMask(x1);
     }
     virtual void setBackgroundColor(const QColor& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(11493, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12000, (void*)this, x)) return;
 	this->QWidget::setBackgroundColor(x1);
     }
     virtual void setBackgroundMode(Qt::BackgroundMode x1) {
 	Smoke::StackItem x[2];
 	x[1].s_enum = x1;
-	if(qt_Smoke->binding->callMethod(11455, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11962, (void*)this, x)) return;
 	this->QWidget::setBackgroundMode(x1);
     }
     virtual void setBackgroundOrigin(QWidget::BackgroundOrigin x1) {
 	Smoke::StackItem x[2];
 	x[1].s_enum = x1;
-	if(qt_Smoke->binding->callMethod(11546, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12056, (void*)this, x)) return;
 	this->QWidget::setBackgroundOrigin(x1);
     }
     virtual void setBackgroundPixmap(const QPixmap& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(11495, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12002, (void*)this, x)) return;
 	this->QWidget::setBackgroundPixmap(x1);
     }
     virtual void setCaption(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(11561, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12072, (void*)this, x)) return;
 	this->QWidget::setCaption(x1);
     }
     virtual void setContentsPos(int x1, int x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_int = x2;
-	if(qt_Smoke->binding->callMethod(7903, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8234, (void*)this, x)) return;
 	this->QScrollView::setContentsPos(x1, x2);
     }
     virtual void setCornerWidget(QWidget* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(7865, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8193, (void*)this, x)) return;
 	this->QScrollView::setCornerWidget(x1);
     }
     virtual void setCursor(const QCursor& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(11482, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11989, (void*)this, x)) return;
 	this->QWidget::setCursor(x1);
     }
     virtual void setDragAutoScroll(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(7899, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8229, (void*)this, x)) return;
 	this->QScrollView::setDragAutoScroll(x1);
     }
     virtual void setEnabled(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(7909, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8240, (void*)this, x)) return;
 	this->QScrollView::setEnabled(x1);
     }
     virtual void setEraseColor(const QColor& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(11459, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11966, (void*)this, x)) return;
 	this->QWidget::setEraseColor(x1);
     }
     virtual void setErasePixmap(const QPixmap& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(11461, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11968, (void*)this, x)) return;
 	this->QWidget::setErasePixmap(x1);
     }
     virtual void setFocus() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(11565, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12076, (void*)this, x)) return;
 	this->QWidget::setFocus();
     }
     virtual void setFocusPolicy(QWidget::FocusPolicy x1) {
 	Smoke::StackItem x[2];
 	x[1].s_enum = x1;
-	if(qt_Smoke->binding->callMethod(11500, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12007, (void*)this, x)) return;
 	this->QWidget::setFocusPolicy(x1);
     }
     virtual void setFocusProxy(QWidget* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(11502, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12009, (void*)this, x)) return;
 	this->QWidget::setFocusProxy(x1);
     }
     virtual void setFont(const QFont& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(11476, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11983, (void*)this, x)) return;
 	this->QWidget::setFont(x1);
     }
     virtual void setFrameRect(const QRect& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(3502, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(3549, (void*)this, x)) return;
 	this->QFrame::setFrameRect(x1);
     }
     virtual void setFrameStyle(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(3486, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(3533, (void*)this, x)) return;
 	this->QFrame::setFrameStyle(x1);
     }
     virtual void setGeometry(const QRect& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(11597, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12110, (void*)this, x)) return;
 	this->QWidget::setGeometry(x1);
     }
     virtual void setGeometry(int x1, int x2, int x3, int x4) {
@@ -1292,7 +1342,7 @@ public:
 	x[2].s_int = x2;
 	x[3].s_int = x3;
 	x[4].s_int = x4;
-	if(qt_Smoke->binding->callMethod(11596, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12109, (void*)this, x)) return;
 	this->QWidget::setGeometry(x1, x2, x3, x4);
     }
     virtual void setHBarGeometry(QScrollBar& x1, int x2, int x3, int x4, int x5) {
@@ -1302,43 +1352,43 @@ public:
 	x[3].s_int = x3;
 	x[4].s_int = x4;
 	x[5].s_int = x5;
-	if(qt_Smoke->binding->callMethod(7947, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8282, (void*)this, x)) return;
 	this->QScrollView::setHBarGeometry(x1, x2, x3, x4, x5);
     }
     virtual void setHScrollBarMode(QScrollView::ScrollBarMode x1) {
 	Smoke::StackItem x[2];
 	x[1].s_enum = x1;
-	if(qt_Smoke->binding->callMethod(7863, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8191, (void*)this, x)) return;
 	this->QScrollView::setHScrollBarMode(x1);
     }
     virtual void setIcon(const QPixmap& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(11562, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12073, (void*)this, x)) return;
 	this->QWidget::setIcon(x1);
     }
     virtual void setIconText(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(11563, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12074, (void*)this, x)) return;
 	this->QWidget::setIconText(x1);
     }
     virtual void setKeyCompression(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(11660, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12174, (void*)this, x)) return;
 	this->QWidget::setKeyCompression(x1);
     }
     virtual void setLineWidth(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(3496, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(3543, (void*)this, x)) return;
 	this->QFrame::setLineWidth(x1);
     }
     virtual void setMargin(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(3498, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(3545, (void*)this, x)) return;
 	this->QFrame::setMargin(x1);
     }
     virtual void setMargins(int x1, int x2, int x3, int x4) {
@@ -1347,26 +1397,26 @@ public:
 	x[2].s_int = x2;
 	x[3].s_int = x3;
 	x[4].s_int = x4;
-	if(qt_Smoke->binding->callMethod(7941, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8276, (void*)this, x)) return;
 	this->QScrollView::setMargins(x1, x2, x3, x4);
     }
     virtual void setMask(const QBitmap& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(11489, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11996, (void*)this, x)) return;
 	this->QWidget::setMask(x1);
     }
     virtual void setMask(const QRegion& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(11490, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11997, (void*)this, x)) return;
 	this->QWidget::setMask(x1);
     }
     virtual void setMaximumSize(int x1, int x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_int = x2;
-	if(qt_Smoke->binding->callMethod(11432, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11939, (void*)this, x)) return;
 	this->QWidget::setMaximumSize(x1, x2);
     }
     virtual void setMicroFocusHint(int x1, int x2, int x3, int x4, bool x5, QFont* x6) {
@@ -1377,88 +1427,88 @@ public:
 	x[4].s_int = x4;
 	x[5].s_bool = x5;
 	x[6].s_class = (void*)x6;
-	if(qt_Smoke->binding->callMethod(11661, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12175, (void*)this, x)) return;
 	this->QWidget::setMicroFocusHint(x1, x2, x3, x4, x5, x6);
     }
     virtual void setMidLineWidth(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(3500, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(3547, (void*)this, x)) return;
 	this->QFrame::setMidLineWidth(x1);
     }
     virtual void setMinimumSize(int x1, int x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_int = x2;
-	if(qt_Smoke->binding->callMethod(11430, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11937, (void*)this, x)) return;
 	this->QWidget::setMinimumSize(x1, x2);
     }
     virtual void setMouseTracking(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(11564, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12075, (void*)this, x)) return;
 	this->QWidget::setMouseTracking(x1);
     }
     virtual void setName(const char* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(11399, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11906, (void*)this, x)) return;
 	this->QWidget::setName(x1);
     }
     virtual void setPalette(const QPalette& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(11465, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11972, (void*)this, x)) return;
 	this->QWidget::setPalette(x1);
     }
     virtual void setPaletteBackgroundColor(const QColor& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(11470, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11977, (void*)this, x)) return;
 	this->QWidget::setPaletteBackgroundColor(x1);
     }
     virtual void setPaletteBackgroundPixmap(const QPixmap& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(11472, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11979, (void*)this, x)) return;
 	this->QWidget::setPaletteBackgroundPixmap(x1);
     }
     virtual bool setProperty(const char* x1, const QVariant& x2) {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)x1;
 	x[2].s_class = (void*)&x2;
-	if(qt_Smoke->binding->callMethod(6489, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(6785, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QObject::setProperty(x1, x2);
     }
     virtual void setResizePolicy(QScrollView::ResizePolicy x1) {
 	Smoke::StackItem x[2];
 	x[1].s_enum = x1;
-	if(qt_Smoke->binding->callMethod(7847, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8175, (void*)this, x)) return;
 	this->QScrollView::setResizePolicy(x1);
     }
     virtual void setResolution(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(6628, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6931, (void*)this, x)) return;
 	this->QPaintDevice::setResolution(x1);
     }
     virtual void setSizeIncrement(int x1, int x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_int = x2;
-	if(qt_Smoke->binding->callMethod(11439, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11946, (void*)this, x)) return;
 	this->QWidget::setSizeIncrement(x1, x2);
     }
     virtual void setSizePolicy(QSizePolicy x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(11521, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12030, (void*)this, x)) return;
 	this->QWidget::setSizePolicy(x1);
     }
     virtual void setUpdatesEnabled(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(11567, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12078, (void*)this, x)) return;
 	this->QWidget::setUpdatesEnabled(x1);
     }
     virtual void setVBarGeometry(QScrollBar& x1, int x2, int x3, int x4, int x5) {
@@ -1468,56 +1518,56 @@ public:
 	x[3].s_int = x3;
 	x[4].s_int = x4;
 	x[5].s_int = x5;
-	if(qt_Smoke->binding->callMethod(7948, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8283, (void*)this, x)) return;
 	this->QScrollView::setVBarGeometry(x1, x2, x3, x4, x5);
     }
     virtual void setVScrollBarMode(QScrollView::ScrollBarMode x1) {
 	Smoke::StackItem x[2];
 	x[1].s_enum = x1;
-	if(qt_Smoke->binding->callMethod(7861, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8189, (void*)this, x)) return;
 	this->QScrollView::setVScrollBarMode(x1);
     }
     virtual void setWFlags(Qt::WFlags x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(11654, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12168, (void*)this, x)) return;
 	this->QWidget::setWFlags(x1);
     }
     virtual void setWState(uint x1) {
 	Smoke::StackItem x[2];
 	x[1].s_uint = x1;
-	if(qt_Smoke->binding->callMethod(11651, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12165, (void*)this, x)) return;
 	this->QWidget::setWState(x1);
     }
     virtual void show() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(7878, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8206, (void*)this, x)) return;
 	this->QScrollView::show();
     }
     virtual void showEvent(QShowEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(11633, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12147, (void*)this, x)) return;
 	this->QWidget::showEvent(x1);
     }
     virtual void showMaximized() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(11583, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12096, (void*)this, x)) return;
 	this->QWidget::showMaximized();
     }
     virtual void showMinimized() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(11582, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12095, (void*)this, x)) return;
 	this->QWidget::showMinimized();
     }
     virtual void showNormal() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(11585, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12098, (void*)this, x)) return;
 	this->QWidget::showNormal();
     }
     virtual QSize sizeHint() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(7896, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(8224, (void*)this, x)) {
 	    QSize *xptr = (QSize *)x[0].s_class;
 	    QSize xret(*xptr);
 	    delete xptr;
@@ -1527,7 +1577,7 @@ public:
     }
     virtual QSizePolicy sizePolicy() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(11520, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(12029, (void*)this, x)) {
 	    QSizePolicy *xptr = (QSizePolicy *)x[0].s_class;
 	    QSizePolicy xret(*xptr);
 	    delete xptr;
@@ -1538,118 +1588,118 @@ public:
     virtual void styleChange(QStyle& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(7849, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8177, (void*)this, x)) return;
 	this->QScrollView::styleChange(x1);
     }
     virtual void tabletEvent(QTabletEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(11628, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12142, (void*)this, x)) return;
 	this->QWidget::tabletEvent(x1);
     }
     virtual void timerEvent(QTimerEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(6514, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6814, (void*)this, x)) return;
 	this->QObject::timerEvent(x1);
     }
     virtual void unsetCursor() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(11483, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11990, (void*)this, x)) return;
 	this->QWidget::unsetCursor();
     }
     virtual void updateMask() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(11635, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12149, (void*)this, x)) return;
 	this->QWidget::updateMask();
     }
     virtual void viewportContextMenuEvent(QContextMenuEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(7939, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8274, (void*)this, x)) return;
 	this->QScrollView::viewportContextMenuEvent(x1);
     }
     virtual void viewportDragEnterEvent(QDragEnterEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(7934, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8269, (void*)this, x)) return;
 	this->QScrollView::viewportDragEnterEvent(x1);
     }
     virtual void viewportDragLeaveEvent(QDragLeaveEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(7936, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8271, (void*)this, x)) return;
 	this->QScrollView::viewportDragLeaveEvent(x1);
     }
     virtual void viewportDragMoveEvent(QDragMoveEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(7935, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8270, (void*)this, x)) return;
 	this->QScrollView::viewportDragMoveEvent(x1);
     }
     virtual void viewportDropEvent(QDropEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(7937, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8272, (void*)this, x)) return;
 	this->QScrollView::viewportDropEvent(x1);
     }
     virtual void viewportMouseDoubleClickEvent(QMouseEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(7932, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8267, (void*)this, x)) return;
 	this->QScrollView::viewportMouseDoubleClickEvent(x1);
     }
     virtual void viewportMouseMoveEvent(QMouseEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(7933, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8268, (void*)this, x)) return;
 	this->QScrollView::viewportMouseMoveEvent(x1);
     }
     virtual void viewportMousePressEvent(QMouseEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(7930, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8265, (void*)this, x)) return;
 	this->QScrollView::viewportMousePressEvent(x1);
     }
     virtual void viewportMouseReleaseEvent(QMouseEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(7931, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8266, (void*)this, x)) return;
 	this->QScrollView::viewportMouseReleaseEvent(x1);
     }
     virtual void viewportPaintEvent(QPaintEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(7928, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8263, (void*)this, x)) return;
 	this->QScrollView::viewportPaintEvent(x1);
     }
     virtual void viewportResizeEvent(QResizeEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(7929, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8264, (void*)this, x)) return;
 	this->QScrollView::viewportResizeEvent(x1);
     }
     virtual void viewportWheelEvent(QWheelEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(7938, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8273, (void*)this, x)) return;
 	this->QScrollView::viewportWheelEvent(x1);
     }
     virtual void wheelEvent(QWheelEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(7954, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8289, (void*)this, x)) return;
 	this->QScrollView::wheelEvent(x1);
     }
     virtual void windowActivationChange(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(11640, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(12154, (void*)this, x)) return;
 	this->QWidget::windowActivationChange(x1);
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {
-	  case 485: //QScrollView::ResizePolicy
+	  case 503: //QScrollView::ResizePolicy
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QScrollView::ResizePolicy;
@@ -1665,7 +1715,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 486: //QScrollView::ScrollBarMode
+	  case 504: //QScrollView::ScrollBarMode
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QScrollView::ScrollBarMode;
@@ -1683,7 +1733,7 @@ public:
 	    break;
 	}
     }
-    ~x_QScrollView() { qt_Smoke->binding->deleted(251, (void*)this); }
+    ~x_QScrollView() { qt_Smoke->binding->deleted(258, (void*)this); }
 };
 void xenum_QScrollView(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
     x_QScrollView::xenum_operation(xop, xtype, xdata, xvalue);
@@ -1773,18 +1823,18 @@ void xcall_QScrollView(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 79: xself->x_79(args);	break;
 	case 80: xself->x_80(args);	break;
 	case 81: xself->x_81(args);	break;
-	case 82: x_QScrollView::x_82(args);	break;
-	case 83: x_QScrollView::x_83(args);	break;
-	case 84: x_QScrollView::x_84(args);	break;
-	case 85: x_QScrollView::x_85(args);	break;
-	case 86: x_QScrollView::x_86(args);	break;
+	case 82: xself->x_82(args);	break;
+	case 83: xself->x_83(args);	break;
+	case 84: xself->x_84(args);	break;
+	case 85: xself->x_85(args);	break;
+	case 86: xself->x_86(args);	break;
 	case 87: xself->x_87(args);	break;
 	case 88: xself->x_88(args);	break;
-	case 89: xself->x_89(args);	break;
-	case 90: xself->x_90(args);	break;
-	case 91: xself->x_91(args);	break;
-	case 92: xself->x_92(args);	break;
-	case 93: xself->x_93(args);	break;
+	case 89: x_QScrollView::x_89(args);	break;
+	case 90: x_QScrollView::x_90(args);	break;
+	case 91: x_QScrollView::x_91(args);	break;
+	case 92: x_QScrollView::x_92(args);	break;
+	case 93: x_QScrollView::x_93(args);	break;
 	case 94: xself->x_94(args);	break;
 	case 95: xself->x_95(args);	break;
 	case 96: xself->x_96(args);	break;
@@ -1819,6 +1869,16 @@ void xcall_QScrollView(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 125: xself->x_125(args);	break;
 	case 126: xself->x_126(args);	break;
 	case 127: xself->x_127(args);	break;
-	case 128: delete (QScrollView*)xself;	break;
+	case 128: xself->x_128(args);	break;
+	case 129: xself->x_129(args);	break;
+	case 130: xself->x_130(args);	break;
+	case 131: xself->x_131(args);	break;
+	case 132: xself->x_132(args);	break;
+	case 133: xself->x_133(args);	break;
+	case 134: xself->x_134(args);	break;
+	case 135: xself->x_135(args);	break;
+	case 136: xself->x_136(args);	break;
+	case 137: xself->x_137(args);	break;
+	case 138: delete (QScrollView*)xself;	break;
     }
 }

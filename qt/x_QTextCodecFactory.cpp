@@ -30,7 +30,7 @@ public:
 	QTextCodec* xret = QTextCodecFactory::createForMib((int)x[1].s_int);
 	x[0].s_class = (void*)xret;
     }
-    ~x_QTextCodecFactory() { qt_Smoke->binding->deleted(318, (void*)this); }
+    ~x_QTextCodecFactory() { qt_Smoke->binding->deleted(326, (void*)this); }
 };
 void xcall_QTextCodecFactory(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QTextCodecFactory *xself = (x_QTextCodecFactory*)obj;

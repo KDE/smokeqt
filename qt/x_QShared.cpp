@@ -29,7 +29,7 @@ public:
     }
     x_QShared(const QShared& x1) : QShared(x1) {
     }
-    ~x_QShared() { qt_Smoke->binding->deleted(257, (void*)this); }
+    ~x_QShared() { qt_Smoke->binding->deleted(263, (void*)this); }
 };
 void xcall_QShared(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QShared *xself = (x_QShared*)obj;

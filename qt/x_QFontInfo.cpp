@@ -86,7 +86,7 @@ public:
 	bool xret = this->QFontInfo::exactMatch();
 	x[0].s_bool = xret;
     }
-    ~x_QFontInfo() { qt_Smoke->binding->deleted(121, (void*)this); }
+    ~x_QFontInfo() { qt_Smoke->binding->deleted(119, (void*)this); }
 };
 void xcall_QFontInfo(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QFontInfo *xself = (x_QFontInfo*)obj;

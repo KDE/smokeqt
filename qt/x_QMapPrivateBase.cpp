@@ -46,7 +46,7 @@ public:
     }
     x_QMapPrivateBase(const QMapPrivateBase& x1) : QMapPrivateBase(x1) {
     }
-    ~x_QMapPrivateBase() { qt_Smoke->binding->deleted(191, (void*)this); }
+    ~x_QMapPrivateBase() { qt_Smoke->binding->deleted(197, (void*)this); }
 };
 void xcall_QMapPrivateBase(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QMapPrivateBase *xself = (x_QMapPrivateBase*)obj;

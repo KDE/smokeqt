@@ -45,7 +45,7 @@ public:
 	QObjectDictionary& xret = this->QObjectDictionary::operator=(*(const QObjectDictionary *)x[1].s_class);
 	x[0].s_class = (void*)&xret;
     }
-    ~x_QObjectDictionary() { qt_Smoke->binding->deleted(215, (void*)this); }
+    ~x_QObjectDictionary() { qt_Smoke->binding->deleted(221, (void*)this); }
 };
 void xcall_QObjectDictionary(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QObjectDictionary *xself = (x_QObjectDictionary*)obj;

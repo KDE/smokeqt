@@ -84,22 +84,37 @@ public:
 	bool xret = this->QMenuItem::isDirty();
 	x[0].s_bool = xret;
     }
-    void x_15(Smoke::Stack x) {
+    void x_15(Smoke::Stack x) const {
+	// isVisible()
+	bool xret = this->QMenuItem::isVisible();
+	x[0].s_bool = xret;
+    }
+    void x_16(Smoke::Stack x) const {
+	// isEnabledAndVisible()
+	bool xret = this->QMenuItem::isEnabledAndVisible();
+	x[0].s_bool = xret;
+    }
+    void x_17(Smoke::Stack x) {
 	// setText(const QString&)
 	this->QMenuItem::setText(*(const QString *)x[1].s_voidp);
 	(void)x; // noop (for compiler warning)
     }
-    void x_16(Smoke::Stack x) {
+    void x_18(Smoke::Stack x) {
 	// setDirty(bool)
 	this->QMenuItem::setDirty((bool)x[1].s_bool);
 	(void)x; // noop (for compiler warning)
     }
-    void x_17(Smoke::Stack x) {
+    void x_19(Smoke::Stack x) {
+	// setVisible(bool)
+	this->QMenuItem::setVisible((bool)x[1].s_bool);
+	(void)x; // noop (for compiler warning)
+    }
+    void x_20(Smoke::Stack x) {
 	// setWhatsThis(const QString&)
 	this->QMenuItem::setWhatsThis(*(const QString *)x[1].s_voidp);
 	(void)x; // noop (for compiler warning)
     }
-    ~x_QMenuItem() { qt_Smoke->binding->deleted(194, (void*)this); }
+    ~x_QMenuItem() { qt_Smoke->binding->deleted(200, (void*)this); }
 };
 void xcall_QMenuItem(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QMenuItem *xself = (x_QMenuItem*)obj;
@@ -122,6 +137,9 @@ void xcall_QMenuItem(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 15: xself->x_15(args);	break;
 	case 16: xself->x_16(args);	break;
 	case 17: xself->x_17(args);	break;
-	case 18: delete (QMenuItem*)xself;	break;
+	case 18: xself->x_18(args);	break;
+	case 19: xself->x_19(args);	break;
+	case 20: xself->x_20(args);	break;
+	case 21: delete (QMenuItem*)xself;	break;
     }
 }

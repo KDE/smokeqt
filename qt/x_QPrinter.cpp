@@ -321,107 +321,117 @@ public:
 	QSize xret = this->QPrinter::margins();
 	x[0].s_class = (void*)new QSize(xret);
     }
-    void x_84(Smoke::Stack x) const {
+    void x_84(Smoke::Stack x) {
+	// setMargins(uint, uint, uint, uint)
+	this->QPrinter::setMargins((uint)x[1].s_uint,(uint)x[2].s_uint,(uint)x[3].s_uint,(uint)x[4].s_uint);
+	(void)x; // noop (for compiler warning)
+    }
+    void x_85(Smoke::Stack x) const {
+	// margins(uint*, uint*, uint*, uint*)
+	this->QPrinter::margins((uint*)x[1].s_voidp,(uint*)x[2].s_voidp,(uint*)x[3].s_voidp,(uint*)x[4].s_voidp);
+	(void)x; // noop (for compiler warning)
+    }
+    void x_86(Smoke::Stack x) const {
 	// fromPage()
 	int xret = this->QPrinter::fromPage();
 	x[0].s_int = xret;
     }
-    void x_85(Smoke::Stack x) const {
+    void x_87(Smoke::Stack x) const {
 	// toPage()
 	int xret = this->QPrinter::toPage();
 	x[0].s_int = xret;
     }
-    void x_86(Smoke::Stack x) {
+    void x_88(Smoke::Stack x) {
 	// setFromTo(int, int)
 	this->QPrinter::setFromTo((int)x[1].s_int,(int)x[2].s_int);
 	(void)x; // noop (for compiler warning)
     }
-    void x_87(Smoke::Stack x) const {
+    void x_89(Smoke::Stack x) const {
 	// minPage()
 	int xret = this->QPrinter::minPage();
 	x[0].s_int = xret;
     }
-    void x_88(Smoke::Stack x) const {
+    void x_90(Smoke::Stack x) const {
 	// maxPage()
 	int xret = this->QPrinter::maxPage();
 	x[0].s_int = xret;
     }
-    void x_89(Smoke::Stack x) {
+    void x_91(Smoke::Stack x) {
 	// setMinMax(int, int)
 	this->QPrinter::setMinMax((int)x[1].s_int,(int)x[2].s_int);
 	(void)x; // noop (for compiler warning)
     }
-    void x_90(Smoke::Stack x) const {
+    void x_92(Smoke::Stack x) const {
 	// numCopies()
 	int xret = this->QPrinter::numCopies();
 	x[0].s_int = xret;
     }
-    void x_91(Smoke::Stack x) {
+    void x_93(Smoke::Stack x) {
 	// setNumCopies(int)
 	this->QPrinter::setNumCopies((int)x[1].s_int);
 	(void)x; // noop (for compiler warning)
     }
-    void x_92(Smoke::Stack x) const {
+    void x_94(Smoke::Stack x) const {
 	// collateCopiesEnabled()
 	bool xret = this->QPrinter::collateCopiesEnabled();
 	x[0].s_bool = xret;
     }
-    void x_93(Smoke::Stack x) {
+    void x_95(Smoke::Stack x) {
 	// setCollateCopiesEnabled(bool)
 	this->QPrinter::setCollateCopiesEnabled((bool)x[1].s_bool);
 	(void)x; // noop (for compiler warning)
     }
-    void x_94(Smoke::Stack x) const {
+    void x_96(Smoke::Stack x) const {
 	// collateCopies()
 	bool xret = this->QPrinter::collateCopies();
 	x[0].s_bool = xret;
     }
-    void x_95(Smoke::Stack x) {
+    void x_97(Smoke::Stack x) {
 	// setCollateCopies(bool)
 	this->QPrinter::setCollateCopies((bool)x[1].s_bool);
 	(void)x; // noop (for compiler warning)
     }
-    void x_96(Smoke::Stack x) {
+    void x_98(Smoke::Stack x) {
 	// newPage()
 	bool xret = this->QPrinter::newPage();
 	x[0].s_bool = xret;
     }
-    void x_97(Smoke::Stack x) {
+    void x_99(Smoke::Stack x) {
 	// abort()
 	bool xret = this->QPrinter::abort();
 	x[0].s_bool = xret;
     }
-    void x_98(Smoke::Stack x) const {
+    void x_100(Smoke::Stack x) const {
 	// aborted()
 	bool xret = this->QPrinter::aborted();
 	x[0].s_bool = xret;
     }
-    void x_99(Smoke::Stack x) {
+    void x_101(Smoke::Stack x) {
 	// setup(QWidget*)
 	bool xret = this->QPrinter::setup((QWidget*)x[1].s_class);
 	x[0].s_bool = xret;
     }
-    void x_100(Smoke::Stack x) {
+    void x_102(Smoke::Stack x) {
 	// setup()
 	bool xret = this->QPrinter::setup();
 	x[0].s_bool = xret;
     }
-    void x_101(Smoke::Stack x) const {
+    void x_103(Smoke::Stack x) const {
 	// paperSource()
 	QPrinter::PaperSource xret = this->QPrinter::paperSource();
 	x[0].s_enum = xret;
     }
-    void x_102(Smoke::Stack x) {
+    void x_104(Smoke::Stack x) {
 	// setPaperSource(QPrinter::PaperSource)
 	this->QPrinter::setPaperSource((QPrinter::PaperSource)x[1].s_enum);
 	(void)x; // noop (for compiler warning)
     }
-    void x_103(Smoke::Stack x) {
+    void x_105(Smoke::Stack x) {
 	// cmd(int, QPainter*, QPDevCmdParam*)
 	bool xret = this->QPrinter::cmd((int)x[1].s_int,(QPainter*)x[2].s_class,(QPDevCmdParam*)x[3].s_voidp);
 	x[0].s_bool = xret;
     }
-    void x_104(Smoke::Stack x) const {
+    void x_106(Smoke::Stack x) const {
 	// metric(int)
 	int xret = this->QPrinter::metric((int)x[1].s_int);
 	x[0].s_int = xret;
@@ -431,14 +441,14 @@ public:
 	x[1].s_int = x1;
 	x[2].s_class = (void*)x2;
 	x[3].s_voidp = (void*)x3;
-	if(qt_Smoke->binding->callMethod(7313, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(7622, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QPrinter::cmd(x1, x2, x3);
     }
     virtual int fontInf(QFont* x1, int x2) const {
 	Smoke::StackItem x[3];
 	x[1].s_class = (void*)x1;
 	x[2].s_int = x2;
-	if(qt_Smoke->binding->callMethod(6636, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(6939, (void*)this, x)) return (int)x[0].s_int;
 	return this->QPaintDevice::fontInf(x1, x2);
     }
     virtual int fontMet(QFont* x1, int x2, const char* x3, int x4) const {
@@ -447,127 +457,127 @@ public:
 	x[2].s_int = x2;
 	x[3].s_voidp = (void*)x3;
 	x[4].s_int = x4;
-	if(qt_Smoke->binding->callMethod(6633, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(6936, (void*)this, x)) return (int)x[0].s_int;
 	return this->QPaintDevice::fontMet(x1, x2, x3, x4);
     }
     virtual int metric(int x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(7314, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(7623, (void*)this, x)) return (int)x[0].s_int;
 	return this->QPrinter::metric(x1);
     }
     virtual int resolution() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(7288, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(7595, (void*)this, x)) return (int)x[0].s_int;
 	return this->QPrinter::resolution();
     }
     virtual void setColorMode(QPrinter::ColorMode x1) {
 	Smoke::StackItem x[2];
 	x[1].s_enum = x1;
-	if(qt_Smoke->binding->callMethod(7289, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(7596, (void*)this, x)) return;
 	this->QPrinter::setColorMode(x1);
     }
     virtual void setCreator(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(7280, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(7587, (void*)this, x)) return;
 	this->QPrinter::setCreator(x1);
     }
     virtual void setDocName(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(7278, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(7585, (void*)this, x)) return;
 	this->QPrinter::setDocName(x1);
     }
     virtual void setFromTo(int x1, int x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_int = x2;
-	if(qt_Smoke->binding->callMethod(7296, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(7605, (void*)this, x)) return;
 	this->QPrinter::setFromTo(x1, x2);
     }
     virtual void setFullPage(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(7291, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(7598, (void*)this, x)) return;
 	this->QPrinter::setFullPage(x1);
     }
     virtual void setMinMax(int x1, int x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_int = x2;
-	if(qt_Smoke->binding->callMethod(7299, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(7608, (void*)this, x)) return;
 	this->QPrinter::setMinMax(x1, x2);
     }
     virtual void setNumCopies(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(7301, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(7610, (void*)this, x)) return;
 	this->QPrinter::setNumCopies(x1);
     }
     virtual void setOrientation(QPrinter::Orientation x1) {
 	Smoke::StackItem x[2];
 	x[1].s_enum = x1;
-	if(qt_Smoke->binding->callMethod(7282, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(7589, (void*)this, x)) return;
 	this->QPrinter::setOrientation(x1);
     }
     virtual void setOutputFileName(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(7272, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(7579, (void*)this, x)) return;
 	this->QPrinter::setOutputFileName(x1);
     }
     virtual void setOutputToFile(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(7270, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(7577, (void*)this, x)) return;
 	this->QPrinter::setOutputToFile(x1);
     }
     virtual void setPageOrder(QPrinter::PageOrder x1) {
 	Smoke::StackItem x[2];
 	x[1].s_enum = x1;
-	if(qt_Smoke->binding->callMethod(7285, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(7592, (void*)this, x)) return;
 	this->QPrinter::setPageOrder(x1);
     }
     virtual void setPageSize(QPrinter::PageSize x1) {
 	Smoke::StackItem x[2];
 	x[1].s_enum = x1;
-	if(qt_Smoke->binding->callMethod(7284, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(7591, (void*)this, x)) return;
 	this->QPrinter::setPageSize(x1);
     }
     virtual void setPaperSource(QPrinter::PaperSource x1) {
 	Smoke::StackItem x[2];
 	x[1].s_enum = x1;
-	if(qt_Smoke->binding->callMethod(7312, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(7621, (void*)this, x)) return;
 	this->QPrinter::setPaperSource(x1);
     }
     virtual void setPrintProgram(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(7274, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(7581, (void*)this, x)) return;
 	this->QPrinter::setPrintProgram(x1);
     }
     virtual void setPrinterName(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(7268, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(7575, (void*)this, x)) return;
 	this->QPrinter::setPrinterName(x1);
     }
     virtual void setPrinterSelectionOption(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(7276, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(7583, (void*)this, x)) return;
 	this->QPrinter::setPrinterSelectionOption(x1);
     }
     virtual void setResolution(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(7287, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(7594, (void*)this, x)) return;
 	this->QPrinter::setResolution(x1);
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {
-	  case 447: //QPrinter::PageSize
+	  case 464: //QPrinter::PageSize
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QPrinter::PageSize;
@@ -583,7 +593,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 449: //QPrinter::PrinterMode
+	  case 466: //QPrinter::PrinterMode
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QPrinter::PrinterMode;
@@ -599,7 +609,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 445: //QPrinter::Orientation
+	  case 462: //QPrinter::Orientation
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QPrinter::Orientation;
@@ -615,7 +625,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 448: //QPrinter::PaperSource
+	  case 465: //QPrinter::PaperSource
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QPrinter::PaperSource;
@@ -631,7 +641,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 444: //QPrinter::ColorMode
+	  case 461: //QPrinter::ColorMode
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QPrinter::ColorMode;
@@ -647,7 +657,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 446: //QPrinter::PageOrder
+	  case 463: //QPrinter::PageOrder
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QPrinter::PageOrder;
@@ -665,7 +675,7 @@ public:
 	    break;
 	}
     }
-    ~x_QPrinter() { qt_Smoke->binding->deleted(235, (void*)this); }
+    ~x_QPrinter() { qt_Smoke->binding->deleted(242, (void*)this); }
 };
 void xenum_QPrinter(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
     x_QPrinter::xenum_operation(xop, xtype, xdata, xvalue);
@@ -778,6 +788,8 @@ void xcall_QPrinter(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 102: xself->x_102(args);	break;
 	case 103: xself->x_103(args);	break;
 	case 104: xself->x_104(args);	break;
-	case 105: delete (QPrinter*)xself;	break;
+	case 105: xself->x_105(args);	break;
+	case 106: xself->x_106(args);	break;
+	case 107: delete (QPrinter*)xself;	break;
     }
 }

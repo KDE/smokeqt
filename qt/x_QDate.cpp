@@ -67,148 +67,163 @@ public:
 	x[0].s_int = xret;
     }
     void x_11(Smoke::Stack x) const {
+	// weekNumber(int*)
+	int xret = this->QDate::weekNumber((int*)x[1].s_voidp);
+	x[0].s_int = xret;
+    }
+    void x_12(Smoke::Stack x) const {
+	// weekNumber()
+	int xret = this->QDate::weekNumber();
+	x[0].s_int = xret;
+    }
+    void x_13(Smoke::Stack x) const {
 	// toString(Qt::DateFormat)
 	QString xret = this->QDate::toString((Qt::DateFormat)x[1].s_enum);
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    void x_12(Smoke::Stack x) const {
+    void x_14(Smoke::Stack x) const {
 	// toString()
 	QString xret = this->QDate::toString();
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    void x_13(Smoke::Stack x) const {
+    void x_15(Smoke::Stack x) const {
 	// toString(const QString&)
 	QString xret = this->QDate::toString(*(const QString *)x[1].s_voidp);
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    void x_14(Smoke::Stack x) {
+    void x_16(Smoke::Stack x) {
 	// setYMD(int, int, int)
 	bool xret = this->QDate::setYMD((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int);
 	x[0].s_bool = xret;
     }
-    void x_15(Smoke::Stack x) const {
+    void x_17(Smoke::Stack x) const {
 	// addDays(int)
 	QDate xret = this->QDate::addDays((int)x[1].s_int);
 	x[0].s_class = (void*)new QDate(xret);
     }
-    void x_16(Smoke::Stack x) const {
+    void x_18(Smoke::Stack x) const {
 	// addMonths(int)
 	QDate xret = this->QDate::addMonths((int)x[1].s_int);
 	x[0].s_class = (void*)new QDate(xret);
     }
-    void x_17(Smoke::Stack x) const {
+    void x_19(Smoke::Stack x) const {
 	// addYears(int)
 	QDate xret = this->QDate::addYears((int)x[1].s_int);
 	x[0].s_class = (void*)new QDate(xret);
     }
-    void x_18(Smoke::Stack x) const {
+    void x_20(Smoke::Stack x) const {
 	// daysTo(const QDate&)
 	int xret = this->QDate::daysTo(*(const QDate *)x[1].s_class);
 	x[0].s_int = xret;
     }
-    void x_19(Smoke::Stack x) const {
+    void x_21(Smoke::Stack x) const {
 	// operator==(const QDate&)
 	bool xret = this->QDate::operator==(*(const QDate *)x[1].s_class);
 	x[0].s_bool = xret;
     }
-    void x_20(Smoke::Stack x) const {
+    void x_22(Smoke::Stack x) const {
 	// operator!=(const QDate&)
 	bool xret = this->QDate::operator!=(*(const QDate *)x[1].s_class);
 	x[0].s_bool = xret;
     }
-    void x_21(Smoke::Stack x) const {
+    void x_23(Smoke::Stack x) const {
 	// operator<(const QDate&)
 	bool xret = this->QDate::operator<(*(const QDate *)x[1].s_class);
 	x[0].s_bool = xret;
     }
-    void x_22(Smoke::Stack x) const {
+    void x_24(Smoke::Stack x) const {
 	// operator<=(const QDate&)
 	bool xret = this->QDate::operator<=(*(const QDate *)x[1].s_class);
 	x[0].s_bool = xret;
     }
-    void x_23(Smoke::Stack x) const {
+    void x_25(Smoke::Stack x) const {
 	// operator>(const QDate&)
 	bool xret = this->QDate::operator>(*(const QDate *)x[1].s_class);
 	x[0].s_bool = xret;
     }
-    void x_24(Smoke::Stack x) const {
+    void x_26(Smoke::Stack x) const {
 	// operator>=(const QDate&)
 	bool xret = this->QDate::operator>=(*(const QDate *)x[1].s_class);
 	x[0].s_bool = xret;
     }
-    static void x_25(Smoke::Stack x) {
+    static void x_27(Smoke::Stack x) {
 	// QDate(const QDate&)
 	x_QDate* xret = new x_QDate(*(const QDate *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QDate(const QDate& x1) : QDate(x1) {
     }
-    static void x_26(Smoke::Stack x) {
+    static void x_28(Smoke::Stack x) {
 	// monthName(int)
 	QString xret = QDate::monthName((int)x[1].s_int);
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    static void x_27(Smoke::Stack x) {
+    static void x_29(Smoke::Stack x) {
 	// dayName(int)
 	QString xret = QDate::dayName((int)x[1].s_int);
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    static void x_28(Smoke::Stack x) {
+    static void x_30(Smoke::Stack x) {
 	// shortMonthName(int)
 	QString xret = QDate::shortMonthName((int)x[1].s_int);
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    static void x_29(Smoke::Stack x) {
+    static void x_31(Smoke::Stack x) {
 	// shortDayName(int)
 	QString xret = QDate::shortDayName((int)x[1].s_int);
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    static void x_30(Smoke::Stack x) {
+    static void x_32(Smoke::Stack x) {
 	// longMonthName(int)
 	QString xret = QDate::longMonthName((int)x[1].s_int);
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    static void x_31(Smoke::Stack x) {
+    static void x_33(Smoke::Stack x) {
 	// longDayName(int)
 	QString xret = QDate::longDayName((int)x[1].s_int);
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    static void x_32(Smoke::Stack x) {
+    static void x_34(Smoke::Stack x) {
 	// currentDate()
 	QDate xret = QDate::currentDate();
 	x[0].s_class = (void*)new QDate(xret);
     }
-    static void x_33(Smoke::Stack x) {
+    static void x_35(Smoke::Stack x) {
+	// currentDate(Qt::TimeSpec)
+	QDate xret = QDate::currentDate((Qt::TimeSpec)x[1].s_enum);
+	x[0].s_class = (void*)new QDate(xret);
+    }
+    static void x_36(Smoke::Stack x) {
 	// fromString(const QString&, Qt::DateFormat)
 	QDate xret = QDate::fromString(*(const QString *)x[1].s_voidp,(Qt::DateFormat)x[2].s_enum);
 	x[0].s_class = (void*)new QDate(xret);
     }
-    static void x_34(Smoke::Stack x) {
+    static void x_37(Smoke::Stack x) {
 	// fromString(const QString&)
 	QDate xret = QDate::fromString(*(const QString *)x[1].s_voidp);
 	x[0].s_class = (void*)new QDate(xret);
     }
-    static void x_35(Smoke::Stack x) {
+    static void x_38(Smoke::Stack x) {
 	// isValid(int, int, int)
 	bool xret = QDate::isValid((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int);
 	x[0].s_bool = xret;
     }
-    static void x_36(Smoke::Stack x) {
+    static void x_39(Smoke::Stack x) {
 	// leapYear(int)
 	bool xret = QDate::leapYear((int)x[1].s_int);
 	x[0].s_bool = xret;
     }
-    static void x_37(Smoke::Stack x) {
+    static void x_40(Smoke::Stack x) {
 	// gregorianToJulian(int, int, int)
 	uint xret = QDate::gregorianToJulian((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int);
 	x[0].s_uint = xret;
     }
-    static void x_38(Smoke::Stack x) {
+    static void x_41(Smoke::Stack x) {
 	// julianToGregorian(uint, int&, int&, int&)
 	QDate::julianToGregorian((uint)x[1].s_uint,*(int *)x[2].s_voidp,*(int *)x[3].s_voidp,*(int *)x[4].s_voidp);
 	(void)x; // noop (for compiler warning)
     }
-    ~x_QDate() { qt_Smoke->binding->deleted(63, (void*)this); }
+    ~x_QDate() { qt_Smoke->binding->deleted(64, (void*)this); }
 };
 void xcall_QDate(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QDate *xself = (x_QDate*)obj;
@@ -238,8 +253,8 @@ void xcall_QDate(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 22: xself->x_22(args);	break;
 	case 23: xself->x_23(args);	break;
 	case 24: xself->x_24(args);	break;
-	case 25: x_QDate::x_25(args);	break;
-	case 26: x_QDate::x_26(args);	break;
+	case 25: xself->x_25(args);	break;
+	case 26: xself->x_26(args);	break;
 	case 27: x_QDate::x_27(args);	break;
 	case 28: x_QDate::x_28(args);	break;
 	case 29: x_QDate::x_29(args);	break;
@@ -252,6 +267,9 @@ void xcall_QDate(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 36: x_QDate::x_36(args);	break;
 	case 37: x_QDate::x_37(args);	break;
 	case 38: x_QDate::x_38(args);	break;
-	case 39: delete (QDate*)xself;	break;
+	case 39: x_QDate::x_39(args);	break;
+	case 40: x_QDate::x_40(args);	break;
+	case 41: x_QDate::x_41(args);	break;
+	case 42: delete (QDate*)xself;	break;
     }
 }

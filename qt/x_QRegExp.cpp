@@ -8,182 +8,239 @@
 class x_QRegExp : public QRegExp {
 public:
     static void x_0(Smoke::Stack x) {
+	x[0].s_enum = (long)QRegExp::CaretAtZero;
+    }
+    static void x_1(Smoke::Stack x) {
+	x[0].s_enum = (long)QRegExp::CaretAtOffset;
+    }
+    static void x_2(Smoke::Stack x) {
+	x[0].s_enum = (long)QRegExp::CaretWontMatch;
+    }
+    static void x_3(Smoke::Stack x) {
 	// QRegExp()
 	x_QRegExp* xret = new x_QRegExp();
 	x[0].s_class = (void*)xret;
     }
     x_QRegExp() : QRegExp() {
     }
-    static void x_1(Smoke::Stack x) {
+    static void x_4(Smoke::Stack x) {
 	// QRegExp(const QString&, bool, bool)
 	x_QRegExp* xret = new x_QRegExp(*(const QString *)x[1].s_voidp,(bool)x[2].s_bool,(bool)x[3].s_bool);
 	x[0].s_class = (void*)xret;
     }
     x_QRegExp(const QString& x1, bool x2, bool x3) : QRegExp(x1, x2, x3) {
     }
-    static void x_2(Smoke::Stack x) {
+    static void x_5(Smoke::Stack x) {
 	// QRegExp(const QString&, bool)
 	x_QRegExp* xret = new x_QRegExp(*(const QString *)x[1].s_voidp,(bool)x[2].s_bool);
 	x[0].s_class = (void*)xret;
     }
     x_QRegExp(const QString& x1, bool x2) : QRegExp(x1, x2) {
     }
-    static void x_3(Smoke::Stack x) {
+    static void x_6(Smoke::Stack x) {
 	// QRegExp(const QString&)
 	x_QRegExp* xret = new x_QRegExp(*(const QString *)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QRegExp(const QString& x1) : QRegExp(x1) {
     }
-    static void x_4(Smoke::Stack x) {
+    static void x_7(Smoke::Stack x) {
 	// QRegExp(const QRegExp&)
 	x_QRegExp* xret = new x_QRegExp(*(const QRegExp *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QRegExp(const QRegExp& x1) : QRegExp(x1) {
     }
-    void x_5(Smoke::Stack x) {
+    void x_8(Smoke::Stack x) {
 	// operator=(const QRegExp&)
 	QRegExp& xret = this->QRegExp::operator=(*(const QRegExp *)x[1].s_class);
 	x[0].s_class = (void*)&xret;
     }
-    void x_6(Smoke::Stack x) const {
+    void x_9(Smoke::Stack x) const {
 	// operator==(const QRegExp&)
 	bool xret = this->QRegExp::operator==(*(const QRegExp *)x[1].s_class);
 	x[0].s_bool = xret;
     }
-    void x_7(Smoke::Stack x) const {
+    void x_10(Smoke::Stack x) const {
 	// operator!=(const QRegExp&)
 	bool xret = this->QRegExp::operator!=(*(const QRegExp *)x[1].s_class);
 	x[0].s_bool = xret;
     }
-    void x_8(Smoke::Stack x) const {
+    void x_11(Smoke::Stack x) const {
 	// isEmpty()
 	bool xret = this->QRegExp::isEmpty();
 	x[0].s_bool = xret;
     }
-    void x_9(Smoke::Stack x) const {
+    void x_12(Smoke::Stack x) const {
 	// isValid()
 	bool xret = this->QRegExp::isValid();
 	x[0].s_bool = xret;
     }
-    void x_10(Smoke::Stack x) const {
+    void x_13(Smoke::Stack x) const {
 	// pattern()
 	QString xret = this->QRegExp::pattern();
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    void x_11(Smoke::Stack x) {
+    void x_14(Smoke::Stack x) {
 	// setPattern(const QString&)
 	this->QRegExp::setPattern(*(const QString *)x[1].s_voidp);
 	(void)x; // noop (for compiler warning)
     }
-    void x_12(Smoke::Stack x) const {
+    void x_15(Smoke::Stack x) const {
 	// caseSensitive()
 	bool xret = this->QRegExp::caseSensitive();
 	x[0].s_bool = xret;
     }
-    void x_13(Smoke::Stack x) {
+    void x_16(Smoke::Stack x) {
 	// setCaseSensitive(bool)
 	this->QRegExp::setCaseSensitive((bool)x[1].s_bool);
 	(void)x; // noop (for compiler warning)
     }
-    void x_14(Smoke::Stack x) const {
+    void x_17(Smoke::Stack x) const {
 	// wildcard()
 	bool xret = this->QRegExp::wildcard();
 	x[0].s_bool = xret;
     }
-    void x_15(Smoke::Stack x) {
+    void x_18(Smoke::Stack x) {
 	// setWildcard(bool)
 	this->QRegExp::setWildcard((bool)x[1].s_bool);
 	(void)x; // noop (for compiler warning)
     }
-    void x_16(Smoke::Stack x) const {
+    void x_19(Smoke::Stack x) const {
 	// minimal()
 	bool xret = this->QRegExp::minimal();
 	x[0].s_bool = xret;
     }
-    void x_17(Smoke::Stack x) {
+    void x_20(Smoke::Stack x) {
 	// setMinimal(bool)
 	this->QRegExp::setMinimal((bool)x[1].s_bool);
 	(void)x; // noop (for compiler warning)
     }
-    void x_18(Smoke::Stack x) const {
+    void x_21(Smoke::Stack x) const {
 	// exactMatch(const QString&)
 	bool xret = this->QRegExp::exactMatch(*(const QString *)x[1].s_voidp);
 	x[0].s_bool = xret;
     }
-    void x_19(Smoke::Stack x) const {
+    void x_22(Smoke::Stack x) const {
 	// match(const QString&, int, int*, bool)
 	int xret = this->QRegExp::match(*(const QString *)x[1].s_voidp,(int)x[2].s_int,(int*)x[3].s_voidp,(bool)x[4].s_bool);
 	x[0].s_int = xret;
     }
-    void x_20(Smoke::Stack x) const {
+    void x_23(Smoke::Stack x) const {
 	// match(const QString&, int, int*)
 	int xret = this->QRegExp::match(*(const QString *)x[1].s_voidp,(int)x[2].s_int,(int*)x[3].s_voidp);
 	x[0].s_int = xret;
     }
-    void x_21(Smoke::Stack x) const {
+    void x_24(Smoke::Stack x) const {
 	// match(const QString&, int)
 	int xret = this->QRegExp::match(*(const QString *)x[1].s_voidp,(int)x[2].s_int);
 	x[0].s_int = xret;
     }
-    void x_22(Smoke::Stack x) const {
+    void x_25(Smoke::Stack x) const {
 	// match(const QString&)
 	int xret = this->QRegExp::match(*(const QString *)x[1].s_voidp);
 	x[0].s_int = xret;
     }
-    void x_23(Smoke::Stack x) const {
+    void x_26(Smoke::Stack x) const {
+	// search(const QString&, int, QRegExp::CaretMode)
+	int xret = this->QRegExp::search(*(const QString *)x[1].s_voidp,(int)x[2].s_int,(QRegExp::CaretMode)x[3].s_enum);
+	x[0].s_int = xret;
+    }
+    void x_27(Smoke::Stack x) const {
 	// search(const QString&, int)
 	int xret = this->QRegExp::search(*(const QString *)x[1].s_voidp,(int)x[2].s_int);
 	x[0].s_int = xret;
     }
-    void x_24(Smoke::Stack x) const {
+    void x_28(Smoke::Stack x) const {
 	// search(const QString&)
 	int xret = this->QRegExp::search(*(const QString *)x[1].s_voidp);
 	x[0].s_int = xret;
     }
-    void x_25(Smoke::Stack x) const {
+    void x_29(Smoke::Stack x) const {
+	// searchRev(const QString&, int, QRegExp::CaretMode)
+	int xret = this->QRegExp::searchRev(*(const QString *)x[1].s_voidp,(int)x[2].s_int,(QRegExp::CaretMode)x[3].s_enum);
+	x[0].s_int = xret;
+    }
+    void x_30(Smoke::Stack x) const {
 	// searchRev(const QString&, int)
 	int xret = this->QRegExp::searchRev(*(const QString *)x[1].s_voidp,(int)x[2].s_int);
 	x[0].s_int = xret;
     }
-    void x_26(Smoke::Stack x) const {
+    void x_31(Smoke::Stack x) const {
 	// searchRev(const QString&)
 	int xret = this->QRegExp::searchRev(*(const QString *)x[1].s_voidp);
 	x[0].s_int = xret;
     }
-    void x_27(Smoke::Stack x) const {
+    void x_32(Smoke::Stack x) const {
 	// matchedLength()
 	int xret = this->QRegExp::matchedLength();
 	x[0].s_int = xret;
     }
-    void x_28(Smoke::Stack x) {
+    void x_33(Smoke::Stack x) const {
+	// numCaptures()
+	int xret = this->QRegExp::numCaptures();
+	x[0].s_int = xret;
+    }
+    void x_34(Smoke::Stack x) {
 	// capturedTexts()
 	QStringList xret = this->QRegExp::capturedTexts();
 	x[0].s_voidp = (void*)new QStringList(xret);
     }
-    void x_29(Smoke::Stack x) {
+    void x_35(Smoke::Stack x) {
 	// cap(int)
 	QString xret = this->QRegExp::cap((int)x[1].s_int);
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    void x_30(Smoke::Stack x) {
+    void x_36(Smoke::Stack x) {
 	// cap()
 	QString xret = this->QRegExp::cap();
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    void x_31(Smoke::Stack x) {
+    void x_37(Smoke::Stack x) {
 	// pos(int)
 	int xret = this->QRegExp::pos((int)x[1].s_int);
 	x[0].s_int = xret;
     }
-    void x_32(Smoke::Stack x) {
+    void x_38(Smoke::Stack x) {
 	// pos()
 	int xret = this->QRegExp::pos();
 	x[0].s_int = xret;
     }
-    ~x_QRegExp() { qt_Smoke->binding->deleted(245, (void*)this); }
+    void x_39(Smoke::Stack x) {
+	// errorString()
+	QString xret = this->QRegExp::errorString();
+	x[0].s_voidp = (void*)new QString(xret);
+    }
+    static void x_40(Smoke::Stack x) {
+	// escape(const QString&)
+	QString xret = QRegExp::escape(*(const QString *)x[1].s_voidp);
+	x[0].s_voidp = (void*)new QString(xret);
+    }
+    static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
+	switch(xtype) {
+	  case 490: //QRegExp::CaretMode
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new QRegExp::CaretMode;
+		break;
+	      case Smoke::EnumDelete:
+		delete (QRegExp::CaretMode*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(QRegExp::CaretMode*)xdata = (QRegExp::CaretMode)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(QRegExp::CaretMode*)xdata;
+		break;
+	    }
+	    break;
+	}
+    }
+    ~x_QRegExp() { qt_Smoke->binding->deleted(252, (void*)this); }
 };
+void xenum_QRegExp(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
+    x_QRegExp::xenum_operation(xop, xtype, xdata, xvalue);
+}
 void xcall_QRegExp(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QRegExp *xself = (x_QRegExp*)obj;
     switch(xi) {
@@ -192,9 +249,9 @@ void xcall_QRegExp(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 2: x_QRegExp::x_2(args);	break;
 	case 3: x_QRegExp::x_3(args);	break;
 	case 4: x_QRegExp::x_4(args);	break;
-	case 5: xself->x_5(args);	break;
-	case 6: xself->x_6(args);	break;
-	case 7: xself->x_7(args);	break;
+	case 5: x_QRegExp::x_5(args);	break;
+	case 6: x_QRegExp::x_6(args);	break;
+	case 7: x_QRegExp::x_7(args);	break;
 	case 8: xself->x_8(args);	break;
 	case 9: xself->x_9(args);	break;
 	case 10: xself->x_10(args);	break;
@@ -220,6 +277,14 @@ void xcall_QRegExp(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 30: xself->x_30(args);	break;
 	case 31: xself->x_31(args);	break;
 	case 32: xself->x_32(args);	break;
-	case 33: delete (QRegExp*)xself;	break;
+	case 33: xself->x_33(args);	break;
+	case 34: xself->x_34(args);	break;
+	case 35: xself->x_35(args);	break;
+	case 36: xself->x_36(args);	break;
+	case 37: xself->x_37(args);	break;
+	case 38: xself->x_38(args);	break;
+	case 39: xself->x_39(args);	break;
+	case 40: x_QRegExp::x_40(args);	break;
+	case 41: delete (QRegExp*)xself;	break;
     }
 }

@@ -173,7 +173,7 @@ public:
 	uchar xret = xthis->QCharRef::row();
 	x[0].s_uchar = xret;
     }
-    ~x_QCharRef() { qt_Smoke->binding->deleted(34, (void*)this); }
+    ~x_QCharRef() { qt_Smoke->binding->deleted(35, (void*)this); }
 };
 void xcall_QCharRef(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QCharRef xtmp(obj), *xself = &xtmp;

@@ -203,7 +203,7 @@ public:
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {
-	  case 82: //QColorGroup::ColorRole
+	  case 84: //QColorGroup::ColorRole
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QColorGroup::ColorRole;
@@ -221,7 +221,7 @@ public:
 	    break;
 	}
     }
-    ~x_QColorGroup() { qt_Smoke->binding->deleted(45, (void*)this); }
+    ~x_QColorGroup() { qt_Smoke->binding->deleted(46, (void*)this); }
 };
 void xenum_QColorGroup(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
     x_QColorGroup::xenum_operation(xop, xtype, xdata, xvalue);

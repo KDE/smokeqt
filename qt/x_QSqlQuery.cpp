@@ -103,103 +103,138 @@ public:
 	const QSqlResult* xret = this->QSqlQuery::result();
 	x[0].s_class = (void*)xret;
     }
-    void x_17(Smoke::Stack x) {
+    void x_17(Smoke::Stack x) const {
+	// isForwardOnly()
+	bool xret = this->QSqlQuery::isForwardOnly();
+	x[0].s_bool = xret;
+    }
+    void x_18(Smoke::Stack x) {
+	// setForwardOnly(bool)
+	this->QSqlQuery::setForwardOnly((bool)x[1].s_bool);
+	(void)x; // noop (for compiler warning)
+    }
+    void x_19(Smoke::Stack x) {
 	// exec(const QString&)
 	bool xret = this->QSqlQuery::exec(*(const QString *)x[1].s_voidp);
 	x[0].s_bool = xret;
     }
-    void x_18(Smoke::Stack x) const {
+    void x_20(Smoke::Stack x) const {
 	// value(int)
 	QVariant xret = this->QSqlQuery::value((int)x[1].s_int);
 	x[0].s_class = (void*)new QVariant(xret);
     }
-    void x_19(Smoke::Stack x) {
+    void x_21(Smoke::Stack x) {
 	// seek(int, bool)
 	bool xret = this->QSqlQuery::seek((int)x[1].s_int,(bool)x[2].s_bool);
 	x[0].s_bool = xret;
     }
-    void x_20(Smoke::Stack x) {
+    void x_22(Smoke::Stack x) {
 	// seek(int)
 	bool xret = this->QSqlQuery::seek((int)x[1].s_int);
 	x[0].s_bool = xret;
     }
-    void x_21(Smoke::Stack x) {
+    void x_23(Smoke::Stack x) {
 	// next()
 	bool xret = this->QSqlQuery::next();
 	x[0].s_bool = xret;
     }
-    void x_22(Smoke::Stack x) {
+    void x_24(Smoke::Stack x) {
 	// prev()
 	bool xret = this->QSqlQuery::prev();
 	x[0].s_bool = xret;
     }
-    void x_23(Smoke::Stack x) {
+    void x_25(Smoke::Stack x) {
 	// first()
 	bool xret = this->QSqlQuery::first();
 	x[0].s_bool = xret;
     }
-    void x_24(Smoke::Stack x) {
+    void x_26(Smoke::Stack x) {
 	// last()
 	bool xret = this->QSqlQuery::last();
 	x[0].s_bool = xret;
     }
-    void x_25(Smoke::Stack x) {
+    void x_27(Smoke::Stack x) {
+	// exec()
+	bool xret = this->QSqlQuery::exec();
+	x[0].s_bool = xret;
+    }
+    void x_28(Smoke::Stack x) {
+	// prepare(const QString&)
+	bool xret = this->QSqlQuery::prepare(*(const QString *)x[1].s_voidp);
+	x[0].s_bool = xret;
+    }
+    void x_29(Smoke::Stack x) {
+	// bindValue(const QString&, const QVariant&)
+	this->QSqlQuery::bindValue(*(const QString *)x[1].s_voidp,*(const QVariant *)x[2].s_class);
+	(void)x; // noop (for compiler warning)
+    }
+    void x_30(Smoke::Stack x) {
+	// bindValue(int, const QVariant&)
+	this->QSqlQuery::bindValue((int)x[1].s_int,*(const QVariant *)x[2].s_class);
+	(void)x; // noop (for compiler warning)
+    }
+    void x_31(Smoke::Stack x) {
+	// addBindValue(const QVariant&)
+	this->QSqlQuery::addBindValue(*(const QVariant *)x[1].s_class);
+	(void)x; // noop (for compiler warning)
+    }
+    void x_32(Smoke::Stack x) {
 	// beforeSeek()
 	this->QSqlQuery::beforeSeek();
 	(void)x; // noop (for compiler warning)
     }
-    void x_26(Smoke::Stack x) {
+    void x_33(Smoke::Stack x) {
 	// afterSeek()
 	this->QSqlQuery::afterSeek();
 	(void)x; // noop (for compiler warning)
     }
     virtual void afterSeek() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(9029, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9423, (void*)this, x)) return;
 	this->QSqlQuery::afterSeek();
     }
     virtual void beforeSeek() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(9028, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9422, (void*)this, x)) return;
 	this->QSqlQuery::beforeSeek();
     }
     virtual bool exec(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(9020, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(9409, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QSqlQuery::exec(x1);
     }
     virtual bool first() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(9026, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(9415, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QSqlQuery::first();
     }
     virtual bool last() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(9027, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(9416, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QSqlQuery::last();
     }
     virtual bool next() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(9024, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(9413, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QSqlQuery::next();
     }
     virtual bool prev() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(9025, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(9414, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QSqlQuery::prev();
     }
     virtual bool seek(int x1, bool x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_bool = x2;
-	if(qt_Smoke->binding->callMethod(9022, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(9411, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QSqlQuery::seek(x1, x2);
     }
     virtual QVariant value(int x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(9021, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(9410, (void*)this, x)) {
 	    QVariant *xptr = (QVariant *)x[0].s_class;
 	    QVariant xret(*xptr);
 	    delete xptr;
@@ -207,7 +242,7 @@ public:
 	}
 	return this->QSqlQuery::value(x1);
     }
-    ~x_QSqlQuery() { qt_Smoke->binding->deleted(289, (void*)this); }
+    ~x_QSqlQuery() { qt_Smoke->binding->deleted(296, (void*)this); }
 };
 void xcall_QSqlQuery(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QSqlQuery *xself = (x_QSqlQuery*)obj;
@@ -239,6 +274,13 @@ void xcall_QSqlQuery(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 24: xself->x_24(args);	break;
 	case 25: xself->x_25(args);	break;
 	case 26: xself->x_26(args);	break;
-	case 27: delete (QSqlQuery*)xself;	break;
+	case 27: xself->x_27(args);	break;
+	case 28: xself->x_28(args);	break;
+	case 29: xself->x_29(args);	break;
+	case 30: xself->x_30(args);	break;
+	case 31: xself->x_31(args);	break;
+	case 32: xself->x_32(args);	break;
+	case 33: xself->x_33(args);	break;
+	case 34: delete (QSqlQuery*)xself;	break;
     }
 }

@@ -96,229 +96,249 @@ public:
     }
     x_QStyleSheetItem(const QStyleSheetItem& x1) : QStyleSheetItem(x1) {
     }
-    void x_27(Smoke::Stack x) const {
+    void x_27(Smoke::Stack x) {
+	// operator=(const QStyleSheetItem&)
+	QStyleSheetItem& xret = this->QStyleSheetItem::operator=(*(const QStyleSheetItem *)x[1].s_class);
+	x[0].s_class = (void*)&xret;
+    }
+    void x_28(Smoke::Stack x) const {
 	// name()
 	QString xret = this->QStyleSheetItem::name();
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    void x_28(Smoke::Stack x) {
+    void x_29(Smoke::Stack x) {
 	// styleSheet()
 	QStyleSheet* xret = this->QStyleSheetItem::styleSheet();
 	x[0].s_class = (void*)xret;
     }
-    void x_29(Smoke::Stack x) const {
+    void x_30(Smoke::Stack x) const {
 	// styleSheet()
 	const QStyleSheet* xret = this->QStyleSheetItem::styleSheet();
 	x[0].s_class = (void*)xret;
     }
-    void x_30(Smoke::Stack x) const {
+    void x_31(Smoke::Stack x) const {
 	// displayMode()
 	QStyleSheetItem::DisplayMode xret = this->QStyleSheetItem::displayMode();
 	x[0].s_enum = xret;
     }
-    void x_31(Smoke::Stack x) {
+    void x_32(Smoke::Stack x) {
 	// setDisplayMode(QStyleSheetItem::DisplayMode)
 	this->QStyleSheetItem::setDisplayMode((QStyleSheetItem::DisplayMode)x[1].s_enum);
 	(void)x; // noop (for compiler warning)
     }
-    void x_32(Smoke::Stack x) const {
+    void x_33(Smoke::Stack x) const {
 	// alignment()
 	int xret = this->QStyleSheetItem::alignment();
 	x[0].s_int = xret;
     }
-    void x_33(Smoke::Stack x) {
+    void x_34(Smoke::Stack x) {
 	// setAlignment(int)
 	this->QStyleSheetItem::setAlignment((int)x[1].s_int);
 	(void)x; // noop (for compiler warning)
     }
-    void x_34(Smoke::Stack x) const {
+    void x_35(Smoke::Stack x) const {
 	// verticalAlignment()
 	QStyleSheetItem::VerticalAlignment xret = this->QStyleSheetItem::verticalAlignment();
 	x[0].s_enum = xret;
     }
-    void x_35(Smoke::Stack x) {
+    void x_36(Smoke::Stack x) {
 	// setVerticalAlignment(QStyleSheetItem::VerticalAlignment)
 	this->QStyleSheetItem::setVerticalAlignment((QStyleSheetItem::VerticalAlignment)x[1].s_enum);
 	(void)x; // noop (for compiler warning)
     }
-    void x_36(Smoke::Stack x) const {
+    void x_37(Smoke::Stack x) const {
 	// fontWeight()
 	int xret = this->QStyleSheetItem::fontWeight();
 	x[0].s_int = xret;
     }
-    void x_37(Smoke::Stack x) {
+    void x_38(Smoke::Stack x) {
 	// setFontWeight(int)
 	this->QStyleSheetItem::setFontWeight((int)x[1].s_int);
 	(void)x; // noop (for compiler warning)
     }
-    void x_38(Smoke::Stack x) const {
+    void x_39(Smoke::Stack x) const {
 	// logicalFontSize()
 	int xret = this->QStyleSheetItem::logicalFontSize();
 	x[0].s_int = xret;
     }
-    void x_39(Smoke::Stack x) {
+    void x_40(Smoke::Stack x) {
 	// setLogicalFontSize(int)
 	this->QStyleSheetItem::setLogicalFontSize((int)x[1].s_int);
 	(void)x; // noop (for compiler warning)
     }
-    void x_40(Smoke::Stack x) const {
+    void x_41(Smoke::Stack x) const {
 	// logicalFontSizeStep()
 	int xret = this->QStyleSheetItem::logicalFontSizeStep();
 	x[0].s_int = xret;
     }
-    void x_41(Smoke::Stack x) {
+    void x_42(Smoke::Stack x) {
 	// setLogicalFontSizeStep(int)
 	this->QStyleSheetItem::setLogicalFontSizeStep((int)x[1].s_int);
 	(void)x; // noop (for compiler warning)
     }
-    void x_42(Smoke::Stack x) const {
+    void x_43(Smoke::Stack x) const {
 	// fontSize()
 	int xret = this->QStyleSheetItem::fontSize();
 	x[0].s_int = xret;
     }
-    void x_43(Smoke::Stack x) {
+    void x_44(Smoke::Stack x) {
 	// setFontSize(int)
 	this->QStyleSheetItem::setFontSize((int)x[1].s_int);
 	(void)x; // noop (for compiler warning)
     }
-    void x_44(Smoke::Stack x) const {
+    void x_45(Smoke::Stack x) const {
 	// fontFamily()
 	QString xret = this->QStyleSheetItem::fontFamily();
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    void x_45(Smoke::Stack x) {
+    void x_46(Smoke::Stack x) {
 	// setFontFamily(const QString&)
 	this->QStyleSheetItem::setFontFamily(*(const QString *)x[1].s_voidp);
 	(void)x; // noop (for compiler warning)
     }
-    void x_46(Smoke::Stack x) const {
+    void x_47(Smoke::Stack x) const {
 	// numberOfColumns()
 	int xret = this->QStyleSheetItem::numberOfColumns();
 	x[0].s_int = xret;
     }
-    void x_47(Smoke::Stack x) {
+    void x_48(Smoke::Stack x) {
 	// setNumberOfColumns(int)
 	this->QStyleSheetItem::setNumberOfColumns((int)x[1].s_int);
 	(void)x; // noop (for compiler warning)
     }
-    void x_48(Smoke::Stack x) const {
+    void x_49(Smoke::Stack x) const {
 	// color()
 	QColor xret = this->QStyleSheetItem::color();
 	x[0].s_class = (void*)new QColor(xret);
     }
-    void x_49(Smoke::Stack x) {
+    void x_50(Smoke::Stack x) {
 	// setColor(const QColor&)
 	this->QStyleSheetItem::setColor(*(const QColor *)x[1].s_class);
 	(void)x; // noop (for compiler warning)
     }
-    void x_50(Smoke::Stack x) const {
+    void x_51(Smoke::Stack x) const {
 	// fontItalic()
 	bool xret = this->QStyleSheetItem::fontItalic();
 	x[0].s_bool = xret;
     }
-    void x_51(Smoke::Stack x) {
+    void x_52(Smoke::Stack x) {
 	// setFontItalic(bool)
 	this->QStyleSheetItem::setFontItalic((bool)x[1].s_bool);
 	(void)x; // noop (for compiler warning)
     }
-    void x_52(Smoke::Stack x) const {
+    void x_53(Smoke::Stack x) const {
 	// definesFontItalic()
 	bool xret = this->QStyleSheetItem::definesFontItalic();
 	x[0].s_bool = xret;
     }
-    void x_53(Smoke::Stack x) const {
+    void x_54(Smoke::Stack x) const {
 	// fontUnderline()
 	bool xret = this->QStyleSheetItem::fontUnderline();
 	x[0].s_bool = xret;
     }
-    void x_54(Smoke::Stack x) {
+    void x_55(Smoke::Stack x) {
 	// setFontUnderline(bool)
 	this->QStyleSheetItem::setFontUnderline((bool)x[1].s_bool);
 	(void)x; // noop (for compiler warning)
     }
-    void x_55(Smoke::Stack x) const {
+    void x_56(Smoke::Stack x) const {
 	// definesFontUnderline()
 	bool xret = this->QStyleSheetItem::definesFontUnderline();
 	x[0].s_bool = xret;
     }
-    void x_56(Smoke::Stack x) const {
+    void x_57(Smoke::Stack x) const {
+	// fontStrikeOut()
+	bool xret = this->QStyleSheetItem::fontStrikeOut();
+	x[0].s_bool = xret;
+    }
+    void x_58(Smoke::Stack x) {
+	// setFontStrikeOut(bool)
+	this->QStyleSheetItem::setFontStrikeOut((bool)x[1].s_bool);
+	(void)x; // noop (for compiler warning)
+    }
+    void x_59(Smoke::Stack x) const {
+	// definesFontStrikeOut()
+	bool xret = this->QStyleSheetItem::definesFontStrikeOut();
+	x[0].s_bool = xret;
+    }
+    void x_60(Smoke::Stack x) const {
 	// isAnchor()
 	bool xret = this->QStyleSheetItem::isAnchor();
 	x[0].s_bool = xret;
     }
-    void x_57(Smoke::Stack x) {
+    void x_61(Smoke::Stack x) {
 	// setAnchor(bool)
 	this->QStyleSheetItem::setAnchor((bool)x[1].s_bool);
 	(void)x; // noop (for compiler warning)
     }
-    void x_58(Smoke::Stack x) const {
+    void x_62(Smoke::Stack x) const {
 	// whiteSpaceMode()
 	QStyleSheetItem::WhiteSpaceMode xret = this->QStyleSheetItem::whiteSpaceMode();
 	x[0].s_enum = xret;
     }
-    void x_59(Smoke::Stack x) {
+    void x_63(Smoke::Stack x) {
 	// setWhiteSpaceMode(QStyleSheetItem::WhiteSpaceMode)
 	this->QStyleSheetItem::setWhiteSpaceMode((QStyleSheetItem::WhiteSpaceMode)x[1].s_enum);
 	(void)x; // noop (for compiler warning)
     }
-    void x_60(Smoke::Stack x) const {
+    void x_64(Smoke::Stack x) const {
 	// margin(QStyleSheetItem::Margin)
 	int xret = this->QStyleSheetItem::margin((QStyleSheetItem::Margin)x[1].s_enum);
 	x[0].s_int = xret;
     }
-    void x_61(Smoke::Stack x) {
+    void x_65(Smoke::Stack x) {
 	// setMargin(QStyleSheetItem::Margin, int)
 	this->QStyleSheetItem::setMargin((QStyleSheetItem::Margin)x[1].s_enum,(int)x[2].s_int);
 	(void)x; // noop (for compiler warning)
     }
-    void x_62(Smoke::Stack x) const {
+    void x_66(Smoke::Stack x) const {
 	// listStyle()
 	QStyleSheetItem::ListStyle xret = this->QStyleSheetItem::listStyle();
 	x[0].s_enum = xret;
     }
-    void x_63(Smoke::Stack x) {
+    void x_67(Smoke::Stack x) {
 	// setListStyle(QStyleSheetItem::ListStyle)
 	this->QStyleSheetItem::setListStyle((QStyleSheetItem::ListStyle)x[1].s_enum);
 	(void)x; // noop (for compiler warning)
     }
-    void x_64(Smoke::Stack x) const {
+    void x_68(Smoke::Stack x) const {
 	// contexts()
 	QString xret = this->QStyleSheetItem::contexts();
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    void x_65(Smoke::Stack x) {
+    void x_69(Smoke::Stack x) {
 	// setContexts(const QString&)
 	this->QStyleSheetItem::setContexts(*(const QString *)x[1].s_voidp);
 	(void)x; // noop (for compiler warning)
     }
-    void x_66(Smoke::Stack x) const {
+    void x_70(Smoke::Stack x) const {
 	// allowedInContext(const QStyleSheetItem*)
 	bool xret = this->QStyleSheetItem::allowedInContext((const QStyleSheetItem*)x[1].s_class);
 	x[0].s_bool = xret;
     }
-    void x_67(Smoke::Stack x) const {
+    void x_71(Smoke::Stack x) const {
 	// selfNesting()
 	bool xret = this->QStyleSheetItem::selfNesting();
 	x[0].s_bool = xret;
     }
-    void x_68(Smoke::Stack x) {
+    void x_72(Smoke::Stack x) {
 	// setSelfNesting(bool)
 	this->QStyleSheetItem::setSelfNesting((bool)x[1].s_bool);
 	(void)x; // noop (for compiler warning)
     }
-    void x_69(Smoke::Stack x) {
+    void x_73(Smoke::Stack x) {
 	// setLineSpacing(int)
 	this->QStyleSheetItem::setLineSpacing((int)x[1].s_int);
 	(void)x; // noop (for compiler warning)
     }
-    void x_70(Smoke::Stack x) const {
+    void x_74(Smoke::Stack x) const {
 	// lineSpacing()
 	int xret = this->QStyleSheetItem::lineSpacing();
 	x[0].s_int = xret;
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {
-	  case 607: //QStyleSheetItem::DisplayMode
+	  case 630: //QStyleSheetItem::DisplayMode
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QStyleSheetItem::DisplayMode;
@@ -334,7 +354,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 612: //QStyleSheetItem::VerticalAlignment
+	  case 635: //QStyleSheetItem::VerticalAlignment
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QStyleSheetItem::VerticalAlignment;
@@ -350,7 +370,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 611: //QStyleSheetItem::Margin
+	  case 634: //QStyleSheetItem::Margin
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QStyleSheetItem::Margin;
@@ -366,7 +386,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 613: //QStyleSheetItem::WhiteSpaceMode
+	  case 636: //QStyleSheetItem::WhiteSpaceMode
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QStyleSheetItem::WhiteSpaceMode;
@@ -382,7 +402,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 609: //QStyleSheetItem::ListStyle
+	  case 632: //QStyleSheetItem::ListStyle
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QStyleSheetItem::ListStyle;
@@ -398,7 +418,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 606: //QStyleSheetItem::AdditionalStyleValues
+	  case 629: //QStyleSheetItem::AdditionalStyleValues
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QStyleSheetItem::AdditionalStyleValues;
@@ -416,7 +436,7 @@ public:
 	    break;
 	}
     }
-    ~x_QStyleSheetItem() { qt_Smoke->binding->deleted(305, (void*)this); }
+    ~x_QStyleSheetItem() { qt_Smoke->binding->deleted(312, (void*)this); }
 };
 void xenum_QStyleSheetItem(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
     x_QStyleSheetItem::xenum_operation(xop, xtype, xdata, xvalue);
@@ -495,6 +515,10 @@ void xcall_QStyleSheetItem(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 68: xself->x_68(args);	break;
 	case 69: xself->x_69(args);	break;
 	case 70: xself->x_70(args);	break;
-	case 71: delete (QStyleSheetItem*)xself;	break;
+	case 71: xself->x_71(args);	break;
+	case 72: xself->x_72(args);	break;
+	case 73: xself->x_73(args);	break;
+	case 74: xself->x_74(args);	break;
+	case 75: delete (QStyleSheetItem*)xself;	break;
     }
 }

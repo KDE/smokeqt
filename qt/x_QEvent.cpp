@@ -189,32 +189,50 @@ public:
 	x[0].s_enum = (long)QEvent::Accessibility;
     }
     static void x_61(Smoke::Stack x) {
-	x[0].s_enum = (long)QEvent::Tablet;
+	x[0].s_enum = (long)QEvent::TabletMove;
     }
     static void x_62(Smoke::Stack x) {
-	x[0].s_enum = (long)QEvent::User;
+	x[0].s_enum = (long)QEvent::LocaleChange;
     }
     static void x_63(Smoke::Stack x) {
-	x[0].s_enum = (long)QEvent::MaxUser;
+	x[0].s_enum = (long)QEvent::LanguageChange;
     }
     static void x_64(Smoke::Stack x) {
+	x[0].s_enum = (long)QEvent::LayoutDirectionChange;
+    }
+    static void x_65(Smoke::Stack x) {
+	x[0].s_enum = (long)QEvent::Style;
+    }
+    static void x_66(Smoke::Stack x) {
+	x[0].s_enum = (long)QEvent::TabletPress;
+    }
+    static void x_67(Smoke::Stack x) {
+	x[0].s_enum = (long)QEvent::TabletRelease;
+    }
+    static void x_68(Smoke::Stack x) {
+	x[0].s_enum = (long)QEvent::User;
+    }
+    static void x_69(Smoke::Stack x) {
+	x[0].s_enum = (long)QEvent::MaxUser;
+    }
+    static void x_70(Smoke::Stack x) {
 	// QEvent(QEvent::Type)
 	x_QEvent* xret = new x_QEvent((QEvent::Type)x[1].s_enum);
 	x[0].s_class = (void*)xret;
     }
     x_QEvent(QEvent::Type x1) : QEvent(x1) {
     }
-    void x_65(Smoke::Stack x) const {
+    void x_71(Smoke::Stack x) const {
 	// type()
 	QEvent::Type xret = this->QEvent::type();
 	x[0].s_enum = xret;
     }
-    void x_66(Smoke::Stack x) const {
+    void x_72(Smoke::Stack x) const {
 	// spontaneous()
 	bool xret = this->QEvent::spontaneous();
 	x[0].s_bool = xret;
     }
-    static void x_67(Smoke::Stack x) {
+    static void x_73(Smoke::Stack x) {
 	// QEvent(const QEvent&)
 	x_QEvent* xret = new x_QEvent(*(const QEvent *)x[1].s_class);
 	x[0].s_class = (void*)xret;
@@ -223,7 +241,7 @@ public:
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {
-	  case 209: //QEvent::Type
+	  case 206: //QEvent::Type
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QEvent::Type;
@@ -241,7 +259,7 @@ public:
 	    break;
 	}
     }
-    ~x_QEvent() { qt_Smoke->binding->deleted(110, (void*)this); }
+    ~x_QEvent() { qt_Smoke->binding->deleted(107, (void*)this); }
 };
 void xenum_QEvent(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
     x_QEvent::xenum_operation(xop, xtype, xdata, xvalue);
@@ -314,9 +332,15 @@ void xcall_QEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 62: x_QEvent::x_62(args);	break;
 	case 63: x_QEvent::x_63(args);	break;
 	case 64: x_QEvent::x_64(args);	break;
-	case 65: xself->x_65(args);	break;
-	case 66: xself->x_66(args);	break;
+	case 65: x_QEvent::x_65(args);	break;
+	case 66: x_QEvent::x_66(args);	break;
 	case 67: x_QEvent::x_67(args);	break;
-	case 68: delete (QEvent*)xself;	break;
+	case 68: x_QEvent::x_68(args);	break;
+	case 69: x_QEvent::x_69(args);	break;
+	case 70: x_QEvent::x_70(args);	break;
+	case 71: xself->x_71(args);	break;
+	case 72: xself->x_72(args);	break;
+	case 73: x_QEvent::x_73(args);	break;
+	case 74: delete (QEvent*)xself;	break;
     }
 }

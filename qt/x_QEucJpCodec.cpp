@@ -64,20 +64,20 @@ public:
     virtual bool canEncode(QChar x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(10120, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(10565, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QTextCodec::canEncode(x1);
     }
     virtual bool canEncode(const QString& x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(10121, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(10566, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QTextCodec::canEncode(x1);
     }
     virtual unsigned short characterFromUnicode(const QString& x1, int x2) const {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_int = x2;
-	if(qt_Smoke->binding->callMethod(10125, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(10570, (void*)this, x)) {
 	    unsigned short *xptr = (unsigned short *)x[0].s_class;
 	    unsigned short xret(*xptr);
 	    delete xptr;
@@ -89,7 +89,7 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_voidp = (void*)&x2;
-	if(qt_Smoke->binding->callMethod(2885, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(2883, (void*)this, x)) {
 	    QCString *xptr = (QCString *)x[0].s_class;
 	    QCString xret(*xptr);
 	    delete xptr;
@@ -102,7 +102,7 @@ public:
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_int = x2;
 	x[3].s_int = x3;
-	if(qt_Smoke->binding->callMethod(10124, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(10569, (void*)this, x)) {
 	    QByteArray *xptr = (QByteArray *)x[0].s_class;
 	    QByteArray xret(*xptr);
 	    delete xptr;
@@ -114,45 +114,45 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)x1;
 	x[2].s_int = x2;
-	if(qt_Smoke->binding->callMethod(2887, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(2885, (void*)this, x)) return (int)x[0].s_int;
 	return this->QEucJpCodec::heuristicContentMatch(x1, x2);
     }
     virtual int heuristicNameMatch(const char* x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(2888, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(2886, (void*)this, x)) return (int)x[0].s_int;
 	return this->QEucJpCodec::heuristicNameMatch(x1);
     }
     virtual QTextDecoder* makeDecoder() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(2884, (void*)this, x)) return (QTextDecoder*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(2882, (void*)this, x)) return (QTextDecoder*)x[0].s_class;
 	return this->QEucJpCodec::makeDecoder();
     }
     virtual QTextEncoder* makeEncoder() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(10111, (void*)this, x)) return (QTextEncoder*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(10556, (void*)this, x)) return (QTextEncoder*)x[0].s_class;
 	return this->QTextCodec::makeEncoder();
     }
     virtual int mibEnum() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(2881, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(2879, (void*)this, x)) return (int)x[0].s_int;
 	return this->QEucJpCodec::mibEnum();
     }
     virtual const char* mimeName() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(2883, (void*)this, x)) return (const char*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(2881, (void*)this, x)) return (const char*)x[0].s_class;
 	return this->QEucJpCodec::mimeName();
     }
     virtual const char* name() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(2882, (void*)this, x)) return (const char*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(2880, (void*)this, x)) return (const char*)x[0].s_class;
 	return this->QEucJpCodec::name();
     }
     virtual QString toUnicode(const char* x1, int x2) const {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)x1;
 	x[2].s_int = x2;
-	if(qt_Smoke->binding->callMethod(2886, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(2884, (void*)this, x)) {
 	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;
@@ -160,7 +160,7 @@ public:
 	}
 	return this->QEucJpCodec::toUnicode(x1, x2);
     }
-    ~x_QEucJpCodec() { qt_Smoke->binding->deleted(108, (void*)this); }
+    ~x_QEucJpCodec() { qt_Smoke->binding->deleted(105, (void*)this); }
 };
 void xcall_QEucJpCodec(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QEucJpCodec *xself = (x_QEucJpCodec*)obj;

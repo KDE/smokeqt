@@ -36,7 +36,7 @@ public:
     }
     x_QCustomEvent(const QCustomEvent& x1) : QCustomEvent(x1) {
     }
-    ~x_QCustomEvent() { qt_Smoke->binding->deleted(54, (void*)this); }
+    ~x_QCustomEvent() { qt_Smoke->binding->deleted(55, (void*)this); }
 };
 void xcall_QCustomEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QCustomEvent *xself = (x_QCustomEvent*)obj;

@@ -386,87 +386,97 @@ public:
 	this->QMenuData::setItemChecked((int)x[1].s_int,(bool)x[2].s_bool);
 	(void)x; // noop (for compiler warning)
     }
-    void x_75(Smoke::Stack x) {
+    void x_75(Smoke::Stack x) const {
+	// isItemVisible(int)
+	bool xret = this->QMenuData::isItemVisible((int)x[1].s_int);
+	x[0].s_bool = xret;
+    }
+    void x_76(Smoke::Stack x) {
+	// setItemVisible(int, bool)
+	this->QMenuData::setItemVisible((int)x[1].s_int,(bool)x[2].s_bool);
+	(void)x; // noop (for compiler warning)
+    }
+    void x_77(Smoke::Stack x) {
 	// updateItem(int)
 	this->QMenuData::updateItem((int)x[1].s_int);
 	(void)x; // noop (for compiler warning)
     }
-    void x_76(Smoke::Stack x) const {
+    void x_78(Smoke::Stack x) const {
 	// indexOf(int)
 	int xret = this->QMenuData::indexOf((int)x[1].s_int);
 	x[0].s_int = xret;
     }
-    void x_77(Smoke::Stack x) const {
+    void x_79(Smoke::Stack x) const {
 	// idAt(int)
 	int xret = this->QMenuData::idAt((int)x[1].s_int);
 	x[0].s_int = xret;
     }
-    void x_78(Smoke::Stack x) {
+    void x_80(Smoke::Stack x) {
 	// setId(int, int)
 	this->QMenuData::setId((int)x[1].s_int,(int)x[2].s_int);
 	(void)x; // noop (for compiler warning)
     }
-    void x_79(Smoke::Stack x) {
+    void x_81(Smoke::Stack x) {
 	// connectItem(int, const QObject*, const char*)
 	bool xret = this->QMenuData::connectItem((int)x[1].s_int,(const QObject*)x[2].s_class,(const char*)x[3].s_voidp);
 	x[0].s_bool = xret;
     }
-    void x_80(Smoke::Stack x) {
+    void x_82(Smoke::Stack x) {
 	// disconnectItem(int, const QObject*, const char*)
 	bool xret = this->QMenuData::disconnectItem((int)x[1].s_int,(const QObject*)x[2].s_class,(const char*)x[3].s_voidp);
 	x[0].s_bool = xret;
     }
-    void x_81(Smoke::Stack x) {
+    void x_83(Smoke::Stack x) {
 	// setItemParameter(int, int)
 	bool xret = this->QMenuData::setItemParameter((int)x[1].s_int,(int)x[2].s_int);
 	x[0].s_bool = xret;
     }
-    void x_82(Smoke::Stack x) const {
+    void x_84(Smoke::Stack x) const {
 	// itemParameter(int)
 	int xret = this->QMenuData::itemParameter((int)x[1].s_int);
 	x[0].s_int = xret;
     }
-    void x_83(Smoke::Stack x) const {
+    void x_85(Smoke::Stack x) const {
 	// findItem(int)
 	QMenuItem* xret = this->QMenuData::findItem((int)x[1].s_int);
 	x[0].s_class = (void*)xret;
     }
-    void x_84(Smoke::Stack x) const {
+    void x_86(Smoke::Stack x) const {
 	// findItem(int, QMenuData**)
 	QMenuItem* xret = this->QMenuData::findItem((int)x[1].s_int,(QMenuData**)x[2].s_voidp);
 	x[0].s_class = (void*)xret;
     }
-    void x_85(Smoke::Stack x) {
+    void x_87(Smoke::Stack x) {
 	// findPopup(QPopupMenu*, int*)
 	QMenuItem* xret = this->QMenuData::findPopup((QPopupMenu*)x[1].s_class,(int*)x[2].s_voidp);
 	x[0].s_class = (void*)xret;
     }
-    void x_86(Smoke::Stack x) {
+    void x_88(Smoke::Stack x) {
 	// findPopup(QPopupMenu*)
 	QMenuItem* xret = this->QMenuData::findPopup((QPopupMenu*)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    void x_87(Smoke::Stack x) {
+    void x_89(Smoke::Stack x) {
 	// activateItemAt(int)
 	this->QMenuData::activateItemAt((int)x[1].s_int);
 	(void)x; // noop (for compiler warning)
     }
-    void x_88(Smoke::Stack x) {
+    void x_90(Smoke::Stack x) {
 	// menuContentsChanged()
 	this->QMenuData::menuContentsChanged();
 	(void)x; // noop (for compiler warning)
     }
-    void x_89(Smoke::Stack x) {
+    void x_91(Smoke::Stack x) {
 	// menuStateChanged()
 	this->QMenuData::menuStateChanged();
 	(void)x; // noop (for compiler warning)
     }
-    void x_90(Smoke::Stack x) {
+    void x_92(Smoke::Stack x) {
 	// menuInsPopup(QPopupMenu*)
 	this->QMenuData::menuInsPopup((QPopupMenu*)x[1].s_class);
 	(void)x; // noop (for compiler warning)
     }
-    void x_91(Smoke::Stack x) {
+    void x_93(Smoke::Stack x) {
 	// menuDelPopup(QPopupMenu*)
 	this->QMenuData::menuDelPopup((QPopupMenu*)x[1].s_class);
 	(void)x; // noop (for compiler warning)
@@ -474,45 +484,45 @@ public:
     virtual void activateItemAt(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(5875, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6162, (void*)this, x)) return;
 	this->QMenuData::activateItemAt(x1);
     }
     virtual void menuContentsChanged() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(5876, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6163, (void*)this, x)) return;
 	this->QMenuData::menuContentsChanged();
     }
     virtual void menuDelPopup(QPopupMenu* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(5879, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6166, (void*)this, x)) return;
 	this->QMenuData::menuDelPopup(x1);
     }
     virtual void menuInsPopup(QPopupMenu* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(5878, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6165, (void*)this, x)) return;
 	this->QMenuData::menuInsPopup(x1);
     }
     virtual void menuStateChanged() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(5877, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6164, (void*)this, x)) return;
 	this->QMenuData::menuStateChanged();
     }
     virtual void setId(int x1, int x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_int = x2;
-	if(qt_Smoke->binding->callMethod(5866, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6153, (void*)this, x)) return;
 	this->QMenuData::setId(x1, x2);
     }
     virtual void updateItem(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(5863, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6150, (void*)this, x)) return;
 	this->QMenuData::updateItem(x1);
     }
-    ~x_QMenuData() { qt_Smoke->binding->deleted(193, (void*)this); }
+    ~x_QMenuData() { qt_Smoke->binding->deleted(199, (void*)this); }
 };
 void xcall_QMenuData(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QMenuData *xself = (x_QMenuData*)obj;
@@ -609,6 +619,8 @@ void xcall_QMenuData(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 89: xself->x_89(args);	break;
 	case 90: xself->x_90(args);	break;
 	case 91: xself->x_91(args);	break;
-	case 92: delete (QMenuData*)xself;	break;
+	case 92: xself->x_92(args);	break;
+	case 93: xself->x_93(args);	break;
+	case 94: delete (QMenuData*)xself;	break;
     }
 }

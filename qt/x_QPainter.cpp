@@ -983,7 +983,7 @@ public:
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {
-	  case 414: //QPainter::TextDirection
+	  case 431: //QPainter::TextDirection
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QPainter::TextDirection;
@@ -999,7 +999,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 413: //QPainter::CoordinateMode
+	  case 430: //QPainter::CoordinateMode
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QPainter::CoordinateMode;
@@ -1017,7 +1017,7 @@ public:
 	    break;
 	}
     }
-    ~x_QPainter() { qt_Smoke->binding->deleted(223, (void*)this); }
+    ~x_QPainter() { qt_Smoke->binding->deleted(230, (void*)this); }
 };
 void xenum_QPainter(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
     x_QPainter::xenum_operation(xop, xtype, xdata, xvalue);

@@ -19,11 +19,11 @@ public:
 	x[0].s_enum = (long)QTabletEvent::Eraser;
     }
     static void x_4(Smoke::Stack x) {
-	// QTabletEvent(const QPoint&, int, int, int, int, const QPair<int, int>&)
-	x_QTabletEvent* xret = new x_QTabletEvent(*(const QPoint *)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int,*(const QPair<int, int> *)x[6].s_voidp);
+	// QTabletEvent(QEvent::Type, const QPoint&, const QPoint&, int, int, int, int, const QPair<int, int>&)
+	x_QTabletEvent* xret = new x_QTabletEvent((QEvent::Type)x[1].s_enum,*(const QPoint *)x[2].s_class,*(const QPoint *)x[3].s_class,(int)x[4].s_int,(int)x[5].s_int,(int)x[6].s_int,(int)x[7].s_int,*(const QPair<int, int> *)x[8].s_voidp);
 	x[0].s_class = (void*)xret;
     }
-    x_QTabletEvent(const QPoint& x1, int x2, int x3, int x4, int x5, const QPair<int, int>& x6) : QTabletEvent(x1, x2, x3, x4, x5, x6) {
+    x_QTabletEvent(QEvent::Type x1, const QPoint& x2, const QPoint& x3, int x4, int x5, int x6, int x7, const QPair<int, int>& x8) : QTabletEvent(x1, x2, x3, x4, x5, x6, x7, x8) {
     }
     static void x_5(Smoke::Stack x) {
 	// QTabletEvent(const QPoint&, const QPoint&, int, int, int, int, const QPair<int, int>&)
@@ -111,7 +111,7 @@ public:
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {
-	  case 633: //QTabletEvent::TabletDevice
+	  case 657: //QTabletEvent::TabletDevice
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QTabletEvent::TabletDevice;
@@ -129,7 +129,7 @@ public:
 	    break;
 	}
     }
-    ~x_QTabletEvent() { qt_Smoke->binding->deleted(315, (void*)this); }
+    ~x_QTabletEvent() { qt_Smoke->binding->deleted(323, (void*)this); }
 };
 void xenum_QTabletEvent(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
     x_QTabletEvent::xenum_operation(xop, xtype, xdata, xvalue);
