@@ -30,9 +30,15 @@ my $default_treshold = 15;
 my $cc = "g++";
 my $ccflags = $opt_f || "";
 
+my $nspaces = 50;
+
+my %qtdefs=();
+my %qtundefs=();
+
 my $tmp = gettmpfile();
 my $qtdir = $opt_p || $ENV{'QTDIR'};
- -e "$qtdir/include/qapplication.h" or die "Invalid Qt directory. Use -p or set \$QTDIR\n";
+my $qtinc = $qtdir . "/include";
+ -e "$qtdir/include/qglobal.h" or die "Invalid Qt directory. Use -p or set \$QTDIR\n";
 
 my $ccmd = "$cc  -o $tmp $tmp.cpp -I$qtdir/include -L$qtdir/lib -lqt-mt $ccflags 2>/dev/null";
 
@@ -48,12 +54,13 @@ map{ $tests{$_}->[2]>=$treshold ? ($used++, $total++):$total++ } keys %tests;
 print "Number of defines to be tested : $used/$total\n\n" unless $opt_q;
 open( QTDEFS, ">".($opt_o || "qtdefines") ) or die "Can't open output file: $!\n";
 
+grab_qglobal_symbols();
 preliminary_test();
 perform_all_tests();
 
-print +scalar(@qtdefs) . " defines found.\n";
+print +scalar(keys %qtdefs) . " defines found.\n";
 
-print QTDEFS join("\n", @qtdefs), "\n";
+print QTDEFS join("\n", keys %qtdefs), "\n";
 close;
 
 #--------------------------------------------------------------#
@@ -71,9 +78,36 @@ sub gettmpfile
 
 #--------------------------------------------------------------#
 
+sub grab_qglobal_symbols
+{
+	my $cmd = "$cc -E -D__cplusplus -dM -I$qtinc $qtinc/qglobal.h 2>/dev/null";
+	my $symbols = `$cmd`;
+	if( check_exit_status($?) )
+	{
+		while( $symbols =~/^#\s*define\s*(QT_NO_\S+)/gm )
+		{
+			$qtdefs{$1} = 1;
+		}
+		print "Found ". scalar( keys %qtdefs )." predefined symbol".((scalar( keys %qtdefs ) -1)?"s":"")." in qglobal.h\n" unless ($opt_q or !(keys %qtdefs));
+		while( $symbols =~/^#\s*define\s*QT_MODULE_(\S+)/gm )
+		{
+			$qtundefs{"QT_NO_$1"} = 1;
+		}
+		print "Found ". scalar( keys %qtundefs )." undefined symbol".((scalar( keys %qtundefs ) -1)?"s":"")." in qglobal.h\n" unless ($opt_q or !(keys %qtundefs));
+
+	}
+	else
+	{
+		die "Failed to run $cmd.\n";
+	}
+}
+
+#--------------------------------------------------------------#
+
 sub preliminary_test
 {
-	print "Trying to compile and link a small program...\t";
+	my $msg = "Trying to compile and link a small program...";
+	print $msg, " " x ($nspaces - length($msg) + 8);
 	open( OUT, ">${tmp}.cpp" ) or die "Failed to open temp file ${tmp}.cpp: $!\n";
 	my $simple=q£
 		#include <qapplication.h>
@@ -86,9 +120,9 @@ sub preliminary_test
 	print OUT $simple;
 	close OUT;
 	my $a = system($ccmd);
-	if( $a)
+	if( !check_exit_status($a) )
 	{
-		die "FAILED : check your configuration.\nFailed program was: $simple";
+		die "\nFAILED : check your configuration.\nFailed program was: $simple";
 	}
 	else
 	{
@@ -103,9 +137,14 @@ sub perform_all_tests
 	foreach ( sort { $tests{$a}->[2] <=> $tests{$b}->[2]} keys %tests)
 	{
 		$tests{$_}->[2] < $treshold and next;
-		print "\rTesting $_".( " " x (40 - length($_)) );
+		($qtdefs{$_} || $qtundefs{$_}) and do
+		{
+			print "\rSkipping $_ (in qglobal.h)".( " " x (($nspaces-14) - length($_)) ).($qtundefs{$_}?"*Undefined*":" [Defined]").($opt_q?"":"\n");
+			next
+		};
+		print "\rTesting $_".( " " x ($nspaces - length($_)) );
 		open( OUT, ">${tmp}.cpp" ) or die "Failed to open temp file ${tmp}.cpp: $!\n";
-		foreach $def(@qtdefs)
+		foreach $def(keys %qtdefs)
 		{
 			print OUT "#define $def\n";
 		}
@@ -124,12 +163,43 @@ sub perform_all_tests
 		}
 		£;
 		close OUT;
-		my $a = system($ccmd);
 
-		push (@qtdefs, $_) if $a;
-		print +$opt_q ? ++$count."/$used" : ($a ? " [Defined]\n" : "*Undefined*\n" );
+		my $ok = check_exit_status( system($ccmd) );
+		if( !$ok )
+		{
+			$qtdefs{$_} = 1;
+		}
+		print +$opt_q ? ++$count."/$used" : ( $ok ? "*Undefined*\n" : " [Defined]\n" );
 	}
 	$opt_q && print "\n";
+}
+
+#--------------------------------------------------------------#
+
+sub check_exit_status
+{
+	my $a = 0xFFFF & shift;
+	if( !$a )
+	{
+		return 1;
+	}
+	elsif( $a == 0xFF00 )
+	{
+		die "\nSystem call failed: $!\n";
+	}
+	elsif( $a > 0x80 )
+	{
+		# non-zero status.
+	}
+	else
+	{
+		if( $a & 0x80 )
+		{
+			die "\n$cc coredumped with signal ". ($a & ~0x80);
+		}
+		die "\n$cc interrupted by signal $a\n";
+	}
+	return 0;
 }
 
 #--------------------------------------------------------------#
