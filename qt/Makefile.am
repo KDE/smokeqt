@@ -58,5 +58,5 @@ libsmokeqt_la_SOURCES = smokedata.cpp x_QTextDrag.cpp x_QLCDNumber.cpp x_QDockAr
  x_QStyleFactory.cpp x_QImageFormat.cpp x_QFontMetrics.cpp x_QWidgetListIt.cpp x_QPointArray.cpp x_QDomNamedNodeMap.cpp x_QXmlContentHandler.cpp x_QImageDecoder.cpp \
  x_QLayout.cpp x_QDomNode.cpp x_QBuffer.cpp x_QMoveEvent.cpp x_QComboBox.cpp x_QXmlNamespaceSupport.cpp x_QPaintDeviceMetrics.cpp x_QPainter.cpp \
  x_QListView.cpp x_QVariant.cpp x_QHeader.cpp x_QMimeSource.cpp x_QIMEvent.cpp x_QRegion.cpp x_QWorkspace.cpp x_QIconFactory.cpp \
- x_QHButtonGroup.cpp x_QDomEntityReference.cpp x_QCheckBox.cpp x_QGLColormap.cpp x_QIODeviceSource.cpp x_QGrid.cpp x_QToolTip.cpp x_QMetaProperty.cpp \
+ x_QHButtonGroup.cpp x_QDomEntityReference.cpp x_QCheckBox.cpp x_QIODeviceSource.cpp x_QGrid.cpp x_QToolTip.cpp x_QMetaProperty.cpp \
  x_QFilePreview.cpp
