@@ -30,11 +30,11 @@ my $count = 0;
 opendir (FILES, $outdir) or die;
 foreach $filename (readdir(FILES)) {
 	if ( $filename =~ /^x_.*\.cpp$/ ) {
-		print MAKEFILE " $filename";
 		if ( $count++ == 7 ) {
 			$count = 0;
 			print MAKEFILE " \\\n";
 		}
+		print MAKEFILE " $filename";
 	}
 }
 
