@@ -154,17 +154,17 @@ public:
     virtual void deleteData(QGArray::array_data* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 2996, x)) return;
+	if(call_method((void*)this, 2993, x)) return;
 	this->QGArray::deleteData(x1);
     }
     virtual void detach() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 2973, x)) return;
+	if(call_method((void*)this, 2970, x)) return;
 	this->QGArray::detach();
     }
     virtual QGArray::array_data* newData() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 2995, x)) 	return (QGArray::array_data*)x[0].s_voidp;
+	if(call_method((void*)this, 2992, x)) 	return (QGArray::array_data*)x[0].s_voidp;
 	return this->QGArray::newData();
     }
     ~x_QGArray() {}

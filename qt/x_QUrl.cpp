@@ -249,90 +249,90 @@ public:
     virtual void addPath(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 9102, x)) return;
+	if(call_method((void*)this, 9095, x)) return;
 	this->QUrl::addPath(x1);
     }
     virtual bool cdUp() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 9114, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 9107, x)) return (bool)x[0].s_bool;
 	return this->QUrl::cdUp();
     }
     virtual bool parse(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 9119, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 9112, x)) return (bool)x[0].s_bool;
 	return this->QUrl::parse(x1);
     }
     virtual void reset() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 9118, x)) return;
+	if(call_method((void*)this, 9111, x)) return;
 	this->QUrl::reset();
     }
     virtual void setEncodedPathAndQuery(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 9093, x)) return;
+	if(call_method((void*)this, 9086, x)) return;
 	this->QUrl::setEncodedPathAndQuery(x1);
     }
     virtual void setFileName(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 9103, x)) return;
+	if(call_method((void*)this, 9096, x)) return;
 	this->QUrl::setFileName(x1);
     }
     virtual void setHost(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 9084, x)) return;
+	if(call_method((void*)this, 9077, x)) return;
 	this->QUrl::setHost(x1);
     }
     virtual void setPassword(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 9081, x)) return;
+	if(call_method((void*)this, 9074, x)) return;
 	this->QUrl::setPassword(x1);
     }
     virtual void setPath(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 9091, x)) return;
+	if(call_method((void*)this, 9084, x)) return;
 	this->QUrl::setPath(x1);
     }
     virtual void setPort(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = (int)x1;
-	if(call_method((void*)this, 9087, x)) return;
+	if(call_method((void*)this, 9080, x)) return;
 	this->QUrl::setPort(x1);
     }
     virtual void setProtocol(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 9076, x)) return;
+	if(call_method((void*)this, 9069, x)) return;
 	this->QUrl::setProtocol(x1);
     }
     virtual void setQuery(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 9095, x)) return;
+	if(call_method((void*)this, 9088, x)) return;
 	this->QUrl::setQuery(x1);
     }
     virtual void setRef(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 9098, x)) return;
+	if(call_method((void*)this, 9091, x)) return;
 	this->QUrl::setRef(x1);
     }
     virtual void setUser(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 9078, x)) return;
+	if(call_method((void*)this, 9071, x)) return;
 	this->QUrl::setUser(x1);
     }
     virtual QString toString(bool x1, bool x2) const {
 	Smoke::StackItem x[3];
 	x[1].s_bool = (bool)x1;
 	x[2].s_bool = (bool)x2;
-	if(call_method((void*)this, 9111, x)) {
+	if(call_method((void*)this, 9104, x)) {
 	    QString *xptr = (QString *)x[0].s_voidp;
 	    QString xret(*xptr);
 	    delete xptr;

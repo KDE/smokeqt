@@ -19,7 +19,7 @@ public:
     virtual void previewUrl(const QUrl& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	call_method_abstract((void*)this, 2635, x);
+	call_method_abstract((void*)this, 2632, x);
 	return;
 	// ABSTRACT
     }

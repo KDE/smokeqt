@@ -521,7 +521,7 @@ public:
 	x[1].s_voidp = (void*)x1;
 	x[2].s_int = (int)x2;
 	x[3].s_int = (int)x3;
-	if(call_method((void*)this, 6588, x)) return;
+	if(call_method((void*)this, 6584, x)) return;
 	this->QScrollView::addChild(x1, x2, x3);
     }
     virtual void addColumn(const QString& x1, const QString& x2, int x3, const QIconSet& x4) {
@@ -536,24 +536,24 @@ public:
     virtual int addSelection(const QTableSelection& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 8251, x)) return (int)x[0].s_int;
+	if(call_method((void*)this, 8247, x)) return (int)x[0].s_int;
 	return this->QTable::addSelection(x1);
     }
     virtual void adjustColumn(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = (int)x1;
-	if(call_method((void*)this, 8287, x)) return;
+	if(call_method((void*)this, 8283, x)) return;
 	this->QTable::adjustColumn(x1);
     }
     virtual void adjustRow(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = (int)x1;
-	if(call_method((void*)this, 8288, x)) return;
+	if(call_method((void*)this, 8284, x)) return;
 	this->QTable::adjustRow(x1);
     }
     virtual void adjustSize() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 9616, x)) return;
+	if(call_method((void*)this, 9609, x)) return;
 	this->QWidget::adjustSize();
     }
     virtual bool beginInsert() {
@@ -573,7 +573,7 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_int = (int)x1;
 	x[2].s_int = (int)x2;
-	if(call_method((void*)this, 8230, x)) {
+	if(call_method((void*)this, 8226, x)) {
 	    QRect *xptr = (QRect *)x[0].s_voidp;
 	    QRect xret(*xptr);
 	    delete xptr;
@@ -585,7 +585,7 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_int = (int)x1;
 	x[2].s_int = (int)x2;
-	if(call_method((void*)this, 8266, x)) {
+	if(call_method((void*)this, 8262, x)) {
 	    QRect *xptr = (QRect *)x[0].s_voidp;
 	    QRect xret(*xptr);
 	    delete xptr;
@@ -597,7 +597,7 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_int = (int)x1;
 	x[2].s_int = (int)x2;
-	if(call_method((void*)this, 8264, x)) 	return (QWidget*)x[0].s_voidp;
+	if(call_method((void*)this, 8260, x)) 	return (QWidget*)x[0].s_voidp;
 	return this->QTable::cellWidget(x1, x2);
     }
     virtual bool checkConnectArgs(const char* x1, const QObject* x2, const char* x3) {
@@ -605,13 +605,13 @@ public:
 	x[1].s_voidp = (void*)x1;
 	x[2].s_voidp = (void*)x2;
 	x[3].s_voidp = (void*)x3;
-	if(call_method((void*)this, 5473, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 5469, x)) return (bool)x[0].s_bool;
 	return this->QObject::checkConnectArgs(x1, x2, x3);
     }
     virtual void childEvent(QChildEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 5469, x)) return;
+	if(call_method((void*)this, 5465, x)) return;
 	this->QObject::childEvent(x1);
     }
     virtual void clearCell(int x1, int x2) {
@@ -625,19 +625,19 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_int = (int)x1;
 	x[2].s_int = (int)x2;
-	if(call_method((void*)this, 8265, x)) return;
+	if(call_method((void*)this, 8261, x)) return;
 	this->QTable::clearCellWidget(x1, x2);
     }
     virtual bool close(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = (bool)x1;
-	if(call_method((void*)this, 9603, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 9596, x)) return (bool)x[0].s_bool;
 	return this->QWidget::close(x1);
     }
     virtual void closeEvent(QCloseEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 9711, x)) return;
+	if(call_method((void*)this, 9704, x)) return;
 	this->QWidget::closeEvent(x1);
     }
     virtual bool cmd(int x1, QPainter* x2, QPDevCmdParam* x3) {
@@ -645,13 +645,13 @@ public:
 	x[1].s_int = (int)x1;
 	x[2].s_voidp = (void*)x2;
 	x[3].s_voidp = (void*)x3;
-	if(call_method((void*)this, 5556, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 5552, x)) return (bool)x[0].s_bool;
 	return this->QPaintDevice::cmd(x1, x2, x3);
     }
     virtual int columnAt(int x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_int = (int)x1;
-	if(call_method((void*)this, 8235, x)) return (int)x[0].s_int;
+	if(call_method((void*)this, 8231, x)) return (int)x[0].s_int;
 	return this->QTable::columnAt(x1);
     }
     virtual void columnClicked(int x1) {
@@ -665,25 +665,25 @@ public:
 	x[1].s_int = (int)x1;
 	x[2].s_int = (int)x2;
 	x[3].s_int = (int)x3;
-	if(call_method((void*)this, 8366, x)) return;
+	if(call_method((void*)this, 8362, x)) return;
 	this->QTable::columnIndexChanged(x1, x2, x3);
     }
     virtual int columnPos(int x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_int = (int)x1;
-	if(call_method((void*)this, 8233, x)) return (int)x[0].s_int;
+	if(call_method((void*)this, 8229, x)) return (int)x[0].s_int;
 	return this->QTable::columnPos(x1);
     }
     virtual int columnWidth(int x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_int = (int)x1;
-	if(call_method((void*)this, 8231, x)) return (int)x[0].s_int;
+	if(call_method((void*)this, 8227, x)) return (int)x[0].s_int;
 	return this->QTable::columnWidth(x1);
     }
     virtual void columnWidthChanged(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = (int)x1;
-	if(call_method((void*)this, 8364, x)) return;
+	if(call_method((void*)this, 8360, x)) return;
 	this->QTable::columnWidthChanged(x1);
     }
     virtual QSql::Confirm confirmCancel(QSql::Op x1) {
@@ -711,7 +711,7 @@ public:
     virtual void connectNotify(const char* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 5471, x)) return;
+	if(call_method((void*)this, 5467, x)) return;
 	this->QObject::connectNotify(x1);
     }
     virtual void contentsContextMenuEvent(QContextMenuEvent* x1) {
@@ -723,37 +723,37 @@ public:
     virtual void contentsDragEnterEvent(QDragEnterEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 8344, x)) return;
+	if(call_method((void*)this, 8340, x)) return;
 	this->QTable::contentsDragEnterEvent(x1);
     }
     virtual void contentsDragLeaveEvent(QDragLeaveEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 8346, x)) return;
+	if(call_method((void*)this, 8342, x)) return;
 	this->QTable::contentsDragLeaveEvent(x1);
     }
     virtual void contentsDragMoveEvent(QDragMoveEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 8345, x)) return;
+	if(call_method((void*)this, 8341, x)) return;
 	this->QTable::contentsDragMoveEvent(x1);
     }
     virtual void contentsDropEvent(QDropEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 8347, x)) return;
+	if(call_method((void*)this, 8343, x)) return;
 	this->QTable::contentsDropEvent(x1);
     }
     virtual void contentsMouseDoubleClickEvent(QMouseEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 8335, x)) return;
+	if(call_method((void*)this, 8331, x)) return;
 	this->QTable::contentsMouseDoubleClickEvent(x1);
     }
     virtual void contentsMouseMoveEvent(QMouseEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 8334, x)) return;
+	if(call_method((void*)this, 8330, x)) return;
 	this->QTable::contentsMouseMoveEvent(x1);
     }
     virtual void contentsMousePressEvent(QMouseEvent* x1) {
@@ -765,19 +765,19 @@ public:
     virtual void contentsMouseReleaseEvent(QMouseEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 8336, x)) return;
+	if(call_method((void*)this, 8332, x)) return;
 	this->QTable::contentsMouseReleaseEvent(x1);
     }
     virtual void contentsWheelEvent(QWheelEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 6658, x)) return;
+	if(call_method((void*)this, 6654, x)) return;
 	this->QScrollView::contentsWheelEvent(x1);
     }
     virtual void contextMenuEvent(QContextMenuEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 6687, x)) return;
+	if(call_method((void*)this, 6683, x)) return;
 	this->QScrollView::contextMenuEvent(x1);
     }
     virtual void create(WId x1, bool x2, bool x3) {
@@ -785,7 +785,7 @@ public:
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_bool = (bool)x2;
 	x[3].s_bool = (bool)x3;
-	if(call_method((void*)this, 9731, x)) return;
+	if(call_method((void*)this, 9724, x)) return;
 	this->QWidget::create(x1, x2, x3);
     }
     virtual QWidget* createEditor(int x1, int x2, bool x3) const {
@@ -798,18 +798,18 @@ public:
     }
     virtual int currentSelection() const {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 8254, x)) return (int)x[0].s_int;
+	if(call_method((void*)this, 8250, x)) return (int)x[0].s_int;
 	return this->QTable::currentSelection();
     }
     virtual void customEvent(QCustomEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 5470, x)) return;
+	if(call_method((void*)this, 5466, x)) return;
 	this->QObject::customEvent(x1);
     }
     virtual bool customWhatsThis() const {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 9641, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 9634, x)) return (bool)x[0].s_bool;
 	return this->QWidget::customWhatsThis();
     }
     virtual bool deleteCurrent() {
@@ -821,36 +821,36 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_bool = (bool)x1;
 	x[2].s_bool = (bool)x2;
-	if(call_method((void*)this, 9735, x)) return;
+	if(call_method((void*)this, 9728, x)) return;
 	this->QWidget::destroy(x1, x2);
     }
     virtual void disconnectNotify(const char* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 5472, x)) return;
+	if(call_method((void*)this, 5468, x)) return;
 	this->QObject::disconnectNotify(x1);
     }
     virtual void dragEnterEvent(QDragEnterEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 9717, x)) return;
+	if(call_method((void*)this, 9710, x)) return;
 	this->QWidget::dragEnterEvent(x1);
     }
     virtual void dragLeaveEvent(QDragLeaveEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 9719, x)) return;
+	if(call_method((void*)this, 9712, x)) return;
 	this->QWidget::dragLeaveEvent(x1);
     }
     virtual void dragMoveEvent(QDragMoveEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 9718, x)) return;
+	if(call_method((void*)this, 9711, x)) return;
 	this->QWidget::dragMoveEvent(x1);
     }
     virtual QDragObject* dragObject() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 8348, x)) 	return (QDragObject*)x[0].s_voidp;
+	if(call_method((void*)this, 8344, x)) 	return (QDragObject*)x[0].s_voidp;
 	return this->QTable::dragObject();
     }
     virtual void drawContents(QPainter* x1, int x2, int x3, int x4, int x5) {
@@ -860,7 +860,7 @@ public:
 	x[3].s_int = (int)x3;
 	x[4].s_int = (int)x4;
 	x[5].s_int = (int)x5;
-	if(call_method((void*)this, 8332, x)) return;
+	if(call_method((void*)this, 8328, x)) return;
 	this->QTable::drawContents(x1, x2, x3, x4, x5);
     }
     virtual void drawContentsOffset(QPainter* x1, int x2, int x3, int x4, int x5, int x6, int x7) {
@@ -872,19 +872,19 @@ public:
 	x[5].s_int = (int)x5;
 	x[6].s_int = (int)x6;
 	x[7].s_int = (int)x7;
-	if(call_method((void*)this, 6649, x)) return;
+	if(call_method((void*)this, 6645, x)) return;
 	this->QScrollView::drawContentsOffset(x1, x2, x3, x4, x5, x6, x7);
     }
     virtual void drawFrame(QPainter* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 2944, x)) return;
+	if(call_method((void*)this, 2941, x)) return;
 	this->QFrame::drawFrame(x1);
     }
     virtual void dropEvent(QDropEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 9720, x)) return;
+	if(call_method((void*)this, 9713, x)) return;
 	this->QWidget::dropEvent(x1);
     }
     virtual void editCell(int x1, int x2, bool x3) {
@@ -892,13 +892,13 @@ public:
 	x[1].s_int = (int)x1;
 	x[2].s_int = (int)x2;
 	x[3].s_bool = (bool)x3;
-	if(call_method((void*)this, 8319, x)) return;
+	if(call_method((void*)this, 8315, x)) return;
 	this->QTable::editCell(x1, x2, x3);
     }
     virtual void enabledChange(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = (bool)x1;
-	if(call_method((void*)this, 9725, x)) return;
+	if(call_method((void*)this, 9718, x)) return;
 	this->QWidget::enabledChange(x1);
     }
     virtual void endEdit(int x1, int x2, bool x3, bool x4) {
@@ -913,13 +913,13 @@ public:
     virtual void enterEvent(QEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 9706, x)) return;
+	if(call_method((void*)this, 9699, x)) return;
 	this->QWidget::enterEvent(x1);
     }
     virtual bool event(QEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 9696, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 9689, x)) return (bool)x[0].s_bool;
 	return this->QWidget::event(x1);
     }
     virtual bool eventFilter(QObject* x1, QEvent* x2) {
@@ -946,32 +946,32 @@ public:
     virtual void focusInEvent(QFocusEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 8339, x)) return;
+	if(call_method((void*)this, 8335, x)) return;
 	this->QTable::focusInEvent(x1);
     }
     virtual bool focusNextPrevChild(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = (bool)x1;
-	if(call_method((void*)this, 6678, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 6674, x)) return (bool)x[0].s_bool;
 	return this->QScrollView::focusNextPrevChild(x1);
     }
     virtual void focusOutEvent(QFocusEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 8340, x)) return;
+	if(call_method((void*)this, 8336, x)) return;
 	this->QTable::focusOutEvent(x1);
     }
     virtual void fontChange(const QFont& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 9727, x)) return;
+	if(call_method((void*)this, 9720, x)) return;
 	this->QWidget::fontChange(x1);
     }
     virtual int fontInf(QFont* x1, int x2) const {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)x1;
 	x[2].s_int = (int)x2;
-	if(call_method((void*)this, 5561, x)) return (int)x[0].s_int;
+	if(call_method((void*)this, 5557, x)) return (int)x[0].s_int;
 	return this->QPaintDevice::fontInf(x1, x2);
     }
     virtual int fontMet(QFont* x1, int x2, const char* x3, int x4) const {
@@ -980,12 +980,12 @@ public:
 	x[2].s_int = (int)x2;
 	x[3].s_voidp = (void*)x3;
 	x[4].s_int = (int)x4;
-	if(call_method((void*)this, 5558, x)) return (int)x[0].s_int;
+	if(call_method((void*)this, 5554, x)) return (int)x[0].s_int;
 	return this->QPaintDevice::fontMet(x1, x2, x3, x4);
     }
     virtual void frameChanged() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 6672, x)) return;
+	if(call_method((void*)this, 6668, x)) return;
 	this->QScrollView::frameChanged();
     }
     virtual void handleError(const QSqlError& x1) {
@@ -997,61 +997,61 @@ public:
     virtual int heightForWidth(int x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_int = (int)x1;
-	if(call_method((void*)this, 9615, x)) return (int)x[0].s_int;
+	if(call_method((void*)this, 9608, x)) return (int)x[0].s_int;
 	return this->QWidget::heightForWidth(x1);
     }
     virtual void hide() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 9673, x)) return;
+	if(call_method((void*)this, 9666, x)) return;
 	this->QWidget::hide();
     }
     virtual void hideColumn(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = (int)x1;
-	if(call_method((void*)this, 8282, x)) return;
+	if(call_method((void*)this, 8278, x)) return;
 	this->QTable::hideColumn(x1);
     }
     virtual void hideEvent(QHideEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 9722, x)) return;
+	if(call_method((void*)this, 9715, x)) return;
 	this->QWidget::hideEvent(x1);
     }
     virtual void hideRow(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = (int)x1;
-	if(call_method((void*)this, 8281, x)) return;
+	if(call_method((void*)this, 8277, x)) return;
 	this->QTable::hideRow(x1);
     }
     virtual void imComposeEvent(QIMEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 9714, x)) return;
+	if(call_method((void*)this, 9707, x)) return;
 	this->QWidget::imComposeEvent(x1);
     }
     virtual void imEndEvent(QIMEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 9715, x)) return;
+	if(call_method((void*)this, 9708, x)) return;
 	this->QWidget::imEndEvent(x1);
     }
     virtual void imStartEvent(QIMEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 9713, x)) return;
+	if(call_method((void*)this, 9706, x)) return;
 	this->QWidget::imStartEvent(x1);
     }
     virtual void insertChild(QObject* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 5431, x)) return;
+	if(call_method((void*)this, 5427, x)) return;
 	this->QObject::insertChild(x1);
     }
     virtual void insertColumns(int x1, int x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = (int)x1;
 	x[2].s_int = (int)x2;
-	if(call_method((void*)this, 8313, x)) return;
+	if(call_method((void*)this, 8309, x)) return;
 	this->QTable::insertColumns(x1, x2);
     }
     virtual bool insertCurrent() {
@@ -1063,7 +1063,7 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_int = (int)x1;
 	x[2].s_int = (int)x2;
-	if(call_method((void*)this, 8311, x)) return;
+	if(call_method((void*)this, 8307, x)) return;
 	this->QTable::insertRows(x1, x2);
     }
     virtual void insertWidget(int x1, int x2, QWidget* x3) {
@@ -1071,7 +1071,7 @@ public:
 	x[1].s_int = (int)x1;
 	x[2].s_int = (int)x2;
 	x[3].s_voidp = (void*)x3;
-	if(call_method((void*)this, 8357, x)) return;
+	if(call_method((void*)this, 8353, x)) return;
 	this->QTable::insertWidget(x1, x2, x3);
     }
     virtual QTableItem* item(int x1, int x2) const {
@@ -1084,30 +1084,30 @@ public:
     virtual void keyPressEvent(QKeyEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 8338, x)) return;
+	if(call_method((void*)this, 8334, x)) return;
 	this->QTable::keyPressEvent(x1);
     }
     virtual void keyReleaseEvent(QKeyEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 9703, x)) return;
+	if(call_method((void*)this, 9696, x)) return;
 	this->QWidget::keyReleaseEvent(x1);
     }
     virtual void leaveEvent(QEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 9707, x)) return;
+	if(call_method((void*)this, 9700, x)) return;
 	this->QWidget::leaveEvent(x1);
     }
     virtual int metric(int x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_int = (int)x1;
-	if(call_method((void*)this, 9729, x)) return (int)x[0].s_int;
+	if(call_method((void*)this, 9722, x)) return (int)x[0].s_int;
 	return this->QWidget::metric(x1);
     }
     virtual QSize minimumSizeHint() const {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 6634, x)) {
+	if(call_method((void*)this, 6630, x)) {
 	    QSize *xptr = (QSize *)x[0].s_voidp;
 	    QSize xret(*xptr);
 	    delete xptr;
@@ -1118,32 +1118,32 @@ public:
     virtual void mouseDoubleClickEvent(QMouseEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 6684, x)) return;
+	if(call_method((void*)this, 6680, x)) return;
 	this->QScrollView::mouseDoubleClickEvent(x1);
     }
     virtual void mouseMoveEvent(QMouseEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 6685, x)) return;
+	if(call_method((void*)this, 6681, x)) return;
 	this->QScrollView::mouseMoveEvent(x1);
     }
     virtual void mousePressEvent(QMouseEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 6682, x)) return;
+	if(call_method((void*)this, 6678, x)) return;
 	this->QScrollView::mousePressEvent(x1);
     }
     virtual void mouseReleaseEvent(QMouseEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 6683, x)) return;
+	if(call_method((void*)this, 6679, x)) return;
 	this->QScrollView::mouseReleaseEvent(x1);
     }
     virtual void move(int x1, int x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = (int)x1;
 	x[2].s_int = (int)x2;
-	if(call_method((void*)this, 9685, x)) return;
+	if(call_method((void*)this, 9678, x)) return;
 	this->QWidget::move(x1, x2);
     }
     virtual void moveChild(QWidget* x1, int x2, int x3) {
@@ -1151,13 +1151,13 @@ public:
 	x[1].s_voidp = (void*)x1;
 	x[2].s_int = (int)x2;
 	x[3].s_int = (int)x3;
-	if(call_method((void*)this, 6591, x)) return;
+	if(call_method((void*)this, 6587, x)) return;
 	this->QScrollView::moveChild(x1, x2, x3);
     }
     virtual void moveEvent(QMoveEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 9709, x)) return;
+	if(call_method((void*)this, 9702, x)) return;
 	this->QWidget::moveEvent(x1);
     }
     virtual int numCols() const {
@@ -1177,7 +1177,7 @@ public:
 	x[3].s_int = (int)x3;
 	x[4].s_voidp = (void*)&x4;
 	x[5].s_bool = (bool)x5;
-	if(call_method((void*)this, 8267, x)) return;
+	if(call_method((void*)this, 8263, x)) return;
 	this->QTable::paintCell(x1, x2, x3, x4, x5);
     }
     virtual void paintCell(QPainter* x1, int x2, int x3, const QRect& x4, bool x5, const QColorGroup& x6) {
@@ -1198,13 +1198,13 @@ public:
 	x[3].s_int = (int)x3;
 	x[4].s_int = (int)x4;
 	x[5].s_int = (int)x5;
-	if(call_method((void*)this, 8350, x)) return;
+	if(call_method((void*)this, 8346, x)) return;
 	this->QTable::paintEmptyArea(x1, x2, x3, x4, x5);
     }
     virtual void paintEvent(QPaintEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 2942, x)) return;
+	if(call_method((void*)this, 2939, x)) return;
 	this->QFrame::paintEvent(x1);
     }
     virtual void paintField(QPainter* x1, const QSqlField* x2, const QRect& x3, bool x4) {
@@ -1220,20 +1220,20 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)x1;
 	x[2].s_voidp = (void*)&x2;
-	if(call_method((void*)this, 8269, x)) return;
+	if(call_method((void*)this, 8265, x)) return;
 	this->QTable::paintFocus(x1, x2);
     }
     virtual void paletteChange(const QPalette& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 9726, x)) return;
+	if(call_method((void*)this, 9719, x)) return;
 	this->QWidget::paletteChange(x1);
     }
     virtual QPixmap pixmap(int x1, int x2) const {
 	Smoke::StackItem x[3];
 	x[1].s_int = (int)x1;
 	x[2].s_int = (int)x2;
-	if(call_method((void*)this, 8228, x)) {
+	if(call_method((void*)this, 8224, x)) {
 	    QPixmap *xptr = (QPixmap *)x[0].s_voidp;
 	    QPixmap xret(*xptr);
 	    delete xptr;
@@ -1243,13 +1243,13 @@ public:
     }
     virtual void polish() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 9679, x)) return;
+	if(call_method((void*)this, 9672, x)) return;
 	this->QWidget::polish();
     }
     virtual QVariant property(const char* x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 5445, x)) {
+	if(call_method((void*)this, 5441, x)) {
 	    QVariant *xptr = (QVariant *)x[0].s_voidp;
 	    QVariant xret(*xptr);
 	    delete xptr;
@@ -1265,13 +1265,13 @@ public:
     virtual void removeChild(QObject* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 6635, x)) return;
+	if(call_method((void*)this, 6631, x)) return;
 	this->QScrollView::removeChild(x1);
     }
     virtual void removeColumn(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = (int)x1;
-	if(call_method((void*)this, 8317, x)) return;
+	if(call_method((void*)this, 8313, x)) return;
 	this->QTable::removeColumn(x1);
     }
     virtual void removeColumn(uint x1) {
@@ -1283,31 +1283,31 @@ public:
     virtual void removeColumns(const QMemArray<int>& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 8318, x)) return;
+	if(call_method((void*)this, 8314, x)) return;
 	this->QTable::removeColumns(x1);
     }
     virtual void removeRow(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = (int)x1;
-	if(call_method((void*)this, 8315, x)) return;
+	if(call_method((void*)this, 8311, x)) return;
 	this->QTable::removeRow(x1);
     }
     virtual void removeRows(const QMemArray<int>& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 8316, x)) return;
+	if(call_method((void*)this, 8312, x)) return;
 	this->QTable::removeRows(x1);
     }
     virtual void removeSelection(const QTableSelection& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 8252, x)) return;
+	if(call_method((void*)this, 8248, x)) return;
 	this->QTable::removeSelection(x1);
     }
     virtual void removeSelection(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = (int)x1;
-	if(call_method((void*)this, 8253, x)) return;
+	if(call_method((void*)this, 8249, x)) return;
 	this->QTable::removeSelection(x1);
     }
     virtual void reparent(QWidget* x1, Qt::WFlags x2, const QPoint& x3, bool x4) {
@@ -1316,21 +1316,21 @@ public:
 	x[2].s_voidp = (void*)&x2;
 	x[3].s_voidp = (void*)&x3;
 	x[4].s_bool = (bool)x4;
-	if(call_method((void*)this, 9619, x)) return;
+	if(call_method((void*)this, 9612, x)) return;
 	this->QWidget::reparent(x1, x2, x3, x4);
     }
     virtual void resize(int x1, int x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = (int)x1;
 	x[2].s_int = (int)x2;
-	if(call_method((void*)this, 6613, x)) return;
+	if(call_method((void*)this, 6609, x)) return;
 	this->QScrollView::resize(x1, x2);
     }
     virtual void resizeContents(int x1, int x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = (int)x1;
 	x[2].s_int = (int)x2;
-	if(call_method((void*)this, 6638, x)) return;
+	if(call_method((void*)this, 6634, x)) return;
 	this->QScrollView::resizeContents(x1, x2);
     }
     virtual void resizeData(int x1) {
@@ -1347,25 +1347,25 @@ public:
     }
     virtual int resolution() const {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 5554, x)) return (int)x[0].s_int;
+	if(call_method((void*)this, 5550, x)) return (int)x[0].s_int;
 	return this->QPaintDevice::resolution();
     }
     virtual int rowAt(int x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_int = (int)x1;
-	if(call_method((void*)this, 8236, x)) return (int)x[0].s_int;
+	if(call_method((void*)this, 8232, x)) return (int)x[0].s_int;
 	return this->QTable::rowAt(x1);
     }
     virtual int rowHeight(int x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_int = (int)x1;
-	if(call_method((void*)this, 8232, x)) return (int)x[0].s_int;
+	if(call_method((void*)this, 8228, x)) return (int)x[0].s_int;
 	return this->QTable::rowHeight(x1);
     }
     virtual void rowHeightChanged(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = (int)x1;
-	if(call_method((void*)this, 8365, x)) return;
+	if(call_method((void*)this, 8361, x)) return;
 	this->QTable::rowHeightChanged(x1);
     }
     virtual void rowIndexChanged(int x1, int x2, int x3) {
@@ -1373,24 +1373,24 @@ public:
 	x[1].s_int = (int)x1;
 	x[2].s_int = (int)x2;
 	x[3].s_int = (int)x3;
-	if(call_method((void*)this, 8367, x)) return;
+	if(call_method((void*)this, 8363, x)) return;
 	this->QTable::rowIndexChanged(x1, x2, x3);
     }
     virtual int rowPos(int x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_int = (int)x1;
-	if(call_method((void*)this, 8234, x)) return (int)x[0].s_int;
+	if(call_method((void*)this, 8230, x)) return (int)x[0].s_int;
 	return this->QTable::rowPos(x1);
     }
     virtual void setAcceptDrops(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = (bool)x1;
-	if(call_method((void*)this, 9636, x)) return;
+	if(call_method((void*)this, 9629, x)) return;
 	this->QWidget::setAcceptDrops(x1);
     }
     virtual void setActiveWindow() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 9590, x)) return;
+	if(call_method((void*)this, 9583, x)) return;
 	this->QWidget::setActiveWindow();
     }
     virtual void setAutoDelete(bool x1) {
@@ -1408,44 +1408,44 @@ public:
     virtual void setAutoMask(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = (bool)x1;
-	if(call_method((void*)this, 9637, x)) return;
+	if(call_method((void*)this, 9630, x)) return;
 	this->QWidget::setAutoMask(x1);
     }
     virtual void setBackgroundColor(const QColor& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 9586, x)) return;
+	if(call_method((void*)this, 9579, x)) return;
 	this->QWidget::setBackgroundColor(x1);
     }
     virtual void setBackgroundMode(Qt::BackgroundMode x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 9548, x)) return;
+	if(call_method((void*)this, 9541, x)) return;
 	this->QWidget::setBackgroundMode(x1);
     }
     virtual void setBackgroundOrigin(QWidget::BackgroundOrigin x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 9639, x)) return;
+	if(call_method((void*)this, 9632, x)) return;
 	this->QWidget::setBackgroundOrigin(x1);
     }
     virtual void setBackgroundPixmap(const QPixmap& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 9588, x)) return;
+	if(call_method((void*)this, 9581, x)) return;
 	this->QWidget::setBackgroundPixmap(x1);
     }
     virtual void setCaption(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 9654, x)) return;
+	if(call_method((void*)this, 9647, x)) return;
 	this->QWidget::setCaption(x1);
     }
     virtual void setCellContentFromEditor(int x1, int x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = (int)x1;
 	x[2].s_int = (int)x2;
-	if(call_method((void*)this, 8353, x)) return;
+	if(call_method((void*)this, 8349, x)) return;
 	this->QTable::setCellContentFromEditor(x1, x2);
     }
     virtual void setCellWidget(int x1, int x2, QWidget* x3) {
@@ -1453,7 +1453,7 @@ public:
 	x[1].s_int = (int)x1;
 	x[2].s_int = (int)x2;
 	x[3].s_voidp = (void*)x3;
-	if(call_method((void*)this, 8263, x)) return;
+	if(call_method((void*)this, 8259, x)) return;
 	this->QTable::setCellWidget(x1, x2, x3);
     }
     virtual void setColumn(uint x1, const QString& x2, const QString& x3, int x4, const QIconSet& x5) {
@@ -1469,21 +1469,21 @@ public:
     virtual void setColumnMovingEnabled(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = (bool)x1;
-	if(call_method((void*)this, 8304, x)) return;
+	if(call_method((void*)this, 8300, x)) return;
 	this->QTable::setColumnMovingEnabled(x1);
     }
     virtual void setColumnReadOnly(int x1, bool x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = (int)x1;
 	x[2].s_bool = (bool)x2;
-	if(call_method((void*)this, 8308, x)) return;
+	if(call_method((void*)this, 8304, x)) return;
 	this->QTable::setColumnReadOnly(x1, x2);
     }
     virtual void setColumnStretchable(int x1, bool x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = (int)x1;
 	x[2].s_bool = (bool)x2;
-	if(call_method((void*)this, 8289, x)) return;
+	if(call_method((void*)this, 8285, x)) return;
 	this->QTable::setColumnStretchable(x1, x2);
     }
     virtual void setColumnWidth(int x1, int x2) {
@@ -1527,26 +1527,26 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_int = (int)x1;
 	x[2].s_int = (int)x2;
-	if(call_method((void*)this, 6640, x)) return;
+	if(call_method((void*)this, 6636, x)) return;
 	this->QScrollView::setContentsPos(x1, x2);
     }
     virtual void setCornerWidget(QWidget* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 6602, x)) return;
+	if(call_method((void*)this, 6598, x)) return;
 	this->QScrollView::setCornerWidget(x1);
     }
     virtual void setCurrentCell(int x1, int x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = (int)x1;
 	x[2].s_int = (int)x2;
-	if(call_method((void*)this, 8301, x)) return;
+	if(call_method((void*)this, 8297, x)) return;
 	this->QTable::setCurrentCell(x1, x2);
     }
     virtual void setCursor(const QCursor& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 9575, x)) return;
+	if(call_method((void*)this, 9568, x)) return;
 	this->QWidget::setCursor(x1);
     }
     virtual void setDateFormat(const Qt::DateFormat x1) {
@@ -1558,31 +1558,31 @@ public:
     virtual void setDragAutoScroll(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = (bool)x1;
-	if(call_method((void*)this, 6636, x)) return;
+	if(call_method((void*)this, 6632, x)) return;
 	this->QScrollView::setDragAutoScroll(x1);
     }
     virtual void setDragEnabled(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = (bool)x1;
-	if(call_method((void*)this, 8309, x)) return;
+	if(call_method((void*)this, 8305, x)) return;
 	this->QTable::setDragEnabled(x1);
     }
     virtual void setEnabled(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = (bool)x1;
-	if(call_method((void*)this, 8274, x)) return;
+	if(call_method((void*)this, 8270, x)) return;
 	this->QTable::setEnabled(x1);
     }
     virtual void setEraseColor(const QColor& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 9552, x)) return;
+	if(call_method((void*)this, 9545, x)) return;
 	this->QWidget::setEraseColor(x1);
     }
     virtual void setErasePixmap(const QPixmap& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 9554, x)) return;
+	if(call_method((void*)this, 9547, x)) return;
 	this->QWidget::setErasePixmap(x1);
     }
     virtual void setFalseText(const QString& x1) {
@@ -1599,49 +1599,49 @@ public:
     }
     virtual void setFocus() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 9658, x)) return;
+	if(call_method((void*)this, 9651, x)) return;
 	this->QWidget::setFocus();
     }
     virtual void setFocusPolicy(QWidget::FocusPolicy x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 9593, x)) return;
+	if(call_method((void*)this, 9586, x)) return;
 	this->QWidget::setFocusPolicy(x1);
     }
     virtual void setFocusProxy(QWidget* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 9595, x)) return;
+	if(call_method((void*)this, 9588, x)) return;
 	this->QWidget::setFocusProxy(x1);
     }
     virtual void setFocusStyle(QTable::FocusStyle x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 8276, x)) return;
+	if(call_method((void*)this, 8272, x)) return;
 	this->QTable::setFocusStyle(x1);
     }
     virtual void setFont(const QFont& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 9569, x)) return;
+	if(call_method((void*)this, 9562, x)) return;
 	this->QWidget::setFont(x1);
     }
     virtual void setFrameRect(const QRect& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 2941, x)) return;
+	if(call_method((void*)this, 2938, x)) return;
 	this->QFrame::setFrameRect(x1);
     }
     virtual void setFrameStyle(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = (int)x1;
-	if(call_method((void*)this, 2925, x)) return;
+	if(call_method((void*)this, 2922, x)) return;
 	this->QFrame::setFrameStyle(x1);
     }
     virtual void setGeometry(const QRect& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 9690, x)) return;
+	if(call_method((void*)this, 9683, x)) return;
 	this->QWidget::setGeometry(x1);
     }
     virtual void setGeometry(int x1, int x2, int x3, int x4) {
@@ -1650,7 +1650,7 @@ public:
 	x[2].s_int = (int)x2;
 	x[3].s_int = (int)x3;
 	x[4].s_int = (int)x4;
-	if(call_method((void*)this, 9689, x)) return;
+	if(call_method((void*)this, 9682, x)) return;
 	this->QWidget::setGeometry(x1, x2, x3, x4);
     }
     virtual void setHBarGeometry(QScrollBar& x1, int x2, int x3, int x4, int x5) {
@@ -1660,25 +1660,25 @@ public:
 	x[3].s_int = (int)x3;
 	x[4].s_int = (int)x4;
 	x[5].s_int = (int)x5;
-	if(call_method((void*)this, 6679, x)) return;
+	if(call_method((void*)this, 6675, x)) return;
 	this->QScrollView::setHBarGeometry(x1, x2, x3, x4, x5);
     }
     virtual void setHScrollBarMode(QScrollView::ScrollBarMode x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 6600, x)) return;
+	if(call_method((void*)this, 6596, x)) return;
 	this->QScrollView::setHScrollBarMode(x1);
     }
     virtual void setIcon(const QPixmap& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 9655, x)) return;
+	if(call_method((void*)this, 9648, x)) return;
 	this->QWidget::setIcon(x1);
     }
     virtual void setIconText(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 9656, x)) return;
+	if(call_method((void*)this, 9649, x)) return;
 	this->QWidget::setIconText(x1);
     }
     virtual void setItem(int x1, int x2, QTableItem* x3) {
@@ -1692,25 +1692,25 @@ public:
     virtual void setKeyCompression(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = (bool)x1;
-	if(call_method((void*)this, 9748, x)) return;
+	if(call_method((void*)this, 9741, x)) return;
 	this->QWidget::setKeyCompression(x1);
     }
     virtual void setLeftMargin(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = (int)x1;
-	if(call_method((void*)this, 8299, x)) return;
+	if(call_method((void*)this, 8295, x)) return;
 	this->QTable::setLeftMargin(x1);
     }
     virtual void setLineWidth(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = (int)x1;
-	if(call_method((void*)this, 2935, x)) return;
+	if(call_method((void*)this, 2932, x)) return;
 	this->QFrame::setLineWidth(x1);
     }
     virtual void setMargin(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = (int)x1;
-	if(call_method((void*)this, 2937, x)) return;
+	if(call_method((void*)this, 2934, x)) return;
 	this->QFrame::setMargin(x1);
     }
     virtual void setMargins(int x1, int x2, int x3, int x4) {
@@ -1719,26 +1719,26 @@ public:
 	x[2].s_int = (int)x2;
 	x[3].s_int = (int)x3;
 	x[4].s_int = (int)x4;
-	if(call_method((void*)this, 6673, x)) return;
+	if(call_method((void*)this, 6669, x)) return;
 	this->QScrollView::setMargins(x1, x2, x3, x4);
     }
     virtual void setMask(const QBitmap& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 9582, x)) return;
+	if(call_method((void*)this, 9575, x)) return;
 	this->QWidget::setMask(x1);
     }
     virtual void setMask(const QRegion& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 9583, x)) return;
+	if(call_method((void*)this, 9576, x)) return;
 	this->QWidget::setMask(x1);
     }
     virtual void setMaximumSize(int x1, int x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = (int)x1;
 	x[2].s_int = (int)x2;
-	if(call_method((void*)this, 9525, x)) return;
+	if(call_method((void*)this, 9518, x)) return;
 	this->QWidget::setMaximumSize(x1, x2);
     }
     virtual void setMicroFocusHint(int x1, int x2, int x3, int x4, bool x5, QFont* x6) {
@@ -1749,32 +1749,32 @@ public:
 	x[4].s_int = (int)x4;
 	x[5].s_bool = (bool)x5;
 	x[6].s_voidp = (void*)x6;
-	if(call_method((void*)this, 9749, x)) return;
+	if(call_method((void*)this, 9742, x)) return;
 	this->QWidget::setMicroFocusHint(x1, x2, x3, x4, x5, x6);
     }
     virtual void setMidLineWidth(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = (int)x1;
-	if(call_method((void*)this, 2939, x)) return;
+	if(call_method((void*)this, 2936, x)) return;
 	this->QFrame::setMidLineWidth(x1);
     }
     virtual void setMinimumSize(int x1, int x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = (int)x1;
 	x[2].s_int = (int)x2;
-	if(call_method((void*)this, 9523, x)) return;
+	if(call_method((void*)this, 9516, x)) return;
 	this->QWidget::setMinimumSize(x1, x2);
     }
     virtual void setMouseTracking(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = (bool)x1;
-	if(call_method((void*)this, 9657, x)) return;
+	if(call_method((void*)this, 9650, x)) return;
 	this->QWidget::setMouseTracking(x1);
     }
     virtual void setName(const char* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 9492, x)) return;
+	if(call_method((void*)this, 9485, x)) return;
 	this->QWidget::setName(x1);
     }
     virtual void setNullText(const QString& x1) {
@@ -1798,19 +1798,19 @@ public:
     virtual void setPalette(const QPalette& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 9558, x)) return;
+	if(call_method((void*)this, 9551, x)) return;
 	this->QWidget::setPalette(x1);
     }
     virtual void setPaletteBackgroundColor(const QColor& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 9563, x)) return;
+	if(call_method((void*)this, 9556, x)) return;
 	this->QWidget::setPaletteBackgroundColor(x1);
     }
     virtual void setPaletteBackgroundPixmap(const QPixmap& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 9565, x)) return;
+	if(call_method((void*)this, 9558, x)) return;
 	this->QWidget::setPaletteBackgroundPixmap(x1);
     }
     virtual void setPixmap(int x1, int x2, const QPixmap& x3) {
@@ -1825,77 +1825,77 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)x1;
 	x[2].s_voidp = (void*)&x2;
-	if(call_method((void*)this, 5444, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 5440, x)) return (bool)x[0].s_bool;
 	return this->QObject::setProperty(x1, x2);
     }
     virtual void setReadOnly(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = (bool)x1;
-	if(call_method((void*)this, 8306, x)) return;
+	if(call_method((void*)this, 8302, x)) return;
 	this->QTable::setReadOnly(x1);
     }
     virtual void setResizePolicy(QScrollView::ResizePolicy x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 6584, x)) return;
+	if(call_method((void*)this, 6580, x)) return;
 	this->QScrollView::setResizePolicy(x1);
     }
     virtual void setResolution(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = (int)x1;
-	if(call_method((void*)this, 5553, x)) return;
+	if(call_method((void*)this, 5549, x)) return;
 	this->QPaintDevice::setResolution(x1);
     }
     virtual void setRowHeight(int x1, int x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = (int)x1;
 	x[2].s_int = (int)x2;
-	if(call_method((void*)this, 8286, x)) return;
+	if(call_method((void*)this, 8282, x)) return;
 	this->QTable::setRowHeight(x1, x2);
     }
     virtual void setRowMovingEnabled(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = (bool)x1;
-	if(call_method((void*)this, 8305, x)) return;
+	if(call_method((void*)this, 8301, x)) return;
 	this->QTable::setRowMovingEnabled(x1);
     }
     virtual void setRowReadOnly(int x1, bool x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = (int)x1;
 	x[2].s_bool = (bool)x2;
-	if(call_method((void*)this, 8307, x)) return;
+	if(call_method((void*)this, 8303, x)) return;
 	this->QTable::setRowReadOnly(x1, x2);
     }
     virtual void setRowStretchable(int x1, bool x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = (int)x1;
 	x[2].s_bool = (bool)x2;
-	if(call_method((void*)this, 8290, x)) return;
+	if(call_method((void*)this, 8286, x)) return;
 	this->QTable::setRowStretchable(x1, x2);
     }
     virtual void setSelectionMode(QTable::SelectionMode x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 8221, x)) return;
+	if(call_method((void*)this, 8217, x)) return;
 	this->QTable::setSelectionMode(x1);
     }
     virtual void setShowGrid(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = (bool)x1;
-	if(call_method((void*)this, 8280, x)) return;
+	if(call_method((void*)this, 8276, x)) return;
 	this->QTable::setShowGrid(x1);
     }
     virtual void setSizeIncrement(int x1, int x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = (int)x1;
 	x[2].s_int = (int)x2;
-	if(call_method((void*)this, 9532, x)) return;
+	if(call_method((void*)this, 9525, x)) return;
 	this->QWidget::setSizeIncrement(x1, x2);
     }
     virtual void setSizePolicy(QSizePolicy x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 9614, x)) return;
+	if(call_method((void*)this, 9607, x)) return;
 	this->QWidget::setSizePolicy(x1);
     }
     virtual void setSort(const QSqlIndex& x1) {
@@ -1913,7 +1913,7 @@ public:
     virtual void setSorting(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = (bool)x1;
-	if(call_method((void*)this, 8293, x)) return;
+	if(call_method((void*)this, 8289, x)) return;
 	this->QTable::setSorting(x1);
     }
     virtual void setSqlCursor(QSqlCursor* x1, bool x2, bool x3) {
@@ -1929,13 +1929,13 @@ public:
 	x[1].s_int = (int)x1;
 	x[2].s_int = (int)x2;
 	x[3].s_voidp = (void*)&x3;
-	if(call_method((void*)this, 8224, x)) return;
+	if(call_method((void*)this, 8220, x)) return;
 	this->QTable::setText(x1, x2, x3);
     }
     virtual void setTopMargin(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = (int)x1;
-	if(call_method((void*)this, 8300, x)) return;
+	if(call_method((void*)this, 8296, x)) return;
 	this->QTable::setTopMargin(x1);
     }
     virtual void setTrueText(const QString& x1) {
@@ -1947,7 +1947,7 @@ public:
     virtual void setUpdatesEnabled(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = (bool)x1;
-	if(call_method((void*)this, 9660, x)) return;
+	if(call_method((void*)this, 9653, x)) return;
 	this->QWidget::setUpdatesEnabled(x1);
     }
     virtual void setVBarGeometry(QScrollBar& x1, int x2, int x3, int x4, int x5) {
@@ -1957,68 +1957,68 @@ public:
 	x[3].s_int = (int)x3;
 	x[4].s_int = (int)x4;
 	x[5].s_int = (int)x5;
-	if(call_method((void*)this, 6680, x)) return;
+	if(call_method((void*)this, 6676, x)) return;
 	this->QScrollView::setVBarGeometry(x1, x2, x3, x4, x5);
     }
     virtual void setVScrollBarMode(QScrollView::ScrollBarMode x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 6598, x)) return;
+	if(call_method((void*)this, 6594, x)) return;
 	this->QScrollView::setVScrollBarMode(x1);
     }
     virtual void setWFlags(Qt::WFlags x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 9742, x)) return;
+	if(call_method((void*)this, 9735, x)) return;
 	this->QWidget::setWFlags(x1);
     }
     virtual void setWState(uint x1) {
 	Smoke::StackItem x[2];
 	x[1].s_uint = (uint)x1;
-	if(call_method((void*)this, 9739, x)) return;
+	if(call_method((void*)this, 9732, x)) return;
 	this->QWidget::setWState(x1);
     }
     virtual void show() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 6615, x)) return;
+	if(call_method((void*)this, 6611, x)) return;
 	this->QScrollView::show();
     }
     virtual void showColumn(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = (int)x1;
-	if(call_method((void*)this, 8284, x)) return;
+	if(call_method((void*)this, 8280, x)) return;
 	this->QTable::showColumn(x1);
     }
     virtual void showEvent(QShowEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 8342, x)) return;
+	if(call_method((void*)this, 8338, x)) return;
 	this->QTable::showEvent(x1);
     }
     virtual void showMaximized() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 9676, x)) return;
+	if(call_method((void*)this, 9669, x)) return;
 	this->QWidget::showMaximized();
     }
     virtual void showMinimized() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 9675, x)) return;
+	if(call_method((void*)this, 9668, x)) return;
 	this->QWidget::showMinimized();
     }
     virtual void showNormal() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 9678, x)) return;
+	if(call_method((void*)this, 9671, x)) return;
 	this->QWidget::showNormal();
     }
     virtual void showRow(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = (int)x1;
-	if(call_method((void*)this, 8283, x)) return;
+	if(call_method((void*)this, 8279, x)) return;
 	this->QTable::showRow(x1);
     }
     virtual QSize sizeHint() const {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 8270, x)) {
+	if(call_method((void*)this, 8266, x)) {
 	    QSize *xptr = (QSize *)x[0].s_voidp;
 	    QSize xret(*xptr);
 	    delete xptr;
@@ -2028,7 +2028,7 @@ public:
     }
     virtual QSizePolicy sizePolicy() const {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 9613, x)) {
+	if(call_method((void*)this, 9606, x)) {
 	    QSizePolicy *xptr = (QSizePolicy *)x[0].s_voidp;
 	    QSizePolicy xret(*xptr);
 	    delete xptr;
@@ -2058,13 +2058,13 @@ public:
     }
     virtual void startDrag() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 8349, x)) return;
+	if(call_method((void*)this, 8345, x)) return;
 	this->QTable::startDrag();
     }
     virtual void styleChange(QStyle& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 6586, x)) return;
+	if(call_method((void*)this, 6582, x)) return;
 	this->QScrollView::styleChange(x1);
     }
     virtual void swapCells(int x1, int x2, int x3, int x4) {
@@ -2073,7 +2073,7 @@ public:
 	x[2].s_int = (int)x2;
 	x[3].s_int = (int)x3;
 	x[4].s_int = (int)x4;
-	if(call_method((void*)this, 8298, x)) return;
+	if(call_method((void*)this, 8294, x)) return;
 	this->QTable::swapCells(x1, x2, x3, x4);
     }
     virtual void swapColumns(int x1, int x2, bool x3) {
@@ -2081,7 +2081,7 @@ public:
 	x[1].s_int = (int)x1;
 	x[2].s_int = (int)x2;
 	x[3].s_bool = (bool)x3;
-	if(call_method((void*)this, 8296, x)) return;
+	if(call_method((void*)this, 8292, x)) return;
 	this->QTable::swapColumns(x1, x2, x3);
     }
     virtual void swapRows(int x1, int x2, bool x3) {
@@ -2089,13 +2089,13 @@ public:
 	x[1].s_int = (int)x1;
 	x[2].s_int = (int)x2;
 	x[3].s_bool = (bool)x3;
-	if(call_method((void*)this, 8294, x)) return;
+	if(call_method((void*)this, 8290, x)) return;
 	this->QTable::swapRows(x1, x2, x3);
     }
     virtual void tabletEvent(QTabletEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 9716, x)) return;
+	if(call_method((void*)this, 9709, x)) return;
 	this->QWidget::tabletEvent(x1);
     }
     virtual void takeItem(QTableItem* x1) {
@@ -2119,12 +2119,12 @@ public:
     virtual void timerEvent(QTimerEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 5468, x)) return;
+	if(call_method((void*)this, 5464, x)) return;
 	this->QObject::timerEvent(x1);
     }
     virtual void unsetCursor() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 9576, x)) return;
+	if(call_method((void*)this, 9569, x)) return;
 	this->QWidget::unsetCursor();
     }
     virtual bool updateCurrent() {
@@ -2134,91 +2134,91 @@ public:
     }
     virtual void updateMask() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 9723, x)) return;
+	if(call_method((void*)this, 9716, x)) return;
 	this->QWidget::updateMask();
     }
     virtual void viewportContextMenuEvent(QContextMenuEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 6671, x)) return;
+	if(call_method((void*)this, 6667, x)) return;
 	this->QScrollView::viewportContextMenuEvent(x1);
     }
     virtual void viewportDragEnterEvent(QDragEnterEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 6666, x)) return;
+	if(call_method((void*)this, 6662, x)) return;
 	this->QScrollView::viewportDragEnterEvent(x1);
     }
     virtual void viewportDragLeaveEvent(QDragLeaveEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 6668, x)) return;
+	if(call_method((void*)this, 6664, x)) return;
 	this->QScrollView::viewportDragLeaveEvent(x1);
     }
     virtual void viewportDragMoveEvent(QDragMoveEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 6667, x)) return;
+	if(call_method((void*)this, 6663, x)) return;
 	this->QScrollView::viewportDragMoveEvent(x1);
     }
     virtual void viewportDropEvent(QDropEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 6669, x)) return;
+	if(call_method((void*)this, 6665, x)) return;
 	this->QScrollView::viewportDropEvent(x1);
     }
     virtual void viewportMouseDoubleClickEvent(QMouseEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 6664, x)) return;
+	if(call_method((void*)this, 6660, x)) return;
 	this->QScrollView::viewportMouseDoubleClickEvent(x1);
     }
     virtual void viewportMouseMoveEvent(QMouseEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 6665, x)) return;
+	if(call_method((void*)this, 6661, x)) return;
 	this->QScrollView::viewportMouseMoveEvent(x1);
     }
     virtual void viewportMousePressEvent(QMouseEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 6662, x)) return;
+	if(call_method((void*)this, 6658, x)) return;
 	this->QScrollView::viewportMousePressEvent(x1);
     }
     virtual void viewportMouseReleaseEvent(QMouseEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 6663, x)) return;
+	if(call_method((void*)this, 6659, x)) return;
 	this->QScrollView::viewportMouseReleaseEvent(x1);
     }
     virtual void viewportPaintEvent(QPaintEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 6660, x)) return;
+	if(call_method((void*)this, 6656, x)) return;
 	this->QScrollView::viewportPaintEvent(x1);
     }
     virtual void viewportResizeEvent(QResizeEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 8341, x)) return;
+	if(call_method((void*)this, 8337, x)) return;
 	this->QTable::viewportResizeEvent(x1);
     }
     virtual void viewportWheelEvent(QWheelEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 6670, x)) return;
+	if(call_method((void*)this, 6666, x)) return;
 	this->QScrollView::viewportWheelEvent(x1);
     }
     virtual void wheelEvent(QWheelEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 6686, x)) return;
+	if(call_method((void*)this, 6682, x)) return;
 	this->QScrollView::wheelEvent(x1);
     }
     virtual void windowActivationChange(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = (bool)x1;
-	if(call_method((void*)this, 8359, x)) return;
+	if(call_method((void*)this, 8355, x)) return;
 	this->QTable::windowActivationChange(x1);
     }
     ~x_QDataTable() {}

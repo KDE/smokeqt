@@ -202,7 +202,7 @@ public:
     }
     virtual QIODevice::Offset at() const {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 3388, x)) {
+	if(call_method((void*)this, 3385, x)) {
 	    QIODevice::Offset *xptr = (QIODevice::Offset *)x[0].s_voidp;
 	    QIODevice::Offset xret(*xptr);
 	    delete xptr;
@@ -213,49 +213,49 @@ public:
     virtual bool at(QIODevice::Offset x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 3389, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 3386, x)) return (bool)x[0].s_bool;
 	return this->QIODevice::at(x1);
     }
     virtual bool atEnd() const {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 3390, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 3387, x)) return (bool)x[0].s_bool;
 	return this->QIODevice::atEnd();
     }
     virtual void close() {
 	Smoke::StackItem x[1];
-	call_method_abstract((void*)this, 3385, x);
+	call_method_abstract((void*)this, 3382, x);
 	return;
 	// ABSTRACT
     }
     virtual void flush() {
 	Smoke::StackItem x[1];
-	call_method_abstract((void*)this, 3386, x);
+	call_method_abstract((void*)this, 3383, x);
 	return;
 	// ABSTRACT
     }
     virtual int getch() {
 	Smoke::StackItem x[1];
-	call_method_abstract((void*)this, 3397, x);
+	call_method_abstract((void*)this, 3394, x);
 return (int)x[0].s_int;
 	// ABSTRACT
     }
     virtual bool open(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = (int)x1;
-	call_method_abstract((void*)this, 3384, x);
+	call_method_abstract((void*)this, 3381, x);
 return (bool)x[0].s_bool;
 	// ABSTRACT
     }
     virtual int putch(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = (int)x1;
-	call_method_abstract((void*)this, 3398, x);
+	call_method_abstract((void*)this, 3395, x);
 return (int)x[0].s_int;
 	// ABSTRACT
     }
     virtual QByteArray readAll() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 3396, x)) {
+	if(call_method((void*)this, 3393, x)) {
 	    QByteArray *xptr = (QByteArray *)x[0].s_voidp;
 	    QByteArray xret(*xptr);
 	    delete xptr;
@@ -267,7 +267,7 @@ return (int)x[0].s_int;
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)x1;
 	x[2].s_voidp = (void*)&x2;
-	call_method_abstract((void*)this, 3392, x);
+	call_method_abstract((void*)this, 3389, x);
 	Q_LONG *xptr = (Q_LONG *)x[0].s_voidp;
 	Q_LONG xret(*xptr);
 	delete xptr;
@@ -278,7 +278,7 @@ return (int)x[0].s_int;
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)x1;
 	x[2].s_voidp = (void*)&x2;
-	if(call_method((void*)this, 3394, x)) {
+	if(call_method((void*)this, 3391, x)) {
 	    Q_LONG *xptr = (Q_LONG *)x[0].s_voidp;
 	    Q_LONG xret(*xptr);
 	    delete xptr;
@@ -288,7 +288,7 @@ return (int)x[0].s_int;
     }
     virtual QIODevice::Offset size() const {
 	Smoke::StackItem x[1];
-	call_method_abstract((void*)this, 3387, x);
+	call_method_abstract((void*)this, 3384, x);
 	QIODevice::Offset *xptr = (QIODevice::Offset *)x[0].s_voidp;
 	QIODevice::Offset xret(*xptr);
 	delete xptr;
@@ -298,7 +298,7 @@ return (int)x[0].s_int;
     virtual int ungetch(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = (int)x1;
-	call_method_abstract((void*)this, 3399, x);
+	call_method_abstract((void*)this, 3396, x);
 return (int)x[0].s_int;
 	// ABSTRACT
     }
@@ -306,7 +306,7 @@ return (int)x[0].s_int;
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)x1;
 	x[2].s_voidp = (void*)&x2;
-	call_method_abstract((void*)this, 3393, x);
+	call_method_abstract((void*)this, 3390, x);
 	Q_LONG *xptr = (Q_LONG *)x[0].s_voidp;
 	Q_LONG xret(*xptr);
 	delete xptr;

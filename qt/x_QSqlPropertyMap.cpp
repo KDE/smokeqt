@@ -43,7 +43,7 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)x1;
 	x[2].s_voidp = (void*)&x2;
-	if(call_method((void*)this, 7507, x)) return;
+	if(call_method((void*)this, 7503, x)) return;
 	this->QSqlPropertyMap::setProperty(x1, x2);
     }
     ~x_QSqlPropertyMap() {}

@@ -47,27 +47,27 @@ public:
     }
     virtual void clear() {
 	Smoke::StackItem x[1];
-	call_method_abstract((void*)this, 6282, x);
+	call_method_abstract((void*)this, 6278, x);
 	return;
 	// ABSTRACT
     }
     virtual uint count() const {
 	Smoke::StackItem x[1];
-	call_method_abstract((void*)this, 6281, x);
+	call_method_abstract((void*)this, 6277, x);
 return (uint)x[0].s_uint;
 	// ABSTRACT
     }
     virtual void deleteItem(Item x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	call_method_abstract((void*)this, 6287, x);
+	call_method_abstract((void*)this, 6283, x);
 	return;
 	// ABSTRACT
     }
     virtual Item newItem(Item x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 6286, x)) {
+	if(call_method((void*)this, 6282, x)) {
 	    Item *xptr = (Item *)x[0].s_voidp;
 	    Item xret(*xptr);
 	    delete xptr;

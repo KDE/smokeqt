@@ -184,19 +184,19 @@ public:
     virtual void setCalculated(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = (bool)x1;
-	if(call_method((void*)this, 7459, x)) return;
+	if(call_method((void*)this, 7455, x)) return;
 	this->QSqlFieldInfo::setCalculated(x1);
     }
     virtual void setGenerated(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = (bool)x1;
-	if(call_method((void*)this, 7458, x)) return;
+	if(call_method((void*)this, 7454, x)) return;
 	this->QSqlFieldInfo::setGenerated(x1);
     }
     virtual void setTrim(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = (bool)x1;
-	if(call_method((void*)this, 7457, x)) return;
+	if(call_method((void*)this, 7453, x)) return;
 	this->QSqlFieldInfo::setTrim(x1);
     }
     ~x_QSqlFieldInfo() {}

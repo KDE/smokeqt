@@ -153,34 +153,34 @@ public:
 	x[3].s_voidp = (void*)&x3;
 	x[4].s_voidp = (void*)&x4;
 	x[5].s_voidp = (void*)&x5;
-	if(call_method((void*)this, 9945, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 9938, x)) return (bool)x[0].s_bool;
 	return this->QXmlDefaultHandler::attributeDecl(x1, x2, x3, x4, x5);
     }
     virtual bool characters(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 9928, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 9921, x)) return (bool)x[0].s_bool;
 	return this->QXmlDefaultHandler::characters(x1);
     }
     virtual bool comment(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 9944, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 9937, x)) return (bool)x[0].s_bool;
 	return this->QXmlDefaultHandler::comment(x1);
     }
     virtual bool endCDATA() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 9943, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 9936, x)) return (bool)x[0].s_bool;
 	return this->QXmlDefaultHandler::endCDATA();
     }
     virtual bool endDTD() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 9939, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 9932, x)) return (bool)x[0].s_bool;
 	return this->QXmlDefaultHandler::endDTD();
     }
     virtual bool endDocument() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 9923, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 9916, x)) return (bool)x[0].s_bool;
 	return this->QXmlDefaultHandler::endDocument();
     }
     virtual bool endElement(const QString& x1, const QString& x2, const QString& x3) {
@@ -188,30 +188,30 @@ public:
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_voidp = (void*)&x2;
 	x[3].s_voidp = (void*)&x3;
-	if(call_method((void*)this, 9927, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 9920, x)) return (bool)x[0].s_bool;
 	return this->QXmlDefaultHandler::endElement(x1, x2, x3);
     }
     virtual bool endEntity(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 9941, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 9934, x)) return (bool)x[0].s_bool;
 	return this->QXmlDefaultHandler::endEntity(x1);
     }
     virtual bool endPrefixMapping(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 9925, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 9918, x)) return (bool)x[0].s_bool;
 	return this->QXmlDefaultHandler::endPrefixMapping(x1);
     }
     virtual bool error(const QXmlParseException& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 9933, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 9926, x)) return (bool)x[0].s_bool;
 	return this->QXmlDefaultHandler::error(x1);
     }
     virtual QString errorString() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 9948, x)) {
+	if(call_method((void*)this, 9941, x)) {
 	    QString *xptr = (QString *)x[0].s_voidp;
 	    QString xret(*xptr);
 	    delete xptr;
@@ -224,26 +224,26 @@ public:
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_voidp = (void*)&x2;
 	x[3].s_voidp = (void*)&x3;
-	if(call_method((void*)this, 9947, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 9940, x)) return (bool)x[0].s_bool;
 	return this->QXmlDefaultHandler::externalEntityDecl(x1, x2, x3);
     }
     virtual bool fatalError(const QXmlParseException& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 9934, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 9927, x)) return (bool)x[0].s_bool;
 	return this->QXmlDefaultHandler::fatalError(x1);
     }
     virtual bool ignorableWhitespace(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 9929, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 9922, x)) return (bool)x[0].s_bool;
 	return this->QXmlDefaultHandler::ignorableWhitespace(x1);
     }
     virtual bool internalEntityDecl(const QString& x1, const QString& x2) {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_voidp = (void*)&x2;
-	if(call_method((void*)this, 9946, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 9939, x)) return (bool)x[0].s_bool;
 	return this->QXmlDefaultHandler::internalEntityDecl(x1, x2);
     }
     virtual bool notationDecl(const QString& x1, const QString& x2, const QString& x3) {
@@ -251,14 +251,14 @@ public:
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_voidp = (void*)&x2;
 	x[3].s_voidp = (void*)&x3;
-	if(call_method((void*)this, 9935, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 9928, x)) return (bool)x[0].s_bool;
 	return this->QXmlDefaultHandler::notationDecl(x1, x2, x3);
     }
     virtual bool processingInstruction(const QString& x1, const QString& x2) {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_voidp = (void*)&x2;
-	if(call_method((void*)this, 9930, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 9923, x)) return (bool)x[0].s_bool;
 	return this->QXmlDefaultHandler::processingInstruction(x1, x2);
     }
     virtual bool resolveEntity(const QString& x1, const QString& x2, QXmlInputSource*& x3) {
@@ -266,24 +266,24 @@ public:
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_voidp = (void*)&x2;
 	x[3].s_voidp = (void*)&x3;
-	if(call_method((void*)this, 9937, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 9930, x)) return (bool)x[0].s_bool;
 	return this->QXmlDefaultHandler::resolveEntity(x1, x2, x3);
     }
     virtual void setDocumentLocator(QXmlLocator* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 9921, x)) return;
+	if(call_method((void*)this, 9914, x)) return;
 	this->QXmlDefaultHandler::setDocumentLocator(x1);
     }
     virtual bool skippedEntity(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 9931, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 9924, x)) return (bool)x[0].s_bool;
 	return this->QXmlDefaultHandler::skippedEntity(x1);
     }
     virtual bool startCDATA() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 9942, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 9935, x)) return (bool)x[0].s_bool;
 	return this->QXmlDefaultHandler::startCDATA();
     }
     virtual bool startDTD(const QString& x1, const QString& x2, const QString& x3) {
@@ -291,12 +291,12 @@ public:
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_voidp = (void*)&x2;
 	x[3].s_voidp = (void*)&x3;
-	if(call_method((void*)this, 9938, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 9931, x)) return (bool)x[0].s_bool;
 	return this->QXmlDefaultHandler::startDTD(x1, x2, x3);
     }
     virtual bool startDocument() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 9922, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 9915, x)) return (bool)x[0].s_bool;
 	return this->QXmlDefaultHandler::startDocument();
     }
     virtual bool startElement(const QString& x1, const QString& x2, const QString& x3, const QXmlAttributes& x4) {
@@ -305,20 +305,20 @@ public:
 	x[2].s_voidp = (void*)&x2;
 	x[3].s_voidp = (void*)&x3;
 	x[4].s_voidp = (void*)&x4;
-	if(call_method((void*)this, 9926, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 9919, x)) return (bool)x[0].s_bool;
 	return this->QXmlDefaultHandler::startElement(x1, x2, x3, x4);
     }
     virtual bool startEntity(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 9940, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 9933, x)) return (bool)x[0].s_bool;
 	return this->QXmlDefaultHandler::startEntity(x1);
     }
     virtual bool startPrefixMapping(const QString& x1, const QString& x2) {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_voidp = (void*)&x2;
-	if(call_method((void*)this, 9924, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 9917, x)) return (bool)x[0].s_bool;
 	return this->QXmlDefaultHandler::startPrefixMapping(x1, x2);
     }
     virtual bool unparsedEntityDecl(const QString& x1, const QString& x2, const QString& x3, const QString& x4) {
@@ -327,13 +327,13 @@ public:
 	x[2].s_voidp = (void*)&x2;
 	x[3].s_voidp = (void*)&x3;
 	x[4].s_voidp = (void*)&x4;
-	if(call_method((void*)this, 9936, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 9929, x)) return (bool)x[0].s_bool;
 	return this->QXmlDefaultHandler::unparsedEntityDecl(x1, x2, x3, x4);
     }
     virtual bool warning(const QXmlParseException& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 9932, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 9925, x)) return (bool)x[0].s_bool;
 	return this->QXmlDefaultHandler::warning(x1);
     }
     ~x_QXmlDefaultHandler() {}

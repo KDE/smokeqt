@@ -249,12 +249,12 @@ public:
     }
     virtual int accept() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 7043, x)) return (int)x[0].s_int;
+	if(call_method((void*)this, 7039, x)) return (int)x[0].s_int;
 	return this->QSocketDevice::accept();
     }
     virtual QIODevice::Offset at() const {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 7029, x)) {
+	if(call_method((void*)this, 7025, x)) {
 	    QIODevice::Offset *xptr = (QIODevice::Offset *)x[0].s_voidp;
 	    QIODevice::Offset xret(*xptr);
 	    delete xptr;
@@ -265,64 +265,64 @@ public:
     virtual bool at(QIODevice::Offset x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 7030, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 7026, x)) return (bool)x[0].s_bool;
 	return this->QSocketDevice::at(x1);
     }
     virtual bool atEnd() const {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 7031, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 7027, x)) return (bool)x[0].s_bool;
 	return this->QSocketDevice::atEnd();
     }
     virtual bool bind(const QHostAddress& x1, Q_UINT16 x2) {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_voidp = (void*)&x2;
-	if(call_method((void*)this, 7041, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 7037, x)) return (bool)x[0].s_bool;
 	return this->QSocketDevice::bind(x1, x2);
     }
     virtual void close() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 7026, x)) return;
+	if(call_method((void*)this, 7022, x)) return;
 	this->QSocketDevice::close();
     }
     virtual bool connect(const QHostAddress& x1, Q_UINT16 x2) {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_voidp = (void*)&x2;
-	if(call_method((void*)this, 7040, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 7036, x)) return (bool)x[0].s_bool;
 	return this->QSocketDevice::connect(x1, x2);
     }
     virtual void flush() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 7027, x)) return;
+	if(call_method((void*)this, 7023, x)) return;
 	this->QSocketDevice::flush();
     }
     virtual int getch() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 7050, x)) return (int)x[0].s_int;
+	if(call_method((void*)this, 7046, x)) return (int)x[0].s_int;
 	return this->QSocketDevice::getch();
     }
     virtual bool listen(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = (int)x1;
-	if(call_method((void*)this, 7042, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 7038, x)) return (bool)x[0].s_bool;
 	return this->QSocketDevice::listen(x1);
     }
     virtual bool open(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = (int)x1;
-	if(call_method((void*)this, 7025, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 7021, x)) return (bool)x[0].s_bool;
 	return this->QSocketDevice::open(x1);
     }
     virtual int putch(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = (int)x1;
-	if(call_method((void*)this, 7051, x)) return (int)x[0].s_int;
+	if(call_method((void*)this, 7047, x)) return (int)x[0].s_int;
 	return this->QSocketDevice::putch(x1);
     }
     virtual QByteArray readAll() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 3396, x)) {
+	if(call_method((void*)this, 3393, x)) {
 	    QByteArray *xptr = (QByteArray *)x[0].s_voidp;
 	    QByteArray xret(*xptr);
 	    delete xptr;
@@ -334,7 +334,7 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)x1;
 	x[2].s_voidp = (void*)&x2;
-	if(call_method((void*)this, 7047, x)) {
+	if(call_method((void*)this, 7043, x)) {
 	    Q_LONG *xptr = (Q_LONG *)x[0].s_voidp;
 	    Q_LONG xret(*xptr);
 	    delete xptr;
@@ -346,7 +346,7 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)x1;
 	x[2].s_voidp = (void*)&x2;
-	if(call_method((void*)this, 3394, x)) {
+	if(call_method((void*)this, 3391, x)) {
 	    Q_LONG *xptr = (Q_LONG *)x[0].s_voidp;
 	    Q_LONG xret(*xptr);
 	    delete xptr;
@@ -357,37 +357,37 @@ public:
     virtual void setAddressReusable(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = (bool)x1;
-	if(call_method((void*)this, 7035, x)) return;
+	if(call_method((void*)this, 7031, x)) return;
 	this->QSocketDevice::setAddressReusable(x1);
     }
     virtual void setBlocking(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = (bool)x1;
-	if(call_method((void*)this, 7033, x)) return;
+	if(call_method((void*)this, 7029, x)) return;
 	this->QSocketDevice::setBlocking(x1);
     }
     virtual void setReceiveBufferSize(uint x1) {
 	Smoke::StackItem x[2];
 	x[1].s_uint = (uint)x1;
-	if(call_method((void*)this, 7037, x)) return;
+	if(call_method((void*)this, 7033, x)) return;
 	this->QSocketDevice::setReceiveBufferSize(x1);
     }
     virtual void setSendBufferSize(uint x1) {
 	Smoke::StackItem x[2];
 	x[1].s_uint = (uint)x1;
-	if(call_method((void*)this, 7039, x)) return;
+	if(call_method((void*)this, 7035, x)) return;
 	this->QSocketDevice::setSendBufferSize(x1);
     }
     virtual void setSocket(int x1, QSocketDevice::Type x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = (int)x1;
 	x[2].s_voidp = (void*)&x2;
-	if(call_method((void*)this, 7024, x)) return;
+	if(call_method((void*)this, 7020, x)) return;
 	this->QSocketDevice::setSocket(x1, x2);
     }
     virtual QIODevice::Offset size() const {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 7028, x)) {
+	if(call_method((void*)this, 7024, x)) {
 	    QIODevice::Offset *xptr = (QIODevice::Offset *)x[0].s_voidp;
 	    QIODevice::Offset xret(*xptr);
 	    delete xptr;
@@ -398,14 +398,14 @@ public:
     virtual int ungetch(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = (int)x1;
-	if(call_method((void*)this, 7052, x)) return (int)x[0].s_int;
+	if(call_method((void*)this, 7048, x)) return (int)x[0].s_int;
 	return this->QSocketDevice::ungetch(x1);
     }
     virtual Q_LONG writeBlock(const char* x1, Q_ULONG x2) {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)x1;
 	x[2].s_voidp = (void*)&x2;
-	if(call_method((void*)this, 7048, x)) {
+	if(call_method((void*)this, 7044, x)) {
 	    Q_LONG *xptr = (Q_LONG *)x[0].s_voidp;
 	    Q_LONG xret(*xptr);
 	    delete xptr;
@@ -419,7 +419,7 @@ public:
 	x[2].s_voidp = (void*)&x2;
 	x[3].s_voidp = (void*)&x3;
 	x[4].s_voidp = (void*)&x4;
-	if(call_method((void*)this, 7049, x)) {
+	if(call_method((void*)this, 7045, x)) {
 	    Q_LONG *xptr = (Q_LONG *)x[0].s_voidp;
 	    Q_LONG xret(*xptr);
 	    delete xptr;

@@ -40,7 +40,7 @@ public:
     virtual QByteArray encodedData(const char* x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	call_method_abstract((void*)this, 5118, x);
+	call_method_abstract((void*)this, 5114, x);
 	QByteArray *xptr = (QByteArray *)x[0].s_voidp;
 	QByteArray xret(*xptr);
 	delete xptr;
@@ -50,14 +50,14 @@ public:
     virtual const char* format(int x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_int = (int)x1;
-	call_method_abstract((void*)this, 5115, x);
+	call_method_abstract((void*)this, 5111, x);
 	return (const char*)x[0].s_voidp;
 	// ABSTRACT
     }
     virtual bool provides(const char* x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 5117, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 5113, x)) return (bool)x[0].s_bool;
 	return this->QMimeSource::provides(x1);
     }
     ~x_QMimeSource() {}

@@ -126,132 +126,132 @@ public:
     }
     virtual QXmlDTDHandler* DTDHandler() const {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 10038, x)) 	return (QXmlDTDHandler*)x[0].s_voidp;
+	if(call_method((void*)this, 10031, x)) 	return (QXmlDTDHandler*)x[0].s_voidp;
 	return this->QXmlSimpleReader::DTDHandler();
     }
     virtual QXmlContentHandler* contentHandler() const {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 10040, x)) 	return (QXmlContentHandler*)x[0].s_voidp;
+	if(call_method((void*)this, 10033, x)) 	return (QXmlContentHandler*)x[0].s_voidp;
 	return this->QXmlSimpleReader::contentHandler();
     }
     virtual QXmlDeclHandler* declHandler() const {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 10046, x)) 	return (QXmlDeclHandler*)x[0].s_voidp;
+	if(call_method((void*)this, 10039, x)) 	return (QXmlDeclHandler*)x[0].s_voidp;
 	return this->QXmlSimpleReader::declHandler();
     }
     virtual QXmlEntityResolver* entityResolver() const {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 10036, x)) 	return (QXmlEntityResolver*)x[0].s_voidp;
+	if(call_method((void*)this, 10029, x)) 	return (QXmlEntityResolver*)x[0].s_voidp;
 	return this->QXmlSimpleReader::entityResolver();
     }
     virtual QXmlErrorHandler* errorHandler() const {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 10042, x)) 	return (QXmlErrorHandler*)x[0].s_voidp;
+	if(call_method((void*)this, 10035, x)) 	return (QXmlErrorHandler*)x[0].s_voidp;
 	return this->QXmlSimpleReader::errorHandler();
     }
     virtual bool feature(const QString& x1, bool* x2) const {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_voidp = (void*)x2;
-	if(call_method((void*)this, 10027, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 10020, x)) return (bool)x[0].s_bool;
 	return this->QXmlSimpleReader::feature(x1, x2);
     }
     virtual bool hasFeature(const QString& x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 10030, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 10023, x)) return (bool)x[0].s_bool;
 	return this->QXmlSimpleReader::hasFeature(x1);
     }
     virtual bool hasProperty(const QString& x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 10034, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 10027, x)) return (bool)x[0].s_bool;
 	return this->QXmlSimpleReader::hasProperty(x1);
     }
     virtual QXmlLexicalHandler* lexicalHandler() const {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 10044, x)) 	return (QXmlLexicalHandler*)x[0].s_voidp;
+	if(call_method((void*)this, 10037, x)) 	return (QXmlLexicalHandler*)x[0].s_voidp;
 	return this->QXmlSimpleReader::lexicalHandler();
     }
     virtual bool parse(const QXmlInputSource& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 10047, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 10040, x)) return (bool)x[0].s_bool;
 	return this->QXmlSimpleReader::parse(x1);
     }
     virtual bool parse(const QXmlInputSource* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 10048, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 10041, x)) return (bool)x[0].s_bool;
 	return this->QXmlSimpleReader::parse(x1);
     }
     virtual bool parse(const QXmlInputSource* x1, bool x2) {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)x1;
 	x[2].s_bool = (bool)x2;
-	if(call_method((void*)this, 10049, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 10042, x)) return (bool)x[0].s_bool;
 	return this->QXmlSimpleReader::parse(x1, x2);
     }
     virtual bool parseContinue() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 10050, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 10043, x)) return (bool)x[0].s_bool;
 	return this->QXmlSimpleReader::parseContinue();
     }
     virtual void* property(const QString& x1, bool* x2) const {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_voidp = (void*)x2;
-	if(call_method((void*)this, 10031, x)) 	return (void*)x[0].s_voidp;
+	if(call_method((void*)this, 10024, x)) return (void*)x[0].s_voidp;
 	return this->QXmlSimpleReader::property(x1, x2);
     }
     virtual void setContentHandler(QXmlContentHandler* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 10039, x)) return;
+	if(call_method((void*)this, 10032, x)) return;
 	this->QXmlSimpleReader::setContentHandler(x1);
     }
     virtual void setDTDHandler(QXmlDTDHandler* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 10037, x)) return;
+	if(call_method((void*)this, 10030, x)) return;
 	this->QXmlSimpleReader::setDTDHandler(x1);
     }
     virtual void setDeclHandler(QXmlDeclHandler* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 10045, x)) return;
+	if(call_method((void*)this, 10038, x)) return;
 	this->QXmlSimpleReader::setDeclHandler(x1);
     }
     virtual void setEntityResolver(QXmlEntityResolver* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 10035, x)) return;
+	if(call_method((void*)this, 10028, x)) return;
 	this->QXmlSimpleReader::setEntityResolver(x1);
     }
     virtual void setErrorHandler(QXmlErrorHandler* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 10041, x)) return;
+	if(call_method((void*)this, 10034, x)) return;
 	this->QXmlSimpleReader::setErrorHandler(x1);
     }
     virtual void setFeature(const QString& x1, bool x2) {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_bool = (bool)x2;
-	if(call_method((void*)this, 10029, x)) return;
+	if(call_method((void*)this, 10022, x)) return;
 	this->QXmlSimpleReader::setFeature(x1, x2);
     }
     virtual void setLexicalHandler(QXmlLexicalHandler* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 10043, x)) return;
+	if(call_method((void*)this, 10036, x)) return;
 	this->QXmlSimpleReader::setLexicalHandler(x1);
     }
     virtual void setProperty(const QString& x1, void* x2) {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_voidp = (void*)x2;
-	if(call_method((void*)this, 10033, x)) return;
+	if(call_method((void*)this, 10026, x)) return;
 	this->QXmlSimpleReader::setProperty(x1, x2);
     }
     ~x_QXmlSimpleReader() {}

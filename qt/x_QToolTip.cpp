@@ -126,7 +126,7 @@ public:
     virtual void maybeTip(const QPoint& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	call_method_abstract((void*)this, 8979, x);
+	call_method_abstract((void*)this, 8972, x);
 	return;
 	// ABSTRACT
     }

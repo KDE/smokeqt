@@ -19,13 +19,6 @@ public:
     }
     x_QTextIStream(QByteArray x1) : QTextIStream(x1) {
     }
-    static void x_2(Smoke::Stack x) {
-	// QTextIStream(FILE*)
-	x_QTextIStream* xret = new x_QTextIStream((FILE*)x[1].s_voidp);
-	x[0].s_voidp = (void*)xret;
-    }
-    x_QTextIStream(FILE* x1) : QTextIStream(x1) {
-    }
     ~x_QTextIStream() {}
 };
 void xcall_QTextIStream(Smoke::Index xi, void *obj, Smoke::Stack args) {
@@ -33,6 +26,5 @@ void xcall_QTextIStream(Smoke::Index xi, void *obj, Smoke::Stack args) {
     switch(xi) {
 	case 0: x_QTextIStream::x_0(args);	break;
 	case 1: x_QTextIStream::x_1(args);	break;
-	case 2: x_QTextIStream::x_2(args);	break;
     }
 }

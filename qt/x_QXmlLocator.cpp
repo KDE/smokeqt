@@ -23,13 +23,13 @@ public:
     }
     virtual int columnNumber() {
 	Smoke::StackItem x[1];
-	call_method_abstract((void*)this, 9978, x);
+	call_method_abstract((void*)this, 9971, x);
 return (int)x[0].s_int;
 	// ABSTRACT
     }
     virtual int lineNumber() {
 	Smoke::StackItem x[1];
-	call_method_abstract((void*)this, 9979, x);
+	call_method_abstract((void*)this, 9972, x);
 return (int)x[0].s_int;
 	// ABSTRACT
     }

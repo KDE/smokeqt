@@ -25,13 +25,13 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)x1;
 	x[2].s_int = (int)x2;
-	call_method_abstract((void*)this, 3815, x);
+	call_method_abstract((void*)this, 3812, x);
 	return (QImageFormat*)x[0].s_voidp;
 	// ABSTRACT
     }
     virtual const char* formatName() const {
 	Smoke::StackItem x[1];
-	call_method_abstract((void*)this, 3816, x);
+	call_method_abstract((void*)this, 3813, x);
 	return (const char*)x[0].s_voidp;
 	// ABSTRACT
     }

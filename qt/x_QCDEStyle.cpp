@@ -65,31 +65,31 @@ public:
 	x[1].s_voidp = (void*)x1;
 	x[2].s_voidp = (void*)x2;
 	x[3].s_voidp = (void*)x3;
-	if(call_method((void*)this, 5473, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 5469, x)) return (bool)x[0].s_bool;
 	return this->QObject::checkConnectArgs(x1, x2, x3);
     }
     virtual void childEvent(QChildEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 5469, x)) return;
+	if(call_method((void*)this, 5465, x)) return;
 	this->QObject::childEvent(x1);
     }
     virtual void connectNotify(const char* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 5471, x)) return;
+	if(call_method((void*)this, 5467, x)) return;
 	this->QObject::connectNotify(x1);
     }
     virtual void customEvent(QCustomEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 5470, x)) return;
+	if(call_method((void*)this, 5466, x)) return;
 	this->QObject::customEvent(x1);
     }
     virtual void disconnectNotify(const char* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 5472, x)) return;
+	if(call_method((void*)this, 5468, x)) return;
 	this->QObject::disconnectNotify(x1);
     }
     virtual void drawComplexControl(QStyle::ComplexControl x1, QPainter* x2, const QWidget* x3, const QRect& x4, const QColorGroup& x5, QStyle::SFlags x6, QStyle::SCFlags x7, QStyle::SCFlags x8, const QStyleOption& x9) const {
@@ -103,7 +103,7 @@ public:
 	x[7].s_voidp = (void*)&x7;
 	x[8].s_voidp = (void*)&x8;
 	x[9].s_voidp = (void*)&x9;
-	if(call_method((void*)this, 5181, x)) return;
+	if(call_method((void*)this, 5177, x)) return;
 	this->QMotifStyle::drawComplexControl(x1, x2, x3, x4, x5, x6, x7, x8, x9);
     }
     virtual void drawComplexControlMask(QStyle::ComplexControl x1, QPainter* x2, const QWidget* x3, const QRect& x4, const QStyleOption& x5) const {
@@ -149,7 +149,7 @@ public:
 	x[7].s_voidp = (void*)&x7;
 	x[8].s_int = (int)x8;
 	x[9].s_voidp = (void*)x9;
-	if(call_method((void*)this, 7874, x)) return;
+	if(call_method((void*)this, 7870, x)) return;
 	this->QStyle::drawItem(x1, x2, x3, x4, x5, x6, x7, x8, x9);
     }
     virtual void drawPrimitive(QStyle::PrimitiveElement x1, QPainter* x2, const QRect& x3, const QColorGroup& x4, QStyle::SFlags x5, const QStyleOption& x6) const {
@@ -166,20 +166,20 @@ public:
     virtual bool event(QEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 5408, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 5404, x)) return (bool)x[0].s_bool;
 	return this->QObject::event(x1);
     }
     virtual bool eventFilter(QObject* x1, QEvent* x2) {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)x1;
 	x[2].s_voidp = (void*)x2;
-	if(call_method((void*)this, 5409, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 5405, x)) return (bool)x[0].s_bool;
 	return this->QObject::eventFilter(x1, x2);
     }
     virtual void insertChild(QObject* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 5431, x)) return;
+	if(call_method((void*)this, 5427, x)) return;
 	this->QObject::insertChild(x1);
     }
     virtual QRect itemRect(QPainter* x1, const QRect& x2, int x3, bool x4, const QPixmap* x5, const QString& x6, int x7) const {
@@ -191,7 +191,7 @@ public:
 	x[5].s_voidp = (void*)x5;
 	x[6].s_voidp = (void*)&x6;
 	x[7].s_int = (int)x7;
-	if(call_method((void*)this, 7872, x)) {
+	if(call_method((void*)this, 7868, x)) {
 	    QRect *xptr = (QRect *)x[0].s_voidp;
 	    QRect xret(*xptr);
 	    delete xptr;
@@ -209,31 +209,31 @@ public:
     virtual void polish(QApplication* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 5173, x)) return;
+	if(call_method((void*)this, 5169, x)) return;
 	this->QMotifStyle::polish(x1);
     }
     virtual void polish(QPalette& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 5171, x)) return;
+	if(call_method((void*)this, 5167, x)) return;
 	this->QMotifStyle::polish(x1);
     }
     virtual void polish(QWidget* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 5172, x)) return;
+	if(call_method((void*)this, 5168, x)) return;
 	this->QMotifStyle::polish(x1);
     }
     virtual void polishPopupMenu(QPopupMenu* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 5174, x)) return;
+	if(call_method((void*)this, 5170, x)) return;
 	this->QMotifStyle::polishPopupMenu(x1);
     }
     virtual QVariant property(const char* x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 5445, x)) {
+	if(call_method((void*)this, 5441, x)) {
 	    QVariant *xptr = (QVariant *)x[0].s_voidp;
 	    QVariant xret(*xptr);
 	    delete xptr;
@@ -261,7 +261,7 @@ public:
 	x[2].s_voidp = (void*)x2;
 	x[3].s_voidp = (void*)&x3;
 	x[4].s_voidp = (void*)&x4;
-	if(call_method((void*)this, 5186, x)) {
+	if(call_method((void*)this, 5182, x)) {
 	    QRect *xptr = (QRect *)x[0].s_voidp;
 	    QRect xret(*xptr);
 	    delete xptr;
@@ -272,20 +272,20 @@ public:
     virtual void removeChild(QObject* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 5432, x)) return;
+	if(call_method((void*)this, 5428, x)) return;
 	this->QObject::removeChild(x1);
     }
     virtual void setName(const char* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 5414, x)) return;
+	if(call_method((void*)this, 5410, x)) return;
 	this->QObject::setName(x1);
     }
     virtual bool setProperty(const char* x1, const QVariant& x2) {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)x1;
 	x[2].s_voidp = (void*)&x2;
-	if(call_method((void*)this, 5444, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 5440, x)) return (bool)x[0].s_bool;
 	return this->QObject::setProperty(x1, x2);
     }
     virtual QSize sizeFromContents(QStyle::ContentsType x1, const QWidget* x2, const QSize& x3, const QStyleOption& x4) const {
@@ -294,7 +294,7 @@ public:
 	x[2].s_voidp = (void*)x2;
 	x[3].s_voidp = (void*)&x3;
 	x[4].s_voidp = (void*)&x4;
-	if(call_method((void*)this, 5190, x)) {
+	if(call_method((void*)this, 5186, x)) {
 	    QSize *xptr = (QSize *)x[0].s_voidp;
 	    QSize xret(*xptr);
 	    delete xptr;
@@ -308,7 +308,7 @@ public:
 	x[2].s_voidp = (void*)x2;
 	x[3].s_voidp = (void*)&x3;
 	x[4].s_voidp = (void*)x4;
-	if(call_method((void*)this, 5196, x)) return (int)x[0].s_int;
+	if(call_method((void*)this, 5192, x)) return (int)x[0].s_int;
 	return this->QMotifStyle::styleHint(x1, x2, x3, x4);
     }
     virtual QPixmap stylePixmap(QStyle::StylePixmap x1, const QWidget* x2, const QStyleOption& x3) const {
@@ -316,7 +316,7 @@ public:
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_voidp = (void*)x2;
 	x[3].s_voidp = (void*)&x3;
-	if(call_method((void*)this, 5193, x)) {
+	if(call_method((void*)this, 5189, x)) {
 	    QPixmap *xptr = (QPixmap *)x[0].s_voidp;
 	    QPixmap xret(*xptr);
 	    delete xptr;
@@ -328,7 +328,7 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_voidp = (void*)x2;
-	if(call_method((void*)this, 5192, x)) {
+	if(call_method((void*)this, 5188, x)) {
 	    QRect *xptr = (QRect *)x[0].s_voidp;
 	    QRect xret(*xptr);
 	    delete xptr;
@@ -339,19 +339,19 @@ public:
     virtual void timerEvent(QTimerEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 5468, x)) return;
+	if(call_method((void*)this, 5464, x)) return;
 	this->QObject::timerEvent(x1);
     }
     virtual void unPolish(QApplication* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 7869, x)) return;
+	if(call_method((void*)this, 7865, x)) return;
 	this->QStyle::unPolish(x1);
     }
     virtual void unPolish(QWidget* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 7867, x)) return;
+	if(call_method((void*)this, 7863, x)) return;
 	this->QStyle::unPolish(x1);
     }
     ~x_QCDEStyle() {}

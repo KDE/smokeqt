@@ -254,7 +254,7 @@ public:
     virtual void addArgument(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 6180, x)) return;
+	if(call_method((void*)this, 6176, x)) return;
 	this->QProcess::addArgument(x1);
     }
     virtual bool checkConnectArgs(const char* x1, const QObject* x2, const char* x3) {
@@ -262,75 +262,75 @@ public:
 	x[1].s_voidp = (void*)x1;
 	x[2].s_voidp = (void*)x2;
 	x[3].s_voidp = (void*)x3;
-	if(call_method((void*)this, 5473, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 5469, x)) return (bool)x[0].s_bool;
 	return this->QObject::checkConnectArgs(x1, x2, x3);
     }
     virtual void childEvent(QChildEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 5469, x)) return;
+	if(call_method((void*)this, 5465, x)) return;
 	this->QObject::childEvent(x1);
     }
     virtual void closeStdin() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 6206, x)) return;
+	if(call_method((void*)this, 6202, x)) return;
 	this->QProcess::closeStdin();
     }
     virtual void connectNotify(const char* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 6212, x)) return;
+	if(call_method((void*)this, 6208, x)) return;
 	this->QProcess::connectNotify(x1);
     }
     virtual void customEvent(QCustomEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 5470, x)) return;
+	if(call_method((void*)this, 5466, x)) return;
 	this->QObject::customEvent(x1);
     }
     virtual void disconnectNotify(const char* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 6213, x)) return;
+	if(call_method((void*)this, 6209, x)) return;
 	this->QProcess::disconnectNotify(x1);
     }
     virtual bool event(QEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 5408, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 5404, x)) return (bool)x[0].s_bool;
 	return this->QObject::event(x1);
     }
     virtual bool eventFilter(QObject* x1, QEvent* x2) {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)x1;
 	x[2].s_voidp = (void*)x2;
-	if(call_method((void*)this, 5409, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 5405, x)) return (bool)x[0].s_bool;
 	return this->QObject::eventFilter(x1, x2);
     }
     virtual void insertChild(QObject* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 5431, x)) return;
+	if(call_method((void*)this, 5427, x)) return;
 	this->QObject::insertChild(x1);
     }
     virtual bool launch(const QByteArray& x1, QStringList* x2) {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_voidp = (void*)x2;
-	if(call_method((void*)this, 6189, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 6185, x)) return (bool)x[0].s_bool;
 	return this->QProcess::launch(x1, x2);
     }
     virtual bool launch(const QString& x1, QStringList* x2) {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_voidp = (void*)x2;
-	if(call_method((void*)this, 6187, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 6183, x)) return (bool)x[0].s_bool;
 	return this->QProcess::launch(x1, x2);
     }
     virtual QVariant property(const char* x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 5445, x)) {
+	if(call_method((void*)this, 5441, x)) {
 	    QVariant *xptr = (QVariant *)x[0].s_voidp;
 	    QVariant xret(*xptr);
 	    delete xptr;
@@ -340,7 +340,7 @@ public:
     }
     virtual QString readLineStderr() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 6199, x)) {
+	if(call_method((void*)this, 6195, x)) {
 	    QString *xptr = (QString *)x[0].s_voidp;
 	    QString xret(*xptr);
 	    delete xptr;
@@ -350,7 +350,7 @@ public:
     }
     virtual QString readLineStdout() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 6198, x)) {
+	if(call_method((void*)this, 6194, x)) {
 	    QString *xptr = (QString *)x[0].s_voidp;
 	    QString xret(*xptr);
 	    delete xptr;
@@ -360,7 +360,7 @@ public:
     }
     virtual QByteArray readStderr() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 6195, x)) {
+	if(call_method((void*)this, 6191, x)) {
 	    QByteArray *xptr = (QByteArray *)x[0].s_voidp;
 	    QByteArray xret(*xptr);
 	    delete xptr;
@@ -370,7 +370,7 @@ public:
     }
     virtual QByteArray readStdout() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 6194, x)) {
+	if(call_method((void*)this, 6190, x)) {
 	    QByteArray *xptr = (QByteArray *)x[0].s_voidp;
 	    QByteArray xret(*xptr);
 	    delete xptr;
@@ -381,56 +381,56 @@ public:
     virtual void removeChild(QObject* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 5432, x)) return;
+	if(call_method((void*)this, 5428, x)) return;
 	this->QObject::removeChild(x1);
     }
     virtual void setArguments(const QStringList& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 6179, x)) return;
+	if(call_method((void*)this, 6175, x)) return;
 	this->QProcess::setArguments(x1);
     }
     virtual void setName(const char* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 5414, x)) return;
+	if(call_method((void*)this, 5410, x)) return;
 	this->QObject::setName(x1);
     }
     virtual bool setProperty(const char* x1, const QVariant& x2) {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)x1;
 	x[2].s_voidp = (void*)&x2;
-	if(call_method((void*)this, 5444, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 5440, x)) return (bool)x[0].s_bool;
 	return this->QObject::setProperty(x1, x2);
     }
     virtual void setWorkingDirectory(const QDir& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 6182, x)) return;
+	if(call_method((void*)this, 6178, x)) return;
 	this->QProcess::setWorkingDirectory(x1);
     }
     virtual bool start(QStringList* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 6185, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 6181, x)) return (bool)x[0].s_bool;
 	return this->QProcess::start(x1);
     }
     virtual void timerEvent(QTimerEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 5468, x)) return;
+	if(call_method((void*)this, 5464, x)) return;
 	this->QObject::timerEvent(x1);
     }
     virtual void writeToStdin(const QByteArray& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 6204, x)) return;
+	if(call_method((void*)this, 6200, x)) return;
 	this->QProcess::writeToStdin(x1);
     }
     virtual void writeToStdin(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 6205, x)) return;
+	if(call_method((void*)this, 6201, x)) return;
 	this->QProcess::writeToStdin(x1);
     }
     ~x_QProcess() {}

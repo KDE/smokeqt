@@ -162,7 +162,7 @@ public:
 	x[2].s_voidp = (void*)&x2;
 	x[3].s_voidp = (void*)&x3;
 	x[4].s_voidp = (void*)&x4;
-	if(call_method((void*)this, 3440, x)) return;
+	if(call_method((void*)this, 3437, x)) return;
 	this->QIconSet::setPixmap(x1, x2, x3, x4);
     }
     virtual void setPixmap(const QString& x1, QIconSet::Size x2, QIconSet::Mode x3, QIconSet::State x4) {
@@ -171,7 +171,7 @@ public:
 	x[2].s_voidp = (void*)&x2;
 	x[3].s_voidp = (void*)&x3;
 	x[4].s_voidp = (void*)&x4;
-	if(call_method((void*)this, 3443, x)) return;
+	if(call_method((void*)this, 3440, x)) return;
 	this->QIconSet::setPixmap(x1, x2, x3, x4);
     }
     ~x_QIconSet() {}

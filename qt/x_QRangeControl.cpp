@@ -117,17 +117,17 @@ public:
     }
     virtual void rangeChange() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 6357, x)) return;
+	if(call_method((void*)this, 6353, x)) return;
 	this->QRangeControl::rangeChange();
     }
     virtual void stepChange() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 6358, x)) return;
+	if(call_method((void*)this, 6354, x)) return;
 	this->QRangeControl::stepChange();
     }
     virtual void valueChange() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 6356, x)) return;
+	if(call_method((void*)this, 6352, x)) return;
 	this->QRangeControl::valueChange();
     }
     ~x_QRangeControl() {}

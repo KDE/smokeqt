@@ -112,7 +112,7 @@ public:
     }
     virtual bool atEnd() const {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 3390, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 3387, x)) return (bool)x[0].s_bool;
 	return this->QIODevice::atEnd();
     }
     virtual void close() {
@@ -144,7 +144,7 @@ public:
     }
     virtual QByteArray readAll() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 3396, x)) {
+	if(call_method((void*)this, 3393, x)) {
 	    QByteArray *xptr = (QByteArray *)x[0].s_voidp;
 	    QByteArray xret(*xptr);
 	    delete xptr;

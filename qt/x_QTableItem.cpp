@@ -161,17 +161,17 @@ public:
     }
     virtual int alignment() const {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 8381, x)) return (int)x[0].s_int;
+	if(call_method((void*)this, 8377, x)) return (int)x[0].s_int;
 	return this->QTableItem::alignment();
     }
     virtual QWidget* createEditor() const {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 8385, x)) 	return (QWidget*)x[0].s_voidp;
+	if(call_method((void*)this, 8381, x)) 	return (QWidget*)x[0].s_voidp;
 	return this->QTableItem::createEditor();
     }
     virtual QString key() const {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 8389, x)) {
+	if(call_method((void*)this, 8385, x)) {
 	    QString *xptr = (QString *)x[0].s_voidp;
 	    QString xret(*xptr);
 	    delete xptr;
@@ -185,12 +185,12 @@ public:
 	x[2].s_voidp = (void*)&x2;
 	x[3].s_voidp = (void*)&x3;
 	x[4].s_bool = (bool)x4;
-	if(call_method((void*)this, 8398, x)) return;
+	if(call_method((void*)this, 8394, x)) return;
 	this->QTableItem::paint(x1, x2, x3, x4);
     }
     virtual QPixmap pixmap() const {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 8376, x)) {
+	if(call_method((void*)this, 8372, x)) {
 	    QPixmap *xptr = (QPixmap *)x[0].s_voidp;
 	    QPixmap xret(*xptr);
 	    delete xptr;
@@ -200,67 +200,67 @@ public:
     }
     virtual int rtti() const {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 8402, x)) return (int)x[0].s_int;
+	if(call_method((void*)this, 8398, x)) return (int)x[0].s_int;
 	return this->QTableItem::rtti();
     }
     virtual void setCol(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = (int)x1;
-	if(call_method((void*)this, 8395, x)) return;
+	if(call_method((void*)this, 8391, x)) return;
 	this->QTableItem::setCol(x1);
     }
     virtual void setContentFromEditor(QWidget* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(call_method((void*)this, 8386, x)) return;
+	if(call_method((void*)this, 8382, x)) return;
 	this->QTableItem::setContentFromEditor(x1);
     }
     virtual void setEnabled(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = (bool)x1;
-	if(call_method((void*)this, 8400, x)) return;
+	if(call_method((void*)this, 8396, x)) return;
 	this->QTableItem::setEnabled(x1);
     }
     virtual void setPixmap(const QPixmap& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 8378, x)) return;
+	if(call_method((void*)this, 8374, x)) return;
 	this->QTableItem::setPixmap(x1);
     }
     virtual void setReplaceable(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = (bool)x1;
-	if(call_method((void*)this, 8387, x)) return;
+	if(call_method((void*)this, 8383, x)) return;
 	this->QTableItem::setReplaceable(x1);
     }
     virtual void setRow(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = (int)x1;
-	if(call_method((void*)this, 8394, x)) return;
+	if(call_method((void*)this, 8390, x)) return;
 	this->QTableItem::setRow(x1);
     }
     virtual void setSpan(int x1, int x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = (int)x1;
 	x[2].s_int = (int)x2;
-	if(call_method((void*)this, 8391, x)) return;
+	if(call_method((void*)this, 8387, x)) return;
 	this->QTableItem::setSpan(x1, x2);
     }
     virtual void setText(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 8379, x)) return;
+	if(call_method((void*)this, 8375, x)) return;
 	this->QTableItem::setText(x1);
     }
     virtual void setWordWrap(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = (bool)x1;
-	if(call_method((void*)this, 8382, x)) return;
+	if(call_method((void*)this, 8378, x)) return;
 	this->QTableItem::setWordWrap(x1);
     }
     virtual QSize sizeHint() const {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 8390, x)) {
+	if(call_method((void*)this, 8386, x)) {
 	    QSize *xptr = (QSize *)x[0].s_voidp;
 	    QSize xret(*xptr);
 	    delete xptr;
@@ -270,7 +270,7 @@ public:
     }
     virtual QString text() const {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 8377, x)) {
+	if(call_method((void*)this, 8373, x)) {
 	    QString *xptr = (QString *)x[0].s_voidp;
 	    QString xret(*xptr);
 	    delete xptr;

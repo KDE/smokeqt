@@ -120,25 +120,25 @@ public:
     }
     virtual void clear() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 3011, x)) return;
+	if(call_method((void*)this, 3008, x)) return;
 	this->QGCache::clear();
     }
     virtual uint count() const {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 3006, x)) return (uint)x[0].s_uint;
+	if(call_method((void*)this, 3003, x)) return (uint)x[0].s_uint;
 	return this->QGCache::count();
     }
     virtual void deleteItem(Item x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	call_method_abstract((void*)this, 6287, x);
+	call_method_abstract((void*)this, 6283, x);
 	return;
 	// ABSTRACT
     }
     virtual Item newItem(Item x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 6286, x)) {
+	if(call_method((void*)this, 6282, x)) {
 	    Item *xptr = (Item *)x[0].s_voidp;
 	    Item xret(*xptr);
 	    delete xptr;

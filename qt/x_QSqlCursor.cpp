@@ -351,24 +351,24 @@ public:
     }
     virtual void afterSeek() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 7291, x)) return;
+	if(call_method((void*)this, 7287, x)) return;
 	this->QSqlCursor::afterSeek();
     }
     virtual void append(const QSqlFieldInfo& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 7249, x)) return;
+	if(call_method((void*)this, 7245, x)) return;
 	this->QSqlCursor::append(x1);
     }
     virtual void beforeSeek() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 7538, x)) return;
+	if(call_method((void*)this, 7534, x)) return;
 	this->QSqlQuery::beforeSeek();
     }
     virtual QVariant calculateField(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 7293, x)) {
+	if(call_method((void*)this, 7289, x)) {
 	    QVariant *xptr = (QVariant *)x[0].s_voidp;
 	    QVariant xret(*xptr);
 	    delete xptr;
@@ -378,49 +378,49 @@ public:
     }
     virtual void clear() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 7252, x)) return;
+	if(call_method((void*)this, 7248, x)) return;
 	this->QSqlCursor::clear();
     }
     virtual void clearValues(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = (bool)x1;
-	if(call_method((void*)this, 7568, x)) return;
+	if(call_method((void*)this, 7564, x)) return;
 	this->QSqlRecord::clearValues(x1);
     }
     virtual int del(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = (bool)x1;
-	if(call_method((void*)this, 7264, x)) return (int)x[0].s_int;
+	if(call_method((void*)this, 7260, x)) return (int)x[0].s_int;
 	return this->QSqlCursor::del(x1);
     }
     virtual int del(const QString& x1, bool x2) {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_bool = (bool)x2;
-	if(call_method((void*)this, 7296, x)) return (int)x[0].s_int;
+	if(call_method((void*)this, 7292, x)) return (int)x[0].s_int;
 	return this->QSqlCursor::del(x1, x2);
     }
     virtual QSqlRecord* editBuffer(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = (bool)x1;
-	if(call_method((void*)this, 7255, x)) 	return (QSqlRecord*)x[0].s_voidp;
+	if(call_method((void*)this, 7251, x)) 	return (QSqlRecord*)x[0].s_voidp;
 	return this->QSqlCursor::editBuffer(x1);
     }
     virtual bool exec(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 7292, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 7288, x)) return (bool)x[0].s_bool;
 	return this->QSqlCursor::exec(x1);
     }
     virtual bool first() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 7536, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 7532, x)) return (bool)x[0].s_bool;
 	return this->QSqlQuery::first();
     }
     virtual QSqlIndex index(const QStringList& x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 7245, x)) {
+	if(call_method((void*)this, 7241, x)) {
 	    QSqlIndex *xptr = (QSqlIndex *)x[0].s_voidp;
 	    QSqlIndex xret(*xptr);
 	    delete xptr;
@@ -431,35 +431,35 @@ public:
     virtual int insert(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = (bool)x1;
-	if(call_method((void*)this, 7260, x)) return (int)x[0].s_int;
+	if(call_method((void*)this, 7256, x)) return (int)x[0].s_int;
 	return this->QSqlCursor::insert(x1);
     }
     virtual void insert(int x1, const QSqlFieldInfo& x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = (int)x1;
 	x[2].s_voidp = (void*)&x2;
-	if(call_method((void*)this, 7250, x)) return;
+	if(call_method((void*)this, 7246, x)) return;
 	this->QSqlCursor::insert(x1, x2);
     }
     virtual bool last() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 7537, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 7533, x)) return (bool)x[0].s_bool;
 	return this->QSqlQuery::last();
     }
     virtual bool next() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 7534, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 7530, x)) return (bool)x[0].s_bool;
 	return this->QSqlQuery::next();
     }
     virtual bool prev() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 7535, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 7531, x)) return (bool)x[0].s_bool;
 	return this->QSqlQuery::prev();
     }
     virtual QSqlIndex primaryIndex(bool x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_bool = (bool)x1;
-	if(call_method((void*)this, 7243, x)) {
+	if(call_method((void*)this, 7239, x)) {
 	    QSqlIndex *xptr = (QSqlIndex *)x[0].s_voidp;
 	    QSqlIndex xret(*xptr);
 	    delete xptr;
@@ -469,122 +469,122 @@ public:
     }
     virtual QSqlRecord* primeDelete() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 7259, x)) 	return (QSqlRecord*)x[0].s_voidp;
+	if(call_method((void*)this, 7255, x)) 	return (QSqlRecord*)x[0].s_voidp;
 	return this->QSqlCursor::primeDelete();
     }
     virtual QSqlRecord* primeInsert() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 7257, x)) 	return (QSqlRecord*)x[0].s_voidp;
+	if(call_method((void*)this, 7253, x)) 	return (QSqlRecord*)x[0].s_voidp;
 	return this->QSqlCursor::primeInsert();
     }
     virtual QSqlRecord* primeUpdate() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 7258, x)) 	return (QSqlRecord*)x[0].s_voidp;
+	if(call_method((void*)this, 7254, x)) 	return (QSqlRecord*)x[0].s_voidp;
 	return this->QSqlCursor::primeUpdate();
     }
     virtual void remove(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = (int)x1;
-	if(call_method((void*)this, 7251, x)) return;
+	if(call_method((void*)this, 7247, x)) return;
 	this->QSqlCursor::remove(x1);
     }
     virtual bool seek(int x1, bool x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = (int)x1;
 	x[2].s_bool = (bool)x2;
-	if(call_method((void*)this, 7532, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 7528, x)) return (bool)x[0].s_bool;
 	return this->QSqlQuery::seek(x1, x2);
     }
     virtual bool select(const QString& x1, const QSqlIndex& x2) {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_voidp = (void*)&x2;
-	if(call_method((void*)this, 7279, x)) return (bool)x[0].s_bool;
+	if(call_method((void*)this, 7275, x)) return (bool)x[0].s_bool;
 	return this->QSqlCursor::select(x1, x2);
     }
     virtual void setCalculated(const QString& x1, bool x2) {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_bool = (bool)x2;
-	if(call_method((void*)this, 7268, x)) return;
+	if(call_method((void*)this, 7264, x)) return;
 	this->QSqlCursor::setCalculated(x1, x2);
     }
     virtual void setFilter(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 7283, x)) return;
+	if(call_method((void*)this, 7279, x)) return;
 	this->QSqlCursor::setFilter(x1);
     }
     virtual void setGenerated(const QString& x1, bool x2) {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_bool = (bool)x2;
-	if(call_method((void*)this, 7253, x)) return;
+	if(call_method((void*)this, 7249, x)) return;
 	this->QSqlCursor::setGenerated(x1, x2);
     }
     virtual void setGenerated(int x1, bool x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = (int)x1;
 	x[2].s_bool = (bool)x2;
-	if(call_method((void*)this, 7254, x)) return;
+	if(call_method((void*)this, 7250, x)) return;
 	this->QSqlCursor::setGenerated(x1, x2);
     }
     virtual void setMode(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = (int)x1;
-	if(call_method((void*)this, 7266, x)) return;
+	if(call_method((void*)this, 7262, x)) return;
 	this->QSqlCursor::setMode(x1);
     }
     virtual void setName(const QString& x1, bool x2) {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_bool = (bool)x2;
-	if(call_method((void*)this, 7285, x)) return;
+	if(call_method((void*)this, 7281, x)) return;
 	this->QSqlCursor::setName(x1, x2);
     }
     virtual void setNull(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 7553, x)) return;
+	if(call_method((void*)this, 7549, x)) return;
 	this->QSqlRecord::setNull(x1);
     }
     virtual void setNull(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = (int)x1;
-	if(call_method((void*)this, 7552, x)) return;
+	if(call_method((void*)this, 7548, x)) return;
 	this->QSqlRecord::setNull(x1);
     }
     virtual void setPrimaryIndex(const QSqlIndex& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 7248, x)) return;
+	if(call_method((void*)this, 7244, x)) return;
 	this->QSqlCursor::setPrimaryIndex(x1);
     }
     virtual void setSort(const QSqlIndex& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 7281, x)) return;
+	if(call_method((void*)this, 7277, x)) return;
 	this->QSqlCursor::setSort(x1);
     }
     virtual void setTrimmed(const QString& x1, bool x2) {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_bool = (bool)x2;
-	if(call_method((void*)this, 7270, x)) return;
+	if(call_method((void*)this, 7266, x)) return;
 	this->QSqlCursor::setTrimmed(x1, x2);
     }
     virtual void setValue(const QString& x1, const QVariant& x2) {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_voidp = (void*)&x2;
-	if(call_method((void*)this, 7547, x)) return;
+	if(call_method((void*)this, 7543, x)) return;
 	this->QSqlRecord::setValue(x1, x2);
     }
     virtual void setValue(int x1, const QVariant& x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = (int)x1;
 	x[2].s_voidp = (void*)&x2;
-	if(call_method((void*)this, 7546, x)) return;
+	if(call_method((void*)this, 7542, x)) return;
 	this->QSqlRecord::setValue(x1, x2);
     }
     virtual QString toString(QSqlRecord* x1, const QString& x2, const QString& x3, const QString& x4) const {
@@ -593,7 +593,7 @@ public:
 	x[2].s_voidp = (void*)&x2;
 	x[3].s_voidp = (void*)&x3;
 	x[4].s_voidp = (void*)&x4;
-	if(call_method((void*)this, 7299, x)) {
+	if(call_method((void*)this, 7295, x)) {
 	    QString *xptr = (QString *)x[0].s_voidp;
 	    QString xret(*xptr);
 	    delete xptr;
@@ -608,7 +608,7 @@ public:
 	x[3].s_voidp = (void*)&x3;
 	x[4].s_voidp = (void*)&x4;
 	x[5].s_voidp = (void*)&x5;
-	if(call_method((void*)this, 7300, x)) {
+	if(call_method((void*)this, 7296, x)) {
 	    QString *xptr = (QString *)x[0].s_voidp;
 	    QString xret(*xptr);
 	    delete xptr;
@@ -621,7 +621,7 @@ public:
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_voidp = (void*)x2;
 	x[3].s_voidp = (void*)&x3;
-	if(call_method((void*)this, 7298, x)) {
+	if(call_method((void*)this, 7294, x)) {
 	    QString *xptr = (QString *)x[0].s_voidp;
 	    QString xret(*xptr);
 	    delete xptr;
@@ -633,7 +633,7 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_voidp = (void*)&x2;
-	if(call_method((void*)this, 7288, x)) {
+	if(call_method((void*)this, 7284, x)) {
 	    QString *xptr = (QString *)x[0].s_voidp;
 	    QString xret(*xptr);
 	    delete xptr;
@@ -644,7 +644,7 @@ public:
     virtual QStringList toStringList(const QString& x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 7574, x)) {
+	if(call_method((void*)this, 7570, x)) {
 	    QStringList *xptr = (QStringList *)x[0].s_voidp;
 	    QStringList xret(*xptr);
 	    delete xptr;
@@ -655,20 +655,20 @@ public:
     virtual int update(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = (bool)x1;
-	if(call_method((void*)this, 7262, x)) return (int)x[0].s_int;
+	if(call_method((void*)this, 7258, x)) return (int)x[0].s_int;
 	return this->QSqlCursor::update(x1);
     }
     virtual int update(const QString& x1, bool x2) {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_bool = (bool)x2;
-	if(call_method((void*)this, 7294, x)) return (int)x[0].s_int;
+	if(call_method((void*)this, 7290, x)) return (int)x[0].s_int;
 	return this->QSqlCursor::update(x1, x2);
     }
     virtual QVariant value(const QString& x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 7242, x)) {
+	if(call_method((void*)this, 7238, x)) {
 	    QVariant *xptr = (QVariant *)x[0].s_voidp;
 	    QVariant xret(*xptr);
 	    delete xptr;
@@ -679,7 +679,7 @@ public:
     virtual QVariant value(int x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_int = (int)x1;
-	if(call_method((void*)this, 7241, x)) {
+	if(call_method((void*)this, 7237, x)) {
 	    QVariant *xptr = (QVariant *)x[0].s_voidp;
 	    QVariant xret(*xptr);
 	    delete xptr;

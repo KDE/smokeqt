@@ -88,12 +88,12 @@ public:
     virtual const QMimeSource* data(const QString& x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 5122, x)) 	return (const QMimeSource*)x[0].s_voidp;
+	if(call_method((void*)this, 5118, x)) 	return (const QMimeSource*)x[0].s_voidp;
 	return this->QMimeSourceFactory::data(x1);
     }
     virtual QStringList filePath() const {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 5130, x)) {
+	if(call_method((void*)this, 5126, x)) {
 	    QStringList *xptr = (QStringList *)x[0].s_voidp;
 	    QStringList xret(*xptr);
 	    delete xptr;
@@ -105,7 +105,7 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_voidp = (void*)&x2;
-	if(call_method((void*)this, 5123, x)) {
+	if(call_method((void*)this, 5119, x)) {
 	    QString *xptr = (QString *)x[0].s_voidp;
 	    QString xret(*xptr);
 	    delete xptr;
@@ -117,41 +117,41 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_voidp = (void*)x2;
-	if(call_method((void*)this, 5128, x)) return;
+	if(call_method((void*)this, 5124, x)) return;
 	this->QMimeSourceFactory::setData(x1, x2);
     }
     virtual void setExtensionType(const QString& x1, const char* x2) {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_voidp = (void*)x2;
-	if(call_method((void*)this, 5132, x)) return;
+	if(call_method((void*)this, 5128, x)) return;
 	this->QMimeSourceFactory::setExtensionType(x1, x2);
     }
     virtual void setFilePath(const QStringList& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 5129, x)) return;
+	if(call_method((void*)this, 5125, x)) return;
 	this->QMimeSourceFactory::setFilePath(x1);
     }
     virtual void setImage(const QString& x1, const QImage& x2) {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_voidp = (void*)&x2;
-	if(call_method((void*)this, 5126, x)) return;
+	if(call_method((void*)this, 5122, x)) return;
 	this->QMimeSourceFactory::setImage(x1, x2);
     }
     virtual void setPixmap(const QString& x1, const QPixmap& x2) {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_voidp = (void*)&x2;
-	if(call_method((void*)this, 5127, x)) return;
+	if(call_method((void*)this, 5123, x)) return;
 	this->QMimeSourceFactory::setPixmap(x1, x2);
     }
     virtual void setText(const QString& x1, const QString& x2) {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_voidp = (void*)&x2;
-	if(call_method((void*)this, 5125, x)) return;
+	if(call_method((void*)this, 5121, x)) return;
 	this->QMimeSourceFactory::setText(x1, x2);
     }
     ~x_QMimeSourceFactory() {}

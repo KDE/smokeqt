@@ -106,25 +106,25 @@ public:
     virtual void setDatabaseText(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 7406, x)) return;
+	if(call_method((void*)this, 7402, x)) return;
 	this->QSqlError::setDatabaseText(x1);
     }
     virtual void setDriverText(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 7404, x)) return;
+	if(call_method((void*)this, 7400, x)) return;
 	this->QSqlError::setDriverText(x1);
     }
     virtual void setNumber(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = (int)x1;
-	if(call_method((void*)this, 7410, x)) return;
+	if(call_method((void*)this, 7406, x)) return;
 	this->QSqlError::setNumber(x1);
     }
     virtual void setType(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = (int)x1;
-	if(call_method((void*)this, 7408, x)) return;
+	if(call_method((void*)this, 7404, x)) return;
 	this->QSqlError::setType(x1);
     }
     ~x_QSqlError() {}

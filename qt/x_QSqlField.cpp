@@ -96,29 +96,29 @@ public:
     virtual void setName(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 7420, x)) return;
+	if(call_method((void*)this, 7416, x)) return;
 	this->QSqlField::setName(x1);
     }
     virtual void setNull() {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 7422, x)) return;
+	if(call_method((void*)this, 7418, x)) return;
 	this->QSqlField::setNull();
     }
     virtual void setReadOnly(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = (bool)x1;
-	if(call_method((void*)this, 7424, x)) return;
+	if(call_method((void*)this, 7420, x)) return;
 	this->QSqlField::setReadOnly(x1);
     }
     virtual void setValue(const QVariant& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(call_method((void*)this, 7418, x)) return;
+	if(call_method((void*)this, 7414, x)) return;
 	this->QSqlField::setValue(x1);
     }
     virtual QVariant value() const {
 	Smoke::StackItem x[1];
-	if(call_method((void*)this, 7419, x)) {
+	if(call_method((void*)this, 7415, x)) {
 	    QVariant *xptr = (QVariant *)x[0].s_voidp;
 	    QVariant xret(*xptr);
 	    delete xptr;
