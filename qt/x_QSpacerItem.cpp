@@ -133,7 +133,7 @@ public:
     }
     virtual QLayout* layout() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(4131, (void*)this, x)) 	return (QLayout*)x[0].s_class;
+	if(qt_Smoke->callMethod(4131, (void*)this, x)) return (QLayout*)x[0].s_class;
 	return this->QLayoutItem::layout();
     }
     virtual QSize maximumSize() const {
@@ -180,12 +180,12 @@ public:
     }
     virtual QSpacerItem* spacerItem() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(7150, (void*)this, x)) 	return (QSpacerItem*)x[0].s_class;
+	if(qt_Smoke->callMethod(7150, (void*)this, x)) return (QSpacerItem*)x[0].s_class;
 	return this->QSpacerItem::spacerItem();
     }
     virtual QWidget* widget() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(4129, (void*)this, x)) 	return (QWidget*)x[0].s_class;
+	if(qt_Smoke->callMethod(4129, (void*)this, x)) return (QWidget*)x[0].s_class;
 	return this->QLayoutItem::widget();
     }
     ~x_QSpacerItem() {}

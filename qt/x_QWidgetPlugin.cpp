@@ -17,51 +17,31 @@ public:
     x_QWidgetPlugin() : QWidgetPlugin() {
     }
     void x_1(Smoke::Stack x) const {
-	// keys()
-	QStringList xret = this->QWidgetPlugin::keys();
-	x[0].s_class = (void*)new QStringList(xret);
-    }
-    void x_2(Smoke::Stack x) {
-	// create(const QString&, QWidget*, const char*)
-	QWidget* xret = this->QWidgetPlugin::create(*(const QString *)x[1].s_class,(QWidget*)x[2].s_class,(const char*)x[3].s_class);
-	x[0].s_class = (void*)xret;
-    }
-    void x_3(Smoke::Stack x) {
-	// create(const QString&, QWidget*)
-	QWidget* xret = this->QWidgetPlugin::create(*(const QString *)x[1].s_class,(QWidget*)x[2].s_class);
-	x[0].s_class = (void*)xret;
-    }
-    void x_4(Smoke::Stack x) {
-	// create(const QString&)
-	QWidget* xret = this->QWidgetPlugin::create(*(const QString *)x[1].s_class);
-	x[0].s_class = (void*)xret;
-    }
-    void x_5(Smoke::Stack x) const {
 	// group(const QString&)
 	QString xret = this->QWidgetPlugin::group(*(const QString *)x[1].s_class);
 	x[0].s_class = (void*)new QString(xret);
     }
-    void x_6(Smoke::Stack x) const {
+    void x_2(Smoke::Stack x) const {
 	// iconSet(const QString&)
 	QIconSet xret = this->QWidgetPlugin::iconSet(*(const QString *)x[1].s_class);
 	x[0].s_class = (void*)new QIconSet(xret);
     }
-    void x_7(Smoke::Stack x) const {
+    void x_3(Smoke::Stack x) const {
 	// includeFile(const QString&)
 	QString xret = this->QWidgetPlugin::includeFile(*(const QString *)x[1].s_class);
 	x[0].s_class = (void*)new QString(xret);
     }
-    void x_8(Smoke::Stack x) const {
+    void x_4(Smoke::Stack x) const {
 	// toolTip(const QString&)
 	QString xret = this->QWidgetPlugin::toolTip(*(const QString *)x[1].s_class);
 	x[0].s_class = (void*)new QString(xret);
     }
-    void x_9(Smoke::Stack x) const {
+    void x_5(Smoke::Stack x) const {
 	// whatsThis(const QString&)
 	QString xret = this->QWidgetPlugin::whatsThis(*(const QString *)x[1].s_class);
 	x[0].s_class = (void*)new QString(xret);
     }
-    void x_10(Smoke::Stack x) const {
+    void x_6(Smoke::Stack x) const {
 	// isContainer(const QString&)
 	bool xret = this->QWidgetPlugin::isContainer(*(const QString *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
@@ -244,10 +224,6 @@ void xcall_QWidgetPlugin(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 4: xself->x_4(args);	break;
 	case 5: xself->x_5(args);	break;
 	case 6: xself->x_6(args);	break;
-	case 7: xself->x_7(args);	break;
-	case 8: xself->x_8(args);	break;
-	case 9: xself->x_9(args);	break;
-	case 10: xself->x_10(args);	break;
-	case 11: delete (QWidgetPlugin*)xself;	break;
+	case 7: delete (QWidgetPlugin*)xself;	break;
     }
 }

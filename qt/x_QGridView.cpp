@@ -129,18 +129,14 @@ public:
 	this->QGridView::ensureCellVisible((int)x[1].s_int,(int)x[2].s_int);
     }
     void x_21(Smoke::Stack x) {
-	// paintCell(QPainter*, int, int)
-	this->QGridView::paintCell((QPainter*)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int);
-    }
-    void x_22(Smoke::Stack x) {
 	// paintEmptyArea(QPainter*, int, int, int, int)
 	this->QGridView::paintEmptyArea((QPainter*)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int);
     }
-    void x_23(Smoke::Stack x) {
+    void x_22(Smoke::Stack x) {
 	// drawContents(QPainter*, int, int, int, int)
 	this->QGridView::drawContents((QPainter*)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int);
     }
-    void x_24(Smoke::Stack x) {
+    void x_23(Smoke::Stack x) {
 	// dimensionChange(int, int)
 	this->QGridView::dimensionChange((int)x[1].s_int,(int)x[2].s_int);
     }
@@ -1176,7 +1172,6 @@ void xcall_QGridView(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 21: xself->x_21(args);	break;
 	case 22: xself->x_22(args);	break;
 	case 23: xself->x_23(args);	break;
-	case 24: xself->x_24(args);	break;
-	case 25: delete (QGridView*)xself;	break;
+	case 24: delete (QGridView*)xself;	break;
     }
 }

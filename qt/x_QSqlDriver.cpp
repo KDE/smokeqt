@@ -117,54 +117,15 @@ public:
 	QSqlError xret = this->QSqlDriver::lastError();
 	x[0].s_class = (void*)new QSqlError(xret);
     }
-    void x_21(Smoke::Stack x) const {
-	// hasFeature(QSqlDriver::DriverFeature)
-	bool xret = this->QSqlDriver::hasFeature(*(QSqlDriver::DriverFeature *)x[1].s_class);
-	x[0].s_bool = (bool)xret;
-    }
-    void x_22(Smoke::Stack x) {
-	// open(const QString&, const QString&, const QString&, const QString&, int)
-	bool xret = this->QSqlDriver::open(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,*(const QString *)x[3].s_class,*(const QString *)x[4].s_class,(int)x[5].s_int);
-	x[0].s_bool = (bool)xret;
-    }
-    void x_23(Smoke::Stack x) {
-	// open(const QString&, const QString&, const QString&, const QString&)
-	bool xret = this->QSqlDriver::open(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,*(const QString *)x[3].s_class,*(const QString *)x[4].s_class);
-	x[0].s_bool = (bool)xret;
-    }
-    void x_24(Smoke::Stack x) {
-	// open(const QString&, const QString&, const QString&)
-	bool xret = this->QSqlDriver::open(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,*(const QString *)x[3].s_class);
-	x[0].s_bool = (bool)xret;
-    }
-    void x_25(Smoke::Stack x) {
-	// open(const QString&, const QString&)
-	bool xret = this->QSqlDriver::open(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class);
-	x[0].s_bool = (bool)xret;
-    }
-    void x_26(Smoke::Stack x) {
-	// open(const QString&)
-	bool xret = this->QSqlDriver::open(*(const QString *)x[1].s_class);
-	x[0].s_bool = (bool)xret;
-    }
-    void x_27(Smoke::Stack x) {
-	// close()
-	this->QSqlDriver::close();
-    }
-    void x_28(Smoke::Stack x) const {
-	// createQuery()
-	QSqlQuery xret = this->QSqlDriver::createQuery();
-	x[0].s_class = (void*)new QSqlQuery(xret);
-    }
-    void x_29(Smoke::Stack x) {
+    void x_21(Smoke::Stack x) {
 	// setOpen(bool)
 	this->QSqlDriver::setOpen((bool)x[1].s_bool);
     }
-    void x_30(Smoke::Stack x) {
+    void x_22(Smoke::Stack x) {
 	// setOpenError(bool)
 	this->QSqlDriver::setOpenError((bool)x[1].s_bool);
     }
-    void x_31(Smoke::Stack x) {
+    void x_23(Smoke::Stack x) {
 	// setLastError(const QSqlError&)
 	this->QSqlDriver::setLastError(*(const QSqlError *)x[1].s_class);
     }
@@ -254,7 +215,7 @@ public:
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
 	qt_Smoke->callMethod(7417, (void*)this, x, true /*pure virtual*/);
-return (bool)x[0].s_bool;
+	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
     virtual void insertChild(QObject* x1) {
@@ -281,7 +242,7 @@ return (bool)x[0].s_bool;
 	x[4].s_class = (void*)&x4;
 	x[5].s_int = (int)x5;
 	qt_Smoke->callMethod(7418, (void*)this, x, true /*pure virtual*/);
-return (bool)x[0].s_bool;
+	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
     virtual QSqlIndex primaryIndex(const QString& x1) const {
@@ -438,14 +399,6 @@ void xcall_QSqlDriver(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 21: xself->x_21(args);	break;
 	case 22: xself->x_22(args);	break;
 	case 23: xself->x_23(args);	break;
-	case 24: xself->x_24(args);	break;
-	case 25: xself->x_25(args);	break;
-	case 26: xself->x_26(args);	break;
-	case 27: xself->x_27(args);	break;
-	case 28: xself->x_28(args);	break;
-	case 29: xself->x_29(args);	break;
-	case 30: xself->x_30(args);	break;
-	case 31: xself->x_31(args);	break;
-	case 32: delete (QSqlDriver*)xself;	break;
+	case 24: delete (QSqlDriver*)xself;	break;
     }
 }

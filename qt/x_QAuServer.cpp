@@ -23,28 +23,15 @@ public:
 	this->QAuServer::play(*(const QString *)x[1].s_class);
     }
     void x_3(Smoke::Stack x) {
-	// play(QSound*)
-	this->QAuServer::play((QSound*)x[1].s_class);
-    }
-    void x_4(Smoke::Stack x) {
-	// stop(QSound*)
-	this->QAuServer::stop((QSound*)x[1].s_class);
-    }
-    void x_5(Smoke::Stack x) {
-	// okay()
-	bool xret = this->QAuServer::okay();
-	x[0].s_bool = (bool)xret;
-    }
-    void x_6(Smoke::Stack x) {
 	// setBucket(QSound*, QAuBucket*)
 	this->QAuServer::setBucket((QSound*)x[1].s_class,(QAuBucket*)x[2].s_class);
     }
-    void x_7(Smoke::Stack x) {
+    void x_4(Smoke::Stack x) {
 	// bucket(QSound*)
 	QAuBucket* xret = this->QAuServer::bucket((QSound*)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    void x_8(Smoke::Stack x) {
+    void x_5(Smoke::Stack x) {
 	// decLoop(QSound*)
 	int xret = this->QAuServer::decLoop((QSound*)x[1].s_class);
 	x[0].s_int = (int)xret;
@@ -109,7 +96,7 @@ public:
     virtual bool okay() {
 	Smoke::StackItem x[1];
 	qt_Smoke->callMethod(223, (void*)this, x, true /*pure virtual*/);
-return (bool)x[0].s_bool;
+	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
     virtual void play(QSound* x1) {
@@ -179,9 +166,6 @@ void xcall_QAuServer(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 3: xself->x_3(args);	break;
 	case 4: xself->x_4(args);	break;
 	case 5: xself->x_5(args);	break;
-	case 6: xself->x_6(args);	break;
-	case 7: xself->x_7(args);	break;
-	case 8: xself->x_8(args);	break;
-	case 9: delete (QAuServer*)xself;	break;
+	case 6: delete (QAuServer*)xself;	break;
     }
 }

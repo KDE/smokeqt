@@ -8,16 +8,10 @@ private:
     QSqlDriverCreatorBase *xthis;
 public:
     x_QSqlDriverCreatorBase(void *x) : xthis((QSqlDriverCreatorBase*)x) {}
-    void x_0(Smoke::Stack x) {
-	// createObject()
-	QSqlDriver* xret = xthis->QSqlDriverCreatorBase::createObject();
-	x[0].s_class = (void*)xret;
-    }
     ~x_QSqlDriverCreatorBase() {}
 };
 void xcall_QSqlDriverCreatorBase(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QSqlDriverCreatorBase xtmp(obj), *xself = &xtmp;
     switch(xi) {
-	case 0: xself->x_0(args);	break;
     }
 }

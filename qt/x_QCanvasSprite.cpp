@@ -190,7 +190,7 @@ public:
     }
     virtual QCanvasPixmap* imageAdvanced() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(673, (void*)this, x)) 	return (QCanvasPixmap*)x[0].s_class;
+	if(qt_Smoke->callMethod(673, (void*)this, x)) return (QCanvasPixmap*)x[0].s_class;
 	return this->QCanvasSprite::imageAdvanced();
     }
     virtual void move(double x1, double x2, int x3) {

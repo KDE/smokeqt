@@ -167,7 +167,7 @@ public:
     }
     virtual QWidget* createEditor() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(8468, (void*)this, x)) 	return (QWidget*)x[0].s_class;
+	if(qt_Smoke->callMethod(8468, (void*)this, x)) return (QWidget*)x[0].s_class;
 	return this->QTableItem::createEditor();
     }
     virtual QString key() const {

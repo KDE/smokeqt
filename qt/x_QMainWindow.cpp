@@ -532,7 +532,7 @@ public:
     virtual QDockArea* dockingArea(const QPoint& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->callMethod(4769, (void*)this, x)) 	return (QDockArea*)x[0].s_class;
+	if(qt_Smoke->callMethod(4769, (void*)this, x)) return (QDockArea*)x[0].s_class;
 	return this->QMainWindow::dockingArea(x1);
     }
     virtual void dragEnterEvent(QDragEnterEvent* x1) {

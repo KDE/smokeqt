@@ -13,11 +13,15 @@ public:
     x_QBitVal(QBitArray* x1, uint x2) : QBitVal(x1, x2) {
     }
     void x_1(Smoke::Stack x) {
+	// operator int()
+	this->QBitVal::operator int();
+    }
+    void x_2(Smoke::Stack x) {
 	// operator=(const QBitVal&)
 	QBitVal& xret = this->QBitVal::operator=(*(const QBitVal *)x[1].s_class);
 	x[0].s_class = (void*)&xret;
     }
-    void x_2(Smoke::Stack x) {
+    void x_3(Smoke::Stack x) {
 	// operator=(bool)
 	QBitVal& xret = this->QBitVal::operator=((bool)x[1].s_bool);
 	x[0].s_class = (void*)&xret;
@@ -30,5 +34,6 @@ void xcall_QBitVal(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 0: x_QBitVal::x_0(args);	break;
 	case 1: xself->x_1(args);	break;
 	case 2: xself->x_2(args);	break;
+	case 3: xself->x_3(args);	break;
     }
 }

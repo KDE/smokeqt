@@ -41,10 +41,6 @@ public:
 	// scan(const QPointArray&, bool, int, int, QPolygonScanner::Edge)
 	xthis->QPolygonScanner::scan(*(const QPointArray *)x[1].s_class,(bool)x[2].s_bool,(int)x[3].s_int,(int)x[4].s_int,*(QPolygonScanner::Edge *)x[5].s_class);
     }
-    void x_9(Smoke::Stack x) {
-	// processSpans(int, QPoint*, int*)
-	xthis->QPolygonScanner::processSpans((int)x[1].s_int,(QPoint*)x[2].s_class,(int*)x[3].s_class);
-    }
     ~x_QPolygonScanner() {}
 };
 void xcall_QPolygonScanner(Smoke::Index xi, void *obj, Smoke::Stack args) {
@@ -59,6 +55,5 @@ void xcall_QPolygonScanner(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 6: xself->x_6(args);	break;
 	case 7: xself->x_7(args);	break;
 	case 8: xself->x_8(args);	break;
-	case 9: xself->x_9(args);	break;
     }
 }

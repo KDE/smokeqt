@@ -89,7 +89,7 @@ public:
     virtual const QMimeSource* data(const QString& x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->callMethod(5126, (void*)this, x)) 	return (const QMimeSource*)x[0].s_class;
+	if(qt_Smoke->callMethod(5126, (void*)this, x)) return (const QMimeSource*)x[0].s_class;
 	return this->QMimeSourceFactory::data(x1);
     }
     virtual QStringList filePath() const {

@@ -189,7 +189,7 @@ public:
     }
     virtual QLayout* layout() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(4106, (void*)this, x)) 	return (QLayout*)x[0].s_class;
+	if(qt_Smoke->callMethod(4106, (void*)this, x)) return (QLayout*)x[0].s_class;
 	return this->QLayout::layout();
     }
     virtual QSize maximumSize() const {
@@ -290,7 +290,7 @@ public:
     }
     virtual QSpacerItem* spacerItem() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(4132, (void*)this, x)) 	return (QSpacerItem*)x[0].s_class;
+	if(qt_Smoke->callMethod(4132, (void*)this, x)) return (QSpacerItem*)x[0].s_class;
 	return this->QLayoutItem::spacerItem();
     }
     virtual void timerEvent(QTimerEvent* x1) {
@@ -301,7 +301,7 @@ public:
     }
     virtual QWidget* widget() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(4129, (void*)this, x)) 	return (QWidget*)x[0].s_class;
+	if(qt_Smoke->callMethod(4129, (void*)this, x)) return (QWidget*)x[0].s_class;
 	return this->QLayoutItem::widget();
     }
     ~x_QVBoxLayout() {}

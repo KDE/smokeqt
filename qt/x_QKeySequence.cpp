@@ -27,24 +27,32 @@ public:
     }
     x_QKeySequence(int x1) : QKeySequence(x1) {
     }
-    static void x_3(Smoke::Stack x) {
+    void x_3(Smoke::Stack x) const {
+	// operator QString()
+	this->QKeySequence::operator QString();
+    }
+    void x_4(Smoke::Stack x) const {
+	// operator int()
+	this->QKeySequence::operator int();
+    }
+    static void x_5(Smoke::Stack x) {
 	// QKeySequence(const QKeySequence&)
 	x_QKeySequence* xret = new x_QKeySequence(*(const QKeySequence *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QKeySequence(const QKeySequence& x1) : QKeySequence(x1) {
     }
-    void x_4(Smoke::Stack x) {
+    void x_6(Smoke::Stack x) {
 	// operator=(const QKeySequence&)
 	QKeySequence& xret = this->QKeySequence::operator=(*(const QKeySequence *)x[1].s_class);
 	x[0].s_class = (void*)&xret;
     }
-    void x_5(Smoke::Stack x) const {
+    void x_7(Smoke::Stack x) const {
 	// operator==(const QKeySequence&)
 	bool xret = this->QKeySequence::operator==(*(const QKeySequence *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
-    void x_6(Smoke::Stack x) const {
+    void x_8(Smoke::Stack x) const {
 	// operator!=(const QKeySequence&)
 	bool xret = this->QKeySequence::operator!=(*(const QKeySequence *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
@@ -57,10 +65,12 @@ void xcall_QKeySequence(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 0: x_QKeySequence::x_0(args);	break;
 	case 1: x_QKeySequence::x_1(args);	break;
 	case 2: x_QKeySequence::x_2(args);	break;
-	case 3: x_QKeySequence::x_3(args);	break;
+	case 3: xself->x_3(args);	break;
 	case 4: xself->x_4(args);	break;
-	case 5: xself->x_5(args);	break;
+	case 5: x_QKeySequence::x_5(args);	break;
 	case 6: xself->x_6(args);	break;
-	case 7: delete (QKeySequence*)xself;	break;
+	case 7: xself->x_7(args);	break;
+	case 8: xself->x_8(args);	break;
+	case 9: delete (QKeySequence*)xself;	break;
     }
 }

@@ -206,43 +206,47 @@ public:
 	x[0].s_bool = (bool)xret;
     }
     void x_40(Smoke::Stack x) const {
+	// operator QString()
+	this->QUrl::operator QString();
+    }
+    void x_41(Smoke::Stack x) const {
 	// toString(bool, bool)
 	QString xret = this->QUrl::toString((bool)x[1].s_bool,(bool)x[2].s_bool);
 	x[0].s_class = (void*)new QString(xret);
     }
-    void x_41(Smoke::Stack x) const {
+    void x_42(Smoke::Stack x) const {
 	// toString(bool)
 	QString xret = this->QUrl::toString((bool)x[1].s_bool);
 	x[0].s_class = (void*)new QString(xret);
     }
-    void x_42(Smoke::Stack x) const {
+    void x_43(Smoke::Stack x) const {
 	// toString()
 	QString xret = this->QUrl::toString();
 	x[0].s_class = (void*)new QString(xret);
     }
-    void x_43(Smoke::Stack x) {
+    void x_44(Smoke::Stack x) {
 	// cdUp()
 	bool xret = this->QUrl::cdUp();
 	x[0].s_bool = (bool)xret;
     }
-    static void x_44(Smoke::Stack x) {
+    static void x_45(Smoke::Stack x) {
 	// decode(QString&)
 	QUrl::decode(*(QString *)x[1].s_class);
     }
-    static void x_45(Smoke::Stack x) {
+    static void x_46(Smoke::Stack x) {
 	// encode(QString&)
 	QUrl::encode(*(QString *)x[1].s_class);
     }
-    static void x_46(Smoke::Stack x) {
+    static void x_47(Smoke::Stack x) {
 	// isRelativeUrl(const QString&)
 	bool xret = QUrl::isRelativeUrl(*(const QString *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
-    void x_47(Smoke::Stack x) {
+    void x_48(Smoke::Stack x) {
 	// reset()
 	this->QUrl::reset();
     }
-    void x_48(Smoke::Stack x) {
+    void x_49(Smoke::Stack x) {
 	// parse(const QString&)
 	bool xret = this->QUrl::parse(*(const QString *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
@@ -390,11 +394,12 @@ void xcall_QUrl(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 41: xself->x_41(args);	break;
 	case 42: xself->x_42(args);	break;
 	case 43: xself->x_43(args);	break;
-	case 44: x_QUrl::x_44(args);	break;
+	case 44: xself->x_44(args);	break;
 	case 45: x_QUrl::x_45(args);	break;
 	case 46: x_QUrl::x_46(args);	break;
-	case 47: xself->x_47(args);	break;
+	case 47: x_QUrl::x_47(args);	break;
 	case 48: xself->x_48(args);	break;
-	case 49: delete (QUrl*)xself;	break;
+	case 49: xself->x_49(args);	break;
+	case 50: delete (QUrl*)xself;	break;
     }
 }

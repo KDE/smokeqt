@@ -570,14 +570,14 @@ public:
 	x[1].s_class = (void*)&x1;
 	x[2].s_int = (int)x2;
 	x[3].s_int = (int)x3;
-	if(qt_Smoke->callMethod(1806, (void*)this, x)) 	return (const QFileInfoList*)x[0].s_class;
+	if(qt_Smoke->callMethod(1806, (void*)this, x)) return (const QFileInfoList*)x[0].s_class;
 	return this->QDir::entryInfoList(x1, x2, x3);
     }
     virtual const QFileInfoList* entryInfoList(int x1, int x2) const {
 	Smoke::StackItem x[3];
 	x[1].s_int = (int)x1;
 	x[2].s_int = (int)x2;
-	if(qt_Smoke->callMethod(1803, (void*)this, x)) 	return (const QFileInfoList*)x[0].s_class;
+	if(qt_Smoke->callMethod(1803, (void*)this, x)) return (const QFileInfoList*)x[0].s_class;
 	return this->QDir::entryInfoList(x1, x2);
     }
     virtual QStringList entryList(const QString& x1, int x2, int x3) const {

@@ -786,7 +786,7 @@ public:
     }
     virtual QDragObject* dragObject() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(4571, (void*)this, x)) 	return (QDragObject*)x[0].s_class;
+	if(qt_Smoke->callMethod(4571, (void*)this, x)) return (QDragObject*)x[0].s_class;
 	return this->QListView::dragObject();
     }
     virtual void drawContents(QPainter* x1, int x2, int x3, int x4, int x5) {

@@ -41,39 +41,30 @@ public:
 	x[0].s_class = (void*)new QBrush(xret);
     }
     void x_6(Smoke::Stack x) const {
-	// areaPoints()
-	QPointArray xret = this->QCanvasPolygonalItem::areaPoints();
-	x[0].s_class = (void*)new QPointArray(xret);
-    }
-    void x_7(Smoke::Stack x) const {
 	// areaPointsAdvanced()
 	QPointArray xret = this->QCanvasPolygonalItem::areaPointsAdvanced();
 	x[0].s_class = (void*)new QPointArray(xret);
     }
-    void x_8(Smoke::Stack x) const {
+    void x_7(Smoke::Stack x) const {
 	// boundingRect()
 	QRect xret = this->QCanvasPolygonalItem::boundingRect();
 	x[0].s_class = (void*)new QRect(xret);
     }
-    void x_9(Smoke::Stack x) const {
+    void x_8(Smoke::Stack x) const {
 	// rtti()
 	int xret = this->QCanvasPolygonalItem::rtti();
 	x[0].s_int = (int)xret;
     }
-    void x_10(Smoke::Stack x) {
+    void x_9(Smoke::Stack x) {
 	// draw(QPainter&)
 	this->QCanvasPolygonalItem::draw(*(QPainter *)x[1].s_class);
     }
-    void x_11(Smoke::Stack x) {
-	// drawShape(QPainter&)
-	this->QCanvasPolygonalItem::drawShape(*(QPainter *)x[1].s_class);
-    }
-    void x_12(Smoke::Stack x) const {
+    void x_10(Smoke::Stack x) const {
 	// winding()
 	bool xret = this->QCanvasPolygonalItem::winding();
 	x[0].s_bool = (bool)xret;
     }
-    void x_13(Smoke::Stack x) {
+    void x_11(Smoke::Stack x) {
 	// setWinding(bool)
 	this->QCanvasPolygonalItem::setWinding((bool)x[1].s_bool);
     }
@@ -225,8 +216,6 @@ void xcall_QCanvasPolygonalItem(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 9: xself->x_9(args);	break;
 	case 10: xself->x_10(args);	break;
 	case 11: xself->x_11(args);	break;
-	case 12: xself->x_12(args);	break;
-	case 13: xself->x_13(args);	break;
-	case 14: delete (QCanvasPolygonalItem*)xself;	break;
+	case 12: delete (QCanvasPolygonalItem*)xself;	break;
     }
 }

@@ -165,7 +165,7 @@ public:
     }
     virtual QGArray::array_data* newData() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(3000, (void*)this, x)) 	return (QGArray::array_data*)x[0].s_class;
+	if(qt_Smoke->callMethod(3000, (void*)this, x)) return (QGArray::array_data*)x[0].s_class;
 	return this->QGArray::newData();
     }
     ~x_QGArray() {}

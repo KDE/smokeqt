@@ -40,21 +40,25 @@ public:
 	x[0].s_class = (void*)new QString(xret);
     }
     void x_5(Smoke::Stack x) const {
+	// operator QString()
+	this->QUuid::operator QString();
+    }
+    void x_6(Smoke::Stack x) const {
 	// isNull()
 	bool xret = this->QUuid::isNull();
 	x[0].s_bool = (bool)xret;
     }
-    void x_6(Smoke::Stack x) {
+    void x_7(Smoke::Stack x) {
 	// operator=(const QUuid&)
 	QUuid& xret = this->QUuid::operator=(*(const QUuid *)x[1].s_class);
 	x[0].s_class = (void*)&xret;
     }
-    void x_7(Smoke::Stack x) const {
+    void x_8(Smoke::Stack x) const {
 	// operator==(const QUuid&)
 	bool xret = this->QUuid::operator==(*(const QUuid *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
-    void x_8(Smoke::Stack x) const {
+    void x_9(Smoke::Stack x) const {
 	// operator!=(const QUuid&)
 	bool xret = this->QUuid::operator!=(*(const QUuid *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
@@ -73,5 +77,6 @@ void xcall_QUuid(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 6: xself->x_6(args);	break;
 	case 7: xself->x_7(args);	break;
 	case 8: xself->x_8(args);	break;
+	case 9: xself->x_9(args);	break;
     }
 }

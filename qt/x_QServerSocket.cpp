@@ -110,10 +110,6 @@ public:
 	x[0].s_class = (void*)new QHostAddress(xret);
     }
     void x_16(Smoke::Stack x) {
-	// newConnection(int)
-	this->QServerSocket::newConnection((int)x[1].s_int);
-    }
-    void x_17(Smoke::Stack x) {
 	// socketDevice()
 	QSocketDevice* xret = this->QServerSocket::socketDevice();
 	x[0].s_class = (void*)xret;
@@ -240,7 +236,6 @@ void xcall_QServerSocket(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 14: xself->x_14(args);	break;
 	case 15: xself->x_15(args);	break;
 	case 16: xself->x_16(args);	break;
-	case 17: xself->x_17(args);	break;
-	case 18: delete (QServerSocket*)xself;	break;
+	case 17: delete (QServerSocket*)xself;	break;
     }
 }

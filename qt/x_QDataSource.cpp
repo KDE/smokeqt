@@ -9,28 +9,19 @@ private:
 public:
     x_QDataSource(void *x) : xthis((QDataSource*)x) {}
     void x_0(Smoke::Stack x) {
-	// readyToSend()
-	int xret = xthis->QDataSource::readyToSend();
-	x[0].s_int = (int)xret;
-    }
-    void x_1(Smoke::Stack x) {
-	// sendTo(QDataSink*, int)
-	xthis->QDataSource::sendTo((QDataSink*)x[1].s_class,(int)x[2].s_int);
-    }
-    void x_2(Smoke::Stack x) {
 	// maybeReady()
 	xthis->QDataSource::maybeReady();
     }
-    void x_3(Smoke::Stack x) const {
+    void x_1(Smoke::Stack x) const {
 	// rewindable()
 	bool xret = xthis->QDataSource::rewindable();
 	x[0].s_bool = (bool)xret;
     }
-    void x_4(Smoke::Stack x) {
+    void x_2(Smoke::Stack x) {
 	// enableRewind(bool)
 	xthis->QDataSource::enableRewind((bool)x[1].s_bool);
     }
-    void x_5(Smoke::Stack x) {
+    void x_3(Smoke::Stack x) {
 	// rewind()
 	xthis->QDataSource::rewind();
     }
@@ -43,7 +34,5 @@ void xcall_QDataSource(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 1: xself->x_1(args);	break;
 	case 2: xself->x_2(args);	break;
 	case 3: xself->x_3(args);	break;
-	case 4: xself->x_4(args);	break;
-	case 5: xself->x_5(args);	break;
     }
 }

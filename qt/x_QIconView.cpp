@@ -790,7 +790,7 @@ public:
     }
     virtual QDragObject* dragObject() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(3584, (void*)this, x)) 	return (QDragObject*)x[0].s_class;
+	if(qt_Smoke->callMethod(3584, (void*)this, x)) return (QDragObject*)x[0].s_class;
 	return this->QIconView::dragObject();
     }
     virtual void drawBackground(QPainter* x1, const QRect& x2) {

@@ -1032,13 +1032,13 @@ public:
     }
     virtual QPopupMenu* createPopupMenu() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(8790, (void*)this, x)) 	return (QPopupMenu*)x[0].s_class;
+	if(qt_Smoke->callMethod(8790, (void*)this, x)) return (QPopupMenu*)x[0].s_class;
 	return this->QTextEdit::createPopupMenu();
     }
     virtual QPopupMenu* createPopupMenu(const QPoint& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->callMethod(8789, (void*)this, x)) 	return (QPopupMenu*)x[0].s_class;
+	if(qt_Smoke->callMethod(8789, (void*)this, x)) return (QPopupMenu*)x[0].s_class;
 	return this->QTextEdit::createPopupMenu(x1);
     }
     virtual void customEvent(QCustomEvent* x1) {

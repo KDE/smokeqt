@@ -15,26 +15,6 @@ public:
     }
     x_QTextCodecPlugin() : QTextCodecPlugin() {
     }
-    void x_1(Smoke::Stack x) const {
-	// names()
-	QStringList xret = this->QTextCodecPlugin::names();
-	x[0].s_class = (void*)new QStringList(xret);
-    }
-    void x_2(Smoke::Stack x) {
-	// createForName(const QString&)
-	QTextCodec* xret = this->QTextCodecPlugin::createForName(*(const QString *)x[1].s_class);
-	x[0].s_class = (void*)xret;
-    }
-    void x_3(Smoke::Stack x) const {
-	// mibEnums()
-	QValueList<int> xret = this->QTextCodecPlugin::mibEnums();
-	x[0].s_class = (void*)new QValueList<int>(xret);
-    }
-    void x_4(Smoke::Stack x) {
-	// createForMib(int)
-	QTextCodec* xret = this->QTextCodecPlugin::createForMib((int)x[1].s_int);
-	x[0].s_class = (void*)xret;
-    }
     virtual bool checkConnectArgs(const char* x1, const QObject* x2, const char* x3) {
 	Smoke::StackItem x[4];
 	x[1].s_class = (void*)x1;
@@ -160,10 +140,6 @@ void xcall_QTextCodecPlugin(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QTextCodecPlugin *xself = (x_QTextCodecPlugin*)obj;
     switch(xi) {
 	case 0: x_QTextCodecPlugin::x_0(args);	break;
-	case 1: xself->x_1(args);	break;
-	case 2: xself->x_2(args);	break;
-	case 3: xself->x_3(args);	break;
-	case 4: xself->x_4(args);	break;
-	case 5: delete (QTextCodecPlugin*)xself;	break;
+	case 1: delete (QTextCodecPlugin*)xself;	break;
     }
 }

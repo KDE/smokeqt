@@ -109,18 +109,14 @@ public:
 	x[0].s_bool = (bool)xret;
     }
     void x_21(Smoke::Stack x) {
-	// maybeTip(const QPoint&)
-	this->QToolTip::maybeTip(*(const QPoint *)x[1].s_class);
-    }
-    void x_22(Smoke::Stack x) {
 	// tip(const QRect&, const QString&)
 	this->QToolTip::tip(*(const QRect *)x[1].s_class,*(const QString *)x[2].s_class);
     }
-    void x_23(Smoke::Stack x) {
+    void x_22(Smoke::Stack x) {
 	// tip(const QRect&, const QString&, const QString&)
 	this->QToolTip::tip(*(const QRect *)x[1].s_class,*(const QString *)x[2].s_class,*(const QString *)x[3].s_class);
     }
-    void x_24(Smoke::Stack x) {
+    void x_23(Smoke::Stack x) {
 	// clear()
 	this->QToolTip::clear();
     }
@@ -160,6 +156,5 @@ void xcall_QToolTip(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 21: xself->x_21(args);	break;
 	case 22: xself->x_22(args);	break;
 	case 23: xself->x_23(args);	break;
-	case 24: xself->x_24(args);	break;
     }
 }

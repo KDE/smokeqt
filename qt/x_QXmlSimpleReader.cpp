@@ -127,27 +127,27 @@ public:
     }
     virtual QXmlDTDHandler* DTDHandler() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(10131, (void*)this, x)) 	return (QXmlDTDHandler*)x[0].s_class;
+	if(qt_Smoke->callMethod(10131, (void*)this, x)) return (QXmlDTDHandler*)x[0].s_class;
 	return this->QXmlSimpleReader::DTDHandler();
     }
     virtual QXmlContentHandler* contentHandler() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(10133, (void*)this, x)) 	return (QXmlContentHandler*)x[0].s_class;
+	if(qt_Smoke->callMethod(10133, (void*)this, x)) return (QXmlContentHandler*)x[0].s_class;
 	return this->QXmlSimpleReader::contentHandler();
     }
     virtual QXmlDeclHandler* declHandler() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(10139, (void*)this, x)) 	return (QXmlDeclHandler*)x[0].s_class;
+	if(qt_Smoke->callMethod(10139, (void*)this, x)) return (QXmlDeclHandler*)x[0].s_class;
 	return this->QXmlSimpleReader::declHandler();
     }
     virtual QXmlEntityResolver* entityResolver() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(10129, (void*)this, x)) 	return (QXmlEntityResolver*)x[0].s_class;
+	if(qt_Smoke->callMethod(10129, (void*)this, x)) return (QXmlEntityResolver*)x[0].s_class;
 	return this->QXmlSimpleReader::entityResolver();
     }
     virtual QXmlErrorHandler* errorHandler() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(10135, (void*)this, x)) 	return (QXmlErrorHandler*)x[0].s_class;
+	if(qt_Smoke->callMethod(10135, (void*)this, x)) return (QXmlErrorHandler*)x[0].s_class;
 	return this->QXmlSimpleReader::errorHandler();
     }
     virtual bool feature(const QString& x1, bool* x2) const {
@@ -171,7 +171,7 @@ public:
     }
     virtual QXmlLexicalHandler* lexicalHandler() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(10137, (void*)this, x)) 	return (QXmlLexicalHandler*)x[0].s_class;
+	if(qt_Smoke->callMethod(10137, (void*)this, x)) return (QXmlLexicalHandler*)x[0].s_class;
 	return this->QXmlSimpleReader::lexicalHandler();
     }
     virtual bool parse(const QXmlInputSource& x1) {

@@ -312,7 +312,7 @@ public:
     virtual const QNetworkOperation* get(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->callMethod(9248, (void*)this, x)) 	return (const QNetworkOperation*)x[0].s_class;
+	if(qt_Smoke->callMethod(9248, (void*)this, x)) return (const QNetworkOperation*)x[0].s_class;
 	return this->QUrlOperator::get(x1);
     }
     virtual QUrlInfo info(const QString& x1) const {
@@ -340,13 +340,13 @@ public:
     }
     virtual const QNetworkOperation* listChildren() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(9244, (void*)this, x)) 	return (const QNetworkOperation*)x[0].s_class;
+	if(qt_Smoke->callMethod(9244, (void*)this, x)) return (const QNetworkOperation*)x[0].s_class;
 	return this->QUrlOperator::listChildren();
     }
     virtual const QNetworkOperation* mkdir(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->callMethod(9245, (void*)this, x)) 	return (const QNetworkOperation*)x[0].s_class;
+	if(qt_Smoke->callMethod(9245, (void*)this, x)) return (const QNetworkOperation*)x[0].s_class;
 	return this->QUrlOperator::mkdir(x1);
     }
     virtual bool parse(const QString& x1) {
@@ -370,13 +370,13 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_class = (void*)&x1;
 	x[2].s_class = (void*)&x2;
-	if(qt_Smoke->callMethod(9250, (void*)this, x)) 	return (const QNetworkOperation*)x[0].s_class;
+	if(qt_Smoke->callMethod(9250, (void*)this, x)) return (const QNetworkOperation*)x[0].s_class;
 	return this->QUrlOperator::put(x1, x2);
     }
     virtual const QNetworkOperation* remove(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->callMethod(9246, (void*)this, x)) 	return (const QNetworkOperation*)x[0].s_class;
+	if(qt_Smoke->callMethod(9246, (void*)this, x)) return (const QNetworkOperation*)x[0].s_class;
 	return this->QUrlOperator::remove(x1);
     }
     virtual void removeChild(QObject* x1) {
@@ -389,7 +389,7 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_class = (void*)&x1;
 	x[2].s_class = (void*)&x2;
-	if(qt_Smoke->callMethod(9247, (void*)this, x)) 	return (const QNetworkOperation*)x[0].s_class;
+	if(qt_Smoke->callMethod(9247, (void*)this, x)) return (const QNetworkOperation*)x[0].s_class;
 	return this->QUrlOperator::rename(x1, x2);
     }
     virtual void reset() {

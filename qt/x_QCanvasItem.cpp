@@ -2,7 +2,6 @@
 #include <smoke.h>
 #include <qt_smoke.h>
 #include <qrect.h>
-#include <qpainter.h>
 #include <qcanvas.h>
 
 class x_QCanvasItem : public QCanvasItem {
@@ -106,108 +105,94 @@ public:
 	this->QCanvasItem::advance((int)x[1].s_int);
     }
     void x_26(Smoke::Stack x) const {
-	// collidesWith(const QCanvasItem*)
-	bool xret = this->QCanvasItem::collidesWith((const QCanvasItem*)x[1].s_class);
-	x[0].s_bool = (bool)xret;
-    }
-    void x_27(Smoke::Stack x) const {
 	// collisions(bool)
 	QCanvasItemList xret = this->QCanvasItem::collisions((bool)x[1].s_bool);
 	x[0].s_class = (void*)new QCanvasItemList(xret);
     }
-    void x_28(Smoke::Stack x) {
+    void x_27(Smoke::Stack x) {
 	// setCanvas(QCanvas*)
 	this->QCanvasItem::setCanvas((QCanvas*)x[1].s_class);
     }
-    void x_29(Smoke::Stack x) {
-	// draw(QPainter&)
-	this->QCanvasItem::draw(*(QPainter *)x[1].s_class);
-    }
-    void x_30(Smoke::Stack x) {
+    void x_28(Smoke::Stack x) {
 	// show()
 	this->QCanvasItem::show();
     }
-    void x_31(Smoke::Stack x) {
+    void x_29(Smoke::Stack x) {
 	// hide()
 	this->QCanvasItem::hide();
     }
-    void x_32(Smoke::Stack x) {
+    void x_30(Smoke::Stack x) {
 	// setVisible(bool)
 	this->QCanvasItem::setVisible((bool)x[1].s_bool);
     }
-    void x_33(Smoke::Stack x) const {
+    void x_31(Smoke::Stack x) const {
 	// isVisible()
 	bool xret = this->QCanvasItem::isVisible();
 	x[0].s_bool = (bool)xret;
     }
-    void x_34(Smoke::Stack x) {
+    void x_32(Smoke::Stack x) {
 	// setSelected(bool)
 	this->QCanvasItem::setSelected((bool)x[1].s_bool);
     }
-    void x_35(Smoke::Stack x) const {
+    void x_33(Smoke::Stack x) const {
 	// isSelected()
 	bool xret = this->QCanvasItem::isSelected();
 	x[0].s_bool = (bool)xret;
     }
-    void x_36(Smoke::Stack x) {
+    void x_34(Smoke::Stack x) {
 	// setEnabled(bool)
 	this->QCanvasItem::setEnabled((bool)x[1].s_bool);
     }
-    void x_37(Smoke::Stack x) const {
+    void x_35(Smoke::Stack x) const {
 	// isEnabled()
 	bool xret = this->QCanvasItem::isEnabled();
 	x[0].s_bool = (bool)xret;
     }
-    void x_38(Smoke::Stack x) {
+    void x_36(Smoke::Stack x) {
 	// setActive(bool)
 	this->QCanvasItem::setActive((bool)x[1].s_bool);
     }
-    void x_39(Smoke::Stack x) const {
+    void x_37(Smoke::Stack x) const {
 	// isActive()
 	bool xret = this->QCanvasItem::isActive();
 	x[0].s_bool = (bool)xret;
     }
-    void x_40(Smoke::Stack x) const {
+    void x_38(Smoke::Stack x) const {
 	// visible()
 	bool xret = this->QCanvasItem::visible();
 	x[0].s_bool = (bool)xret;
     }
-    void x_41(Smoke::Stack x) const {
+    void x_39(Smoke::Stack x) const {
 	// selected()
 	bool xret = this->QCanvasItem::selected();
 	x[0].s_bool = (bool)xret;
     }
-    void x_42(Smoke::Stack x) const {
+    void x_40(Smoke::Stack x) const {
 	// enabled()
 	bool xret = this->QCanvasItem::enabled();
 	x[0].s_bool = (bool)xret;
     }
-    void x_43(Smoke::Stack x) const {
+    void x_41(Smoke::Stack x) const {
 	// active()
 	bool xret = this->QCanvasItem::active();
 	x[0].s_bool = (bool)xret;
     }
-    void x_44(Smoke::Stack x) const {
+    void x_42(Smoke::Stack x) const {
 	// rtti()
 	int xret = this->QCanvasItem::rtti();
 	x[0].s_int = (int)xret;
     }
-    void x_45(Smoke::Stack x) const {
-	// boundingRect()
-	QRect xret = this->QCanvasItem::boundingRect();
-	x[0].s_class = (void*)new QRect(xret);
-    }
-    void x_46(Smoke::Stack x) const {
+    void x_43(Smoke::Stack x) const {
 	// boundingRectAdvanced()
 	QRect xret = this->QCanvasItem::boundingRectAdvanced();
 	x[0].s_class = (void*)new QRect(xret);
     }
-    void x_47(Smoke::Stack x) const {
+    void x_44(Smoke::Stack x) const {
 	// canvas()
 	QCanvas* xret = this->QCanvasItem::canvas();
 	x[0].s_class = (void*)xret;
     }
-    void x_48(Smoke::Stack x) {
+    void x_45(Smoke::Stack x) {
 	// update()
 	this->QCanvasItem::update();
     }
@@ -261,8 +246,5 @@ void xcall_QCanvasItem(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 43: xself->x_43(args);	break;
 	case 44: xself->x_44(args);	break;
 	case 45: xself->x_45(args);	break;
-	case 46: xself->x_46(args);	break;
-	case 47: xself->x_47(args);	break;
-	case 48: xself->x_48(args);	break;
     }
 }

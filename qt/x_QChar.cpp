@@ -416,74 +416,78 @@ public:
 	x[0].s_class = (void*)&xret;
     }
     void x_115(Smoke::Stack x) const {
+	// operator char()
+	this->QChar::operator char();
+    }
+    void x_116(Smoke::Stack x) const {
 	// isNull()
 	bool xret = this->QChar::isNull();
 	x[0].s_bool = (bool)xret;
     }
-    void x_116(Smoke::Stack x) const {
+    void x_117(Smoke::Stack x) const {
 	// isPrint()
 	bool xret = this->QChar::isPrint();
 	x[0].s_bool = (bool)xret;
     }
-    void x_117(Smoke::Stack x) const {
+    void x_118(Smoke::Stack x) const {
 	// isPunct()
 	bool xret = this->QChar::isPunct();
 	x[0].s_bool = (bool)xret;
     }
-    void x_118(Smoke::Stack x) const {
+    void x_119(Smoke::Stack x) const {
 	// isSpace()
 	bool xret = this->QChar::isSpace();
 	x[0].s_bool = (bool)xret;
     }
-    void x_119(Smoke::Stack x) const {
+    void x_120(Smoke::Stack x) const {
 	// isMark()
 	bool xret = this->QChar::isMark();
 	x[0].s_bool = (bool)xret;
     }
-    void x_120(Smoke::Stack x) const {
+    void x_121(Smoke::Stack x) const {
 	// isLetter()
 	bool xret = this->QChar::isLetter();
 	x[0].s_bool = (bool)xret;
     }
-    void x_121(Smoke::Stack x) const {
+    void x_122(Smoke::Stack x) const {
 	// isNumber()
 	bool xret = this->QChar::isNumber();
 	x[0].s_bool = (bool)xret;
     }
-    void x_122(Smoke::Stack x) const {
+    void x_123(Smoke::Stack x) const {
 	// isLetterOrNumber()
 	bool xret = this->QChar::isLetterOrNumber();
 	x[0].s_bool = (bool)xret;
     }
-    void x_123(Smoke::Stack x) const {
+    void x_124(Smoke::Stack x) const {
 	// isDigit()
 	bool xret = this->QChar::isDigit();
 	x[0].s_bool = (bool)xret;
     }
-    void x_124(Smoke::Stack x) const {
+    void x_125(Smoke::Stack x) const {
 	// isSymbol()
 	bool xret = this->QChar::isSymbol();
 	x[0].s_bool = (bool)xret;
     }
-    void x_125(Smoke::Stack x) const {
+    void x_126(Smoke::Stack x) const {
 	// cell()
 	uchar xret = this->QChar::cell();
 	x[0].s_uchar = (uchar)xret;
     }
-    void x_126(Smoke::Stack x) const {
+    void x_127(Smoke::Stack x) const {
 	// row()
 	uchar xret = this->QChar::row();
 	x[0].s_uchar = (uchar)xret;
     }
-    void x_127(Smoke::Stack x) {
+    void x_128(Smoke::Stack x) {
 	// setCell(uchar)
 	this->QChar::setCell((uchar)x[1].s_uchar);
     }
-    void x_128(Smoke::Stack x) {
+    void x_129(Smoke::Stack x) {
 	// setRow(uchar)
 	this->QChar::setRow((uchar)x[1].s_uchar);
     }
-    static void x_129(Smoke::Stack x) {
+    static void x_130(Smoke::Stack x) {
 	// networkOrdered()
 	bool xret = QChar::networkOrdered();
 	x[0].s_bool = (bool)xret;
@@ -622,6 +626,7 @@ void xcall_QChar(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 126: xself->x_126(args);	break;
 	case 127: xself->x_127(args);	break;
 	case 128: xself->x_128(args);	break;
-	case 129: x_QChar::x_129(args);	break;
+	case 129: xself->x_129(args);	break;
+	case 130: x_QChar::x_130(args);	break;
     }
 }

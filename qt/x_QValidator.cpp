@@ -34,11 +34,6 @@ public:
     x_QValidator(QObject* x1) : QValidator(x1) {
     }
     void x_6(Smoke::Stack x) const {
-	// validate(QString&, int&)
-	QValidator::State xret = this->QValidator::validate(*(QString *)x[1].s_class,*(int *)x[2].s_class);
-	x[0].s_class = (void*)new QValidator::State(xret);
-    }
-    void x_7(Smoke::Stack x) const {
 	// fixup(QString&)
 	this->QValidator::fixup(*(QString *)x[1].s_class);
     }
@@ -158,7 +153,6 @@ void xcall_QValidator(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 4: x_QValidator::x_4(args);	break;
 	case 5: x_QValidator::x_5(args);	break;
 	case 6: xself->x_6(args);	break;
-	case 7: xself->x_7(args);	break;
-	case 8: delete (QValidator*)xself;	break;
+	case 7: delete (QValidator*)xself;	break;
     }
 }

@@ -97,14 +97,10 @@ public:
 	x[0].s_int = (int)xret;
     }
     void x_17(Smoke::Stack x) {
-	// paint(QPainter*)
-	this->QListBoxItem::paint((QPainter*)x[1].s_class);
-    }
-    void x_18(Smoke::Stack x) {
 	// setText(const QString&)
 	this->QListBoxItem::setText(*(const QString *)x[1].s_class);
     }
-    void x_19(Smoke::Stack x) {
+    void x_18(Smoke::Stack x) {
 	// setCustomHighlighting(bool)
 	this->QListBoxItem::setCustomHighlighting((bool)x[1].s_bool);
     }
@@ -123,7 +119,7 @@ public:
     }
     virtual const QPixmap* pixmap() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(4414, (void*)this, x)) 	return (const QPixmap*)x[0].s_class;
+	if(qt_Smoke->callMethod(4414, (void*)this, x)) return (const QPixmap*)x[0].s_class;
 	return this->QListBoxItem::pixmap();
     }
     virtual int rtti() const {
@@ -177,7 +173,6 @@ void xcall_QListBoxItem(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 16: xself->x_16(args);	break;
 	case 17: xself->x_17(args);	break;
 	case 18: xself->x_18(args);	break;
-	case 19: xself->x_19(args);	break;
-	case 20: delete (QListBoxItem*)xself;	break;
+	case 19: delete (QListBoxItem*)xself;	break;
     }
 }

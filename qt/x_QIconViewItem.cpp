@@ -430,12 +430,12 @@ public:
     }
     virtual QPicture* picture() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(3611, (void*)this, x)) 	return (QPicture*)x[0].s_class;
+	if(qt_Smoke->callMethod(3611, (void*)this, x)) return (QPicture*)x[0].s_class;
 	return this->QIconViewItem::picture();
     }
     virtual QPixmap* pixmap() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(3610, (void*)this, x)) 	return (QPixmap*)x[0].s_class;
+	if(qt_Smoke->callMethod(3610, (void*)this, x)) return (QPixmap*)x[0].s_class;
 	return this->QIconViewItem::pixmap();
     }
     virtual void removeRenameBox() {

@@ -118,12 +118,12 @@ public:
     }
     virtual QTextDecoder* makeDecoder() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(6943, (void*)this, x)) 	return (QTextDecoder*)x[0].s_class;
+	if(qt_Smoke->callMethod(6943, (void*)this, x)) return (QTextDecoder*)x[0].s_class;
 	return this->QSjisCodec::makeDecoder();
     }
     virtual QTextEncoder* makeEncoder() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(8540, (void*)this, x)) 	return (QTextEncoder*)x[0].s_class;
+	if(qt_Smoke->callMethod(8540, (void*)this, x)) return (QTextEncoder*)x[0].s_class;
 	return this->QTextCodec::makeEncoder();
     }
     virtual int mibEnum() const {
@@ -133,12 +133,12 @@ public:
     }
     virtual const char* mimeName() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(6942, (void*)this, x)) 	return (const char*)x[0].s_class;
+	if(qt_Smoke->callMethod(6942, (void*)this, x)) return (const char*)x[0].s_class;
 	return this->QSjisCodec::mimeName();
     }
     virtual const char* name() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(6941, (void*)this, x)) 	return (const char*)x[0].s_class;
+	if(qt_Smoke->callMethod(6941, (void*)this, x)) return (const char*)x[0].s_class;
 	return this->QSjisCodec::name();
     }
     virtual QString toUnicode(const char* x1, int x2) const {

@@ -14,37 +14,24 @@ public:
 	// setAutoDelete(bool)
 	this->QPtrCollection::setAutoDelete((bool)x[1].s_bool);
     }
-    void x_2(Smoke::Stack x) const {
-	// count()
-	uint xret = this->QPtrCollection::count();
-	x[0].s_uint = (uint)xret;
-    }
-    void x_3(Smoke::Stack x) {
-	// clear()
-	this->QPtrCollection::clear();
-    }
-    static void x_4(Smoke::Stack x) {
+    static void x_2(Smoke::Stack x) {
 	// QPtrCollection()
 	x_QPtrCollection* xret = new x_QPtrCollection();
 	x[0].s_class = (void*)xret;
     }
     x_QPtrCollection() : QPtrCollection() {
     }
-    static void x_5(Smoke::Stack x) {
+    static void x_3(Smoke::Stack x) {
 	// QPtrCollection(const QPtrCollection&)
 	x_QPtrCollection* xret = new x_QPtrCollection(*(const QPtrCollection *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QPtrCollection(const QPtrCollection& x1) : QPtrCollection(x1) {
     }
-    void x_6(Smoke::Stack x) {
+    void x_4(Smoke::Stack x) {
 	// newItem(Item)
 	Item xret = this->QPtrCollection::newItem(*(Item *)x[1].s_class);
 	x[0].s_class = (void*)new Item(xret);
-    }
-    void x_7(Smoke::Stack x) {
-	// deleteItem(Item)
-	this->QPtrCollection::deleteItem(*(Item *)x[1].s_class);
     }
     virtual void clear() {
 	Smoke::StackItem x[1];
@@ -55,7 +42,7 @@ public:
     virtual uint count() const {
 	Smoke::StackItem x[1];
 	qt_Smoke->callMethod(6325, (void*)this, x, true /*pure virtual*/);
-return (uint)x[0].s_uint;
+	return (uint)x[0].s_uint;
 	// ABSTRACT
     }
     virtual void deleteItem(Item x1) {
@@ -83,11 +70,8 @@ void xcall_QPtrCollection(Smoke::Index xi, void *obj, Smoke::Stack args) {
     switch(xi) {
 	case 0: xself->x_0(args);	break;
 	case 1: xself->x_1(args);	break;
-	case 2: xself->x_2(args);	break;
-	case 3: xself->x_3(args);	break;
-	case 4: x_QPtrCollection::x_4(args);	break;
-	case 5: x_QPtrCollection::x_5(args);	break;
-	case 6: xself->x_6(args);	break;
-	case 7: xself->x_7(args);	break;
+	case 2: x_QPtrCollection::x_2(args);	break;
+	case 3: x_QPtrCollection::x_3(args);	break;
+	case 4: xself->x_4(args);	break;
     }
 }

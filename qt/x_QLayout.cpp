@@ -177,100 +177,87 @@ public:
 	// add(QWidget*)
 	this->QLayout::add((QWidget*)x[1].s_class);
     }
-    void x_33(Smoke::Stack x) {
-	// addItem(QLayoutItem*)
-	this->QLayout::addItem((QLayoutItem*)x[1].s_class);
-    }
-    void x_34(Smoke::Stack x) const {
+    void x_33(Smoke::Stack x) const {
 	// expanding()
 	QSizePolicy::ExpandData xret = this->QLayout::expanding();
 	x[0].s_class = (void*)new QSizePolicy::ExpandData(xret);
     }
-    void x_35(Smoke::Stack x) const {
+    void x_34(Smoke::Stack x) const {
 	// minimumSize()
 	QSize xret = this->QLayout::minimumSize();
 	x[0].s_class = (void*)new QSize(xret);
     }
-    void x_36(Smoke::Stack x) const {
+    void x_35(Smoke::Stack x) const {
 	// maximumSize()
 	QSize xret = this->QLayout::maximumSize();
 	x[0].s_class = (void*)new QSize(xret);
     }
-    void x_37(Smoke::Stack x) {
-	// setGeometry(const QRect&)
-	this->QLayout::setGeometry(*(const QRect *)x[1].s_class);
-    }
-    void x_38(Smoke::Stack x) {
-	// iterator()
-	QLayoutIterator xret = this->QLayout::iterator();
-	x[0].s_class = (void*)new QLayoutIterator(xret);
-    }
-    void x_39(Smoke::Stack x) const {
+    void x_36(Smoke::Stack x) const {
 	// isEmpty()
 	bool xret = this->QLayout::isEmpty();
 	x[0].s_bool = (bool)xret;
     }
-    void x_40(Smoke::Stack x) const {
+    void x_37(Smoke::Stack x) const {
 	// totalHeightForWidth(int)
 	int xret = this->QLayout::totalHeightForWidth((int)x[1].s_int);
 	x[0].s_int = (int)xret;
     }
-    void x_41(Smoke::Stack x) const {
+    void x_38(Smoke::Stack x) const {
 	// totalMinimumSize()
 	QSize xret = this->QLayout::totalMinimumSize();
 	x[0].s_class = (void*)new QSize(xret);
     }
-    void x_42(Smoke::Stack x) const {
+    void x_39(Smoke::Stack x) const {
 	// totalMaximumSize()
 	QSize xret = this->QLayout::totalMaximumSize();
 	x[0].s_class = (void*)new QSize(xret);
     }
-    void x_43(Smoke::Stack x) const {
+    void x_40(Smoke::Stack x) const {
 	// totalSizeHint()
 	QSize xret = this->QLayout::totalSizeHint();
 	x[0].s_class = (void*)new QSize(xret);
     }
-    void x_44(Smoke::Stack x) {
+    void x_41(Smoke::Stack x) {
 	// layout()
 	QLayout* xret = this->QLayout::layout();
 	x[0].s_class = (void*)xret;
     }
-    void x_45(Smoke::Stack x) const {
+    void x_42(Smoke::Stack x) const {
 	// supportsMargin()
 	bool xret = this->QLayout::supportsMargin();
 	x[0].s_bool = (bool)xret;
     }
-    void x_46(Smoke::Stack x) {
+    void x_43(Smoke::Stack x) {
 	// setEnabled(bool)
 	this->QLayout::setEnabled((bool)x[1].s_bool);
     }
-    void x_47(Smoke::Stack x) const {
+    void x_44(Smoke::Stack x) const {
 	// isEnabled()
 	bool xret = this->QLayout::isEnabled();
 	x[0].s_bool = (bool)xret;
     }
-    void x_48(Smoke::Stack x) {
+    void x_45(Smoke::Stack x) {
 	// eventFilter(QObject*, QEvent*)
 	bool xret = this->QLayout::eventFilter((QObject*)x[1].s_class,(QEvent*)x[2].s_class);
 	x[0].s_bool = (bool)xret;
     }
-    void x_49(Smoke::Stack x) {
+    void x_46(Smoke::Stack x) {
 	// childEvent(QChildEvent*)
 	this->QLayout::childEvent((QChildEvent*)x[1].s_class);
     }
-    void x_50(Smoke::Stack x) {
+    void x_47(Smoke::Stack x) {
 	// addChildLayout(QLayout*)
 	this->QLayout::addChildLayout((QLayout*)x[1].s_class);
     }
-    void x_51(Smoke::Stack x) {
+    void x_48(Smoke::Stack x) {
 	// deleteAllItems()
 	this->QLayout::deleteAllItems();
     }
-    void x_52(Smoke::Stack x) {
+    void x_49(Smoke::Stack x) {
 	// setSupportsMargin(bool)
 	this->QLayout::setSupportsMargin((bool)x[1].s_bool);
     }
-    void x_53(Smoke::Stack x) const {
+    void x_50(Smoke::Stack x) const {
 	// alignmentRect(const QRect&)
 	QRect xret = this->QLayout::alignmentRect(*(const QRect *)x[1].s_class);
 	x[0].s_class = (void*)new QRect(xret);
@@ -385,7 +372,7 @@ public:
     }
     virtual QLayout* layout() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(4106, (void*)this, x)) 	return (QLayout*)x[0].s_class;
+	if(qt_Smoke->callMethod(4106, (void*)this, x)) return (QLayout*)x[0].s_class;
 	return this->QLayout::layout();
     }
     virtual QSize maximumSize() const {
@@ -486,7 +473,7 @@ public:
     }
     virtual QSpacerItem* spacerItem() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(4132, (void*)this, x)) 	return (QSpacerItem*)x[0].s_class;
+	if(qt_Smoke->callMethod(4132, (void*)this, x)) return (QSpacerItem*)x[0].s_class;
 	return this->QLayoutItem::spacerItem();
     }
     virtual void timerEvent(QTimerEvent* x1) {
@@ -497,7 +484,7 @@ public:
     }
     virtual QWidget* widget() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(4129, (void*)this, x)) 	return (QWidget*)x[0].s_class;
+	if(qt_Smoke->callMethod(4129, (void*)this, x)) return (QWidget*)x[0].s_class;
 	return this->QLayoutItem::widget();
     }
     ~x_QLayout() {}
@@ -556,9 +543,6 @@ void xcall_QLayout(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 48: xself->x_48(args);	break;
 	case 49: xself->x_49(args);	break;
 	case 50: xself->x_50(args);	break;
-	case 51: xself->x_51(args);	break;
-	case 52: xself->x_52(args);	break;
-	case 53: xself->x_53(args);	break;
-	case 54: delete (QLayout*)xself;	break;
+	case 51: delete (QLayout*)xself;	break;
     }
 }

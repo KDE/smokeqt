@@ -658,7 +658,7 @@ public:
     virtual const QPixmap* pixmap(int x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_int = (int)x1;
-	if(qt_Smoke->callMethod(4635, (void*)this, x)) 	return (const QPixmap*)x[0].s_class;
+	if(qt_Smoke->callMethod(4635, (void*)this, x)) return (const QPixmap*)x[0].s_class;
 	return this->QListViewItem::pixmap(x1);
     }
     virtual void removeItem(QListViewItem* x1) {

@@ -404,7 +404,7 @@ public:
     virtual QSqlRecord* editBuffer(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = (bool)x1;
-	if(qt_Smoke->callMethod(7306, (void*)this, x)) 	return (QSqlRecord*)x[0].s_class;
+	if(qt_Smoke->callMethod(7306, (void*)this, x)) return (QSqlRecord*)x[0].s_class;
 	return this->QSqlCursor::editBuffer(x1);
     }
     virtual bool exec(const QString& x1) {
@@ -470,17 +470,17 @@ public:
     }
     virtual QSqlRecord* primeDelete() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(7310, (void*)this, x)) 	return (QSqlRecord*)x[0].s_class;
+	if(qt_Smoke->callMethod(7310, (void*)this, x)) return (QSqlRecord*)x[0].s_class;
 	return this->QSqlCursor::primeDelete();
     }
     virtual QSqlRecord* primeInsert() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(7308, (void*)this, x)) 	return (QSqlRecord*)x[0].s_class;
+	if(qt_Smoke->callMethod(7308, (void*)this, x)) return (QSqlRecord*)x[0].s_class;
 	return this->QSqlCursor::primeInsert();
     }
     virtual QSqlRecord* primeUpdate() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(7309, (void*)this, x)) 	return (QSqlRecord*)x[0].s_class;
+	if(qt_Smoke->callMethod(7309, (void*)this, x)) return (QSqlRecord*)x[0].s_class;
 	return this->QSqlCursor::primeUpdate();
     }
     virtual void remove(int x1) {

@@ -8,16 +8,10 @@ private:
     QNetworkProtocolFactoryBase *xthis;
 public:
     x_QNetworkProtocolFactoryBase(void *x) : xthis((QNetworkProtocolFactoryBase*)x) {}
-    void x_0(Smoke::Stack x) {
-	// createObject()
-	QNetworkProtocol* xret = xthis->QNetworkProtocolFactoryBase::createObject();
-	x[0].s_class = (void*)xret;
-    }
     ~x_QNetworkProtocolFactoryBase() {}
 };
 void xcall_QNetworkProtocolFactoryBase(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QNetworkProtocolFactoryBase xtmp(obj), *xself = &xtmp;
     switch(xi) {
-	case 0: xself->x_0(args);	break;
     }
 }

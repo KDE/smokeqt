@@ -15,16 +15,6 @@ public:
     }
     x_QStylePlugin() : QStylePlugin() {
     }
-    void x_1(Smoke::Stack x) const {
-	// keys()
-	QStringList xret = this->QStylePlugin::keys();
-	x[0].s_class = (void*)new QStringList(xret);
-    }
-    void x_2(Smoke::Stack x) {
-	// create(const QString&)
-	QStyle* xret = this->QStylePlugin::create(*(const QString *)x[1].s_class);
-	x[0].s_class = (void*)xret;
-    }
     virtual bool checkConnectArgs(const char* x1, const QObject* x2, const char* x3) {
 	Smoke::StackItem x[4];
 	x[1].s_class = (void*)x1;
@@ -134,8 +124,6 @@ void xcall_QStylePlugin(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QStylePlugin *xself = (x_QStylePlugin*)obj;
     switch(xi) {
 	case 0: x_QStylePlugin::x_0(args);	break;
-	case 1: xself->x_1(args);	break;
-	case 2: xself->x_2(args);	break;
-	case 3: delete (QStylePlugin*)xself;	break;
+	case 1: delete (QStylePlugin*)xself;	break;
     }
 }

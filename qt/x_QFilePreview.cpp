@@ -13,10 +13,6 @@ public:
     }
     x_QFilePreview() : QFilePreview() {
     }
-    void x_1(Smoke::Stack x) {
-	// previewUrl(const QUrl&)
-	this->QFilePreview::previewUrl(*(const QUrl *)x[1].s_class);
-    }
     virtual void previewUrl(const QUrl& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
@@ -30,6 +26,5 @@ void xcall_QFilePreview(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QFilePreview *xself = (x_QFilePreview*)obj;
     switch(xi) {
 	case 0: x_QFilePreview::x_0(args);	break;
-	case 1: xself->x_1(args);	break;
     }
 }

@@ -5,17 +5,7 @@
 
 class x_QImageFormatType : public QImageFormatType {
 public:
-    void x_0(Smoke::Stack x) {
-	// decoderFor(const uchar*, int)
-	QImageFormat* xret = this->QImageFormatType::decoderFor((const uchar*)x[1].s_class,(int)x[2].s_int);
-	x[0].s_class = (void*)xret;
-    }
-    void x_1(Smoke::Stack x) const {
-	// formatName()
-	const char* xret = this->QImageFormatType::formatName();
-	x[0].s_class = (void*)xret;
-    }
-    static void x_2(Smoke::Stack x) {
+    static void x_0(Smoke::Stack x) {
 	// QImageFormatType()
 	x_QImageFormatType* xret = new x_QImageFormatType();
 	x[0].s_class = (void*)xret;
@@ -41,9 +31,7 @@ public:
 void xcall_QImageFormatType(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QImageFormatType *xself = (x_QImageFormatType*)obj;
     switch(xi) {
-	case 0: xself->x_0(args);	break;
-	case 1: xself->x_1(args);	break;
-	case 2: x_QImageFormatType::x_2(args);	break;
-	case 3: delete (QImageFormatType*)xself;	break;
+	case 0: x_QImageFormatType::x_0(args);	break;
+	case 1: delete (QImageFormatType*)xself;	break;
     }
 }

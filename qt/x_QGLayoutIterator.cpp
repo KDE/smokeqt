@@ -8,28 +8,10 @@ private:
     QGLayoutIterator *xthis;
 public:
     x_QGLayoutIterator(void *x) : xthis((QGLayoutIterator*)x) {}
-    void x_0(Smoke::Stack x) {
-	// next()
-	QLayoutItem* xret = xthis->QGLayoutIterator::next();
-	x[0].s_class = (void*)xret;
-    }
-    void x_1(Smoke::Stack x) {
-	// current()
-	QLayoutItem* xret = xthis->QGLayoutIterator::current();
-	x[0].s_class = (void*)xret;
-    }
-    void x_2(Smoke::Stack x) {
-	// takeCurrent()
-	QLayoutItem* xret = xthis->QGLayoutIterator::takeCurrent();
-	x[0].s_class = (void*)xret;
-    }
     ~x_QGLayoutIterator() {}
 };
 void xcall_QGLayoutIterator(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QGLayoutIterator xtmp(obj), *xself = &xtmp;
     switch(xi) {
-	case 0: xself->x_0(args);	break;
-	case 1: xself->x_1(args);	break;
-	case 2: xself->x_2(args);	break;
     }
 }

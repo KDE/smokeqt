@@ -23,79 +23,45 @@ public:
     x_QLayoutItem() : QLayoutItem() {
     }
     void x_2(Smoke::Stack x) const {
-	// sizeHint()
-	QSize xret = this->QLayoutItem::sizeHint();
-	x[0].s_class = (void*)new QSize(xret);
-    }
-    void x_3(Smoke::Stack x) const {
-	// minimumSize()
-	QSize xret = this->QLayoutItem::minimumSize();
-	x[0].s_class = (void*)new QSize(xret);
-    }
-    void x_4(Smoke::Stack x) const {
-	// maximumSize()
-	QSize xret = this->QLayoutItem::maximumSize();
-	x[0].s_class = (void*)new QSize(xret);
-    }
-    void x_5(Smoke::Stack x) const {
-	// expanding()
-	QSizePolicy::ExpandData xret = this->QLayoutItem::expanding();
-	x[0].s_class = (void*)new QSizePolicy::ExpandData(xret);
-    }
-    void x_6(Smoke::Stack x) {
-	// setGeometry(const QRect&)
-	this->QLayoutItem::setGeometry(*(const QRect *)x[1].s_class);
-    }
-    void x_7(Smoke::Stack x) const {
-	// geometry()
-	QRect xret = this->QLayoutItem::geometry();
-	x[0].s_class = (void*)new QRect(xret);
-    }
-    void x_8(Smoke::Stack x) const {
-	// isEmpty()
-	bool xret = this->QLayoutItem::isEmpty();
-	x[0].s_bool = (bool)xret;
-    }
-    void x_9(Smoke::Stack x) const {
 	// hasHeightForWidth()
 	bool xret = this->QLayoutItem::hasHeightForWidth();
 	x[0].s_bool = (bool)xret;
     }
-    void x_10(Smoke::Stack x) const {
+    void x_3(Smoke::Stack x) const {
 	// heightForWidth(int)
 	int xret = this->QLayoutItem::heightForWidth((int)x[1].s_int);
 	x[0].s_int = (int)xret;
     }
-    void x_11(Smoke::Stack x) {
+    void x_4(Smoke::Stack x) {
 	// invalidate()
 	this->QLayoutItem::invalidate();
     }
-    void x_12(Smoke::Stack x) {
+    void x_5(Smoke::Stack x) {
 	// widget()
 	QWidget* xret = this->QLayoutItem::widget();
 	x[0].s_class = (void*)xret;
     }
-    void x_13(Smoke::Stack x) {
+    void x_6(Smoke::Stack x) {
 	// iterator()
 	QLayoutIterator xret = this->QLayoutItem::iterator();
 	x[0].s_class = (void*)new QLayoutIterator(xret);
     }
-    void x_14(Smoke::Stack x) {
+    void x_7(Smoke::Stack x) {
 	// layout()
 	QLayout* xret = this->QLayoutItem::layout();
 	x[0].s_class = (void*)xret;
     }
-    void x_15(Smoke::Stack x) {
+    void x_8(Smoke::Stack x) {
 	// spacerItem()
 	QSpacerItem* xret = this->QLayoutItem::spacerItem();
 	x[0].s_class = (void*)xret;
     }
-    void x_16(Smoke::Stack x) const {
+    void x_9(Smoke::Stack x) const {
 	// alignment()
 	int xret = this->QLayoutItem::alignment();
 	x[0].s_int = (int)xret;
     }
-    void x_17(Smoke::Stack x) {
+    void x_10(Smoke::Stack x) {
 	// setAlignment(int)
 	this->QLayoutItem::setAlignment((int)x[1].s_int);
     }
@@ -136,7 +102,7 @@ public:
     virtual bool isEmpty() const {
 	Smoke::StackItem x[1];
 	qt_Smoke->callMethod(4125, (void*)this, x, true /*pure virtual*/);
-return (bool)x[0].s_bool;
+	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
     virtual QLayoutIterator iterator() {
@@ -151,7 +117,7 @@ return (bool)x[0].s_bool;
     }
     virtual QLayout* layout() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(4131, (void*)this, x)) 	return (QLayout*)x[0].s_class;
+	if(qt_Smoke->callMethod(4131, (void*)this, x)) return (QLayout*)x[0].s_class;
 	return this->QLayoutItem::layout();
     }
     virtual QSize maximumSize() const {
@@ -196,12 +162,12 @@ return (bool)x[0].s_bool;
     }
     virtual QSpacerItem* spacerItem() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(4132, (void*)this, x)) 	return (QSpacerItem*)x[0].s_class;
+	if(qt_Smoke->callMethod(4132, (void*)this, x)) return (QSpacerItem*)x[0].s_class;
 	return this->QLayoutItem::spacerItem();
     }
     virtual QWidget* widget() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(4129, (void*)this, x)) 	return (QWidget*)x[0].s_class;
+	if(qt_Smoke->callMethod(4129, (void*)this, x)) return (QWidget*)x[0].s_class;
 	return this->QLayoutItem::widget();
     }
     ~x_QLayoutItem() {}
@@ -220,13 +186,6 @@ void xcall_QLayoutItem(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 8: xself->x_8(args);	break;
 	case 9: xself->x_9(args);	break;
 	case 10: xself->x_10(args);	break;
-	case 11: xself->x_11(args);	break;
-	case 12: xself->x_12(args);	break;
-	case 13: xself->x_13(args);	break;
-	case 14: xself->x_14(args);	break;
-	case 15: xself->x_15(args);	break;
-	case 16: xself->x_16(args);	break;
-	case 17: xself->x_17(args);	break;
-	case 18: delete (QLayoutItem*)xself;	break;
+	case 11: delete (QLayoutItem*)xself;	break;
     }
 }

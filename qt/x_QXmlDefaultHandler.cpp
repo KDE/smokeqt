@@ -93,56 +93,61 @@ public:
 	x[0].s_bool = (bool)xret;
     }
     void x_17(Smoke::Stack x) {
+	// resolveEntity(const QString&, const QString&, QXmlInputSource*&)
+	bool xret = this->QXmlDefaultHandler::resolveEntity(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,*(QXmlInputSource* *)x[3].s_class);
+	x[0].s_bool = (bool)xret;
+    }
+    void x_18(Smoke::Stack x) {
 	// startDTD(const QString&, const QString&, const QString&)
 	bool xret = this->QXmlDefaultHandler::startDTD(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,*(const QString *)x[3].s_class);
 	x[0].s_bool = (bool)xret;
     }
-    void x_18(Smoke::Stack x) {
+    void x_19(Smoke::Stack x) {
 	// endDTD()
 	bool xret = this->QXmlDefaultHandler::endDTD();
 	x[0].s_bool = (bool)xret;
     }
-    void x_19(Smoke::Stack x) {
+    void x_20(Smoke::Stack x) {
 	// startEntity(const QString&)
 	bool xret = this->QXmlDefaultHandler::startEntity(*(const QString *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
-    void x_20(Smoke::Stack x) {
+    void x_21(Smoke::Stack x) {
 	// endEntity(const QString&)
 	bool xret = this->QXmlDefaultHandler::endEntity(*(const QString *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
-    void x_21(Smoke::Stack x) {
+    void x_22(Smoke::Stack x) {
 	// startCDATA()
 	bool xret = this->QXmlDefaultHandler::startCDATA();
 	x[0].s_bool = (bool)xret;
     }
-    void x_22(Smoke::Stack x) {
+    void x_23(Smoke::Stack x) {
 	// endCDATA()
 	bool xret = this->QXmlDefaultHandler::endCDATA();
 	x[0].s_bool = (bool)xret;
     }
-    void x_23(Smoke::Stack x) {
+    void x_24(Smoke::Stack x) {
 	// comment(const QString&)
 	bool xret = this->QXmlDefaultHandler::comment(*(const QString *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
-    void x_24(Smoke::Stack x) {
+    void x_25(Smoke::Stack x) {
 	// attributeDecl(const QString&, const QString&, const QString&, const QString&, const QString&)
 	bool xret = this->QXmlDefaultHandler::attributeDecl(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,*(const QString *)x[3].s_class,*(const QString *)x[4].s_class,*(const QString *)x[5].s_class);
 	x[0].s_bool = (bool)xret;
     }
-    void x_25(Smoke::Stack x) {
+    void x_26(Smoke::Stack x) {
 	// internalEntityDecl(const QString&, const QString&)
 	bool xret = this->QXmlDefaultHandler::internalEntityDecl(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class);
 	x[0].s_bool = (bool)xret;
     }
-    void x_26(Smoke::Stack x) {
+    void x_27(Smoke::Stack x) {
 	// externalEntityDecl(const QString&, const QString&, const QString&)
 	bool xret = this->QXmlDefaultHandler::externalEntityDecl(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,*(const QString *)x[3].s_class);
 	x[0].s_bool = (bool)xret;
     }
-    void x_27(Smoke::Stack x) {
+    void x_28(Smoke::Stack x) {
 	// errorString()
 	QString xret = this->QXmlDefaultHandler::errorString();
 	x[0].s_class = (void*)new QString(xret);
@@ -370,6 +375,7 @@ void xcall_QXmlDefaultHandler(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 25: xself->x_25(args);	break;
 	case 26: xself->x_26(args);	break;
 	case 27: xself->x_27(args);	break;
-	case 28: delete (QXmlDefaultHandler*)xself;	break;
+	case 28: xself->x_28(args);	break;
+	case 29: delete (QXmlDefaultHandler*)xself;	break;
     }
 }

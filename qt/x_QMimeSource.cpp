@@ -14,26 +14,11 @@ public:
     x_QMimeSource() : QMimeSource() {
     }
     void x_1(Smoke::Stack x) const {
-	// format(int)
-	const char* xret = this->QMimeSource::format((int)x[1].s_int);
-	x[0].s_class = (void*)xret;
-    }
-    void x_2(Smoke::Stack x) const {
-	// format()
-	const char* xret = this->QMimeSource::format();
-	x[0].s_class = (void*)xret;
-    }
-    void x_3(Smoke::Stack x) const {
 	// provides(const char*)
 	bool xret = this->QMimeSource::provides((const char*)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
-    void x_4(Smoke::Stack x) const {
-	// encodedData(const char*)
-	QByteArray xret = this->QMimeSource::encodedData((const char*)x[1].s_class);
-	x[0].s_class = (void*)new QByteArray(xret);
-    }
-    void x_5(Smoke::Stack x) const {
+    void x_2(Smoke::Stack x) const {
 	// serialNumber()
 	int xret = this->QMimeSource::serialNumber();
 	x[0].s_int = (int)xret;
@@ -69,9 +54,6 @@ void xcall_QMimeSource(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 0: x_QMimeSource::x_0(args);	break;
 	case 1: xself->x_1(args);	break;
 	case 2: xself->x_2(args);	break;
-	case 3: xself->x_3(args);	break;
-	case 4: xself->x_4(args);	break;
-	case 5: xself->x_5(args);	break;
-	case 6: delete (QMimeSource*)xself;	break;
+	case 3: delete (QMimeSource*)xself;	break;
     }
 }

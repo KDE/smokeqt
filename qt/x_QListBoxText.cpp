@@ -74,7 +74,7 @@ public:
     }
     virtual const QPixmap* pixmap() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(4414, (void*)this, x)) 	return (const QPixmap*)x[0].s_class;
+	if(qt_Smoke->callMethod(4414, (void*)this, x)) return (const QPixmap*)x[0].s_class;
 	return this->QListBoxItem::pixmap();
     }
     virtual int rtti() const {

@@ -42,32 +42,6 @@ public:
     }
     x_QDateTimeEditBase() : QDateTimeEditBase() {
     }
-    void x_3(Smoke::Stack x) {
-	// setFocusSection(int)
-	bool xret = this->QDateTimeEditBase::setFocusSection((int)x[1].s_int);
-	x[0].s_bool = (bool)xret;
-    }
-    void x_4(Smoke::Stack x) {
-	// sectionFormattedText(int)
-	QString xret = this->QDateTimeEditBase::sectionFormattedText((int)x[1].s_int);
-	x[0].s_class = (void*)new QString(xret);
-    }
-    void x_5(Smoke::Stack x) {
-	// addNumber(int, int)
-	this->QDateTimeEditBase::addNumber((int)x[1].s_int,(int)x[2].s_int);
-    }
-    void x_6(Smoke::Stack x) {
-	// removeLastNumber(int)
-	this->QDateTimeEditBase::removeLastNumber((int)x[1].s_int);
-    }
-    void x_7(Smoke::Stack x) {
-	// stepUp()
-	this->QDateTimeEditBase::stepUp();
-    }
-    void x_8(Smoke::Stack x) {
-	// stepDown()
-	this->QDateTimeEditBase::stepDown();
-    }
     virtual void addNumber(int x1, int x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = (int)x1;
@@ -530,7 +504,7 @@ public:
 	Smoke::StackItem x[2];
 	x[1].s_int = (int)x1;
 	qt_Smoke->callMethod(1631, (void*)this, x, true /*pure virtual*/);
-return (bool)x[0].s_bool;
+	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
     virtual void setFont(const QFont& x1) {
@@ -789,11 +763,5 @@ void xcall_QDateTimeEditBase(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 0: x_QDateTimeEditBase::x_0(args);	break;
 	case 1: x_QDateTimeEditBase::x_1(args);	break;
 	case 2: x_QDateTimeEditBase::x_2(args);	break;
-	case 3: xself->x_3(args);	break;
-	case 4: xself->x_4(args);	break;
-	case 5: xself->x_5(args);	break;
-	case 6: xself->x_6(args);	break;
-	case 7: xself->x_7(args);	break;
-	case 8: xself->x_8(args);	break;
     }
 }

@@ -567,7 +567,7 @@ public:
 	x[1].s_int = (int)x1;
 	x[2].s_int = (int)x2;
 	x[3].s_bool = (bool)x3;
-	if(qt_Smoke->callMethod(1464, (void*)this, x)) 	return (QWidget*)x[0].s_class;
+	if(qt_Smoke->callMethod(1464, (void*)this, x)) return (QWidget*)x[0].s_class;
 	return this->QDataTable::beginUpdate(x1, x2, x3);
     }
     virtual QRect cellGeometry(int x1, int x2) const {
@@ -598,7 +598,7 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_int = (int)x1;
 	x[2].s_int = (int)x2;
-	if(qt_Smoke->callMethod(8347, (void*)this, x)) 	return (QWidget*)x[0].s_class;
+	if(qt_Smoke->callMethod(8347, (void*)this, x)) return (QWidget*)x[0].s_class;
 	return this->QTable::cellWidget(x1, x2);
     }
     virtual bool checkConnectArgs(const char* x1, const QObject* x2, const char* x3) {
@@ -794,7 +794,7 @@ public:
 	x[1].s_int = (int)x1;
 	x[2].s_int = (int)x2;
 	x[3].s_bool = (bool)x3;
-	if(qt_Smoke->callMethod(1470, (void*)this, x)) 	return (QWidget*)x[0].s_class;
+	if(qt_Smoke->callMethod(1470, (void*)this, x)) return (QWidget*)x[0].s_class;
 	return this->QDataTable::createEditor(x1, x2, x3);
     }
     virtual int currentSelection() const {
@@ -851,7 +851,7 @@ public:
     }
     virtual QDragObject* dragObject() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(8431, (void*)this, x)) 	return (QDragObject*)x[0].s_class;
+	if(qt_Smoke->callMethod(8431, (void*)this, x)) return (QDragObject*)x[0].s_class;
 	return this->QTable::dragObject();
     }
     virtual void drawContents(QPainter* x1, int x2, int x3, int x4, int x5) {
@@ -1079,7 +1079,7 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_int = (int)x1;
 	x[2].s_int = (int)x2;
-	if(qt_Smoke->callMethod(1481, (void*)this, x)) 	return (QTableItem*)x[0].s_class;
+	if(qt_Smoke->callMethod(1481, (void*)this, x)) return (QTableItem*)x[0].s_class;
 	return this->QDataTable::item(x1, x2);
     }
     virtual void keyPressEvent(QKeyEvent* x1) {

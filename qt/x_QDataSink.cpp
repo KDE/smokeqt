@@ -9,19 +9,6 @@ private:
 public:
     x_QDataSink(void *x) : xthis((QDataSink*)x) {}
     void x_0(Smoke::Stack x) {
-	// readyToReceive()
-	int xret = xthis->QDataSink::readyToReceive();
-	x[0].s_int = (int)xret;
-    }
-    void x_1(Smoke::Stack x) {
-	// receive(const uchar*, int)
-	xthis->QDataSink::receive((const uchar*)x[1].s_class,(int)x[2].s_int);
-    }
-    void x_2(Smoke::Stack x) {
-	// eof()
-	xthis->QDataSink::eof();
-    }
-    void x_3(Smoke::Stack x) {
 	// maybeReady()
 	xthis->QDataSink::maybeReady();
     }
@@ -31,8 +18,5 @@ void xcall_QDataSink(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QDataSink xtmp(obj), *xself = &xtmp;
     switch(xi) {
 	case 0: xself->x_0(args);	break;
-	case 1: xself->x_1(args);	break;
-	case 2: xself->x_2(args);	break;
-	case 3: xself->x_3(args);	break;
     }
 }

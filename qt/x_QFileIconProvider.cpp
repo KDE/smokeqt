@@ -87,7 +87,7 @@ public:
     virtual const QPixmap* pixmap(const QFileInfo& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->callMethod(2586, (void*)this, x)) 	return (const QPixmap*)x[0].s_class;
+	if(qt_Smoke->callMethod(2586, (void*)this, x)) return (const QPixmap*)x[0].s_class;
 	return this->QFileIconProvider::pixmap(x1);
     }
     virtual QVariant property(const char* x1) const {

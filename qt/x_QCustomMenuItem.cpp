@@ -29,15 +29,6 @@ public:
 	// setFont(const QFont&)
 	this->QCustomMenuItem::setFont(*(const QFont *)x[1].s_class);
     }
-    void x_4(Smoke::Stack x) {
-	// paint(QPainter*, const QColorGroup&, bool, bool, int, int, int, int)
-	this->QCustomMenuItem::paint((QPainter*)x[1].s_class,*(const QColorGroup *)x[2].s_class,(bool)x[3].s_bool,(bool)x[4].s_bool,(int)x[5].s_int,(int)x[6].s_int,(int)x[7].s_int,(int)x[8].s_int);
-    }
-    void x_5(Smoke::Stack x) {
-	// sizeHint()
-	QSize xret = this->QCustomMenuItem::sizeHint();
-	x[0].s_class = (void*)new QSize(xret);
-    }
     virtual bool fullSpan() const {
 	Smoke::StackItem x[1];
 	if(qt_Smoke->callMethod(1247, (void*)this, x)) return (bool)x[0].s_bool;
@@ -86,8 +77,6 @@ void xcall_QCustomMenuItem(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 1: xself->x_1(args);	break;
 	case 2: xself->x_2(args);	break;
 	case 3: xself->x_3(args);	break;
-	case 4: xself->x_4(args);	break;
-	case 5: xself->x_5(args);	break;
-	case 6: delete (QCustomMenuItem*)xself;	break;
+	case 4: delete (QCustomMenuItem*)xself;	break;
     }
 }

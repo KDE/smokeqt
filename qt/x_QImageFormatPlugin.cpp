@@ -16,24 +16,14 @@ public:
     }
     x_QImageFormatPlugin() : QImageFormatPlugin() {
     }
-    void x_1(Smoke::Stack x) const {
-	// keys()
-	QStringList xret = this->QImageFormatPlugin::keys();
-	x[0].s_class = (void*)new QStringList(xret);
-    }
-    void x_2(Smoke::Stack x) {
+    void x_1(Smoke::Stack x) {
 	// loadImage(const QString&, const QString&, QImage*)
 	bool xret = this->QImageFormatPlugin::loadImage(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,(QImage*)x[3].s_class);
 	x[0].s_bool = (bool)xret;
     }
-    void x_3(Smoke::Stack x) {
+    void x_2(Smoke::Stack x) {
 	// saveImage(const QString&, const QString&, const QImage&)
 	bool xret = this->QImageFormatPlugin::saveImage(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,*(const QImage *)x[3].s_class);
-	x[0].s_bool = (bool)xret;
-    }
-    void x_4(Smoke::Stack x) {
-	// installIOHandler(const QString&)
-	bool xret = this->QImageFormatPlugin::installIOHandler(*(const QString *)x[1].s_class);
 	x[0].s_bool = (bool)xret;
     }
     virtual bool checkConnectArgs(const char* x1, const QObject* x2, const char* x3) {
@@ -91,7 +81,7 @@ public:
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
 	qt_Smoke->callMethod(3818, (void*)this, x, true /*pure virtual*/);
-return (bool)x[0].s_bool;
+	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
     virtual QStringList keys() const {
@@ -163,8 +153,6 @@ void xcall_QImageFormatPlugin(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 0: x_QImageFormatPlugin::x_0(args);	break;
 	case 1: xself->x_1(args);	break;
 	case 2: xself->x_2(args);	break;
-	case 3: xself->x_3(args);	break;
-	case 4: xself->x_4(args);	break;
-	case 5: delete (QImageFormatPlugin*)xself;	break;
+	case 3: delete (QImageFormatPlugin*)xself;	break;
     }
 }

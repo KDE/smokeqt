@@ -188,7 +188,7 @@ public:
 	x[4].s_class = (void*)&x4;
 	x[5].s_bool = (bool)x5;
 	x[6].s_class = (void*)x6;
-	if(qt_Smoke->callMethod(8033, (void*)this, x)) 	return (QTextCustomItem*)x[0].s_class;
+	if(qt_Smoke->callMethod(8033, (void*)this, x)) return (QTextCustomItem*)x[0].s_class;
 	return this->QStyleSheet::tag(x1, x2, x3, x4, x5, x6);
     }
     virtual void timerEvent(QTimerEvent* x1) {
