@@ -4,4 +4,6 @@
 // Defined in smokedata.cpp, initialized by init_qt_Smoke(), used by all .cpp files
 extern Smoke* qt_Smoke;
 
+class FriendOperators { };
+
 #endif
