@@ -18,6 +18,18 @@ if (-d $outdir) { system "rm -f $outdir/x_*.cpp"; } else { mkdir $outdir; }
 
 mkdir $finaloutdir unless (-d $finaloutdir);
 
+
+#  Load the QT_NO_* macros found in "qtdefines". They'll be passed to kalyptus
+my $macros="";
+if ( -e "qtdefines" ){
+    print "Found 'qtdefines'. Reading preprocessor symbols from there...\n";
+    open( IN, "qtdefines");
+    undef $/;
+    $macros = " --define ". join(" --define ", split( "\n", <IN>) );
+    close IN;
+    $/="";
+}
+
 # Need to cd to kalyptus's directory so that perl finds Ast.pm etc.
 chdir "$kalyptusdir" or die "Couldn't go to $kalyptusdir (edit script to change dir)\n";
 
@@ -50,9 +62,8 @@ foreach $filename (readdir(QT)) {
 }
 closedir QT;
 
-
 # Launch kalyptus
-system "perl kalyptus @ARGV -fsmoke --name=qt --outputdir=$outdir @headers";
+system "perl kalyptus @ARGV -fsmoke --name=qt $macros --outputdir=$outdir @headers";
 my $exit = $? >> 8;
 exit $exit if ($exit);
 
@@ -77,7 +88,7 @@ foreach $filename (readdir(OUT)) {
 closedir OUT;
 
 # Check for deleted files and warn
-my $deleted = 0; 
+my $deleted = 0;
 opendir(FINALOUT, $finaloutdir) or die "Couldn't opendir $finaloutdir";
 foreach $filename (readdir(FINALOUT)) {
     next if ( -d "$finaloutdir/$filename" ); # only files, not dirs
