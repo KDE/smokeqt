@@ -55,6 +55,9 @@ system "perl kalyptus @ARGV -fsmoke --name=qt --outputdir=$outdir @headers";
 my $exit = $? >> 8;
 exit $exit if ($exit);
 
+# Generate diff for smokedata.cpp
+system "diff -u $finaloutdir/smokedata.cpp $outdir/smokedata.cpp > $outdir/smokedata.cpp.diff";
+
 # Copy changed or new files to finaloutdir
 ### What this doesn't notice is deleted files.
 ### TODO (readdir in finaloutdir...) when I have a testcase ;)
