@@ -285,11 +285,16 @@ public:
 	Index idname = idMethodName(name);
 	return findMethod(idc, idname);
     }
+
+    /**
+     * Called for each virtual method, allowing language binding to override
+     * the default method.
+     *
+     * Returns true when method has been overridden and its replacement
+     * called, false when original method should be called as normal.
+     */
+    bool callMethod(Index method, void* obj, Stack args, bool isAbstract = false);
+
 };
-
-//// TODO
-bool call_method(void*, int, Smoke::Stack);
-void call_method_abstract(void*, int, Smoke::Stack);
-
 
 #endif
