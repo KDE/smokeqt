@@ -92,7 +92,6 @@ my %kdeexcludes = (
 	'kglobal.h' => 1,
 
 #	These headers currently give problems	
-	'kicontheme.h' => 1,
 	'kscreensaver.h' => 1,
 	'kbufferedio.h' => 1,
 	'kasyncio.h' => 1,
