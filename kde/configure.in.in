@@ -8,7 +8,7 @@ fi
 AC_SUBST(KDE_HAVE_GL)   
 
 
-if test "X$kde_build_libsmoke" = "Xkde"; then
+if test "X$kde_build_libsmoke" = "Xkde" -o "X$kde_build_libsmoke" = "Xqt kde"; then
 
     AC_CONFIG_FILES([ smoke/kde/qtguess.pl ], [
         cd smoke/kde

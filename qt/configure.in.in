@@ -15,7 +15,7 @@ AC_ARG_WITH(
 )
 AC_SUBST(qt_test_threshold)
 
-if test "X$kde_build_libsmoke" = "Xqt"; then
+if test "X$kde_build_libsmoke" = "Xqt" -o "X$kde_build_libsmoke" = "Xqt kde"; then
 
     AC_CONFIG_FILES([ smoke/qt/qtguess.pl ], [
         cd smoke/qt
