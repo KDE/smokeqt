@@ -89,18 +89,14 @@ my %kdeexcludes = (
 	'kdebugclasses.h' => 1,
 	'kde_terminal_interface.h' => 1,
 	'kdirnotify_stub.h' => 1,
-	
-	'kxmlguifactory.h' => 1,
-	'kxmlguibuilder.h' => 1,
 	'kallocator.h' => 1,
+	
 	'kled.h' => 1,
 	'kicontheme.h' => 1,
 	'kglobal.h' => 1,
 	'kscreensaver.h' => 1,
 	'kbufferedio.h' => 1,
 	'kasyncio.h' => 1,
-	'ksslcertificate.h' => 1,
-	'kmdcodec.h' => 1,
 	'kmdichildfrmcaption.h' => 1,
 	'kmdichildarea.h' => 1,
 	'kmdichildfrm.h' => 1,
@@ -109,7 +105,6 @@ my %kdeexcludes = (
 	'kmdidefines.h' => 1,
 	'kmdimainfrm.h' => 1,
 	'kmditaskbar.h' => 1,
-	'ksslpkcs12.h' => 1,
 	'kdirnotify_stub.h' => 1,
 	'kio/uiserver_stub.h' => 1,
 	'kio/uiserver.h' => 1,
@@ -136,7 +131,7 @@ my %kdeexcludes = (
 	'krun.h' => 1,
 	'knotifydialog.h' => 1,
 	'kautoconfigdialog.h' => 1,
-	'ksockaddr.h' => 1,
+	'ksockaddr.h' => 1
 );
 
 # Some systems have a QTDIR = KDEDIR = PREFIX
