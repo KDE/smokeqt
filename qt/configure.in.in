@@ -22,4 +22,6 @@ if test "X$kde_build_libsmoke" = "Xqt" -o "X$kde_build_libsmoke" = "Xqt kde"; th
         perl qtguess.pl
         cd ../..
     ])
+    AC_CONFIG_FILES([ smoke/qt/generate.pl ], [
+    ])
 fi
