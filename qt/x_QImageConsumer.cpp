@@ -24,19 +24,19 @@ public:
     virtual void changed(const QRect& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	qt_Smoke->binding->callMethod(4540, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(4538, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }
     virtual void end() {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(4539, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(4537, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }
     virtual void frameDone() {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(4541, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(4539, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }
@@ -44,21 +44,21 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_class = (void*)&x1;
 	x[2].s_class = (void*)&x2;
-	qt_Smoke->binding->callMethod(4542, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(4540, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }
     virtual void setFramePeriod(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	qt_Smoke->binding->callMethod(4544, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(4542, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }
     virtual void setLooping(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	qt_Smoke->binding->callMethod(4543, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(4541, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }
@@ -66,7 +66,7 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_int = x2;
-	qt_Smoke->binding->callMethod(4545, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(4543, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }

@@ -144,7 +144,7 @@ public:
     virtual void maybeTip(const QPoint& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	qt_Smoke->binding->callMethod(10749, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(10745, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }

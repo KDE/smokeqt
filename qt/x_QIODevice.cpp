@@ -166,7 +166,7 @@ public:
     }
     virtual QIODevice::Offset at() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(4123, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(4121, (void*)this, x)) {
 	    QIODevice::Offset *xptr = (QIODevice::Offset *)x[0].s_class;
 	    QIODevice::Offset xret(*xptr);
 	    delete xptr;
@@ -177,49 +177,49 @@ public:
     virtual bool at(QIODevice::Offset x1) {
 	Smoke::StackItem x[2];
 	x[1].s_ulong = x1;
-	if(qt_Smoke->binding->callMethod(4124, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(4122, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QIODevice::at(x1);
     }
     virtual bool atEnd() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(4125, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(4123, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QIODevice::atEnd();
     }
     virtual void close() {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(4120, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(4118, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }
     virtual void flush() {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(4121, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(4119, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }
     virtual int getch() {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(4132, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(4130, (void*)this, x, true /*pure virtual*/);
 	return (int)x[0].s_int;
 	// ABSTRACT
     }
     virtual bool open(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	qt_Smoke->binding->callMethod(4119, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(4117, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
     virtual int putch(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	qt_Smoke->binding->callMethod(4133, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(4131, (void*)this, x, true /*pure virtual*/);
 	return (int)x[0].s_int;
 	// ABSTRACT
     }
     virtual QByteArray readAll() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(4131, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(4129, (void*)this, x)) {
 	    QByteArray *xptr = (QByteArray *)x[0].s_class;
 	    QByteArray xret(*xptr);
 	    delete xptr;
@@ -231,7 +231,7 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)x1;
 	x[2].s_long = x2;
-	qt_Smoke->binding->callMethod(4127, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(4125, (void*)this, x, true /*pure virtual*/);
 	Q_LONG *xptr = (Q_LONG *)x[0].s_class;
 	Q_LONG xret(*xptr);
 	delete xptr;
@@ -242,7 +242,7 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)x1;
 	x[2].s_long = x2;
-	if(qt_Smoke->binding->callMethod(4129, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(4127, (void*)this, x)) {
 	    Q_LONG *xptr = (Q_LONG *)x[0].s_class;
 	    Q_LONG xret(*xptr);
 	    delete xptr;
@@ -252,7 +252,7 @@ public:
     }
     virtual QIODevice::Offset size() const {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(4122, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(4120, (void*)this, x, true /*pure virtual*/);
 	QIODevice::Offset *xptr = (QIODevice::Offset *)x[0].s_class;
 	QIODevice::Offset xret(*xptr);
 	delete xptr;
@@ -262,7 +262,7 @@ public:
     virtual int ungetch(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	qt_Smoke->binding->callMethod(4134, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(4132, (void*)this, x, true /*pure virtual*/);
 	return (int)x[0].s_int;
 	// ABSTRACT
     }
@@ -270,7 +270,7 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)x1;
 	x[2].s_long = x2;
-	qt_Smoke->binding->callMethod(4128, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(4126, (void*)this, x, true /*pure virtual*/);
 	Q_LONG *xptr = (Q_LONG *)x[0].s_class;
 	Q_LONG xret(*xptr);
 	delete xptr;

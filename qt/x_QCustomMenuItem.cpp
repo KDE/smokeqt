@@ -39,12 +39,12 @@ public:
     }
     virtual bool fullSpan() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(1506, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(1505, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QCustomMenuItem::fullSpan();
     }
     virtual bool isSeparator() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(1507, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(1506, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QCustomMenuItem::isSeparator();
     }
     virtual void paint(QPainter* x1, const QColorGroup& x2, bool x3, bool x4, int x5, int x6, int x7, int x8) {
@@ -57,19 +57,19 @@ public:
 	x[6].s_int = x6;
 	x[7].s_int = x7;
 	x[8].s_int = x8;
-	qt_Smoke->binding->callMethod(1509, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(1508, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }
     virtual void setFont(const QFont& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(1508, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(1507, (void*)this, x)) return;
 	this->QCustomMenuItem::setFont(x1);
     }
     virtual QSize sizeHint() {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(1510, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(1509, (void*)this, x, true /*pure virtual*/);
 	QSize *xptr = (QSize *)x[0].s_class;
 	QSize xret(*xptr);
 	delete xptr;

@@ -23,7 +23,7 @@ public:
     virtual void previewUrl(const QUrl& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	qt_Smoke->binding->callMethod(3184, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(3183, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }

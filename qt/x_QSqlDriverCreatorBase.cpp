@@ -21,7 +21,7 @@ public:
     }
     virtual QSqlDriver* createObject() {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(8842, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(8840, (void*)this, x, true /*pure virtual*/);
 	return (QSqlDriver*)x[0].s_class;
 	// ABSTRACT
     }
