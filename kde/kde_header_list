@@ -1,5 +1,6 @@
 dcopclient.h
 dcopobject.h
+dcopref.h
 dom/css_rule.h
 dom/css_stylesheet.h
 dom/css_value.h
