@@ -89,7 +89,6 @@ my %kdeexcludes = (
 	'kdebugclasses.h' => 1,
 	'kde_terminal_interface.h' => 1,
 	'kdirnotify_stub.h' => 1,
-	'kglobal.h' => 1,
 
 #	These headers currently give problems	
 	'kicontheme.h' => 1,
@@ -103,7 +102,6 @@ my %kdeexcludes = (
 	'kio/file.h' => 1,
 	'kio/chmodjob.h' => 1,
 	'kparts/genericfactory.h' => 1,
-	'kparts/partmanager.h' => 1,
 	'kparts/pluginselectormodule.h' => 1,
 	'kopenssl.h' => 1,
 	'kautomount.h' => 1,
@@ -172,7 +170,8 @@ find(
 	    	undef $kdeincludes{$f}   
 	     };
 	},
-	follow => 1,
+	follow_fast => 1,
+	follow_skip => 2,
 	no_chdir => 1
     }, $kdeinc
  );
