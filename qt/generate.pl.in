@@ -109,7 +109,7 @@ foreach $filename (readdir(QT)) {
 closedir QT;
 
 # Launch kalyptus
-system "perl kalyptus @ARGV -fsmoke --name=qt $macros --no-cache --outputdir=$outdir @headers";
+system "perl kalyptus @ARGV --friendops -fsmoke --name=qt $macros --no-cache --outputdir=$outdir @headers";
 my $exit = $? >> 8;
 exit $exit if ($exit);
 
