@@ -81,6 +81,13 @@ public:
 	this->QMouseEvent::ignore();
 	(void)x[0].s_int; // noop (for compiler warning)
     }
+    static void x_14(Smoke::Stack x) {
+	// QMouseEvent(QMouseEvent&)
+	x_QMouseEvent* xret = new x_QMouseEvent(*(QMouseEvent *)x[1].s_class);
+	x[0].s_class = (void*)xret;
+    }
+    x_QMouseEvent(QMouseEvent& x1) : QMouseEvent(x1) {
+    }
     ~x_QMouseEvent() { qt_Smoke->binding->deleted(203, (void*)this); }
 };
 void xcall_QMouseEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
@@ -100,6 +107,7 @@ void xcall_QMouseEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 11: xself->x_11(args);	break;
 	case 12: xself->x_12(args);	break;
 	case 13: xself->x_13(args);	break;
-	case 14: delete (QMouseEvent*)xself;	break;
+	case 14: x_QMouseEvent::x_14(args);	break;
+	case 15: delete (QMouseEvent*)xself;	break;
     }
 }

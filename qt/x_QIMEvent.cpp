@@ -38,6 +38,13 @@ public:
 	this->QIMEvent::ignore();
 	(void)x[0].s_int; // noop (for compiler warning)
     }
+    static void x_6(Smoke::Stack x) {
+	// QIMEvent(QIMEvent&)
+	x_QIMEvent* xret = new x_QIMEvent(*(QIMEvent *)x[1].s_class);
+	x[0].s_class = (void*)xret;
+    }
+    x_QIMEvent(QIMEvent& x1) : QIMEvent(x1) {
+    }
     ~x_QIMEvent() { qt_Smoke->binding->deleted(146, (void*)this); }
 };
 void xcall_QIMEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
@@ -49,6 +56,7 @@ void xcall_QIMEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 3: xself->x_3(args);	break;
 	case 4: xself->x_4(args);	break;
 	case 5: xself->x_5(args);	break;
-	case 6: delete (QIMEvent*)xself;	break;
+	case 6: x_QIMEvent::x_6(args);	break;
+	case 7: delete (QIMEvent*)xself;	break;
     }
 }

@@ -495,8 +495,95 @@ public:
 	bool xret = QChar::networkOrdered();
 	x[0].s_bool = xret;
     }
+    static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
+	switch(xtype) {
+	  case 77: //QChar::Joining
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new QChar::Joining;
+		break;
+	      case Smoke::EnumDelete:
+		delete (QChar::Joining*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(QChar::Joining*)xdata = (QChar::Joining)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(QChar::Joining*)xdata;
+		break;
+	    }
+	    break;
+	  case 74: //QChar::CombiningClass
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new QChar::CombiningClass;
+		break;
+	      case Smoke::EnumDelete:
+		delete (QChar::CombiningClass*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(QChar::CombiningClass*)xdata = (QChar::CombiningClass)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(QChar::CombiningClass*)xdata;
+		break;
+	    }
+	    break;
+	  case 76: //QChar::Direction
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new QChar::Direction;
+		break;
+	      case Smoke::EnumDelete:
+		delete (QChar::Direction*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(QChar::Direction*)xdata = (QChar::Direction)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(QChar::Direction*)xdata;
+		break;
+	    }
+	    break;
+	  case 75: //QChar::Decomposition
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new QChar::Decomposition;
+		break;
+	      case Smoke::EnumDelete:
+		delete (QChar::Decomposition*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(QChar::Decomposition*)xdata = (QChar::Decomposition)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(QChar::Decomposition*)xdata;
+		break;
+	    }
+	    break;
+	  case 73: //QChar::Category
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new QChar::Category;
+		break;
+	      case Smoke::EnumDelete:
+		delete (QChar::Category*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(QChar::Category*)xdata = (QChar::Category)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(QChar::Category*)xdata;
+		break;
+	    }
+	    break;
+	}
+    }
     ~x_QChar() { qt_Smoke->binding->deleted(33, (void*)this); }
 };
+void xenum_QChar(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
+    x_QChar::xenum_operation(xop, xtype, xdata, xvalue);
+}
 void xcall_QChar(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QChar *xself = (x_QChar*)obj;
     switch(xi) {

@@ -23,6 +23,13 @@ public:
 	const QPoint& xret = this->QMoveEvent::oldPos();
 	x[0].s_class = (void*)&xret;
     }
+    static void x_3(Smoke::Stack x) {
+	// QMoveEvent(QMoveEvent&)
+	x_QMoveEvent* xret = new x_QMoveEvent(*(QMoveEvent *)x[1].s_class);
+	x[0].s_class = (void*)xret;
+    }
+    x_QMoveEvent(QMoveEvent& x1) : QMoveEvent(x1) {
+    }
     ~x_QMoveEvent() { qt_Smoke->binding->deleted(204, (void*)this); }
 };
 void xcall_QMoveEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
@@ -31,6 +38,7 @@ void xcall_QMoveEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 0: x_QMoveEvent::x_0(args);	break;
 	case 1: xself->x_1(args);	break;
 	case 2: xself->x_2(args);	break;
-	case 3: delete (QMoveEvent*)xself;	break;
+	case 3: x_QMoveEvent::x_3(args);	break;
+	case 4: delete (QMoveEvent*)xself;	break;
     }
 }

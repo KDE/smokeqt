@@ -12,12 +12,20 @@ public:
     }
     x_QHideEvent() : QHideEvent() {
     }
+    static void x_1(Smoke::Stack x) {
+	// QHideEvent(QHideEvent&)
+	x_QHideEvent* xret = new x_QHideEvent(*(QHideEvent *)x[1].s_class);
+	x[0].s_class = (void*)xret;
+    }
+    x_QHideEvent(QHideEvent& x1) : QHideEvent(x1) {
+    }
     ~x_QHideEvent() { qt_Smoke->binding->deleted(143, (void*)this); }
 };
 void xcall_QHideEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QHideEvent *xself = (x_QHideEvent*)obj;
     switch(xi) {
 	case 0: x_QHideEvent::x_0(args);	break;
-	case 1: delete (QHideEvent*)xself;	break;
+	case 1: x_QHideEvent::x_1(args);	break;
+	case 2: delete (QHideEvent*)xself;	break;
     }
 }

@@ -28,6 +28,13 @@ public:
     }
     x_QDns__MailServer() : QDns::MailServer() {
     }
+    static void x_3(Smoke::Stack x) {
+	// MailServer(MailServer&)
+	x_QDns__MailServer* xret = new x_QDns__MailServer(*(MailServer *)x[1].s_voidp);
+	x[0].s_class = (void*)xret;
+    }
+    x_QDns__MailServer(MailServer& x1) : QDns::MailServer(x1) {
+    }
     ~x_QDns__MailServer() { qt_Smoke->binding->deleted(72, (void*)this); }
 };
 void xcall_QDns__MailServer(Smoke::Index xi, void *obj, Smoke::Stack args) {
@@ -36,6 +43,7 @@ void xcall_QDns__MailServer(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 0: x_QDns__MailServer::x_0(args);	break;
 	case 1: x_QDns__MailServer::x_1(args);	break;
 	case 2: x_QDns__MailServer::x_2(args);	break;
-	case 3: delete (QDns::MailServer*)xself;	break;
+	case 3: x_QDns__MailServer::x_3(args);	break;
+	case 4: delete (QDns::MailServer*)xself;	break;
     }
 }

@@ -42,6 +42,13 @@ public:
     }
     x_QDns__Server() : QDns::Server() {
     }
+    static void x_5(Smoke::Stack x) {
+	// Server(Server&)
+	x_QDns__Server* xret = new x_QDns__Server(*(Server *)x[1].s_voidp);
+	x[0].s_class = (void*)xret;
+    }
+    x_QDns__Server(Server& x1) : QDns::Server(x1) {
+    }
     ~x_QDns__Server() { qt_Smoke->binding->deleted(73, (void*)this); }
 };
 void xcall_QDns__Server(Smoke::Index xi, void *obj, Smoke::Stack args) {
@@ -52,6 +59,7 @@ void xcall_QDns__Server(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 2: x_QDns__Server::x_2(args);	break;
 	case 3: x_QDns__Server::x_3(args);	break;
 	case 4: x_QDns__Server::x_4(args);	break;
-	case 5: delete (QDns::Server*)xself;	break;
+	case 5: x_QDns__Server::x_5(args);	break;
+	case 6: delete (QDns::Server*)xself;	break;
     }
 }

@@ -88,6 +88,13 @@ public:
 	this->QXmlAttributes::append(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,*(const QString *)x[3].s_voidp,*(const QString *)x[4].s_voidp);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
+    static void x_16(Smoke::Stack x) {
+	// QXmlAttributes(QXmlAttributes&)
+	x_QXmlAttributes* xret = new x_QXmlAttributes(*(QXmlAttributes *)x[1].s_class);
+	x[0].s_class = (void*)xret;
+    }
+    x_QXmlAttributes(QXmlAttributes& x1) : QXmlAttributes(x1) {
+    }
     ~x_QXmlAttributes() { qt_Smoke->binding->deleted(366, (void*)this); }
 };
 void xcall_QXmlAttributes(Smoke::Index xi, void *obj, Smoke::Stack args) {
@@ -109,6 +116,7 @@ void xcall_QXmlAttributes(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 13: xself->x_13(args);	break;
 	case 14: xself->x_14(args);	break;
 	case 15: xself->x_15(args);	break;
-	case 16: delete (QXmlAttributes*)xself;	break;
+	case 16: x_QXmlAttributes::x_16(args);	break;
+	case 17: delete (QXmlAttributes*)xself;	break;
     }
 }

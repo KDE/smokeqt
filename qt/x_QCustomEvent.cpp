@@ -29,6 +29,13 @@ public:
 	this->QCustomEvent::setData((void*)x[1].s_voidp);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
+    static void x_4(Smoke::Stack x) {
+	// QCustomEvent(QCustomEvent&)
+	x_QCustomEvent* xret = new x_QCustomEvent(*(QCustomEvent *)x[1].s_class);
+	x[0].s_class = (void*)xret;
+    }
+    x_QCustomEvent(QCustomEvent& x1) : QCustomEvent(x1) {
+    }
     ~x_QCustomEvent() { qt_Smoke->binding->deleted(53, (void*)this); }
 };
 void xcall_QCustomEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
@@ -38,6 +45,7 @@ void xcall_QCustomEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 1: x_QCustomEvent::x_1(args);	break;
 	case 2: xself->x_2(args);	break;
 	case 3: xself->x_3(args);	break;
-	case 4: delete (QCustomEvent*)xself;	break;
+	case 4: x_QCustomEvent::x_4(args);	break;
+	case 5: delete (QCustomEvent*)xself;	break;
     }
 }

@@ -17,6 +17,13 @@ public:
 	bool xret = this->QDragResponseEvent::dragAccepted();
 	x[0].s_bool = xret;
     }
+    static void x_2(Smoke::Stack x) {
+	// QDragResponseEvent(QDragResponseEvent&)
+	x_QDragResponseEvent* xret = new x_QDragResponseEvent(*(QDragResponseEvent *)x[1].s_class);
+	x[0].s_class = (void*)xret;
+    }
+    x_QDragResponseEvent(QDragResponseEvent& x1) : QDragResponseEvent(x1) {
+    }
     ~x_QDragResponseEvent() { qt_Smoke->binding->deleted(101, (void*)this); }
 };
 void xcall_QDragResponseEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
@@ -24,6 +31,7 @@ void xcall_QDragResponseEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
     switch(xi) {
 	case 0: x_QDragResponseEvent::x_0(args);	break;
 	case 1: xself->x_1(args);	break;
-	case 2: delete (QDragResponseEvent*)xself;	break;
+	case 2: x_QDragResponseEvent::x_2(args);	break;
+	case 3: delete (QDragResponseEvent*)xself;	break;
     }
 }

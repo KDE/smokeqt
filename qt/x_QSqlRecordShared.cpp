@@ -12,12 +12,20 @@ public:
     }
     x_QSqlRecordShared(QSqlRecordPrivate* x1) : QSqlRecordShared(x1) {
     }
+    static void x_1(Smoke::Stack x) {
+	// QSqlRecordShared(QSqlRecordShared&)
+	x_QSqlRecordShared* xret = new x_QSqlRecordShared(*(QSqlRecordShared *)x[1].s_class);
+	x[0].s_class = (void*)xret;
+    }
+    x_QSqlRecordShared(QSqlRecordShared& x1) : QSqlRecordShared(x1) {
+    }
     ~x_QSqlRecordShared() { qt_Smoke->binding->deleted(289, (void*)this); }
 };
 void xcall_QSqlRecordShared(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QSqlRecordShared *xself = (x_QSqlRecordShared*)obj;
     switch(xi) {
 	case 0: x_QSqlRecordShared::x_0(args);	break;
-	case 1: delete (QSqlRecordShared*)xself;	break;
+	case 1: x_QSqlRecordShared::x_1(args);	break;
+	case 2: delete (QSqlRecordShared*)xself;	break;
     }
 }

@@ -168,8 +168,31 @@ public:
 	QColorGroup::ColorRole xret = QPalette::backgroundRoleFromMode((Qt::BackgroundMode)x[1].s_enum);
 	x[0].s_enum = xret;
     }
+    static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
+	switch(xtype) {
+	  case 481: //QPalette::ColorGroup
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new QPalette::ColorGroup;
+		break;
+	      case Smoke::EnumDelete:
+		delete (QPalette::ColorGroup*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(QPalette::ColorGroup*)xdata = (QPalette::ColorGroup)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(QPalette::ColorGroup*)xdata;
+		break;
+	    }
+	    break;
+	}
+    }
     ~x_QPalette() { qt_Smoke->binding->deleted(221, (void*)this); }
 };
+void xenum_QPalette(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
+    x_QPalette::xenum_operation(xop, xtype, xdata, xvalue);
+}
 void xcall_QPalette(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QPalette *xself = (x_QPalette*)obj;
     switch(xi) {

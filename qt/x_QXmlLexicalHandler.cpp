@@ -13,35 +13,42 @@ public:
     }
     x_QXmlLexicalHandler() : QXmlLexicalHandler() {
     }
+    static void x_1(Smoke::Stack x) {
+	// QXmlLexicalHandler(QXmlLexicalHandler&)
+	x_QXmlLexicalHandler* xret = new x_QXmlLexicalHandler(*(QXmlLexicalHandler *)x[1].s_class);
+	x[0].s_class = (void*)xret;
+    }
+    x_QXmlLexicalHandler(QXmlLexicalHandler& x1) : QXmlLexicalHandler(x1) {
+    }
     virtual bool comment(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	qt_Smoke->binding->callMethod(10067, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(11967, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
     virtual bool endCDATA() {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(10066, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(11966, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
     virtual bool endDTD() {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(10062, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(11962, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
     virtual bool endEntity(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	qt_Smoke->binding->callMethod(10064, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(11964, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
     virtual QString errorString() {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(10068, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(11968, (void*)this, x, true /*pure virtual*/);
 	QString *xptr = (QString *)x[0].s_class;
 	QString xret(*xptr);
 	delete xptr;
@@ -50,7 +57,7 @@ public:
     }
     virtual bool startCDATA() {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(10065, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(11965, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
@@ -59,14 +66,14 @@ public:
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_voidp = (void*)&x2;
 	x[3].s_voidp = (void*)&x3;
-	qt_Smoke->binding->callMethod(10061, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(11961, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
     virtual bool startEntity(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	qt_Smoke->binding->callMethod(10063, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(11963, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
@@ -76,6 +83,7 @@ void xcall_QXmlLexicalHandler(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QXmlLexicalHandler *xself = (x_QXmlLexicalHandler*)obj;
     switch(xi) {
 	case 0: x_QXmlLexicalHandler::x_0(args);	break;
-	case 1: delete (QXmlLexicalHandler*)xself;	break;
+	case 1: x_QXmlLexicalHandler::x_1(args);	break;
+	case 2: delete (QXmlLexicalHandler*)xself;	break;
     }
 }

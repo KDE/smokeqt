@@ -36,27 +36,27 @@ public:
     }
     virtual void clear() {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(6321, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(7448, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }
     virtual uint count() const {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(6320, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(7447, (void*)this, x, true /*pure virtual*/);
 	return (uint)x[0].s_uint;
 	// ABSTRACT
     }
     virtual void deleteItem(QPtrCollection::Item x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	qt_Smoke->binding->callMethod(6325, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(7452, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }
     virtual QPtrCollection::Item newItem(QPtrCollection::Item x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(6324, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(7451, (void*)this, x)) {
 	    QPtrCollection::Item *xptr = (QPtrCollection::Item *)x[0].s_class;
 	    QPtrCollection::Item xret(*xptr);
 	    delete xptr;

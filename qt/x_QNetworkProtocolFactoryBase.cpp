@@ -12,9 +12,16 @@ public:
     }
     x_QNetworkProtocolFactoryBase() : QNetworkProtocolFactoryBase() {
     }
+    static void x_1(Smoke::Stack x) {
+	// QNetworkProtocolFactoryBase(QNetworkProtocolFactoryBase&)
+	x_QNetworkProtocolFactoryBase* xret = new x_QNetworkProtocolFactoryBase(*(QNetworkProtocolFactoryBase *)x[1].s_class);
+	x[0].s_class = (void*)xret;
+    }
+    x_QNetworkProtocolFactoryBase(QNetworkProtocolFactoryBase& x1) : QNetworkProtocolFactoryBase(x1) {
+    }
     virtual QNetworkProtocol* createObject() {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(5395, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(6407, (void*)this, x, true /*pure virtual*/);
 	return (QNetworkProtocol*)x[0].s_class;
 	// ABSTRACT
     }
@@ -24,6 +31,7 @@ void xcall_QNetworkProtocolFactoryBase(Smoke::Index xi, void *obj, Smoke::Stack 
     x_QNetworkProtocolFactoryBase *xself = (x_QNetworkProtocolFactoryBase*)obj;
     switch(xi) {
 	case 0: x_QNetworkProtocolFactoryBase::x_0(args);	break;
-	case 1: delete (QNetworkProtocolFactoryBase*)xself;	break;
+	case 1: x_QNetworkProtocolFactoryBase::x_1(args);	break;
+	case 2: delete (QNetworkProtocolFactoryBase*)xself;	break;
     }
 }

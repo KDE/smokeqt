@@ -19,6 +19,13 @@ public:
 	const QString& xret = this->QStringBucket::getKey();
 	x[0].s_voidp = (void*)&xret;
     }
+    static void x_2(Smoke::Stack x) {
+	// QStringBucket(QStringBucket&)
+	x_QStringBucket* xret = new x_QStringBucket(*(QStringBucket *)x[1].s_class);
+	x[0].s_class = (void*)xret;
+    }
+    x_QStringBucket(QStringBucket& x1) : QStringBucket(x1) {
+    }
     ~x_QStringBucket() { qt_Smoke->binding->deleted(296, (void*)this); }
 };
 void xcall_QStringBucket(Smoke::Index xi, void *obj, Smoke::Stack args) {
@@ -26,6 +33,7 @@ void xcall_QStringBucket(Smoke::Index xi, void *obj, Smoke::Stack args) {
     switch(xi) {
 	case 0: x_QStringBucket::x_0(args);	break;
 	case 1: xself->x_1(args);	break;
-	case 2: delete (QStringBucket*)xself;	break;
+	case 2: x_QStringBucket::x_2(args);	break;
+	case 3: delete (QStringBucket*)xself;	break;
     }
 }

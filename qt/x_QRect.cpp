@@ -311,6 +311,13 @@ public:
 	bool xret = this->QRect::intersects(*(const QRect *)x[1].s_class);
 	x[0].s_bool = xret;
     }
+    static void x_59(Smoke::Stack x) {
+	// QRect(QRect&)
+	x_QRect* xret = new x_QRect(*(QRect *)x[1].s_class);
+	x[0].s_class = (void*)xret;
+    }
+    x_QRect(QRect& x1) : QRect(x1) {
+    }
     ~x_QRect() { qt_Smoke->binding->deleted(241, (void*)this); }
 };
 void xcall_QRect(Smoke::Index xi, void *obj, Smoke::Stack args) {
@@ -375,6 +382,7 @@ void xcall_QRect(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 56: xself->x_56(args);	break;
 	case 57: xself->x_57(args);	break;
 	case 58: xself->x_58(args);	break;
-	case 59: delete (QRect*)xself;	break;
+	case 59: x_QRect::x_59(args);	break;
+	case 60: delete (QRect*)xself;	break;
     }
 }

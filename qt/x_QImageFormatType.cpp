@@ -6,6 +6,13 @@
 class x_QImageFormatType : public QImageFormatType {
 public:
     static void x_0(Smoke::Stack x) {
+	// QImageFormatType(QImageFormatType&)
+	x_QImageFormatType* xret = new x_QImageFormatType(*(QImageFormatType *)x[1].s_class);
+	x[0].s_class = (void*)xret;
+    }
+    x_QImageFormatType(QImageFormatType& x1) : QImageFormatType(x1) {
+    }
+    static void x_1(Smoke::Stack x) {
 	// QImageFormatType()
 	x_QImageFormatType* xret = new x_QImageFormatType();
 	x[0].s_class = (void*)xret;
@@ -16,13 +23,13 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)x1;
 	x[2].s_int = x2;
-	qt_Smoke->binding->callMethod(3809, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(4585, (void*)this, x, true /*pure virtual*/);
 	return (QImageFormat*)x[0].s_class;
 	// ABSTRACT
     }
     virtual const char* formatName() const {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(3810, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(4586, (void*)this, x, true /*pure virtual*/);
 	return (const char*)x[0].s_class;
 	// ABSTRACT
     }
@@ -32,6 +39,7 @@ void xcall_QImageFormatType(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QImageFormatType *xself = (x_QImageFormatType*)obj;
     switch(xi) {
 	case 0: x_QImageFormatType::x_0(args);	break;
-	case 1: delete (QImageFormatType*)xself;	break;
+	case 1: x_QImageFormatType::x_1(args);	break;
+	case 2: delete (QImageFormatType*)xself;	break;
     }
 }

@@ -18,6 +18,13 @@ public:
 	long xret = this->QIntBucket::getKey();
 	x[0].s_long = xret;
     }
+    static void x_2(Smoke::Stack x) {
+	// QIntBucket(QIntBucket&)
+	x_QIntBucket* xret = new x_QIntBucket(*(QIntBucket *)x[1].s_class);
+	x[0].s_class = (void*)xret;
+    }
+    x_QIntBucket(QIntBucket& x1) : QIntBucket(x1) {
+    }
     ~x_QIntBucket() { qt_Smoke->binding->deleted(164, (void*)this); }
 };
 void xcall_QIntBucket(Smoke::Index xi, void *obj, Smoke::Stack args) {
@@ -25,6 +32,7 @@ void xcall_QIntBucket(Smoke::Index xi, void *obj, Smoke::Stack args) {
     switch(xi) {
 	case 0: x_QIntBucket::x_0(args);	break;
 	case 1: xself->x_1(args);	break;
-	case 2: delete (QIntBucket*)xself;	break;
+	case 2: x_QIntBucket::x_2(args);	break;
+	case 3: delete (QIntBucket*)xself;	break;
     }
 }

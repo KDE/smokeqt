@@ -23,82 +23,165 @@ public:
 	x[0].s_enum = (long)QSessionManager::RestartNever;
     }
     void x_4(Smoke::Stack x) const {
+	// metaObject()
+	QMetaObject* xret = xthis->QSessionManager::metaObject();
+	x[0].s_class = (void*)xret;
+    }
+    void x_5(Smoke::Stack x) const {
+	// className()
+	const char* xret = xthis->QSessionManager::className();
+	x[0].s_voidp = (void*)xret;
+    }
+    void x_6(Smoke::Stack x) {
+	// qt_cast(const char*)
+	void* xret = xthis->QSessionManager::qt_cast((const char*)x[1].s_voidp);
+	x[0].s_voidp = (void*)xret;
+    }
+    void x_7(Smoke::Stack x) {
+	// qt_invoke(int, QUObject*)
+	bool xret = xthis->QSessionManager::qt_invoke((int)x[1].s_int,(QUObject*)x[2].s_voidp);
+	x[0].s_bool = xret;
+    }
+    void x_8(Smoke::Stack x) {
+	// qt_emit(int, QUObject*)
+	bool xret = xthis->QSessionManager::qt_emit((int)x[1].s_int,(QUObject*)x[2].s_voidp);
+	x[0].s_bool = xret;
+    }
+    void x_9(Smoke::Stack x) {
+	// qt_property(int, int, QVariant*)
+	bool xret = xthis->QSessionManager::qt_property((int)x[1].s_int,(int)x[2].s_int,(QVariant*)x[3].s_class);
+	x[0].s_bool = xret;
+    }
+    void x_10(Smoke::Stack x) {
+	// qObject()
+	QObject* xret = xthis->QSessionManager::qObject();
+	x[0].s_class = (void*)xret;
+    }
+    void x_11(Smoke::Stack x) const {
 	// sessionId()
 	QString xret = xthis->QSessionManager::sessionId();
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    void x_5(Smoke::Stack x) {
+    void x_12(Smoke::Stack x) {
 	// allowsInteraction()
 	bool xret = xthis->QSessionManager::allowsInteraction();
 	x[0].s_bool = xret;
     }
-    void x_6(Smoke::Stack x) {
+    void x_13(Smoke::Stack x) {
 	// allowsErrorInteraction()
 	bool xret = xthis->QSessionManager::allowsErrorInteraction();
 	x[0].s_bool = xret;
     }
-    void x_7(Smoke::Stack x) {
+    void x_14(Smoke::Stack x) {
 	// release()
 	xthis->QSessionManager::release();
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_8(Smoke::Stack x) {
+    void x_15(Smoke::Stack x) {
 	// cancel()
 	xthis->QSessionManager::cancel();
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_9(Smoke::Stack x) {
+    void x_16(Smoke::Stack x) {
 	// setRestartHint(QSessionManager::RestartHint)
 	xthis->QSessionManager::setRestartHint((QSessionManager::RestartHint)x[1].s_enum);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_10(Smoke::Stack x) const {
+    void x_17(Smoke::Stack x) const {
 	// restartHint()
 	QSessionManager::RestartHint xret = xthis->QSessionManager::restartHint();
 	x[0].s_enum = xret;
     }
-    void x_11(Smoke::Stack x) {
+    void x_18(Smoke::Stack x) {
 	// setRestartCommand(const QStringList&)
 	xthis->QSessionManager::setRestartCommand(*(const QStringList *)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_12(Smoke::Stack x) const {
+    void x_19(Smoke::Stack x) const {
 	// restartCommand()
 	QStringList xret = xthis->QSessionManager::restartCommand();
 	x[0].s_class = (void*)new QStringList(xret);
     }
-    void x_13(Smoke::Stack x) {
+    void x_20(Smoke::Stack x) {
 	// setDiscardCommand(const QStringList&)
 	xthis->QSessionManager::setDiscardCommand(*(const QStringList *)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_14(Smoke::Stack x) const {
+    void x_21(Smoke::Stack x) const {
 	// discardCommand()
 	QStringList xret = xthis->QSessionManager::discardCommand();
 	x[0].s_class = (void*)new QStringList(xret);
     }
-    void x_15(Smoke::Stack x) {
+    void x_22(Smoke::Stack x) {
 	// setManagerProperty(const QString&, const QString&)
 	xthis->QSessionManager::setManagerProperty(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_16(Smoke::Stack x) {
+    void x_23(Smoke::Stack x) {
 	// setManagerProperty(const QString&, const QStringList&)
 	xthis->QSessionManager::setManagerProperty(*(const QString *)x[1].s_voidp,*(const QStringList *)x[2].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_17(Smoke::Stack x) const {
+    void x_24(Smoke::Stack x) const {
 	// isPhase2()
 	bool xret = xthis->QSessionManager::isPhase2();
 	x[0].s_bool = xret;
     }
-    void x_18(Smoke::Stack x) {
+    void x_25(Smoke::Stack x) {
 	// requestPhase2()
 	xthis->QSessionManager::requestPhase2();
 	(void)x[0].s_int; // noop (for compiler warning)
     }
+    static void x_26(Smoke::Stack x) {
+	// staticMetaObject()
+	QMetaObject* xret = QSessionManager::staticMetaObject();
+	x[0].s_class = (void*)xret;
+    }
+    static void x_27(Smoke::Stack x) {
+	// tr(const char*, const char*)
+	QString xret = QSessionManager::tr((const char*)x[1].s_voidp,(const char*)x[2].s_voidp);
+	x[0].s_voidp = (void*)new QString(xret);
+    }
+    static void x_28(Smoke::Stack x) {
+	// tr(const char*)
+	QString xret = QSessionManager::tr((const char*)x[1].s_voidp);
+	x[0].s_voidp = (void*)new QString(xret);
+    }
+    static void x_29(Smoke::Stack x) {
+	// trUtf8(const char*, const char*)
+	QString xret = QSessionManager::trUtf8((const char*)x[1].s_voidp,(const char*)x[2].s_voidp);
+	x[0].s_voidp = (void*)new QString(xret);
+    }
+    static void x_30(Smoke::Stack x) {
+	// trUtf8(const char*)
+	QString xret = QSessionManager::trUtf8((const char*)x[1].s_voidp);
+	x[0].s_voidp = (void*)new QString(xret);
+    }
+    static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
+	switch(xtype) {
+	  case 557: //QSessionManager::RestartHint
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new QSessionManager::RestartHint;
+		break;
+	      case Smoke::EnumDelete:
+		delete (QSessionManager::RestartHint*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(QSessionManager::RestartHint*)xdata = (QSessionManager::RestartHint)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(QSessionManager::RestartHint*)xdata;
+		break;
+	    }
+	    break;
+	}
+    }
     ~x_QSessionManager() { qt_Smoke->binding->deleted(252, (void*)this); }
 };
+void xenum_QSessionManager(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
+    x_QSessionManager::xenum_operation(xop, xtype, xdata, xvalue);
+}
 void xcall_QSessionManager(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QSessionManager xtmp(obj), *xself = &xtmp;
     switch(xi) {
@@ -121,5 +204,17 @@ void xcall_QSessionManager(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 16: xself->x_16(args);	break;
 	case 17: xself->x_17(args);	break;
 	case 18: xself->x_18(args);	break;
+	case 19: xself->x_19(args);	break;
+	case 20: xself->x_20(args);	break;
+	case 21: xself->x_21(args);	break;
+	case 22: xself->x_22(args);	break;
+	case 23: xself->x_23(args);	break;
+	case 24: xself->x_24(args);	break;
+	case 25: xself->x_25(args);	break;
+	case 26: x_QSessionManager::x_26(args);	break;
+	case 27: x_QSessionManager::x_27(args);	break;
+	case 28: x_QSessionManager::x_28(args);	break;
+	case 29: x_QSessionManager::x_29(args);	break;
+	case 30: x_QSessionManager::x_30(args);	break;
     }
 }

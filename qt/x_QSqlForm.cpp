@@ -7,113 +7,173 @@
 
 class x_QSqlForm : public QSqlForm {
 public:
-    static void x_0(Smoke::Stack x) {
+    void x_0(Smoke::Stack x) const {
+	// metaObject()
+	QMetaObject* xret = this->QSqlForm::metaObject();
+	x[0].s_class = (void*)xret;
+    }
+    void x_1(Smoke::Stack x) const {
+	// className()
+	const char* xret = this->QSqlForm::className();
+	x[0].s_voidp = (void*)xret;
+    }
+    void x_2(Smoke::Stack x) {
+	// qt_cast(const char*)
+	void* xret = this->QSqlForm::qt_cast((const char*)x[1].s_voidp);
+	x[0].s_voidp = (void*)xret;
+    }
+    void x_3(Smoke::Stack x) {
+	// qt_invoke(int, QUObject*)
+	bool xret = this->QSqlForm::qt_invoke((int)x[1].s_int,(QUObject*)x[2].s_voidp);
+	x[0].s_bool = xret;
+    }
+    void x_4(Smoke::Stack x) {
+	// qt_emit(int, QUObject*)
+	bool xret = this->QSqlForm::qt_emit((int)x[1].s_int,(QUObject*)x[2].s_voidp);
+	x[0].s_bool = xret;
+    }
+    void x_5(Smoke::Stack x) {
+	// qt_property(int, int, QVariant*)
+	bool xret = this->QSqlForm::qt_property((int)x[1].s_int,(int)x[2].s_int,(QVariant*)x[3].s_class);
+	x[0].s_bool = xret;
+    }
+    void x_6(Smoke::Stack x) {
+	// qObject()
+	QObject* xret = this->QSqlForm::qObject();
+	x[0].s_class = (void*)xret;
+    }
+    static void x_7(Smoke::Stack x) {
 	// QSqlForm(QObject*, const char*)
 	x_QSqlForm* xret = new x_QSqlForm((QObject*)x[1].s_class,(const char*)x[2].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QSqlForm(QObject* x1, const char* x2) : QSqlForm(x1, x2) {
     }
-    static void x_1(Smoke::Stack x) {
+    static void x_8(Smoke::Stack x) {
 	// QSqlForm(QObject*)
 	x_QSqlForm* xret = new x_QSqlForm((QObject*)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QSqlForm(QObject* x1) : QSqlForm(x1) {
     }
-    static void x_2(Smoke::Stack x) {
+    static void x_9(Smoke::Stack x) {
 	// QSqlForm()
 	x_QSqlForm* xret = new x_QSqlForm();
 	x[0].s_class = (void*)xret;
     }
     x_QSqlForm() : QSqlForm() {
     }
-    void x_3(Smoke::Stack x) {
+    void x_10(Smoke::Stack x) {
 	// insert(QWidget*, const QString&)
 	this->QSqlForm::insert((QWidget*)x[1].s_class,*(const QString *)x[2].s_voidp);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_4(Smoke::Stack x) {
+    void x_11(Smoke::Stack x) {
 	// remove(const QString&)
 	this->QSqlForm::remove(*(const QString *)x[1].s_voidp);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_5(Smoke::Stack x) const {
+    void x_12(Smoke::Stack x) const {
 	// count()
 	uint xret = this->QSqlForm::count();
 	x[0].s_uint = xret;
     }
-    void x_6(Smoke::Stack x) const {
+    void x_13(Smoke::Stack x) const {
 	// widget(uint)
 	QWidget* xret = this->QSqlForm::widget((uint)x[1].s_uint);
 	x[0].s_class = (void*)xret;
     }
-    void x_7(Smoke::Stack x) const {
+    void x_14(Smoke::Stack x) const {
 	// widgetToField(QWidget*)
 	QSqlField* xret = this->QSqlForm::widgetToField((QWidget*)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    void x_8(Smoke::Stack x) const {
+    void x_15(Smoke::Stack x) const {
 	// fieldToWidget(QSqlField*)
 	QWidget* xret = this->QSqlForm::fieldToWidget((QSqlField*)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    void x_9(Smoke::Stack x) {
+    void x_16(Smoke::Stack x) {
 	// installPropertyMap(QSqlPropertyMap*)
 	this->QSqlForm::installPropertyMap((QSqlPropertyMap*)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_10(Smoke::Stack x) {
+    void x_17(Smoke::Stack x) {
 	// setRecord(QSqlRecord*)
 	this->QSqlForm::setRecord((QSqlRecord*)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_11(Smoke::Stack x) {
+    void x_18(Smoke::Stack x) {
 	// readField(QWidget*)
 	this->QSqlForm::readField((QWidget*)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_12(Smoke::Stack x) {
+    void x_19(Smoke::Stack x) {
 	// writeField(QWidget*)
 	this->QSqlForm::writeField((QWidget*)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_13(Smoke::Stack x) {
+    void x_20(Smoke::Stack x) {
 	// readFields()
 	this->QSqlForm::readFields();
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_14(Smoke::Stack x) {
+    void x_21(Smoke::Stack x) {
 	// writeFields()
 	this->QSqlForm::writeFields();
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_15(Smoke::Stack x) {
+    void x_22(Smoke::Stack x) {
 	// clear()
 	this->QSqlForm::clear();
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_16(Smoke::Stack x) {
+    void x_23(Smoke::Stack x) {
 	// clearValues(bool)
 	this->QSqlForm::clearValues((bool)x[1].s_bool);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_17(Smoke::Stack x) {
+    void x_24(Smoke::Stack x) {
 	// clearValues()
 	this->QSqlForm::clearValues();
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_18(Smoke::Stack x) {
+    static void x_25(Smoke::Stack x) {
+	// staticMetaObject()
+	QMetaObject* xret = QSqlForm::staticMetaObject();
+	x[0].s_class = (void*)xret;
+    }
+    static void x_26(Smoke::Stack x) {
+	// tr(const char*, const char*)
+	QString xret = QSqlForm::tr((const char*)x[1].s_voidp,(const char*)x[2].s_voidp);
+	x[0].s_voidp = (void*)new QString(xret);
+    }
+    static void x_27(Smoke::Stack x) {
+	// tr(const char*)
+	QString xret = QSqlForm::tr((const char*)x[1].s_voidp);
+	x[0].s_voidp = (void*)new QString(xret);
+    }
+    static void x_28(Smoke::Stack x) {
+	// trUtf8(const char*, const char*)
+	QString xret = QSqlForm::trUtf8((const char*)x[1].s_voidp,(const char*)x[2].s_voidp);
+	x[0].s_voidp = (void*)new QString(xret);
+    }
+    static void x_29(Smoke::Stack x) {
+	// trUtf8(const char*)
+	QString xret = QSqlForm::trUtf8((const char*)x[1].s_voidp);
+	x[0].s_voidp = (void*)new QString(xret);
+    }
+    void x_30(Smoke::Stack x) {
 	// insert(QWidget*, QSqlField*)
 	this->QSqlForm::insert((QWidget*)x[1].s_class,(QSqlField*)x[2].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_19(Smoke::Stack x) {
+    void x_31(Smoke::Stack x) {
 	// remove(QWidget*)
 	this->QSqlForm::remove((QWidget*)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_20(Smoke::Stack x) {
+    void x_32(Smoke::Stack x) {
 	// clearMap()
 	this->QSqlForm::clearMap();
 	(void)x[0].s_int; // noop (for compiler warning)
@@ -123,81 +183,91 @@ public:
 	x[1].s_voidp = (void*)x1;
 	x[2].s_class = (void*)x2;
 	x[3].s_voidp = (void*)x3;
-	if(qt_Smoke->binding->callMethod(5470, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(6496, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QObject::checkConnectArgs(x1, x2, x3);
     }
     virtual void childEvent(QChildEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(5466, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6492, (void*)this, x)) return;
 	this->QObject::childEvent(x1);
+    }
+    virtual const char* className() const {
+	Smoke::StackItem x[1];
+	if(qt_Smoke->binding->callMethod(8913, (void*)this, x)) return (const char*)x[0].s_class;
+	return this->QSqlForm::className();
     }
     virtual void clear() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(7514, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8935, (void*)this, x)) return;
 	this->QSqlForm::clear();
     }
     virtual void clearValues(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(7515, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8936, (void*)this, x)) return;
 	this->QSqlForm::clearValues(x1);
     }
     virtual void connectNotify(const char* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(5468, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6494, (void*)this, x)) return;
 	this->QObject::connectNotify(x1);
     }
     virtual void customEvent(QCustomEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(5467, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6493, (void*)this, x)) return;
 	this->QObject::customEvent(x1);
     }
     virtual void disconnectNotify(const char* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(5469, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6495, (void*)this, x)) return;
 	this->QObject::disconnectNotify(x1);
     }
     virtual bool event(QEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(5405, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(6426, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QObject::event(x1);
     }
     virtual bool eventFilter(QObject* x1, QEvent* x2) {
 	Smoke::StackItem x[3];
 	x[1].s_class = (void*)x1;
 	x[2].s_class = (void*)x2;
-	if(qt_Smoke->binding->callMethod(5406, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(6427, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QObject::eventFilter(x1, x2);
     }
     virtual void insert(QWidget* x1, QSqlField* x2) {
 	Smoke::StackItem x[3];
 	x[1].s_class = (void*)x1;
 	x[2].s_class = (void*)x2;
-	if(qt_Smoke->binding->callMethod(7517, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8943, (void*)this, x)) return;
 	this->QSqlForm::insert(x1, x2);
     }
     virtual void insert(QWidget* x1, const QString& x2) {
 	Smoke::StackItem x[3];
 	x[1].s_class = (void*)x1;
 	x[2].s_voidp = (void*)&x2;
-	if(qt_Smoke->binding->callMethod(7502, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8923, (void*)this, x)) return;
 	this->QSqlForm::insert(x1, x2);
     }
     virtual void insertChild(QObject* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(5428, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6449, (void*)this, x)) return;
 	this->QObject::insertChild(x1);
+    }
+    virtual QMetaObject* metaObject() const {
+	Smoke::StackItem x[1];
+	if(qt_Smoke->binding->callMethod(8912, (void*)this, x)) return (QMetaObject*)x[0].s_class;
+	return this->QSqlForm::metaObject();
     }
     virtual QVariant property(const char* x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(5442, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(6463, (void*)this, x)) {
 	    QVariant *xptr = (QVariant *)x[0].s_class;
 	    QVariant xret(*xptr);
 	    delete xptr;
@@ -205,69 +275,97 @@ public:
 	}
 	return this->QObject::property(x1);
     }
+    virtual void* qt_cast(const char* x1) {
+	Smoke::StackItem x[2];
+	x[1].s_voidp = (void*)x1;
+	if(qt_Smoke->binding->callMethod(8914, (void*)this, x)) return (void*)x[0].s_voidp;
+	return this->QSqlForm::qt_cast(x1);
+    }
+    virtual bool qt_emit(int x1, QUObject* x2) {
+	Smoke::StackItem x[3];
+	x[1].s_int = x1;
+	x[2].s_voidp = (void*)x2;
+	if(qt_Smoke->binding->callMethod(8916, (void*)this, x)) return (bool)x[0].s_bool;
+	return this->QSqlForm::qt_emit(x1, x2);
+    }
+    virtual bool qt_invoke(int x1, QUObject* x2) {
+	Smoke::StackItem x[3];
+	x[1].s_int = x1;
+	x[2].s_voidp = (void*)x2;
+	if(qt_Smoke->binding->callMethod(8915, (void*)this, x)) return (bool)x[0].s_bool;
+	return this->QSqlForm::qt_invoke(x1, x2);
+    }
+    virtual bool qt_property(int x1, int x2, QVariant* x3) {
+	Smoke::StackItem x[4];
+	x[1].s_int = x1;
+	x[2].s_int = x2;
+	x[3].s_class = (void*)x3;
+	if(qt_Smoke->binding->callMethod(8917, (void*)this, x)) return (bool)x[0].s_bool;
+	return this->QSqlForm::qt_property(x1, x2, x3);
+    }
     virtual void readField(QWidget* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(7510, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8931, (void*)this, x)) return;
 	this->QSqlForm::readField(x1);
     }
     virtual void readFields() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(7512, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8933, (void*)this, x)) return;
 	this->QSqlForm::readFields();
     }
     virtual void remove(QWidget* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(7518, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8944, (void*)this, x)) return;
 	this->QSqlForm::remove(x1);
     }
     virtual void remove(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(7503, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8924, (void*)this, x)) return;
 	this->QSqlForm::remove(x1);
     }
     virtual void removeChild(QObject* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(5429, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6450, (void*)this, x)) return;
 	this->QObject::removeChild(x1);
     }
     virtual void setName(const char* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(5411, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6432, (void*)this, x)) return;
 	this->QObject::setName(x1);
     }
     virtual bool setProperty(const char* x1, const QVariant& x2) {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)x1;
 	x[2].s_class = (void*)&x2;
-	if(qt_Smoke->binding->callMethod(5441, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(6462, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QObject::setProperty(x1, x2);
     }
     virtual void setRecord(QSqlRecord* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(7509, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8930, (void*)this, x)) return;
 	this->QSqlForm::setRecord(x1);
     }
     virtual void timerEvent(QTimerEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(5465, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6491, (void*)this, x)) return;
 	this->QObject::timerEvent(x1);
     }
     virtual void writeField(QWidget* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(7511, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8932, (void*)this, x)) return;
 	this->QSqlForm::writeField(x1);
     }
     virtual void writeFields() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(7513, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(8934, (void*)this, x)) return;
 	this->QSqlForm::writeFields();
     }
     ~x_QSqlForm() { qt_Smoke->binding->deleted(283, (void*)this); }
@@ -275,16 +373,16 @@ public:
 void xcall_QSqlForm(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QSqlForm *xself = (x_QSqlForm*)obj;
     switch(xi) {
-	case 0: x_QSqlForm::x_0(args);	break;
-	case 1: x_QSqlForm::x_1(args);	break;
-	case 2: x_QSqlForm::x_2(args);	break;
+	case 0: xself->x_0(args);	break;
+	case 1: xself->x_1(args);	break;
+	case 2: xself->x_2(args);	break;
 	case 3: xself->x_3(args);	break;
 	case 4: xself->x_4(args);	break;
 	case 5: xself->x_5(args);	break;
 	case 6: xself->x_6(args);	break;
-	case 7: xself->x_7(args);	break;
-	case 8: xself->x_8(args);	break;
-	case 9: xself->x_9(args);	break;
+	case 7: x_QSqlForm::x_7(args);	break;
+	case 8: x_QSqlForm::x_8(args);	break;
+	case 9: x_QSqlForm::x_9(args);	break;
 	case 10: xself->x_10(args);	break;
 	case 11: xself->x_11(args);	break;
 	case 12: xself->x_12(args);	break;
@@ -296,6 +394,18 @@ void xcall_QSqlForm(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 18: xself->x_18(args);	break;
 	case 19: xself->x_19(args);	break;
 	case 20: xself->x_20(args);	break;
-	case 21: delete (QSqlForm*)xself;	break;
+	case 21: xself->x_21(args);	break;
+	case 22: xself->x_22(args);	break;
+	case 23: xself->x_23(args);	break;
+	case 24: xself->x_24(args);	break;
+	case 25: x_QSqlForm::x_25(args);	break;
+	case 26: x_QSqlForm::x_26(args);	break;
+	case 27: x_QSqlForm::x_27(args);	break;
+	case 28: x_QSqlForm::x_28(args);	break;
+	case 29: x_QSqlForm::x_29(args);	break;
+	case 30: xself->x_30(args);	break;
+	case 31: xself->x_31(args);	break;
+	case 32: xself->x_32(args);	break;
+	case 33: delete (QSqlForm*)xself;	break;
     }
 }

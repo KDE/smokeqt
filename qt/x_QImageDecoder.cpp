@@ -25,26 +25,33 @@ public:
 	x[0].s_int = xret;
     }
     static void x_3(Smoke::Stack x) {
+	// QImageDecoder(QImageDecoder&)
+	x_QImageDecoder* xret = new x_QImageDecoder(*(QImageDecoder *)x[1].s_class);
+	x[0].s_class = (void*)xret;
+    }
+    x_QImageDecoder(QImageDecoder& x1) : QImageDecoder(x1) {
+    }
+    static void x_4(Smoke::Stack x) {
 	// formatName(const uchar*, int)
 	const char* xret = QImageDecoder::formatName((const uchar*)x[1].s_voidp,(int)x[2].s_int);
 	x[0].s_voidp = (void*)xret;
     }
-    static void x_4(Smoke::Stack x) {
+    static void x_5(Smoke::Stack x) {
 	// format(const char*)
 	QImageFormatType* xret = QImageDecoder::format((const char*)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
-    static void x_5(Smoke::Stack x) {
+    static void x_6(Smoke::Stack x) {
 	// inputFormats()
 	QStrList xret = QImageDecoder::inputFormats();
 	x[0].s_class = (void*)new QStrList(xret);
     }
-    static void x_6(Smoke::Stack x) {
+    static void x_7(Smoke::Stack x) {
 	// registerDecoderFactory(QImageFormatType*)
 	QImageDecoder::registerDecoderFactory((QImageFormatType*)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    static void x_7(Smoke::Stack x) {
+    static void x_8(Smoke::Stack x) {
 	// unregisterDecoderFactory(QImageFormatType*)
 	QImageDecoder::unregisterDecoderFactory((QImageFormatType*)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
@@ -62,6 +69,7 @@ void xcall_QImageDecoder(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 5: x_QImageDecoder::x_5(args);	break;
 	case 6: x_QImageDecoder::x_6(args);	break;
 	case 7: x_QImageDecoder::x_7(args);	break;
-	case 8: delete (QImageDecoder*)xself;	break;
+	case 8: x_QImageDecoder::x_8(args);	break;
+	case 9: delete (QImageDecoder*)xself;	break;
     }
 }

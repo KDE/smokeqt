@@ -316,8 +316,111 @@ public:
 	int xret = this->QStyleSheetItem::lineSpacing();
 	x[0].s_int = xret;
     }
+    static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
+	switch(xtype) {
+	  case 684: //QStyleSheetItem::DisplayMode
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new QStyleSheetItem::DisplayMode;
+		break;
+	      case Smoke::EnumDelete:
+		delete (QStyleSheetItem::DisplayMode*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(QStyleSheetItem::DisplayMode*)xdata = (QStyleSheetItem::DisplayMode)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(QStyleSheetItem::DisplayMode*)xdata;
+		break;
+	    }
+	    break;
+	  case 689: //QStyleSheetItem::VerticalAlignment
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new QStyleSheetItem::VerticalAlignment;
+		break;
+	      case Smoke::EnumDelete:
+		delete (QStyleSheetItem::VerticalAlignment*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(QStyleSheetItem::VerticalAlignment*)xdata = (QStyleSheetItem::VerticalAlignment)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(QStyleSheetItem::VerticalAlignment*)xdata;
+		break;
+	    }
+	    break;
+	  case 688: //QStyleSheetItem::Margin
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new QStyleSheetItem::Margin;
+		break;
+	      case Smoke::EnumDelete:
+		delete (QStyleSheetItem::Margin*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(QStyleSheetItem::Margin*)xdata = (QStyleSheetItem::Margin)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(QStyleSheetItem::Margin*)xdata;
+		break;
+	    }
+	    break;
+	  case 690: //QStyleSheetItem::WhiteSpaceMode
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new QStyleSheetItem::WhiteSpaceMode;
+		break;
+	      case Smoke::EnumDelete:
+		delete (QStyleSheetItem::WhiteSpaceMode*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(QStyleSheetItem::WhiteSpaceMode*)xdata = (QStyleSheetItem::WhiteSpaceMode)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(QStyleSheetItem::WhiteSpaceMode*)xdata;
+		break;
+	    }
+	    break;
+	  case 686: //QStyleSheetItem::ListStyle
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new QStyleSheetItem::ListStyle;
+		break;
+	      case Smoke::EnumDelete:
+		delete (QStyleSheetItem::ListStyle*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(QStyleSheetItem::ListStyle*)xdata = (QStyleSheetItem::ListStyle)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(QStyleSheetItem::ListStyle*)xdata;
+		break;
+	    }
+	    break;
+	  case 683: //QStyleSheetItem::AdditionalStyleValues
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new QStyleSheetItem::AdditionalStyleValues;
+		break;
+	      case Smoke::EnumDelete:
+		delete (QStyleSheetItem::AdditionalStyleValues*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(QStyleSheetItem::AdditionalStyleValues*)xdata = (QStyleSheetItem::AdditionalStyleValues)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(QStyleSheetItem::AdditionalStyleValues*)xdata;
+		break;
+	    }
+	    break;
+	}
+    }
     ~x_QStyleSheetItem() { qt_Smoke->binding->deleted(304, (void*)this); }
 };
+void xenum_QStyleSheetItem(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
+    x_QStyleSheetItem::xenum_operation(xop, xtype, xdata, xvalue);
+}
 void xcall_QStyleSheetItem(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QStyleSheetItem *xself = (x_QStyleSheetItem*)obj;
     switch(xi) {

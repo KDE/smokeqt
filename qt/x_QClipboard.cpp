@@ -12,80 +12,140 @@ private:
     QClipboard *xthis;
 public:
     x_QClipboard(void *x) : xthis((QClipboard*)x) {}
-    void x_0(Smoke::Stack x) {
+    void x_0(Smoke::Stack x) const {
+	// metaObject()
+	QMetaObject* xret = xthis->QClipboard::metaObject();
+	x[0].s_class = (void*)xret;
+    }
+    void x_1(Smoke::Stack x) const {
+	// className()
+	const char* xret = xthis->QClipboard::className();
+	x[0].s_voidp = (void*)xret;
+    }
+    void x_2(Smoke::Stack x) {
+	// qt_cast(const char*)
+	void* xret = xthis->QClipboard::qt_cast((const char*)x[1].s_voidp);
+	x[0].s_voidp = (void*)xret;
+    }
+    void x_3(Smoke::Stack x) {
+	// qt_invoke(int, QUObject*)
+	bool xret = xthis->QClipboard::qt_invoke((int)x[1].s_int,(QUObject*)x[2].s_voidp);
+	x[0].s_bool = xret;
+    }
+    void x_4(Smoke::Stack x) {
+	// qt_emit(int, QUObject*)
+	bool xret = xthis->QClipboard::qt_emit((int)x[1].s_int,(QUObject*)x[2].s_voidp);
+	x[0].s_bool = xret;
+    }
+    void x_5(Smoke::Stack x) {
+	// qt_property(int, int, QVariant*)
+	bool xret = xthis->QClipboard::qt_property((int)x[1].s_int,(int)x[2].s_int,(QVariant*)x[3].s_class);
+	x[0].s_bool = xret;
+    }
+    void x_6(Smoke::Stack x) {
+	// qObject()
+	QObject* xret = xthis->QClipboard::qObject();
+	x[0].s_class = (void*)xret;
+    }
+    void x_7(Smoke::Stack x) {
 	// clear()
 	xthis->QClipboard::clear();
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_1(Smoke::Stack x) const {
+    void x_8(Smoke::Stack x) const {
 	// supportsSelection()
 	bool xret = xthis->QClipboard::supportsSelection();
 	x[0].s_bool = xret;
     }
-    void x_2(Smoke::Stack x) const {
+    void x_9(Smoke::Stack x) const {
 	// ownsSelection()
 	bool xret = xthis->QClipboard::ownsSelection();
 	x[0].s_bool = xret;
     }
-    void x_3(Smoke::Stack x) const {
+    void x_10(Smoke::Stack x) const {
 	// ownsClipboard()
 	bool xret = xthis->QClipboard::ownsClipboard();
 	x[0].s_bool = xret;
     }
-    void x_4(Smoke::Stack x) {
+    void x_11(Smoke::Stack x) {
 	// setSelectionMode(bool)
 	xthis->QClipboard::setSelectionMode((bool)x[1].s_bool);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_5(Smoke::Stack x) const {
+    void x_12(Smoke::Stack x) const {
 	// selectionModeEnabled()
 	bool xret = xthis->QClipboard::selectionModeEnabled();
 	x[0].s_bool = xret;
     }
-    void x_6(Smoke::Stack x) const {
+    void x_13(Smoke::Stack x) const {
 	// data()
 	QMimeSource* xret = xthis->QClipboard::data();
 	x[0].s_class = (void*)xret;
     }
-    void x_7(Smoke::Stack x) {
+    void x_14(Smoke::Stack x) {
 	// setData(QMimeSource*)
 	xthis->QClipboard::setData((QMimeSource*)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_8(Smoke::Stack x) const {
+    void x_15(Smoke::Stack x) const {
 	// text()
 	QString xret = xthis->QClipboard::text();
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    void x_9(Smoke::Stack x) const {
+    void x_16(Smoke::Stack x) const {
 	// text(QCString&)
 	QString xret = xthis->QClipboard::text(*(QCString *)x[1].s_voidp);
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    void x_10(Smoke::Stack x) {
+    void x_17(Smoke::Stack x) {
 	// setText(const QString&)
 	xthis->QClipboard::setText(*(const QString *)x[1].s_voidp);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_11(Smoke::Stack x) const {
+    void x_18(Smoke::Stack x) const {
 	// image()
 	QImage xret = xthis->QClipboard::image();
 	x[0].s_class = (void*)new QImage(xret);
     }
-    void x_12(Smoke::Stack x) const {
+    void x_19(Smoke::Stack x) const {
 	// pixmap()
 	QPixmap xret = xthis->QClipboard::pixmap();
 	x[0].s_class = (void*)new QPixmap(xret);
     }
-    void x_13(Smoke::Stack x) {
+    void x_20(Smoke::Stack x) {
 	// setImage(const QImage&)
 	xthis->QClipboard::setImage(*(const QImage *)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_14(Smoke::Stack x) {
+    void x_21(Smoke::Stack x) {
 	// setPixmap(const QPixmap&)
 	xthis->QClipboard::setPixmap(*(const QPixmap *)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
+    }
+    static void x_22(Smoke::Stack x) {
+	// staticMetaObject()
+	QMetaObject* xret = QClipboard::staticMetaObject();
+	x[0].s_class = (void*)xret;
+    }
+    static void x_23(Smoke::Stack x) {
+	// tr(const char*, const char*)
+	QString xret = QClipboard::tr((const char*)x[1].s_voidp,(const char*)x[2].s_voidp);
+	x[0].s_voidp = (void*)new QString(xret);
+    }
+    static void x_24(Smoke::Stack x) {
+	// tr(const char*)
+	QString xret = QClipboard::tr((const char*)x[1].s_voidp);
+	x[0].s_voidp = (void*)new QString(xret);
+    }
+    static void x_25(Smoke::Stack x) {
+	// trUtf8(const char*, const char*)
+	QString xret = QClipboard::trUtf8((const char*)x[1].s_voidp,(const char*)x[2].s_voidp);
+	x[0].s_voidp = (void*)new QString(xret);
+    }
+    static void x_26(Smoke::Stack x) {
+	// trUtf8(const char*)
+	QString xret = QClipboard::trUtf8((const char*)x[1].s_voidp);
+	x[0].s_voidp = (void*)new QString(xret);
     }
     ~x_QClipboard() { qt_Smoke->binding->deleted(39, (void*)this); }
 };
@@ -107,5 +167,17 @@ void xcall_QClipboard(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 12: xself->x_12(args);	break;
 	case 13: xself->x_13(args);	break;
 	case 14: xself->x_14(args);	break;
+	case 15: xself->x_15(args);	break;
+	case 16: xself->x_16(args);	break;
+	case 17: xself->x_17(args);	break;
+	case 18: xself->x_18(args);	break;
+	case 19: xself->x_19(args);	break;
+	case 20: xself->x_20(args);	break;
+	case 21: xself->x_21(args);	break;
+	case 22: x_QClipboard::x_22(args);	break;
+	case 23: x_QClipboard::x_23(args);	break;
+	case 24: x_QClipboard::x_24(args);	break;
+	case 25: x_QClipboard::x_25(args);	break;
+	case 26: x_QClipboard::x_26(args);	break;
     }
 }

@@ -64,6 +64,13 @@ public:
 	this->QXmlNamespaceSupport::reset();
 	(void)x[0].s_int; // noop (for compiler warning)
     }
+    static void x_11(Smoke::Stack x) {
+	// QXmlNamespaceSupport(QXmlNamespaceSupport&)
+	x_QXmlNamespaceSupport* xret = new x_QXmlNamespaceSupport(*(QXmlNamespaceSupport *)x[1].s_class);
+	x[0].s_class = (void*)xret;
+    }
+    x_QXmlNamespaceSupport(QXmlNamespaceSupport& x1) : QXmlNamespaceSupport(x1) {
+    }
     ~x_QXmlNamespaceSupport() { qt_Smoke->binding->deleted(376, (void*)this); }
 };
 void xcall_QXmlNamespaceSupport(Smoke::Index xi, void *obj, Smoke::Stack args) {
@@ -80,6 +87,7 @@ void xcall_QXmlNamespaceSupport(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 8: xself->x_8(args);	break;
 	case 9: xself->x_9(args);	break;
 	case 10: xself->x_10(args);	break;
-	case 11: delete (QXmlNamespaceSupport*)xself;	break;
+	case 11: x_QXmlNamespaceSupport::x_11(args);	break;
+	case 12: delete (QXmlNamespaceSupport*)xself;	break;
     }
 }

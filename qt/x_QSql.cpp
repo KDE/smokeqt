@@ -39,8 +39,63 @@ public:
     }
     x_QSql() : QSql() {
     }
+    static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
+	switch(xtype) {
+	  case 604: //QSql::Location
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new QSql::Location;
+		break;
+	      case Smoke::EnumDelete:
+		delete (QSql::Location*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(QSql::Location*)xdata = (QSql::Location)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(QSql::Location*)xdata;
+		break;
+	    }
+	    break;
+	  case 605: //QSql::Op
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new QSql::Op;
+		break;
+	      case Smoke::EnumDelete:
+		delete (QSql::Op*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(QSql::Op*)xdata = (QSql::Op)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(QSql::Op*)xdata;
+		break;
+	    }
+	    break;
+	  case 603: //QSql::Confirm
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new QSql::Confirm;
+		break;
+	      case Smoke::EnumDelete:
+		delete (QSql::Confirm*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(QSql::Confirm*)xdata = (QSql::Confirm)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(QSql::Confirm*)xdata;
+		break;
+	    }
+	    break;
+	}
+    }
     ~x_QSql() { qt_Smoke->binding->deleted(273, (void*)this); }
 };
+void xenum_QSql(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
+    x_QSql::xenum_operation(xop, xtype, xdata, xvalue);
+}
 void xcall_QSql(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QSql *xself = (x_QSql*)obj;
     switch(xi) {

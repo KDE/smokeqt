@@ -18,6 +18,13 @@ public:
 	const char* xret = this->QAsciiBucket::getKey();
 	x[0].s_voidp = (void*)xret;
     }
+    static void x_2(Smoke::Stack x) {
+	// QAsciiBucket(QAsciiBucket&)
+	x_QAsciiBucket* xret = new x_QAsciiBucket(*(QAsciiBucket *)x[1].s_class);
+	x[0].s_class = (void*)xret;
+    }
+    x_QAsciiBucket(QAsciiBucket& x1) : QAsciiBucket(x1) {
+    }
     ~x_QAsciiBucket() { qt_Smoke->binding->deleted(5, (void*)this); }
 };
 void xcall_QAsciiBucket(Smoke::Index xi, void *obj, Smoke::Stack args) {
@@ -25,6 +32,7 @@ void xcall_QAsciiBucket(Smoke::Index xi, void *obj, Smoke::Stack args) {
     switch(xi) {
 	case 0: x_QAsciiBucket::x_0(args);	break;
 	case 1: xself->x_1(args);	break;
-	case 2: delete (QAsciiBucket*)xself;	break;
+	case 2: x_QAsciiBucket::x_2(args);	break;
+	case 3: delete (QAsciiBucket*)xself;	break;
     }
 }

@@ -219,8 +219,31 @@ public:
 	QDataStream& xret = this->QDataStream::writeRawBytes((const char*)x[1].s_voidp,(uint)x[2].s_uint);
 	x[0].s_class = (void*)&xret;
     }
+    static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
+	switch(xtype) {
+	  case 125: //QDataStream::ByteOrder
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new QDataStream::ByteOrder;
+		break;
+	      case Smoke::EnumDelete:
+		delete (QDataStream::ByteOrder*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(QDataStream::ByteOrder*)xdata = (QDataStream::ByteOrder)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(QDataStream::ByteOrder*)xdata;
+		break;
+	    }
+	    break;
+	}
+    }
     ~x_QDataStream() { qt_Smoke->binding->deleted(59, (void*)this); }
 };
+void xenum_QDataStream(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
+    x_QDataStream::xenum_operation(xop, xtype, xdata, xvalue);
+}
 void xcall_QDataStream(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QDataStream *xself = (x_QDataStream*)obj;
     switch(xi) {

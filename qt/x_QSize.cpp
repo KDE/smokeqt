@@ -110,6 +110,13 @@ public:
 	QSize& xret = this->QSize::operator/=((double)x[1].s_double);
 	x[0].s_class = (void*)&xret;
     }
+    static void x_20(Smoke::Stack x) {
+	// QSize(QSize&)
+	x_QSize* xret = new x_QSize(*(QSize *)x[1].s_class);
+	x[0].s_class = (void*)xret;
+    }
+    x_QSize(QSize& x1) : QSize(x1) {
+    }
     ~x_QSize() { qt_Smoke->binding->deleted(260, (void*)this); }
 };
 void xcall_QSize(Smoke::Index xi, void *obj, Smoke::Stack args) {
@@ -135,6 +142,7 @@ void xcall_QSize(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 17: xself->x_17(args);	break;
 	case 18: xself->x_18(args);	break;
 	case 19: xself->x_19(args);	break;
-	case 20: delete (QSize*)xself;	break;
+	case 20: x_QSize::x_20(args);	break;
+	case 21: delete (QSize*)xself;	break;
     }
 }

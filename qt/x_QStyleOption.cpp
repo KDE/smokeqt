@@ -147,8 +147,38 @@ public:
 	Qt::ArrowType xret = this->QStyleOption::arrowType();
 	x[0].s_enum = xret;
     }
+    static void x_24(Smoke::Stack x) {
+	// QStyleOption(QStyleOption&)
+	x_QStyleOption* xret = new x_QStyleOption(*(QStyleOption *)x[1].s_class);
+	x[0].s_class = (void*)xret;
+    }
+    x_QStyleOption(QStyleOption& x1) : QStyleOption(x1) {
+    }
+    static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
+	switch(xtype) {
+	  case 679: //QStyleOption::StyleOptionDefault
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new QStyleOption::StyleOptionDefault;
+		break;
+	      case Smoke::EnumDelete:
+		delete (QStyleOption::StyleOptionDefault*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(QStyleOption::StyleOptionDefault*)xdata = (QStyleOption::StyleOptionDefault)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(QStyleOption::StyleOptionDefault*)xdata;
+		break;
+	    }
+	    break;
+	}
+    }
     ~x_QStyleOption() { qt_Smoke->binding->deleted(301, (void*)this); }
 };
+void xenum_QStyleOption(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
+    x_QStyleOption::xenum_operation(xop, xtype, xdata, xvalue);
+}
 void xcall_QStyleOption(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QStyleOption *xself = (x_QStyleOption*)obj;
     switch(xi) {
@@ -176,6 +206,7 @@ void xcall_QStyleOption(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 21: xself->x_21(args);	break;
 	case 22: xself->x_22(args);	break;
 	case 23: xself->x_23(args);	break;
-	case 24: delete (QStyleOption*)xself;	break;
+	case 24: x_QStyleOption::x_24(args);	break;
+	case 25: delete (QStyleOption*)xself;	break;
     }
 }

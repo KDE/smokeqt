@@ -12,15 +12,22 @@ public:
     }
     x_QXmlLocator() : QXmlLocator() {
     }
+    static void x_1(Smoke::Stack x) {
+	// QXmlLocator(QXmlLocator&)
+	x_QXmlLocator* xret = new x_QXmlLocator(*(QXmlLocator *)x[1].s_class);
+	x[0].s_class = (void*)xret;
+    }
+    x_QXmlLocator(QXmlLocator& x1) : QXmlLocator(x1) {
+    }
     virtual int columnNumber() {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(10072, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(11974, (void*)this, x, true /*pure virtual*/);
 	return (int)x[0].s_int;
 	// ABSTRACT
     }
     virtual int lineNumber() {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(10073, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(11975, (void*)this, x, true /*pure virtual*/);
 	return (int)x[0].s_int;
 	// ABSTRACT
     }
@@ -30,6 +37,7 @@ void xcall_QXmlLocator(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QXmlLocator *xself = (x_QXmlLocator*)obj;
     switch(xi) {
 	case 0: x_QXmlLocator::x_0(args);	break;
-	case 1: delete (QXmlLocator*)xself;	break;
+	case 1: x_QXmlLocator::x_1(args);	break;
+	case 2: delete (QXmlLocator*)xself;	break;
     }
 }

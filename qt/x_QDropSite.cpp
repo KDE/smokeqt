@@ -12,12 +12,20 @@ public:
     }
     x_QDropSite(QWidget* x1) : QDropSite(x1) {
     }
+    static void x_1(Smoke::Stack x) {
+	// QDropSite(QDropSite&)
+	x_QDropSite* xret = new x_QDropSite(*(QDropSite *)x[1].s_class);
+	x[0].s_class = (void*)xret;
+    }
+    x_QDropSite(QDropSite& x1) : QDropSite(x1) {
+    }
     ~x_QDropSite() { qt_Smoke->binding->deleted(103, (void*)this); }
 };
 void xcall_QDropSite(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QDropSite *xself = (x_QDropSite*)obj;
     switch(xi) {
 	case 0: x_QDropSite::x_0(args);	break;
-	case 1: delete (QDropSite*)xself;	break;
+	case 1: x_QDropSite::x_1(args);	break;
+	case 2: delete (QDropSite*)xself;	break;
     }
 }

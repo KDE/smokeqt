@@ -12,12 +12,20 @@ public:
     }
     x_QTLWExtra() : QTLWExtra() {
     }
+    static void x_1(Smoke::Stack x) {
+	// QTLWExtra(QTLWExtra&)
+	x_QTLWExtra* xret = new x_QTLWExtra(*(QTLWExtra *)x[1].s_class);
+	x[0].s_class = (void*)xret;
+    }
+    x_QTLWExtra(QTLWExtra& x1) : QTLWExtra(x1) {
+    }
     ~x_QTLWExtra() { qt_Smoke->binding->deleted(305, (void*)this); }
 };
 void xcall_QTLWExtra(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QTLWExtra *xself = (x_QTLWExtra*)obj;
     switch(xi) {
 	case 0: x_QTLWExtra::x_0(args);	break;
-	case 1: delete (QTLWExtra*)xself;	break;
+	case 1: x_QTLWExtra::x_1(args);	break;
+	case 2: delete (QTLWExtra*)xself;	break;
     }
 }

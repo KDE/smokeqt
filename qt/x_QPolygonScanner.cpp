@@ -50,17 +50,47 @@ public:
     }
     x_QPolygonScanner() : QPolygonScanner() {
     }
+    static void x_10(Smoke::Stack x) {
+	// QPolygonScanner(QPolygonScanner&)
+	x_QPolygonScanner* xret = new x_QPolygonScanner(*(QPolygonScanner *)x[1].s_class);
+	x[0].s_class = (void*)xret;
+    }
+    x_QPolygonScanner(QPolygonScanner& x1) : QPolygonScanner(x1) {
+    }
     virtual void processSpans(int x1, QPoint* x2, int* x3) {
 	Smoke::StackItem x[4];
 	x[1].s_int = x1;
 	x[2].s_class = (void*)x2;
 	x[3].s_voidp = (void*)x3;
-	qt_Smoke->binding->callMethod(6033, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(7095, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }
+    static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
+	switch(xtype) {
+	  case 504: //QPolygonScanner::Edge
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new QPolygonScanner::Edge;
+		break;
+	      case Smoke::EnumDelete:
+		delete (QPolygonScanner::Edge*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(QPolygonScanner::Edge*)xdata = (QPolygonScanner::Edge)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(QPolygonScanner::Edge*)xdata;
+		break;
+	    }
+	    break;
+	}
+    }
     ~x_QPolygonScanner() { qt_Smoke->binding->deleted(229, (void*)this); }
 };
+void xenum_QPolygonScanner(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
+    x_QPolygonScanner::xenum_operation(xop, xtype, xdata, xvalue);
+}
 void xcall_QPolygonScanner(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QPolygonScanner *xself = (x_QPolygonScanner*)obj;
     switch(xi) {
@@ -74,6 +104,7 @@ void xcall_QPolygonScanner(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 7: xself->x_7(args);	break;
 	case 8: xself->x_8(args);	break;
 	case 9: x_QPolygonScanner::x_9(args);	break;
-	case 10: delete (QPolygonScanner*)xself;	break;
+	case 10: x_QPolygonScanner::x_10(args);	break;
+	case 11: delete (QPolygonScanner*)xself;	break;
     }
 }

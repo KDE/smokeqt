@@ -156,26 +156,33 @@ public:
 	x[0].s_int = xret;
     }
     static void x_28(Smoke::Stack x) {
+	// QTime(QTime&)
+	x_QTime* xret = new x_QTime(*(QTime *)x[1].s_class);
+	x[0].s_class = (void*)xret;
+    }
+    x_QTime(QTime& x1) : QTime(x1) {
+    }
+    static void x_29(Smoke::Stack x) {
 	// currentTime()
 	QTime xret = QTime::currentTime();
 	x[0].s_class = (void*)new QTime(xret);
     }
-    static void x_29(Smoke::Stack x) {
+    static void x_30(Smoke::Stack x) {
 	// fromString(const QString&, Qt::DateFormat)
 	QTime xret = QTime::fromString(*(const QString *)x[1].s_voidp,(Qt::DateFormat)x[2].s_enum);
 	x[0].s_class = (void*)new QTime(xret);
     }
-    static void x_30(Smoke::Stack x) {
+    static void x_31(Smoke::Stack x) {
 	// fromString(const QString&)
 	QTime xret = QTime::fromString(*(const QString *)x[1].s_voidp);
 	x[0].s_class = (void*)new QTime(xret);
     }
-    static void x_31(Smoke::Stack x) {
+    static void x_32(Smoke::Stack x) {
 	// isValid(int, int, int, int)
 	bool xret = QTime::isValid((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int);
 	x[0].s_bool = xret;
     }
-    static void x_32(Smoke::Stack x) {
+    static void x_33(Smoke::Stack x) {
 	// isValid(int, int, int)
 	bool xret = QTime::isValid((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int);
 	x[0].s_bool = xret;
@@ -218,6 +225,7 @@ void xcall_QTime(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 30: x_QTime::x_30(args);	break;
 	case 31: x_QTime::x_31(args);	break;
 	case 32: x_QTime::x_32(args);	break;
-	case 33: delete (QTime*)xself;	break;
+	case 33: x_QTime::x_33(args);	break;
+	case 34: delete (QTime*)xself;	break;
     }
 }

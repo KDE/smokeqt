@@ -13,11 +13,18 @@ public:
     }
     x_QTextDecoder() : QTextDecoder() {
     }
+    static void x_1(Smoke::Stack x) {
+	// QTextDecoder(QTextDecoder&)
+	x_QTextDecoder* xret = new x_QTextDecoder(*(QTextDecoder *)x[1].s_class);
+	x[0].s_class = (void*)xret;
+    }
+    x_QTextDecoder(QTextDecoder& x1) : QTextDecoder(x1) {
+    }
     virtual QString toUnicode(const char* x1, int x2) {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)x1;
 	x[2].s_int = x2;
-	qt_Smoke->binding->callMethod(8567, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(10160, (void*)this, x, true /*pure virtual*/);
 	QString *xptr = (QString *)x[0].s_class;
 	QString xret(*xptr);
 	delete xptr;
@@ -30,6 +37,7 @@ void xcall_QTextDecoder(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QTextDecoder *xself = (x_QTextDecoder*)obj;
     switch(xi) {
 	case 0: x_QTextDecoder::x_0(args);	break;
-	case 1: delete (QTextDecoder*)xself;	break;
+	case 1: x_QTextDecoder::x_1(args);	break;
+	case 2: delete (QTextDecoder*)xself;	break;
     }
 }

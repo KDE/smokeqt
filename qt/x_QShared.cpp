@@ -22,6 +22,13 @@ public:
 	bool xret = this->QShared::deref();
 	x[0].s_bool = xret;
     }
+    static void x_3(Smoke::Stack x) {
+	// QShared(QShared&)
+	x_QShared* xret = new x_QShared(*(QShared *)x[1].s_class);
+	x[0].s_class = (void*)xret;
+    }
+    x_QShared(QShared& x1) : QShared(x1) {
+    }
     ~x_QShared() { qt_Smoke->binding->deleted(254, (void*)this); }
 };
 void xcall_QShared(Smoke::Index xi, void *obj, Smoke::Stack args) {
@@ -30,6 +37,7 @@ void xcall_QShared(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 0: x_QShared::x_0(args);	break;
 	case 1: xself->x_1(args);	break;
 	case 2: xself->x_2(args);	break;
-	case 3: delete (QShared*)xself;	break;
+	case 3: x_QShared::x_3(args);	break;
+	case 4: delete (QShared*)xself;	break;
     }
 }

@@ -89,6 +89,13 @@ public:
 	uint xret = this->QCanvasPixmapArray::count();
 	x[0].s_uint = xret;
     }
+    static void x_14(Smoke::Stack x) {
+	// QCanvasPixmapArray(QCanvasPixmapArray&)
+	x_QCanvasPixmapArray* xret = new x_QCanvasPixmapArray(*(QCanvasPixmapArray *)x[1].s_class);
+	x[0].s_class = (void*)xret;
+    }
+    x_QCanvasPixmapArray(QCanvasPixmapArray& x1) : QCanvasPixmapArray(x1) {
+    }
     ~x_QCanvasPixmapArray() { qt_Smoke->binding->deleted(25, (void*)this); }
 };
 void xcall_QCanvasPixmapArray(Smoke::Index xi, void *obj, Smoke::Stack args) {
@@ -108,6 +115,7 @@ void xcall_QCanvasPixmapArray(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 11: xself->x_11(args);	break;
 	case 12: xself->x_12(args);	break;
 	case 13: xself->x_13(args);	break;
-	case 14: delete (QCanvasPixmapArray*)xself;	break;
+	case 14: x_QCanvasPixmapArray::x_14(args);	break;
+	case 15: delete (QCanvasPixmapArray*)xself;	break;
     }
 }

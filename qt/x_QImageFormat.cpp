@@ -13,13 +13,20 @@ public:
     }
     x_QImageFormat() : QImageFormat() {
     }
+    static void x_1(Smoke::Stack x) {
+	// QImageFormat(QImageFormat&)
+	x_QImageFormat* xret = new x_QImageFormat(*(QImageFormat *)x[1].s_class);
+	x[0].s_class = (void*)xret;
+    }
+    x_QImageFormat(QImageFormat& x1) : QImageFormat(x1) {
+    }
     virtual int decode(QImage& x1, QImageConsumer* x2, const uchar* x3, int x4) {
 	Smoke::StackItem x[5];
 	x[1].s_class = (void*)&x1;
 	x[2].s_class = (void*)x2;
 	x[3].s_voidp = (void*)x3;
 	x[4].s_int = x4;
-	qt_Smoke->binding->callMethod(3800, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(4563, (void*)this, x, true /*pure virtual*/);
 	return (int)x[0].s_int;
 	// ABSTRACT
     }
@@ -29,6 +36,7 @@ void xcall_QImageFormat(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QImageFormat *xself = (x_QImageFormat*)obj;
     switch(xi) {
 	case 0: x_QImageFormat::x_0(args);	break;
-	case 1: delete (QImageFormat*)xself;	break;
+	case 1: x_QImageFormat::x_1(args);	break;
+	case 2: delete (QImageFormat*)xself;	break;
     }
 }

@@ -21,8 +21,38 @@ public:
     }
     x_QMetaData() : QMetaData() {
     }
+    static void x_4(Smoke::Stack x) {
+	// QMetaData(QMetaData&)
+	x_QMetaData* xret = new x_QMetaData(*(QMetaData *)x[1].s_class);
+	x[0].s_class = (void*)xret;
+    }
+    x_QMetaData(QMetaData& x1) : QMetaData(x1) {
+    }
+    static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
+	switch(xtype) {
+	  case 418: //QMetaData::Access
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new QMetaData::Access;
+		break;
+	      case Smoke::EnumDelete:
+		delete (QMetaData::Access*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(QMetaData::Access*)xdata = (QMetaData::Access)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(QMetaData::Access*)xdata;
+		break;
+	    }
+	    break;
+	}
+    }
     ~x_QMetaData() { qt_Smoke->binding->deleted(194, (void*)this); }
 };
+void xenum_QMetaData(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
+    x_QMetaData::xenum_operation(xop, xtype, xdata, xvalue);
+}
 void xcall_QMetaData(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QMetaData *xself = (x_QMetaData*)obj;
     switch(xi) {
@@ -30,6 +60,7 @@ void xcall_QMetaData(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 1: x_QMetaData::x_1(args);	break;
 	case 2: x_QMetaData::x_2(args);	break;
 	case 3: x_QMetaData::x_3(args);	break;
-	case 4: delete (QMetaData*)xself;	break;
+	case 4: x_QMetaData::x_4(args);	break;
+	case 5: delete (QMetaData*)xself;	break;
     }
 }

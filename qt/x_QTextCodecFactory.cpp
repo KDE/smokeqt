@@ -14,11 +14,18 @@ public:
     x_QTextCodecFactory() : QTextCodecFactory() {
     }
     static void x_1(Smoke::Stack x) {
+	// QTextCodecFactory(QTextCodecFactory&)
+	x_QTextCodecFactory* xret = new x_QTextCodecFactory(*(QTextCodecFactory *)x[1].s_class);
+	x[0].s_class = (void*)xret;
+    }
+    x_QTextCodecFactory(QTextCodecFactory& x1) : QTextCodecFactory(x1) {
+    }
+    static void x_2(Smoke::Stack x) {
 	// createForName(const QString&)
 	QTextCodec* xret = QTextCodecFactory::createForName(*(const QString *)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
-    static void x_2(Smoke::Stack x) {
+    static void x_3(Smoke::Stack x) {
 	// createForMib(int)
 	QTextCodec* xret = QTextCodecFactory::createForMib((int)x[1].s_int);
 	x[0].s_class = (void*)xret;
@@ -31,6 +38,7 @@ void xcall_QTextCodecFactory(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 0: x_QTextCodecFactory::x_0(args);	break;
 	case 1: x_QTextCodecFactory::x_1(args);	break;
 	case 2: x_QTextCodecFactory::x_2(args);	break;
-	case 3: delete (QTextCodecFactory*)xself;	break;
+	case 3: x_QTextCodecFactory::x_3(args);	break;
+	case 4: delete (QTextCodecFactory*)xself;	break;
     }
 }

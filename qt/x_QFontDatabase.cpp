@@ -166,16 +166,23 @@ public:
 	x[0].s_int = xret;
     }
     static void x_31(Smoke::Stack x) {
+	// QFontDatabase(QFontDatabase&)
+	x_QFontDatabase* xret = new x_QFontDatabase(*(QFontDatabase *)x[1].s_class);
+	x[0].s_class = (void*)xret;
+    }
+    x_QFontDatabase(QFontDatabase& x1) : QFontDatabase(x1) {
+    }
+    static void x_32(Smoke::Stack x) {
 	// standardSizes()
 	QValueList<int> xret = QFontDatabase::standardSizes();
 	x[0].s_voidp = (void*)new QValueList<int>(xret);
     }
-    static void x_32(Smoke::Stack x) {
+    static void x_33(Smoke::Stack x) {
 	// scriptName(QFont::Script)
 	QString xret = QFontDatabase::scriptName((QFont::Script)x[1].s_enum);
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    static void x_33(Smoke::Stack x) {
+    static void x_34(Smoke::Stack x) {
 	// scriptSample(QFont::Script)
 	QString xret = QFontDatabase::scriptSample((QFont::Script)x[1].s_enum);
 	x[0].s_voidp = (void*)new QString(xret);
@@ -219,6 +226,7 @@ void xcall_QFontDatabase(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 31: x_QFontDatabase::x_31(args);	break;
 	case 32: x_QFontDatabase::x_32(args);	break;
 	case 33: x_QFontDatabase::x_33(args);	break;
-	case 34: delete (QFontDatabase*)xself;	break;
+	case 34: x_QFontDatabase::x_34(args);	break;
+	case 35: delete (QFontDatabase*)xself;	break;
     }
 }

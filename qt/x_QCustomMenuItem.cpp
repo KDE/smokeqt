@@ -30,14 +30,21 @@ public:
 	this->QCustomMenuItem::setFont(*(const QFont *)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
+    static void x_4(Smoke::Stack x) {
+	// QCustomMenuItem(QCustomMenuItem&)
+	x_QCustomMenuItem* xret = new x_QCustomMenuItem(*(QCustomMenuItem *)x[1].s_class);
+	x[0].s_class = (void*)xret;
+    }
+    x_QCustomMenuItem(QCustomMenuItem& x1) : QCustomMenuItem(x1) {
+    }
     virtual bool fullSpan() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(1246, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(1488, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QCustomMenuItem::fullSpan();
     }
     virtual bool isSeparator() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(1247, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(1489, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QCustomMenuItem::isSeparator();
     }
     virtual void paint(QPainter* x1, const QColorGroup& x2, bool x3, bool x4, int x5, int x6, int x7, int x8) {
@@ -50,19 +57,19 @@ public:
 	x[6].s_int = x6;
 	x[7].s_int = x7;
 	x[8].s_int = x8;
-	qt_Smoke->binding->callMethod(1249, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(1491, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }
     virtual void setFont(const QFont& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(1248, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(1490, (void*)this, x)) return;
 	this->QCustomMenuItem::setFont(x1);
     }
     virtual QSize sizeHint() {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(1250, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(1492, (void*)this, x, true /*pure virtual*/);
 	QSize *xptr = (QSize *)x[0].s_class;
 	QSize xret(*xptr);
 	delete xptr;
@@ -78,6 +85,7 @@ void xcall_QCustomMenuItem(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 1: xself->x_1(args);	break;
 	case 2: xself->x_2(args);	break;
 	case 3: xself->x_3(args);	break;
-	case 4: delete (QCustomMenuItem*)xself;	break;
+	case 4: x_QCustomMenuItem::x_4(args);	break;
+	case 5: delete (QCustomMenuItem*)xself;	break;
     }
 }

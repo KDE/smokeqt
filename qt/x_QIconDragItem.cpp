@@ -28,9 +28,16 @@ public:
 	bool xret = this->QIconDragItem::operator==(*(const QIconDragItem *)x[1].s_class);
 	x[0].s_bool = xret;
     }
+    static void x_4(Smoke::Stack x) {
+	// QIconDragItem(QIconDragItem&)
+	x_QIconDragItem* xret = new x_QIconDragItem(*(QIconDragItem *)x[1].s_class);
+	x[0].s_class = (void*)xret;
+    }
+    x_QIconDragItem(QIconDragItem& x1) : QIconDragItem(x1) {
+    }
     virtual QByteArray data() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(3414, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(4148, (void*)this, x)) {
 	    QByteArray *xptr = (QByteArray *)x[0].s_class;
 	    QByteArray xret(*xptr);
 	    delete xptr;
@@ -41,7 +48,7 @@ public:
     virtual void setData(const QByteArray& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(3415, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(4149, (void*)this, x)) return;
 	this->QIconDragItem::setData(x1);
     }
     ~x_QIconDragItem() { qt_Smoke->binding->deleted(150, (void*)this); }
@@ -53,6 +60,7 @@ void xcall_QIconDragItem(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 1: xself->x_1(args);	break;
 	case 2: xself->x_2(args);	break;
 	case 3: xself->x_3(args);	break;
-	case 4: delete (QIconDragItem*)xself;	break;
+	case 4: x_QIconDragItem::x_4(args);	break;
+	case 5: delete (QIconDragItem*)xself;	break;
     }
 }

@@ -13,131 +13,191 @@
 
 class x_QSGIStyle : public QSGIStyle {
 public:
-    static void x_0(Smoke::Stack x) {
+    void x_0(Smoke::Stack x) const {
+	// metaObject()
+	QMetaObject* xret = this->QSGIStyle::metaObject();
+	x[0].s_class = (void*)xret;
+    }
+    void x_1(Smoke::Stack x) const {
+	// className()
+	const char* xret = this->QSGIStyle::className();
+	x[0].s_voidp = (void*)xret;
+    }
+    void x_2(Smoke::Stack x) {
+	// qt_cast(const char*)
+	void* xret = this->QSGIStyle::qt_cast((const char*)x[1].s_voidp);
+	x[0].s_voidp = (void*)xret;
+    }
+    void x_3(Smoke::Stack x) {
+	// qt_invoke(int, QUObject*)
+	bool xret = this->QSGIStyle::qt_invoke((int)x[1].s_int,(QUObject*)x[2].s_voidp);
+	x[0].s_bool = xret;
+    }
+    void x_4(Smoke::Stack x) {
+	// qt_emit(int, QUObject*)
+	bool xret = this->QSGIStyle::qt_emit((int)x[1].s_int,(QUObject*)x[2].s_voidp);
+	x[0].s_bool = xret;
+    }
+    void x_5(Smoke::Stack x) {
+	// qt_property(int, int, QVariant*)
+	bool xret = this->QSGIStyle::qt_property((int)x[1].s_int,(int)x[2].s_int,(QVariant*)x[3].s_class);
+	x[0].s_bool = xret;
+    }
+    void x_6(Smoke::Stack x) {
+	// qObject()
+	QObject* xret = this->QSGIStyle::qObject();
+	x[0].s_class = (void*)xret;
+    }
+    static void x_7(Smoke::Stack x) {
 	// QSGIStyle(bool)
 	x_QSGIStyle* xret = new x_QSGIStyle((bool)x[1].s_bool);
 	x[0].s_class = (void*)xret;
     }
     x_QSGIStyle(bool x1) : QSGIStyle(x1) {
     }
-    static void x_1(Smoke::Stack x) {
+    static void x_8(Smoke::Stack x) {
 	// QSGIStyle()
 	x_QSGIStyle* xret = new x_QSGIStyle();
 	x[0].s_class = (void*)xret;
     }
     x_QSGIStyle() : QSGIStyle() {
     }
-    void x_2(Smoke::Stack x) {
+    void x_9(Smoke::Stack x) {
 	// polish(QWidget*)
 	this->QSGIStyle::polish((QWidget*)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_3(Smoke::Stack x) {
+    void x_10(Smoke::Stack x) {
 	// unPolish(QWidget*)
 	this->QSGIStyle::unPolish((QWidget*)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_4(Smoke::Stack x) {
+    void x_11(Smoke::Stack x) {
 	// polish(QApplication*)
 	this->QSGIStyle::polish((QApplication*)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_5(Smoke::Stack x) {
+    void x_12(Smoke::Stack x) {
 	// unPolish(QApplication*)
 	this->QSGIStyle::unPolish((QApplication*)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_6(Smoke::Stack x) const {
+    void x_13(Smoke::Stack x) const {
 	// drawPrimitive(QStyle::PrimitiveElement, QPainter*, const QRect&, const QColorGroup&, QStyle::SFlags, const QStyleOption&)
 	this->QSGIStyle::drawPrimitive((QStyle::PrimitiveElement)x[1].s_enum,(QPainter*)x[2].s_class,*(const QRect *)x[3].s_class,*(const QColorGroup *)x[4].s_class,(QStyle::SFlags)x[5].s_int,*(const QStyleOption *)x[6].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_7(Smoke::Stack x) const {
+    void x_14(Smoke::Stack x) const {
 	// drawPrimitive(QStyle::PrimitiveElement, QPainter*, const QRect&, const QColorGroup&, QStyle::SFlags)
 	this->QSGIStyle::drawPrimitive((QStyle::PrimitiveElement)x[1].s_enum,(QPainter*)x[2].s_class,*(const QRect *)x[3].s_class,*(const QColorGroup *)x[4].s_class,(QStyle::SFlags)x[5].s_int);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_8(Smoke::Stack x) const {
+    void x_15(Smoke::Stack x) const {
 	// drawPrimitive(QStyle::PrimitiveElement, QPainter*, const QRect&, const QColorGroup&)
 	this->QSGIStyle::drawPrimitive((QStyle::PrimitiveElement)x[1].s_enum,(QPainter*)x[2].s_class,*(const QRect *)x[3].s_class,*(const QColorGroup *)x[4].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_9(Smoke::Stack x) const {
+    void x_16(Smoke::Stack x) const {
 	// drawControl(QStyle::ControlElement, QPainter*, const QWidget*, const QRect&, const QColorGroup&, QStyle::SFlags, const QStyleOption&)
 	this->QSGIStyle::drawControl((QStyle::ControlElement)x[1].s_enum,(QPainter*)x[2].s_class,(const QWidget*)x[3].s_class,*(const QRect *)x[4].s_class,*(const QColorGroup *)x[5].s_class,(QStyle::SFlags)x[6].s_int,*(const QStyleOption *)x[7].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_10(Smoke::Stack x) const {
+    void x_17(Smoke::Stack x) const {
 	// drawControl(QStyle::ControlElement, QPainter*, const QWidget*, const QRect&, const QColorGroup&, QStyle::SFlags)
 	this->QSGIStyle::drawControl((QStyle::ControlElement)x[1].s_enum,(QPainter*)x[2].s_class,(const QWidget*)x[3].s_class,*(const QRect *)x[4].s_class,*(const QColorGroup *)x[5].s_class,(QStyle::SFlags)x[6].s_int);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_11(Smoke::Stack x) const {
+    void x_18(Smoke::Stack x) const {
 	// drawControl(QStyle::ControlElement, QPainter*, const QWidget*, const QRect&, const QColorGroup&)
 	this->QSGIStyle::drawControl((QStyle::ControlElement)x[1].s_enum,(QPainter*)x[2].s_class,(const QWidget*)x[3].s_class,*(const QRect *)x[4].s_class,*(const QColorGroup *)x[5].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_12(Smoke::Stack x) const {
+    void x_19(Smoke::Stack x) const {
 	// drawComplexControl(QStyle::ComplexControl, QPainter*, const QWidget*, const QRect&, const QColorGroup&, QStyle::SFlags, QStyle::SCFlags, QStyle::SCFlags, const QStyleOption&)
 	this->QSGIStyle::drawComplexControl((QStyle::ComplexControl)x[1].s_enum,(QPainter*)x[2].s_class,(const QWidget*)x[3].s_class,*(const QRect *)x[4].s_class,*(const QColorGroup *)x[5].s_class,(QStyle::SFlags)x[6].s_int,(QStyle::SCFlags)x[7].s_int,(QStyle::SCFlags)x[8].s_int,*(const QStyleOption *)x[9].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_13(Smoke::Stack x) const {
+    void x_20(Smoke::Stack x) const {
 	// drawComplexControl(QStyle::ComplexControl, QPainter*, const QWidget*, const QRect&, const QColorGroup&, QStyle::SFlags, QStyle::SCFlags, QStyle::SCFlags)
 	this->QSGIStyle::drawComplexControl((QStyle::ComplexControl)x[1].s_enum,(QPainter*)x[2].s_class,(const QWidget*)x[3].s_class,*(const QRect *)x[4].s_class,*(const QColorGroup *)x[5].s_class,(QStyle::SFlags)x[6].s_int,(QStyle::SCFlags)x[7].s_int,(QStyle::SCFlags)x[8].s_int);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_14(Smoke::Stack x) const {
+    void x_21(Smoke::Stack x) const {
 	// drawComplexControl(QStyle::ComplexControl, QPainter*, const QWidget*, const QRect&, const QColorGroup&, QStyle::SFlags, QStyle::SCFlags)
 	this->QSGIStyle::drawComplexControl((QStyle::ComplexControl)x[1].s_enum,(QPainter*)x[2].s_class,(const QWidget*)x[3].s_class,*(const QRect *)x[4].s_class,*(const QColorGroup *)x[5].s_class,(QStyle::SFlags)x[6].s_int,(QStyle::SCFlags)x[7].s_int);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_15(Smoke::Stack x) const {
+    void x_22(Smoke::Stack x) const {
 	// drawComplexControl(QStyle::ComplexControl, QPainter*, const QWidget*, const QRect&, const QColorGroup&, QStyle::SFlags)
 	this->QSGIStyle::drawComplexControl((QStyle::ComplexControl)x[1].s_enum,(QPainter*)x[2].s_class,(const QWidget*)x[3].s_class,*(const QRect *)x[4].s_class,*(const QColorGroup *)x[5].s_class,(QStyle::SFlags)x[6].s_int);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_16(Smoke::Stack x) const {
+    void x_23(Smoke::Stack x) const {
 	// drawComplexControl(QStyle::ComplexControl, QPainter*, const QWidget*, const QRect&, const QColorGroup&)
 	this->QSGIStyle::drawComplexControl((QStyle::ComplexControl)x[1].s_enum,(QPainter*)x[2].s_class,(const QWidget*)x[3].s_class,*(const QRect *)x[4].s_class,*(const QColorGroup *)x[5].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_17(Smoke::Stack x) const {
+    void x_24(Smoke::Stack x) const {
 	// pixelMetric(QStyle::PixelMetric, const QWidget*)
 	int xret = this->QSGIStyle::pixelMetric((QStyle::PixelMetric)x[1].s_enum,(const QWidget*)x[2].s_class);
 	x[0].s_int = xret;
     }
-    void x_18(Smoke::Stack x) const {
+    void x_25(Smoke::Stack x) const {
 	// pixelMetric(QStyle::PixelMetric)
 	int xret = this->QSGIStyle::pixelMetric((QStyle::PixelMetric)x[1].s_enum);
 	x[0].s_int = xret;
     }
-    void x_19(Smoke::Stack x) const {
+    void x_26(Smoke::Stack x) const {
 	// sizeFromContents(QStyle::ContentsType, const QWidget*, const QSize&, const QStyleOption&)
 	QSize xret = this->QSGIStyle::sizeFromContents((QStyle::ContentsType)x[1].s_enum,(const QWidget*)x[2].s_class,*(const QSize *)x[3].s_class,*(const QStyleOption *)x[4].s_class);
 	x[0].s_class = (void*)new QSize(xret);
     }
-    void x_20(Smoke::Stack x) const {
+    void x_27(Smoke::Stack x) const {
 	// sizeFromContents(QStyle::ContentsType, const QWidget*, const QSize&)
 	QSize xret = this->QSGIStyle::sizeFromContents((QStyle::ContentsType)x[1].s_enum,(const QWidget*)x[2].s_class,*(const QSize *)x[3].s_class);
 	x[0].s_class = (void*)new QSize(xret);
     }
-    void x_21(Smoke::Stack x) const {
+    void x_28(Smoke::Stack x) const {
 	// subRect(QStyle::SubRect, const QWidget*)
 	QRect xret = this->QSGIStyle::subRect((QStyle::SubRect)x[1].s_enum,(const QWidget*)x[2].s_class);
 	x[0].s_class = (void*)new QRect(xret);
     }
-    void x_22(Smoke::Stack x) const {
+    void x_29(Smoke::Stack x) const {
 	// querySubControlMetrics(QStyle::ComplexControl, const QWidget*, QStyle::SubControl, const QStyleOption&)
 	QRect xret = this->QSGIStyle::querySubControlMetrics((QStyle::ComplexControl)x[1].s_enum,(const QWidget*)x[2].s_class,(QStyle::SubControl)x[3].s_enum,*(const QStyleOption *)x[4].s_class);
 	x[0].s_class = (void*)new QRect(xret);
     }
-    void x_23(Smoke::Stack x) const {
+    void x_30(Smoke::Stack x) const {
 	// querySubControlMetrics(QStyle::ComplexControl, const QWidget*, QStyle::SubControl)
 	QRect xret = this->QSGIStyle::querySubControlMetrics((QStyle::ComplexControl)x[1].s_enum,(const QWidget*)x[2].s_class,(QStyle::SubControl)x[3].s_enum);
 	x[0].s_class = (void*)new QRect(xret);
     }
-    void x_24(Smoke::Stack x) {
+    static void x_31(Smoke::Stack x) {
+	// staticMetaObject()
+	QMetaObject* xret = QSGIStyle::staticMetaObject();
+	x[0].s_class = (void*)xret;
+    }
+    static void x_32(Smoke::Stack x) {
+	// tr(const char*, const char*)
+	QString xret = QSGIStyle::tr((const char*)x[1].s_voidp,(const char*)x[2].s_voidp);
+	x[0].s_voidp = (void*)new QString(xret);
+    }
+    static void x_33(Smoke::Stack x) {
+	// tr(const char*)
+	QString xret = QSGIStyle::tr((const char*)x[1].s_voidp);
+	x[0].s_voidp = (void*)new QString(xret);
+    }
+    static void x_34(Smoke::Stack x) {
+	// trUtf8(const char*, const char*)
+	QString xret = QSGIStyle::trUtf8((const char*)x[1].s_voidp,(const char*)x[2].s_voidp);
+	x[0].s_voidp = (void*)new QString(xret);
+    }
+    static void x_35(Smoke::Stack x) {
+	// trUtf8(const char*)
+	QString xret = QSGIStyle::trUtf8((const char*)x[1].s_voidp);
+	x[0].s_voidp = (void*)new QString(xret);
+    }
+    void x_36(Smoke::Stack x) {
 	// eventFilter(QObject*, QEvent*)
 	bool xret = this->QSGIStyle::eventFilter((QObject*)x[1].s_class,(QEvent*)x[2].s_class);
 	x[0].s_bool = xret;
@@ -147,31 +207,36 @@ public:
 	x[1].s_voidp = (void*)x1;
 	x[2].s_class = (void*)x2;
 	x[3].s_voidp = (void*)x3;
-	if(qt_Smoke->binding->callMethod(5470, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(6496, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QObject::checkConnectArgs(x1, x2, x3);
     }
     virtual void childEvent(QChildEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(5466, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6492, (void*)this, x)) return;
 	this->QObject::childEvent(x1);
+    }
+    virtual const char* className() const {
+	Smoke::StackItem x[1];
+	if(qt_Smoke->binding->callMethod(7707, (void*)this, x)) return (const char*)x[0].s_class;
+	return this->QSGIStyle::className();
     }
     virtual void connectNotify(const char* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(5468, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6494, (void*)this, x)) return;
 	this->QObject::connectNotify(x1);
     }
     virtual void customEvent(QCustomEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(5467, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6493, (void*)this, x)) return;
 	this->QObject::customEvent(x1);
     }
     virtual void disconnectNotify(const char* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(5469, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6495, (void*)this, x)) return;
 	this->QObject::disconnectNotify(x1);
     }
     virtual void drawComplexControl(QStyle::ComplexControl x1, QPainter* x2, const QWidget* x3, const QRect& x4, const QColorGroup& x5, QStyle::SFlags x6, QStyle::SCFlags x7, QStyle::SCFlags x8, const QStyleOption& x9) const {
@@ -185,7 +250,7 @@ public:
 	x[7].s_int = x7;
 	x[8].s_int = x8;
 	x[9].s_class = (void*)&x9;
-	if(qt_Smoke->binding->callMethod(6551, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(7726, (void*)this, x)) return;
 	this->QSGIStyle::drawComplexControl(x1, x2, x3, x4, x5, x6, x7, x8, x9);
     }
     virtual void drawComplexControlMask(QStyle::ComplexControl x1, QPainter* x2, const QWidget* x3, const QRect& x4, const QStyleOption& x5) const {
@@ -195,7 +260,7 @@ public:
 	x[3].s_class = (void*)x3;
 	x[4].s_class = (void*)&x4;
 	x[5].s_class = (void*)&x5;
-	if(qt_Smoke->binding->callMethod(1170, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(1402, (void*)this, x)) return;
 	this->QCommonStyle::drawComplexControlMask(x1, x2, x3, x4, x5);
     }
     virtual void drawControl(QStyle::ControlElement x1, QPainter* x2, const QWidget* x3, const QRect& x4, const QColorGroup& x5, QStyle::SFlags x6, const QStyleOption& x7) const {
@@ -207,7 +272,7 @@ public:
 	x[5].s_class = (void*)&x5;
 	x[6].s_int = x6;
 	x[7].s_class = (void*)&x7;
-	if(qt_Smoke->binding->callMethod(6548, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(7723, (void*)this, x)) return;
 	this->QSGIStyle::drawControl(x1, x2, x3, x4, x5, x6, x7);
     }
     virtual void drawControlMask(QStyle::ControlElement x1, QPainter* x2, const QWidget* x3, const QRect& x4, const QStyleOption& x5) const {
@@ -217,7 +282,7 @@ public:
 	x[3].s_class = (void*)x3;
 	x[4].s_class = (void*)&x4;
 	x[5].s_class = (void*)&x5;
-	if(qt_Smoke->binding->callMethod(1162, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(1394, (void*)this, x)) return;
 	this->QCommonStyle::drawControlMask(x1, x2, x3, x4, x5);
     }
     virtual void drawItem(QPainter* x1, const QRect& x2, int x3, const QColorGroup& x4, bool x5, const QPixmap* x6, const QString& x7, int x8, const QColor* x9) const {
@@ -231,7 +296,7 @@ public:
 	x[7].s_voidp = (void*)&x7;
 	x[8].s_int = x8;
 	x[9].s_class = (void*)x9;
-	if(qt_Smoke->binding->callMethod(7944, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9419, (void*)this, x)) return;
 	this->QStyle::drawItem(x1, x2, x3, x4, x5, x6, x7, x8, x9);
     }
     virtual void drawPrimitive(QStyle::PrimitiveElement x1, QPainter* x2, const QRect& x3, const QColorGroup& x4, QStyle::SFlags x5, const QStyleOption& x6) const {
@@ -242,26 +307,26 @@ public:
 	x[4].s_class = (void*)&x4;
 	x[5].s_int = x5;
 	x[6].s_class = (void*)&x6;
-	if(qt_Smoke->binding->callMethod(6545, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(7720, (void*)this, x)) return;
 	this->QSGIStyle::drawPrimitive(x1, x2, x3, x4, x5, x6);
     }
     virtual bool event(QEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(5405, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(6426, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QObject::event(x1);
     }
     virtual bool eventFilter(QObject* x1, QEvent* x2) {
 	Smoke::StackItem x[3];
 	x[1].s_class = (void*)x1;
 	x[2].s_class = (void*)x2;
-	if(qt_Smoke->binding->callMethod(6563, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(7743, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QSGIStyle::eventFilter(x1, x2);
     }
     virtual void insertChild(QObject* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(5428, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6449, (void*)this, x)) return;
 	this->QObject::insertChild(x1);
     }
     virtual QRect itemRect(QPainter* x1, const QRect& x2, int x3, bool x4, const QPixmap* x5, const QString& x6, int x7) const {
@@ -273,7 +338,7 @@ public:
 	x[5].s_class = (void*)x5;
 	x[6].s_voidp = (void*)&x6;
 	x[7].s_int = x7;
-	if(qt_Smoke->binding->callMethod(7942, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(9417, (void*)this, x)) {
 	    QRect *xptr = (QRect *)x[0].s_class;
 	    QRect xret(*xptr);
 	    delete xptr;
@@ -281,41 +346,46 @@ public:
 	}
 	return this->QStyle::itemRect(x1, x2, x3, x4, x5, x6, x7);
     }
+    virtual QMetaObject* metaObject() const {
+	Smoke::StackItem x[1];
+	if(qt_Smoke->binding->callMethod(7706, (void*)this, x)) return (QMetaObject*)x[0].s_class;
+	return this->QSGIStyle::metaObject();
+    }
     virtual int pixelMetric(QStyle::PixelMetric x1, const QWidget* x2) const {
 	Smoke::StackItem x[3];
 	x[1].s_enum = x1;
 	x[2].s_class = (void*)x2;
-	if(qt_Smoke->binding->callMethod(6556, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(7731, (void*)this, x)) return (int)x[0].s_int;
 	return this->QSGIStyle::pixelMetric(x1, x2);
     }
     virtual void polish(QApplication* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(6543, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(7718, (void*)this, x)) return;
 	this->QSGIStyle::polish(x1);
     }
     virtual void polish(QPalette& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(5167, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6134, (void*)this, x)) return;
 	this->QMotifStyle::polish(x1);
     }
     virtual void polish(QWidget* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(6541, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(7716, (void*)this, x)) return;
 	this->QSGIStyle::polish(x1);
     }
     virtual void polishPopupMenu(QPopupMenu* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(5170, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6137, (void*)this, x)) return;
 	this->QMotifStyle::polishPopupMenu(x1);
     }
     virtual QVariant property(const char* x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(5442, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(6463, (void*)this, x)) {
 	    QVariant *xptr = (QVariant *)x[0].s_class;
 	    QVariant xret(*xptr);
 	    delete xptr;
@@ -323,13 +393,41 @@ public:
 	}
 	return this->QObject::property(x1);
     }
+    virtual void* qt_cast(const char* x1) {
+	Smoke::StackItem x[2];
+	x[1].s_voidp = (void*)x1;
+	if(qt_Smoke->binding->callMethod(7708, (void*)this, x)) return (void*)x[0].s_voidp;
+	return this->QSGIStyle::qt_cast(x1);
+    }
+    virtual bool qt_emit(int x1, QUObject* x2) {
+	Smoke::StackItem x[3];
+	x[1].s_int = x1;
+	x[2].s_voidp = (void*)x2;
+	if(qt_Smoke->binding->callMethod(7710, (void*)this, x)) return (bool)x[0].s_bool;
+	return this->QSGIStyle::qt_emit(x1, x2);
+    }
+    virtual bool qt_invoke(int x1, QUObject* x2) {
+	Smoke::StackItem x[3];
+	x[1].s_int = x1;
+	x[2].s_voidp = (void*)x2;
+	if(qt_Smoke->binding->callMethod(7709, (void*)this, x)) return (bool)x[0].s_bool;
+	return this->QSGIStyle::qt_invoke(x1, x2);
+    }
+    virtual bool qt_property(int x1, int x2, QVariant* x3) {
+	Smoke::StackItem x[4];
+	x[1].s_int = x1;
+	x[2].s_int = x2;
+	x[3].s_class = (void*)x3;
+	if(qt_Smoke->binding->callMethod(7711, (void*)this, x)) return (bool)x[0].s_bool;
+	return this->QSGIStyle::qt_property(x1, x2, x3);
+    }
     virtual QStyle::SubControl querySubControl(QStyle::ComplexControl x1, const QWidget* x2, const QPoint& x3, const QStyleOption& x4) const {
 	Smoke::StackItem x[5];
 	x[1].s_enum = x1;
 	x[2].s_class = (void*)x2;
 	x[3].s_class = (void*)&x3;
 	x[4].s_class = (void*)&x4;
-	if(qt_Smoke->binding->callMethod(1174, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(1406, (void*)this, x)) {
 	    QStyle::SubControl *xptr = (QStyle::SubControl *)x[0].s_class;
 	    QStyle::SubControl xret(*xptr);
 	    delete xptr;
@@ -343,7 +441,7 @@ public:
 	x[2].s_class = (void*)x2;
 	x[3].s_enum = x3;
 	x[4].s_class = (void*)&x4;
-	if(qt_Smoke->binding->callMethod(6561, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(7736, (void*)this, x)) {
 	    QRect *xptr = (QRect *)x[0].s_class;
 	    QRect xret(*xptr);
 	    delete xptr;
@@ -354,20 +452,20 @@ public:
     virtual void removeChild(QObject* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(5429, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6450, (void*)this, x)) return;
 	this->QObject::removeChild(x1);
     }
     virtual void setName(const char* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(5411, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6432, (void*)this, x)) return;
 	this->QObject::setName(x1);
     }
     virtual bool setProperty(const char* x1, const QVariant& x2) {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)x1;
 	x[2].s_class = (void*)&x2;
-	if(qt_Smoke->binding->callMethod(5441, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(6462, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QObject::setProperty(x1, x2);
     }
     virtual QSize sizeFromContents(QStyle::ContentsType x1, const QWidget* x2, const QSize& x3, const QStyleOption& x4) const {
@@ -376,7 +474,7 @@ public:
 	x[2].s_class = (void*)x2;
 	x[3].s_class = (void*)&x3;
 	x[4].s_class = (void*)&x4;
-	if(qt_Smoke->binding->callMethod(6558, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(7733, (void*)this, x)) {
 	    QSize *xptr = (QSize *)x[0].s_class;
 	    QSize xret(*xptr);
 	    delete xptr;
@@ -390,7 +488,7 @@ public:
 	x[2].s_class = (void*)x2;
 	x[3].s_class = (void*)&x3;
 	x[4].s_voidp = (void*)x4;
-	if(qt_Smoke->binding->callMethod(5192, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(6159, (void*)this, x)) return (int)x[0].s_int;
 	return this->QMotifStyle::styleHint(x1, x2, x3, x4);
     }
     virtual QPixmap stylePixmap(QStyle::StylePixmap x1, const QWidget* x2, const QStyleOption& x3) const {
@@ -398,7 +496,7 @@ public:
 	x[1].s_enum = x1;
 	x[2].s_class = (void*)x2;
 	x[3].s_class = (void*)&x3;
-	if(qt_Smoke->binding->callMethod(5189, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(6156, (void*)this, x)) {
 	    QPixmap *xptr = (QPixmap *)x[0].s_class;
 	    QPixmap xret(*xptr);
 	    delete xptr;
@@ -410,7 +508,7 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_enum = x1;
 	x[2].s_class = (void*)x2;
-	if(qt_Smoke->binding->callMethod(6560, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(7735, (void*)this, x)) {
 	    QRect *xptr = (QRect *)x[0].s_class;
 	    QRect xret(*xptr);
 	    delete xptr;
@@ -421,19 +519,19 @@ public:
     virtual void timerEvent(QTimerEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(5465, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6491, (void*)this, x)) return;
 	this->QObject::timerEvent(x1);
     }
     virtual void unPolish(QApplication* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(6544, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(7719, (void*)this, x)) return;
 	this->QSGIStyle::unPolish(x1);
     }
     virtual void unPolish(QWidget* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(6542, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(7717, (void*)this, x)) return;
 	this->QSGIStyle::unPolish(x1);
     }
     ~x_QSGIStyle() { qt_Smoke->binding->deleted(246, (void*)this); }
@@ -441,15 +539,15 @@ public:
 void xcall_QSGIStyle(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QSGIStyle *xself = (x_QSGIStyle*)obj;
     switch(xi) {
-	case 0: x_QSGIStyle::x_0(args);	break;
-	case 1: x_QSGIStyle::x_1(args);	break;
+	case 0: xself->x_0(args);	break;
+	case 1: xself->x_1(args);	break;
 	case 2: xself->x_2(args);	break;
 	case 3: xself->x_3(args);	break;
 	case 4: xself->x_4(args);	break;
 	case 5: xself->x_5(args);	break;
 	case 6: xself->x_6(args);	break;
-	case 7: xself->x_7(args);	break;
-	case 8: xself->x_8(args);	break;
+	case 7: x_QSGIStyle::x_7(args);	break;
+	case 8: x_QSGIStyle::x_8(args);	break;
 	case 9: xself->x_9(args);	break;
 	case 10: xself->x_10(args);	break;
 	case 11: xself->x_11(args);	break;
@@ -466,6 +564,18 @@ void xcall_QSGIStyle(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 22: xself->x_22(args);	break;
 	case 23: xself->x_23(args);	break;
 	case 24: xself->x_24(args);	break;
-	case 25: delete (QSGIStyle*)xself;	break;
+	case 25: xself->x_25(args);	break;
+	case 26: xself->x_26(args);	break;
+	case 27: xself->x_27(args);	break;
+	case 28: xself->x_28(args);	break;
+	case 29: xself->x_29(args);	break;
+	case 30: xself->x_30(args);	break;
+	case 31: x_QSGIStyle::x_31(args);	break;
+	case 32: x_QSGIStyle::x_32(args);	break;
+	case 33: x_QSGIStyle::x_33(args);	break;
+	case 34: x_QSGIStyle::x_34(args);	break;
+	case 35: x_QSGIStyle::x_35(args);	break;
+	case 36: xself->x_36(args);	break;
+	case 37: delete (QSGIStyle*)xself;	break;
     }
 }

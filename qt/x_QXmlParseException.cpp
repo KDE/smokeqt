@@ -73,6 +73,13 @@ public:
 	QString xret = this->QXmlParseException::message();
 	x[0].s_voidp = (void*)new QString(xret);
     }
+    static void x_11(Smoke::Stack x) {
+	// QXmlParseException(QXmlParseException&)
+	x_QXmlParseException* xret = new x_QXmlParseException(*(QXmlParseException *)x[1].s_class);
+	x[0].s_class = (void*)xret;
+    }
+    x_QXmlParseException(QXmlParseException& x1) : QXmlParseException(x1) {
+    }
     ~x_QXmlParseException() { qt_Smoke->binding->deleted(377, (void*)this); }
 };
 void xcall_QXmlParseException(Smoke::Index xi, void *obj, Smoke::Stack args) {
@@ -89,6 +96,7 @@ void xcall_QXmlParseException(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 8: xself->x_8(args);	break;
 	case 9: xself->x_9(args);	break;
 	case 10: xself->x_10(args);	break;
-	case 11: delete (QXmlParseException*)xself;	break;
+	case 11: x_QXmlParseException::x_11(args);	break;
+	case 12: delete (QXmlParseException*)xself;	break;
     }
 }

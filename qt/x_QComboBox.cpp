@@ -41,406 +41,466 @@ public:
     static void x_5(Smoke::Stack x) {
 	x[0].s_enum = (long)QComboBox::BeforeCurrent;
     }
-    static void x_6(Smoke::Stack x) {
+    void x_6(Smoke::Stack x) const {
+	// metaObject()
+	QMetaObject* xret = this->QComboBox::metaObject();
+	x[0].s_class = (void*)xret;
+    }
+    void x_7(Smoke::Stack x) const {
+	// className()
+	const char* xret = this->QComboBox::className();
+	x[0].s_voidp = (void*)xret;
+    }
+    void x_8(Smoke::Stack x) {
+	// qt_cast(const char*)
+	void* xret = this->QComboBox::qt_cast((const char*)x[1].s_voidp);
+	x[0].s_voidp = (void*)xret;
+    }
+    void x_9(Smoke::Stack x) {
+	// qt_invoke(int, QUObject*)
+	bool xret = this->QComboBox::qt_invoke((int)x[1].s_int,(QUObject*)x[2].s_voidp);
+	x[0].s_bool = xret;
+    }
+    void x_10(Smoke::Stack x) {
+	// qt_emit(int, QUObject*)
+	bool xret = this->QComboBox::qt_emit((int)x[1].s_int,(QUObject*)x[2].s_voidp);
+	x[0].s_bool = xret;
+    }
+    void x_11(Smoke::Stack x) {
+	// qt_property(int, int, QVariant*)
+	bool xret = this->QComboBox::qt_property((int)x[1].s_int,(int)x[2].s_int,(QVariant*)x[3].s_class);
+	x[0].s_bool = xret;
+    }
+    void x_12(Smoke::Stack x) {
+	// qObject()
+	QObject* xret = this->QComboBox::qObject();
+	x[0].s_class = (void*)xret;
+    }
+    static void x_13(Smoke::Stack x) {
 	// QComboBox(QWidget*, const char*)
 	x_QComboBox* xret = new x_QComboBox((QWidget*)x[1].s_class,(const char*)x[2].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QComboBox(QWidget* x1, const char* x2) : QComboBox(x1, x2) {
     }
-    static void x_7(Smoke::Stack x) {
+    static void x_14(Smoke::Stack x) {
 	// QComboBox(QWidget*)
 	x_QComboBox* xret = new x_QComboBox((QWidget*)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QComboBox(QWidget* x1) : QComboBox(x1) {
     }
-    static void x_8(Smoke::Stack x) {
+    static void x_15(Smoke::Stack x) {
 	// QComboBox()
 	x_QComboBox* xret = new x_QComboBox();
 	x[0].s_class = (void*)xret;
     }
     x_QComboBox() : QComboBox() {
     }
-    static void x_9(Smoke::Stack x) {
+    static void x_16(Smoke::Stack x) {
 	// QComboBox(bool, QWidget*, const char*)
 	x_QComboBox* xret = new x_QComboBox((bool)x[1].s_bool,(QWidget*)x[2].s_class,(const char*)x[3].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QComboBox(bool x1, QWidget* x2, const char* x3) : QComboBox(x1, x2, x3) {
     }
-    static void x_10(Smoke::Stack x) {
+    static void x_17(Smoke::Stack x) {
 	// QComboBox(bool, QWidget*)
 	x_QComboBox* xret = new x_QComboBox((bool)x[1].s_bool,(QWidget*)x[2].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QComboBox(bool x1, QWidget* x2) : QComboBox(x1, x2) {
     }
-    static void x_11(Smoke::Stack x) {
+    static void x_18(Smoke::Stack x) {
 	// QComboBox(bool)
 	x_QComboBox* xret = new x_QComboBox((bool)x[1].s_bool);
 	x[0].s_class = (void*)xret;
     }
     x_QComboBox(bool x1) : QComboBox(x1) {
     }
-    void x_12(Smoke::Stack x) const {
+    void x_19(Smoke::Stack x) const {
 	// count()
 	int xret = this->QComboBox::count();
 	x[0].s_int = xret;
     }
-    void x_13(Smoke::Stack x) {
+    void x_20(Smoke::Stack x) {
 	// insertStringList(const QStringList&, int)
 	this->QComboBox::insertStringList(*(const QStringList *)x[1].s_class,(int)x[2].s_int);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_14(Smoke::Stack x) {
+    void x_21(Smoke::Stack x) {
 	// insertStringList(const QStringList&)
 	this->QComboBox::insertStringList(*(const QStringList *)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_15(Smoke::Stack x) {
+    void x_22(Smoke::Stack x) {
 	// insertStrList(const QStrList&, int)
 	this->QComboBox::insertStrList(*(const QStrList *)x[1].s_class,(int)x[2].s_int);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_16(Smoke::Stack x) {
+    void x_23(Smoke::Stack x) {
 	// insertStrList(const QStrList&)
 	this->QComboBox::insertStrList(*(const QStrList *)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_17(Smoke::Stack x) {
+    void x_24(Smoke::Stack x) {
 	// insertStrList(const QStrList*, int)
 	this->QComboBox::insertStrList((const QStrList*)x[1].s_class,(int)x[2].s_int);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_18(Smoke::Stack x) {
+    void x_25(Smoke::Stack x) {
 	// insertStrList(const QStrList*)
 	this->QComboBox::insertStrList((const QStrList*)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_19(Smoke::Stack x) {
+    void x_26(Smoke::Stack x) {
 	// insertStrList(const char**, int, int)
 	this->QComboBox::insertStrList((const char**)x[1].s_voidp,(int)x[2].s_int,(int)x[3].s_int);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_20(Smoke::Stack x) {
+    void x_27(Smoke::Stack x) {
 	// insertStrList(const char**, int)
 	this->QComboBox::insertStrList((const char**)x[1].s_voidp,(int)x[2].s_int);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_21(Smoke::Stack x) {
+    void x_28(Smoke::Stack x) {
 	// insertStrList(const char**)
 	this->QComboBox::insertStrList((const char**)x[1].s_voidp);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_22(Smoke::Stack x) {
+    void x_29(Smoke::Stack x) {
 	// insertItem(const QString&, int)
 	this->QComboBox::insertItem(*(const QString *)x[1].s_voidp,(int)x[2].s_int);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_23(Smoke::Stack x) {
+    void x_30(Smoke::Stack x) {
 	// insertItem(const QString&)
 	this->QComboBox::insertItem(*(const QString *)x[1].s_voidp);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_24(Smoke::Stack x) {
+    void x_31(Smoke::Stack x) {
 	// insertItem(const QPixmap&, int)
 	this->QComboBox::insertItem(*(const QPixmap *)x[1].s_class,(int)x[2].s_int);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_25(Smoke::Stack x) {
+    void x_32(Smoke::Stack x) {
 	// insertItem(const QPixmap&)
 	this->QComboBox::insertItem(*(const QPixmap *)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_26(Smoke::Stack x) {
+    void x_33(Smoke::Stack x) {
 	// insertItem(const QPixmap&, const QString&, int)
 	this->QComboBox::insertItem(*(const QPixmap *)x[1].s_class,*(const QString *)x[2].s_voidp,(int)x[3].s_int);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_27(Smoke::Stack x) {
+    void x_34(Smoke::Stack x) {
 	// insertItem(const QPixmap&, const QString&)
 	this->QComboBox::insertItem(*(const QPixmap *)x[1].s_class,*(const QString *)x[2].s_voidp);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_28(Smoke::Stack x) {
+    void x_35(Smoke::Stack x) {
 	// removeItem(int)
 	this->QComboBox::removeItem((int)x[1].s_int);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_29(Smoke::Stack x) const {
+    void x_36(Smoke::Stack x) const {
 	// currentItem()
 	int xret = this->QComboBox::currentItem();
 	x[0].s_int = xret;
     }
-    void x_30(Smoke::Stack x) {
+    void x_37(Smoke::Stack x) {
 	// setCurrentItem(int)
 	this->QComboBox::setCurrentItem((int)x[1].s_int);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_31(Smoke::Stack x) const {
+    void x_38(Smoke::Stack x) const {
 	// currentText()
 	QString xret = this->QComboBox::currentText();
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    void x_32(Smoke::Stack x) {
+    void x_39(Smoke::Stack x) {
 	// setCurrentText(const QString&)
 	this->QComboBox::setCurrentText(*(const QString *)x[1].s_voidp);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_33(Smoke::Stack x) const {
+    void x_40(Smoke::Stack x) const {
 	// text(int)
 	QString xret = this->QComboBox::text((int)x[1].s_int);
 	x[0].s_voidp = (void*)new QString(xret);
     }
-    void x_34(Smoke::Stack x) const {
+    void x_41(Smoke::Stack x) const {
 	// pixmap(int)
 	const QPixmap* xret = this->QComboBox::pixmap((int)x[1].s_int);
 	x[0].s_class = (void*)xret;
     }
-    void x_35(Smoke::Stack x) {
+    void x_42(Smoke::Stack x) {
 	// changeItem(const QString&, int)
 	this->QComboBox::changeItem(*(const QString *)x[1].s_voidp,(int)x[2].s_int);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_36(Smoke::Stack x) {
+    void x_43(Smoke::Stack x) {
 	// changeItem(const QPixmap&, int)
 	this->QComboBox::changeItem(*(const QPixmap *)x[1].s_class,(int)x[2].s_int);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_37(Smoke::Stack x) {
+    void x_44(Smoke::Stack x) {
 	// changeItem(const QPixmap&, const QString&, int)
 	this->QComboBox::changeItem(*(const QPixmap *)x[1].s_class,*(const QString *)x[2].s_voidp,(int)x[3].s_int);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_38(Smoke::Stack x) const {
+    void x_45(Smoke::Stack x) const {
 	// autoResize()
 	bool xret = this->QComboBox::autoResize();
 	x[0].s_bool = xret;
     }
-    void x_39(Smoke::Stack x) {
+    void x_46(Smoke::Stack x) {
 	// setAutoResize(bool)
 	this->QComboBox::setAutoResize((bool)x[1].s_bool);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_40(Smoke::Stack x) const {
+    void x_47(Smoke::Stack x) const {
 	// sizeHint()
 	QSize xret = this->QComboBox::sizeHint();
 	x[0].s_class = (void*)new QSize(xret);
     }
-    void x_41(Smoke::Stack x) {
+    void x_48(Smoke::Stack x) {
 	// setPalette(const QPalette&)
 	this->QComboBox::setPalette(*(const QPalette *)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_42(Smoke::Stack x) {
+    void x_49(Smoke::Stack x) {
 	// setFont(const QFont&)
 	this->QComboBox::setFont(*(const QFont *)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_43(Smoke::Stack x) {
+    void x_50(Smoke::Stack x) {
 	// setEnabled(bool)
 	this->QComboBox::setEnabled((bool)x[1].s_bool);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_44(Smoke::Stack x) {
+    void x_51(Smoke::Stack x) {
 	// setSizeLimit(int)
 	this->QComboBox::setSizeLimit((int)x[1].s_int);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_45(Smoke::Stack x) const {
+    void x_52(Smoke::Stack x) const {
 	// sizeLimit()
 	int xret = this->QComboBox::sizeLimit();
 	x[0].s_int = xret;
     }
-    void x_46(Smoke::Stack x) {
+    void x_53(Smoke::Stack x) {
 	// setMaxCount(int)
 	this->QComboBox::setMaxCount((int)x[1].s_int);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_47(Smoke::Stack x) const {
+    void x_54(Smoke::Stack x) const {
 	// maxCount()
 	int xret = this->QComboBox::maxCount();
 	x[0].s_int = xret;
     }
-    void x_48(Smoke::Stack x) {
+    void x_55(Smoke::Stack x) {
 	// setInsertionPolicy(QComboBox::Policy)
 	this->QComboBox::setInsertionPolicy((QComboBox::Policy)x[1].s_enum);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_49(Smoke::Stack x) const {
+    void x_56(Smoke::Stack x) const {
 	// insertionPolicy()
 	QComboBox::Policy xret = this->QComboBox::insertionPolicy();
 	x[0].s_enum = xret;
     }
-    void x_50(Smoke::Stack x) {
+    void x_57(Smoke::Stack x) {
 	// setValidator(const QValidator*)
 	this->QComboBox::setValidator((const QValidator*)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_51(Smoke::Stack x) const {
+    void x_58(Smoke::Stack x) const {
 	// validator()
 	const QValidator* xret = this->QComboBox::validator();
 	x[0].s_class = (void*)xret;
     }
-    void x_52(Smoke::Stack x) {
+    void x_59(Smoke::Stack x) {
 	// setListBox(QListBox*)
 	this->QComboBox::setListBox((QListBox*)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_53(Smoke::Stack x) const {
+    void x_60(Smoke::Stack x) const {
 	// listBox()
 	QListBox* xret = this->QComboBox::listBox();
 	x[0].s_class = (void*)xret;
     }
-    void x_54(Smoke::Stack x) {
+    void x_61(Smoke::Stack x) {
 	// setLineEdit(QLineEdit*)
 	this->QComboBox::setLineEdit((QLineEdit*)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_55(Smoke::Stack x) const {
+    void x_62(Smoke::Stack x) const {
 	// lineEdit()
 	QLineEdit* xret = this->QComboBox::lineEdit();
 	x[0].s_class = (void*)xret;
     }
-    void x_56(Smoke::Stack x) {
+    void x_63(Smoke::Stack x) {
 	// setAutoCompletion(bool)
 	this->QComboBox::setAutoCompletion((bool)x[1].s_bool);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_57(Smoke::Stack x) const {
+    void x_64(Smoke::Stack x) const {
 	// autoCompletion()
 	bool xret = this->QComboBox::autoCompletion();
 	x[0].s_bool = xret;
     }
-    void x_58(Smoke::Stack x) {
+    void x_65(Smoke::Stack x) {
 	// eventFilter(QObject*, QEvent*)
 	bool xret = this->QComboBox::eventFilter((QObject*)x[1].s_class,(QEvent*)x[2].s_class);
 	x[0].s_bool = xret;
     }
-    void x_59(Smoke::Stack x) {
+    void x_66(Smoke::Stack x) {
 	// setDuplicatesEnabled(bool)
 	this->QComboBox::setDuplicatesEnabled((bool)x[1].s_bool);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_60(Smoke::Stack x) const {
+    void x_67(Smoke::Stack x) const {
 	// duplicatesEnabled()
 	bool xret = this->QComboBox::duplicatesEnabled();
 	x[0].s_bool = xret;
     }
-    void x_61(Smoke::Stack x) const {
+    void x_68(Smoke::Stack x) const {
 	// editable()
 	bool xret = this->QComboBox::editable();
 	x[0].s_bool = xret;
     }
-    void x_62(Smoke::Stack x) {
+    void x_69(Smoke::Stack x) {
 	// setEditable(bool)
 	this->QComboBox::setEditable((bool)x[1].s_bool);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_63(Smoke::Stack x) {
+    void x_70(Smoke::Stack x) {
 	// popup()
 	this->QComboBox::popup();
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_64(Smoke::Stack x) {
+    void x_71(Smoke::Stack x) {
 	// clear()
 	this->QComboBox::clear();
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_65(Smoke::Stack x) {
+    void x_72(Smoke::Stack x) {
 	// clearValidator()
 	this->QComboBox::clearValidator();
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_66(Smoke::Stack x) {
+    void x_73(Smoke::Stack x) {
 	// clearEdit()
 	this->QComboBox::clearEdit();
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_67(Smoke::Stack x) {
+    void x_74(Smoke::Stack x) {
 	// setEditText(const QString&)
 	this->QComboBox::setEditText(*(const QString *)x[1].s_voidp);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_68(Smoke::Stack x) {
+    void x_75(Smoke::Stack x) {
 	// activated(int)
 	this->QComboBox::activated((int)x[1].s_int);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_69(Smoke::Stack x) {
+    void x_76(Smoke::Stack x) {
 	// highlighted(int)
 	this->QComboBox::highlighted((int)x[1].s_int);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_70(Smoke::Stack x) {
+    void x_77(Smoke::Stack x) {
 	// activated(const QString&)
 	this->QComboBox::activated(*(const QString *)x[1].s_voidp);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_71(Smoke::Stack x) {
+    void x_78(Smoke::Stack x) {
 	// highlighted(const QString&)
 	this->QComboBox::highlighted(*(const QString *)x[1].s_voidp);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_72(Smoke::Stack x) {
+    void x_79(Smoke::Stack x) {
 	// textChanged(const QString&)
 	this->QComboBox::textChanged(*(const QString *)x[1].s_voidp);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_73(Smoke::Stack x) {
+    static void x_80(Smoke::Stack x) {
+	// staticMetaObject()
+	QMetaObject* xret = QComboBox::staticMetaObject();
+	x[0].s_class = (void*)xret;
+    }
+    static void x_81(Smoke::Stack x) {
+	// tr(const char*, const char*)
+	QString xret = QComboBox::tr((const char*)x[1].s_voidp,(const char*)x[2].s_voidp);
+	x[0].s_voidp = (void*)new QString(xret);
+    }
+    static void x_82(Smoke::Stack x) {
+	// tr(const char*)
+	QString xret = QComboBox::tr((const char*)x[1].s_voidp);
+	x[0].s_voidp = (void*)new QString(xret);
+    }
+    static void x_83(Smoke::Stack x) {
+	// trUtf8(const char*, const char*)
+	QString xret = QComboBox::trUtf8((const char*)x[1].s_voidp,(const char*)x[2].s_voidp);
+	x[0].s_voidp = (void*)new QString(xret);
+    }
+    static void x_84(Smoke::Stack x) {
+	// trUtf8(const char*)
+	QString xret = QComboBox::trUtf8((const char*)x[1].s_voidp);
+	x[0].s_voidp = (void*)new QString(xret);
+    }
+    void x_85(Smoke::Stack x) {
 	// paintEvent(QPaintEvent*)
 	this->QComboBox::paintEvent((QPaintEvent*)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_74(Smoke::Stack x) {
+    void x_86(Smoke::Stack x) {
 	// resizeEvent(QResizeEvent*)
 	this->QComboBox::resizeEvent((QResizeEvent*)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_75(Smoke::Stack x) {
+    void x_87(Smoke::Stack x) {
 	// mousePressEvent(QMouseEvent*)
 	this->QComboBox::mousePressEvent((QMouseEvent*)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_76(Smoke::Stack x) {
+    void x_88(Smoke::Stack x) {
 	// mouseMoveEvent(QMouseEvent*)
 	this->QComboBox::mouseMoveEvent((QMouseEvent*)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_77(Smoke::Stack x) {
+    void x_89(Smoke::Stack x) {
 	// mouseReleaseEvent(QMouseEvent*)
 	this->QComboBox::mouseReleaseEvent((QMouseEvent*)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_78(Smoke::Stack x) {
+    void x_90(Smoke::Stack x) {
 	// mouseDoubleClickEvent(QMouseEvent*)
 	this->QComboBox::mouseDoubleClickEvent((QMouseEvent*)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_79(Smoke::Stack x) {
+    void x_91(Smoke::Stack x) {
 	// keyPressEvent(QKeyEvent*)
 	this->QComboBox::keyPressEvent((QKeyEvent*)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_80(Smoke::Stack x) {
+    void x_92(Smoke::Stack x) {
 	// focusInEvent(QFocusEvent*)
 	this->QComboBox::focusInEvent((QFocusEvent*)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_81(Smoke::Stack x) {
+    void x_93(Smoke::Stack x) {
 	// styleChange(QStyle&)
 	this->QComboBox::styleChange(*(QStyle *)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    void x_82(Smoke::Stack x) {
+    void x_94(Smoke::Stack x) {
 	// updateMask()
 	this->QComboBox::updateMask();
 	(void)x[0].s_int; // noop (for compiler warning)
     }
     virtual void adjustSize() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(9692, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11510, (void*)this, x)) return;
 	this->QWidget::adjustSize();
     }
     virtual bool checkConnectArgs(const char* x1, const QObject* x2, const char* x3) {
@@ -448,25 +508,30 @@ public:
 	x[1].s_voidp = (void*)x1;
 	x[2].s_class = (void*)x2;
 	x[3].s_voidp = (void*)x3;
-	if(qt_Smoke->binding->callMethod(5470, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(6496, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QObject::checkConnectArgs(x1, x2, x3);
     }
     virtual void childEvent(QChildEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(5466, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6492, (void*)this, x)) return;
 	this->QObject::childEvent(x1);
+    }
+    virtual const char* className() const {
+	Smoke::StackItem x[1];
+	if(qt_Smoke->binding->callMethod(1273, (void*)this, x)) return (const char*)x[0].s_class;
+	return this->QComboBox::className();
     }
     virtual bool close(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(9679, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(11497, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QWidget::close(x1);
     }
     virtual void closeEvent(QCloseEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(9787, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11610, (void*)this, x)) return;
 	this->QWidget::closeEvent(x1);
     }
     virtual bool cmd(int x1, QPainter* x2, QPDevCmdParam* x3) {
@@ -474,19 +539,19 @@ public:
 	x[1].s_int = x1;
 	x[2].s_class = (void*)x2;
 	x[3].s_voidp = (void*)x3;
-	if(qt_Smoke->binding->callMethod(5566, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(6608, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QPaintDevice::cmd(x1, x2, x3);
     }
     virtual void connectNotify(const char* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(5468, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6494, (void*)this, x)) return;
 	this->QObject::connectNotify(x1);
     }
     virtual void contextMenuEvent(QContextMenuEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(9788, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11611, (void*)this, x)) return;
 	this->QWidget::contextMenuEvent(x1);
     }
     virtual void create(WId x1, bool x2, bool x3) {
@@ -494,111 +559,111 @@ public:
 	x[1].s_ulong = x1;
 	x[2].s_bool = x2;
 	x[3].s_bool = x3;
-	if(qt_Smoke->binding->callMethod(9807, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11630, (void*)this, x)) return;
 	this->QWidget::create(x1, x2, x3);
     }
     virtual void customEvent(QCustomEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(5467, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6493, (void*)this, x)) return;
 	this->QObject::customEvent(x1);
     }
     virtual bool customWhatsThis() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(9717, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(11535, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QWidget::customWhatsThis();
     }
     virtual void destroy(bool x1, bool x2) {
 	Smoke::StackItem x[3];
 	x[1].s_bool = x1;
 	x[2].s_bool = x2;
-	if(qt_Smoke->binding->callMethod(9811, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11634, (void*)this, x)) return;
 	this->QWidget::destroy(x1, x2);
     }
     virtual void disconnectNotify(const char* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(5469, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6495, (void*)this, x)) return;
 	this->QObject::disconnectNotify(x1);
     }
     virtual void dragEnterEvent(QDragEnterEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(9793, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11616, (void*)this, x)) return;
 	this->QWidget::dragEnterEvent(x1);
     }
     virtual void dragLeaveEvent(QDragLeaveEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(9795, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11618, (void*)this, x)) return;
 	this->QWidget::dragLeaveEvent(x1);
     }
     virtual void dragMoveEvent(QDragMoveEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(9794, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11617, (void*)this, x)) return;
 	this->QWidget::dragMoveEvent(x1);
     }
     virtual void dropEvent(QDropEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(9796, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11619, (void*)this, x)) return;
 	this->QWidget::dropEvent(x1);
     }
     virtual void enabledChange(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(9801, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11624, (void*)this, x)) return;
 	this->QWidget::enabledChange(x1);
     }
     virtual void enterEvent(QEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(9782, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11605, (void*)this, x)) return;
 	this->QWidget::enterEvent(x1);
     }
     virtual bool event(QEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(9772, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(11595, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QWidget::event(x1);
     }
     virtual bool eventFilter(QObject* x1, QEvent* x2) {
 	Smoke::StackItem x[3];
 	x[1].s_class = (void*)x1;
 	x[2].s_class = (void*)x2;
-	if(qt_Smoke->binding->callMethod(1114, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(1332, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QComboBox::eventFilter(x1, x2);
     }
     virtual void focusInEvent(QFocusEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(1136, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(1359, (void*)this, x)) return;
 	this->QComboBox::focusInEvent(x1);
     }
     virtual bool focusNextPrevChild(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(9820, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(11643, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QWidget::focusNextPrevChild(x1);
     }
     virtual void focusOutEvent(QFocusEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(9781, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11604, (void*)this, x)) return;
 	this->QWidget::focusOutEvent(x1);
     }
     virtual void fontChange(const QFont& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(9803, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11626, (void*)this, x)) return;
 	this->QWidget::fontChange(x1);
     }
     virtual int fontInf(QFont* x1, int x2) const {
 	Smoke::StackItem x[3];
 	x[1].s_class = (void*)x1;
 	x[2].s_int = x2;
-	if(qt_Smoke->binding->callMethod(5571, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(6613, (void*)this, x)) return (int)x[0].s_int;
 	return this->QPaintDevice::fontInf(x1, x2);
     }
     virtual int fontMet(QFont* x1, int x2, const char* x3, int x4) const {
@@ -607,77 +672,82 @@ public:
 	x[2].s_int = x2;
 	x[3].s_voidp = (void*)x3;
 	x[4].s_int = x4;
-	if(qt_Smoke->binding->callMethod(5568, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(6610, (void*)this, x)) return (int)x[0].s_int;
 	return this->QPaintDevice::fontMet(x1, x2, x3, x4);
     }
     virtual int heightForWidth(int x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(9691, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(11509, (void*)this, x)) return (int)x[0].s_int;
 	return this->QWidget::heightForWidth(x1);
     }
     virtual void hide() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(9749, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11567, (void*)this, x)) return;
 	this->QWidget::hide();
     }
     virtual void hideEvent(QHideEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(9798, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11621, (void*)this, x)) return;
 	this->QWidget::hideEvent(x1);
     }
     virtual void imComposeEvent(QIMEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(9790, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11613, (void*)this, x)) return;
 	this->QWidget::imComposeEvent(x1);
     }
     virtual void imEndEvent(QIMEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(9791, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11614, (void*)this, x)) return;
 	this->QWidget::imEndEvent(x1);
     }
     virtual void imStartEvent(QIMEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(9789, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11612, (void*)this, x)) return;
 	this->QWidget::imStartEvent(x1);
     }
     virtual void insertChild(QObject* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(5428, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6449, (void*)this, x)) return;
 	this->QObject::insertChild(x1);
     }
     virtual void keyPressEvent(QKeyEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(1135, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(1358, (void*)this, x)) return;
 	this->QComboBox::keyPressEvent(x1);
     }
     virtual void keyReleaseEvent(QKeyEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(9779, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11602, (void*)this, x)) return;
 	this->QWidget::keyReleaseEvent(x1);
     }
     virtual void leaveEvent(QEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(9783, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11606, (void*)this, x)) return;
 	this->QWidget::leaveEvent(x1);
+    }
+    virtual QMetaObject* metaObject() const {
+	Smoke::StackItem x[1];
+	if(qt_Smoke->binding->callMethod(1272, (void*)this, x)) return (QMetaObject*)x[0].s_class;
+	return this->QComboBox::metaObject();
     }
     virtual int metric(int x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(9805, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(11628, (void*)this, x)) return (int)x[0].s_int;
 	return this->QWidget::metric(x1);
     }
     virtual QSize minimumSizeHint() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(9688, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(11506, (void*)this, x)) {
 	    QSize *xptr = (QSize *)x[0].s_class;
 	    QSize xret(*xptr);
 	    delete xptr;
@@ -688,66 +758,66 @@ public:
     virtual void mouseDoubleClickEvent(QMouseEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(1134, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(1357, (void*)this, x)) return;
 	this->QComboBox::mouseDoubleClickEvent(x1);
     }
     virtual void mouseMoveEvent(QMouseEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(1132, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(1355, (void*)this, x)) return;
 	this->QComboBox::mouseMoveEvent(x1);
     }
     virtual void mousePressEvent(QMouseEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(1131, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(1354, (void*)this, x)) return;
 	this->QComboBox::mousePressEvent(x1);
     }
     virtual void mouseReleaseEvent(QMouseEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(1133, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(1356, (void*)this, x)) return;
 	this->QComboBox::mouseReleaseEvent(x1);
     }
     virtual void move(int x1, int x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_int = x2;
-	if(qt_Smoke->binding->callMethod(9761, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11579, (void*)this, x)) return;
 	this->QWidget::move(x1, x2);
     }
     virtual void moveEvent(QMoveEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(9785, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11608, (void*)this, x)) return;
 	this->QWidget::moveEvent(x1);
     }
     virtual void paintEvent(QPaintEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(1129, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(1352, (void*)this, x)) return;
 	this->QComboBox::paintEvent(x1);
     }
     virtual void paletteChange(const QPalette& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(9802, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11625, (void*)this, x)) return;
 	this->QWidget::paletteChange(x1);
     }
     virtual void polish() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(9755, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11573, (void*)this, x)) return;
 	this->QWidget::polish();
     }
     virtual void popup() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(1119, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(1337, (void*)this, x)) return;
 	this->QComboBox::popup();
     }
     virtual QVariant property(const char* x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(5442, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(6463, (void*)this, x)) {
 	    QVariant *xptr = (QVariant *)x[0].s_class;
 	    QVariant xret(*xptr);
 	    delete xptr;
@@ -755,10 +825,38 @@ public:
 	}
 	return this->QObject::property(x1);
     }
+    virtual void* qt_cast(const char* x1) {
+	Smoke::StackItem x[2];
+	x[1].s_voidp = (void*)x1;
+	if(qt_Smoke->binding->callMethod(1274, (void*)this, x)) return (void*)x[0].s_voidp;
+	return this->QComboBox::qt_cast(x1);
+    }
+    virtual bool qt_emit(int x1, QUObject* x2) {
+	Smoke::StackItem x[3];
+	x[1].s_int = x1;
+	x[2].s_voidp = (void*)x2;
+	if(qt_Smoke->binding->callMethod(1276, (void*)this, x)) return (bool)x[0].s_bool;
+	return this->QComboBox::qt_emit(x1, x2);
+    }
+    virtual bool qt_invoke(int x1, QUObject* x2) {
+	Smoke::StackItem x[3];
+	x[1].s_int = x1;
+	x[2].s_voidp = (void*)x2;
+	if(qt_Smoke->binding->callMethod(1275, (void*)this, x)) return (bool)x[0].s_bool;
+	return this->QComboBox::qt_invoke(x1, x2);
+    }
+    virtual bool qt_property(int x1, int x2, QVariant* x3) {
+	Smoke::StackItem x[4];
+	x[1].s_int = x1;
+	x[2].s_int = x2;
+	x[3].s_class = (void*)x3;
+	if(qt_Smoke->binding->callMethod(1277, (void*)this, x)) return (bool)x[0].s_bool;
+	return this->QComboBox::qt_property(x1, x2, x3);
+    }
     virtual void removeChild(QObject* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(5429, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6450, (void*)this, x)) return;
 	this->QObject::removeChild(x1);
     }
     virtual void reparent(QWidget* x1, Qt::WFlags x2, const QPoint& x3, bool x4) {
@@ -767,155 +865,155 @@ public:
 	x[2].s_int = x2;
 	x[3].s_class = (void*)&x3;
 	x[4].s_bool = x4;
-	if(qt_Smoke->binding->callMethod(9695, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11513, (void*)this, x)) return;
 	this->QWidget::reparent(x1, x2, x3, x4);
     }
     virtual void resize(int x1, int x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_int = x2;
-	if(qt_Smoke->binding->callMethod(9763, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11581, (void*)this, x)) return;
 	this->QWidget::resize(x1, x2);
     }
     virtual void resizeEvent(QResizeEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(1130, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(1353, (void*)this, x)) return;
 	this->QComboBox::resizeEvent(x1);
     }
     virtual int resolution() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(5564, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(6606, (void*)this, x)) return (int)x[0].s_int;
 	return this->QPaintDevice::resolution();
     }
     virtual void setAcceptDrops(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(9712, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11530, (void*)this, x)) return;
 	this->QWidget::setAcceptDrops(x1);
     }
     virtual void setActiveWindow() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(9666, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11484, (void*)this, x)) return;
 	this->QWidget::setActiveWindow();
     }
     virtual void setAutoCompletion(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(1112, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(1330, (void*)this, x)) return;
 	this->QComboBox::setAutoCompletion(x1);
     }
     virtual void setAutoMask(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(9713, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11531, (void*)this, x)) return;
 	this->QWidget::setAutoMask(x1);
     }
     virtual void setAutoResize(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(1095, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(1313, (void*)this, x)) return;
 	this->QComboBox::setAutoResize(x1);
     }
     virtual void setBackgroundColor(const QColor& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(9662, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11480, (void*)this, x)) return;
 	this->QWidget::setBackgroundColor(x1);
     }
     virtual void setBackgroundMode(Qt::BackgroundMode x1) {
 	Smoke::StackItem x[2];
 	x[1].s_enum = x1;
-	if(qt_Smoke->binding->callMethod(9624, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11442, (void*)this, x)) return;
 	this->QWidget::setBackgroundMode(x1);
     }
     virtual void setBackgroundOrigin(QWidget::BackgroundOrigin x1) {
 	Smoke::StackItem x[2];
 	x[1].s_enum = x1;
-	if(qt_Smoke->binding->callMethod(9715, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11533, (void*)this, x)) return;
 	this->QWidget::setBackgroundOrigin(x1);
     }
     virtual void setBackgroundPixmap(const QPixmap& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(9664, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11482, (void*)this, x)) return;
 	this->QWidget::setBackgroundPixmap(x1);
     }
     virtual void setCaption(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(9730, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11548, (void*)this, x)) return;
 	this->QWidget::setCaption(x1);
     }
     virtual void setCurrentItem(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(1086, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(1304, (void*)this, x)) return;
 	this->QComboBox::setCurrentItem(x1);
     }
     virtual void setCurrentText(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(1088, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(1306, (void*)this, x)) return;
 	this->QComboBox::setCurrentText(x1);
     }
     virtual void setCursor(const QCursor& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(9651, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11469, (void*)this, x)) return;
 	this->QWidget::setCursor(x1);
     }
     virtual void setEditText(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(1123, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(1341, (void*)this, x)) return;
 	this->QComboBox::setEditText(x1);
     }
     virtual void setEnabled(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(1099, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(1317, (void*)this, x)) return;
 	this->QComboBox::setEnabled(x1);
     }
     virtual void setEraseColor(const QColor& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(9628, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11446, (void*)this, x)) return;
 	this->QWidget::setEraseColor(x1);
     }
     virtual void setErasePixmap(const QPixmap& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(9630, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11448, (void*)this, x)) return;
 	this->QWidget::setErasePixmap(x1);
     }
     virtual void setFocus() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(9734, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11552, (void*)this, x)) return;
 	this->QWidget::setFocus();
     }
     virtual void setFocusPolicy(QWidget::FocusPolicy x1) {
 	Smoke::StackItem x[2];
 	x[1].s_enum = x1;
-	if(qt_Smoke->binding->callMethod(9669, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11487, (void*)this, x)) return;
 	this->QWidget::setFocusPolicy(x1);
     }
     virtual void setFocusProxy(QWidget* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(9671, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11489, (void*)this, x)) return;
 	this->QWidget::setFocusProxy(x1);
     }
     virtual void setFont(const QFont& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(1098, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(1316, (void*)this, x)) return;
 	this->QComboBox::setFont(x1);
     }
     virtual void setGeometry(const QRect& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(9766, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11584, (void*)this, x)) return;
 	this->QWidget::setGeometry(x1);
     }
     virtual void setGeometry(int x1, int x2, int x3, int x4) {
@@ -924,68 +1022,68 @@ public:
 	x[2].s_int = x2;
 	x[3].s_int = x3;
 	x[4].s_int = x4;
-	if(qt_Smoke->binding->callMethod(9765, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11583, (void*)this, x)) return;
 	this->QWidget::setGeometry(x1, x2, x3, x4);
     }
     virtual void setIcon(const QPixmap& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(9731, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11549, (void*)this, x)) return;
 	this->QWidget::setIcon(x1);
     }
     virtual void setIconText(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(9732, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11550, (void*)this, x)) return;
 	this->QWidget::setIconText(x1);
     }
     virtual void setInsertionPolicy(QComboBox::Policy x1) {
 	Smoke::StackItem x[2];
 	x[1].s_enum = x1;
-	if(qt_Smoke->binding->callMethod(1104, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(1322, (void*)this, x)) return;
 	this->QComboBox::setInsertionPolicy(x1);
     }
     virtual void setKeyCompression(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(9824, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11647, (void*)this, x)) return;
 	this->QWidget::setKeyCompression(x1);
     }
     virtual void setLineEdit(QLineEdit* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(1110, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(1328, (void*)this, x)) return;
 	this->QComboBox::setLineEdit(x1);
     }
     virtual void setListBox(QListBox* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(1108, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(1326, (void*)this, x)) return;
 	this->QComboBox::setListBox(x1);
     }
     virtual void setMask(const QBitmap& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(9658, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11476, (void*)this, x)) return;
 	this->QWidget::setMask(x1);
     }
     virtual void setMask(const QRegion& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(9659, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11477, (void*)this, x)) return;
 	this->QWidget::setMask(x1);
     }
     virtual void setMaxCount(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(1102, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(1320, (void*)this, x)) return;
 	this->QComboBox::setMaxCount(x1);
     }
     virtual void setMaximumSize(int x1, int x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_int = x2;
-	if(qt_Smoke->binding->callMethod(9601, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11419, (void*)this, x)) return;
 	this->QWidget::setMaximumSize(x1, x2);
     }
     virtual void setMicroFocusHint(int x1, int x2, int x3, int x4, bool x5, QFont* x6) {
@@ -996,131 +1094,131 @@ public:
 	x[4].s_int = x4;
 	x[5].s_bool = x5;
 	x[6].s_class = (void*)x6;
-	if(qt_Smoke->binding->callMethod(9825, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11648, (void*)this, x)) return;
 	this->QWidget::setMicroFocusHint(x1, x2, x3, x4, x5, x6);
     }
     virtual void setMinimumSize(int x1, int x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_int = x2;
-	if(qt_Smoke->binding->callMethod(9599, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11417, (void*)this, x)) return;
 	this->QWidget::setMinimumSize(x1, x2);
     }
     virtual void setMouseTracking(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(9733, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11551, (void*)this, x)) return;
 	this->QWidget::setMouseTracking(x1);
     }
     virtual void setName(const char* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(9568, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11386, (void*)this, x)) return;
 	this->QWidget::setName(x1);
     }
     virtual void setPalette(const QPalette& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(1097, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(1315, (void*)this, x)) return;
 	this->QComboBox::setPalette(x1);
     }
     virtual void setPaletteBackgroundColor(const QColor& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(9639, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11457, (void*)this, x)) return;
 	this->QWidget::setPaletteBackgroundColor(x1);
     }
     virtual void setPaletteBackgroundPixmap(const QPixmap& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(9641, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11459, (void*)this, x)) return;
 	this->QWidget::setPaletteBackgroundPixmap(x1);
     }
     virtual bool setProperty(const char* x1, const QVariant& x2) {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)x1;
 	x[2].s_class = (void*)&x2;
-	if(qt_Smoke->binding->callMethod(5441, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(6462, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QObject::setProperty(x1, x2);
     }
     virtual void setResolution(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(5563, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6605, (void*)this, x)) return;
 	this->QPaintDevice::setResolution(x1);
     }
     virtual void setSizeIncrement(int x1, int x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_int = x2;
-	if(qt_Smoke->binding->callMethod(9608, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11426, (void*)this, x)) return;
 	this->QWidget::setSizeIncrement(x1, x2);
     }
     virtual void setSizeLimit(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(1100, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(1318, (void*)this, x)) return;
 	this->QComboBox::setSizeLimit(x1);
     }
     virtual void setSizePolicy(QSizePolicy x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(9690, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11508, (void*)this, x)) return;
 	this->QWidget::setSizePolicy(x1);
     }
     virtual void setUpdatesEnabled(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(9736, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11554, (void*)this, x)) return;
 	this->QWidget::setUpdatesEnabled(x1);
     }
     virtual void setValidator(const QValidator* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(1106, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(1324, (void*)this, x)) return;
 	this->QComboBox::setValidator(x1);
     }
     virtual void setWFlags(Qt::WFlags x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(9818, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11641, (void*)this, x)) return;
 	this->QWidget::setWFlags(x1);
     }
     virtual void setWState(uint x1) {
 	Smoke::StackItem x[2];
 	x[1].s_uint = x1;
-	if(qt_Smoke->binding->callMethod(9815, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11638, (void*)this, x)) return;
 	this->QWidget::setWState(x1);
     }
     virtual void show() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(9748, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11566, (void*)this, x)) return;
 	this->QWidget::show();
     }
     virtual void showEvent(QShowEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(9797, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11620, (void*)this, x)) return;
 	this->QWidget::showEvent(x1);
     }
     virtual void showMaximized() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(9752, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11570, (void*)this, x)) return;
 	this->QWidget::showMaximized();
     }
     virtual void showMinimized() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(9751, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11569, (void*)this, x)) return;
 	this->QWidget::showMinimized();
     }
     virtual void showNormal() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(9754, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11572, (void*)this, x)) return;
 	this->QWidget::showNormal();
     }
     virtual QSize sizeHint() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(1096, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(1314, (void*)this, x)) {
 	    QSize *xptr = (QSize *)x[0].s_class;
 	    QSize xret(*xptr);
 	    delete xptr;
@@ -1130,7 +1228,7 @@ public:
     }
     virtual QSizePolicy sizePolicy() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(9689, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(11507, (void*)this, x)) {
 	    QSizePolicy *xptr = (QSizePolicy *)x[0].s_class;
 	    QSizePolicy xret(*xptr);
 	    delete xptr;
@@ -1141,45 +1239,68 @@ public:
     virtual void styleChange(QStyle& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(1137, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(1360, (void*)this, x)) return;
 	this->QComboBox::styleChange(x1);
     }
     virtual void tabletEvent(QTabletEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(9792, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11615, (void*)this, x)) return;
 	this->QWidget::tabletEvent(x1);
     }
     virtual void timerEvent(QTimerEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(5465, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6491, (void*)this, x)) return;
 	this->QObject::timerEvent(x1);
     }
     virtual void unsetCursor() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(9652, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11470, (void*)this, x)) return;
 	this->QWidget::unsetCursor();
     }
     virtual void updateMask() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(1138, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(1361, (void*)this, x)) return;
 	this->QComboBox::updateMask();
     }
     virtual void wheelEvent(QWheelEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(9777, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11600, (void*)this, x)) return;
 	this->QWidget::wheelEvent(x1);
     }
     virtual void windowActivationChange(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(9804, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(11627, (void*)this, x)) return;
 	this->QWidget::windowActivationChange(x1);
+    }
+    static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
+	switch(xtype) {
+	  case 100: //QComboBox::Policy
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new QComboBox::Policy;
+		break;
+	      case Smoke::EnumDelete:
+		delete (QComboBox::Policy*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(QComboBox::Policy*)xdata = (QComboBox::Policy)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(QComboBox::Policy*)xdata;
+		break;
+	    }
+	    break;
+	}
     }
     ~x_QComboBox() { qt_Smoke->binding->deleted(45, (void*)this); }
 };
+void xenum_QComboBox(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
+    x_QComboBox::xenum_operation(xop, xtype, xdata, xvalue);
+}
 void xcall_QComboBox(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QComboBox *xself = (x_QComboBox*)obj;
     switch(xi) {
@@ -1189,19 +1310,19 @@ void xcall_QComboBox(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 3: x_QComboBox::x_3(args);	break;
 	case 4: x_QComboBox::x_4(args);	break;
 	case 5: x_QComboBox::x_5(args);	break;
-	case 6: x_QComboBox::x_6(args);	break;
-	case 7: x_QComboBox::x_7(args);	break;
-	case 8: x_QComboBox::x_8(args);	break;
-	case 9: x_QComboBox::x_9(args);	break;
-	case 10: x_QComboBox::x_10(args);	break;
-	case 11: x_QComboBox::x_11(args);	break;
+	case 6: xself->x_6(args);	break;
+	case 7: xself->x_7(args);	break;
+	case 8: xself->x_8(args);	break;
+	case 9: xself->x_9(args);	break;
+	case 10: xself->x_10(args);	break;
+	case 11: xself->x_11(args);	break;
 	case 12: xself->x_12(args);	break;
-	case 13: xself->x_13(args);	break;
-	case 14: xself->x_14(args);	break;
-	case 15: xself->x_15(args);	break;
-	case 16: xself->x_16(args);	break;
-	case 17: xself->x_17(args);	break;
-	case 18: xself->x_18(args);	break;
+	case 13: x_QComboBox::x_13(args);	break;
+	case 14: x_QComboBox::x_14(args);	break;
+	case 15: x_QComboBox::x_15(args);	break;
+	case 16: x_QComboBox::x_16(args);	break;
+	case 17: x_QComboBox::x_17(args);	break;
+	case 18: x_QComboBox::x_18(args);	break;
 	case 19: xself->x_19(args);	break;
 	case 20: xself->x_20(args);	break;
 	case 21: xself->x_21(args);	break;
@@ -1263,9 +1384,21 @@ void xcall_QComboBox(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 77: xself->x_77(args);	break;
 	case 78: xself->x_78(args);	break;
 	case 79: xself->x_79(args);	break;
-	case 80: xself->x_80(args);	break;
-	case 81: xself->x_81(args);	break;
-	case 82: xself->x_82(args);	break;
-	case 83: delete (QComboBox*)xself;	break;
+	case 80: x_QComboBox::x_80(args);	break;
+	case 81: x_QComboBox::x_81(args);	break;
+	case 82: x_QComboBox::x_82(args);	break;
+	case 83: x_QComboBox::x_83(args);	break;
+	case 84: x_QComboBox::x_84(args);	break;
+	case 85: xself->x_85(args);	break;
+	case 86: xself->x_86(args);	break;
+	case 87: xself->x_87(args);	break;
+	case 88: xself->x_88(args);	break;
+	case 89: xself->x_89(args);	break;
+	case 90: xself->x_90(args);	break;
+	case 91: xself->x_91(args);	break;
+	case 92: xself->x_92(args);	break;
+	case 93: xself->x_93(args);	break;
+	case 94: xself->x_94(args);	break;
+	case 95: delete (QComboBox*)xself;	break;
     }
 }

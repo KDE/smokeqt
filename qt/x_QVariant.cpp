@@ -793,8 +793,31 @@ public:
 	QVariant::Type xret = QVariant::nameToType((const char*)x[1].s_voidp);
 	x[0].s_enum = xret;
     }
+    static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
+	switch(xtype) {
+	  case 805: //QVariant::Type
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new QVariant::Type;
+		break;
+	      case Smoke::EnumDelete:
+		delete (QVariant::Type*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(QVariant::Type*)xdata = (QVariant::Type)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(QVariant::Type*)xdata;
+		break;
+	    }
+	    break;
+	}
+    }
     ~x_QVariant() { qt_Smoke->binding->deleted(350, (void*)this); }
 };
+void xenum_QVariant(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
+    x_QVariant::xenum_operation(xop, xtype, xdata, xvalue);
+}
 void xcall_QVariant(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QVariant *xself = (x_QVariant*)obj;
     switch(xi) {

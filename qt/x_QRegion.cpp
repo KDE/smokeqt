@@ -203,8 +203,31 @@ public:
 	bool xret = this->QRegion::operator!=(*(const QRegion *)x[1].s_class);
 	x[0].s_bool = xret;
     }
+    static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
+	switch(xtype) {
+	  case 542: //QRegion::RegionType
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new QRegion::RegionType;
+		break;
+	      case Smoke::EnumDelete:
+		delete (QRegion::RegionType*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(QRegion::RegionType*)xdata = (QRegion::RegionType)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(QRegion::RegionType*)xdata;
+		break;
+	    }
+	    break;
+	}
+    }
     ~x_QRegion() { qt_Smoke->binding->deleted(244, (void*)this); }
 };
+void xenum_QRegion(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
+    x_QRegion::xenum_operation(xop, xtype, xdata, xvalue);
+}
 void xcall_QRegion(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QRegion *xself = (x_QRegion*)obj;
     switch(xi) {

@@ -230,8 +230,31 @@ public:
 	QColor::cleanup();
 	(void)x[0].s_int; // noop (for compiler warning)
     }
+    static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
+	switch(xtype) {
+	  case 94: //QColor::Spec
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new QColor::Spec;
+		break;
+	      case Smoke::EnumDelete:
+		delete (QColor::Spec*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(QColor::Spec*)xdata = (QColor::Spec)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(QColor::Spec*)xdata;
+		break;
+	    }
+	    break;
+	}
+    }
     ~x_QColor() { qt_Smoke->binding->deleted(41, (void*)this); }
 };
+void xenum_QColor(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
+    x_QColor::xenum_operation(xop, xtype, xdata, xvalue);
+}
 void xcall_QColor(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QColor *xself = (x_QColor*)obj;
     switch(xi) {

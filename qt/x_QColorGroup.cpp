@@ -201,8 +201,31 @@ public:
 	bool xret = this->QColorGroup::operator!=(*(const QColorGroup *)x[1].s_class);
 	x[0].s_bool = xret;
     }
+    static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
+	switch(xtype) {
+	  case 98: //QColorGroup::ColorRole
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new QColorGroup::ColorRole;
+		break;
+	      case Smoke::EnumDelete:
+		delete (QColorGroup::ColorRole*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(QColorGroup::ColorRole*)xdata = (QColorGroup::ColorRole)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(QColorGroup::ColorRole*)xdata;
+		break;
+	    }
+	    break;
+	}
+    }
     ~x_QColorGroup() { qt_Smoke->binding->deleted(44, (void*)this); }
 };
+void xenum_QColorGroup(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
+    x_QColorGroup::xenum_operation(xop, xtype, xdata, xvalue);
+}
 void xcall_QColorGroup(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QColorGroup *xself = (x_QColorGroup*)obj;
     switch(xi) {

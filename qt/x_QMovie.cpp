@@ -245,8 +245,31 @@ public:
 	this->QMovie::disconnectStatus((QObject*)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
+    static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
+	switch(xtype) {
+	  case 441: //QMovie::Status
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new QMovie::Status;
+		break;
+	      case Smoke::EnumDelete:
+		delete (QMovie::Status*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(QMovie::Status*)xdata = (QMovie::Status)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(QMovie::Status*)xdata;
+		break;
+	    }
+	    break;
+	}
+    }
     ~x_QMovie() { qt_Smoke->binding->deleted(205, (void*)this); }
 };
+void xenum_QMovie(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
+    x_QMovie::xenum_operation(xop, xtype, xdata, xvalue);
+}
 void xcall_QMovie(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QMovie *xself = (x_QMovie*)obj;
     switch(xi) {

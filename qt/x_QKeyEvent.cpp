@@ -85,6 +85,13 @@ public:
 	this->QKeyEvent::ignore();
 	(void)x[0].s_int; // noop (for compiler warning)
     }
+    static void x_14(Smoke::Stack x) {
+	// QKeyEvent(QKeyEvent&)
+	x_QKeyEvent* xret = new x_QKeyEvent(*(QKeyEvent *)x[1].s_class);
+	x[0].s_class = (void*)xret;
+    }
+    x_QKeyEvent(QKeyEvent& x1) : QKeyEvent(x1) {
+    }
     ~x_QKeyEvent() { qt_Smoke->binding->deleted(169, (void*)this); }
 };
 void xcall_QKeyEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
@@ -104,6 +111,7 @@ void xcall_QKeyEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 11: xself->x_11(args);	break;
 	case 12: xself->x_12(args);	break;
 	case 13: xself->x_13(args);	break;
-	case 14: delete (QKeyEvent*)xself;	break;
+	case 14: x_QKeyEvent::x_14(args);	break;
+	case 15: delete (QKeyEvent*)xself;	break;
     }
 }

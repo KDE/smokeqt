@@ -573,8 +573,79 @@ public:
 	int xret = this->QFont::deciPointSize();
 	x[0].s_int = xret;
     }
+    static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
+	switch(xtype) {
+	  case 257: //QFont::Script
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new QFont::Script;
+		break;
+	      case Smoke::EnumDelete:
+		delete (QFont::Script*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(QFont::Script*)xdata = (QFont::Script)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(QFont::Script*)xdata;
+		break;
+	    }
+	    break;
+	  case 260: //QFont::Weight
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new QFont::Weight;
+		break;
+	      case Smoke::EnumDelete:
+		delete (QFont::Weight*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(QFont::Weight*)xdata = (QFont::Weight)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(QFont::Weight*)xdata;
+		break;
+	    }
+	    break;
+	  case 258: //QFont::StyleHint
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new QFont::StyleHint;
+		break;
+	      case Smoke::EnumDelete:
+		delete (QFont::StyleHint*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(QFont::StyleHint*)xdata = (QFont::StyleHint)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(QFont::StyleHint*)xdata;
+		break;
+	    }
+	    break;
+	  case 259: //QFont::StyleStrategy
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new QFont::StyleStrategy;
+		break;
+	      case Smoke::EnumDelete:
+		delete (QFont::StyleStrategy*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(QFont::StyleStrategy*)xdata = (QFont::StyleStrategy)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(QFont::StyleStrategy*)xdata;
+		break;
+	    }
+	    break;
+	}
+    }
     ~x_QFont() { qt_Smoke->binding->deleted(116, (void*)this); }
 };
+void xenum_QFont(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
+    x_QFont::xenum_operation(xop, xtype, xdata, xvalue);
+}
 void xcall_QFont(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QFont *xself = (x_QFont*)obj;
     switch(xi) {

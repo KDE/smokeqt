@@ -171,19 +171,26 @@ public:
 	int xret = this->QTableItem::rtti();
 	x[0].s_int = xret;
     }
+    static void x_33(Smoke::Stack x) {
+	// QTableItem(QTableItem&)
+	x_QTableItem* xret = new x_QTableItem(*(QTableItem *)x[1].s_class);
+	x[0].s_class = (void*)xret;
+    }
+    x_QTableItem(QTableItem& x1) : QTableItem(x1) {
+    }
     virtual int alignment() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(8453, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(10014, (void*)this, x)) return (int)x[0].s_int;
 	return this->QTableItem::alignment();
     }
     virtual QWidget* createEditor() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(8457, (void*)this, x)) return (QWidget*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(10018, (void*)this, x)) return (QWidget*)x[0].s_class;
 	return this->QTableItem::createEditor();
     }
     virtual QString key() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(8461, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(10022, (void*)this, x)) {
 	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;
@@ -197,12 +204,12 @@ public:
 	x[2].s_class = (void*)&x2;
 	x[3].s_class = (void*)&x3;
 	x[4].s_bool = x4;
-	if(qt_Smoke->binding->callMethod(8470, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10031, (void*)this, x)) return;
 	this->QTableItem::paint(x1, x2, x3, x4);
     }
     virtual QPixmap pixmap() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(8448, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(10009, (void*)this, x)) {
 	    QPixmap *xptr = (QPixmap *)x[0].s_class;
 	    QPixmap xret(*xptr);
 	    delete xptr;
@@ -212,67 +219,67 @@ public:
     }
     virtual int rtti() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(8474, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(10035, (void*)this, x)) return (int)x[0].s_int;
 	return this->QTableItem::rtti();
     }
     virtual void setCol(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(8467, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10028, (void*)this, x)) return;
 	this->QTableItem::setCol(x1);
     }
     virtual void setContentFromEditor(QWidget* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(8458, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10019, (void*)this, x)) return;
 	this->QTableItem::setContentFromEditor(x1);
     }
     virtual void setEnabled(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(8472, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10033, (void*)this, x)) return;
 	this->QTableItem::setEnabled(x1);
     }
     virtual void setPixmap(const QPixmap& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(8450, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10011, (void*)this, x)) return;
 	this->QTableItem::setPixmap(x1);
     }
     virtual void setReplaceable(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(8459, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10020, (void*)this, x)) return;
 	this->QTableItem::setReplaceable(x1);
     }
     virtual void setRow(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(8466, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10027, (void*)this, x)) return;
 	this->QTableItem::setRow(x1);
     }
     virtual void setSpan(int x1, int x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_int = x2;
-	if(qt_Smoke->binding->callMethod(8463, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10024, (void*)this, x)) return;
 	this->QTableItem::setSpan(x1, x2);
     }
     virtual void setText(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(8451, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10012, (void*)this, x)) return;
 	this->QTableItem::setText(x1);
     }
     virtual void setWordWrap(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(8454, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10015, (void*)this, x)) return;
 	this->QTableItem::setWordWrap(x1);
     }
     virtual QSize sizeHint() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(8462, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(10023, (void*)this, x)) {
 	    QSize *xptr = (QSize *)x[0].s_class;
 	    QSize xret(*xptr);
 	    delete xptr;
@@ -282,7 +289,7 @@ public:
     }
     virtual QString text() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(8449, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(10010, (void*)this, x)) {
 	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;
@@ -290,8 +297,31 @@ public:
 	}
 	return this->QTableItem::text();
     }
+    static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
+	switch(xtype) {
+	  case 710: //QTableItem::EditType
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new QTableItem::EditType;
+		break;
+	      case Smoke::EnumDelete:
+		delete (QTableItem::EditType*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(QTableItem::EditType*)xdata = (QTableItem::EditType)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(QTableItem::EditType*)xdata;
+		break;
+	    }
+	    break;
+	}
+    }
     ~x_QTableItem() { qt_Smoke->binding->deleted(312, (void*)this); }
 };
+void xenum_QTableItem(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
+    x_QTableItem::xenum_operation(xop, xtype, xdata, xvalue);
+}
 void xcall_QTableItem(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QTableItem *xself = (x_QTableItem*)obj;
     switch(xi) {
@@ -328,6 +358,7 @@ void xcall_QTableItem(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 30: xself->x_30(args);	break;
 	case 31: xself->x_31(args);	break;
 	case 32: xself->x_32(args);	break;
-	case 33: delete (QTableItem*)xself;	break;
+	case 33: x_QTableItem::x_33(args);	break;
+	case 34: delete (QTableItem*)xself;	break;
     }
 }

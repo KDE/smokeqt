@@ -142,8 +142,31 @@ public:
 	bool xret = this->QTranslatorMessage::operator>=(*(const QTranslatorMessage *)x[1].s_class);
 	x[0].s_bool = xret;
     }
+    static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
+	switch(xtype) {
+	  case 764: //QTranslatorMessage::Prefix
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new QTranslatorMessage::Prefix;
+		break;
+	      case Smoke::EnumDelete:
+		delete (QTranslatorMessage::Prefix*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(QTranslatorMessage::Prefix*)xdata = (QTranslatorMessage::Prefix)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(QTranslatorMessage::Prefix*)xdata;
+		break;
+	    }
+	    break;
+	}
+    }
     ~x_QTranslatorMessage() { qt_Smoke->binding->deleted(336, (void*)this); }
 };
+void xenum_QTranslatorMessage(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
+    x_QTranslatorMessage::xenum_operation(xop, xtype, xdata, xvalue);
+}
 void xcall_QTranslatorMessage(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QTranslatorMessage *xself = (x_QTranslatorMessage*)obj;
     switch(xi) {

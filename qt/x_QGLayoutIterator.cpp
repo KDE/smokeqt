@@ -12,21 +12,28 @@ public:
     }
     x_QGLayoutIterator() : QGLayoutIterator() {
     }
+    static void x_1(Smoke::Stack x) {
+	// QGLayoutIterator(QGLayoutIterator&)
+	x_QGLayoutIterator* xret = new x_QGLayoutIterator(*(QGLayoutIterator *)x[1].s_class);
+	x[0].s_class = (void*)xret;
+    }
+    x_QGLayoutIterator(QGLayoutIterator& x1) : QGLayoutIterator(x1) {
+    }
     virtual QLayoutItem* current() {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(3062, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(3630, (void*)this, x, true /*pure virtual*/);
 	return (QLayoutItem*)x[0].s_class;
 	// ABSTRACT
     }
     virtual QLayoutItem* next() {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(3061, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(3629, (void*)this, x, true /*pure virtual*/);
 	return (QLayoutItem*)x[0].s_class;
 	// ABSTRACT
     }
     virtual QLayoutItem* takeCurrent() {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(3063, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(3631, (void*)this, x, true /*pure virtual*/);
 	return (QLayoutItem*)x[0].s_class;
 	// ABSTRACT
     }
@@ -36,6 +43,7 @@ void xcall_QGLayoutIterator(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QGLayoutIterator *xself = (x_QGLayoutIterator*)obj;
     switch(xi) {
 	case 0: x_QGLayoutIterator::x_0(args);	break;
-	case 1: delete (QGLayoutIterator*)xself;	break;
+	case 1: x_QGLayoutIterator::x_1(args);	break;
+	case 2: delete (QGLayoutIterator*)xself;	break;
     }
 }

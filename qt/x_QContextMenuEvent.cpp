@@ -95,8 +95,38 @@ public:
 	QContextMenuEvent::Reason xret = this->QContextMenuEvent::reason();
 	x[0].s_enum = xret;
     }
+    static void x_18(Smoke::Stack x) {
+	// QContextMenuEvent(QContextMenuEvent&)
+	x_QContextMenuEvent* xret = new x_QContextMenuEvent(*(QContextMenuEvent *)x[1].s_class);
+	x[0].s_class = (void*)xret;
+    }
+    x_QContextMenuEvent(QContextMenuEvent& x1) : QContextMenuEvent(x1) {
+    }
+    static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
+	switch(xtype) {
+	  case 111: //QContextMenuEvent::Reason
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new QContextMenuEvent::Reason;
+		break;
+	      case Smoke::EnumDelete:
+		delete (QContextMenuEvent::Reason*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(QContextMenuEvent::Reason*)xdata = (QContextMenuEvent::Reason)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(QContextMenuEvent::Reason*)xdata;
+		break;
+	    }
+	    break;
+	}
+    }
     ~x_QContextMenuEvent() { qt_Smoke->binding->deleted(51, (void*)this); }
 };
+void xenum_QContextMenuEvent(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
+    x_QContextMenuEvent::xenum_operation(xop, xtype, xdata, xvalue);
+}
 void xcall_QContextMenuEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QContextMenuEvent *xself = (x_QContextMenuEvent*)obj;
     switch(xi) {
@@ -118,6 +148,7 @@ void xcall_QContextMenuEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 15: xself->x_15(args);	break;
 	case 16: xself->x_16(args);	break;
 	case 17: xself->x_17(args);	break;
-	case 18: delete (QContextMenuEvent*)xself;	break;
+	case 18: x_QContextMenuEvent::x_18(args);	break;
+	case 19: delete (QContextMenuEvent*)xself;	break;
     }
 }

@@ -12,12 +12,20 @@ public:
     }
     x_QDragLeaveEvent() : QDragLeaveEvent() {
     }
+    static void x_1(Smoke::Stack x) {
+	// QDragLeaveEvent(QDragLeaveEvent&)
+	x_QDragLeaveEvent* xret = new x_QDragLeaveEvent(*(QDragLeaveEvent *)x[1].s_class);
+	x[0].s_class = (void*)xret;
+    }
+    x_QDragLeaveEvent(QDragLeaveEvent& x1) : QDragLeaveEvent(x1) {
+    }
     ~x_QDragLeaveEvent() { qt_Smoke->binding->deleted(97, (void*)this); }
 };
 void xcall_QDragLeaveEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QDragLeaveEvent *xself = (x_QDragLeaveEvent*)obj;
     switch(xi) {
 	case 0: x_QDragLeaveEvent::x_0(args);	break;
-	case 1: delete (QDragLeaveEvent*)xself;	break;
+	case 1: x_QDragLeaveEvent::x_1(args);	break;
+	case 2: delete (QDragLeaveEvent*)xself;	break;
     }
 }

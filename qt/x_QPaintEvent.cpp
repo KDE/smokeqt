@@ -50,6 +50,13 @@ public:
 	bool xret = this->QPaintEvent::erased();
 	x[0].s_bool = xret;
     }
+    static void x_7(Smoke::Stack x) {
+	// QPaintEvent(QPaintEvent&)
+	x_QPaintEvent* xret = new x_QPaintEvent(*(QPaintEvent *)x[1].s_class);
+	x[0].s_class = (void*)xret;
+    }
+    x_QPaintEvent(QPaintEvent& x1) : QPaintEvent(x1) {
+    }
     ~x_QPaintEvent() { qt_Smoke->binding->deleted(219, (void*)this); }
 };
 void xcall_QPaintEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
@@ -62,6 +69,7 @@ void xcall_QPaintEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 4: xself->x_4(args);	break;
 	case 5: xself->x_5(args);	break;
 	case 6: xself->x_6(args);	break;
-	case 7: delete (QPaintEvent*)xself;	break;
+	case 7: x_QPaintEvent::x_7(args);	break;
+	case 8: delete (QPaintEvent*)xself;	break;
     }
 }

@@ -67,6 +67,13 @@ public:
 	bool xret = this->QTableSelection::isActive();
 	x[0].s_bool = xret;
     }
+    static void x_12(Smoke::Stack x) {
+	// QTableSelection(QTableSelection&)
+	x_QTableSelection* xret = new x_QTableSelection(*(QTableSelection *)x[1].s_class);
+	x[0].s_class = (void*)xret;
+    }
+    x_QTableSelection(QTableSelection& x1) : QTableSelection(x1) {
+    }
     ~x_QTableSelection() { qt_Smoke->binding->deleted(313, (void*)this); }
 };
 void xcall_QTableSelection(Smoke::Index xi, void *obj, Smoke::Stack args) {
@@ -84,6 +91,7 @@ void xcall_QTableSelection(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 9: xself->x_9(args);	break;
 	case 10: xself->x_10(args);	break;
 	case 11: xself->x_11(args);	break;
-	case 12: delete (QTableSelection*)xself;	break;
+	case 12: x_QTableSelection::x_12(args);	break;
+	case 13: delete (QTableSelection*)xself;	break;
     }
 }

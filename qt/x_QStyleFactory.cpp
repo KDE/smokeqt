@@ -15,11 +15,18 @@ public:
     x_QStyleFactory() : QStyleFactory() {
     }
     static void x_1(Smoke::Stack x) {
+	// QStyleFactory(QStyleFactory&)
+	x_QStyleFactory* xret = new x_QStyleFactory(*(QStyleFactory *)x[1].s_class);
+	x[0].s_class = (void*)xret;
+    }
+    x_QStyleFactory(QStyleFactory& x1) : QStyleFactory(x1) {
+    }
+    static void x_2(Smoke::Stack x) {
 	// keys()
 	QStringList xret = QStyleFactory::keys();
 	x[0].s_class = (void*)new QStringList(xret);
     }
-    static void x_2(Smoke::Stack x) {
+    static void x_3(Smoke::Stack x) {
 	// create(const QString&)
 	QStyle* xret = QStyleFactory::create(*(const QString *)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
@@ -32,6 +39,7 @@ void xcall_QStyleFactory(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 0: x_QStyleFactory::x_0(args);	break;
 	case 1: x_QStyleFactory::x_1(args);	break;
 	case 2: x_QStyleFactory::x_2(args);	break;
-	case 3: delete (QStyleFactory*)xself;	break;
+	case 3: x_QStyleFactory::x_3(args);	break;
+	case 4: delete (QStyleFactory*)xself;	break;
     }
 }

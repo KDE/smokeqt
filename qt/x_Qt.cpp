@@ -1506,8 +1506,438 @@ public:
     }
     x_Qt() : Qt() {
     }
+    static void x_499(Smoke::Stack x) {
+	// Qt(Qt&)
+	x_Qt* xret = new x_Qt(*(Qt *)x[1].s_class);
+	x[0].s_class = (void*)xret;
+    }
+    x_Qt(Qt& x1) : Qt(x1) {
+    }
+    static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
+	switch(xtype) {
+	  case 885: //Qt::ArrowType
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new Qt::ArrowType;
+		break;
+	      case Smoke::EnumDelete:
+		delete (Qt::ArrowType*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(Qt::ArrowType*)xdata = (Qt::ArrowType)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(Qt::ArrowType*)xdata;
+		break;
+	    }
+	    break;
+	  case 913: //Qt::WidgetFlags
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new Qt::WidgetFlags;
+		break;
+	      case Smoke::EnumDelete:
+		delete (Qt::WidgetFlags*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(Qt::WidgetFlags*)xdata = (Qt::WidgetFlags)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(Qt::WidgetFlags*)xdata;
+		break;
+	    }
+	    break;
+	  case 884: //Qt::AlignmentFlags
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new Qt::AlignmentFlags;
+		break;
+	      case Smoke::EnumDelete:
+		delete (Qt::AlignmentFlags*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(Qt::AlignmentFlags*)xdata = (Qt::AlignmentFlags)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(Qt::AlignmentFlags*)xdata;
+		break;
+	    }
+	    break;
+	  case 903: //Qt::PenJoinStyle
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new Qt::PenJoinStyle;
+		break;
+	      case Smoke::EnumDelete:
+		delete (Qt::PenJoinStyle*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(Qt::PenJoinStyle*)xdata = (Qt::PenJoinStyle)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(Qt::PenJoinStyle*)xdata;
+		break;
+	    }
+	    break;
+	  case 892: //Qt::DateFormat
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new Qt::DateFormat;
+		break;
+	      case Smoke::EnumDelete:
+		delete (Qt::DateFormat*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(Qt::DateFormat*)xdata = (Qt::DateFormat)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(Qt::DateFormat*)xdata;
+		break;
+	    }
+	    break;
+	  case 904: //Qt::PenStyle
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new Qt::PenStyle;
+		break;
+	      case Smoke::EnumDelete:
+		delete (Qt::PenStyle*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(Qt::PenStyle*)xdata = (Qt::PenStyle)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(Qt::PenStyle*)xdata;
+		break;
+	    }
+	    break;
+	  case 888: //Qt::BrushStyle
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new Qt::BrushStyle;
+		break;
+	      case Smoke::EnumDelete:
+		delete (Qt::BrushStyle*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(Qt::BrushStyle*)xdata = (Qt::BrushStyle)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(Qt::BrushStyle*)xdata;
+		break;
+	    }
+	    break;
+	  case 907: //Qt::TextFlags
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new Qt::TextFlags;
+		break;
+	      case Smoke::EnumDelete:
+		delete (Qt::TextFlags*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(Qt::TextFlags*)xdata = (Qt::TextFlags)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(Qt::TextFlags*)xdata;
+		break;
+	    }
+	    break;
+	  case 891: //Qt::CursorShape
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new Qt::CursorShape;
+		break;
+	      case Smoke::EnumDelete:
+		delete (Qt::CursorShape*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(Qt::CursorShape*)xdata = (Qt::CursorShape)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(Qt::CursorShape*)xdata;
+		break;
+	    }
+	    break;
+	  case 900: //Qt::Orientation
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new Qt::Orientation;
+		break;
+	      case Smoke::EnumDelete:
+		delete (Qt::Orientation*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(Qt::Orientation*)xdata = (Qt::Orientation)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(Qt::Orientation*)xdata;
+		break;
+	    }
+	    break;
+	  case 898: //Qt::Key
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new Qt::Key;
+		break;
+	      case Smoke::EnumDelete:
+		delete (Qt::Key*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(Qt::Key*)xdata = (Qt::Key)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(Qt::Key*)xdata;
+		break;
+	    }
+	    break;
+	  case 897: //Qt::ImageConversionFlags
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new Qt::ImageConversionFlags;
+		break;
+	      case Smoke::EnumDelete:
+		delete (Qt::ImageConversionFlags*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(Qt::ImageConversionFlags*)xdata = (Qt::ImageConversionFlags)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(Qt::ImageConversionFlags*)xdata;
+		break;
+	    }
+	    break;
+	  case 886: //Qt::BGMode
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new Qt::BGMode;
+		break;
+	      case Smoke::EnumDelete:
+		delete (Qt::BGMode*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(Qt::BGMode*)xdata = (Qt::BGMode)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(Qt::BGMode*)xdata;
+		break;
+	    }
+	    break;
+	  case 895: //Qt::GUIStyle
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new Qt::GUIStyle;
+		break;
+	      case Smoke::EnumDelete:
+		delete (Qt::GUIStyle*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(Qt::GUIStyle*)xdata = (Qt::GUIStyle)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(Qt::GUIStyle*)xdata;
+		break;
+	    }
+	    break;
+	  case 901: //Qt::PaintUnit
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new Qt::PaintUnit;
+		break;
+	      case Smoke::EnumDelete:
+		delete (Qt::PaintUnit*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(Qt::PaintUnit*)xdata = (Qt::PaintUnit)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(Qt::PaintUnit*)xdata;
+		break;
+	    }
+	    break;
+	  case 914: //Qt::WidgetState
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new Qt::WidgetState;
+		break;
+	      case Smoke::EnumDelete:
+		delete (Qt::WidgetState*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(Qt::WidgetState*)xdata = (Qt::WidgetState)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(Qt::WidgetState*)xdata;
+		break;
+	    }
+	    break;
+	  case 908: //Qt::TextFormat
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new Qt::TextFormat;
+		break;
+	      case Smoke::EnumDelete:
+		delete (Qt::TextFormat*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(Qt::TextFormat*)xdata = (Qt::TextFormat)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(Qt::TextFormat*)xdata;
+		break;
+	    }
+	    break;
+	  case 902: //Qt::PenCapStyle
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new Qt::PenCapStyle;
+		break;
+	      case Smoke::EnumDelete:
+		delete (Qt::PenCapStyle*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(Qt::PenCapStyle*)xdata = (Qt::PenCapStyle)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(Qt::PenCapStyle*)xdata;
+		break;
+	    }
+	    break;
+	  case 893: //Qt::Dock
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new Qt::Dock;
+		break;
+	      case Smoke::EnumDelete:
+		delete (Qt::Dock*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(Qt::Dock*)xdata = (Qt::Dock)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(Qt::Dock*)xdata;
+		break;
+	    }
+	    break;
+	  case 887: //Qt::BackgroundMode
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new Qt::BackgroundMode;
+		break;
+	      case Smoke::EnumDelete:
+		delete (Qt::BackgroundMode*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(Qt::BackgroundMode*)xdata = (Qt::BackgroundMode)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(Qt::BackgroundMode*)xdata;
+		break;
+	    }
+	    break;
+	  case 910: //Qt::UIEffect
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new Qt::UIEffect;
+		break;
+	      case Smoke::EnumDelete:
+		delete (Qt::UIEffect*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(Qt::UIEffect*)xdata = (Qt::UIEffect)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(Qt::UIEffect*)xdata;
+		break;
+	    }
+	    break;
+	  case 915: //Qt::WindowsVersion
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new Qt::WindowsVersion;
+		break;
+	      case Smoke::EnumDelete:
+		delete (Qt::WindowsVersion*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(Qt::WindowsVersion*)xdata = (Qt::WindowsVersion)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(Qt::WindowsVersion*)xdata;
+		break;
+	    }
+	    break;
+	  case 889: //Qt::ButtonState
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new Qt::ButtonState;
+		break;
+	      case Smoke::EnumDelete:
+		delete (Qt::ButtonState*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(Qt::ButtonState*)xdata = (Qt::ButtonState)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(Qt::ButtonState*)xdata;
+		break;
+	    }
+	    break;
+	  case 906: //Qt::StringComparisonMode
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new Qt::StringComparisonMode;
+		break;
+	      case Smoke::EnumDelete:
+		delete (Qt::StringComparisonMode*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(Qt::StringComparisonMode*)xdata = (Qt::StringComparisonMode)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(Qt::StringComparisonMode*)xdata;
+		break;
+	    }
+	    break;
+	  case 899: //Qt::Modifier
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new Qt::Modifier;
+		break;
+	      case Smoke::EnumDelete:
+		delete (Qt::Modifier*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(Qt::Modifier*)xdata = (Qt::Modifier)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(Qt::Modifier*)xdata;
+		break;
+	    }
+	    break;
+	  case 905: //Qt::RasterOp
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new Qt::RasterOp;
+		break;
+	      case Smoke::EnumDelete:
+		delete (Qt::RasterOp*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(Qt::RasterOp*)xdata = (Qt::RasterOp)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(Qt::RasterOp*)xdata;
+		break;
+	    }
+	    break;
+	}
+    }
     ~x_Qt() { qt_Smoke->binding->deleted(380, (void*)this); }
 };
+void xenum_Qt(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
+    x_Qt::xenum_operation(xop, xtype, xdata, xvalue);
+}
 void xcall_Qt(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_Qt *xself = (x_Qt*)obj;
     switch(xi) {
@@ -2010,6 +2440,7 @@ void xcall_Qt(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 496: x_Qt::x_496(args);	break;
 	case 497: x_Qt::x_497(args);	break;
 	case 498: x_Qt::x_498(args);	break;
-	case 499: delete (Qt*)xself;	break;
+	case 499: x_Qt::x_499(args);	break;
+	case 500: delete (Qt*)xself;	break;
     }
 }

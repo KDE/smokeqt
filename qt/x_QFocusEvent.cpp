@@ -44,22 +44,52 @@ public:
 	x[0].s_bool = xret;
     }
     static void x_10(Smoke::Stack x) {
+	// QFocusEvent(QFocusEvent&)
+	x_QFocusEvent* xret = new x_QFocusEvent(*(QFocusEvent *)x[1].s_class);
+	x[0].s_class = (void*)xret;
+    }
+    x_QFocusEvent(QFocusEvent& x1) : QFocusEvent(x1) {
+    }
+    static void x_11(Smoke::Stack x) {
 	// reason()
 	QFocusEvent::Reason xret = QFocusEvent::reason();
 	x[0].s_enum = xret;
     }
-    static void x_11(Smoke::Stack x) {
+    static void x_12(Smoke::Stack x) {
 	// setReason(QFocusEvent::Reason)
 	QFocusEvent::setReason((QFocusEvent::Reason)x[1].s_enum);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
-    static void x_12(Smoke::Stack x) {
+    static void x_13(Smoke::Stack x) {
 	// resetReason()
 	QFocusEvent::resetReason();
 	(void)x[0].s_int; // noop (for compiler warning)
     }
+    static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
+	switch(xtype) {
+	  case 253: //QFocusEvent::Reason
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new QFocusEvent::Reason;
+		break;
+	      case Smoke::EnumDelete:
+		delete (QFocusEvent::Reason*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(QFocusEvent::Reason*)xdata = (QFocusEvent::Reason)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(QFocusEvent::Reason*)xdata;
+		break;
+	    }
+	    break;
+	}
+    }
     ~x_QFocusEvent() { qt_Smoke->binding->deleted(115, (void*)this); }
 };
+void xenum_QFocusEvent(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
+    x_QFocusEvent::xenum_operation(xop, xtype, xdata, xvalue);
+}
 void xcall_QFocusEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QFocusEvent *xself = (x_QFocusEvent*)obj;
     switch(xi) {
@@ -76,6 +106,7 @@ void xcall_QFocusEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 10: x_QFocusEvent::x_10(args);	break;
 	case 11: x_QFocusEvent::x_11(args);	break;
 	case 12: x_QFocusEvent::x_12(args);	break;
-	case 13: delete (QFocusEvent*)xself;	break;
+	case 13: x_QFocusEvent::x_13(args);	break;
+	case 14: delete (QFocusEvent*)xself;	break;
     }
 }

@@ -12,12 +12,20 @@ public:
     }
     x_QGArray__array_data() : QGArray::array_data() {
     }
+    static void x_1(Smoke::Stack x) {
+	// array_data(array_data&)
+	x_QGArray__array_data* xret = new x_QGArray__array_data(*(array_data *)x[1].s_voidp);
+	x[0].s_class = (void*)xret;
+    }
+    x_QGArray__array_data(array_data& x1) : QGArray::array_data(x1) {
+    }
     ~x_QGArray__array_data() { qt_Smoke->binding->deleted(124, (void*)this); }
 };
 void xcall_QGArray__array_data(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QGArray__array_data *xself = (x_QGArray__array_data*)obj;
     switch(xi) {
 	case 0: x_QGArray__array_data::x_0(args);	break;
-	case 1: delete (QGArray::array_data*)xself;	break;
+	case 1: x_QGArray__array_data::x_1(args);	break;
+	case 2: delete (QGArray::array_data*)xself;	break;
     }
 }

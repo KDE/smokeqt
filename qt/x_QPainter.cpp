@@ -981,8 +981,47 @@ public:
 	QPainter::cleanup();
 	(void)x[0].s_int; // noop (for compiler warning)
     }
+    static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
+	switch(xtype) {
+	  case 476: //QPainter::TextDirection
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new QPainter::TextDirection;
+		break;
+	      case Smoke::EnumDelete:
+		delete (QPainter::TextDirection*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(QPainter::TextDirection*)xdata = (QPainter::TextDirection)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(QPainter::TextDirection*)xdata;
+		break;
+	    }
+	    break;
+	  case 475: //QPainter::CoordinateMode
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new QPainter::CoordinateMode;
+		break;
+	      case Smoke::EnumDelete:
+		delete (QPainter::CoordinateMode*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(QPainter::CoordinateMode*)xdata = (QPainter::CoordinateMode)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(QPainter::CoordinateMode*)xdata;
+		break;
+	    }
+	    break;
+	}
+    }
     ~x_QPainter() { qt_Smoke->binding->deleted(220, (void*)this); }
 };
+void xenum_QPainter(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
+    x_QPainter::xenum_operation(xop, xtype, xdata, xvalue);
+}
 void xcall_QPainter(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QPainter *xself = (x_QPainter*)obj;
     switch(xi) {

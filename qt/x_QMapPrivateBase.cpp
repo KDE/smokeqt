@@ -39,6 +39,13 @@ public:
 	QMapNodeBase* xret = this->QMapPrivateBase::removeAndRebalance((QMapNodeBase*)x[1].s_class,*(QMapNodeBase* *)x[2].s_voidp,*(QMapNodeBase* *)x[3].s_voidp,*(QMapNodeBase* *)x[4].s_voidp);
 	x[0].s_class = (void*)xret;
     }
+    static void x_6(Smoke::Stack x) {
+	// QMapPrivateBase(QMapPrivateBase&)
+	x_QMapPrivateBase* xret = new x_QMapPrivateBase(*(QMapPrivateBase *)x[1].s_class);
+	x[0].s_class = (void*)xret;
+    }
+    x_QMapPrivateBase(QMapPrivateBase& x1) : QMapPrivateBase(x1) {
+    }
     ~x_QMapPrivateBase() { qt_Smoke->binding->deleted(189, (void*)this); }
 };
 void xcall_QMapPrivateBase(Smoke::Index xi, void *obj, Smoke::Stack args) {
@@ -50,6 +57,7 @@ void xcall_QMapPrivateBase(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 3: xself->x_3(args);	break;
 	case 4: xself->x_4(args);	break;
 	case 5: xself->x_5(args);	break;
-	case 6: delete (QMapPrivateBase*)xself;	break;
+	case 6: x_QMapPrivateBase::x_6(args);	break;
+	case 7: delete (QMapPrivateBase*)xself;	break;
     }
 }

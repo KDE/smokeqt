@@ -256,8 +256,31 @@ public:
 	QDateTime xret = this->QFileInfo::lastRead();
 	x[0].s_class = (void*)new QDateTime(xret);
     }
+    static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
+	switch(xtype) {
+	  case 247: //QFileInfo::PermissionSpec
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new QFileInfo::PermissionSpec;
+		break;
+	      case Smoke::EnumDelete:
+		delete (QFileInfo::PermissionSpec*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(QFileInfo::PermissionSpec*)xdata = (QFileInfo::PermissionSpec)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(QFileInfo::PermissionSpec*)xdata;
+		break;
+	    }
+	    break;
+	}
+    }
     ~x_QFileInfo() { qt_Smoke->binding->deleted(112, (void*)this); }
 };
+void xenum_QFileInfo(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
+    x_QFileInfo::xenum_operation(xop, xtype, xdata, xvalue);
+}
 void xcall_QFileInfo(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QFileInfo *xself = (x_QFileInfo*)obj;
     switch(xi) {

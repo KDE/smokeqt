@@ -23,6 +23,13 @@ public:
 	const QSize& xret = this->QResizeEvent::oldSize();
 	x[0].s_class = (void*)&xret;
     }
+    static void x_3(Smoke::Stack x) {
+	// QResizeEvent(QResizeEvent&)
+	x_QResizeEvent* xret = new x_QResizeEvent(*(QResizeEvent *)x[1].s_class);
+	x[0].s_class = (void*)xret;
+    }
+    x_QResizeEvent(QResizeEvent& x1) : QResizeEvent(x1) {
+    }
     ~x_QResizeEvent() { qt_Smoke->binding->deleted(245, (void*)this); }
 };
 void xcall_QResizeEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
@@ -31,6 +38,7 @@ void xcall_QResizeEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 0: x_QResizeEvent::x_0(args);	break;
 	case 1: xself->x_1(args);	break;
 	case 2: xself->x_2(args);	break;
-	case 3: delete (QResizeEvent*)xself;	break;
+	case 3: x_QResizeEvent::x_3(args);	break;
+	case 4: delete (QResizeEvent*)xself;	break;
     }
 }

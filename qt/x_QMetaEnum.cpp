@@ -12,12 +12,20 @@ public:
     }
     x_QMetaEnum() : QMetaEnum() {
     }
+    static void x_1(Smoke::Stack x) {
+	// QMetaEnum(QMetaEnum&)
+	x_QMetaEnum* xret = new x_QMetaEnum(*(QMetaEnum *)x[1].s_class);
+	x[0].s_class = (void*)xret;
+    }
+    x_QMetaEnum(QMetaEnum& x1) : QMetaEnum(x1) {
+    }
     ~x_QMetaEnum() { qt_Smoke->binding->deleted(195, (void*)this); }
 };
 void xcall_QMetaEnum(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QMetaEnum *xself = (x_QMetaEnum*)obj;
     switch(xi) {
 	case 0: x_QMetaEnum::x_0(args);	break;
-	case 1: delete (QMetaEnum*)xself;	break;
+	case 1: x_QMetaEnum::x_1(args);	break;
+	case 2: delete (QMetaEnum*)xself;	break;
     }
 }

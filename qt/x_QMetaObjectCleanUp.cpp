@@ -17,6 +17,13 @@ public:
 	this->QMetaObjectCleanUp::setMetaObject(*(QMetaObject* *)x[1].s_voidp);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
+    static void x_2(Smoke::Stack x) {
+	// QMetaObjectCleanUp(QMetaObjectCleanUp&)
+	x_QMetaObjectCleanUp* xret = new x_QMetaObjectCleanUp(*(QMetaObjectCleanUp *)x[1].s_class);
+	x[0].s_class = (void*)xret;
+    }
+    x_QMetaObjectCleanUp(QMetaObjectCleanUp& x1) : QMetaObjectCleanUp(x1) {
+    }
     ~x_QMetaObjectCleanUp() { qt_Smoke->binding->deleted(197, (void*)this); }
 };
 void xcall_QMetaObjectCleanUp(Smoke::Index xi, void *obj, Smoke::Stack args) {
@@ -24,6 +31,7 @@ void xcall_QMetaObjectCleanUp(Smoke::Index xi, void *obj, Smoke::Stack args) {
     switch(xi) {
 	case 0: x_QMetaObjectCleanUp::x_0(args);	break;
 	case 1: xself->x_1(args);	break;
-	case 2: delete (QMetaObjectCleanUp*)xself;	break;
+	case 2: x_QMetaObjectCleanUp::x_2(args);	break;
+	case 3: delete (QMetaObjectCleanUp*)xself;	break;
     }
 }

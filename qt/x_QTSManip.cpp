@@ -17,6 +17,13 @@ public:
 	this->QTSManip::exec(*(QTextStream *)x[1].s_class);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
+    static void x_2(Smoke::Stack x) {
+	// QTSManip(QTSManip&)
+	x_QTSManip* xret = new x_QTSManip(*(QTSManip *)x[1].s_class);
+	x[0].s_class = (void*)xret;
+    }
+    x_QTSManip(QTSManip& x1) : QTSManip(x1) {
+    }
     ~x_QTSManip() { qt_Smoke->binding->deleted(306, (void*)this); }
 };
 void xcall_QTSManip(Smoke::Index xi, void *obj, Smoke::Stack args) {
@@ -24,6 +31,7 @@ void xcall_QTSManip(Smoke::Index xi, void *obj, Smoke::Stack args) {
     switch(xi) {
 	case 0: x_QTSManip::x_0(args);	break;
 	case 1: xself->x_1(args);	break;
-	case 2: delete (QTSManip*)xself;	break;
+	case 2: x_QTSManip::x_2(args);	break;
+	case 3: delete (QTSManip*)xself;	break;
     }
 }

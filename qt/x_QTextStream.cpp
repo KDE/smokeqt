@@ -360,8 +360,31 @@ public:
 	int xret = this->QTextStream::precision((int)x[1].s_int);
 	x[0].s_int = xret;
     }
+    static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
+	switch(xtype) {
+	  case 745: //QTextStream::Encoding
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new QTextStream::Encoding;
+		break;
+	      case Smoke::EnumDelete:
+		delete (QTextStream::Encoding*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(QTextStream::Encoding*)xdata = (QTextStream::Encoding)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(QTextStream::Encoding*)xdata;
+		break;
+	    }
+	    break;
+	}
+    }
     ~x_QTextStream() { qt_Smoke->binding->deleted(325, (void*)this); }
 };
+void xenum_QTextStream(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
+    x_QTextStream::xenum_operation(xop, xtype, xdata, xvalue);
+}
 void xcall_QTextStream(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QTextStream *xself = (x_QTextStream*)obj;
     switch(xi) {

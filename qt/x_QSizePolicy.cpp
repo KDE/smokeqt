@@ -164,8 +164,54 @@ public:
 	this->QSizePolicy::setVerStretch((uchar)x[1].s_uchar);
 	(void)x[0].s_int; // noop (for compiler warning)
     }
+    static void x_35(Smoke::Stack x) {
+	// QSizePolicy(QSizePolicy&)
+	x_QSizePolicy* xret = new x_QSizePolicy(*(QSizePolicy *)x[1].s_class);
+	x[0].s_class = (void*)xret;
+    }
+    x_QSizePolicy(QSizePolicy& x1) : QSizePolicy(x1) {
+    }
+    static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
+	switch(xtype) {
+	  case 577: //QSizePolicy::ExpandData
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new QSizePolicy::ExpandData;
+		break;
+	      case Smoke::EnumDelete:
+		delete (QSizePolicy::ExpandData*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(QSizePolicy::ExpandData*)xdata = (QSizePolicy::ExpandData)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(QSizePolicy::ExpandData*)xdata;
+		break;
+	    }
+	    break;
+	  case 578: //QSizePolicy::SizeType
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new QSizePolicy::SizeType;
+		break;
+	      case Smoke::EnumDelete:
+		delete (QSizePolicy::SizeType*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(QSizePolicy::SizeType*)xdata = (QSizePolicy::SizeType)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(QSizePolicy::SizeType*)xdata;
+		break;
+	    }
+	    break;
+	}
+    }
     ~x_QSizePolicy() { qt_Smoke->binding->deleted(262, (void*)this); }
 };
+void xenum_QSizePolicy(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
+    x_QSizePolicy::xenum_operation(xop, xtype, xdata, xvalue);
+}
 void xcall_QSizePolicy(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QSizePolicy *xself = (x_QSizePolicy*)obj;
     switch(xi) {
@@ -204,6 +250,7 @@ void xcall_QSizePolicy(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 32: xself->x_32(args);	break;
 	case 33: xself->x_33(args);	break;
 	case 34: xself->x_34(args);	break;
-	case 35: delete (QSizePolicy*)xself;	break;
+	case 35: x_QSizePolicy::x_35(args);	break;
+	case 36: delete (QSizePolicy*)xself;	break;
     }
 }

@@ -90,19 +90,26 @@ public:
 	int xret = this->QComboTableItem::rtti();
 	x[0].s_int = xret;
     }
+    static void x_15(Smoke::Stack x) {
+	// QComboTableItem(QComboTableItem&)
+	x_QComboTableItem* xret = new x_QComboTableItem(*(QComboTableItem *)x[1].s_class);
+	x[0].s_class = (void*)xret;
+    }
+    x_QComboTableItem(QComboTableItem& x1) : QComboTableItem(x1) {
+    }
     virtual int alignment() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(8453, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(10014, (void*)this, x)) return (int)x[0].s_int;
 	return this->QTableItem::alignment();
     }
     virtual QWidget* createEditor() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(1141, (void*)this, x)) return (QWidget*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(1364, (void*)this, x)) return (QWidget*)x[0].s_class;
 	return this->QComboTableItem::createEditor();
     }
     virtual QString key() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(8461, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(10022, (void*)this, x)) {
 	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;
@@ -116,12 +123,12 @@ public:
 	x[2].s_class = (void*)&x2;
 	x[3].s_class = (void*)&x3;
 	x[4].s_bool = x4;
-	if(qt_Smoke->binding->callMethod(1143, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(1366, (void*)this, x)) return;
 	this->QComboTableItem::paint(x1, x2, x3, x4);
     }
     virtual QPixmap pixmap() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(8448, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(10009, (void*)this, x)) {
 	    QPixmap *xptr = (QPixmap *)x[0].s_class;
 	    QPixmap xret(*xptr);
 	    delete xptr;
@@ -131,91 +138,91 @@ public:
     }
     virtual int rtti() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(1153, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(1376, (void*)this, x)) return (int)x[0].s_int;
 	return this->QComboTableItem::rtti();
     }
     virtual void setCol(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(8467, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10028, (void*)this, x)) return;
 	this->QTableItem::setCol(x1);
     }
     virtual void setContentFromEditor(QWidget* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(1142, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(1365, (void*)this, x)) return;
 	this->QComboTableItem::setContentFromEditor(x1);
     }
     virtual void setCurrentItem(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(1145, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(1368, (void*)this, x)) return;
 	this->QComboTableItem::setCurrentItem(x1);
     }
     virtual void setCurrentItem(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(1144, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(1367, (void*)this, x)) return;
 	this->QComboTableItem::setCurrentItem(x1);
     }
     virtual void setEditable(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(1150, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(1373, (void*)this, x)) return;
 	this->QComboTableItem::setEditable(x1);
     }
     virtual void setEnabled(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(8472, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10033, (void*)this, x)) return;
 	this->QTableItem::setEnabled(x1);
     }
     virtual void setPixmap(const QPixmap& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(8450, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10011, (void*)this, x)) return;
 	this->QTableItem::setPixmap(x1);
     }
     virtual void setReplaceable(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(8459, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10020, (void*)this, x)) return;
 	this->QTableItem::setReplaceable(x1);
     }
     virtual void setRow(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(8466, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10027, (void*)this, x)) return;
 	this->QTableItem::setRow(x1);
     }
     virtual void setSpan(int x1, int x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_int = x2;
-	if(qt_Smoke->binding->callMethod(8463, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10024, (void*)this, x)) return;
 	this->QTableItem::setSpan(x1, x2);
     }
     virtual void setStringList(const QStringList& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(1152, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(1375, (void*)this, x)) return;
 	this->QComboTableItem::setStringList(x1);
     }
     virtual void setText(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(8451, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10012, (void*)this, x)) return;
 	this->QTableItem::setText(x1);
     }
     virtual void setWordWrap(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(8454, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10015, (void*)this, x)) return;
 	this->QTableItem::setWordWrap(x1);
     }
     virtual QSize sizeHint() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(8462, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(10023, (void*)this, x)) {
 	    QSize *xptr = (QSize *)x[0].s_class;
 	    QSize xret(*xptr);
 	    delete xptr;
@@ -225,7 +232,7 @@ public:
     }
     virtual QString text() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(8449, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(10010, (void*)this, x)) {
 	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;
@@ -253,6 +260,7 @@ void xcall_QComboTableItem(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 12: xself->x_12(args);	break;
 	case 13: xself->x_13(args);	break;
 	case 14: xself->x_14(args);	break;
-	case 15: delete (QComboTableItem*)xself;	break;
+	case 15: x_QComboTableItem::x_15(args);	break;
+	case 16: delete (QComboTableItem*)xself;	break;
     }
 }

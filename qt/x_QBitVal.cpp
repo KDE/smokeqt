@@ -27,6 +27,13 @@ public:
 	QBitVal& xret = this->QBitVal::operator=((bool)x[1].s_bool);
 	x[0].s_class = (void*)&xret;
     }
+    static void x_4(Smoke::Stack x) {
+	// QBitVal(QBitVal&)
+	x_QBitVal* xret = new x_QBitVal(*(QBitVal *)x[1].s_class);
+	x[0].s_class = (void*)xret;
+    }
+    x_QBitVal(QBitVal& x1) : QBitVal(x1) {
+    }
     ~x_QBitVal() { qt_Smoke->binding->deleted(11, (void*)this); }
 };
 void xcall_QBitVal(Smoke::Index xi, void *obj, Smoke::Stack args) {
@@ -36,6 +43,7 @@ void xcall_QBitVal(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 1: xself->x_1(args);	break;
 	case 2: xself->x_2(args);	break;
 	case 3: xself->x_3(args);	break;
-	case 4: delete (QBitVal*)xself;	break;
+	case 4: x_QBitVal::x_4(args);	break;
+	case 5: delete (QBitVal*)xself;	break;
     }
 }

@@ -139,16 +139,23 @@ public:
 	x[0].s_bool = xret;
     }
     static void x_25(Smoke::Stack x) {
+	// QDateTime(QDateTime&)
+	x_QDateTime* xret = new x_QDateTime(*(QDateTime *)x[1].s_class);
+	x[0].s_class = (void*)xret;
+    }
+    x_QDateTime(QDateTime& x1) : QDateTime(x1) {
+    }
+    static void x_26(Smoke::Stack x) {
 	// currentDateTime()
 	QDateTime xret = QDateTime::currentDateTime();
 	x[0].s_class = (void*)new QDateTime(xret);
     }
-    static void x_26(Smoke::Stack x) {
+    static void x_27(Smoke::Stack x) {
 	// fromString(const QString&, Qt::DateFormat)
 	QDateTime xret = QDateTime::fromString(*(const QString *)x[1].s_voidp,(Qt::DateFormat)x[2].s_enum);
 	x[0].s_class = (void*)new QDateTime(xret);
     }
-    static void x_27(Smoke::Stack x) {
+    static void x_28(Smoke::Stack x) {
 	// fromString(const QString&)
 	QDateTime xret = QDateTime::fromString(*(const QString *)x[1].s_voidp);
 	x[0].s_class = (void*)new QDateTime(xret);
@@ -186,6 +193,7 @@ void xcall_QDateTime(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 25: x_QDateTime::x_25(args);	break;
 	case 26: x_QDateTime::x_26(args);	break;
 	case 27: x_QDateTime::x_27(args);	break;
-	case 28: delete (QDateTime*)xself;	break;
+	case 28: x_QDateTime::x_28(args);	break;
+	case 29: delete (QDateTime*)xself;	break;
     }
 }

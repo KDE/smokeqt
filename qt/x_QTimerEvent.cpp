@@ -17,6 +17,13 @@ public:
 	int xret = this->QTimerEvent::timerId();
 	x[0].s_int = xret;
     }
+    static void x_2(Smoke::Stack x) {
+	// QTimerEvent(QTimerEvent&)
+	x_QTimerEvent* xret = new x_QTimerEvent(*(QTimerEvent *)x[1].s_class);
+	x[0].s_class = (void*)xret;
+    }
+    x_QTimerEvent(QTimerEvent& x1) : QTimerEvent(x1) {
+    }
     ~x_QTimerEvent() { qt_Smoke->binding->deleted(330, (void*)this); }
 };
 void xcall_QTimerEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
@@ -24,6 +31,7 @@ void xcall_QTimerEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
     switch(xi) {
 	case 0: x_QTimerEvent::x_0(args);	break;
 	case 1: xself->x_1(args);	break;
-	case 2: delete (QTimerEvent*)xself;	break;
+	case 2: x_QTimerEvent::x_2(args);	break;
+	case 3: delete (QTimerEvent*)xself;	break;
     }
 }

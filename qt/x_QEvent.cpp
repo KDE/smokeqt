@@ -214,8 +214,38 @@ public:
 	bool xret = this->QEvent::spontaneous();
 	x[0].s_bool = xret;
     }
+    static void x_67(Smoke::Stack x) {
+	// QEvent(QEvent&)
+	x_QEvent* xret = new x_QEvent(*(QEvent *)x[1].s_class);
+	x[0].s_class = (void*)xret;
+    }
+    x_QEvent(QEvent& x1) : QEvent(x1) {
+    }
+    static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
+	switch(xtype) {
+	  case 236: //QEvent::Type
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new QEvent::Type;
+		break;
+	      case Smoke::EnumDelete:
+		delete (QEvent::Type*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(QEvent::Type*)xdata = (QEvent::Type)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(QEvent::Type*)xdata;
+		break;
+	    }
+	    break;
+	}
+    }
     ~x_QEvent() { qt_Smoke->binding->deleted(108, (void*)this); }
 };
+void xenum_QEvent(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
+    x_QEvent::xenum_operation(xop, xtype, xdata, xvalue);
+}
 void xcall_QEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QEvent *xself = (x_QEvent*)obj;
     switch(xi) {
@@ -286,6 +316,7 @@ void xcall_QEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 64: x_QEvent::x_64(args);	break;
 	case 65: xself->x_65(args);	break;
 	case 66: xself->x_66(args);	break;
-	case 67: delete (QEvent*)xself;	break;
+	case 67: x_QEvent::x_67(args);	break;
+	case 68: delete (QEvent*)xself;	break;
     }
 }

@@ -599,8 +599,47 @@ public:
 	QStringList xret = QImage::outputFormatList();
 	x[0].s_class = (void*)new QStringList(xret);
     }
+    static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
+	switch(xtype) {
+	  case 334: //QImage::Endian
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new QImage::Endian;
+		break;
+	      case Smoke::EnumDelete:
+		delete (QImage::Endian*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(QImage::Endian*)xdata = (QImage::Endian)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(QImage::Endian*)xdata;
+		break;
+	    }
+	    break;
+	  case 335: //QImage::ScaleMode
+	    switch(xop) {
+	      case Smoke::EnumNew:
+		xdata = (void*)new QImage::ScaleMode;
+		break;
+	      case Smoke::EnumDelete:
+		delete (QImage::ScaleMode*)xdata;
+		break;
+	      case Smoke::EnumFromLong:
+		*(QImage::ScaleMode*)xdata = (QImage::ScaleMode)xvalue;
+		break;
+	      case Smoke::EnumToLong:
+		xvalue = (long)*(QImage::ScaleMode*)xdata;
+		break;
+	    }
+	    break;
+	}
+    }
     ~x_QImage() { qt_Smoke->binding->deleted(154, (void*)this); }
 };
+void xenum_QImage(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
+    x_QImage::xenum_operation(xop, xtype, xdata, xvalue);
+}
 void xcall_QImage(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QImage *xself = (x_QImage*)obj;
     switch(xi) {
