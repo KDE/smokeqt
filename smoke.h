@@ -48,7 +48,9 @@ public:
 
     enum MethodFlags {
         mf_static = 0x01,
-        mf_const = 0x02
+        mf_const = 0x02,
+        mf_copyctor = 0x04,  // Copy constructor
+        mf_internal = 0x08   // For internal use only
     };
     /**
      * Describe one method of one class.
