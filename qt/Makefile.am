@@ -3,8 +3,10 @@ lib_LTLIBRARIES = libsmokeqt.la
 # set the include path for X, qt and KDE
 INCLUDES         = -I$(srcdir)/.. $(all_includes)
 
+EXTRA_DIST=generate.pl.in qtguess.pl.in qt_smoke.h Makefile.am
+
 # the library search path. 
-libsmokeqt_la_LDFLAGS = -version-info 3:0:2 -no-undefined $(all_libraries) $(GLINC) $(KDE_RPATH)
+libsmokeqt_la_LDFLAGS = -version-info 3:1:2 -no-undefined $(all_libraries) $(GLINC) $(KDE_RPATH)
 
 # the libraries to link against.
 libsmokeqt_la_LIBADD   = $(LIB_QT) $(GLLIB)

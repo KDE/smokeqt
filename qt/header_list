@@ -250,6 +250,7 @@ qsocknot.h
 qsortedlist.h
 qsound.h
 qspinbox.h
+qsplashscreen.h
 qsplitter.h
 qsqlcursor.h
 qsqldatabase.h
@@ -265,6 +266,7 @@ qsqlpropertymap.h
 qsqlquery.h
 qsqlrecord.h
 qsqlresult.h
+qsqlselectcursor.h
 qstack.h
 qstatusbar.h
 qstring.h
@@ -295,6 +297,7 @@ qtl.h
 qtmultilineedit.h
 qtoolbar.h
 qtoolbutton.h
+qtoolbox.h
 qtooltip.h
 qtranslator.h
 qtsciicodec.h
