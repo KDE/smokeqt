@@ -1,7 +1,7 @@
 lib_LTLIBRARIES = libsmokeqt.la
 
 # set the include path for X, qt and KDE
-INCLUDES         = -I.. $(all_includes)
+INCLUDES         = -I$(srcdir)/.. $(all_includes)
 
 # the library search path. 
 libsmokeqt_la_LDFLAGS = -version-info 1:0 -no-undefined $(all_libraries)
