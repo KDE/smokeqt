@@ -24,5 +24,6 @@ void xcall_QConnectionListIt(Smoke::Index xi, void *obj, Smoke::Stack args) {
     switch(xi) {
 	case 0: x_QConnectionListIt::x_0(args);	break;
 	case 1: xself->x_1(args);	break;
+	case 2: delete (QConnectionListIt*)xself;	break;
     }
 }

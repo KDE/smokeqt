@@ -115,5 +115,6 @@ void xcall_QContextMenuEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 15: xself->x_15(args);	break;
 	case 16: xself->x_16(args);	break;
 	case 17: xself->x_17(args);	break;
+	case 18: delete (QContextMenuEvent*)xself;	break;
     }
 }

@@ -3,6 +3,7 @@
 #include <qt_smoke.h>
 #include <qgdict.h>
 #include <qstring.h>
+#include <qptrcollection.h>
 
 class x_QStringBucket : public QStringBucket {
 public:
@@ -25,5 +26,6 @@ void xcall_QStringBucket(Smoke::Index xi, void *obj, Smoke::Stack args) {
     switch(xi) {
 	case 0: x_QStringBucket::x_0(args);	break;
 	case 1: xself->x_1(args);	break;
+	case 2: delete (QStringBucket*)xself;	break;
     }
 }

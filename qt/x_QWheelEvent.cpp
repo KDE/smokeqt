@@ -114,5 +114,6 @@ void xcall_QWheelEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 13: xself->x_13(args);	break;
 	case 14: xself->x_14(args);	break;
 	case 15: xself->x_15(args);	break;
+	case 16: delete (QWheelEvent*)xself;	break;
     }
 }

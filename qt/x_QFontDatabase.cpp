@@ -219,5 +219,6 @@ void xcall_QFontDatabase(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 31: x_QFontDatabase::x_31(args);	break;
 	case 32: x_QFontDatabase::x_32(args);	break;
 	case 33: x_QFontDatabase::x_33(args);	break;
+	case 34: delete (QFontDatabase*)xself;	break;
     }
 }

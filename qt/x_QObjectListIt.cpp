@@ -24,5 +24,6 @@ void xcall_QObjectListIt(Smoke::Index xi, void *obj, Smoke::Stack args) {
     switch(xi) {
 	case 0: x_QObjectListIt::x_0(args);	break;
 	case 1: xself->x_1(args);	break;
+	case 2: delete (QObjectListIt*)xself;	break;
     }
 }

@@ -98,5 +98,6 @@ void xcall_QMouseEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 11: xself->x_11(args);	break;
 	case 12: xself->x_12(args);	break;
 	case 13: xself->x_13(args);	break;
+	case 14: delete (QMouseEvent*)xself;	break;
     }
 }

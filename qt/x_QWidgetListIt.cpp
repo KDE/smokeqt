@@ -24,5 +24,6 @@ void xcall_QWidgetListIt(Smoke::Index xi, void *obj, Smoke::Stack args) {
     switch(xi) {
 	case 0: x_QWidgetListIt::x_0(args);	break;
 	case 1: xself->x_1(args);	break;
+	case 2: delete (QWidgetListIt*)xself;	break;
     }
 }

@@ -2,6 +2,7 @@
 #include <smoke.h>
 #include <qt_smoke.h>
 #include <qgdict.h>
+#include <qptrcollection.h>
 
 class x_QBaseBucket : public QBaseBucket {
 public:
@@ -41,5 +42,6 @@ void xcall_QBaseBucket(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 2: xself->x_2(args);	break;
 	case 3: xself->x_3(args);	break;
 	case 4: x_QBaseBucket::x_4(args);	break;
+	case 5: delete (QBaseBucket*)xself;	break;
     }
 }

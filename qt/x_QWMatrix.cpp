@@ -200,5 +200,6 @@ void xcall_QWMatrix(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 28: xself->x_28(args);	break;
 	case 29: xself->x_29(args);	break;
 	case 30: xself->x_30(args);	break;
+	case 31: delete (QWMatrix*)xself;	break;
     }
 }

@@ -3,15 +3,21 @@
 #include <qt_smoke.h>
 #include <qwidget.h>
 
-class x_QWExtra {
-private:
-    QWExtra *xthis;
+class x_QWExtra : public QWExtra {
 public:
-    x_QWExtra(void *x) : xthis((QWExtra*)x) {}
+    static void x_0(Smoke::Stack x) {
+	// QWExtra()
+	x_QWExtra* xret = new x_QWExtra();
+	x[0].s_class = (void*)xret;
+    }
+    x_QWExtra() : QWExtra() {
+    }
     ~x_QWExtra() {}
 };
 void xcall_QWExtra(Smoke::Index xi, void *obj, Smoke::Stack args) {
-    x_QWExtra xtmp(obj), *xself = &xtmp;
+    x_QWExtra *xself = (x_QWExtra*)obj;
     switch(xi) {
+	case 0: x_QWExtra::x_0(args);	break;
+	case 1: delete (QWExtra*)xself;	break;
     }
 }

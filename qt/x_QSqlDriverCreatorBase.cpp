@@ -3,15 +3,27 @@
 #include <qt_smoke.h>
 #include <qsqldatabase.h>
 
-class x_QSqlDriverCreatorBase {
-private:
-    QSqlDriverCreatorBase *xthis;
+class x_QSqlDriverCreatorBase : public QSqlDriverCreatorBase {
 public:
-    x_QSqlDriverCreatorBase(void *x) : xthis((QSqlDriverCreatorBase*)x) {}
+    static void x_0(Smoke::Stack x) {
+	// QSqlDriverCreatorBase()
+	x_QSqlDriverCreatorBase* xret = new x_QSqlDriverCreatorBase();
+	x[0].s_class = (void*)xret;
+    }
+    x_QSqlDriverCreatorBase() : QSqlDriverCreatorBase() {
+    }
+    virtual QSqlDriver* createObject() {
+	Smoke::StackItem x[1];
+	qt_Smoke->callMethod(7414, (void*)this, x, true /*pure virtual*/);
+	return (QSqlDriver*)x[0].s_class;
+	// ABSTRACT
+    }
     ~x_QSqlDriverCreatorBase() {}
 };
 void xcall_QSqlDriverCreatorBase(Smoke::Index xi, void *obj, Smoke::Stack args) {
-    x_QSqlDriverCreatorBase xtmp(obj), *xself = &xtmp;
+    x_QSqlDriverCreatorBase *xself = (x_QSqlDriverCreatorBase*)obj;
     switch(xi) {
+	case 0: x_QSqlDriverCreatorBase::x_0(args);	break;
+	case 1: delete (QSqlDriverCreatorBase*)xself;	break;
     }
 }

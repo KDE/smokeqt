@@ -3,36 +3,72 @@
 #include <qt_smoke.h>
 #include <qasyncio.h>
 
-class x_QDataSource {
-private:
-    QDataSource *xthis;
+class x_QDataSource : public QDataSource {
 public:
-    x_QDataSource(void *x) : xthis((QDataSource*)x) {}
     void x_0(Smoke::Stack x) {
 	// maybeReady()
-	xthis->QDataSource::maybeReady();
+	this->QDataSource::maybeReady();
     }
     void x_1(Smoke::Stack x) const {
 	// rewindable()
-	bool xret = xthis->QDataSource::rewindable();
+	bool xret = this->QDataSource::rewindable();
 	x[0].s_bool = (bool)xret;
     }
     void x_2(Smoke::Stack x) {
 	// enableRewind(bool)
-	xthis->QDataSource::enableRewind((bool)x[1].s_bool);
+	this->QDataSource::enableRewind((bool)x[1].s_bool);
     }
     void x_3(Smoke::Stack x) {
 	// rewind()
-	xthis->QDataSource::rewind();
+	this->QDataSource::rewind();
+    }
+    static void x_4(Smoke::Stack x) {
+	// QDataSource()
+	x_QDataSource* xret = new x_QDataSource();
+	x[0].s_class = (void*)xret;
+    }
+    x_QDataSource() : QDataSource() {
+    }
+    virtual void enableRewind(bool x1) {
+	Smoke::StackItem x[2];
+	x[1].s_bool = (bool)x1;
+	if(qt_Smoke->callMethod(1332, (void*)this, x)) return;
+	this->QDataSource::enableRewind(x1);
+    }
+    virtual int readyToSend() {
+	Smoke::StackItem x[1];
+	qt_Smoke->callMethod(1328, (void*)this, x, true /*pure virtual*/);
+	return (int)x[0].s_int;
+	// ABSTRACT
+    }
+    virtual void rewind() {
+	Smoke::StackItem x[1];
+	if(qt_Smoke->callMethod(1333, (void*)this, x)) return;
+	this->QDataSource::rewind();
+    }
+    virtual bool rewindable() const {
+	Smoke::StackItem x[1];
+	if(qt_Smoke->callMethod(1331, (void*)this, x)) return (bool)x[0].s_bool;
+	return this->QDataSource::rewindable();
+    }
+    virtual void sendTo(QDataSink* x1, int x2) {
+	Smoke::StackItem x[3];
+	x[1].s_class = (void*)x1;
+	x[2].s_int = (int)x2;
+	qt_Smoke->callMethod(1329, (void*)this, x, true /*pure virtual*/);
+	return;
+	// ABSTRACT
     }
     ~x_QDataSource() {}
 };
 void xcall_QDataSource(Smoke::Index xi, void *obj, Smoke::Stack args) {
-    x_QDataSource xtmp(obj), *xself = &xtmp;
+    x_QDataSource *xself = (x_QDataSource*)obj;
     switch(xi) {
 	case 0: xself->x_0(args);	break;
 	case 1: xself->x_1(args);	break;
 	case 2: xself->x_2(args);	break;
 	case 3: xself->x_3(args);	break;
+	case 4: x_QDataSource::x_4(args);	break;
+	case 5: delete (QDataSource*)xself;	break;
     }
 }

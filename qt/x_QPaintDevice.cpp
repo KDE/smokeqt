@@ -218,14 +218,14 @@ public:
 	x[1].s_int = (int)x1;
 	x[2].s_class = (void*)x2;
 	x[3].s_class = (void*)x3;
-	if(qt_Smoke->callMethod(5573, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->callMethod(5566, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QPaintDevice::cmd(x1, x2, x3);
     }
     virtual int fontInf(QFont* x1, int x2) const {
 	Smoke::StackItem x[3];
 	x[1].s_class = (void*)x1;
 	x[2].s_int = (int)x2;
-	if(qt_Smoke->callMethod(5578, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->callMethod(5571, (void*)this, x)) return (int)x[0].s_int;
 	return this->QPaintDevice::fontInf(x1, x2);
     }
     virtual int fontMet(QFont* x1, int x2, const char* x3, int x4) const {
@@ -234,24 +234,24 @@ public:
 	x[2].s_int = (int)x2;
 	x[3].s_class = (void*)x3;
 	x[4].s_int = (int)x4;
-	if(qt_Smoke->callMethod(5575, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->callMethod(5568, (void*)this, x)) return (int)x[0].s_int;
 	return this->QPaintDevice::fontMet(x1, x2, x3, x4);
     }
     virtual int metric(int x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_int = (int)x1;
-	if(qt_Smoke->callMethod(5574, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->callMethod(5567, (void*)this, x)) return (int)x[0].s_int;
 	return this->QPaintDevice::metric(x1);
     }
     virtual int resolution() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(5571, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->callMethod(5564, (void*)this, x)) return (int)x[0].s_int;
 	return this->QPaintDevice::resolution();
     }
     virtual void setResolution(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = (int)x1;
-	if(qt_Smoke->callMethod(5570, (void*)this, x)) return;
+	if(qt_Smoke->callMethod(5563, (void*)this, x)) return;
 	this->QPaintDevice::setResolution(x1);
     }
     ~x_QPaintDevice() {}

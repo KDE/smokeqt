@@ -14,13 +14,13 @@ public:
     }
     virtual int columnNumber() {
 	Smoke::StackItem x[1];
-	qt_Smoke->callMethod(10071, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->callMethod(10072, (void*)this, x, true /*pure virtual*/);
 	return (int)x[0].s_int;
 	// ABSTRACT
     }
     virtual int lineNumber() {
 	Smoke::StackItem x[1];
-	qt_Smoke->callMethod(10072, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->callMethod(10073, (void*)this, x, true /*pure virtual*/);
 	return (int)x[0].s_int;
 	// ABSTRACT
     }

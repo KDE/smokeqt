@@ -78,5 +78,6 @@ void xcall_QUuid(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 7: xself->x_7(args);	break;
 	case 8: xself->x_8(args);	break;
 	case 9: xself->x_9(args);	break;
+	case 10: delete (QUuid*)xself;	break;
     }
 }

@@ -176,5 +176,6 @@ void xcall_QStyleOption(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 21: xself->x_21(args);	break;
 	case 22: xself->x_22(args);	break;
 	case 23: xself->x_23(args);	break;
+	case 24: delete (QStyleOption*)xself;	break;
     }
 }

@@ -2,6 +2,7 @@
 #include <smoke.h>
 #include <qt_smoke.h>
 #include <qglist.h>
+#include <qptrcollection.h>
 
 class x_QGListIterator : public QGListIterator {
 public:

@@ -54,5 +54,6 @@ void xcall_QSql(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 7: x_QSql::x_7(args);	break;
 	case 8: x_QSql::x_8(args);	break;
 	case 9: x_QSql::x_9(args);	break;
+	case 10: delete (QSql*)xself;	break;
     }
 }

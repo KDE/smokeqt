@@ -217,5 +217,6 @@ void xcall_QTime(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 30: x_QTime::x_30(args);	break;
 	case 31: x_QTime::x_31(args);	break;
 	case 32: x_QTime::x_32(args);	break;
+	case 33: delete (QTime*)xself;	break;
     }
 }

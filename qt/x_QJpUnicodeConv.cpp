@@ -194,56 +194,56 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_uint = (uint)x1;
 	x[2].s_uint = (uint)x2;
-	if(qt_Smoke->callMethod(3926, (void*)this, x)) return (uint)x[0].s_uint;
+	if(qt_Smoke->callMethod(3916, (void*)this, x)) return (uint)x[0].s_uint;
 	return this->QJpUnicodeConv::asciiToUnicode(x1, x2);
     }
     virtual uint jisx0201LatinToUnicode(uint x1, uint x2) const {
 	Smoke::StackItem x[3];
 	x[1].s_uint = (uint)x1;
 	x[2].s_uint = (uint)x2;
-	if(qt_Smoke->callMethod(3928, (void*)this, x)) return (uint)x[0].s_uint;
+	if(qt_Smoke->callMethod(3918, (void*)this, x)) return (uint)x[0].s_uint;
 	return this->QJpUnicodeConv::jisx0201LatinToUnicode(x1, x2);
     }
     virtual uint jisx0208ToUnicode(uint x1, uint x2) const {
 	Smoke::StackItem x[3];
 	x[1].s_uint = (uint)x1;
 	x[2].s_uint = (uint)x2;
-	if(qt_Smoke->callMethod(3930, (void*)this, x)) return (uint)x[0].s_uint;
+	if(qt_Smoke->callMethod(3920, (void*)this, x)) return (uint)x[0].s_uint;
 	return this->QJpUnicodeConv::jisx0208ToUnicode(x1, x2);
     }
     virtual uint jisx0212ToUnicode(uint x1, uint x2) const {
 	Smoke::StackItem x[3];
 	x[1].s_uint = (uint)x1;
 	x[2].s_uint = (uint)x2;
-	if(qt_Smoke->callMethod(3931, (void*)this, x)) return (uint)x[0].s_uint;
+	if(qt_Smoke->callMethod(3921, (void*)this, x)) return (uint)x[0].s_uint;
 	return this->QJpUnicodeConv::jisx0212ToUnicode(x1, x2);
     }
     virtual uint unicodeToAscii(uint x1, uint x2) const {
 	Smoke::StackItem x[3];
 	x[1].s_uint = (uint)x1;
 	x[2].s_uint = (uint)x2;
-	if(qt_Smoke->callMethod(3938, (void*)this, x)) return (uint)x[0].s_uint;
+	if(qt_Smoke->callMethod(3928, (void*)this, x)) return (uint)x[0].s_uint;
 	return this->QJpUnicodeConv::unicodeToAscii(x1, x2);
     }
     virtual uint unicodeToJisx0201Latin(uint x1, uint x2) const {
 	Smoke::StackItem x[3];
 	x[1].s_uint = (uint)x1;
 	x[2].s_uint = (uint)x2;
-	if(qt_Smoke->callMethod(3940, (void*)this, x)) return (uint)x[0].s_uint;
+	if(qt_Smoke->callMethod(3930, (void*)this, x)) return (uint)x[0].s_uint;
 	return this->QJpUnicodeConv::unicodeToJisx0201Latin(x1, x2);
     }
     virtual uint unicodeToJisx0208(uint x1, uint x2) const {
 	Smoke::StackItem x[3];
 	x[1].s_uint = (uint)x1;
 	x[2].s_uint = (uint)x2;
-	if(qt_Smoke->callMethod(3942, (void*)this, x)) return (uint)x[0].s_uint;
+	if(qt_Smoke->callMethod(3932, (void*)this, x)) return (uint)x[0].s_uint;
 	return this->QJpUnicodeConv::unicodeToJisx0208(x1, x2);
     }
     virtual uint unicodeToJisx0212(uint x1, uint x2) const {
 	Smoke::StackItem x[3];
 	x[1].s_uint = (uint)x1;
 	x[2].s_uint = (uint)x2;
-	if(qt_Smoke->callMethod(3943, (void*)this, x)) return (uint)x[0].s_uint;
+	if(qt_Smoke->callMethod(3933, (void*)this, x)) return (uint)x[0].s_uint;
 	return this->QJpUnicodeConv::unicodeToJisx0212(x1, x2);
     }
     ~x_QJpUnicodeConv() {}
@@ -292,5 +292,6 @@ void xcall_QJpUnicodeConv(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 38: xself->x_38(args);	break;
 	case 39: x_QJpUnicodeConv::x_39(args);	break;
 	case 40: x_QJpUnicodeConv::x_40(args);	break;
+	case 41: delete (QJpUnicodeConv*)xself;	break;
     }
 }

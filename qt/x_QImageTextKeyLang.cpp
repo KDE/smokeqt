@@ -38,5 +38,6 @@ void xcall_QImageTextKeyLang(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 1: x_QImageTextKeyLang::x_1(args);	break;
 	case 2: xself->x_2(args);	break;
 	case 3: xself->x_3(args);	break;
+	case 4: delete (QImageTextKeyLang*)xself;	break;
     }
 }

@@ -43,5 +43,6 @@ void xcall_QDragEnterEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QDragEnterEvent *xself = (x_QDragEnterEvent*)obj;
     switch(xi) {
 	case 0: x_QDragEnterEvent::x_0(args);	break;
+	case 1: delete (QDragEnterEvent*)xself;	break;
     }
 }

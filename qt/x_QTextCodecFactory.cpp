@@ -4,17 +4,21 @@
 #include <qtextcodecfactory.h>
 #include <qstring.h>
 
-class x_QTextCodecFactory {
-private:
-    QTextCodecFactory *xthis;
+class x_QTextCodecFactory : public QTextCodecFactory {
 public:
-    x_QTextCodecFactory(void *x) : xthis((QTextCodecFactory*)x) {}
     static void x_0(Smoke::Stack x) {
+	// QTextCodecFactory()
+	x_QTextCodecFactory* xret = new x_QTextCodecFactory();
+	x[0].s_class = (void*)xret;
+    }
+    x_QTextCodecFactory() : QTextCodecFactory() {
+    }
+    static void x_1(Smoke::Stack x) {
 	// createForName(const QString&)
 	QTextCodec* xret = QTextCodecFactory::createForName(*(const QString *)x[1].s_class);
 	x[0].s_class = (void*)xret;
     }
-    static void x_1(Smoke::Stack x) {
+    static void x_2(Smoke::Stack x) {
 	// createForMib(int)
 	QTextCodec* xret = QTextCodecFactory::createForMib((int)x[1].s_int);
 	x[0].s_class = (void*)xret;
@@ -22,9 +26,11 @@ public:
     ~x_QTextCodecFactory() {}
 };
 void xcall_QTextCodecFactory(Smoke::Index xi, void *obj, Smoke::Stack args) {
-    x_QTextCodecFactory xtmp(obj), *xself = &xtmp;
+    x_QTextCodecFactory *xself = (x_QTextCodecFactory*)obj;
     switch(xi) {
 	case 0: x_QTextCodecFactory::x_0(args);	break;
 	case 1: x_QTextCodecFactory::x_1(args);	break;
+	case 2: x_QTextCodecFactory::x_2(args);	break;
+	case 3: delete (QTextCodecFactory*)xself;	break;
     }
 }

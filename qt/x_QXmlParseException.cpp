@@ -89,5 +89,6 @@ void xcall_QXmlParseException(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 8: xself->x_8(args);	break;
 	case 9: xself->x_9(args);	break;
 	case 10: xself->x_10(args);	break;
+	case 11: delete (QXmlParseException*)xself;	break;
     }
 }

@@ -31,5 +31,6 @@ void xcall_QMoveEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 0: x_QMoveEvent::x_0(args);	break;
 	case 1: xself->x_1(args);	break;
 	case 2: xself->x_2(args);	break;
+	case 3: delete (QMoveEvent*)xself;	break;
     }
 }

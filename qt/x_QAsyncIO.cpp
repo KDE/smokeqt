@@ -3,20 +3,31 @@
 #include <qt_smoke.h>
 #include <qasyncio.h>
 
-class x_QAsyncIO {
-private:
-    QAsyncIO *xthis;
+class x_QAsyncIO : public QAsyncIO {
 public:
-    x_QAsyncIO(void *x) : xthis((QAsyncIO*)x) {}
     void x_0(Smoke::Stack x) {
 	// connect(QObject*, const char*)
-	xthis->QAsyncIO::connect((QObject*)x[1].s_class,(const char*)x[2].s_class);
+	this->QAsyncIO::connect((QObject*)x[1].s_class,(const char*)x[2].s_class);
+    }
+    static void x_1(Smoke::Stack x) {
+	// QAsyncIO()
+	x_QAsyncIO* xret = new x_QAsyncIO();
+	x[0].s_class = (void*)xret;
+    }
+    x_QAsyncIO() : QAsyncIO() {
+    }
+    void x_2(Smoke::Stack x) {
+	// ready()
+	this->QAsyncIO::ready();
     }
     ~x_QAsyncIO() {}
 };
 void xcall_QAsyncIO(Smoke::Index xi, void *obj, Smoke::Stack args) {
-    x_QAsyncIO xtmp(obj), *xself = &xtmp;
+    x_QAsyncIO *xself = (x_QAsyncIO*)obj;
     switch(xi) {
 	case 0: xself->x_0(args);	break;
+	case 1: x_QAsyncIO::x_1(args);	break;
+	case 2: xself->x_2(args);	break;
+	case 3: delete (QAsyncIO*)xself;	break;
     }
 }

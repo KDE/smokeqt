@@ -2,6 +2,7 @@
 #include <smoke.h>
 #include <qt_smoke.h>
 #include <qgdict.h>
+#include <qptrcollection.h>
 
 class x_QIntBucket : public QIntBucket {
 public:
@@ -24,5 +25,6 @@ void xcall_QIntBucket(Smoke::Index xi, void *obj, Smoke::Stack args) {
     switch(xi) {
 	case 0: x_QIntBucket::x_0(args);	break;
 	case 1: xself->x_1(args);	break;
+	case 2: delete (QIntBucket*)xself;	break;
     }
 }

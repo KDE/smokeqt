@@ -62,5 +62,6 @@ void xcall_QPaintEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 4: xself->x_4(args);	break;
 	case 5: xself->x_5(args);	break;
 	case 6: xself->x_6(args);	break;
+	case 7: delete (QPaintEvent*)xself;	break;
     }
 }

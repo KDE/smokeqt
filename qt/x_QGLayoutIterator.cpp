@@ -3,15 +3,39 @@
 #include <qt_smoke.h>
 #include <qlayout.h>
 
-class x_QGLayoutIterator {
-private:
-    QGLayoutIterator *xthis;
+class x_QGLayoutIterator : public QGLayoutIterator {
 public:
-    x_QGLayoutIterator(void *x) : xthis((QGLayoutIterator*)x) {}
+    static void x_0(Smoke::Stack x) {
+	// QGLayoutIterator()
+	x_QGLayoutIterator* xret = new x_QGLayoutIterator();
+	x[0].s_class = (void*)xret;
+    }
+    x_QGLayoutIterator() : QGLayoutIterator() {
+    }
+    virtual QLayoutItem* current() {
+	Smoke::StackItem x[1];
+	qt_Smoke->callMethod(3062, (void*)this, x, true /*pure virtual*/);
+	return (QLayoutItem*)x[0].s_class;
+	// ABSTRACT
+    }
+    virtual QLayoutItem* next() {
+	Smoke::StackItem x[1];
+	qt_Smoke->callMethod(3061, (void*)this, x, true /*pure virtual*/);
+	return (QLayoutItem*)x[0].s_class;
+	// ABSTRACT
+    }
+    virtual QLayoutItem* takeCurrent() {
+	Smoke::StackItem x[1];
+	qt_Smoke->callMethod(3063, (void*)this, x, true /*pure virtual*/);
+	return (QLayoutItem*)x[0].s_class;
+	// ABSTRACT
+    }
     ~x_QGLayoutIterator() {}
 };
 void xcall_QGLayoutIterator(Smoke::Index xi, void *obj, Smoke::Stack args) {
-    x_QGLayoutIterator xtmp(obj), *xself = &xtmp;
+    x_QGLayoutIterator *xself = (x_QGLayoutIterator*)obj;
     switch(xi) {
+	case 0: x_QGLayoutIterator::x_0(args);	break;
+	case 1: delete (QGLayoutIterator*)xself;	break;
     }
 }

@@ -124,5 +124,6 @@ void xcall_QStringList(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 14: x_QStringList::x_14(args);	break;
 	case 15: x_QStringList::x_15(args);	break;
 	case 16: x_QStringList::x_16(args);	break;
+	case 17: delete (QStringList*)xself;	break;
     }
 }

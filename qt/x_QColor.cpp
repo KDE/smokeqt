@@ -267,5 +267,6 @@ void xcall_QColor(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 40: x_QColor::x_40(args);	break;
 	case 41: x_QColor::x_41(args);	break;
 	case 42: x_QColor::x_42(args);	break;
+	case 43: delete (QColor*)xself;	break;
     }
 }

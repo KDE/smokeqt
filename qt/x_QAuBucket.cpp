@@ -3,15 +3,21 @@
 #include <qt_smoke.h>
 #include <qsound.h>
 
-class x_QAuBucket {
-private:
-    QAuBucket *xthis;
+class x_QAuBucket : public QAuBucket {
 public:
-    x_QAuBucket(void *x) : xthis((QAuBucket*)x) {}
+    static void x_0(Smoke::Stack x) {
+	// QAuBucket()
+	x_QAuBucket* xret = new x_QAuBucket();
+	x[0].s_class = (void*)xret;
+    }
+    x_QAuBucket() : QAuBucket() {
+    }
     ~x_QAuBucket() {}
 };
 void xcall_QAuBucket(Smoke::Index xi, void *obj, Smoke::Stack args) {
-    x_QAuBucket xtmp(obj), *xself = &xtmp;
+    x_QAuBucket *xself = (x_QAuBucket*)obj;
     switch(xi) {
+	case 0: x_QAuBucket::x_0(args);	break;
+	case 1: delete (QAuBucket*)xself;	break;
     }
 }

@@ -3,11 +3,8 @@
 #include <qt_smoke.h>
 #include <qnamespace.h>
 
-class x_QInternal {
-private:
-    QInternal *xthis;
+class x_QInternal : public QInternal {
 public:
-    x_QInternal(void *x) : xthis((QInternal*)x) {}
     static void x_0(Smoke::Stack x) {
 	x[0].s_enum = (long)QInternal::UndefinedDevice;
     }
@@ -35,10 +32,17 @@ public:
     static void x_8(Smoke::Stack x) {
 	x[0].s_enum = (long)QInternal::CompatibilityMode;
     }
+    static void x_9(Smoke::Stack x) {
+	// QInternal()
+	x_QInternal* xret = new x_QInternal();
+	x[0].s_class = (void*)xret;
+    }
+    x_QInternal() : QInternal() {
+    }
     ~x_QInternal() {}
 };
 void xcall_QInternal(Smoke::Index xi, void *obj, Smoke::Stack args) {
-    x_QInternal xtmp(obj), *xself = &xtmp;
+    x_QInternal *xself = (x_QInternal*)obj;
     switch(xi) {
 	case 0: x_QInternal::x_0(args);	break;
 	case 1: x_QInternal::x_1(args);	break;
@@ -49,5 +53,7 @@ void xcall_QInternal(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 6: x_QInternal::x_6(args);	break;
 	case 7: x_QInternal::x_7(args);	break;
 	case 8: x_QInternal::x_8(args);	break;
+	case 9: x_QInternal::x_9(args);	break;
+	case 10: delete (QInternal*)xself;	break;
     }
 }

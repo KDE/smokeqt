@@ -3,6 +3,7 @@
 #include <qt_smoke.h>
 #include <qgcache.h>
 #include <qstring.h>
+#include <qptrcollection.h>
 
 class x_QGCacheIterator : public QGCacheIterator {
 public:

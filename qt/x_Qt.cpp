@@ -3,11 +3,8 @@
 #include <qt_smoke.h>
 #include <qnamespace.h>
 
-class x_Qt {
-private:
-    Qt *xthis;
+class x_Qt : public Qt {
 public:
-    x_Qt(void *x) : xthis((Qt*)x) {}
     static void x_0(Smoke::Stack x) {
 	x[0].s_enum = (long)Qt::NoButton;
     }
@@ -1502,10 +1499,17 @@ public:
     static void x_497(Smoke::Stack x) {
 	x[0].s_enum = (long)Qt::ExactMatch;
     }
+    static void x_498(Smoke::Stack x) {
+	// Qt()
+	x_Qt* xret = new x_Qt();
+	x[0].s_class = (void*)xret;
+    }
+    x_Qt() : Qt() {
+    }
     ~x_Qt() {}
 };
 void xcall_Qt(Smoke::Index xi, void *obj, Smoke::Stack args) {
-    x_Qt xtmp(obj), *xself = &xtmp;
+    x_Qt *xself = (x_Qt*)obj;
     switch(xi) {
 	case 0: x_Qt::x_0(args);	break;
 	case 1: x_Qt::x_1(args);	break;
@@ -2005,5 +2009,7 @@ void xcall_Qt(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 495: x_Qt::x_495(args);	break;
 	case 496: x_Qt::x_496(args);	break;
 	case 497: x_Qt::x_497(args);	break;
+	case 498: x_Qt::x_498(args);	break;
+	case 499: delete (Qt*)xself;	break;
     }
 }

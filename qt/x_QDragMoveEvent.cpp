@@ -83,5 +83,6 @@ void xcall_QDragMoveEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 5: xself->x_5(args);	break;
 	case 6: xself->x_6(args);	break;
 	case 7: xself->x_7(args);	break;
+	case 8: delete (QDragMoveEvent*)xself;	break;
     }
 }

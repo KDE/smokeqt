@@ -47,5 +47,6 @@ void xcall_QIMEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 3: xself->x_3(args);	break;
 	case 4: xself->x_4(args);	break;
 	case 5: xself->x_5(args);	break;
+	case 6: delete (QIMEvent*)xself;	break;
     }
 }

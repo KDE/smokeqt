@@ -132,5 +132,6 @@ void xcall_QSize(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 17: xself->x_17(args);	break;
 	case 18: xself->x_18(args);	break;
 	case 19: xself->x_19(args);	break;
+	case 20: delete (QSize*)xself;	break;
     }
 }

@@ -36,5 +36,6 @@ void xcall_QChildEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 1: xself->x_1(args);	break;
 	case 2: xself->x_2(args);	break;
 	case 3: xself->x_3(args);	break;
+	case 4: delete (QChildEvent*)xself;	break;
     }
 }

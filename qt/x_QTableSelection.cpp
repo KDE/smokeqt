@@ -82,5 +82,6 @@ void xcall_QTableSelection(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 9: xself->x_9(args);	break;
 	case 10: xself->x_10(args);	break;
 	case 11: xself->x_11(args);	break;
+	case 12: delete (QTableSelection*)xself;	break;
     }
 }

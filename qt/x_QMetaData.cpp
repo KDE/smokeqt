@@ -3,11 +3,8 @@
 #include <qt_smoke.h>
 #include <qmetaobject.h>
 
-class x_QMetaData {
-private:
-    QMetaData *xthis;
+class x_QMetaData : public QMetaData {
 public:
-    x_QMetaData(void *x) : xthis((QMetaData*)x) {}
     static void x_0(Smoke::Stack x) {
 	x[0].s_enum = (long)QMetaData::Private;
     }
@@ -17,13 +14,22 @@ public:
     static void x_2(Smoke::Stack x) {
 	x[0].s_enum = (long)QMetaData::Public;
     }
+    static void x_3(Smoke::Stack x) {
+	// QMetaData()
+	x_QMetaData* xret = new x_QMetaData();
+	x[0].s_class = (void*)xret;
+    }
+    x_QMetaData() : QMetaData() {
+    }
     ~x_QMetaData() {}
 };
 void xcall_QMetaData(Smoke::Index xi, void *obj, Smoke::Stack args) {
-    x_QMetaData xtmp(obj), *xself = &xtmp;
+    x_QMetaData *xself = (x_QMetaData*)obj;
     switch(xi) {
 	case 0: x_QMetaData::x_0(args);	break;
 	case 1: x_QMetaData::x_1(args);	break;
 	case 2: x_QMetaData::x_2(args);	break;
+	case 3: x_QMetaData::x_3(args);	break;
+	case 4: delete (QMetaData*)xself;	break;
     }
 }

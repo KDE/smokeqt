@@ -243,5 +243,6 @@ void xcall_QDate(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 35: x_QDate::x_35(args);	break;
 	case 36: x_QDate::x_36(args);	break;
 	case 37: x_QDate::x_37(args);	break;
+	case 38: delete (QDate*)xself;	break;
     }
 }

@@ -30,7 +30,8 @@ my %excludes = (
     'qnp.h' => 1, # NSPlugin
     'qttableview.h' => 1,  # Not in Qt anymore...
     'qtmultilineedit.h' => 1,  # Not in Qt anymore...
-    'qwidgetfactory.h' => 1  # Just an interface
+    'qwidgetfactory.h' => 1,  # Just an interface
+    'qsharedmemory.h' => 1 # "not part of the Qt API" they say
 );
 
 # List Qt headers, and exclude the ones listed above
@@ -59,8 +60,6 @@ exit $exit if ($exit);
 system "diff -u $finaloutdir/smokedata.cpp $outdir/smokedata.cpp > $outdir/smokedata.cpp.diff";
 
 # Copy changed or new files to finaloutdir
-### What this doesn't notice is deleted files.
-### TODO (readdir in finaloutdir...) when I have a testcase ;)
 opendir (OUT, $outdir) or die "Couldn't opendir $outdir";
 foreach $filename (readdir(OUT)) {
     next if ( -d "$outdir/$filename" ); # only files, not dirs
@@ -76,6 +75,19 @@ foreach $filename (readdir(OUT)) {
     }
 }
 closedir OUT;
+
+# Check for deleted files and warn
+my $deleted = 0; 
+opendir(FINALOUT, $finaloutdir) or die "Couldn't opendir $finaloutdir";
+foreach $filename (readdir(FINALOUT)) {
+    next if ( -d "$finaloutdir/$filename" ); # only files, not dirs
+    if ( $filename =~ /.cpp$/ && ! ($filename =~ /_la_closure.cpp/) && ! -f "$outdir/$filename" ) {
+      print STDERR "$filename appears to be deleted.   cvs remove -f $filename\n";
+      $deleted = 1;
+    }
+}
+closedir FINALOUT;
+print STDERR "Run ./generate_makefile_am.pl after removing files.\n" if ($deleted);
 
 # Delete outdir
 system "rm -rf $outdir";

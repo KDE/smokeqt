@@ -3,15 +3,27 @@
 #include <qt_smoke.h>
 #include <qnetworkprotocol.h>
 
-class x_QNetworkProtocolFactoryBase {
-private:
-    QNetworkProtocolFactoryBase *xthis;
+class x_QNetworkProtocolFactoryBase : public QNetworkProtocolFactoryBase {
 public:
-    x_QNetworkProtocolFactoryBase(void *x) : xthis((QNetworkProtocolFactoryBase*)x) {}
+    static void x_0(Smoke::Stack x) {
+	// QNetworkProtocolFactoryBase()
+	x_QNetworkProtocolFactoryBase* xret = new x_QNetworkProtocolFactoryBase();
+	x[0].s_class = (void*)xret;
+    }
+    x_QNetworkProtocolFactoryBase() : QNetworkProtocolFactoryBase() {
+    }
+    virtual QNetworkProtocol* createObject() {
+	Smoke::StackItem x[1];
+	qt_Smoke->callMethod(5395, (void*)this, x, true /*pure virtual*/);
+	return (QNetworkProtocol*)x[0].s_class;
+	// ABSTRACT
+    }
     ~x_QNetworkProtocolFactoryBase() {}
 };
 void xcall_QNetworkProtocolFactoryBase(Smoke::Index xi, void *obj, Smoke::Stack args) {
-    x_QNetworkProtocolFactoryBase xtmp(obj), *xself = &xtmp;
+    x_QNetworkProtocolFactoryBase *xself = (x_QNetworkProtocolFactoryBase*)obj;
     switch(xi) {
+	case 0: x_QNetworkProtocolFactoryBase::x_0(args);	break;
+	case 1: delete (QNetworkProtocolFactoryBase*)xself;	break;
     }
 }

@@ -3,15 +3,21 @@
 #include <qt_smoke.h>
 #include <qmetaobject.h>
 
-class x_QMetaEnum {
-private:
-    QMetaEnum *xthis;
+class x_QMetaEnum : public QMetaEnum {
 public:
-    x_QMetaEnum(void *x) : xthis((QMetaEnum*)x) {}
+    static void x_0(Smoke::Stack x) {
+	// QMetaEnum()
+	x_QMetaEnum* xret = new x_QMetaEnum();
+	x[0].s_class = (void*)xret;
+    }
+    x_QMetaEnum() : QMetaEnum() {
+    }
     ~x_QMetaEnum() {}
 };
 void xcall_QMetaEnum(Smoke::Index xi, void *obj, Smoke::Stack args) {
-    x_QMetaEnum xtmp(obj), *xself = &xtmp;
+    x_QMetaEnum *xself = (x_QMetaEnum*)obj;
     switch(xi) {
+	case 0: x_QMetaEnum::x_0(args);	break;
+	case 1: delete (QMetaEnum*)xself;	break;
     }
 }

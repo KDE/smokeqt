@@ -163,7 +163,7 @@ public:
 	x[2].s_class = (void*)&x2;
 	x[3].s_class = (void*)&x3;
 	x[4].s_class = (void*)&x4;
-	if(qt_Smoke->callMethod(3445, (void*)this, x)) return;
+	if(qt_Smoke->callMethod(3432, (void*)this, x)) return;
 	this->QIconSet::setPixmap(x1, x2, x3, x4);
     }
     virtual void setPixmap(const QString& x1, QIconSet::Size x2, QIconSet::Mode x3, QIconSet::State x4) {
@@ -172,7 +172,7 @@ public:
 	x[2].s_class = (void*)&x2;
 	x[3].s_class = (void*)&x3;
 	x[4].s_class = (void*)&x4;
-	if(qt_Smoke->callMethod(3448, (void*)this, x)) return;
+	if(qt_Smoke->callMethod(3435, (void*)this, x)) return;
 	this->QIconSet::setPixmap(x1, x2, x3, x4);
     }
     ~x_QIconSet() {}

@@ -16,13 +16,13 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_class = (void*)x1;
 	x[2].s_int = (int)x2;
-	qt_Smoke->callMethod(3820, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->callMethod(3809, (void*)this, x, true /*pure virtual*/);
 	return (QImageFormat*)x[0].s_class;
 	// ABSTRACT
     }
     virtual const char* formatName() const {
 	Smoke::StackItem x[1];
-	qt_Smoke->callMethod(3821, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->callMethod(3810, (void*)this, x, true /*pure virtual*/);
 	return (const char*)x[0].s_class;
 	// ABSTRACT
     }

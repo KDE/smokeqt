@@ -54,7 +54,7 @@ public:
     }
     virtual bool unload() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(4147, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->callMethod(4137, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QLibrary::unload();
     }
     ~x_QLibrary() {}

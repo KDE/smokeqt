@@ -118,5 +118,6 @@ void xcall_QPaintDeviceMetrics(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 18: xself->x_18(args);	break;
 	case 19: xself->x_19(args);	break;
 	case 20: xself->x_20(args);	break;
+	case 21: delete (QPaintDeviceMetrics*)xself;	break;
     }
 }

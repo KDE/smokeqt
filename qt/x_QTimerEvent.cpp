@@ -24,5 +24,6 @@ void xcall_QTimerEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
     switch(xi) {
 	case 0: x_QTimerEvent::x_0(args);	break;
 	case 1: xself->x_1(args);	break;
+	case 2: delete (QTimerEvent*)xself;	break;
     }
 }

@@ -355,5 +355,6 @@ void xcall_QRect(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 56: xself->x_56(args);	break;
 	case 57: xself->x_57(args);	break;
 	case 58: xself->x_58(args);	break;
+	case 59: delete (QRect*)xself;	break;
     }
 }

@@ -23,5 +23,6 @@ void xcall_QTSManip(Smoke::Index xi, void *obj, Smoke::Stack args) {
     switch(xi) {
 	case 0: x_QTSManip::x_0(args);	break;
 	case 1: xself->x_1(args);	break;
+	case 2: delete (QTSManip*)xself;	break;
     }
 }

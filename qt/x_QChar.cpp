@@ -628,5 +628,6 @@ void xcall_QChar(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 128: xself->x_128(args);	break;
 	case 129: xself->x_129(args);	break;
 	case 130: x_QChar::x_130(args);	break;
+	case 131: delete (QChar*)xself;	break;
     }
 }

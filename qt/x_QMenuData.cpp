@@ -453,42 +453,42 @@ public:
     virtual void activateItemAt(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = (int)x1;
-	if(qt_Smoke->callMethod(4935, (void*)this, x)) return;
+	if(qt_Smoke->callMethod(4924, (void*)this, x)) return;
 	this->QMenuData::activateItemAt(x1);
     }
     virtual void menuContentsChanged() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(4936, (void*)this, x)) return;
+	if(qt_Smoke->callMethod(4925, (void*)this, x)) return;
 	this->QMenuData::menuContentsChanged();
     }
     virtual void menuDelPopup(QPopupMenu* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->callMethod(4939, (void*)this, x)) return;
+	if(qt_Smoke->callMethod(4928, (void*)this, x)) return;
 	this->QMenuData::menuDelPopup(x1);
     }
     virtual void menuInsPopup(QPopupMenu* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->callMethod(4938, (void*)this, x)) return;
+	if(qt_Smoke->callMethod(4927, (void*)this, x)) return;
 	this->QMenuData::menuInsPopup(x1);
     }
     virtual void menuStateChanged() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(4937, (void*)this, x)) return;
+	if(qt_Smoke->callMethod(4926, (void*)this, x)) return;
 	this->QMenuData::menuStateChanged();
     }
     virtual void setId(int x1, int x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = (int)x1;
 	x[2].s_int = (int)x2;
-	if(qt_Smoke->callMethod(4926, (void*)this, x)) return;
+	if(qt_Smoke->callMethod(4915, (void*)this, x)) return;
 	this->QMenuData::setId(x1, x2);
     }
     virtual void updateItem(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = (int)x1;
-	if(qt_Smoke->callMethod(4923, (void*)this, x)) return;
+	if(qt_Smoke->callMethod(4912, (void*)this, x)) return;
 	this->QMenuData::updateItem(x1);
     }
     ~x_QMenuData() {}

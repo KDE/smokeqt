@@ -18,5 +18,6 @@ void xcall_QDragLeaveEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QDragLeaveEvent *xself = (x_QDragLeaveEvent*)obj;
     switch(xi) {
 	case 0: x_QDragLeaveEvent::x_0(args);	break;
+	case 1: delete (QDragLeaveEvent*)xself;	break;
     }
 }

@@ -3,6 +3,7 @@
 #include <qt_smoke.h>
 #include <qgdict.h>
 #include <qstring.h>
+#include <qptrcollection.h>
 
 class x_QGDictIterator : public QGDictIterator {
 public:

@@ -199,5 +199,6 @@ void xcall_QSizePolicy(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 32: xself->x_32(args);	break;
 	case 33: xself->x_33(args);	break;
 	case 34: xself->x_34(args);	break;
+	case 35: delete (QSizePolicy*)xself;	break;
     }
 }

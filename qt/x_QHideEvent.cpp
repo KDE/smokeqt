@@ -18,5 +18,6 @@ void xcall_QHideEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QHideEvent *xself = (x_QHideEvent*)obj;
     switch(xi) {
 	case 0: x_QHideEvent::x_0(args);	break;
+	case 1: delete (QHideEvent*)xself;	break;
     }
 }

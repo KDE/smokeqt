@@ -4,25 +4,31 @@
 #include <qpainter.h>
 #include <qcanvas.h>
 
-class x_QCanvasItemList {
-private:
-    QCanvasItemList *xthis;
+class x_QCanvasItemList : public QCanvasItemList {
 public:
-    x_QCanvasItemList(void *x) : xthis((QCanvasItemList*)x) {}
     void x_0(Smoke::Stack x) {
 	// sort()
-	xthis->QCanvasItemList::sort();
+	this->QCanvasItemList::sort();
     }
     void x_1(Smoke::Stack x) {
 	// drawUnique(QPainter&)
-	xthis->QCanvasItemList::drawUnique(*(QPainter *)x[1].s_class);
+	this->QCanvasItemList::drawUnique(*(QPainter *)x[1].s_class);
+    }
+    static void x_2(Smoke::Stack x) {
+	// QCanvasItemList()
+	x_QCanvasItemList* xret = new x_QCanvasItemList();
+	x[0].s_class = (void*)xret;
+    }
+    x_QCanvasItemList() : QCanvasItemList() {
     }
     ~x_QCanvasItemList() {}
 };
 void xcall_QCanvasItemList(Smoke::Index xi, void *obj, Smoke::Stack args) {
-    x_QCanvasItemList xtmp(obj), *xself = &xtmp;
+    x_QCanvasItemList *xself = (x_QCanvasItemList*)obj;
     switch(xi) {
 	case 0: xself->x_0(args);	break;
 	case 1: xself->x_1(args);	break;
+	case 2: x_QCanvasItemList::x_2(args);	break;
+	case 3: delete (QCanvasItemList*)xself;	break;
     }
 }

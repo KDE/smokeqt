@@ -29,7 +29,7 @@ public:
     virtual void addOperation(QNetworkOperation* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->callMethod(5376, (void*)this, x)) return;
+	if(qt_Smoke->callMethod(5368, (void*)this, x)) return;
 	this->QNetworkProtocol::addOperation(x1);
     }
     virtual bool checkConnectArgs(const char* x1, const QObject* x2, const char* x3) {
@@ -37,115 +37,115 @@ public:
 	x[1].s_class = (void*)x1;
 	x[2].s_class = (void*)x2;
 	x[3].s_class = (void*)x3;
-	if(qt_Smoke->callMethod(5477, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->callMethod(5470, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QObject::checkConnectArgs(x1, x2, x3);
     }
     virtual bool checkConnection(QNetworkOperation* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->callMethod(5402, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->callMethod(5394, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QNetworkProtocol::checkConnection(x1);
     }
     virtual void childEvent(QChildEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->callMethod(5473, (void*)this, x)) return;
+	if(qt_Smoke->callMethod(5466, (void*)this, x)) return;
 	this->QObject::childEvent(x1);
     }
     virtual void clearOperationQueue() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(5379, (void*)this, x)) return;
+	if(qt_Smoke->callMethod(5371, (void*)this, x)) return;
 	this->QNetworkProtocol::clearOperationQueue();
     }
     virtual void connectNotify(const char* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->callMethod(5475, (void*)this, x)) return;
+	if(qt_Smoke->callMethod(5468, (void*)this, x)) return;
 	this->QObject::connectNotify(x1);
     }
     virtual void customEvent(QCustomEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->callMethod(5474, (void*)this, x)) return;
+	if(qt_Smoke->callMethod(5467, (void*)this, x)) return;
 	this->QObject::customEvent(x1);
     }
     virtual void disconnectNotify(const char* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->callMethod(5476, (void*)this, x)) return;
+	if(qt_Smoke->callMethod(5469, (void*)this, x)) return;
 	this->QObject::disconnectNotify(x1);
     }
     virtual bool event(QEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->callMethod(5412, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->callMethod(5405, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QObject::event(x1);
     }
     virtual bool eventFilter(QObject* x1, QEvent* x2) {
 	Smoke::StackItem x[3];
 	x[1].s_class = (void*)x1;
 	x[2].s_class = (void*)x2;
-	if(qt_Smoke->callMethod(5413, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->callMethod(5406, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QObject::eventFilter(x1, x2);
     }
     virtual void insertChild(QObject* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->callMethod(5435, (void*)this, x)) return;
+	if(qt_Smoke->callMethod(5428, (void*)this, x)) return;
 	this->QObject::insertChild(x1);
     }
     virtual void operationGet(QNetworkOperation* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->callMethod(3361, (void*)this, x)) return;
+	if(qt_Smoke->callMethod(3348, (void*)this, x)) return;
 	this->QHttp::operationGet(x1);
     }
     virtual void operationListChildren(QNetworkOperation* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->callMethod(5395, (void*)this, x)) return;
+	if(qt_Smoke->callMethod(5387, (void*)this, x)) return;
 	this->QNetworkProtocol::operationListChildren(x1);
     }
     virtual void operationMkDir(QNetworkOperation* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->callMethod(5396, (void*)this, x)) return;
+	if(qt_Smoke->callMethod(5388, (void*)this, x)) return;
 	this->QNetworkProtocol::operationMkDir(x1);
     }
     virtual void operationPut(QNetworkOperation* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->callMethod(3362, (void*)this, x)) return;
+	if(qt_Smoke->callMethod(3349, (void*)this, x)) return;
 	this->QHttp::operationPut(x1);
     }
     virtual void operationPutChunk(QNetworkOperation* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->callMethod(5401, (void*)this, x)) return;
+	if(qt_Smoke->callMethod(5393, (void*)this, x)) return;
 	this->QNetworkProtocol::operationPutChunk(x1);
     }
     virtual void operationRemove(QNetworkOperation* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->callMethod(5397, (void*)this, x)) return;
+	if(qt_Smoke->callMethod(5389, (void*)this, x)) return;
 	this->QNetworkProtocol::operationRemove(x1);
     }
     virtual void operationRename(QNetworkOperation* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->callMethod(5398, (void*)this, x)) return;
+	if(qt_Smoke->callMethod(5390, (void*)this, x)) return;
 	this->QNetworkProtocol::operationRename(x1);
     }
     virtual void processOperation(QNetworkOperation* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->callMethod(5394, (void*)this, x)) return;
+	if(qt_Smoke->callMethod(5386, (void*)this, x)) return;
 	this->QNetworkProtocol::processOperation(x1);
     }
     virtual QVariant property(const char* x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->callMethod(5449, (void*)this, x)) {
+	if(qt_Smoke->callMethod(5442, (void*)this, x)) {
 	    QVariant *xptr = (QVariant *)x[0].s_class;
 	    QVariant xret(*xptr);
 	    delete xptr;
@@ -156,49 +156,49 @@ public:
     virtual void removeChild(QObject* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->callMethod(5436, (void*)this, x)) return;
+	if(qt_Smoke->callMethod(5429, (void*)this, x)) return;
 	this->QObject::removeChild(x1);
     }
     virtual void setAutoDelete(bool x1, int x2) {
 	Smoke::StackItem x[3];
 	x[1].s_bool = (bool)x1;
 	x[2].s_int = (int)x2;
-	if(qt_Smoke->callMethod(5372, (void*)this, x)) return;
+	if(qt_Smoke->callMethod(5364, (void*)this, x)) return;
 	this->QNetworkProtocol::setAutoDelete(x1, x2);
     }
     virtual void setName(const char* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->callMethod(5418, (void*)this, x)) return;
+	if(qt_Smoke->callMethod(5411, (void*)this, x)) return;
 	this->QObject::setName(x1);
     }
     virtual bool setProperty(const char* x1, const QVariant& x2) {
 	Smoke::StackItem x[3];
 	x[1].s_class = (void*)x1;
 	x[2].s_class = (void*)&x2;
-	if(qt_Smoke->callMethod(5448, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->callMethod(5441, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QObject::setProperty(x1, x2);
     }
     virtual void setUrl(QUrlOperator* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->callMethod(5371, (void*)this, x)) return;
+	if(qt_Smoke->callMethod(5363, (void*)this, x)) return;
 	this->QNetworkProtocol::setUrl(x1);
     }
     virtual void stop() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(5380, (void*)this, x)) return;
+	if(qt_Smoke->callMethod(5372, (void*)this, x)) return;
 	this->QNetworkProtocol::stop();
     }
     virtual int supportedOperations() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(3360, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->callMethod(3347, (void*)this, x)) return (int)x[0].s_int;
 	return this->QHttp::supportedOperations();
     }
     virtual void timerEvent(QTimerEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->callMethod(5472, (void*)this, x)) return;
+	if(qt_Smoke->callMethod(5465, (void*)this, x)) return;
 	this->QObject::timerEvent(x1);
     }
     ~x_QHttp() {}

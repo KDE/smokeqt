@@ -52,5 +52,6 @@ void xcall_QDns__Server(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 2: x_QDns__Server::x_2(args);	break;
 	case 3: x_QDns__Server::x_3(args);	break;
 	case 4: x_QDns__Server::x_4(args);	break;
+	case 5: delete (QDns::Server*)xself;	break;
     }
 }

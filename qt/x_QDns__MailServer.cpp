@@ -36,5 +36,6 @@ void xcall_QDns__MailServer(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 0: x_QDns__MailServer::x_0(args);	break;
 	case 1: x_QDns__MailServer::x_1(args);	break;
 	case 2: x_QDns__MailServer::x_2(args);	break;
+	case 3: delete (QDns::MailServer*)xself;	break;
     }
 }

@@ -27,5 +27,6 @@ void xcall_QTextOStream(Smoke::Index xi, void *obj, Smoke::Stack args) {
     switch(xi) {
 	case 0: x_QTextOStream::x_0(args);	break;
 	case 1: x_QTextOStream::x_1(args);	break;
+	case 2: delete (QTextOStream*)xself;	break;
     }
 }

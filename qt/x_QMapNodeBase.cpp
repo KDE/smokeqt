@@ -3,11 +3,8 @@
 #include <qt_smoke.h>
 #include <qmap.h>
 
-class x_QMapNodeBase {
-private:
-    QMapNodeBase *xthis;
+class x_QMapNodeBase : public QMapNodeBase {
 public:
-    x_QMapNodeBase(void *x) : xthis((QMapNodeBase*)x) {}
     static void x_0(Smoke::Stack x) {
 	x[0].s_enum = (long)QMapNodeBase::Red;
     }
@@ -16,22 +13,31 @@ public:
     }
     void x_2(Smoke::Stack x) {
 	// minimum()
-	QMapNodeBase* xret = xthis->QMapNodeBase::minimum();
+	QMapNodeBase* xret = this->QMapNodeBase::minimum();
 	x[0].s_class = (void*)xret;
     }
     void x_3(Smoke::Stack x) {
 	// maximum()
-	QMapNodeBase* xret = xthis->QMapNodeBase::maximum();
+	QMapNodeBase* xret = this->QMapNodeBase::maximum();
 	x[0].s_class = (void*)xret;
+    }
+    static void x_4(Smoke::Stack x) {
+	// QMapNodeBase()
+	x_QMapNodeBase* xret = new x_QMapNodeBase();
+	x[0].s_class = (void*)xret;
+    }
+    x_QMapNodeBase() : QMapNodeBase() {
     }
     ~x_QMapNodeBase() {}
 };
 void xcall_QMapNodeBase(Smoke::Index xi, void *obj, Smoke::Stack args) {
-    x_QMapNodeBase xtmp(obj), *xself = &xtmp;
+    x_QMapNodeBase *xself = (x_QMapNodeBase*)obj;
     switch(xi) {
 	case 0: x_QMapNodeBase::x_0(args);	break;
 	case 1: x_QMapNodeBase::x_1(args);	break;
 	case 2: xself->x_2(args);	break;
 	case 3: xself->x_3(args);	break;
+	case 4: x_QMapNodeBase::x_4(args);	break;
+	case 5: delete (QMapNodeBase*)xself;	break;
     }
 }

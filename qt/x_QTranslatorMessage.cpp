@@ -170,5 +170,6 @@ void xcall_QTranslatorMessage(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 24: xself->x_24(args);	break;
 	case 25: xself->x_25(args);	break;
 	case 26: xself->x_26(args);	break;
+	case 27: delete (QTranslatorMessage*)xself;	break;
     }
 }

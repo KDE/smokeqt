@@ -92,7 +92,7 @@ public:
     virtual QVariant data(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = (int)x1;
-	qt_Smoke->callMethod(7651, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->callMethod(7638, (void*)this, x, true /*pure virtual*/);
 	QVariant *xptr = (QVariant *)x[0].s_class;
 	QVariant xret(*xptr);
 	delete xptr;
@@ -102,91 +102,91 @@ public:
     virtual bool fetch(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = (int)x1;
-	qt_Smoke->callMethod(7654, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->callMethod(7641, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
     virtual bool fetchFirst() {
 	Smoke::StackItem x[1];
-	qt_Smoke->callMethod(7657, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->callMethod(7644, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
     virtual bool fetchLast() {
 	Smoke::StackItem x[1];
-	qt_Smoke->callMethod(7658, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->callMethod(7645, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
     virtual bool fetchNext() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(7655, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->callMethod(7642, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QSqlResult::fetchNext();
     }
     virtual bool fetchPrev() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->callMethod(7656, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->callMethod(7643, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QSqlResult::fetchPrev();
     }
     virtual bool isNull(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = (int)x1;
-	qt_Smoke->callMethod(7652, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->callMethod(7639, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
     virtual int numRowsAffected() {
 	Smoke::StackItem x[1];
-	qt_Smoke->callMethod(7660, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->callMethod(7647, (void*)this, x, true /*pure virtual*/);
 	return (int)x[0].s_int;
 	// ABSTRACT
     }
     virtual bool reset(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	qt_Smoke->callMethod(7653, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->callMethod(7640, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
     virtual void setActive(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = (bool)x1;
-	if(qt_Smoke->callMethod(7646, (void*)this, x)) return;
+	if(qt_Smoke->callMethod(7633, (void*)this, x)) return;
 	this->QSqlResult::setActive(x1);
     }
     virtual void setAt(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = (int)x1;
-	if(qt_Smoke->callMethod(7645, (void*)this, x)) return;
+	if(qt_Smoke->callMethod(7632, (void*)this, x)) return;
 	this->QSqlResult::setAt(x1);
     }
     virtual void setForwardOnly(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = (bool)x1;
-	if(qt_Smoke->callMethod(7650, (void*)this, x)) return;
+	if(qt_Smoke->callMethod(7637, (void*)this, x)) return;
 	this->QSqlResult::setForwardOnly(x1);
     }
     virtual void setLastError(const QSqlError& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->callMethod(7647, (void*)this, x)) return;
+	if(qt_Smoke->callMethod(7634, (void*)this, x)) return;
 	this->QSqlResult::setLastError(x1);
     }
     virtual void setQuery(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->callMethod(7648, (void*)this, x)) return;
+	if(qt_Smoke->callMethod(7635, (void*)this, x)) return;
 	this->QSqlResult::setQuery(x1);
     }
     virtual void setSelect(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = (bool)x1;
-	if(qt_Smoke->callMethod(7649, (void*)this, x)) return;
+	if(qt_Smoke->callMethod(7636, (void*)this, x)) return;
 	this->QSqlResult::setSelect(x1);
     }
     virtual int size() {
 	Smoke::StackItem x[1];
-	qt_Smoke->callMethod(7659, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->callMethod(7646, (void*)this, x, true /*pure virtual*/);
 	return (int)x[0].s_int;
 	// ABSTRACT
     }

@@ -2,6 +2,7 @@
 #include <smoke.h>
 #include <qt_smoke.h>
 #include <qgdict.h>
+#include <qptrcollection.h>
 
 class x_QPtrBucket : public QPtrBucket {
 public:
@@ -24,5 +25,6 @@ void xcall_QPtrBucket(Smoke::Index xi, void *obj, Smoke::Stack args) {
     switch(xi) {
 	case 0: x_QPtrBucket::x_0(args);	break;
 	case 1: xself->x_1(args);	break;
+	case 2: delete (QPtrBucket*)xself;	break;
     }
 }

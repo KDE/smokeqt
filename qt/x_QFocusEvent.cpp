@@ -74,5 +74,6 @@ void xcall_QFocusEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 10: x_QFocusEvent::x_10(args);	break;
 	case 11: x_QFocusEvent::x_11(args);	break;
 	case 12: x_QFocusEvent::x_12(args);	break;
+	case 13: delete (QFocusEvent*)xself;	break;
     }
 }
