@@ -155,7 +155,11 @@ public:
 	x[0].s_enum = (long)Qt::WState_Reserved1;
     }
     static void x_49(Smoke::Stack x) {
-	x[0].s_enum = (long)Qt::WState_Reserved2;
+#if QT_VERSION < 0x030200
+	x[0].s_enum = (long) Qt::WState_Reserved2;
+#else
+	x[0].s_enum = (long) Qt::WState_OwnSizePolicy;
+#endif
     }
     static void x_50(Smoke::Stack x) {
 	x[0].s_enum = (long)Qt::WState_CreatedHidden;

@@ -143,14 +143,22 @@ public:
 	x_QHBox* xret = new x_QHBox((bool)x[1].s_bool,(QWidget*)x[2].s_class);
 	x[0].s_class = (void*)xret;
     }
+#if QT_VERSION < 0x030200
     x_QHBox(bool x1, QWidget* x2) : QHBox(x1, x2) {
+#else
+    x_QHBox(bool x1, QWidget* x2) : QHBox(x1, x2, 0) { 
+#endif
     }
     static void x_22(Smoke::Stack x) {
 	// QHBox(bool)
 	x_QHBox* xret = new x_QHBox((bool)x[1].s_bool);
 	x[0].s_class = (void*)xret;
     }
+#if QT_VERSION < 0x030200
     x_QHBox(bool x1) : QHBox(x1) {
+#else
+    x_QHBox(bool x1) : QHBox(x1, 0, 0) {
+#endif
     }
     void x_23(Smoke::Stack x) {
 	// frameChanged()

@@ -233,25 +233,56 @@ public:
 	x[0].s_enum = (long)QFont::NoScript;
     }
     static void x_75(Smoke::Stack x) {
+#if QT_VERSION < 0x030200
 	x[0].s_enum = (long)QFont::HanX11;
+#else
+        x[0].s_enum = 0L;
+#endif
     }
     static void x_76(Smoke::Stack x) {
-	x[0].s_enum = (long)QFont::LatinBasic;
+#if QT_VERSION < 0x030200
+        x[0].s_enum = (long)QFont::LatinBasic;
+#else
+        x[0].s_enum = 0L;
+#endif
+
     }
     static void x_77(Smoke::Stack x) {
-	x[0].s_enum = (long)QFont::LatinExtendedA_2;
+#if QT_VERSION < 0x030200
+        x[0].s_enum = (long)QFont::LatinExtendedA_2;
+#else
+        x[0].s_enum = 0L;
+#endif
+
     }
     static void x_78(Smoke::Stack x) {
-	x[0].s_enum = (long)QFont::LatinExtendedA_3;
+#if QT_VERSION < 0x030200
+        x[0].s_enum = (long)QFont::LatinExtendedA_3;
+#else
+        x[0].s_enum = 0L;
+#endif
+
     }
     static void x_79(Smoke::Stack x) {
-	x[0].s_enum = (long)QFont::LatinExtendedA_4;
+#if QT_VERSION < 0x030200
+        x[0].s_enum = (long)QFont::LatinExtendedA_4;
+#else
+        x[0].s_enum = 0L;
+#endif
     }
     static void x_80(Smoke::Stack x) {
-	x[0].s_enum = (long)QFont::LatinExtendedA_14;
+#if QT_VERSION < 0x030200
+        x[0].s_enum = (long)QFont::LatinExtendedA_14;
+#else
+        x[0].s_enum = 0L;
+#endif
     }
     static void x_81(Smoke::Stack x) {
-	x[0].s_enum = (long)QFont::LatinExtendedA_15;
+#if QT_VERSION < 0x030200
+        x[0].s_enum = (long)QFont::LatinExtendedA_15;
+#else
+        x[0].s_enum = 0L;
+#endif
     }
     static void x_82(Smoke::Stack x) {
 	x[0].s_enum = (long)QFont::KatakanaHalfWidth;
