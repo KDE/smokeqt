@@ -16,6 +16,7 @@ public:
     typedef void (*ClassFn)(Index method, void* obj, Stack args); // was Stack * (DF)
     typedef void* (*CastFn)(void* obj, Index from, Index to);
     typedef void (*DestructorCallbackFn)(void* obj);
+    typedef bool (*CallMethodFn)(Smoke*, Index method, void* obj, Stack args, bool isAbstract);
 
     /**
      * Describe one class.
@@ -172,6 +173,7 @@ public:
 
     // Not passed to constructor
     DestructorCallbackFn destructorCallbackFn;
+    CallMethodFn callMethodFn;
 
     /**
      * Constructor
@@ -195,6 +197,7 @@ public:
 		ambiguousMethodList(_ambiguousMethodList),
 		castFn(_castFn),
 
+		callMethodFn(0),
 		destructorCallbackFn(0)
 		{}
 
@@ -293,8 +296,11 @@ public:
      * Returns true when method has been overridden and its replacement
      * called, false when original method should be called as normal.
      */
-    bool callMethod(Index method, void* obj, Stack args, bool isAbstract = false);
-
+    inline bool callMethod(Index method, void* obj, Stack args, bool isAbstract = false) {
+	if(callMethodFn)
+	    return (*callMethodFn)(this, method, obj, args, isAbstract);
+	return false;
+    }
 };
 
 #endif
