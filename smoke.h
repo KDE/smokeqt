@@ -201,6 +201,11 @@ public:
 		destructorCallbackFn(0)
 		{}
 
+    inline void *cast(void *ptr, Index from, Index to) {
+	if(!castFn) return ptr;
+	return (*castFn)(ptr, from, to);
+    }
+
     inline int leg(Index a, Index b) {  // ala Perl's <=>
 	if(a == b) return 0;
 	return (a > b) ? 1 : -1;
