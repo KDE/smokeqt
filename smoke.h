@@ -109,7 +109,7 @@ public:
     union StackItem {
 	void* s_voidp;
 	bool s_bool;
-	char s_char;
+	signed char s_char;
 	unsigned char s_uchar;
 	short s_short;
 	unsigned short s_ushort;
