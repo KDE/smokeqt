@@ -262,9 +262,6 @@ public:
     static void x_84(Smoke::Stack x) {
 	x[0].s_enum = (long)Qt::WWinOwnDC;
     }
-    static void x_85(Smoke::Stack x) {
-	x[0].s_enum = (long)Qt::WMacSheet;
-    }
     static void x_86(Smoke::Stack x) {
 	x[0].s_enum = (long)Qt::WGroupLeader;
     }
@@ -2380,7 +2377,6 @@ void xcall_Qt(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 82: x_Qt::x_82(args);	break;
 	case 83: x_Qt::x_83(args);	break;
 	case 84: x_Qt::x_84(args);	break;
-	case 85: x_Qt::x_85(args);	break;
 	case 86: x_Qt::x_86(args);	break;
 	case 87: x_Qt::x_87(args);	break;
 	case 88: x_Qt::x_88(args);	break;

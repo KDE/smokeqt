@@ -179,11 +179,6 @@ public:
 	this->QDateTimeEdit::resizeEvent((QResizeEvent*)x[1].s_class);
 	(void)x; // noop (for compiler warning)
     }
-    void x_29(Smoke::Stack x) {
-	// layoutEditors()
-	this->QDateTimeEdit::layoutEditors();
-	(void)x; // noop (for compiler warning)
-    }
     void x_30(Smoke::Stack x) {
 	// newValue(const QDate&)
 	this->QDateTimeEdit::newValue(*(const QDate *)x[1].s_class);
@@ -947,7 +942,6 @@ void xcall_QDateTimeEdit(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 26: x_QDateTimeEdit::x_26(args);	break;
 	case 27: xself->x_27(args);	break;
 	case 28: xself->x_28(args);	break;
-	case 29: xself->x_29(args);	break;
 	case 30: xself->x_30(args);	break;
 	case 31: xself->x_31(args);	break;
 	case 32: delete (QDateTimeEdit*)xself;	break;
