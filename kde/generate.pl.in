@@ -161,7 +161,9 @@ foreach $filename (readdir(QT)) {
 closedir QT;
 
 my @kdeheaders = ();
+$kdeprefix = "@KDE_PREFIX@";
 $kdeinc= '@kde_includes@';
+$kdeinc =~ s/\${prefix}/$kdeprefix/; # Remove ${prefix} in src != build
 -d $kdeinc or die "Couldn't process $kdeinc: $!\n";
 
 find(

@@ -7,6 +7,8 @@ fi
 
 AC_SUBST(KDE_HAVE_GL)   
 
+KDE_PREFIX=`$KDECONFIG --prefix`
+AC_SUBST(KDE_PREFIX)
 
 if test "X$kde_build_libsmoke" = "Xkde" -o "X$kde_build_libsmoke" = "Xqt kde"; then
 
