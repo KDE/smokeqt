@@ -232,7 +232,10 @@ public:
 
 	while(imax >= imin) {
 	    icur = (imin + imax) / 2;
-	    icmp = strcmp(classes[icur].className, c);
+	    if(icur > 0)
+		icmp = strcmp(classes[icur].className, c);
+	    else
+		icmp = -1;
 	    if(!icmp) break;
 	    if(icmp > 0)
 		imax = icur - 1;
