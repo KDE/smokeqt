@@ -11,6 +11,9 @@ my $here = `pwd`;
 chomp $here;
 my $outdir = $here . "/generate.pl.tmpdir";
 my $finaloutdir = $here;
+my $defines = "qtdefines";
+my $definespath = "$here/$defines";
+
 ## Note: outdir and finaloutdir should NOT be the same dir!
 
 # Delete all x_*.cpp files under outdir (or create outdir if nonexistent)
@@ -21,13 +24,9 @@ mkdir $finaloutdir unless (-d $finaloutdir);
 
 #  Load the QT_NO_* macros found in "qtdefines". They'll be passed to kalyptus
 my $macros="";
-if ( -e "qtdefines" ){
-    print "Found 'qtdefines'. Reading preprocessor symbols from there...\n";
-    open( IN, "qtdefines");
-    undef $/;
-    $macros = " --define ". join(" --define ", split( "\n", <IN>) );
-    close IN;
-    $/="";
+if ( -e $definespath ){
+    print "Found '$defines'. Reading preprocessor symbols from there...\n";
+    $macros = " --defines=$definespath ";
 }
 
 # Need to cd to kalyptus's directory so that perl finds Ast.pm etc.
