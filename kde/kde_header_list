@@ -93,6 +93,8 @@ kcombobox.h
 kcommand.h
 kcompletionbox.h
 kcompletion.h
+kconfigdialog.h
+kconfigskeleton.h
 kconfigbackend.h
 kconfigbase.h
 kconfigdata.h
