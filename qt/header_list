@@ -300,7 +300,6 @@ qtranslator.h
 qtsciicodec.h
 qtstream.h
 qttableview.h
-qt_x11.h
 qurl.h
 qurlinfo.h
 qurloperator.h

@@ -9,20 +9,22 @@ AC_SUBST(KDE_HAVE_GL)
 
 AC_ARG_WITH(
    threshold,
-   [ --with-threshold[=ARG]       Smoke: Qt tests threshold ARG=[0..15] Default:15 Lower=more tests],
+   [  --with-threshold@<:@=0..15@:>@  Smoke: Qt tests threshold Default:15 Lower=more tests],
    [ qt_test_threshold="$withval" ],
    [ qt_test_threshold=15 ]
 )
 AC_SUBST(qt_test_threshold)
 
+if test "X$kde_build_libsmoke" = "Xqt"; then
 
-AC_CONFIG_FILES([ smoke/qt/qtguess.pl ], [
+    AC_CONFIG_FILES([ smoke/qt/qtguess.pl ], [
         cd smoke/qt
         perl qtguess.pl
         cd ../..
-])
-AC_CONFIG_FILES([ smoke/qt/generate.pl ], [
+    ])
+    AC_CONFIG_FILES([ smoke/qt/generate.pl ], [
         cd smoke/qt
         perl generate.pl
         cd ../..
-])
+    ])
+fi

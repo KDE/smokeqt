@@ -8,13 +8,17 @@ fi
 AC_SUBST(KDE_HAVE_GL)   
 
 
-AC_CONFIG_FILES([ smoke/kde/qtguess.pl ], [
-        cd smoke/qt
+if test "X$kde_build_libsmoke" = "Xkde"; then
+
+    AC_CONFIG_FILES([ smoke/kde/qtguess.pl ], [
+        cd smoke/kde
         perl qtguess.pl
         cd ../..
-])
-AC_CONFIG_FILES([ smoke/kde/generate.pl ], [
-        cd smoke/qt
+    ])
+    AC_CONFIG_FILES([ smoke/kde/generate.pl ], [
+        cd smoke/kde
         perl generate.pl
         cd ../..
-])
+    ])
+fi
+
