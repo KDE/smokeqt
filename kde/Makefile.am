@@ -9,9 +9,12 @@ EXTRA_DIST=generate.pl.in qtguess.pl.in qt_smoke.h Makefile.am
 libsmokekde_la_LDFLAGS = -version-info 3:2:2 -no-undefined $(all_libraries) $(GLINC) $(KDE_RPATH)
 
 # the libraries to link against.
-libsmokekde_la_LIBADD   = $(LIB_KDECORE) $(LIB_KHTML) -lkjs -lfontconfig -lkmdi $(LIB_KUTILS) $(LIB_KDEUI) $(LIB_KDEPRINT) $(LIB_KPARTS) $(LIB_QT) $(GLLIB)
+libsmokekde_la_LIBADD   = $(LIB_KDECORE) $(LIB_KHTML) -lkjs -lfontconfig $(LIB_KMDI) $(LIB_KSPELL) $(LIB_KUTILS) $(LIB_KDEUI) $(LIB_KDEPRINT) $(LIB_KPARTS) $(LIB_QT) $(GLLIB)
 
 # which sources should be compiled for perlqtkde
 libsmokekde_la_SOURCES = smokedata.cpp x_1.cpp x_2.cpp x_3.cpp x_4.cpp x_5.cpp x_6.cpp x_7.cpp \
  x_8.cpp x_9.cpp x_10.cpp x_11.cpp x_12.cpp x_13.cpp x_14.cpp x_15.cpp \
  x_16.cpp x_17.cpp x_18.cpp x_19.cpp x_20.cpp
+ 
+smokedata.cpp:
+	perl generate.pl

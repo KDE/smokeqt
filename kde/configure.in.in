@@ -18,9 +18,6 @@ if test "X$kde_build_libsmoke" = "Xkde" -o "X$kde_build_libsmoke" = "Xqt kde"; t
         cd ../..
     ])
     AC_CONFIG_FILES([ smoke/kde/generate.pl ], [
-        cd smoke/kde
-        perl generate.pl
-        cd ../..
     ])
 fi
 
