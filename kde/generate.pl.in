@@ -3,7 +3,7 @@
 ## Run this first, to generate the x_*.cpp files from the Qt headers
 ## using kalyptus
 
-my $kalyptusdir = "../../kalyptus";
+my $kalyptusdir = "@srcdir@/../../kalyptus";
 
 use File::Basename;
 use File::Copy qw|cp|;
