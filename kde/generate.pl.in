@@ -21,6 +21,12 @@ my $definespath = "$here/$defines";
 my $headerlistpath = "$here/$headerlist";
 my $kdeheaderlistpath = "$here/$kdeheaderlist";
 
+# If srcdir != builddir, then srcdir is probvably an absolute
+# path, and it makes no sense to prepend $here.
+$definespath = $defines if $defines =~ /^\//;
+$headerlistpath = $headerlist if $headerlist =~ /^\//;
+$kdeheaderlistpath = $kdeheaderlist if $kdeheaderlist =~ /^\//;
+
 ## Note: outdir and finaloutdir should NOT be the same dir!
 
 # Delete all x_*.cpp files under outdir (or create outdir if nonexistent)
