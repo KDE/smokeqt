@@ -14,7 +14,7 @@ my $here = getcwd;
 my $outdir = $here . "/generate.pl.tmpdir";
 my $finaloutdir = $here;
 my $defines = "qtdefines";
-my $headerlist = "header_list";
+my $headerlist = "@srcdir@/header_list";
 my $definespath = "$here/$defines";
 my $headerlistpath = "$here/$headerlist";
 
@@ -32,6 +32,7 @@ if ( -e $definespath ){
     $macros = " --defines=$definespath ";
 }
 
+mkdir $kalyptusdir, 0777;
 # Need to cd to kalyptus's directory so that perl finds Ast.pm etc.
 chdir "$kalyptusdir" or die "Couldn't go to $kalyptusdir (edit script to change dir)\n";
 
@@ -110,9 +111,11 @@ foreach $filename (readdir(QT)) {
 closedir QT;
 
 # Launch kalyptus
-system "perl kalyptus @ARGV --globspace -fsmoke --name=qt $macros --no-cache --outputdir=$outdir @headers";
+chdir "../smoke/qt";
+system "perl -I@top_srcdir@/kalyptus @top_srcdir@/kalyptus/kalyptus @ARGV --globspace -fsmoke --name=qt $macros --no-cache --outputdir=$outdir @headers";
 my $exit = $? >> 8;
 exit $exit if ($exit);
+chdir "$kalyptusdir";
 
 # Generate diff for smokedata.cpp
 unless ( -e "$finaloutdir/smokedata.cpp" ) {
