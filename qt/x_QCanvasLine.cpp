@@ -21,6 +21,7 @@ public:
     void x_1(Smoke::Stack x) {
 	// setPoints(int, int, int, int)
 	this->QCanvasLine::setPoints((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_2(Smoke::Stack x) const {
 	// startPoint()
@@ -40,10 +41,12 @@ public:
     void x_5(Smoke::Stack x) {
 	// setPen(QPen)
 	this->QCanvasLine::setPen(*(QPen *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_6(Smoke::Stack x) {
 	// drawShape(QPainter&)
 	this->QCanvasLine::drawShape(*(QPainter *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_7(Smoke::Stack x) const {
 	// areaPoints()

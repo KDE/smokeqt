@@ -135,6 +135,7 @@ public:
     void x_32(Smoke::Stack x) {
 	// setPath(const QString&)
 	this->QDir::setPath(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_33(Smoke::Stack x) const {
 	// path()
@@ -199,6 +200,7 @@ public:
     void x_45(Smoke::Stack x) {
 	// setNameFilter(const QString&)
 	this->QDir::setNameFilter(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_46(Smoke::Stack x) const {
 	// filter()
@@ -208,6 +210,7 @@ public:
     void x_47(Smoke::Stack x) {
 	// setFilter(int)
 	this->QDir::setFilter((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_48(Smoke::Stack x) const {
 	// sorting()
@@ -217,6 +220,7 @@ public:
     void x_49(Smoke::Stack x) {
 	// setSorting(int)
 	this->QDir::setSorting((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_50(Smoke::Stack x) const {
 	// matchAllDirs()
@@ -226,6 +230,7 @@ public:
     void x_51(Smoke::Stack x) {
 	// setMatchAllDirs(bool)
 	this->QDir::setMatchAllDirs((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_52(Smoke::Stack x) const {
 	// count()
@@ -370,6 +375,7 @@ public:
     void x_80(Smoke::Stack x) {
 	// convertToAbs()
 	this->QDir::convertToAbs();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_81(Smoke::Stack x) const {
 	// operator==(const QDir&)

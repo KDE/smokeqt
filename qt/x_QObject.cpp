@@ -82,6 +82,7 @@ public:
     void x_13(Smoke::Stack x) {
 	// setName(const char*)
 	this->QObject::setName((const char*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_14(Smoke::Stack x) const {
 	// isWidgetType()
@@ -101,6 +102,7 @@ public:
     void x_17(Smoke::Stack x) {
 	// blockSignals(bool)
 	this->QObject::blockSignals((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_18(Smoke::Stack x) {
 	// startTimer(int)
@@ -110,10 +112,12 @@ public:
     void x_19(Smoke::Stack x) {
 	// killTimer(int)
 	this->QObject::killTimer((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_20(Smoke::Stack x) {
 	// killTimers()
 	this->QObject::killTimers();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_21(Smoke::Stack x) {
 	// child(const char*, const char*, bool)
@@ -163,18 +167,22 @@ public:
     void x_30(Smoke::Stack x) {
 	// insertChild(QObject*)
 	this->QObject::insertChild((QObject*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_31(Smoke::Stack x) {
 	// removeChild(QObject*)
 	this->QObject::removeChild((QObject*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_32(Smoke::Stack x) {
 	// installEventFilter(const QObject*)
 	this->QObject::installEventFilter((const QObject*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_33(Smoke::Stack x) {
 	// removeEventFilter(const QObject*)
 	this->QObject::removeEventFilter((const QObject*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_34(Smoke::Stack x) const {
 	// connect(const QObject*, const char*, const char*)
@@ -214,10 +222,12 @@ public:
     void x_41(Smoke::Stack x) {
 	// dumpObjectTree()
 	this->QObject::dumpObjectTree();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_42(Smoke::Stack x) {
 	// dumpObjectInfo()
 	this->QObject::dumpObjectInfo();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_43(Smoke::Stack x) {
 	// setProperty(const char*, const QVariant&)
@@ -237,14 +247,17 @@ public:
     void x_46(Smoke::Stack x) {
 	// deleteLater()
 	this->QObject::deleteLater();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_47(Smoke::Stack x) {
 	// destroyed()
 	this->QObject::destroyed();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_48(Smoke::Stack x) {
 	// destroyed(QObject*)
 	this->QObject::destroyed((QObject*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_49(Smoke::Stack x) {
 	// objectTrees()
@@ -264,6 +277,7 @@ public:
     static void x_52(Smoke::Stack x) {
 	// connectInternal(const QObject*, int, const QObject*, int, int)
 	QObject::connectInternal((const QObject*)x[1].s_class,(int)x[2].s_int,(const QObject*)x[3].s_class,(int)x[4].s_int,(int)x[5].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_53(Smoke::Stack x) {
 	// tr(const char*, const char*)
@@ -303,26 +317,32 @@ public:
     void x_60(Smoke::Stack x) {
 	// activate_signal(int)
 	this->QObject::activate_signal((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_61(Smoke::Stack x) {
 	// activate_signal(int, int)
 	this->QObject::activate_signal((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_62(Smoke::Stack x) {
 	// activate_signal(int, double)
 	this->QObject::activate_signal((int)x[1].s_int,(double)x[2].s_double);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_63(Smoke::Stack x) {
 	// activate_signal(int, QString)
 	this->QObject::activate_signal((int)x[1].s_int,*(QString *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_64(Smoke::Stack x) {
 	// activate_signal_bool(int, bool)
 	this->QObject::activate_signal_bool((int)x[1].s_int,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_65(Smoke::Stack x) {
 	// activate_signal(QConnectionList*, QUObject*)
 	this->QObject::activate_signal((QConnectionList*)x[1].s_class,(QUObject*)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_66(Smoke::Stack x) {
 	// sender()
@@ -332,22 +352,27 @@ public:
     void x_67(Smoke::Stack x) {
 	// timerEvent(QTimerEvent*)
 	this->QObject::timerEvent((QTimerEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_68(Smoke::Stack x) {
 	// childEvent(QChildEvent*)
 	this->QObject::childEvent((QChildEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_69(Smoke::Stack x) {
 	// customEvent(QCustomEvent*)
 	this->QObject::customEvent((QCustomEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_70(Smoke::Stack x) {
 	// connectNotify(const char*)
 	this->QObject::connectNotify((const char*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_71(Smoke::Stack x) {
 	// disconnectNotify(const char*)
 	this->QObject::disconnectNotify((const char*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_72(Smoke::Stack x) {
 	// checkConnectArgs(const char*, const QObject*, const char*)

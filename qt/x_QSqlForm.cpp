@@ -31,10 +31,12 @@ public:
     void x_3(Smoke::Stack x) {
 	// insert(QWidget*, const QString&)
 	this->QSqlForm::insert((QWidget*)x[1].s_class,*(const QString *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_4(Smoke::Stack x) {
 	// remove(const QString&)
 	this->QSqlForm::remove(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_5(Smoke::Stack x) const {
 	// count()
@@ -59,50 +61,62 @@ public:
     void x_9(Smoke::Stack x) {
 	// installPropertyMap(QSqlPropertyMap*)
 	this->QSqlForm::installPropertyMap((QSqlPropertyMap*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_10(Smoke::Stack x) {
 	// setRecord(QSqlRecord*)
 	this->QSqlForm::setRecord((QSqlRecord*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_11(Smoke::Stack x) {
 	// readField(QWidget*)
 	this->QSqlForm::readField((QWidget*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_12(Smoke::Stack x) {
 	// writeField(QWidget*)
 	this->QSqlForm::writeField((QWidget*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_13(Smoke::Stack x) {
 	// readFields()
 	this->QSqlForm::readFields();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_14(Smoke::Stack x) {
 	// writeFields()
 	this->QSqlForm::writeFields();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_15(Smoke::Stack x) {
 	// clear()
 	this->QSqlForm::clear();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_16(Smoke::Stack x) {
 	// clearValues(bool)
 	this->QSqlForm::clearValues((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_17(Smoke::Stack x) {
 	// clearValues()
 	this->QSqlForm::clearValues();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_18(Smoke::Stack x) {
 	// insert(QWidget*, QSqlField*)
 	this->QSqlForm::insert((QWidget*)x[1].s_class,(QSqlField*)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_19(Smoke::Stack x) {
 	// remove(QWidget*)
 	this->QSqlForm::remove((QWidget*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_20(Smoke::Stack x) {
 	// clearMap()
 	this->QSqlForm::clearMap();
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual bool checkConnectArgs(const char* x1, const QObject* x2, const char* x3) {
 	Smoke::StackItem x[4];

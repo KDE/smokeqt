@@ -49,14 +49,17 @@ public:
     void x_9(Smoke::Stack x) {
 	// accept(bool)
 	this->QDropEvent::accept((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_10(Smoke::Stack x) {
 	// accept()
 	this->QDropEvent::accept();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_11(Smoke::Stack x) {
 	// ignore()
 	this->QDropEvent::ignore();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_12(Smoke::Stack x) const {
 	// isActionAccepted()
@@ -66,14 +69,17 @@ public:
     void x_13(Smoke::Stack x) {
 	// acceptAction(bool)
 	this->QDropEvent::acceptAction((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_14(Smoke::Stack x) {
 	// acceptAction()
 	this->QDropEvent::acceptAction();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_15(Smoke::Stack x) {
 	// setAction(QDropEvent::Action)
 	this->QDropEvent::setAction(*(QDropEvent::Action *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_16(Smoke::Stack x) const {
 	// action()
@@ -113,6 +119,7 @@ public:
     void x_23(Smoke::Stack x) {
 	// setPoint(const QPoint&)
 	this->QDropEvent::setPoint(*(const QPoint *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual QByteArray encodedData(const char* x1) const {
 	Smoke::StackItem x[2];

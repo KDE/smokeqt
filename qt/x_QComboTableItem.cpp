@@ -33,18 +33,22 @@ public:
     void x_3(Smoke::Stack x) {
 	// setContentFromEditor(QWidget*)
 	this->QComboTableItem::setContentFromEditor((QWidget*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_4(Smoke::Stack x) {
 	// paint(QPainter*, const QColorGroup&, const QRect&, bool)
 	this->QComboTableItem::paint((QPainter*)x[1].s_class,*(const QColorGroup *)x[2].s_class,*(const QRect *)x[3].s_class,(bool)x[4].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_5(Smoke::Stack x) {
 	// setCurrentItem(int)
 	this->QComboTableItem::setCurrentItem((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_6(Smoke::Stack x) {
 	// setCurrentItem(const QString&)
 	this->QComboTableItem::setCurrentItem(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_7(Smoke::Stack x) const {
 	// currentItem()
@@ -69,6 +73,7 @@ public:
     void x_11(Smoke::Stack x) {
 	// setEditable(bool)
 	this->QComboTableItem::setEditable((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_12(Smoke::Stack x) const {
 	// isEditable()
@@ -78,6 +83,7 @@ public:
     void x_13(Smoke::Stack x) {
 	// setStringList(const QStringList&)
 	this->QComboTableItem::setStringList(*(const QStringList *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_14(Smoke::Stack x) const {
 	// rtti()

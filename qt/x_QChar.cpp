@@ -418,6 +418,7 @@ public:
     void x_115(Smoke::Stack x) const {
 	// operator char()
 	this->QChar::operator char();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_116(Smoke::Stack x) const {
 	// isNull()
@@ -482,10 +483,12 @@ public:
     void x_128(Smoke::Stack x) {
 	// setCell(uchar)
 	this->QChar::setCell((uchar)x[1].s_uchar);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_129(Smoke::Stack x) {
 	// setRow(uchar)
 	this->QChar::setRow((uchar)x[1].s_uchar);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_130(Smoke::Stack x) {
 	// networkOrdered()

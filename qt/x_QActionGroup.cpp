@@ -33,6 +33,7 @@ public:
     void x_3(Smoke::Stack x) {
 	// setExclusive(bool)
 	this->QActionGroup::setExclusive((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_4(Smoke::Stack x) const {
 	// isExclusive()
@@ -42,10 +43,12 @@ public:
     void x_5(Smoke::Stack x) {
 	// add(QAction*)
 	this->QActionGroup::add((QAction*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_6(Smoke::Stack x) {
 	// addSeparator()
 	this->QActionGroup::addSeparator();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_7(Smoke::Stack x) {
 	// addTo(QWidget*)
@@ -60,10 +63,12 @@ public:
     void x_9(Smoke::Stack x) {
 	// setEnabled(bool)
 	this->QActionGroup::setEnabled((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_10(Smoke::Stack x) {
 	// setUsesDropDown(bool)
 	this->QActionGroup::setUsesDropDown((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_11(Smoke::Stack x) const {
 	// usesDropDown()
@@ -73,50 +78,62 @@ public:
     void x_12(Smoke::Stack x) {
 	// setIconSet(const QIconSet&)
 	this->QActionGroup::setIconSet(*(const QIconSet *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_13(Smoke::Stack x) {
 	// setText(const QString&)
 	this->QActionGroup::setText(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_14(Smoke::Stack x) {
 	// setMenuText(const QString&)
 	this->QActionGroup::setMenuText(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_15(Smoke::Stack x) {
 	// setToolTip(const QString&)
 	this->QActionGroup::setToolTip(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_16(Smoke::Stack x) {
 	// setWhatsThis(const QString&)
 	this->QActionGroup::setWhatsThis(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_17(Smoke::Stack x) {
 	// insert(QAction*)
 	this->QActionGroup::insert((QAction*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_18(Smoke::Stack x) {
 	// selected(QAction*)
 	this->QActionGroup::selected((QAction*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_19(Smoke::Stack x) {
 	// childEvent(QChildEvent*)
 	this->QActionGroup::childEvent((QChildEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_20(Smoke::Stack x) {
 	// addedTo(QWidget*, QWidget*, QAction*)
 	this->QActionGroup::addedTo((QWidget*)x[1].s_class,(QWidget*)x[2].s_class,(QAction*)x[3].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_21(Smoke::Stack x) {
 	// addedTo(int, QPopupMenu*, QAction*)
 	this->QActionGroup::addedTo((int)x[1].s_int,(QPopupMenu*)x[2].s_class,(QAction*)x[3].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_22(Smoke::Stack x) {
 	// addedTo(QWidget*, QWidget*)
 	this->QActionGroup::addedTo((QWidget*)x[1].s_class,(QWidget*)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_23(Smoke::Stack x) {
 	// addedTo(int, QPopupMenu*)
 	this->QActionGroup::addedTo((int)x[1].s_int,(QPopupMenu*)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual bool addTo(QWidget* x1) {
 	Smoke::StackItem x[2];

@@ -59,6 +59,7 @@ public:
     void x_5(Smoke::Stack x) {
 	// setNumRows(int)
 	this->QGridView::setNumRows((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_6(Smoke::Stack x) const {
 	// numCols()
@@ -68,6 +69,7 @@ public:
     void x_7(Smoke::Stack x) {
 	// setNumCols(int)
 	this->QGridView::setNumCols((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_8(Smoke::Stack x) const {
 	// cellWidth()
@@ -77,6 +79,7 @@ public:
     void x_9(Smoke::Stack x) {
 	// setCellWidth(int)
 	this->QGridView::setCellWidth((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_10(Smoke::Stack x) const {
 	// cellHeight()
@@ -86,6 +89,7 @@ public:
     void x_11(Smoke::Stack x) {
 	// setCellHeight(int)
 	this->QGridView::setCellHeight((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_12(Smoke::Stack x) const {
 	// cellRect()
@@ -115,30 +119,37 @@ public:
     void x_17(Smoke::Stack x) {
 	// repaintCell(int, int, bool)
 	this->QGridView::repaintCell((int)x[1].s_int,(int)x[2].s_int,(bool)x[3].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_18(Smoke::Stack x) {
 	// repaintCell(int, int)
 	this->QGridView::repaintCell((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_19(Smoke::Stack x) {
 	// updateCell(int, int)
 	this->QGridView::updateCell((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_20(Smoke::Stack x) {
 	// ensureCellVisible(int, int)
 	this->QGridView::ensureCellVisible((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_21(Smoke::Stack x) {
 	// paintEmptyArea(QPainter*, int, int, int, int)
 	this->QGridView::paintEmptyArea((QPainter*)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_22(Smoke::Stack x) {
 	// drawContents(QPainter*, int, int, int, int)
 	this->QGridView::drawContents((QPainter*)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_23(Smoke::Stack x) {
 	// dimensionChange(int, int)
 	this->QGridView::dimensionChange((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void addChild(QWidget* x1, int x2, int x3) {
 	Smoke::StackItem x[4];

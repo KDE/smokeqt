@@ -15,6 +15,7 @@ public:
     void x_1(Smoke::Stack x) {
 	// operator int()
 	this->QBitVal::operator int();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_2(Smoke::Stack x) {
 	// operator=(const QBitVal&)

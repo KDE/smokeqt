@@ -306,6 +306,7 @@ public:
     void x_90(Smoke::Stack x) {
 	// setFamily(const QString&)
 	this->QFont::setFamily(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_91(Smoke::Stack x) const {
 	// pointSize()
@@ -320,10 +321,12 @@ public:
     void x_93(Smoke::Stack x) {
 	// setPointSize(int)
 	this->QFont::setPointSize((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_94(Smoke::Stack x) {
 	// setPointSizeFloat(float)
 	this->QFont::setPointSizeFloat((float)x[1].s_float);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_95(Smoke::Stack x) const {
 	// pixelSize()
@@ -333,10 +336,12 @@ public:
     void x_96(Smoke::Stack x) {
 	// setPixelSize(int)
 	this->QFont::setPixelSize((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_97(Smoke::Stack x) {
 	// setPixelSizeFloat(float)
 	this->QFont::setPixelSizeFloat((float)x[1].s_float);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_98(Smoke::Stack x) const {
 	// weight()
@@ -346,6 +351,7 @@ public:
     void x_99(Smoke::Stack x) {
 	// setWeight(int)
 	this->QFont::setWeight((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_100(Smoke::Stack x) const {
 	// bold()
@@ -355,6 +361,7 @@ public:
     void x_101(Smoke::Stack x) {
 	// setBold(bool)
 	this->QFont::setBold((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_102(Smoke::Stack x) const {
 	// italic()
@@ -364,6 +371,7 @@ public:
     void x_103(Smoke::Stack x) {
 	// setItalic(bool)
 	this->QFont::setItalic((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_104(Smoke::Stack x) const {
 	// underline()
@@ -373,6 +381,7 @@ public:
     void x_105(Smoke::Stack x) {
 	// setUnderline(bool)
 	this->QFont::setUnderline((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_106(Smoke::Stack x) const {
 	// strikeOut()
@@ -382,6 +391,7 @@ public:
     void x_107(Smoke::Stack x) {
 	// setStrikeOut(bool)
 	this->QFont::setStrikeOut((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_108(Smoke::Stack x) const {
 	// fixedPitch()
@@ -391,6 +401,7 @@ public:
     void x_109(Smoke::Stack x) {
 	// setFixedPitch(bool)
 	this->QFont::setFixedPitch((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_110(Smoke::Stack x) const {
 	// styleHint()
@@ -405,14 +416,17 @@ public:
     void x_112(Smoke::Stack x) {
 	// setStyleHint(QFont::StyleHint, QFont::StyleStrategy)
 	this->QFont::setStyleHint(*(QFont::StyleHint *)x[1].s_class,*(QFont::StyleStrategy *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_113(Smoke::Stack x) {
 	// setStyleHint(QFont::StyleHint)
 	this->QFont::setStyleHint(*(QFont::StyleHint *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_114(Smoke::Stack x) {
 	// setStyleStrategy(QFont::StyleStrategy)
 	this->QFont::setStyleStrategy(*(QFont::StyleStrategy *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_115(Smoke::Stack x) const {
 	// rawMode()
@@ -422,6 +436,7 @@ public:
     void x_116(Smoke::Stack x) {
 	// setRawMode(bool)
 	this->QFont::setRawMode((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_117(Smoke::Stack x) const {
 	// exactMatch()
@@ -456,6 +471,7 @@ public:
     void x_123(Smoke::Stack x) {
 	// setRawName(const QString&)
 	this->QFont::setRawName(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_124(Smoke::Stack x) const {
 	// rawName()
@@ -510,26 +526,32 @@ public:
     static void x_134(Smoke::Stack x) {
 	// insertSubstitution(const QString&, const QString&)
 	QFont::insertSubstitution(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_135(Smoke::Stack x) {
 	// insertSubstitutions(const QString&, const QStringList&)
 	QFont::insertSubstitutions(*(const QString *)x[1].s_class,*(const QStringList *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_136(Smoke::Stack x) {
 	// removeSubstitution(const QString&)
 	QFont::removeSubstitution(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_137(Smoke::Stack x) {
 	// initialize()
 	QFont::initialize();
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_138(Smoke::Stack x) {
 	// cleanup()
 	QFont::cleanup();
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_139(Smoke::Stack x) {
 	// cacheStatistics()
 	QFont::cacheStatistics();
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_140(Smoke::Stack x) {
 	// defaultFont()
@@ -539,6 +561,7 @@ public:
     static void x_141(Smoke::Stack x) {
 	// setDefaultFont(const QFont&)
 	QFont::setDefaultFont(*(const QFont *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_142(Smoke::Stack x) const {
 	// dirty()

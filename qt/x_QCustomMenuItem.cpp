@@ -28,6 +28,7 @@ public:
     void x_3(Smoke::Stack x) {
 	// setFont(const QFont&)
 	this->QCustomMenuItem::setFont(*(const QFont *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual bool fullSpan() const {
 	Smoke::StackItem x[1];

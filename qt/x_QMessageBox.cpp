@@ -133,6 +133,7 @@ public:
     void x_25(Smoke::Stack x) {
 	// setText(const QString&)
 	this->QMessageBox::setText(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_26(Smoke::Stack x) const {
 	// icon()
@@ -142,10 +143,12 @@ public:
     void x_27(Smoke::Stack x) {
 	// setIcon(QMessageBox::Icon)
 	this->QMessageBox::setIcon(*(QMessageBox::Icon *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_28(Smoke::Stack x) {
 	// setIcon(const QPixmap&)
 	this->QMessageBox::setIcon(*(const QPixmap *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_29(Smoke::Stack x) const {
 	// iconPixmap()
@@ -155,6 +158,7 @@ public:
     void x_30(Smoke::Stack x) {
 	// setIconPixmap(const QPixmap&)
 	this->QMessageBox::setIconPixmap(*(const QPixmap *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_31(Smoke::Stack x) const {
 	// buttonText(int)
@@ -164,10 +168,12 @@ public:
     void x_32(Smoke::Stack x) {
 	// setButtonText(int, const QString&)
 	this->QMessageBox::setButtonText((int)x[1].s_int,*(const QString *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_33(Smoke::Stack x) {
 	// adjustSize()
 	this->QMessageBox::adjustSize();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_34(Smoke::Stack x) const {
 	// textFormat()
@@ -177,6 +183,7 @@ public:
     void x_35(Smoke::Stack x) {
 	// setTextFormat(Qt::TextFormat)
 	this->QMessageBox::setTextFormat(*(Qt::TextFormat *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_36(Smoke::Stack x) {
 	// information(QWidget*, const QString&, const QString&, int, int, int)
@@ -306,14 +313,17 @@ public:
     static void x_61(Smoke::Stack x) {
 	// about(QWidget*, const QString&, const QString&)
 	QMessageBox::about((QWidget*)x[1].s_class,*(const QString *)x[2].s_class,*(const QString *)x[3].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_62(Smoke::Stack x) {
 	// aboutQt(QWidget*, const QString&)
 	QMessageBox::aboutQt((QWidget*)x[1].s_class,*(const QString *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_63(Smoke::Stack x) {
 	// aboutQt(QWidget*)
 	QMessageBox::aboutQt((QWidget*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_64(Smoke::Stack x) {
 	// message(const QString&, const QString&, const QString&, QWidget*, const char*)
@@ -373,18 +383,22 @@ public:
     void x_75(Smoke::Stack x) {
 	// resizeEvent(QResizeEvent*)
 	this->QMessageBox::resizeEvent((QResizeEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_76(Smoke::Stack x) {
 	// showEvent(QShowEvent*)
 	this->QMessageBox::showEvent((QShowEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_77(Smoke::Stack x) {
 	// keyPressEvent(QKeyEvent*)
 	this->QMessageBox::keyPressEvent((QKeyEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_78(Smoke::Stack x) {
 	// styleChanged(QStyle&)
 	this->QMessageBox::styleChanged(*(QStyle *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void accept() {
 	Smoke::StackItem x[1];

@@ -21,22 +21,27 @@ public:
     void x_4(Smoke::Stack x) {
 	// scan(const QPointArray&, bool, int, int)
 	this->QPolygonScanner::scan(*(const QPointArray *)x[1].s_class,(bool)x[2].s_bool,(int)x[3].s_int,(int)x[4].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_5(Smoke::Stack x) {
 	// scan(const QPointArray&, bool, int)
 	this->QPolygonScanner::scan(*(const QPointArray *)x[1].s_class,(bool)x[2].s_bool,(int)x[3].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_6(Smoke::Stack x) {
 	// scan(const QPointArray&, bool)
 	this->QPolygonScanner::scan(*(const QPointArray *)x[1].s_class,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_7(Smoke::Stack x) {
 	// scan(const QPointArray&, bool, int, int, bool)
 	this->QPolygonScanner::scan(*(const QPointArray *)x[1].s_class,(bool)x[2].s_bool,(int)x[3].s_int,(int)x[4].s_int,(bool)x[5].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_8(Smoke::Stack x) {
 	// scan(const QPointArray&, bool, int, int, QPolygonScanner::Edge)
 	this->QPolygonScanner::scan(*(const QPointArray *)x[1].s_class,(bool)x[2].s_bool,(int)x[3].s_int,(int)x[4].s_int,*(QPolygonScanner::Edge *)x[5].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_9(Smoke::Stack x) {
 	// QPolygonScanner()

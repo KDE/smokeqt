@@ -105,6 +105,7 @@ public:
     void x_13(Smoke::Stack x) {
 	// setCenterIndicator(bool)
 	this->QProgressBar::setCenterIndicator((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_14(Smoke::Stack x) const {
 	// centerIndicator()
@@ -114,6 +115,7 @@ public:
     void x_15(Smoke::Stack x) {
 	// setIndicatorFollowsStyle(bool)
 	this->QProgressBar::setIndicatorFollowsStyle((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_16(Smoke::Stack x) const {
 	// indicatorFollowsStyle()
@@ -128,26 +130,32 @@ public:
     void x_18(Smoke::Stack x) {
 	// setPercentageVisible(bool)
 	this->QProgressBar::setPercentageVisible((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_19(Smoke::Stack x) {
 	// show()
 	this->QProgressBar::show();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_20(Smoke::Stack x) {
 	// reset()
 	this->QProgressBar::reset();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_21(Smoke::Stack x) {
 	// setTotalSteps(int)
 	this->QProgressBar::setTotalSteps((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_22(Smoke::Stack x) {
 	// setProgress(int)
 	this->QProgressBar::setProgress((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_23(Smoke::Stack x) {
 	// drawContents(QPainter*)
 	this->QProgressBar::drawContents((QPainter*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_24(Smoke::Stack x) {
 	// setIndicator(QString&, int, int)
@@ -157,6 +165,7 @@ public:
     void x_25(Smoke::Stack x) {
 	// styleChange(QStyle&)
 	this->QProgressBar::styleChange(*(QStyle *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void adjustSize() {
 	Smoke::StackItem x[1];

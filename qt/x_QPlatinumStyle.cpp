@@ -24,46 +24,57 @@ public:
     void x_1(Smoke::Stack x) const {
 	// drawPrimitive(QStyle::PrimitiveElement, QPainter*, const QRect&, const QColorGroup&, QStyle::SFlags, const QStyleOption&)
 	this->QPlatinumStyle::drawPrimitive(*(QStyle::PrimitiveElement *)x[1].s_class,(QPainter*)x[2].s_class,*(const QRect *)x[3].s_class,*(const QColorGroup *)x[4].s_class,*(QStyle::SFlags *)x[5].s_class,*(const QStyleOption *)x[6].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_2(Smoke::Stack x) const {
 	// drawPrimitive(QStyle::PrimitiveElement, QPainter*, const QRect&, const QColorGroup&, QStyle::SFlags)
 	this->QPlatinumStyle::drawPrimitive(*(QStyle::PrimitiveElement *)x[1].s_class,(QPainter*)x[2].s_class,*(const QRect *)x[3].s_class,*(const QColorGroup *)x[4].s_class,*(QStyle::SFlags *)x[5].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_3(Smoke::Stack x) const {
 	// drawPrimitive(QStyle::PrimitiveElement, QPainter*, const QRect&, const QColorGroup&)
 	this->QPlatinumStyle::drawPrimitive(*(QStyle::PrimitiveElement *)x[1].s_class,(QPainter*)x[2].s_class,*(const QRect *)x[3].s_class,*(const QColorGroup *)x[4].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_4(Smoke::Stack x) const {
 	// drawControl(QStyle::ControlElement, QPainter*, const QWidget*, const QRect&, const QColorGroup&, QStyle::SFlags, const QStyleOption&)
 	this->QPlatinumStyle::drawControl(*(QStyle::ControlElement *)x[1].s_class,(QPainter*)x[2].s_class,(const QWidget*)x[3].s_class,*(const QRect *)x[4].s_class,*(const QColorGroup *)x[5].s_class,*(QStyle::SFlags *)x[6].s_class,*(const QStyleOption *)x[7].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_5(Smoke::Stack x) const {
 	// drawControl(QStyle::ControlElement, QPainter*, const QWidget*, const QRect&, const QColorGroup&, QStyle::SFlags)
 	this->QPlatinumStyle::drawControl(*(QStyle::ControlElement *)x[1].s_class,(QPainter*)x[2].s_class,(const QWidget*)x[3].s_class,*(const QRect *)x[4].s_class,*(const QColorGroup *)x[5].s_class,*(QStyle::SFlags *)x[6].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_6(Smoke::Stack x) const {
 	// drawControl(QStyle::ControlElement, QPainter*, const QWidget*, const QRect&, const QColorGroup&)
 	this->QPlatinumStyle::drawControl(*(QStyle::ControlElement *)x[1].s_class,(QPainter*)x[2].s_class,(const QWidget*)x[3].s_class,*(const QRect *)x[4].s_class,*(const QColorGroup *)x[5].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_7(Smoke::Stack x) const {
 	// drawComplexControl(QStyle::ComplexControl, QPainter*, const QWidget*, const QRect&, const QColorGroup&, QStyle::SFlags, QStyle::SCFlags, QStyle::SCFlags, const QStyleOption&)
 	this->QPlatinumStyle::drawComplexControl(*(QStyle::ComplexControl *)x[1].s_class,(QPainter*)x[2].s_class,(const QWidget*)x[3].s_class,*(const QRect *)x[4].s_class,*(const QColorGroup *)x[5].s_class,*(QStyle::SFlags *)x[6].s_class,*(QStyle::SCFlags *)x[7].s_class,*(QStyle::SCFlags *)x[8].s_class,*(const QStyleOption *)x[9].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_8(Smoke::Stack x) const {
 	// drawComplexControl(QStyle::ComplexControl, QPainter*, const QWidget*, const QRect&, const QColorGroup&, QStyle::SFlags, QStyle::SCFlags, QStyle::SCFlags)
 	this->QPlatinumStyle::drawComplexControl(*(QStyle::ComplexControl *)x[1].s_class,(QPainter*)x[2].s_class,(const QWidget*)x[3].s_class,*(const QRect *)x[4].s_class,*(const QColorGroup *)x[5].s_class,*(QStyle::SFlags *)x[6].s_class,*(QStyle::SCFlags *)x[7].s_class,*(QStyle::SCFlags *)x[8].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_9(Smoke::Stack x) const {
 	// drawComplexControl(QStyle::ComplexControl, QPainter*, const QWidget*, const QRect&, const QColorGroup&, QStyle::SFlags, QStyle::SCFlags)
 	this->QPlatinumStyle::drawComplexControl(*(QStyle::ComplexControl *)x[1].s_class,(QPainter*)x[2].s_class,(const QWidget*)x[3].s_class,*(const QRect *)x[4].s_class,*(const QColorGroup *)x[5].s_class,*(QStyle::SFlags *)x[6].s_class,*(QStyle::SCFlags *)x[7].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_10(Smoke::Stack x) const {
 	// drawComplexControl(QStyle::ComplexControl, QPainter*, const QWidget*, const QRect&, const QColorGroup&, QStyle::SFlags)
 	this->QPlatinumStyle::drawComplexControl(*(QStyle::ComplexControl *)x[1].s_class,(QPainter*)x[2].s_class,(const QWidget*)x[3].s_class,*(const QRect *)x[4].s_class,*(const QColorGroup *)x[5].s_class,*(QStyle::SFlags *)x[6].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_11(Smoke::Stack x) const {
 	// drawComplexControl(QStyle::ComplexControl, QPainter*, const QWidget*, const QRect&, const QColorGroup&)
 	this->QPlatinumStyle::drawComplexControl(*(QStyle::ComplexControl *)x[1].s_class,(QPainter*)x[2].s_class,(const QWidget*)x[3].s_class,*(const QRect *)x[4].s_class,*(const QColorGroup *)x[5].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_12(Smoke::Stack x) const {
 	// querySubControlMetrics(QStyle::ComplexControl, const QWidget*, QStyle::SubControl, const QStyleOption&)
@@ -98,6 +109,7 @@ public:
     void x_18(Smoke::Stack x) const {
 	// drawRiffles(QPainter*, int, int, int, int, const QColorGroup&, bool)
 	this->QPlatinumStyle::drawRiffles((QPainter*)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int,*(const QColorGroup *)x[6].s_class,(bool)x[7].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual bool checkConnectArgs(const char* x1, const QObject* x2, const char* x3) {
 	Smoke::StackItem x[4];

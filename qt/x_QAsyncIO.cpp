@@ -8,6 +8,7 @@ public:
     void x_0(Smoke::Stack x) {
 	// connect(QObject*, const char*)
 	this->QAsyncIO::connect((QObject*)x[1].s_class,(const char*)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_1(Smoke::Stack x) {
 	// QAsyncIO()
@@ -19,6 +20,7 @@ public:
     void x_2(Smoke::Stack x) {
 	// ready()
 	this->QAsyncIO::ready();
+	x[0].s_int = x[0].s_int; // noop
     }
     ~x_QAsyncIO() {}
 };

@@ -119,6 +119,7 @@ public:
     void x_31(Smoke::Stack x) {
 	// setDisplayMode(QStyleSheetItem::DisplayMode)
 	this->QStyleSheetItem::setDisplayMode(*(QStyleSheetItem::DisplayMode *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_32(Smoke::Stack x) const {
 	// alignment()
@@ -128,6 +129,7 @@ public:
     void x_33(Smoke::Stack x) {
 	// setAlignment(int)
 	this->QStyleSheetItem::setAlignment((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_34(Smoke::Stack x) const {
 	// verticalAlignment()
@@ -137,6 +139,7 @@ public:
     void x_35(Smoke::Stack x) {
 	// setVerticalAlignment(QStyleSheetItem::VerticalAlignment)
 	this->QStyleSheetItem::setVerticalAlignment(*(QStyleSheetItem::VerticalAlignment *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_36(Smoke::Stack x) const {
 	// fontWeight()
@@ -146,6 +149,7 @@ public:
     void x_37(Smoke::Stack x) {
 	// setFontWeight(int)
 	this->QStyleSheetItem::setFontWeight((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_38(Smoke::Stack x) const {
 	// logicalFontSize()
@@ -155,6 +159,7 @@ public:
     void x_39(Smoke::Stack x) {
 	// setLogicalFontSize(int)
 	this->QStyleSheetItem::setLogicalFontSize((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_40(Smoke::Stack x) const {
 	// logicalFontSizeStep()
@@ -164,6 +169,7 @@ public:
     void x_41(Smoke::Stack x) {
 	// setLogicalFontSizeStep(int)
 	this->QStyleSheetItem::setLogicalFontSizeStep((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_42(Smoke::Stack x) const {
 	// fontSize()
@@ -173,6 +179,7 @@ public:
     void x_43(Smoke::Stack x) {
 	// setFontSize(int)
 	this->QStyleSheetItem::setFontSize((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_44(Smoke::Stack x) const {
 	// fontFamily()
@@ -182,6 +189,7 @@ public:
     void x_45(Smoke::Stack x) {
 	// setFontFamily(const QString&)
 	this->QStyleSheetItem::setFontFamily(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_46(Smoke::Stack x) const {
 	// numberOfColumns()
@@ -191,6 +199,7 @@ public:
     void x_47(Smoke::Stack x) {
 	// setNumberOfColumns(int)
 	this->QStyleSheetItem::setNumberOfColumns((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_48(Smoke::Stack x) const {
 	// color()
@@ -200,6 +209,7 @@ public:
     void x_49(Smoke::Stack x) {
 	// setColor(const QColor&)
 	this->QStyleSheetItem::setColor(*(const QColor *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_50(Smoke::Stack x) const {
 	// fontItalic()
@@ -209,6 +219,7 @@ public:
     void x_51(Smoke::Stack x) {
 	// setFontItalic(bool)
 	this->QStyleSheetItem::setFontItalic((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_52(Smoke::Stack x) const {
 	// definesFontItalic()
@@ -223,6 +234,7 @@ public:
     void x_54(Smoke::Stack x) {
 	// setFontUnderline(bool)
 	this->QStyleSheetItem::setFontUnderline((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_55(Smoke::Stack x) const {
 	// definesFontUnderline()
@@ -237,6 +249,7 @@ public:
     void x_57(Smoke::Stack x) {
 	// setAnchor(bool)
 	this->QStyleSheetItem::setAnchor((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_58(Smoke::Stack x) const {
 	// whiteSpaceMode()
@@ -246,6 +259,7 @@ public:
     void x_59(Smoke::Stack x) {
 	// setWhiteSpaceMode(QStyleSheetItem::WhiteSpaceMode)
 	this->QStyleSheetItem::setWhiteSpaceMode(*(QStyleSheetItem::WhiteSpaceMode *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_60(Smoke::Stack x) const {
 	// margin(QStyleSheetItem::Margin)
@@ -255,6 +269,7 @@ public:
     void x_61(Smoke::Stack x) {
 	// setMargin(QStyleSheetItem::Margin, int)
 	this->QStyleSheetItem::setMargin(*(QStyleSheetItem::Margin *)x[1].s_class,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_62(Smoke::Stack x) const {
 	// listStyle()
@@ -264,6 +279,7 @@ public:
     void x_63(Smoke::Stack x) {
 	// setListStyle(QStyleSheetItem::ListStyle)
 	this->QStyleSheetItem::setListStyle(*(QStyleSheetItem::ListStyle *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_64(Smoke::Stack x) const {
 	// contexts()
@@ -273,6 +289,7 @@ public:
     void x_65(Smoke::Stack x) {
 	// setContexts(const QString&)
 	this->QStyleSheetItem::setContexts(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_66(Smoke::Stack x) const {
 	// allowedInContext(const QStyleSheetItem*)
@@ -287,10 +304,12 @@ public:
     void x_68(Smoke::Stack x) {
 	// setSelfNesting(bool)
 	this->QStyleSheetItem::setSelfNesting((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_69(Smoke::Stack x) {
 	// setLineSpacing(int)
 	this->QStyleSheetItem::setLineSpacing((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_70(Smoke::Stack x) const {
 	// lineSpacing()

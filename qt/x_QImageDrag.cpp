@@ -55,6 +55,7 @@ public:
     void x_6(Smoke::Stack x) {
 	// setImage(QImage)
 	this->QImageDrag::setImage(*(QImage *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_7(Smoke::Stack x) const {
 	// format(int)

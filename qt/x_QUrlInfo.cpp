@@ -52,46 +52,57 @@ public:
     void x_6(Smoke::Stack x) {
 	// setName(const QString&)
 	this->QUrlInfo::setName(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_7(Smoke::Stack x) {
 	// setDir(bool)
 	this->QUrlInfo::setDir((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_8(Smoke::Stack x) {
 	// setFile(bool)
 	this->QUrlInfo::setFile((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_9(Smoke::Stack x) {
 	// setSymLink(bool)
 	this->QUrlInfo::setSymLink((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_10(Smoke::Stack x) {
 	// setOwner(const QString&)
 	this->QUrlInfo::setOwner(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_11(Smoke::Stack x) {
 	// setGroup(const QString&)
 	this->QUrlInfo::setGroup(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_12(Smoke::Stack x) {
 	// setSize(uint)
 	this->QUrlInfo::setSize((uint)x[1].s_uint);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_13(Smoke::Stack x) {
 	// setWritable(bool)
 	this->QUrlInfo::setWritable((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_14(Smoke::Stack x) {
 	// setReadable(bool)
 	this->QUrlInfo::setReadable((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_15(Smoke::Stack x) {
 	// setPermissions(int)
 	this->QUrlInfo::setPermissions((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_16(Smoke::Stack x) {
 	// setLastModified(const QDateTime&)
 	this->QUrlInfo::setLastModified(*(const QDateTime *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_17(Smoke::Stack x) const {
 	// isValid()

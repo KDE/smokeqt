@@ -186,26 +186,32 @@ public:
     void x_31(Smoke::Stack x) {
 	// fill(const QColor&)
 	this->QPixmap::fill(*(const QColor *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_32(Smoke::Stack x) {
 	// fill()
 	this->QPixmap::fill();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_33(Smoke::Stack x) {
 	// fill(const QWidget*, int, int)
 	this->QPixmap::fill((const QWidget*)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_34(Smoke::Stack x) {
 	// fill(const QWidget*, const QPoint&)
 	this->QPixmap::fill((const QWidget*)x[1].s_class,*(const QPoint *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_35(Smoke::Stack x) {
 	// resize(int, int)
 	this->QPixmap::resize((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_36(Smoke::Stack x) {
 	// resize(const QSize&)
 	this->QPixmap::resize(*(const QSize *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_37(Smoke::Stack x) const {
 	// mask()
@@ -215,6 +221,7 @@ public:
     void x_38(Smoke::Stack x) {
 	// setMask(const QBitmap&)
 	this->QPixmap::setMask(*(const QBitmap *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_39(Smoke::Stack x) const {
 	// selfMask()
@@ -334,10 +341,12 @@ public:
     void x_62(Smoke::Stack x) {
 	// setOptimization(QPixmap::Optimization)
 	this->QPixmap::setOptimization(*(QPixmap::Optimization *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_63(Smoke::Stack x) {
 	// detach()
 	this->QPixmap::detach();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_64(Smoke::Stack x) const {
 	// isQBitmap()
@@ -417,6 +426,7 @@ public:
     static void x_79(Smoke::Stack x) {
 	// setDefaultOptimization(QPixmap::Optimization)
 	QPixmap::setDefaultOptimization(*(QPixmap::Optimization *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_80(Smoke::Stack x) {
 	// QPixmap(int, int, const uchar*, bool)

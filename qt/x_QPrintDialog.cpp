@@ -45,10 +45,12 @@ public:
     void x_3(Smoke::Stack x) {
 	// setPrinter(QPrinter*, bool)
 	this->QPrintDialog::setPrinter((QPrinter*)x[1].s_class,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_4(Smoke::Stack x) {
 	// setPrinter(QPrinter*)
 	this->QPrintDialog::setPrinter((QPrinter*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_5(Smoke::Stack x) const {
 	// printer()
@@ -58,6 +60,7 @@ public:
     void x_6(Smoke::Stack x) {
 	// addButton(QPushButton*)
 	this->QPrintDialog::addButton((QPushButton*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_7(Smoke::Stack x) {
 	// getPrinterSetup(QPrinter*, QWidget*)
@@ -72,6 +75,7 @@ public:
     static void x_9(Smoke::Stack x) {
 	// setGlobalPrintDialog(QPrintDialog*)
 	QPrintDialog::setGlobalPrintDialog((QPrintDialog*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void accept() {
 	Smoke::StackItem x[1];

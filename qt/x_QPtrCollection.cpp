@@ -13,6 +13,7 @@ public:
     void x_1(Smoke::Stack x) {
 	// setAutoDelete(bool)
 	this->QPtrCollection::setAutoDelete((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_2(Smoke::Stack x) {
 	// QPtrCollection()

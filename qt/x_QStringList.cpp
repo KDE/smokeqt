@@ -46,6 +46,7 @@ public:
     void x_5(Smoke::Stack x) {
 	// sort()
 	this->QStringList::sort();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_6(Smoke::Stack x) const {
 	// join(const QString&)

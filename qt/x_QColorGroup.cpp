@@ -104,10 +104,12 @@ public:
     void x_24(Smoke::Stack x) {
 	// setColor(QColorGroup::ColorRole, const QColor&)
 	this->QColorGroup::setColor(*(QColorGroup::ColorRole *)x[1].s_class,*(const QColor *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_25(Smoke::Stack x) {
 	// setBrush(QColorGroup::ColorRole, const QBrush&)
 	this->QColorGroup::setBrush(*(QColorGroup::ColorRole *)x[1].s_class,*(const QBrush *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_26(Smoke::Stack x) const {
 	// foreground()

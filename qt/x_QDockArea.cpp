@@ -58,22 +58,27 @@ public:
     void x_6(Smoke::Stack x) {
 	// moveDockWindow(QDockWindow*, const QPoint&, const QRect&, bool)
 	this->QDockArea::moveDockWindow((QDockWindow*)x[1].s_class,*(const QPoint *)x[2].s_class,*(const QRect *)x[3].s_class,(bool)x[4].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_7(Smoke::Stack x) {
 	// removeDockWindow(QDockWindow*, bool, bool, bool)
 	this->QDockArea::removeDockWindow((QDockWindow*)x[1].s_class,(bool)x[2].s_bool,(bool)x[3].s_bool,(bool)x[4].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_8(Smoke::Stack x) {
 	// removeDockWindow(QDockWindow*, bool, bool)
 	this->QDockArea::removeDockWindow((QDockWindow*)x[1].s_class,(bool)x[2].s_bool,(bool)x[3].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_9(Smoke::Stack x) {
 	// moveDockWindow(QDockWindow*, int)
 	this->QDockArea::moveDockWindow((QDockWindow*)x[1].s_class,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_10(Smoke::Stack x) {
 	// moveDockWindow(QDockWindow*)
 	this->QDockArea::moveDockWindow((QDockWindow*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_11(Smoke::Stack x) {
 	// hasDockWindow(QDockWindow*, int*)
@@ -88,6 +93,7 @@ public:
     void x_13(Smoke::Stack x) {
 	// invalidNextOffset(QDockWindow*)
 	this->QDockArea::invalidNextOffset((QDockWindow*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_14(Smoke::Stack x) const {
 	// orientation()
@@ -127,10 +133,12 @@ public:
     void x_21(Smoke::Stack x) {
 	// setAcceptDockWindow(QDockWindow*, bool)
 	this->QDockArea::setAcceptDockWindow((QDockWindow*)x[1].s_class,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_22(Smoke::Stack x) {
 	// lineUp(bool)
 	this->QDockArea::lineUp((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void adjustSize() {
 	Smoke::StackItem x[1];

@@ -17,6 +17,7 @@ public:
     void x_1(Smoke::Stack x) {
 	// setPrefix(const QString&, const QString&)
 	this->QXmlNamespaceSupport::setPrefix(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_2(Smoke::Stack x) const {
 	// prefix(const QString&)
@@ -31,10 +32,12 @@ public:
     void x_4(Smoke::Stack x) const {
 	// splitName(const QString&, QString&, QString&)
 	this->QXmlNamespaceSupport::splitName(*(const QString *)x[1].s_class,*(QString *)x[2].s_class,*(QString *)x[3].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_5(Smoke::Stack x) const {
 	// processName(const QString&, bool, QString&, QString&)
 	this->QXmlNamespaceSupport::processName(*(const QString *)x[1].s_class,(bool)x[2].s_bool,*(QString *)x[3].s_class,*(QString *)x[4].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_6(Smoke::Stack x) const {
 	// prefixes()
@@ -49,14 +52,17 @@ public:
     void x_8(Smoke::Stack x) {
 	// pushContext()
 	this->QXmlNamespaceSupport::pushContext();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_9(Smoke::Stack x) {
 	// popContext()
 	this->QXmlNamespaceSupport::popContext();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_10(Smoke::Stack x) {
 	// reset()
 	this->QXmlNamespaceSupport::reset();
+	x[0].s_int = x[0].s_int; // noop
     }
     ~x_QXmlNamespaceSupport() {}
 };

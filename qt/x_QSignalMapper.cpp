@@ -24,26 +24,32 @@ public:
     void x_2(Smoke::Stack x) {
 	// setMapping(const QObject*, int)
 	this->QSignalMapper::setMapping((const QObject*)x[1].s_class,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_3(Smoke::Stack x) {
 	// setMapping(const QObject*, const QString&)
 	this->QSignalMapper::setMapping((const QObject*)x[1].s_class,*(const QString *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_4(Smoke::Stack x) {
 	// removeMappings(const QObject*)
 	this->QSignalMapper::removeMappings((const QObject*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_5(Smoke::Stack x) {
 	// map()
 	this->QSignalMapper::map();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_6(Smoke::Stack x) {
 	// mapped(int)
 	this->QSignalMapper::mapped((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_7(Smoke::Stack x) {
 	// mapped(const QString&)
 	this->QSignalMapper::mapped(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual bool checkConnectArgs(const char* x1, const QObject* x2, const char* x3) {
 	Smoke::StackItem x[4];

@@ -101,14 +101,17 @@ public:
     void x_11(Smoke::Stack x) {
 	// addSeparator()
 	this->QToolBar::addSeparator();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_12(Smoke::Stack x) {
 	// show()
 	this->QToolBar::show();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_13(Smoke::Stack x) {
 	// hide()
 	this->QToolBar::hide();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_14(Smoke::Stack x) const {
 	// mainWindow()
@@ -118,6 +121,7 @@ public:
     void x_15(Smoke::Stack x) {
 	// setStretchableWidget(QWidget*)
 	this->QToolBar::setStretchableWidget((QWidget*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_16(Smoke::Stack x) {
 	// event(QEvent*)
@@ -127,6 +131,7 @@ public:
     void x_17(Smoke::Stack x) {
 	// setLabel(const QString&)
 	this->QToolBar::setLabel(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_18(Smoke::Stack x) const {
 	// label()
@@ -136,6 +141,7 @@ public:
     void x_19(Smoke::Stack x) {
 	// clear()
 	this->QToolBar::clear();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_20(Smoke::Stack x) const {
 	// minimumSize()
@@ -150,18 +156,22 @@ public:
     void x_22(Smoke::Stack x) {
 	// setOrientation(Qt::Orientation)
 	this->QToolBar::setOrientation(*(Qt::Orientation *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_23(Smoke::Stack x) {
 	// setMinimumSize(int, int)
 	this->QToolBar::setMinimumSize((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_24(Smoke::Stack x) {
 	// resizeEvent(QResizeEvent*)
 	this->QToolBar::resizeEvent((QResizeEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_25(Smoke::Stack x) {
 	// styleChange(QStyle&)
 	this->QToolBar::styleChange(*(QStyle *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void adjustSize() {
 	Smoke::StackItem x[1];

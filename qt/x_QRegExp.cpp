@@ -75,6 +75,7 @@ public:
     void x_11(Smoke::Stack x) {
 	// setPattern(const QString&)
 	this->QRegExp::setPattern(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_12(Smoke::Stack x) const {
 	// caseSensitive()
@@ -84,6 +85,7 @@ public:
     void x_13(Smoke::Stack x) {
 	// setCaseSensitive(bool)
 	this->QRegExp::setCaseSensitive((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_14(Smoke::Stack x) const {
 	// wildcard()
@@ -93,6 +95,7 @@ public:
     void x_15(Smoke::Stack x) {
 	// setWildcard(bool)
 	this->QRegExp::setWildcard((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_16(Smoke::Stack x) const {
 	// minimal()
@@ -102,6 +105,7 @@ public:
     void x_17(Smoke::Stack x) {
 	// setMinimal(bool)
 	this->QRegExp::setMinimal((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_18(Smoke::Stack x) const {
 	// exactMatch(const QString&)

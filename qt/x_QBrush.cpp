@@ -63,6 +63,7 @@ public:
     void x_8(Smoke::Stack x) {
 	// setStyle(Qt::BrushStyle)
 	this->QBrush::setStyle(*(Qt::BrushStyle *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_9(Smoke::Stack x) const {
 	// color()
@@ -72,6 +73,7 @@ public:
     void x_10(Smoke::Stack x) {
 	// setColor(const QColor&)
 	this->QBrush::setColor(*(const QColor *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_11(Smoke::Stack x) const {
 	// pixmap()
@@ -81,6 +83,7 @@ public:
     void x_12(Smoke::Stack x) {
 	// setPixmap(const QPixmap&)
 	this->QBrush::setPixmap(*(const QPixmap *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_13(Smoke::Stack x) const {
 	// operator==(const QBrush&)

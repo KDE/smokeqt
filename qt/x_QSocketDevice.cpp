@@ -84,6 +84,7 @@ public:
     void x_18(Smoke::Stack x) {
 	// setSocket(int, QSocketDevice::Type)
 	this->QSocketDevice::setSocket((int)x[1].s_int,*(QSocketDevice::Type *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_19(Smoke::Stack x) {
 	// open(int)
@@ -93,10 +94,12 @@ public:
     void x_20(Smoke::Stack x) {
 	// close()
 	this->QSocketDevice::close();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_21(Smoke::Stack x) {
 	// flush()
 	this->QSocketDevice::flush();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_22(Smoke::Stack x) const {
 	// size()
@@ -126,6 +129,7 @@ public:
     void x_27(Smoke::Stack x) {
 	// setBlocking(bool)
 	this->QSocketDevice::setBlocking((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_28(Smoke::Stack x) const {
 	// addressReusable()
@@ -135,6 +139,7 @@ public:
     void x_29(Smoke::Stack x) {
 	// setAddressReusable(bool)
 	this->QSocketDevice::setAddressReusable((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_30(Smoke::Stack x) const {
 	// receiveBufferSize()
@@ -144,6 +149,7 @@ public:
     void x_31(Smoke::Stack x) {
 	// setReceiveBufferSize(uint)
 	this->QSocketDevice::setReceiveBufferSize((uint)x[1].s_uint);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_32(Smoke::Stack x) const {
 	// sendBufferSize()
@@ -153,6 +159,7 @@ public:
     void x_33(Smoke::Stack x) {
 	// setSendBufferSize(uint)
 	this->QSocketDevice::setSendBufferSize((uint)x[1].s_uint);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_34(Smoke::Stack x) {
 	// connect(const QHostAddress&, Q_UINT16)
@@ -247,6 +254,7 @@ public:
     void x_52(Smoke::Stack x) {
 	// setError(QSocketDevice::Error)
 	this->QSocketDevice::setError(*(QSocketDevice::Error *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual int accept() {
 	Smoke::StackItem x[1];

@@ -74,30 +74,37 @@ public:
     void x_7(Smoke::Stack x) {
 	// move(int, int)
 	this->QPushButton::move((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_8(Smoke::Stack x) {
 	// move(const QPoint&)
 	this->QPushButton::move(*(const QPoint *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_9(Smoke::Stack x) {
 	// resize(int, int)
 	this->QPushButton::resize((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_10(Smoke::Stack x) {
 	// resize(const QSize&)
 	this->QPushButton::resize(*(const QSize *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_11(Smoke::Stack x) {
 	// setGeometry(int, int, int, int)
 	this->QPushButton::setGeometry((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_12(Smoke::Stack x) {
 	// setGeometry(const QRect&)
 	this->QPushButton::setGeometry(*(const QRect *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_13(Smoke::Stack x) {
 	// setToggleButton(bool)
 	this->QPushButton::setToggleButton((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_14(Smoke::Stack x) const {
 	// autoDefault()
@@ -107,6 +114,7 @@ public:
     void x_15(Smoke::Stack x) {
 	// setAutoDefault(bool)
 	this->QPushButton::setAutoDefault((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_16(Smoke::Stack x) const {
 	// isDefault()
@@ -116,10 +124,12 @@ public:
     void x_17(Smoke::Stack x) {
 	// setDefault(bool)
 	this->QPushButton::setDefault((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_18(Smoke::Stack x) {
 	// setIsMenuButton(bool)
 	this->QPushButton::setIsMenuButton((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_19(Smoke::Stack x) const {
 	// isMenuButton()
@@ -129,6 +139,7 @@ public:
     void x_20(Smoke::Stack x) {
 	// setPopup(QPopupMenu*)
 	this->QPushButton::setPopup((QPopupMenu*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_21(Smoke::Stack x) const {
 	// popup()
@@ -138,6 +149,7 @@ public:
     void x_22(Smoke::Stack x) {
 	// setIconSet(const QIconSet&)
 	this->QPushButton::setIconSet(*(const QIconSet *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_23(Smoke::Stack x) const {
 	// iconSet()
@@ -147,6 +159,7 @@ public:
     void x_24(Smoke::Stack x) {
 	// setFlat(bool)
 	this->QPushButton::setFlat((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_25(Smoke::Stack x) const {
 	// isFlat()
@@ -156,30 +169,37 @@ public:
     void x_26(Smoke::Stack x) {
 	// setOn(bool)
 	this->QPushButton::setOn((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_27(Smoke::Stack x) {
 	// drawButton(QPainter*)
 	this->QPushButton::drawButton((QPainter*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_28(Smoke::Stack x) {
 	// drawButtonLabel(QPainter*)
 	this->QPushButton::drawButtonLabel((QPainter*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_29(Smoke::Stack x) {
 	// focusInEvent(QFocusEvent*)
 	this->QPushButton::focusInEvent((QFocusEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_30(Smoke::Stack x) {
 	// focusOutEvent(QFocusEvent*)
 	this->QPushButton::focusOutEvent((QFocusEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_31(Smoke::Stack x) {
 	// resizeEvent(QResizeEvent*)
 	this->QPushButton::resizeEvent((QResizeEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_32(Smoke::Stack x) {
 	// updateMask()
 	this->QPushButton::updateMask();
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void adjustSize() {
 	Smoke::StackItem x[1];

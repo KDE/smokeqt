@@ -25,22 +25,27 @@ public:
     void x_2(Smoke::Stack x) {
 	// setState(QNetworkProtocol::State)
 	this->QNetworkOperation::setState(*(QNetworkProtocol::State *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_3(Smoke::Stack x) {
 	// setProtocolDetail(const QString&)
 	this->QNetworkOperation::setProtocolDetail(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_4(Smoke::Stack x) {
 	// setErrorCode(int)
 	this->QNetworkOperation::setErrorCode((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_5(Smoke::Stack x) {
 	// setArg(int, const QString&)
 	this->QNetworkOperation::setArg((int)x[1].s_int,*(const QString *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_6(Smoke::Stack x) {
 	// setRawArg(int, const QByteArray&)
 	this->QNetworkOperation::setRawArg((int)x[1].s_int,*(const QByteArray *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_7(Smoke::Stack x) const {
 	// operation()
@@ -75,6 +80,7 @@ public:
     void x_13(Smoke::Stack x) {
 	// free()
 	this->QNetworkOperation::free();
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual bool checkConnectArgs(const char* x1, const QObject* x2, const char* x3) {
 	Smoke::StackItem x[4];

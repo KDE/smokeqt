@@ -21,6 +21,7 @@ public:
     void x_2(Smoke::Stack x) {
 	// remove(QObject*)
 	this->QObjectCleanupHandler::remove((QObject*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_3(Smoke::Stack x) const {
 	// isEmpty()
@@ -30,6 +31,7 @@ public:
     void x_4(Smoke::Stack x) {
 	// clear()
 	this->QObjectCleanupHandler::clear();
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual bool checkConnectArgs(const char* x1, const QObject* x2, const char* x3) {
 	Smoke::StackItem x[4];

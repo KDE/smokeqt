@@ -44,10 +44,12 @@ public:
     void x_5(Smoke::Stack x) {
 	// setSize(int, int)
 	this->QCanvasEllipse::setSize((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_6(Smoke::Stack x) {
 	// setAngles(int, int)
 	this->QCanvasEllipse::setAngles((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_7(Smoke::Stack x) const {
 	// angleStart()
@@ -77,6 +79,7 @@ public:
     void x_12(Smoke::Stack x) {
 	// drawShape(QPainter&)
 	this->QCanvasEllipse::drawShape(*(QPainter *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void advance(int x1) {
 	Smoke::StackItem x[2];

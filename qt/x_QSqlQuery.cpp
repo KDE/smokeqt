@@ -146,10 +146,12 @@ public:
     void x_25(Smoke::Stack x) {
 	// beforeSeek()
 	this->QSqlQuery::beforeSeek();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_26(Smoke::Stack x) {
 	// afterSeek()
 	this->QSqlQuery::afterSeek();
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void afterSeek() {
 	Smoke::StackItem x[1];

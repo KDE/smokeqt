@@ -71,10 +71,12 @@ public:
     void x_13(Smoke::Stack x) {
 	// setLabel(const QString&)
 	this->QDns::setLabel(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_14(Smoke::Stack x) {
 	// setLabel(const QHostAddress&)
 	this->QDns::setLabel(*(const QHostAddress *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_15(Smoke::Stack x) const {
 	// label()
@@ -84,10 +86,12 @@ public:
     void x_16(Smoke::Stack x) {
 	// setRecordType(QDns::RecordType)
 	this->QDns::setRecordType(*(QDns::RecordType *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_17(Smoke::Stack x) {
 	// setRecordType()
 	this->QDns::setRecordType();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_18(Smoke::Stack x) const {
 	// recordType()
@@ -137,10 +141,12 @@ public:
     void x_27(Smoke::Stack x) {
 	// resultsReady()
 	this->QDns::resultsReady();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_28(Smoke::Stack x) {
 	// connectNotify(const char*)
 	this->QDns::connectNotify((const char*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual bool checkConnectArgs(const char* x1, const QObject* x2, const char* x3) {
 	Smoke::StackItem x[4];

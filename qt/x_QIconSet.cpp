@@ -70,30 +70,37 @@ public:
     void x_13(Smoke::Stack x) {
 	// reset(const QPixmap&, QIconSet::Size)
 	this->QIconSet::reset(*(const QPixmap *)x[1].s_class,*(QIconSet::Size *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_14(Smoke::Stack x) {
 	// setPixmap(const QPixmap&, QIconSet::Size, QIconSet::Mode, QIconSet::State)
 	this->QIconSet::setPixmap(*(const QPixmap *)x[1].s_class,*(QIconSet::Size *)x[2].s_class,*(QIconSet::Mode *)x[3].s_class,*(QIconSet::State *)x[4].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_15(Smoke::Stack x) {
 	// setPixmap(const QPixmap&, QIconSet::Size, QIconSet::Mode)
 	this->QIconSet::setPixmap(*(const QPixmap *)x[1].s_class,*(QIconSet::Size *)x[2].s_class,*(QIconSet::Mode *)x[3].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_16(Smoke::Stack x) {
 	// setPixmap(const QPixmap&, QIconSet::Size)
 	this->QIconSet::setPixmap(*(const QPixmap *)x[1].s_class,*(QIconSet::Size *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_17(Smoke::Stack x) {
 	// setPixmap(const QString&, QIconSet::Size, QIconSet::Mode, QIconSet::State)
 	this->QIconSet::setPixmap(*(const QString *)x[1].s_class,*(QIconSet::Size *)x[2].s_class,*(QIconSet::Mode *)x[3].s_class,*(QIconSet::State *)x[4].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_18(Smoke::Stack x) {
 	// setPixmap(const QString&, QIconSet::Size, QIconSet::Mode)
 	this->QIconSet::setPixmap(*(const QString *)x[1].s_class,*(QIconSet::Size *)x[2].s_class,*(QIconSet::Mode *)x[3].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_19(Smoke::Stack x) {
 	// setPixmap(const QString&, QIconSet::Size)
 	this->QIconSet::setPixmap(*(const QString *)x[1].s_class,*(QIconSet::Size *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_20(Smoke::Stack x) const {
 	// pixmap(QIconSet::Size, QIconSet::Mode, QIconSet::State)
@@ -133,6 +140,7 @@ public:
     void x_27(Smoke::Stack x) {
 	// clearGenerated()
 	this->QIconSet::clearGenerated();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_28(Smoke::Stack x) const {
 	// isNull()
@@ -142,6 +150,7 @@ public:
     void x_29(Smoke::Stack x) {
 	// detach()
 	this->QIconSet::detach();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_30(Smoke::Stack x) {
 	// operator=(const QIconSet&)
@@ -151,6 +160,7 @@ public:
     static void x_31(Smoke::Stack x) {
 	// setIconSize(QIconSet::Size, const QSize&)
 	QIconSet::setIconSize(*(QIconSet::Size *)x[1].s_class,*(const QSize *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_32(Smoke::Stack x) {
 	// iconSize(QIconSet::Size)

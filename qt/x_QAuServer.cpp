@@ -17,14 +17,17 @@ public:
     void x_1(Smoke::Stack x) {
 	// init(QSound*)
 	this->QAuServer::init((QSound*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_2(Smoke::Stack x) {
 	// play(const QString&)
 	this->QAuServer::play(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_3(Smoke::Stack x) {
 	// setBucket(QSound*, QAuBucket*)
 	this->QAuServer::setBucket((QSound*)x[1].s_class,(QAuBucket*)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_4(Smoke::Stack x) {
 	// bucket(QSound*)

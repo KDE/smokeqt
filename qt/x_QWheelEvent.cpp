@@ -88,10 +88,12 @@ public:
     void x_14(Smoke::Stack x) {
 	// accept()
 	this->QWheelEvent::accept();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_15(Smoke::Stack x) {
 	// ignore()
 	this->QWheelEvent::ignore();
+	x[0].s_int = x[0].s_int; // noop
     }
     ~x_QWheelEvent() {}
 };

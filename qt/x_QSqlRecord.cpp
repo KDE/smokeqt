@@ -41,10 +41,12 @@ public:
     void x_5(Smoke::Stack x) {
 	// setValue(int, const QVariant&)
 	this->QSqlRecord::setValue((int)x[1].s_int,*(const QVariant *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_6(Smoke::Stack x) {
 	// setValue(const QString&, const QVariant&)
 	this->QSqlRecord::setValue(*(const QString *)x[1].s_class,*(const QVariant *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_7(Smoke::Stack x) const {
 	// isGenerated(int)
@@ -59,18 +61,22 @@ public:
     void x_9(Smoke::Stack x) {
 	// setGenerated(const QString&, bool)
 	this->QSqlRecord::setGenerated(*(const QString *)x[1].s_class,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_10(Smoke::Stack x) {
 	// setGenerated(int, bool)
 	this->QSqlRecord::setGenerated((int)x[1].s_int,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_11(Smoke::Stack x) {
 	// setNull(int)
 	this->QSqlRecord::setNull((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_12(Smoke::Stack x) {
 	// setNull(const QString&)
 	this->QSqlRecord::setNull(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_13(Smoke::Stack x) {
 	// isNull(int)
@@ -115,14 +121,17 @@ public:
     void x_21(Smoke::Stack x) {
 	// append(const QSqlField&)
 	this->QSqlRecord::append(*(const QSqlField *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_22(Smoke::Stack x) {
 	// insert(int, const QSqlField&)
 	this->QSqlRecord::insert((int)x[1].s_int,*(const QSqlField *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_23(Smoke::Stack x) {
 	// remove(int)
 	this->QSqlRecord::remove((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_24(Smoke::Stack x) const {
 	// isEmpty()
@@ -137,14 +146,17 @@ public:
     void x_26(Smoke::Stack x) {
 	// clear()
 	this->QSqlRecord::clear();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_27(Smoke::Stack x) {
 	// clearValues(bool)
 	this->QSqlRecord::clearValues((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_28(Smoke::Stack x) {
 	// clearValues()
 	this->QSqlRecord::clearValues();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_29(Smoke::Stack x) const {
 	// count()

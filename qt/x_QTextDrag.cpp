@@ -55,10 +55,12 @@ public:
     void x_6(Smoke::Stack x) {
 	// setText(const QString&)
 	this->QTextDrag::setText(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_7(Smoke::Stack x) {
 	// setSubtype(const QCString&)
 	this->QTextDrag::setSubtype(*(const QCString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_8(Smoke::Stack x) const {
 	// format(int)

@@ -27,10 +27,12 @@ public:
     static void x_3(Smoke::Stack x) {
 	// add(QWidget*, const QString&)
 	QWhatsThis::add((QWidget*)x[1].s_class,*(const QString *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_4(Smoke::Stack x) {
 	// remove(QWidget*)
 	QWhatsThis::remove((QWidget*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_5(Smoke::Stack x) {
 	// textFor(QWidget*, const QPoint&, bool)
@@ -55,6 +57,7 @@ public:
     static void x_9(Smoke::Stack x) {
 	// enterWhatsThisMode()
 	QWhatsThis::enterWhatsThisMode();
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_10(Smoke::Stack x) {
 	// inWhatsThisMode()
@@ -64,30 +67,37 @@ public:
     static void x_11(Smoke::Stack x) {
 	// leaveWhatsThisMode(const QString&, const QPoint&, QWidget*)
 	QWhatsThis::leaveWhatsThisMode(*(const QString *)x[1].s_class,*(const QPoint *)x[2].s_class,(QWidget*)x[3].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_12(Smoke::Stack x) {
 	// leaveWhatsThisMode(const QString&, const QPoint&)
 	QWhatsThis::leaveWhatsThisMode(*(const QString *)x[1].s_class,*(const QPoint *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_13(Smoke::Stack x) {
 	// leaveWhatsThisMode(const QString&)
 	QWhatsThis::leaveWhatsThisMode(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_14(Smoke::Stack x) {
 	// leaveWhatsThisMode()
 	QWhatsThis::leaveWhatsThisMode();
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_15(Smoke::Stack x) {
 	// display(const QString&, const QPoint&, QWidget*)
 	QWhatsThis::display(*(const QString *)x[1].s_class,*(const QPoint *)x[2].s_class,(QWidget*)x[3].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_16(Smoke::Stack x) {
 	// display(const QString&, const QPoint&)
 	QWhatsThis::display(*(const QString *)x[1].s_class,*(const QPoint *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_17(Smoke::Stack x) {
 	// display(const QString&)
 	QWhatsThis::display(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual bool clicked(const QString& x1) {
 	Smoke::StackItem x[2];

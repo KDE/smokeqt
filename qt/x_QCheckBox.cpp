@@ -59,14 +59,17 @@ public:
     void x_5(Smoke::Stack x) {
 	// setNoChange()
 	this->QCheckBox::setNoChange();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_6(Smoke::Stack x) {
 	// setTristate(bool)
 	this->QCheckBox::setTristate((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_7(Smoke::Stack x) {
 	// setTristate()
 	this->QCheckBox::setTristate();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_8(Smoke::Stack x) const {
 	// isTristate()
@@ -81,22 +84,27 @@ public:
     void x_10(Smoke::Stack x) {
 	// setChecked(bool)
 	this->QCheckBox::setChecked((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_11(Smoke::Stack x) {
 	// resizeEvent(QResizeEvent*)
 	this->QCheckBox::resizeEvent((QResizeEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_12(Smoke::Stack x) {
 	// drawButton(QPainter*)
 	this->QCheckBox::drawButton((QPainter*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_13(Smoke::Stack x) {
 	// drawButtonLabel(QPainter*)
 	this->QCheckBox::drawButtonLabel((QPainter*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_14(Smoke::Stack x) {
 	// updateMask()
 	this->QCheckBox::updateMask();
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void adjustSize() {
 	Smoke::StackItem x[1];

@@ -65,6 +65,7 @@ public:
     void x_11(Smoke::Stack x) {
 	// clear()
 	this->QTranslator::clear();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_12(Smoke::Stack x) {
 	// save(const QString&, QTranslator::SaveMode)
@@ -79,18 +80,22 @@ public:
     void x_14(Smoke::Stack x) {
 	// insert(const QTranslatorMessage&)
 	this->QTranslator::insert(*(const QTranslatorMessage *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_15(Smoke::Stack x) {
 	// insert(const char*, const char*, const QString&)
 	this->QTranslator::insert((const char*)x[1].s_class,(const char*)x[2].s_class,*(const QString *)x[3].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_16(Smoke::Stack x) {
 	// remove(const QTranslatorMessage&)
 	this->QTranslator::remove(*(const QTranslatorMessage *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_17(Smoke::Stack x) {
 	// remove(const char*, const char*)
 	this->QTranslator::remove((const char*)x[1].s_class,(const char*)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_18(Smoke::Stack x) const {
 	// contains(const char*, const char*, const char*)
@@ -105,14 +110,17 @@ public:
     void x_20(Smoke::Stack x) {
 	// squeeze(QTranslator::SaveMode)
 	this->QTranslator::squeeze(*(QTranslator::SaveMode *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_21(Smoke::Stack x) {
 	// squeeze()
 	this->QTranslator::squeeze();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_22(Smoke::Stack x) {
 	// unsqueeze()
 	this->QTranslator::unsqueeze();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_23(Smoke::Stack x) const {
 	// messages()

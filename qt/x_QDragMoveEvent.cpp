@@ -30,22 +30,27 @@ public:
     void x_3(Smoke::Stack x) {
 	// accept(bool)
 	this->QDragMoveEvent::accept((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_4(Smoke::Stack x) {
 	// accept()
 	this->QDragMoveEvent::accept();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_5(Smoke::Stack x) {
 	// accept(const QRect&)
 	this->QDragMoveEvent::accept(*(const QRect *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_6(Smoke::Stack x) {
 	// ignore(const QRect&)
 	this->QDragMoveEvent::ignore(*(const QRect *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_7(Smoke::Stack x) {
 	// ignore()
 	this->QDragMoveEvent::ignore();
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual QByteArray encodedData(const char* x1) const {
 	Smoke::StackItem x[2];

@@ -84,6 +84,7 @@ public:
     void x_11(Smoke::Stack x) {
 	// setShape(int)
 	this->QCursor::setShape((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_12(Smoke::Stack x) const {
 	// bitmap()
@@ -108,10 +109,12 @@ public:
     static void x_16(Smoke::Stack x) {
 	// setPos(int, int)
 	QCursor::setPos((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_17(Smoke::Stack x) {
 	// setPos(const QPoint&)
 	QCursor::setPos(*(const QPoint *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_18(Smoke::Stack x) {
 	// pos()
@@ -121,18 +124,22 @@ public:
     static void x_19(Smoke::Stack x) {
 	// setPos(int, int)
 	QCursor::setPos((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_20(Smoke::Stack x) {
 	// setPos(const QPoint&)
 	QCursor::setPos(*(const QPoint *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_21(Smoke::Stack x) {
 	// initialize()
 	QCursor::initialize();
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_22(Smoke::Stack x) {
 	// cleanup()
 	QCursor::cleanup();
+	x[0].s_int = x[0].s_int; // noop
     }
     ~x_QCursor() {}
 };

@@ -194,6 +194,7 @@ public:
     void x_58(Smoke::Stack x) {
 	// setPrinterName(const QString&)
 	this->QPrinter::setPrinterName(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_59(Smoke::Stack x) const {
 	// outputToFile()
@@ -203,6 +204,7 @@ public:
     void x_60(Smoke::Stack x) {
 	// setOutputToFile(bool)
 	this->QPrinter::setOutputToFile((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_61(Smoke::Stack x) const {
 	// outputFileName()
@@ -212,6 +214,7 @@ public:
     void x_62(Smoke::Stack x) {
 	// setOutputFileName(const QString&)
 	this->QPrinter::setOutputFileName(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_63(Smoke::Stack x) const {
 	// printProgram()
@@ -221,6 +224,7 @@ public:
     void x_64(Smoke::Stack x) {
 	// setPrintProgram(const QString&)
 	this->QPrinter::setPrintProgram(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_65(Smoke::Stack x) const {
 	// printerSelectionOption()
@@ -230,6 +234,7 @@ public:
     void x_66(Smoke::Stack x) {
 	// setPrinterSelectionOption(const QString&)
 	this->QPrinter::setPrinterSelectionOption(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_67(Smoke::Stack x) const {
 	// docName()
@@ -239,6 +244,7 @@ public:
     void x_68(Smoke::Stack x) {
 	// setDocName(const QString&)
 	this->QPrinter::setDocName(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_69(Smoke::Stack x) const {
 	// creator()
@@ -248,6 +254,7 @@ public:
     void x_70(Smoke::Stack x) {
 	// setCreator(const QString&)
 	this->QPrinter::setCreator(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_71(Smoke::Stack x) const {
 	// orientation()
@@ -257,6 +264,7 @@ public:
     void x_72(Smoke::Stack x) {
 	// setOrientation(QPrinter::Orientation)
 	this->QPrinter::setOrientation(*(QPrinter::Orientation *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_73(Smoke::Stack x) const {
 	// pageSize()
@@ -266,10 +274,12 @@ public:
     void x_74(Smoke::Stack x) {
 	// setPageSize(QPrinter::PageSize)
 	this->QPrinter::setPageSize(*(QPrinter::PageSize *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_75(Smoke::Stack x) {
 	// setPageOrder(QPrinter::PageOrder)
 	this->QPrinter::setPageOrder(*(QPrinter::PageOrder *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_76(Smoke::Stack x) const {
 	// pageOrder()
@@ -279,6 +289,7 @@ public:
     void x_77(Smoke::Stack x) {
 	// setResolution(int)
 	this->QPrinter::setResolution((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_78(Smoke::Stack x) const {
 	// resolution()
@@ -288,6 +299,7 @@ public:
     void x_79(Smoke::Stack x) {
 	// setColorMode(QPrinter::ColorMode)
 	this->QPrinter::setColorMode(*(QPrinter::ColorMode *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_80(Smoke::Stack x) const {
 	// colorMode()
@@ -297,6 +309,7 @@ public:
     void x_81(Smoke::Stack x) {
 	// setFullPage(bool)
 	this->QPrinter::setFullPage((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_82(Smoke::Stack x) const {
 	// fullPage()
@@ -321,6 +334,7 @@ public:
     void x_86(Smoke::Stack x) {
 	// setFromTo(int, int)
 	this->QPrinter::setFromTo((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_87(Smoke::Stack x) const {
 	// minPage()
@@ -335,6 +349,7 @@ public:
     void x_89(Smoke::Stack x) {
 	// setMinMax(int, int)
 	this->QPrinter::setMinMax((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_90(Smoke::Stack x) const {
 	// numCopies()
@@ -344,6 +359,7 @@ public:
     void x_91(Smoke::Stack x) {
 	// setNumCopies(int)
 	this->QPrinter::setNumCopies((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_92(Smoke::Stack x) const {
 	// collateCopiesEnabled()
@@ -353,6 +369,7 @@ public:
     void x_93(Smoke::Stack x) {
 	// setCollateCopiesEnabled(bool)
 	this->QPrinter::setCollateCopiesEnabled((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_94(Smoke::Stack x) const {
 	// collateCopies()
@@ -362,6 +379,7 @@ public:
     void x_95(Smoke::Stack x) {
 	// setCollateCopies(bool)
 	this->QPrinter::setCollateCopies((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_96(Smoke::Stack x) {
 	// newPage()
@@ -396,6 +414,7 @@ public:
     void x_102(Smoke::Stack x) {
 	// setPaperSource(QPrinter::PaperSource)
 	this->QPrinter::setPaperSource(*(QPrinter::PaperSource *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_103(Smoke::Stack x) {
 	// cmd(int, QPainter*, QPDevCmdParam*)

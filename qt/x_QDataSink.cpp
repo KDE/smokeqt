@@ -8,6 +8,7 @@ public:
     void x_0(Smoke::Stack x) {
 	// maybeReady()
 	this->QDataSink::maybeReady();
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_1(Smoke::Stack x) {
 	// QDataSink()

@@ -35,6 +35,7 @@ public:
     void x_4(Smoke::Stack x) {
 	// invalidate()
 	this->QLayoutItem::invalidate();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_5(Smoke::Stack x) {
 	// widget()
@@ -64,6 +65,7 @@ public:
     void x_10(Smoke::Stack x) {
 	// setAlignment(int)
 	this->QLayoutItem::setAlignment((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual QSizePolicy::ExpandData expanding() const {
 	Smoke::StackItem x[1];

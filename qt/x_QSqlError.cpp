@@ -76,6 +76,7 @@ public:
     void x_13(Smoke::Stack x) {
 	// setDriverText(const QString&)
 	this->QSqlError::setDriverText(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_14(Smoke::Stack x) const {
 	// databaseText()
@@ -85,6 +86,7 @@ public:
     void x_15(Smoke::Stack x) {
 	// setDatabaseText(const QString&)
 	this->QSqlError::setDatabaseText(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_16(Smoke::Stack x) const {
 	// type()
@@ -94,6 +96,7 @@ public:
     void x_17(Smoke::Stack x) {
 	// setType(int)
 	this->QSqlError::setType((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_18(Smoke::Stack x) const {
 	// number()
@@ -103,6 +106,7 @@ public:
     void x_19(Smoke::Stack x) {
 	// setNumber(int)
 	this->QSqlError::setNumber((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void setDatabaseText(const QString& x1) {
 	Smoke::StackItem x[2];

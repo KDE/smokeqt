@@ -108,6 +108,7 @@ public:
     void x_12(Smoke::Stack x) {
 	// setColumnLayout(int, Qt::Orientation)
 	this->QGroupBox::setColumnLayout((int)x[1].s_int,*(Qt::Orientation *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_13(Smoke::Stack x) const {
 	// title()
@@ -117,6 +118,7 @@ public:
     void x_14(Smoke::Stack x) {
 	// setTitle(const QString&)
 	this->QGroupBox::setTitle(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_15(Smoke::Stack x) const {
 	// alignment()
@@ -126,6 +128,7 @@ public:
     void x_16(Smoke::Stack x) {
 	// setAlignment(int)
 	this->QGroupBox::setAlignment((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_17(Smoke::Stack x) const {
 	// columns()
@@ -135,6 +138,7 @@ public:
     void x_18(Smoke::Stack x) {
 	// setColumns(int)
 	this->QGroupBox::setColumns((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_19(Smoke::Stack x) const {
 	// orientation()
@@ -144,6 +148,7 @@ public:
     void x_20(Smoke::Stack x) {
 	// setOrientation(Qt::Orientation)
 	this->QGroupBox::setOrientation(*(Qt::Orientation *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_21(Smoke::Stack x) const {
 	// insideMargin()
@@ -158,14 +163,17 @@ public:
     void x_23(Smoke::Stack x) {
 	// setInsideMargin(int)
 	this->QGroupBox::setInsideMargin((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_24(Smoke::Stack x) {
 	// setInsideSpacing(int)
 	this->QGroupBox::setInsideSpacing((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_25(Smoke::Stack x) {
 	// addSpace(int)
 	this->QGroupBox::addSpace((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_26(Smoke::Stack x) const {
 	// sizeHint()
@@ -180,22 +188,27 @@ public:
     void x_28(Smoke::Stack x) {
 	// childEvent(QChildEvent*)
 	this->QGroupBox::childEvent((QChildEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_29(Smoke::Stack x) {
 	// resizeEvent(QResizeEvent*)
 	this->QGroupBox::resizeEvent((QResizeEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_30(Smoke::Stack x) {
 	// paintEvent(QPaintEvent*)
 	this->QGroupBox::paintEvent((QPaintEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_31(Smoke::Stack x) {
 	// focusInEvent(QFocusEvent*)
 	this->QGroupBox::focusInEvent((QFocusEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_32(Smoke::Stack x) {
 	// fontChange(const QFont&)
 	this->QGroupBox::fontChange(*(const QFont *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void adjustSize() {
 	Smoke::StackItem x[1];

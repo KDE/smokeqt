@@ -79,14 +79,17 @@ public:
     void x_8(Smoke::Stack x) {
 	// setOnIconSet(const QIconSet&)
 	this->QToolButton::setOnIconSet(*(const QIconSet *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_9(Smoke::Stack x) {
 	// setOffIconSet(const QIconSet&)
 	this->QToolButton::setOffIconSet(*(const QIconSet *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_10(Smoke::Stack x) {
 	// setIconSet(const QIconSet&, bool)
 	this->QToolButton::setIconSet(*(const QIconSet *)x[1].s_class,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_11(Smoke::Stack x) const {
 	// onIconSet()
@@ -106,6 +109,7 @@ public:
     void x_14(Smoke::Stack x) {
 	// setIconSet(const QIconSet&)
 	this->QToolButton::setIconSet(*(const QIconSet *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_15(Smoke::Stack x) const {
 	// iconSet()
@@ -130,6 +134,7 @@ public:
     void x_19(Smoke::Stack x) {
 	// setPopup(QPopupMenu*)
 	this->QToolButton::setPopup((QPopupMenu*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_20(Smoke::Stack x) const {
 	// popup()
@@ -139,6 +144,7 @@ public:
     void x_21(Smoke::Stack x) {
 	// setPopupDelay(int)
 	this->QToolButton::setPopupDelay((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_22(Smoke::Stack x) const {
 	// popupDelay()
@@ -148,10 +154,12 @@ public:
     void x_23(Smoke::Stack x) {
 	// openPopup()
 	this->QToolButton::openPopup();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_24(Smoke::Stack x) {
 	// setAutoRaise(bool)
 	this->QToolButton::setAutoRaise((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_25(Smoke::Stack x) const {
 	// autoRaise()
@@ -161,54 +169,67 @@ public:
     void x_26(Smoke::Stack x) {
 	// setUsesBigPixmap(bool)
 	this->QToolButton::setUsesBigPixmap((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_27(Smoke::Stack x) {
 	// setUsesTextLabel(bool)
 	this->QToolButton::setUsesTextLabel((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_28(Smoke::Stack x) {
 	// setTextLabel(const QString&, bool)
 	this->QToolButton::setTextLabel(*(const QString *)x[1].s_class,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_29(Smoke::Stack x) {
 	// setToggleButton(bool)
 	this->QToolButton::setToggleButton((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_30(Smoke::Stack x) {
 	// setOn(bool)
 	this->QToolButton::setOn((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_31(Smoke::Stack x) {
 	// toggle()
 	this->QToolButton::toggle();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_32(Smoke::Stack x) {
 	// setTextLabel(const QString&)
 	this->QToolButton::setTextLabel(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_33(Smoke::Stack x) {
 	// mousePressEvent(QMouseEvent*)
 	this->QToolButton::mousePressEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_34(Smoke::Stack x) {
 	// drawButton(QPainter*)
 	this->QToolButton::drawButton((QPainter*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_35(Smoke::Stack x) {
 	// drawButtonLabel(QPainter*)
 	this->QToolButton::drawButtonLabel((QPainter*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_36(Smoke::Stack x) {
 	// enterEvent(QEvent*)
 	this->QToolButton::enterEvent((QEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_37(Smoke::Stack x) {
 	// leaveEvent(QEvent*)
 	this->QToolButton::leaveEvent((QEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_38(Smoke::Stack x) {
 	// moveEvent(QMoveEvent*)
 	this->QToolButton::moveEvent((QMoveEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_39(Smoke::Stack x) const {
 	// uses3D()
@@ -223,6 +244,7 @@ public:
     void x_41(Smoke::Stack x) {
 	// paletteChange(const QPalette&)
 	this->QToolButton::paletteChange(*(const QPalette *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void adjustSize() {
 	Smoke::StackItem x[1];

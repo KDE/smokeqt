@@ -38,10 +38,12 @@ public:
     void x_5(Smoke::Stack x) {
 	// setX(int)
 	this->QPoint::setX((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_6(Smoke::Stack x) {
 	// setY(int)
 	this->QPoint::setY((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_7(Smoke::Stack x) const {
 	// manhattanLength()

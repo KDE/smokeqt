@@ -40,14 +40,17 @@ public:
     void x_7(Smoke::Stack x) {
 	// release()
 	xthis->QSessionManager::release();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_8(Smoke::Stack x) {
 	// cancel()
 	xthis->QSessionManager::cancel();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_9(Smoke::Stack x) {
 	// setRestartHint(QSessionManager::RestartHint)
 	xthis->QSessionManager::setRestartHint(*(QSessionManager::RestartHint *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_10(Smoke::Stack x) const {
 	// restartHint()
@@ -57,6 +60,7 @@ public:
     void x_11(Smoke::Stack x) {
 	// setRestartCommand(const QStringList&)
 	xthis->QSessionManager::setRestartCommand(*(const QStringList *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_12(Smoke::Stack x) const {
 	// restartCommand()
@@ -66,6 +70,7 @@ public:
     void x_13(Smoke::Stack x) {
 	// setDiscardCommand(const QStringList&)
 	xthis->QSessionManager::setDiscardCommand(*(const QStringList *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_14(Smoke::Stack x) const {
 	// discardCommand()
@@ -75,10 +80,12 @@ public:
     void x_15(Smoke::Stack x) {
 	// setManagerProperty(const QString&, const QString&)
 	xthis->QSessionManager::setManagerProperty(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_16(Smoke::Stack x) {
 	// setManagerProperty(const QString&, const QStringList&)
 	xthis->QSessionManager::setManagerProperty(*(const QString *)x[1].s_class,*(const QStringList *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_17(Smoke::Stack x) const {
 	// isPhase2()
@@ -88,6 +95,7 @@ public:
     void x_18(Smoke::Stack x) {
 	// requestPhase2()
 	xthis->QSessionManager::requestPhase2();
+	x[0].s_int = x[0].s_int; // noop
     }
     ~x_QSessionManager() {}
 };

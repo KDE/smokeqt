@@ -38,6 +38,7 @@ public:
     void x_5(Smoke::Stack x) {
 	// setData(const QString&)
 	this->QDomProcessingInstruction::setData(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_6(Smoke::Stack x) const {
 	// nodeType()

@@ -52,6 +52,7 @@ public:
     void x_4(Smoke::Stack x) {
 	// setForm(QSqlForm*)
 	this->QDataView::setForm((QSqlForm*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_5(Smoke::Stack x) {
 	// form()
@@ -61,6 +62,7 @@ public:
     void x_6(Smoke::Stack x) {
 	// setRecord(QSqlRecord*)
 	this->QDataView::setRecord((QSqlRecord*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_7(Smoke::Stack x) {
 	// record()
@@ -70,18 +72,22 @@ public:
     void x_8(Smoke::Stack x) {
 	// refresh(QSqlRecord*)
 	this->QDataView::refresh((QSqlRecord*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_9(Smoke::Stack x) {
 	// readFields()
 	this->QDataView::readFields();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_10(Smoke::Stack x) {
 	// writeFields()
 	this->QDataView::writeFields();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_11(Smoke::Stack x) {
 	// clearValues()
 	this->QDataView::clearValues();
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void adjustSize() {
 	Smoke::StackItem x[1];

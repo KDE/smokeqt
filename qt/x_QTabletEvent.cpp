@@ -90,10 +90,12 @@ public:
     void x_17(Smoke::Stack x) {
 	// accept()
 	this->QTabletEvent::accept();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_18(Smoke::Stack x) {
 	// ignore()
 	this->QTabletEvent::ignore();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_19(Smoke::Stack x) {
 	// uniqueId()

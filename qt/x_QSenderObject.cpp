@@ -9,6 +9,7 @@ public:
     void x_0(Smoke::Stack x) {
 	// setSender(QObject*)
 	this->QSenderObject::setSender((QObject*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_1(Smoke::Stack x) {
 	// QSenderObject()

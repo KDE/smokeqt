@@ -61,30 +61,37 @@ public:
     void x_5(Smoke::Stack x) {
 	// insertLine(const QString&, int)
 	this->QMultiLineEdit::insertLine(*(const QString *)x[1].s_class,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_6(Smoke::Stack x) {
 	// insertLine(const QString&)
 	this->QMultiLineEdit::insertLine(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_7(Smoke::Stack x) {
 	// insertAt(const QString&, int, int, bool)
 	this->QMultiLineEdit::insertAt(*(const QString *)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int,(bool)x[4].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_8(Smoke::Stack x) {
 	// insertAt(const QString&, int, int)
 	this->QMultiLineEdit::insertAt(*(const QString *)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_9(Smoke::Stack x) {
 	// removeLine(int)
 	this->QMultiLineEdit::removeLine((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_10(Smoke::Stack x) {
 	// setCursorPosition(int, int, bool)
 	this->QMultiLineEdit::setCursorPosition((int)x[1].s_int,(int)x[2].s_int,(bool)x[3].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_11(Smoke::Stack x) {
 	// setCursorPosition(int, int)
 	this->QMultiLineEdit::setCursorPosition((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_12(Smoke::Stack x) const {
 	// atBeginning()
@@ -99,6 +106,7 @@ public:
     void x_14(Smoke::Stack x) {
 	// setAlignment(int)
 	this->QMultiLineEdit::setAlignment((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_15(Smoke::Stack x) const {
 	// alignment()
@@ -108,6 +116,7 @@ public:
     void x_16(Smoke::Stack x) {
 	// setEdited(bool)
 	this->QMultiLineEdit::setEdited((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_17(Smoke::Stack x) const {
 	// edited()
@@ -127,10 +136,12 @@ public:
     void x_20(Smoke::Stack x) {
 	// cursorWordForward(bool)
 	this->QMultiLineEdit::cursorWordForward((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_21(Smoke::Stack x) {
 	// cursorWordBackward(bool)
 	this->QMultiLineEdit::cursorWordBackward((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_22(Smoke::Stack x) const {
 	// autoUpdate()
@@ -140,6 +151,7 @@ public:
     void x_23(Smoke::Stack x) {
 	// setAutoUpdate(bool)
 	this->QMultiLineEdit::setAutoUpdate((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_24(Smoke::Stack x) const {
 	// totalWidth()
@@ -159,10 +171,12 @@ public:
     void x_27(Smoke::Stack x) {
 	// setMaxLines(int)
 	this->QMultiLineEdit::setMaxLines((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_28(Smoke::Stack x) {
 	// deselect()
 	this->QMultiLineEdit::deselect();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_29(Smoke::Stack x) const {
 	// cursorPoint()
@@ -172,90 +186,112 @@ public:
     void x_30(Smoke::Stack x) {
 	// insertAndMark(const QString&, bool)
 	this->QMultiLineEdit::insertAndMark(*(const QString *)x[1].s_class,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_31(Smoke::Stack x) {
 	// newLine()
 	this->QMultiLineEdit::newLine();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_32(Smoke::Stack x) {
 	// killLine()
 	this->QMultiLineEdit::killLine();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_33(Smoke::Stack x) {
 	// pageUp(bool)
 	this->QMultiLineEdit::pageUp((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_34(Smoke::Stack x) {
 	// pageUp()
 	this->QMultiLineEdit::pageUp();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_35(Smoke::Stack x) {
 	// pageDown(bool)
 	this->QMultiLineEdit::pageDown((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_36(Smoke::Stack x) {
 	// pageDown()
 	this->QMultiLineEdit::pageDown();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_37(Smoke::Stack x) {
 	// cursorLeft(bool, bool)
 	this->QMultiLineEdit::cursorLeft((bool)x[1].s_bool,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_38(Smoke::Stack x) {
 	// cursorLeft(bool)
 	this->QMultiLineEdit::cursorLeft((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_39(Smoke::Stack x) {
 	// cursorLeft()
 	this->QMultiLineEdit::cursorLeft();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_40(Smoke::Stack x) {
 	// cursorRight(bool, bool)
 	this->QMultiLineEdit::cursorRight((bool)x[1].s_bool,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_41(Smoke::Stack x) {
 	// cursorRight(bool)
 	this->QMultiLineEdit::cursorRight((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_42(Smoke::Stack x) {
 	// cursorRight()
 	this->QMultiLineEdit::cursorRight();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_43(Smoke::Stack x) {
 	// cursorUp(bool)
 	this->QMultiLineEdit::cursorUp((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_44(Smoke::Stack x) {
 	// cursorUp()
 	this->QMultiLineEdit::cursorUp();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_45(Smoke::Stack x) {
 	// cursorDown(bool)
 	this->QMultiLineEdit::cursorDown((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_46(Smoke::Stack x) {
 	// cursorDown()
 	this->QMultiLineEdit::cursorDown();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_47(Smoke::Stack x) {
 	// backspace()
 	this->QMultiLineEdit::backspace();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_48(Smoke::Stack x) {
 	// home(bool)
 	this->QMultiLineEdit::home((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_49(Smoke::Stack x) {
 	// home()
 	this->QMultiLineEdit::home();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_50(Smoke::Stack x) {
 	// end(bool)
 	this->QMultiLineEdit::end((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_51(Smoke::Stack x) {
 	// end()
 	this->QMultiLineEdit::end();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_52(Smoke::Stack x) const {
 	// getMarkedRegion(int*, int*, int*, int*)

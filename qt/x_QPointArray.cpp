@@ -63,6 +63,7 @@ public:
     void x_8(Smoke::Stack x) {
 	// translate(int, int)
 	this->QPointArray::translate((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_9(Smoke::Stack x) const {
 	// boundingRect()
@@ -72,6 +73,7 @@ public:
     void x_10(Smoke::Stack x) const {
 	// point(uint, int*, int*)
 	this->QPointArray::point((uint)x[1].s_uint,(int*)x[2].s_class,(int*)x[3].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_11(Smoke::Stack x) const {
 	// point(uint)
@@ -81,10 +83,12 @@ public:
     void x_12(Smoke::Stack x) {
 	// setPoint(uint, int, int)
 	this->QPointArray::setPoint((uint)x[1].s_uint,(int)x[2].s_int,(int)x[3].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_13(Smoke::Stack x) {
 	// setPoint(uint, const QPoint&)
 	this->QPointArray::setPoint((uint)x[1].s_uint,*(const QPoint *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_14(Smoke::Stack x) {
 	// setPoints(int, const QCOORD*)
@@ -109,14 +113,17 @@ public:
     void x_18(Smoke::Stack x) {
 	// makeArc(int, int, int, int, int, int)
 	this->QPointArray::makeArc((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int,(int)x[6].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_19(Smoke::Stack x) {
 	// makeEllipse(int, int, int, int)
 	this->QPointArray::makeEllipse((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_20(Smoke::Stack x) {
 	// makeArc(int, int, int, int, int, int, const QWMatrix&)
 	this->QPointArray::makeArc((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int,(int)x[6].s_int,*(const QWMatrix *)x[7].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_21(Smoke::Stack x) const {
 	// cubicBezier()
@@ -141,6 +148,7 @@ public:
     static void x_25(Smoke::Stack x) {
 	// cleanBuffers()
 	QPointArray::cleanBuffers();
+	x[0].s_int = x[0].s_int; // noop
     }
     ~x_QPointArray() {}
 };

@@ -77,6 +77,7 @@ public:
     void x_8(Smoke::Stack x) {
 	// setTime(const QTime&)
 	this->QTimeEdit::setTime(*(const QTime *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_9(Smoke::Stack x) const {
 	// time()
@@ -86,6 +87,7 @@ public:
     void x_10(Smoke::Stack x) {
 	// setAutoAdvance(bool)
 	this->QTimeEdit::setAutoAdvance((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_11(Smoke::Stack x) const {
 	// autoAdvance()
@@ -95,6 +97,7 @@ public:
     void x_12(Smoke::Stack x) {
 	// setMinValue(const QTime&)
 	this->QTimeEdit::setMinValue(*(const QTime *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_13(Smoke::Stack x) const {
 	// minValue()
@@ -104,6 +107,7 @@ public:
     void x_14(Smoke::Stack x) {
 	// setMaxValue(const QTime&)
 	this->QTimeEdit::setMaxValue(*(const QTime *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_15(Smoke::Stack x) const {
 	// maxValue()
@@ -113,6 +117,7 @@ public:
     void x_16(Smoke::Stack x) {
 	// setRange(const QTime&, const QTime&)
 	this->QTimeEdit::setRange(*(const QTime *)x[1].s_class,*(const QTime *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_17(Smoke::Stack x) const {
 	// separator()
@@ -122,10 +127,12 @@ public:
     void x_18(Smoke::Stack x) {
 	// setSeparator(const QString&)
 	this->QTimeEdit::setSeparator(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_19(Smoke::Stack x) {
 	// valueChanged(const QTime&)
 	this->QTimeEdit::valueChanged(*(const QTime *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_20(Smoke::Stack x) {
 	// event(QEvent*)
@@ -135,18 +142,22 @@ public:
     void x_21(Smoke::Stack x) {
 	// timerEvent(QTimerEvent*)
 	this->QTimeEdit::timerEvent((QTimerEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_22(Smoke::Stack x) {
 	// resizeEvent(QResizeEvent*)
 	this->QTimeEdit::resizeEvent((QResizeEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_23(Smoke::Stack x) {
 	// stepUp()
 	this->QTimeEdit::stepUp();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_24(Smoke::Stack x) {
 	// stepDown()
 	this->QTimeEdit::stepDown();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_25(Smoke::Stack x) {
 	// sectionFormattedText(int)
@@ -156,10 +167,12 @@ public:
     void x_26(Smoke::Stack x) {
 	// addNumber(int, int)
 	this->QTimeEdit::addNumber((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_27(Smoke::Stack x) {
 	// removeLastNumber(int)
 	this->QTimeEdit::removeLastNumber((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_28(Smoke::Stack x) {
 	// setFocusSection(int)
@@ -174,18 +187,22 @@ public:
     void x_30(Smoke::Stack x) {
 	// setHour(int)
 	this->QTimeEdit::setHour((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_31(Smoke::Stack x) {
 	// setMinute(int)
 	this->QTimeEdit::setMinute((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_32(Smoke::Stack x) {
 	// setSecond(int)
 	this->QTimeEdit::setSecond((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_33(Smoke::Stack x) {
 	// updateButtons()
 	this->QTimeEdit::updateButtons();
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void addNumber(int x1, int x2) {
 	Smoke::StackItem x[3];

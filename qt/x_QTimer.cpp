@@ -45,18 +45,22 @@ public:
     void x_6(Smoke::Stack x) {
 	// changeInterval(int)
 	this->QTimer::changeInterval((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_7(Smoke::Stack x) {
 	// stop()
 	this->QTimer::stop();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_8(Smoke::Stack x) {
 	// timeout()
 	this->QTimer::timeout();
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_9(Smoke::Stack x) {
 	// singleShot(int, QObject*, const char*)
 	QTimer::singleShot((int)x[1].s_int,(QObject*)x[2].s_class,(const char*)x[3].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_10(Smoke::Stack x) {
 	// event(QEvent*)

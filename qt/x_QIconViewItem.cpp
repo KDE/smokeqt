@@ -71,14 +71,17 @@ public:
     void x_8(Smoke::Stack x) {
 	// setRenameEnabled(bool)
 	this->QIconViewItem::setRenameEnabled((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_9(Smoke::Stack x) {
 	// setDragEnabled(bool)
 	this->QIconViewItem::setDragEnabled((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_10(Smoke::Stack x) {
 	// setDropEnabled(bool)
 	this->QIconViewItem::setDropEnabled((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_11(Smoke::Stack x) const {
 	// text()
@@ -138,14 +141,17 @@ public:
     void x_22(Smoke::Stack x) {
 	// setSelected(bool, bool)
 	this->QIconViewItem::setSelected((bool)x[1].s_bool,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_23(Smoke::Stack x) {
 	// setSelected(bool)
 	this->QIconViewItem::setSelected((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_24(Smoke::Stack x) {
 	// setSelectable(bool)
 	this->QIconViewItem::setSelectable((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_25(Smoke::Stack x) const {
 	// isSelected()
@@ -160,6 +166,7 @@ public:
     void x_27(Smoke::Stack x) {
 	// repaint()
 	this->QIconViewItem::repaint();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_28(Smoke::Stack x) {
 	// move(int, int)
@@ -169,6 +176,7 @@ public:
     void x_29(Smoke::Stack x) {
 	// moveBy(int, int)
 	this->QIconViewItem::moveBy((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_30(Smoke::Stack x) {
 	// move(const QPoint&)
@@ -178,6 +186,7 @@ public:
     void x_31(Smoke::Stack x) {
 	// moveBy(const QPoint&)
 	this->QIconViewItem::moveBy(*(const QPoint *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_32(Smoke::Stack x) const {
 	// rect()
@@ -252,6 +261,7 @@ public:
     void x_46(Smoke::Stack x) {
 	// rename()
 	this->QIconViewItem::rename();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_47(Smoke::Stack x) const {
 	// compare(QIconViewItem*)
@@ -261,34 +271,42 @@ public:
     void x_48(Smoke::Stack x) {
 	// setText(const QString&)
 	this->QIconViewItem::setText(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_49(Smoke::Stack x) {
 	// setPixmap(const QPixmap&)
 	this->QIconViewItem::setPixmap(*(const QPixmap *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_50(Smoke::Stack x) {
 	// setPicture(const QPicture&)
 	this->QIconViewItem::setPicture(*(const QPicture *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_51(Smoke::Stack x) {
 	// setText(const QString&, bool, bool)
 	this->QIconViewItem::setText(*(const QString *)x[1].s_class,(bool)x[2].s_bool,(bool)x[3].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_52(Smoke::Stack x) {
 	// setText(const QString&, bool)
 	this->QIconViewItem::setText(*(const QString *)x[1].s_class,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_53(Smoke::Stack x) {
 	// setPixmap(const QPixmap&, bool, bool)
 	this->QIconViewItem::setPixmap(*(const QPixmap *)x[1].s_class,(bool)x[2].s_bool,(bool)x[3].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_54(Smoke::Stack x) {
 	// setPixmap(const QPixmap&, bool)
 	this->QIconViewItem::setPixmap(*(const QPixmap *)x[1].s_class,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_55(Smoke::Stack x) {
 	// setKey(const QString&)
 	this->QIconViewItem::setKey(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_56(Smoke::Stack x) const {
 	// rtti()
@@ -298,50 +316,62 @@ public:
     void x_57(Smoke::Stack x) {
 	// removeRenameBox()
 	this->QIconViewItem::removeRenameBox();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_58(Smoke::Stack x) {
 	// calcRect(const QString&)
 	this->QIconViewItem::calcRect(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_59(Smoke::Stack x) {
 	// calcRect()
 	this->QIconViewItem::calcRect();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_60(Smoke::Stack x) {
 	// paintItem(QPainter*, const QColorGroup&)
 	this->QIconViewItem::paintItem((QPainter*)x[1].s_class,*(const QColorGroup *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_61(Smoke::Stack x) {
 	// paintFocus(QPainter*, const QColorGroup&)
 	this->QIconViewItem::paintFocus((QPainter*)x[1].s_class,*(const QColorGroup *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_62(Smoke::Stack x) {
 	// dropped(QDropEvent*, const QValueList<QIconDragItem>&)
 	this->QIconViewItem::dropped((QDropEvent*)x[1].s_class,*(const QValueList<QIconDragItem> *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_63(Smoke::Stack x) {
 	// dragEntered()
 	this->QIconViewItem::dragEntered();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_64(Smoke::Stack x) {
 	// dragLeft()
 	this->QIconViewItem::dragLeft();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_65(Smoke::Stack x) {
 	// setItemRect(const QRect&)
 	this->QIconViewItem::setItemRect(*(const QRect *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_66(Smoke::Stack x) {
 	// setTextRect(const QRect&)
 	this->QIconViewItem::setTextRect(*(const QRect *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_67(Smoke::Stack x) {
 	// setPixmapRect(const QRect&)
 	this->QIconViewItem::setPixmapRect(*(const QRect *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_68(Smoke::Stack x) {
 	// calcTmpText()
 	this->QIconViewItem::calcTmpText();
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual bool acceptDrop(const QMimeSource* x1) const {
 	Smoke::StackItem x[2];

@@ -70,38 +70,47 @@ public:
     void x_8(Smoke::Stack x) {
 	// show()
 	this->QDialog::show();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_9(Smoke::Stack x) {
 	// hide()
 	this->QDialog::hide();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_10(Smoke::Stack x) {
 	// move(int, int)
 	this->QDialog::move((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_11(Smoke::Stack x) {
 	// move(const QPoint&)
 	this->QDialog::move(*(const QPoint *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_12(Smoke::Stack x) {
 	// resize(int, int)
 	this->QDialog::resize((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_13(Smoke::Stack x) {
 	// resize(const QSize&)
 	this->QDialog::resize(*(const QSize *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_14(Smoke::Stack x) {
 	// setGeometry(int, int, int, int)
 	this->QDialog::setGeometry((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_15(Smoke::Stack x) {
 	// setGeometry(const QRect&)
 	this->QDialog::setGeometry(*(const QRect *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_16(Smoke::Stack x) {
 	// setOrientation(Qt::Orientation)
 	this->QDialog::setOrientation(*(Qt::Orientation *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_17(Smoke::Stack x) const {
 	// orientation()
@@ -111,6 +120,7 @@ public:
     void x_18(Smoke::Stack x) {
 	// setExtension(QWidget*)
 	this->QDialog::setExtension((QWidget*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_19(Smoke::Stack x) const {
 	// extension()
@@ -130,6 +140,7 @@ public:
     void x_22(Smoke::Stack x) {
 	// setSizeGripEnabled(bool)
 	this->QDialog::setSizeGripEnabled((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_23(Smoke::Stack x) const {
 	// isSizeGripEnabled()
@@ -144,22 +155,27 @@ public:
     void x_25(Smoke::Stack x) {
 	// setResult(int)
 	this->QDialog::setResult((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_26(Smoke::Stack x) {
 	// keyPressEvent(QKeyEvent*)
 	this->QDialog::keyPressEvent((QKeyEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_27(Smoke::Stack x) {
 	// closeEvent(QCloseEvent*)
 	this->QDialog::closeEvent((QCloseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_28(Smoke::Stack x) {
 	// resizeEvent(QResizeEvent*)
 	this->QDialog::resizeEvent((QResizeEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_29(Smoke::Stack x) {
 	// contextMenuEvent(QContextMenuEvent*)
 	this->QDialog::contextMenuEvent((QContextMenuEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_30(Smoke::Stack x) {
 	// eventFilter(QObject*, QEvent*)
@@ -169,22 +185,27 @@ public:
     void x_31(Smoke::Stack x) {
 	// adjustPosition(QWidget*)
 	this->QDialog::adjustPosition((QWidget*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_32(Smoke::Stack x) {
 	// done(int)
 	this->QDialog::done((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_33(Smoke::Stack x) {
 	// accept()
 	this->QDialog::accept();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_34(Smoke::Stack x) {
 	// reject()
 	this->QDialog::reject();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_35(Smoke::Stack x) {
 	// showExtension(bool)
 	this->QDialog::showExtension((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void accept() {
 	Smoke::StackItem x[1];

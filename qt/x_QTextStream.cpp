@@ -73,10 +73,12 @@ public:
     void x_21(Smoke::Stack x) {
 	// setEncoding(QTextStream::Encoding)
 	this->QTextStream::setEncoding(*(QTextStream::Encoding *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_22(Smoke::Stack x) {
 	// setCodec(QTextCodec*)
 	this->QTextStream::setCodec((QTextCodec*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_23(Smoke::Stack x) {
 	// QTextStream()
@@ -121,10 +123,12 @@ public:
     void x_29(Smoke::Stack x) {
 	// setDevice(QIODevice*)
 	this->QTextStream::setDevice((QIODevice*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_30(Smoke::Stack x) {
 	// unsetDevice()
 	this->QTextStream::unsetDevice();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_31(Smoke::Stack x) const {
 	// atEnd()
@@ -294,6 +298,7 @@ public:
     void x_64(Smoke::Stack x) {
 	// skipWhiteSpace()
 	this->QTextStream::skipWhiteSpace();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_65(Smoke::Stack x) const {
 	// flags()
@@ -323,6 +328,7 @@ public:
     void x_70(Smoke::Stack x) {
 	// reset()
 	this->QTextStream::reset();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_71(Smoke::Stack x) const {
 	// width()

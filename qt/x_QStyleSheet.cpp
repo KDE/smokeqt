@@ -43,6 +43,7 @@ public:
     void x_5(Smoke::Stack x) {
 	// insert(QStyleSheetItem*)
 	this->QStyleSheet::insert((QStyleSheetItem*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_6(Smoke::Stack x) const {
 	// tag(const QString&, const QMap<QString, QString>&, const QString&, const QMimeSourceFactory&, bool, QTextDocument*)
@@ -52,10 +53,12 @@ public:
     void x_7(Smoke::Stack x) const {
 	// scaleFont(QFont&, int)
 	this->QStyleSheet::scaleFont(*(QFont *)x[1].s_class,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_8(Smoke::Stack x) const {
 	// error(const QString&)
 	this->QStyleSheet::error(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_9(Smoke::Stack x) {
 	// defaultSheet()
@@ -65,6 +68,7 @@ public:
     static void x_10(Smoke::Stack x) {
 	// setDefaultSheet(QStyleSheet*)
 	QStyleSheet::setDefaultSheet((QStyleSheet*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_11(Smoke::Stack x) {
 	// escape(const QString&)

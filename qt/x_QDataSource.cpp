@@ -8,6 +8,7 @@ public:
     void x_0(Smoke::Stack x) {
 	// maybeReady()
 	this->QDataSource::maybeReady();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_1(Smoke::Stack x) const {
 	// rewindable()
@@ -17,10 +18,12 @@ public:
     void x_2(Smoke::Stack x) {
 	// enableRewind(bool)
 	this->QDataSource::enableRewind((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_3(Smoke::Stack x) {
 	// rewind()
 	this->QDataSource::rewind();
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_4(Smoke::Stack x) {
 	// QDataSource()

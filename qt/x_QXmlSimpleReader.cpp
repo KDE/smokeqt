@@ -26,6 +26,7 @@ public:
     void x_3(Smoke::Stack x) {
 	// setFeature(const QString&, bool)
 	this->QXmlSimpleReader::setFeature(*(const QString *)x[1].s_class,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_4(Smoke::Stack x) const {
 	// hasFeature(const QString&)
@@ -45,6 +46,7 @@ public:
     void x_7(Smoke::Stack x) {
 	// setProperty(const QString&, void*)
 	this->QXmlSimpleReader::setProperty(*(const QString *)x[1].s_class,(void*)x[2].s_voidp);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_8(Smoke::Stack x) const {
 	// hasProperty(const QString&)
@@ -54,6 +56,7 @@ public:
     void x_9(Smoke::Stack x) {
 	// setEntityResolver(QXmlEntityResolver*)
 	this->QXmlSimpleReader::setEntityResolver((QXmlEntityResolver*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_10(Smoke::Stack x) const {
 	// entityResolver()
@@ -63,6 +66,7 @@ public:
     void x_11(Smoke::Stack x) {
 	// setDTDHandler(QXmlDTDHandler*)
 	this->QXmlSimpleReader::setDTDHandler((QXmlDTDHandler*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_12(Smoke::Stack x) const {
 	// DTDHandler()
@@ -72,6 +76,7 @@ public:
     void x_13(Smoke::Stack x) {
 	// setContentHandler(QXmlContentHandler*)
 	this->QXmlSimpleReader::setContentHandler((QXmlContentHandler*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_14(Smoke::Stack x) const {
 	// contentHandler()
@@ -81,6 +86,7 @@ public:
     void x_15(Smoke::Stack x) {
 	// setErrorHandler(QXmlErrorHandler*)
 	this->QXmlSimpleReader::setErrorHandler((QXmlErrorHandler*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_16(Smoke::Stack x) const {
 	// errorHandler()
@@ -90,6 +96,7 @@ public:
     void x_17(Smoke::Stack x) {
 	// setLexicalHandler(QXmlLexicalHandler*)
 	this->QXmlSimpleReader::setLexicalHandler((QXmlLexicalHandler*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_18(Smoke::Stack x) const {
 	// lexicalHandler()
@@ -99,6 +106,7 @@ public:
     void x_19(Smoke::Stack x) {
 	// setDeclHandler(QXmlDeclHandler*)
 	this->QXmlSimpleReader::setDeclHandler((QXmlDeclHandler*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_20(Smoke::Stack x) const {
 	// declHandler()

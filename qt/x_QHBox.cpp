@@ -52,6 +52,7 @@ public:
     void x_4(Smoke::Stack x) {
 	// setSpacing(int)
 	this->QHBox::setSpacing((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_5(Smoke::Stack x) {
 	// setStretchFactor(QWidget*, int)
@@ -94,6 +95,7 @@ public:
     void x_11(Smoke::Stack x) {
 	// frameChanged()
 	this->QHBox::frameChanged();
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void adjustSize() {
 	Smoke::StackItem x[1];

@@ -53,22 +53,27 @@ public:
     void x_13(Smoke::Stack x) {
 	// moveBy(double, double)
 	this->QCanvasItem::moveBy((double)x[1].s_double,(double)x[2].s_double);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_14(Smoke::Stack x) {
 	// move(double, double)
 	this->QCanvasItem::move((double)x[1].s_double,(double)x[2].s_double);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_15(Smoke::Stack x) {
 	// setX(double)
 	this->QCanvasItem::setX((double)x[1].s_double);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_16(Smoke::Stack x) {
 	// setY(double)
 	this->QCanvasItem::setY((double)x[1].s_double);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_17(Smoke::Stack x) {
 	// setZ(double)
 	this->QCanvasItem::setZ((double)x[1].s_double);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_18(Smoke::Stack x) const {
 	// animated()
@@ -78,18 +83,22 @@ public:
     void x_19(Smoke::Stack x) {
 	// setAnimated(bool)
 	this->QCanvasItem::setAnimated((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_20(Smoke::Stack x) {
 	// setVelocity(double, double)
 	this->QCanvasItem::setVelocity((double)x[1].s_double,(double)x[2].s_double);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_21(Smoke::Stack x) {
 	// setXVelocity(double)
 	this->QCanvasItem::setXVelocity((double)x[1].s_double);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_22(Smoke::Stack x) {
 	// setYVelocity(double)
 	this->QCanvasItem::setYVelocity((double)x[1].s_double);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_23(Smoke::Stack x) const {
 	// xVelocity()
@@ -104,6 +113,7 @@ public:
     void x_25(Smoke::Stack x) {
 	// advance(int)
 	this->QCanvasItem::advance((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_26(Smoke::Stack x) const {
 	// collisions(bool)
@@ -113,18 +123,22 @@ public:
     void x_27(Smoke::Stack x) {
 	// setCanvas(QCanvas*)
 	this->QCanvasItem::setCanvas((QCanvas*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_28(Smoke::Stack x) {
 	// show()
 	this->QCanvasItem::show();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_29(Smoke::Stack x) {
 	// hide()
 	this->QCanvasItem::hide();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_30(Smoke::Stack x) {
 	// setVisible(bool)
 	this->QCanvasItem::setVisible((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_31(Smoke::Stack x) const {
 	// isVisible()
@@ -134,6 +148,7 @@ public:
     void x_32(Smoke::Stack x) {
 	// setSelected(bool)
 	this->QCanvasItem::setSelected((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_33(Smoke::Stack x) const {
 	// isSelected()
@@ -143,6 +158,7 @@ public:
     void x_34(Smoke::Stack x) {
 	// setEnabled(bool)
 	this->QCanvasItem::setEnabled((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_35(Smoke::Stack x) const {
 	// isEnabled()
@@ -152,6 +168,7 @@ public:
     void x_36(Smoke::Stack x) {
 	// setActive(bool)
 	this->QCanvasItem::setActive((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_37(Smoke::Stack x) const {
 	// isActive()
@@ -196,6 +213,7 @@ public:
     void x_45(Smoke::Stack x) {
 	// update()
 	this->QCanvasItem::update();
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void advance(int x1) {
 	Smoke::StackItem x[2];

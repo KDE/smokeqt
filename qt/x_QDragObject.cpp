@@ -58,18 +58,22 @@ public:
     void x_10(Smoke::Stack x) {
 	// dragCopy()
 	this->QDragObject::dragCopy();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_11(Smoke::Stack x) {
 	// dragLink()
 	this->QDragObject::dragLink();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_12(Smoke::Stack x) {
 	// setPixmap(QPixmap)
 	this->QDragObject::setPixmap(*(QPixmap *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_13(Smoke::Stack x) {
 	// setPixmap(QPixmap, const QPoint&)
 	this->QDragObject::setPixmap(*(QPixmap *)x[1].s_class,*(const QPoint *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_14(Smoke::Stack x) const {
 	// pixmap()
@@ -94,6 +98,7 @@ public:
     static void x_18(Smoke::Stack x) {
 	// setTarget(QWidget*)
 	QDragObject::setTarget((QWidget*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_19(Smoke::Stack x) {
 	// drag(QDragObject::DragMode)

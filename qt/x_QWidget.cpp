@@ -83,6 +83,7 @@ public:
     void x_13(Smoke::Stack x) {
 	// setName(const char*)
 	this->QWidget::setName((const char*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_14(Smoke::Stack x) const {
 	// style()
@@ -92,6 +93,7 @@ public:
     void x_15(Smoke::Stack x) {
 	// setStyle(QStyle*)
 	this->QWidget::setStyle((QStyle*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_16(Smoke::Stack x) {
 	// setStyle(const QString&)
@@ -231,34 +233,42 @@ public:
     void x_43(Smoke::Stack x) {
 	// setMinimumSize(const QSize&)
 	this->QWidget::setMinimumSize(*(const QSize *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_44(Smoke::Stack x) {
 	// setMinimumSize(int, int)
 	this->QWidget::setMinimumSize((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_45(Smoke::Stack x) {
 	// setMaximumSize(const QSize&)
 	this->QWidget::setMaximumSize(*(const QSize *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_46(Smoke::Stack x) {
 	// setMaximumSize(int, int)
 	this->QWidget::setMaximumSize((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_47(Smoke::Stack x) {
 	// setMinimumWidth(int)
 	this->QWidget::setMinimumWidth((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_48(Smoke::Stack x) {
 	// setMinimumHeight(int)
 	this->QWidget::setMinimumHeight((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_49(Smoke::Stack x) {
 	// setMaximumWidth(int)
 	this->QWidget::setMaximumWidth((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_50(Smoke::Stack x) {
 	// setMaximumHeight(int)
 	this->QWidget::setMaximumHeight((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_51(Smoke::Stack x) const {
 	// sizeIncrement()
@@ -268,10 +278,12 @@ public:
     void x_52(Smoke::Stack x) {
 	// setSizeIncrement(const QSize&)
 	this->QWidget::setSizeIncrement(*(const QSize *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_53(Smoke::Stack x) {
 	// setSizeIncrement(int, int)
 	this->QWidget::setSizeIncrement((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_54(Smoke::Stack x) const {
 	// baseSize()
@@ -281,26 +293,32 @@ public:
     void x_55(Smoke::Stack x) {
 	// setBaseSize(const QSize&)
 	this->QWidget::setBaseSize(*(const QSize *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_56(Smoke::Stack x) {
 	// setBaseSize(int, int)
 	this->QWidget::setBaseSize((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_57(Smoke::Stack x) {
 	// setFixedSize(const QSize&)
 	this->QWidget::setFixedSize(*(const QSize *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_58(Smoke::Stack x) {
 	// setFixedSize(int, int)
 	this->QWidget::setFixedSize((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_59(Smoke::Stack x) {
 	// setFixedWidth(int)
 	this->QWidget::setFixedWidth((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_60(Smoke::Stack x) {
 	// setFixedHeight(int)
 	this->QWidget::setFixedHeight((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_61(Smoke::Stack x) const {
 	// mapToGlobal(const QPoint&)
@@ -345,10 +363,12 @@ public:
     void x_69(Smoke::Stack x) {
 	// setBackgroundMode(Qt::BackgroundMode)
 	this->QWidget::setBackgroundMode(*(Qt::BackgroundMode *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_70(Smoke::Stack x) {
 	// setBackgroundMode(Qt::BackgroundMode, Qt::BackgroundMode)
 	this->QWidget::setBackgroundMode(*(Qt::BackgroundMode *)x[1].s_class,*(Qt::BackgroundMode *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_71(Smoke::Stack x) const {
 	// foregroundColor()
@@ -363,6 +383,7 @@ public:
     void x_73(Smoke::Stack x) {
 	// setEraseColor(const QColor&)
 	this->QWidget::setEraseColor(*(const QColor *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_74(Smoke::Stack x) const {
 	// erasePixmap()
@@ -372,6 +393,7 @@ public:
     void x_75(Smoke::Stack x) {
 	// setErasePixmap(const QPixmap&)
 	this->QWidget::setErasePixmap(*(const QPixmap *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_76(Smoke::Stack x) const {
 	// colorGroup()
@@ -391,10 +413,12 @@ public:
     void x_79(Smoke::Stack x) {
 	// setPalette(const QPalette&)
 	this->QWidget::setPalette(*(const QPalette *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_80(Smoke::Stack x) {
 	// unsetPalette()
 	this->QWidget::unsetPalette();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_81(Smoke::Stack x) const {
 	// paletteForegroundColor()
@@ -404,6 +428,7 @@ public:
     void x_82(Smoke::Stack x) {
 	// setPaletteForegroundColor(const QColor&)
 	this->QWidget::setPaletteForegroundColor(*(const QColor *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_83(Smoke::Stack x) const {
 	// paletteBackgroundColor()
@@ -413,6 +438,7 @@ public:
     void x_84(Smoke::Stack x) {
 	// setPaletteBackgroundColor(const QColor&)
 	this->QWidget::setPaletteBackgroundColor(*(const QColor *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_85(Smoke::Stack x) const {
 	// paletteBackgroundPixmap()
@@ -422,6 +448,7 @@ public:
     void x_86(Smoke::Stack x) {
 	// setPaletteBackgroundPixmap(const QPixmap&)
 	this->QWidget::setPaletteBackgroundPixmap(*(const QPixmap *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_87(Smoke::Stack x) const {
 	// backgroundBrush()
@@ -441,10 +468,12 @@ public:
     void x_90(Smoke::Stack x) {
 	// setFont(const QFont&)
 	this->QWidget::setFont(*(const QFont *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_91(Smoke::Stack x) {
 	// unsetFont()
 	this->QWidget::unsetFont();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_92(Smoke::Stack x) const {
 	// fontMetrics()
@@ -469,10 +498,12 @@ public:
     void x_96(Smoke::Stack x) {
 	// setCursor(const QCursor&)
 	this->QWidget::setCursor(*(const QCursor *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_97(Smoke::Stack x) {
 	// unsetCursor()
 	this->QWidget::unsetCursor();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_98(Smoke::Stack x) const {
 	// caption()
@@ -502,14 +533,17 @@ public:
     void x_103(Smoke::Stack x) {
 	// setMask(const QBitmap&)
 	this->QWidget::setMask(*(const QBitmap *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_104(Smoke::Stack x) {
 	// setMask(const QRegion&)
 	this->QWidget::setMask(*(const QRegion *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_105(Smoke::Stack x) {
 	// clearMask()
 	this->QWidget::clearMask();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_106(Smoke::Stack x) const {
 	// backgroundColor()
@@ -519,6 +553,7 @@ public:
     void x_107(Smoke::Stack x) {
 	// setBackgroundColor(const QColor&)
 	this->QWidget::setBackgroundColor(*(const QColor *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_108(Smoke::Stack x) const {
 	// backgroundPixmap()
@@ -528,6 +563,7 @@ public:
     void x_109(Smoke::Stack x) {
 	// setBackgroundPixmap(const QPixmap&)
 	this->QWidget::setBackgroundPixmap(*(const QPixmap *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_110(Smoke::Stack x) const {
 	// isActiveWindow()
@@ -537,6 +573,7 @@ public:
     void x_111(Smoke::Stack x) {
 	// setActiveWindow()
 	this->QWidget::setActiveWindow();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_112(Smoke::Stack x) const {
 	// isFocusEnabled()
@@ -551,6 +588,7 @@ public:
     void x_114(Smoke::Stack x) {
 	// setFocusPolicy(QWidget::FocusPolicy)
 	this->QWidget::setFocusPolicy(*(QWidget::FocusPolicy *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_115(Smoke::Stack x) const {
 	// hasFocus()
@@ -560,6 +598,7 @@ public:
     void x_116(Smoke::Stack x) {
 	// setFocusProxy(QWidget*)
 	this->QWidget::setFocusProxy((QWidget*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_117(Smoke::Stack x) const {
 	// focusProxy()
@@ -569,22 +608,27 @@ public:
     void x_118(Smoke::Stack x) {
 	// grabMouse()
 	this->QWidget::grabMouse();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_119(Smoke::Stack x) {
 	// grabMouse(const QCursor&)
 	this->QWidget::grabMouse(*(const QCursor *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_120(Smoke::Stack x) {
 	// releaseMouse()
 	this->QWidget::releaseMouse();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_121(Smoke::Stack x) {
 	// grabKeyboard()
 	this->QWidget::grabKeyboard();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_122(Smoke::Stack x) {
 	// releaseKeyboard()
 	this->QWidget::releaseKeyboard();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_123(Smoke::Stack x) const {
 	// isUpdatesEnabled()
@@ -649,6 +693,7 @@ public:
     void x_135(Smoke::Stack x) {
 	// setSizePolicy(QSizePolicy)
 	this->QWidget::setSizePolicy(*(QSizePolicy *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_136(Smoke::Stack x) const {
 	// heightForWidth(int)
@@ -658,6 +703,7 @@ public:
     void x_137(Smoke::Stack x) {
 	// adjustSize()
 	this->QWidget::adjustSize();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_138(Smoke::Stack x) const {
 	// layout()
@@ -667,62 +713,77 @@ public:
     void x_139(Smoke::Stack x) {
 	// updateGeometry()
 	this->QWidget::updateGeometry();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_140(Smoke::Stack x) {
 	// reparent(QWidget*, Qt::WFlags, const QPoint&, bool)
 	this->QWidget::reparent((QWidget*)x[1].s_class,*(Qt::WFlags *)x[2].s_class,*(const QPoint *)x[3].s_class,(bool)x[4].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_141(Smoke::Stack x) {
 	// reparent(QWidget*, Qt::WFlags, const QPoint&)
 	this->QWidget::reparent((QWidget*)x[1].s_class,*(Qt::WFlags *)x[2].s_class,*(const QPoint *)x[3].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_142(Smoke::Stack x) {
 	// reparent(QWidget*, const QPoint&, bool)
 	this->QWidget::reparent((QWidget*)x[1].s_class,*(const QPoint *)x[2].s_class,(bool)x[3].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_143(Smoke::Stack x) {
 	// reparent(QWidget*, const QPoint&)
 	this->QWidget::reparent((QWidget*)x[1].s_class,*(const QPoint *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_144(Smoke::Stack x) {
 	// recreate(QWidget*, Qt::WFlags, const QPoint&, bool)
 	this->QWidget::recreate((QWidget*)x[1].s_class,*(Qt::WFlags *)x[2].s_class,*(const QPoint *)x[3].s_class,(bool)x[4].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_145(Smoke::Stack x) {
 	// recreate(QWidget*, Qt::WFlags, const QPoint&)
 	this->QWidget::recreate((QWidget*)x[1].s_class,*(Qt::WFlags *)x[2].s_class,*(const QPoint *)x[3].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_146(Smoke::Stack x) {
 	// erase()
 	this->QWidget::erase();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_147(Smoke::Stack x) {
 	// erase(int, int, int, int)
 	this->QWidget::erase((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_148(Smoke::Stack x) {
 	// erase(const QRect&)
 	this->QWidget::erase(*(const QRect *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_149(Smoke::Stack x) {
 	// erase(const QRegion&)
 	this->QWidget::erase(*(const QRegion *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_150(Smoke::Stack x) {
 	// scroll(int, int)
 	this->QWidget::scroll((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_151(Smoke::Stack x) {
 	// scroll(int, int, const QRect&)
 	this->QWidget::scroll((int)x[1].s_int,(int)x[2].s_int,*(const QRect *)x[3].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_152(Smoke::Stack x) {
 	// drawText(int, int, const QString&)
 	this->QWidget::drawText((int)x[1].s_int,(int)x[2].s_int,*(const QString *)x[3].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_153(Smoke::Stack x) {
 	// drawText(const QPoint&, const QString&)
 	this->QWidget::drawText(*(const QPoint *)x[1].s_class,*(const QString *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_154(Smoke::Stack x) const {
 	// focusWidget()
@@ -742,10 +803,12 @@ public:
     void x_157(Smoke::Stack x) {
 	// setAcceptDrops(bool)
 	this->QWidget::setAcceptDrops((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_158(Smoke::Stack x) {
 	// setAutoMask(bool)
 	this->QWidget::setAutoMask((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_159(Smoke::Stack x) const {
 	// autoMask()
@@ -755,6 +818,7 @@ public:
     void x_160(Smoke::Stack x) {
 	// setBackgroundOrigin(QWidget::BackgroundOrigin)
 	this->QWidget::setBackgroundOrigin(*(QWidget::BackgroundOrigin *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_161(Smoke::Stack x) const {
 	// backgroundOrigin()
@@ -809,126 +873,157 @@ public:
     void x_171(Smoke::Stack x) {
 	// setPalette(const QPalette&, bool)
 	this->QWidget::setPalette(*(const QPalette *)x[1].s_class,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_172(Smoke::Stack x) {
 	// setFont(const QFont&, bool)
 	this->QWidget::setFont(*(const QFont *)x[1].s_class,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_173(Smoke::Stack x) {
 	// setEnabled(bool)
 	this->QWidget::setEnabled((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_174(Smoke::Stack x) {
 	// setDisabled(bool)
 	this->QWidget::setDisabled((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_175(Smoke::Stack x) {
 	// setCaption(const QString&)
 	this->QWidget::setCaption(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_176(Smoke::Stack x) {
 	// setIcon(const QPixmap&)
 	this->QWidget::setIcon(*(const QPixmap *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_177(Smoke::Stack x) {
 	// setIconText(const QString&)
 	this->QWidget::setIconText(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_178(Smoke::Stack x) {
 	// setMouseTracking(bool)
 	this->QWidget::setMouseTracking((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_179(Smoke::Stack x) {
 	// setFocus()
 	this->QWidget::setFocus();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_180(Smoke::Stack x) {
 	// clearFocus()
 	this->QWidget::clearFocus();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_181(Smoke::Stack x) {
 	// setUpdatesEnabled(bool)
 	this->QWidget::setUpdatesEnabled((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_182(Smoke::Stack x) {
 	// update()
 	this->QWidget::update();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_183(Smoke::Stack x) {
 	// update(int, int, int, int)
 	this->QWidget::update((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_184(Smoke::Stack x) {
 	// update(const QRect&)
 	this->QWidget::update(*(const QRect *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_185(Smoke::Stack x) {
 	// repaint()
 	this->QWidget::repaint();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_186(Smoke::Stack x) {
 	// repaint(bool)
 	this->QWidget::repaint((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_187(Smoke::Stack x) {
 	// repaint(int, int, int, int, bool)
 	this->QWidget::repaint((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(bool)x[5].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_188(Smoke::Stack x) {
 	// repaint(int, int, int, int)
 	this->QWidget::repaint((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_189(Smoke::Stack x) {
 	// repaint(const QRect&, bool)
 	this->QWidget::repaint(*(const QRect *)x[1].s_class,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_190(Smoke::Stack x) {
 	// repaint(const QRect&)
 	this->QWidget::repaint(*(const QRect *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_191(Smoke::Stack x) {
 	// repaint(const QRegion&, bool)
 	this->QWidget::repaint(*(const QRegion *)x[1].s_class,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_192(Smoke::Stack x) {
 	// repaint(const QRegion&)
 	this->QWidget::repaint(*(const QRegion *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_193(Smoke::Stack x) {
 	// show()
 	this->QWidget::show();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_194(Smoke::Stack x) {
 	// hide()
 	this->QWidget::hide();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_195(Smoke::Stack x) {
 	// iconify()
 	this->QWidget::iconify();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_196(Smoke::Stack x) {
 	// showMinimized()
 	this->QWidget::showMinimized();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_197(Smoke::Stack x) {
 	// showMaximized()
 	this->QWidget::showMaximized();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_198(Smoke::Stack x) {
 	// showFullScreen()
 	this->QWidget::showFullScreen();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_199(Smoke::Stack x) {
 	// showNormal()
 	this->QWidget::showNormal();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_200(Smoke::Stack x) {
 	// polish()
 	this->QWidget::polish();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_201(Smoke::Stack x) const {
 	// constPolish()
 	this->QWidget::constPolish();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_202(Smoke::Stack x) {
 	// close()
@@ -938,42 +1033,52 @@ public:
     void x_203(Smoke::Stack x) {
 	// raise()
 	this->QWidget::raise();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_204(Smoke::Stack x) {
 	// lower()
 	this->QWidget::lower();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_205(Smoke::Stack x) {
 	// stackUnder(QWidget*)
 	this->QWidget::stackUnder((QWidget*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_206(Smoke::Stack x) {
 	// move(int, int)
 	this->QWidget::move((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_207(Smoke::Stack x) {
 	// move(const QPoint&)
 	this->QWidget::move(*(const QPoint *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_208(Smoke::Stack x) {
 	// resize(int, int)
 	this->QWidget::resize((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_209(Smoke::Stack x) {
 	// resize(const QSize&)
 	this->QWidget::resize(*(const QSize *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_210(Smoke::Stack x) {
 	// setGeometry(int, int, int, int)
 	this->QWidget::setGeometry((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_211(Smoke::Stack x) {
 	// setGeometry(const QRect&)
 	this->QWidget::setGeometry(*(const QRect *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_212(Smoke::Stack x) {
 	// setTabOrder(QWidget*, QWidget*)
 	QWidget::setTabOrder((QWidget*)x[1].s_class,(QWidget*)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_213(Smoke::Stack x) {
 	// mouseGrabber()
@@ -1003,130 +1108,162 @@ public:
     void x_218(Smoke::Stack x) {
 	// mousePressEvent(QMouseEvent*)
 	this->QWidget::mousePressEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_219(Smoke::Stack x) {
 	// mouseReleaseEvent(QMouseEvent*)
 	this->QWidget::mouseReleaseEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_220(Smoke::Stack x) {
 	// mouseDoubleClickEvent(QMouseEvent*)
 	this->QWidget::mouseDoubleClickEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_221(Smoke::Stack x) {
 	// mouseMoveEvent(QMouseEvent*)
 	this->QWidget::mouseMoveEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_222(Smoke::Stack x) {
 	// wheelEvent(QWheelEvent*)
 	this->QWidget::wheelEvent((QWheelEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_223(Smoke::Stack x) {
 	// keyPressEvent(QKeyEvent*)
 	this->QWidget::keyPressEvent((QKeyEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_224(Smoke::Stack x) {
 	// keyReleaseEvent(QKeyEvent*)
 	this->QWidget::keyReleaseEvent((QKeyEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_225(Smoke::Stack x) {
 	// focusInEvent(QFocusEvent*)
 	this->QWidget::focusInEvent((QFocusEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_226(Smoke::Stack x) {
 	// focusOutEvent(QFocusEvent*)
 	this->QWidget::focusOutEvent((QFocusEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_227(Smoke::Stack x) {
 	// enterEvent(QEvent*)
 	this->QWidget::enterEvent((QEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_228(Smoke::Stack x) {
 	// leaveEvent(QEvent*)
 	this->QWidget::leaveEvent((QEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_229(Smoke::Stack x) {
 	// paintEvent(QPaintEvent*)
 	this->QWidget::paintEvent((QPaintEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_230(Smoke::Stack x) {
 	// moveEvent(QMoveEvent*)
 	this->QWidget::moveEvent((QMoveEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_231(Smoke::Stack x) {
 	// resizeEvent(QResizeEvent*)
 	this->QWidget::resizeEvent((QResizeEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_232(Smoke::Stack x) {
 	// closeEvent(QCloseEvent*)
 	this->QWidget::closeEvent((QCloseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_233(Smoke::Stack x) {
 	// contextMenuEvent(QContextMenuEvent*)
 	this->QWidget::contextMenuEvent((QContextMenuEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_234(Smoke::Stack x) {
 	// imStartEvent(QIMEvent*)
 	this->QWidget::imStartEvent((QIMEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_235(Smoke::Stack x) {
 	// imComposeEvent(QIMEvent*)
 	this->QWidget::imComposeEvent((QIMEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_236(Smoke::Stack x) {
 	// imEndEvent(QIMEvent*)
 	this->QWidget::imEndEvent((QIMEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_237(Smoke::Stack x) {
 	// tabletEvent(QTabletEvent*)
 	this->QWidget::tabletEvent((QTabletEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_238(Smoke::Stack x) {
 	// dragEnterEvent(QDragEnterEvent*)
 	this->QWidget::dragEnterEvent((QDragEnterEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_239(Smoke::Stack x) {
 	// dragMoveEvent(QDragMoveEvent*)
 	this->QWidget::dragMoveEvent((QDragMoveEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_240(Smoke::Stack x) {
 	// dragLeaveEvent(QDragLeaveEvent*)
 	this->QWidget::dragLeaveEvent((QDragLeaveEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_241(Smoke::Stack x) {
 	// dropEvent(QDropEvent*)
 	this->QWidget::dropEvent((QDropEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_242(Smoke::Stack x) {
 	// showEvent(QShowEvent*)
 	this->QWidget::showEvent((QShowEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_243(Smoke::Stack x) {
 	// hideEvent(QHideEvent*)
 	this->QWidget::hideEvent((QHideEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_244(Smoke::Stack x) {
 	// updateMask()
 	this->QWidget::updateMask();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_245(Smoke::Stack x) {
 	// styleChange(QStyle&)
 	this->QWidget::styleChange(*(QStyle *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_246(Smoke::Stack x) {
 	// enabledChange(bool)
 	this->QWidget::enabledChange((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_247(Smoke::Stack x) {
 	// paletteChange(const QPalette&)
 	this->QWidget::paletteChange(*(const QPalette *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_248(Smoke::Stack x) {
 	// fontChange(const QFont&)
 	this->QWidget::fontChange(*(const QFont *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_249(Smoke::Stack x) {
 	// windowActivationChange(bool)
 	this->QWidget::windowActivationChange((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_250(Smoke::Stack x) const {
 	// metric(int)
@@ -1136,34 +1273,42 @@ public:
     void x_251(Smoke::Stack x) {
 	// resetInputContext()
 	this->QWidget::resetInputContext();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_252(Smoke::Stack x) {
 	// create(WId, bool, bool)
 	this->QWidget::create(*(WId *)x[1].s_class,(bool)x[2].s_bool,(bool)x[3].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_253(Smoke::Stack x) {
 	// create(WId, bool)
 	this->QWidget::create(*(WId *)x[1].s_class,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_254(Smoke::Stack x) {
 	// create(WId)
 	this->QWidget::create(*(WId *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_255(Smoke::Stack x) {
 	// create()
 	this->QWidget::create();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_256(Smoke::Stack x) {
 	// destroy(bool, bool)
 	this->QWidget::destroy((bool)x[1].s_bool,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_257(Smoke::Stack x) {
 	// destroy(bool)
 	this->QWidget::destroy((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_258(Smoke::Stack x) {
 	// destroy()
 	this->QWidget::destroy();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_259(Smoke::Stack x) const {
 	// getWState()
@@ -1173,10 +1318,12 @@ public:
     void x_260(Smoke::Stack x) {
 	// setWState(uint)
 	this->QWidget::setWState((uint)x[1].s_uint);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_261(Smoke::Stack x) {
 	// clearWState(uint)
 	this->QWidget::clearWState((uint)x[1].s_uint);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_262(Smoke::Stack x) const {
 	// getWFlags()
@@ -1186,10 +1333,12 @@ public:
     void x_263(Smoke::Stack x) {
 	// setWFlags(Qt::WFlags)
 	this->QWidget::setWFlags(*(Qt::WFlags *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_264(Smoke::Stack x) {
 	// clearWFlags(Qt::WFlags)
 	this->QWidget::clearWFlags(*(Qt::WFlags *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_265(Smoke::Stack x) {
 	// focusNextPrevChild(bool)
@@ -1214,18 +1363,22 @@ public:
     void x_269(Smoke::Stack x) {
 	// setKeyCompression(bool)
 	this->QWidget::setKeyCompression((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_270(Smoke::Stack x) {
 	// setMicroFocusHint(int, int, int, int, bool, QFont*)
 	this->QWidget::setMicroFocusHint((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(bool)x[5].s_bool,(QFont*)x[6].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_271(Smoke::Stack x) {
 	// setMicroFocusHint(int, int, int, int, bool)
 	this->QWidget::setMicroFocusHint((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(bool)x[5].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_272(Smoke::Stack x) {
 	// setMicroFocusHint(int, int, int, int)
 	this->QWidget::setMicroFocusHint((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void adjustSize() {
 	Smoke::StackItem x[1];

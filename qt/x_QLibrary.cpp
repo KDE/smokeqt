@@ -41,6 +41,7 @@ public:
     void x_6(Smoke::Stack x) {
 	// setAutoUnload(bool)
 	this->QLibrary::setAutoUnload((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_7(Smoke::Stack x) const {
 	// library()

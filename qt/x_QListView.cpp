@@ -93,18 +93,22 @@ public:
     void x_16(Smoke::Stack x) {
 	// setTreeStepSize(int)
 	this->QListView::setTreeStepSize((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_17(Smoke::Stack x) {
 	// insertItem(QListViewItem*)
 	this->QListView::insertItem((QListViewItem*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_18(Smoke::Stack x) {
 	// takeItem(QListViewItem*)
 	this->QListView::takeItem((QListViewItem*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_19(Smoke::Stack x) {
 	// removeItem(QListViewItem*)
 	this->QListView::removeItem((QListViewItem*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_20(Smoke::Stack x) const {
 	// header()
@@ -134,14 +138,17 @@ public:
     void x_25(Smoke::Stack x) {
 	// removeColumn(int)
 	this->QListView::removeColumn((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_26(Smoke::Stack x) {
 	// setColumnText(int, const QString&)
 	this->QListView::setColumnText((int)x[1].s_int,*(const QString *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_27(Smoke::Stack x) {
 	// setColumnText(int, const QIconSet&, const QString&)
 	this->QListView::setColumnText((int)x[1].s_int,*(const QIconSet *)x[2].s_class,*(const QString *)x[3].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_28(Smoke::Stack x) const {
 	// columnText(int)
@@ -151,6 +158,7 @@ public:
     void x_29(Smoke::Stack x) {
 	// setColumnWidth(int, int)
 	this->QListView::setColumnWidth((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_30(Smoke::Stack x) const {
 	// columnWidth(int)
@@ -160,6 +168,7 @@ public:
     void x_31(Smoke::Stack x) {
 	// setColumnWidthMode(int, QListView::WidthMode)
 	this->QListView::setColumnWidthMode((int)x[1].s_int,*(QListView::WidthMode *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_32(Smoke::Stack x) const {
 	// columnWidthMode(int)
@@ -174,6 +183,7 @@ public:
     void x_34(Smoke::Stack x) {
 	// setColumnAlignment(int, int)
 	this->QListView::setColumnAlignment((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_35(Smoke::Stack x) const {
 	// columnAlignment(int)
@@ -183,6 +193,7 @@ public:
     void x_36(Smoke::Stack x) {
 	// show()
 	this->QListView::show();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_37(Smoke::Stack x) const {
 	// itemAt(const QPoint&)
@@ -202,14 +213,17 @@ public:
     void x_40(Smoke::Stack x) {
 	// ensureItemVisible(const QListViewItem*)
 	this->QListView::ensureItemVisible((const QListViewItem*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_41(Smoke::Stack x) const {
 	// repaintItem(const QListViewItem*)
 	this->QListView::repaintItem((const QListViewItem*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_42(Smoke::Stack x) {
 	// setMultiSelection(bool)
 	this->QListView::setMultiSelection((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_43(Smoke::Stack x) const {
 	// isMultiSelection()
@@ -219,6 +233,7 @@ public:
     void x_44(Smoke::Stack x) {
 	// setSelectionMode(QListView::SelectionMode)
 	this->QListView::setSelectionMode(*(QListView::SelectionMode *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_45(Smoke::Stack x) const {
 	// selectionMode()
@@ -228,10 +243,12 @@ public:
     void x_46(Smoke::Stack x) {
 	// clearSelection()
 	this->QListView::clearSelection();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_47(Smoke::Stack x) {
 	// setSelected(QListViewItem*, bool)
 	this->QListView::setSelected((QListViewItem*)x[1].s_class,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_48(Smoke::Stack x) const {
 	// isSelected(const QListViewItem*)
@@ -246,6 +263,7 @@ public:
     void x_50(Smoke::Stack x) {
 	// setOpen(QListViewItem*, bool)
 	this->QListView::setOpen((QListViewItem*)x[1].s_class,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_51(Smoke::Stack x) const {
 	// isOpen(const QListViewItem*)
@@ -255,6 +273,7 @@ public:
     void x_52(Smoke::Stack x) {
 	// setCurrentItem(QListViewItem*)
 	this->QListView::setCurrentItem((QListViewItem*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_53(Smoke::Stack x) const {
 	// currentItem()
@@ -279,6 +298,7 @@ public:
     void x_57(Smoke::Stack x) {
 	// setAllColumnsShowFocus(bool)
 	this->QListView::setAllColumnsShowFocus((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_58(Smoke::Stack x) const {
 	// allColumnsShowFocus()
@@ -288,6 +308,7 @@ public:
     void x_59(Smoke::Stack x) {
 	// setItemMargin(int)
 	this->QListView::setItemMargin((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_60(Smoke::Stack x) const {
 	// itemMargin()
@@ -297,6 +318,7 @@ public:
     void x_61(Smoke::Stack x) {
 	// setRootIsDecorated(bool)
 	this->QListView::setRootIsDecorated((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_62(Smoke::Stack x) const {
 	// rootIsDecorated()
@@ -306,22 +328,27 @@ public:
     void x_63(Smoke::Stack x) {
 	// setSorting(int, bool)
 	this->QListView::setSorting((int)x[1].s_int,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_64(Smoke::Stack x) {
 	// setSorting(int)
 	this->QListView::setSorting((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_65(Smoke::Stack x) {
 	// sort()
 	this->QListView::sort();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_66(Smoke::Stack x) {
 	// setFont(const QFont&)
 	this->QListView::setFont(*(const QFont *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_67(Smoke::Stack x) {
 	// setPalette(const QPalette&)
 	this->QListView::setPalette(*(const QPalette *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_68(Smoke::Stack x) {
 	// eventFilter(QObject*, QEvent*)
@@ -341,6 +368,7 @@ public:
     void x_71(Smoke::Stack x) {
 	// setShowSortIndicator(bool)
 	this->QListView::setShowSortIndicator((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_72(Smoke::Stack x) const {
 	// showSortIndicator()
@@ -350,6 +378,7 @@ public:
     void x_73(Smoke::Stack x) {
 	// setShowToolTips(bool)
 	this->QListView::setShowToolTips((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_74(Smoke::Stack x) const {
 	// showToolTips()
@@ -359,6 +388,7 @@ public:
     void x_75(Smoke::Stack x) {
 	// setResizeMode(QListView::ResizeMode)
 	this->QListView::setResizeMode(*(QListView::ResizeMode *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_76(Smoke::Stack x) const {
 	// resizeMode()
@@ -378,6 +408,7 @@ public:
     void x_79(Smoke::Stack x) {
 	// setDefaultRenameAction(QListView::RenameAction)
 	this->QListView::setDefaultRenameAction(*(QListView::RenameAction *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_80(Smoke::Stack x) const {
 	// defaultRenameAction()
@@ -392,146 +423,182 @@ public:
     void x_82(Smoke::Stack x) {
 	// clear()
 	this->QListView::clear();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_83(Smoke::Stack x) {
 	// invertSelection()
 	this->QListView::invertSelection();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_84(Smoke::Stack x) {
 	// selectAll(bool)
 	this->QListView::selectAll((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_85(Smoke::Stack x) {
 	// triggerUpdate()
 	this->QListView::triggerUpdate();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_86(Smoke::Stack x) {
 	// setContentsPos(int, int)
 	this->QListView::setContentsPos((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_87(Smoke::Stack x) {
 	// selectionChanged()
 	this->QListView::selectionChanged();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_88(Smoke::Stack x) {
 	// selectionChanged(QListViewItem*)
 	this->QListView::selectionChanged((QListViewItem*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_89(Smoke::Stack x) {
 	// currentChanged(QListViewItem*)
 	this->QListView::currentChanged((QListViewItem*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_90(Smoke::Stack x) {
 	// clicked(QListViewItem*)
 	this->QListView::clicked((QListViewItem*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_91(Smoke::Stack x) {
 	// clicked(QListViewItem*, const QPoint&, int)
 	this->QListView::clicked((QListViewItem*)x[1].s_class,*(const QPoint *)x[2].s_class,(int)x[3].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_92(Smoke::Stack x) {
 	// pressed(QListViewItem*)
 	this->QListView::pressed((QListViewItem*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_93(Smoke::Stack x) {
 	// pressed(QListViewItem*, const QPoint&, int)
 	this->QListView::pressed((QListViewItem*)x[1].s_class,*(const QPoint *)x[2].s_class,(int)x[3].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_94(Smoke::Stack x) {
 	// doubleClicked(QListViewItem*)
 	this->QListView::doubleClicked((QListViewItem*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_95(Smoke::Stack x) {
 	// returnPressed(QListViewItem*)
 	this->QListView::returnPressed((QListViewItem*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_96(Smoke::Stack x) {
 	// spacePressed(QListViewItem*)
 	this->QListView::spacePressed((QListViewItem*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_97(Smoke::Stack x) {
 	// rightButtonClicked(QListViewItem*, const QPoint&, int)
 	this->QListView::rightButtonClicked((QListViewItem*)x[1].s_class,*(const QPoint *)x[2].s_class,(int)x[3].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_98(Smoke::Stack x) {
 	// rightButtonPressed(QListViewItem*, const QPoint&, int)
 	this->QListView::rightButtonPressed((QListViewItem*)x[1].s_class,*(const QPoint *)x[2].s_class,(int)x[3].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_99(Smoke::Stack x) {
 	// mouseButtonPressed(int, QListViewItem*, const QPoint&, int)
 	this->QListView::mouseButtonPressed((int)x[1].s_int,(QListViewItem*)x[2].s_class,*(const QPoint *)x[3].s_class,(int)x[4].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_100(Smoke::Stack x) {
 	// mouseButtonClicked(int, QListViewItem*, const QPoint&, int)
 	this->QListView::mouseButtonClicked((int)x[1].s_int,(QListViewItem*)x[2].s_class,*(const QPoint *)x[3].s_class,(int)x[4].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_101(Smoke::Stack x) {
 	// contextMenuRequested(QListViewItem*, const QPoint&, int)
 	this->QListView::contextMenuRequested((QListViewItem*)x[1].s_class,*(const QPoint *)x[2].s_class,(int)x[3].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_102(Smoke::Stack x) {
 	// onItem(QListViewItem*)
 	this->QListView::onItem((QListViewItem*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_103(Smoke::Stack x) {
 	// onViewport()
 	this->QListView::onViewport();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_104(Smoke::Stack x) {
 	// expanded(QListViewItem*)
 	this->QListView::expanded((QListViewItem*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_105(Smoke::Stack x) {
 	// collapsed(QListViewItem*)
 	this->QListView::collapsed((QListViewItem*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_106(Smoke::Stack x) {
 	// dropped(QDropEvent*)
 	this->QListView::dropped((QDropEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_107(Smoke::Stack x) {
 	// itemRenamed(QListViewItem*, int, const QString&)
 	this->QListView::itemRenamed((QListViewItem*)x[1].s_class,(int)x[2].s_int,*(const QString *)x[3].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_108(Smoke::Stack x) {
 	// itemRenamed(QListViewItem*, int)
 	this->QListView::itemRenamed((QListViewItem*)x[1].s_class,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_109(Smoke::Stack x) {
 	// contentsMousePressEvent(QMouseEvent*)
 	this->QListView::contentsMousePressEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_110(Smoke::Stack x) {
 	// contentsMouseReleaseEvent(QMouseEvent*)
 	this->QListView::contentsMouseReleaseEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_111(Smoke::Stack x) {
 	// contentsMouseMoveEvent(QMouseEvent*)
 	this->QListView::contentsMouseMoveEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_112(Smoke::Stack x) {
 	// contentsMouseDoubleClickEvent(QMouseEvent*)
 	this->QListView::contentsMouseDoubleClickEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_113(Smoke::Stack x) {
 	// contentsContextMenuEvent(QContextMenuEvent*)
 	this->QListView::contentsContextMenuEvent((QContextMenuEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_114(Smoke::Stack x) {
 	// contentsDragEnterEvent(QDragEnterEvent*)
 	this->QListView::contentsDragEnterEvent((QDragEnterEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_115(Smoke::Stack x) {
 	// contentsDragMoveEvent(QDragMoveEvent*)
 	this->QListView::contentsDragMoveEvent((QDragMoveEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_116(Smoke::Stack x) {
 	// contentsDragLeaveEvent(QDragLeaveEvent*)
 	this->QListView::contentsDragLeaveEvent((QDragLeaveEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_117(Smoke::Stack x) {
 	// contentsDropEvent(QDropEvent*)
 	this->QListView::contentsDropEvent((QDropEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_118(Smoke::Stack x) {
 	// dragObject()
@@ -541,54 +608,67 @@ public:
     void x_119(Smoke::Stack x) {
 	// startDrag()
 	this->QListView::startDrag();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_120(Smoke::Stack x) {
 	// focusInEvent(QFocusEvent*)
 	this->QListView::focusInEvent((QFocusEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_121(Smoke::Stack x) {
 	// focusOutEvent(QFocusEvent*)
 	this->QListView::focusOutEvent((QFocusEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_122(Smoke::Stack x) {
 	// keyPressEvent(QKeyEvent*)
 	this->QListView::keyPressEvent((QKeyEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_123(Smoke::Stack x) {
 	// resizeEvent(QResizeEvent*)
 	this->QListView::resizeEvent((QResizeEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_124(Smoke::Stack x) {
 	// viewportResizeEvent(QResizeEvent*)
 	this->QListView::viewportResizeEvent((QResizeEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_125(Smoke::Stack x) {
 	// showEvent(QShowEvent*)
 	this->QListView::showEvent((QShowEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_126(Smoke::Stack x) {
 	// drawContentsOffset(QPainter*, int, int, int, int, int, int)
 	this->QListView::drawContentsOffset((QPainter*)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int,(int)x[6].s_int,(int)x[7].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_127(Smoke::Stack x) {
 	// paintEmptyArea(QPainter*, const QRect&)
 	this->QListView::paintEmptyArea((QPainter*)x[1].s_class,*(const QRect *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_128(Smoke::Stack x) {
 	// styleChange(QStyle&)
 	this->QListView::styleChange(*(QStyle *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_129(Smoke::Stack x) {
 	// windowActivationChange(bool)
 	this->QListView::windowActivationChange((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_130(Smoke::Stack x) {
 	// updateContents()
 	this->QListView::updateContents();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_131(Smoke::Stack x) {
 	// doAutoScroll()
 	this->QListView::doAutoScroll();
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void addChild(QWidget* x1, int x2, int x3) {
 	Smoke::StackItem x[4];

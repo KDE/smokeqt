@@ -42,6 +42,7 @@ public:
     void x_4(Smoke::Stack x) {
 	// addItem(QLayoutItem*)
 	this->QDockAreaLayout::addItem((QLayoutItem*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_5(Smoke::Stack x) const {
 	// hasHeightForWidth()
@@ -81,6 +82,7 @@ public:
     void x_12(Smoke::Stack x) {
 	// invalidate()
 	this->QDockAreaLayout::invalidate();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_13(Smoke::Stack x) const {
 	// orientation()
@@ -100,6 +102,7 @@ public:
     void x_16(Smoke::Stack x) {
 	// setGeometry(const QRect&)
 	this->QDockAreaLayout::setGeometry(*(const QRect *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void addItem(QLayoutItem* x1) {
 	Smoke::StackItem x[2];

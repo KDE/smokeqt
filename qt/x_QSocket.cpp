@@ -72,6 +72,7 @@ public:
     void x_14(Smoke::Stack x) {
 	// setSocket(int)
 	this->QSocket::setSocket((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_15(Smoke::Stack x) {
 	// socketDevice()
@@ -81,10 +82,12 @@ public:
     void x_16(Smoke::Stack x) {
 	// setSocketDevice(QSocketDevice*)
 	this->QSocket::setSocketDevice((QSocketDevice*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_17(Smoke::Stack x) {
 	// connectToHost(const QString&, Q_UINT16)
 	this->QSocket::connectToHost(*(const QString *)x[1].s_class,*(Q_UINT16 *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_18(Smoke::Stack x) const {
 	// peerName()
@@ -99,10 +102,12 @@ public:
     void x_20(Smoke::Stack x) {
 	// close()
 	this->QSocket::close();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_21(Smoke::Stack x) {
 	// flush()
 	this->QSocket::flush();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_22(Smoke::Stack x) const {
 	// size()
@@ -202,42 +207,52 @@ public:
     void x_41(Smoke::Stack x) {
 	// hostFound()
 	this->QSocket::hostFound();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_42(Smoke::Stack x) {
 	// connected()
 	this->QSocket::connected();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_43(Smoke::Stack x) {
 	// connectionClosed()
 	this->QSocket::connectionClosed();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_44(Smoke::Stack x) {
 	// delayedCloseFinished()
 	this->QSocket::delayedCloseFinished();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_45(Smoke::Stack x) {
 	// readyRead()
 	this->QSocket::readyRead();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_46(Smoke::Stack x) {
 	// bytesWritten(int)
 	this->QSocket::bytesWritten((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_47(Smoke::Stack x) {
 	// error(int)
 	this->QSocket::error((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_48(Smoke::Stack x) {
 	// sn_read(bool)
 	this->QSocket::sn_read((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_49(Smoke::Stack x) {
 	// sn_read()
 	this->QSocket::sn_read();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_50(Smoke::Stack x) {
 	// sn_write()
 	this->QSocket::sn_write();
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual QIODevice::Offset at() const {
 	Smoke::StackItem x[1];

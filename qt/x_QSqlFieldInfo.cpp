@@ -173,14 +173,17 @@ public:
     void x_27(Smoke::Stack x) {
 	// setTrim(bool)
 	this->QSqlFieldInfo::setTrim((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_28(Smoke::Stack x) {
 	// setGenerated(bool)
 	this->QSqlFieldInfo::setGenerated((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_29(Smoke::Stack x) {
 	// setCalculated(bool)
 	this->QSqlFieldInfo::setCalculated((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void setCalculated(bool x1) {
 	Smoke::StackItem x[2];

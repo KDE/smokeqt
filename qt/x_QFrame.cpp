@@ -108,6 +108,7 @@ public:
     void x_22(Smoke::Stack x) {
 	// setFrameStyle(int)
 	this->QFrame::setFrameStyle((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_23(Smoke::Stack x) const {
 	// frameWidth()
@@ -137,6 +138,7 @@ public:
     void x_28(Smoke::Stack x) {
 	// setFrameShape(QFrame::Shape)
 	this->QFrame::setFrameShape(*(QFrame::Shape *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_29(Smoke::Stack x) const {
 	// frameShadow()
@@ -146,6 +148,7 @@ public:
     void x_30(Smoke::Stack x) {
 	// setFrameShadow(QFrame::Shadow)
 	this->QFrame::setFrameShadow(*(QFrame::Shadow *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_31(Smoke::Stack x) const {
 	// lineWidth()
@@ -155,6 +158,7 @@ public:
     void x_32(Smoke::Stack x) {
 	// setLineWidth(int)
 	this->QFrame::setLineWidth((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_33(Smoke::Stack x) const {
 	// margin()
@@ -164,6 +168,7 @@ public:
     void x_34(Smoke::Stack x) {
 	// setMargin(int)
 	this->QFrame::setMargin((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_35(Smoke::Stack x) const {
 	// midLineWidth()
@@ -173,6 +178,7 @@ public:
     void x_36(Smoke::Stack x) {
 	// setMidLineWidth(int)
 	this->QFrame::setMidLineWidth((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_37(Smoke::Stack x) const {
 	// frameRect()
@@ -182,26 +188,32 @@ public:
     void x_38(Smoke::Stack x) {
 	// setFrameRect(const QRect&)
 	this->QFrame::setFrameRect(*(const QRect *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_39(Smoke::Stack x) {
 	// paintEvent(QPaintEvent*)
 	this->QFrame::paintEvent((QPaintEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_40(Smoke::Stack x) {
 	// resizeEvent(QResizeEvent*)
 	this->QFrame::resizeEvent((QResizeEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_41(Smoke::Stack x) {
 	// drawFrame(QPainter*)
 	this->QFrame::drawFrame((QPainter*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_42(Smoke::Stack x) {
 	// drawContents(QPainter*)
 	this->QFrame::drawContents((QPainter*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_43(Smoke::Stack x) {
 	// frameChanged()
 	this->QFrame::frameChanged();
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void adjustSize() {
 	Smoke::StackItem x[1];

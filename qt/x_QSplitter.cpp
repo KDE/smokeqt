@@ -76,6 +76,7 @@ public:
     void x_9(Smoke::Stack x) {
 	// setOrientation(Qt::Orientation)
 	this->QSplitter::setOrientation(*(Qt::Orientation *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_10(Smoke::Stack x) const {
 	// orientation()
@@ -85,14 +86,17 @@ public:
     void x_11(Smoke::Stack x) {
 	// setResizeMode(QWidget*, QSplitter::ResizeMode)
 	this->QSplitter::setResizeMode((QWidget*)x[1].s_class,*(QSplitter::ResizeMode *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_12(Smoke::Stack x) {
 	// setOpaqueResize(bool)
 	this->QSplitter::setOpaqueResize((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_13(Smoke::Stack x) {
 	// setOpaqueResize()
 	this->QSplitter::setOpaqueResize();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_14(Smoke::Stack x) const {
 	// opaqueResize()
@@ -102,14 +106,17 @@ public:
     void x_15(Smoke::Stack x) {
 	// moveToFirst(QWidget*)
 	this->QSplitter::moveToFirst((QWidget*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_16(Smoke::Stack x) {
 	// moveToLast(QWidget*)
 	this->QSplitter::moveToLast((QWidget*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_17(Smoke::Stack x) {
 	// refresh()
 	this->QSplitter::refresh();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_18(Smoke::Stack x) const {
 	// sizeHint()
@@ -129,10 +136,12 @@ public:
     void x_21(Smoke::Stack x) {
 	// setSizes(QValueList<int>)
 	this->QSplitter::setSizes(*(QValueList<int> *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_22(Smoke::Stack x) {
 	// childEvent(QChildEvent*)
 	this->QSplitter::childEvent((QChildEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_23(Smoke::Stack x) {
 	// event(QEvent*)
@@ -142,6 +151,7 @@ public:
     void x_24(Smoke::Stack x) {
 	// resizeEvent(QResizeEvent*)
 	this->QSplitter::resizeEvent((QResizeEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_25(Smoke::Stack x) const {
 	// idAfter(QWidget*)
@@ -151,14 +161,17 @@ public:
     void x_26(Smoke::Stack x) {
 	// moveSplitter(QCOORD, int)
 	this->QSplitter::moveSplitter(*(QCOORD *)x[1].s_class,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_27(Smoke::Stack x) {
 	// drawSplitter(QPainter*, QCOORD, QCOORD, QCOORD, QCOORD)
 	this->QSplitter::drawSplitter((QPainter*)x[1].s_class,*(QCOORD *)x[2].s_class,*(QCOORD *)x[3].s_class,*(QCOORD *)x[4].s_class,*(QCOORD *)x[5].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_28(Smoke::Stack x) {
 	// styleChange(QStyle&)
 	this->QSplitter::styleChange(*(QStyle *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_29(Smoke::Stack x) {
 	// adjustPos(int, int)
@@ -168,10 +181,12 @@ public:
     void x_30(Smoke::Stack x) {
 	// setRubberband(int)
 	this->QSplitter::setRubberband((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_31(Smoke::Stack x) {
 	// getRange(int, int*, int*)
 	this->QSplitter::getRange((int)x[1].s_int,(int*)x[2].s_class,(int*)x[3].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void adjustSize() {
 	Smoke::StackItem x[1];

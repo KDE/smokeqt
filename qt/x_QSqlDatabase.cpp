@@ -25,6 +25,7 @@ public:
     void x_2(Smoke::Stack x) {
 	// close()
 	this->QSqlDatabase::close();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_3(Smoke::Stack x) const {
 	// isOpen()
@@ -99,22 +100,27 @@ public:
     void x_17(Smoke::Stack x) {
 	// setDatabaseName(const QString&)
 	this->QSqlDatabase::setDatabaseName(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_18(Smoke::Stack x) {
 	// setUserName(const QString&)
 	this->QSqlDatabase::setUserName(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_19(Smoke::Stack x) {
 	// setPassword(const QString&)
 	this->QSqlDatabase::setPassword(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_20(Smoke::Stack x) {
 	// setHostName(const QString&)
 	this->QSqlDatabase::setHostName(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_21(Smoke::Stack x) {
 	// setPort(int)
 	this->QSqlDatabase::setPort((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_22(Smoke::Stack x) const {
 	// databaseName()
@@ -179,6 +185,7 @@ public:
     static void x_34(Smoke::Stack x) {
 	// removeDatabase(const QString&)
 	QSqlDatabase::removeDatabase(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_35(Smoke::Stack x) {
 	// contains(const QString&)
@@ -198,6 +205,7 @@ public:
     static void x_38(Smoke::Stack x) {
 	// registerSqlDriver(const QString&, const QSqlDriverCreatorBase*)
 	QSqlDatabase::registerSqlDriver(*(const QString *)x[1].s_class,(const QSqlDriverCreatorBase*)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_39(Smoke::Stack x) {
 	// QSqlDatabase(const QString&, const QString&, QObject*, const char*)

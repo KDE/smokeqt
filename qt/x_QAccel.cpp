@@ -44,6 +44,7 @@ public:
     void x_5(Smoke::Stack x) {
 	// setEnabled(bool)
 	this->QAccel::setEnabled((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_6(Smoke::Stack x) const {
 	// count()
@@ -63,10 +64,12 @@ public:
     void x_9(Smoke::Stack x) {
 	// removeItem(int)
 	this->QAccel::removeItem((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_10(Smoke::Stack x) {
 	// clear()
 	this->QAccel::clear();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_11(Smoke::Stack x) {
 	// key(int)
@@ -86,6 +89,7 @@ public:
     void x_14(Smoke::Stack x) {
 	// setItemEnabled(int, bool)
 	this->QAccel::setItemEnabled((int)x[1].s_int,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_15(Smoke::Stack x) {
 	// connectItem(int, const QObject*, const char*)
@@ -100,10 +104,12 @@ public:
     void x_17(Smoke::Stack x) {
 	// repairEventFilter()
 	this->QAccel::repairEventFilter();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_18(Smoke::Stack x) {
 	// setWhatsThis(int, const QString&)
 	this->QAccel::setWhatsThis((int)x[1].s_int,*(const QString *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_19(Smoke::Stack x) const {
 	// whatsThis(int)
@@ -113,6 +119,7 @@ public:
     void x_20(Smoke::Stack x) {
 	// setIgnoreWhatsThis(bool)
 	this->QAccel::setIgnoreWhatsThis((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_21(Smoke::Stack x) const {
 	// ignoreWhatsThis()
@@ -122,6 +129,7 @@ public:
     void x_22(Smoke::Stack x) {
 	// activated(int)
 	this->QAccel::activated((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_23(Smoke::Stack x) {
 	// shortcutKey(const QString&)

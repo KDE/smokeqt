@@ -31,6 +31,7 @@ public:
     void x_3(Smoke::Stack x) {
 	// setName(const QString&)
 	this->QFile::setName(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_4(Smoke::Stack x) const {
 	// exists()
@@ -55,10 +56,12 @@ public:
     void x_8(Smoke::Stack x) {
 	// close()
 	this->QFile::close();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_9(Smoke::Stack x) {
 	// flush()
 	this->QFile::flush();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_10(Smoke::Stack x) const {
 	// size()

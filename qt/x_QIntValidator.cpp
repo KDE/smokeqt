@@ -43,14 +43,17 @@ public:
     void x_5(Smoke::Stack x) {
 	// setBottom(int)
 	this->QIntValidator::setBottom((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_6(Smoke::Stack x) {
 	// setTop(int)
 	this->QIntValidator::setTop((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_7(Smoke::Stack x) {
 	// setRange(int, int)
 	this->QIntValidator::setRange((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_8(Smoke::Stack x) const {
 	// bottom()

@@ -63,6 +63,7 @@ public:
     static void x_10(Smoke::Stack x) {
 	// setCustomColor(int, QRgb)
 	QColorDialog::setCustomColor((int)x[1].s_int,*(QRgb *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     ~x_QColorDialog() {}
 };

@@ -57,18 +57,22 @@ public:
     void x_6(Smoke::Stack x) {
 	// setFilenames(const QStringList&)
 	this->QUriDrag::setFilenames(*(const QStringList *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_7(Smoke::Stack x) {
 	// setFileNames(const QStringList&)
 	this->QUriDrag::setFileNames(*(const QStringList *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_8(Smoke::Stack x) {
 	// setUnicodeUris(const QStringList&)
 	this->QUriDrag::setUnicodeUris(*(const QStringList *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_9(Smoke::Stack x) {
 	// setUris(QStrList)
 	this->QUriDrag::setUris(*(QStrList *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_10(Smoke::Stack x) {
 	// uriToLocalFile(const char*)

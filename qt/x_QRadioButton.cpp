@@ -64,6 +64,7 @@ public:
     void x_6(Smoke::Stack x) {
 	// setChecked(bool)
 	this->QRadioButton::setChecked((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_7(Smoke::Stack x) const {
 	// hitButton(const QPoint&)
@@ -73,18 +74,22 @@ public:
     void x_8(Smoke::Stack x) {
 	// drawButton(QPainter*)
 	this->QRadioButton::drawButton((QPainter*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_9(Smoke::Stack x) {
 	// drawButtonLabel(QPainter*)
 	this->QRadioButton::drawButtonLabel((QPainter*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_10(Smoke::Stack x) {
 	// updateMask()
 	this->QRadioButton::updateMask();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_11(Smoke::Stack x) {
 	// resizeEvent(QResizeEvent*)
 	this->QRadioButton::resizeEvent((QResizeEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void adjustSize() {
 	Smoke::StackItem x[1];

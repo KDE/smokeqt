@@ -76,18 +76,22 @@ public:
     void x_13(Smoke::Stack x) {
 	// setColor(QPalette::ColorGroup, QColorGroup::ColorRole, const QColor&)
 	this->QPalette::setColor(*(QPalette::ColorGroup *)x[1].s_class,*(QColorGroup::ColorRole *)x[2].s_class,*(const QColor *)x[3].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_14(Smoke::Stack x) {
 	// setBrush(QPalette::ColorGroup, QColorGroup::ColorRole, const QBrush&)
 	this->QPalette::setBrush(*(QPalette::ColorGroup *)x[1].s_class,*(QColorGroup::ColorRole *)x[2].s_class,*(const QBrush *)x[3].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_15(Smoke::Stack x) {
 	// setColor(QColorGroup::ColorRole, const QColor&)
 	this->QPalette::setColor(*(QColorGroup::ColorRole *)x[1].s_class,*(const QColor *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_16(Smoke::Stack x) {
 	// setBrush(QColorGroup::ColorRole, const QBrush&)
 	this->QPalette::setBrush(*(QColorGroup::ColorRole *)x[1].s_class,*(const QBrush *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_17(Smoke::Stack x) const {
 	// copy()
@@ -117,18 +121,22 @@ public:
     void x_22(Smoke::Stack x) {
 	// setActive(const QColorGroup&)
 	this->QPalette::setActive(*(const QColorGroup *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_23(Smoke::Stack x) {
 	// setDisabled(const QColorGroup&)
 	this->QPalette::setDisabled(*(const QColorGroup *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_24(Smoke::Stack x) {
 	// setInactive(const QColorGroup&)
 	this->QPalette::setInactive(*(const QColorGroup *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_25(Smoke::Stack x) {
 	// setNormal(const QColorGroup&)
 	this->QPalette::setNormal(*(const QColorGroup *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_26(Smoke::Stack x) const {
 	// operator==(const QPalette&)

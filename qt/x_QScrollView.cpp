@@ -74,6 +74,7 @@ public:
     void x_11(Smoke::Stack x) {
 	// setResizePolicy(QScrollView::ResizePolicy)
 	this->QScrollView::setResizePolicy(*(QScrollView::ResizePolicy *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_12(Smoke::Stack x) const {
 	// resizePolicy()
@@ -83,26 +84,32 @@ public:
     void x_13(Smoke::Stack x) {
 	// styleChange(QStyle&)
 	this->QScrollView::styleChange(*(QStyle *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_14(Smoke::Stack x) {
 	// removeChild(QWidget*)
 	this->QScrollView::removeChild((QWidget*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_15(Smoke::Stack x) {
 	// addChild(QWidget*, int, int)
 	this->QScrollView::addChild((QWidget*)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_16(Smoke::Stack x) {
 	// addChild(QWidget*, int)
 	this->QScrollView::addChild((QWidget*)x[1].s_class,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_17(Smoke::Stack x) {
 	// addChild(QWidget*)
 	this->QScrollView::addChild((QWidget*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_18(Smoke::Stack x) {
 	// moveChild(QWidget*, int, int)
 	this->QScrollView::moveChild((QWidget*)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_19(Smoke::Stack x) {
 	// childX(QWidget*)
@@ -122,10 +129,12 @@ public:
     void x_22(Smoke::Stack x) {
 	// showChild(QWidget*, bool)
 	this->QScrollView::showChild((QWidget*)x[1].s_class,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_23(Smoke::Stack x) {
 	// showChild(QWidget*)
 	this->QScrollView::showChild((QWidget*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_24(Smoke::Stack x) const {
 	// vScrollBarMode()
@@ -135,6 +144,7 @@ public:
     void x_25(Smoke::Stack x) {
 	// setVScrollBarMode(QScrollView::ScrollBarMode)
 	this->QScrollView::setVScrollBarMode(*(QScrollView::ScrollBarMode *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_26(Smoke::Stack x) const {
 	// hScrollBarMode()
@@ -144,6 +154,7 @@ public:
     void x_27(Smoke::Stack x) {
 	// setHScrollBarMode(QScrollView::ScrollBarMode)
 	this->QScrollView::setHScrollBarMode(*(QScrollView::ScrollBarMode *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_28(Smoke::Stack x) const {
 	// cornerWidget()
@@ -153,6 +164,7 @@ public:
     void x_29(Smoke::Stack x) {
 	// setCornerWidget(QWidget*)
 	this->QScrollView::setCornerWidget((QWidget*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_30(Smoke::Stack x) const {
 	// horizontalScrollBar()
@@ -207,58 +219,72 @@ public:
     void x_40(Smoke::Stack x) {
 	// resize(int, int)
 	this->QScrollView::resize((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_41(Smoke::Stack x) {
 	// resize(const QSize&)
 	this->QScrollView::resize(*(const QSize *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_42(Smoke::Stack x) {
 	// show()
 	this->QScrollView::show();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_43(Smoke::Stack x) {
 	// updateContents(int, int, int, int)
 	this->QScrollView::updateContents((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_44(Smoke::Stack x) {
 	// updateContents(const QRect&)
 	this->QScrollView::updateContents(*(const QRect *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_45(Smoke::Stack x) {
 	// updateContents()
 	this->QScrollView::updateContents();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_46(Smoke::Stack x) {
 	// repaintContents(int, int, int, int, bool)
 	this->QScrollView::repaintContents((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(bool)x[5].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_47(Smoke::Stack x) {
 	// repaintContents(int, int, int, int)
 	this->QScrollView::repaintContents((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_48(Smoke::Stack x) {
 	// repaintContents(const QRect&, bool)
 	this->QScrollView::repaintContents(*(const QRect *)x[1].s_class,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_49(Smoke::Stack x) {
 	// repaintContents(const QRect&)
 	this->QScrollView::repaintContents(*(const QRect *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_50(Smoke::Stack x) {
 	// repaintContents(bool)
 	this->QScrollView::repaintContents((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_51(Smoke::Stack x) {
 	// repaintContents()
 	this->QScrollView::repaintContents();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_52(Smoke::Stack x) const {
 	// contentsToViewport(int, int, int&, int&)
 	this->QScrollView::contentsToViewport((int)x[1].s_int,(int)x[2].s_int,*(int *)x[3].s_class,*(int *)x[4].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_53(Smoke::Stack x) const {
 	// viewportToContents(int, int, int&, int&)
 	this->QScrollView::viewportToContents((int)x[1].s_int,(int)x[2].s_int,*(int *)x[3].s_class,*(int *)x[4].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_54(Smoke::Stack x) const {
 	// contentsToViewport(const QPoint&)
@@ -273,10 +299,12 @@ public:
     void x_56(Smoke::Stack x) {
 	// enableClipper(bool)
 	this->QScrollView::enableClipper((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_57(Smoke::Stack x) {
 	// setStaticBackground(bool)
 	this->QScrollView::setStaticBackground((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_58(Smoke::Stack x) const {
 	// hasStaticBackground()
@@ -301,10 +329,12 @@ public:
     void x_62(Smoke::Stack x) {
 	// removeChild(QObject*)
 	this->QScrollView::removeChild((QObject*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_63(Smoke::Stack x) {
 	// setDragAutoScroll(bool)
 	this->QScrollView::setDragAutoScroll((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_64(Smoke::Stack x) const {
 	// dragAutoScroll()
@@ -314,146 +344,182 @@ public:
     void x_65(Smoke::Stack x) {
 	// resizeContents(int, int)
 	this->QScrollView::resizeContents((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_66(Smoke::Stack x) {
 	// scrollBy(int, int)
 	this->QScrollView::scrollBy((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_67(Smoke::Stack x) {
 	// setContentsPos(int, int)
 	this->QScrollView::setContentsPos((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_68(Smoke::Stack x) {
 	// ensureVisible(int, int)
 	this->QScrollView::ensureVisible((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_69(Smoke::Stack x) {
 	// ensureVisible(int, int, int, int)
 	this->QScrollView::ensureVisible((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_70(Smoke::Stack x) {
 	// center(int, int)
 	this->QScrollView::center((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_71(Smoke::Stack x) {
 	// center(int, int, float, float)
 	this->QScrollView::center((int)x[1].s_int,(int)x[2].s_int,(float)x[3].s_float,(float)x[4].s_float);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_72(Smoke::Stack x) {
 	// updateScrollBars()
 	this->QScrollView::updateScrollBars();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_73(Smoke::Stack x) {
 	// setEnabled(bool)
 	this->QScrollView::setEnabled((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_74(Smoke::Stack x) {
 	// contentsMoving(int, int)
 	this->QScrollView::contentsMoving((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_75(Smoke::Stack x) {
 	// drawContents(QPainter*, int, int, int, int)
 	this->QScrollView::drawContents((QPainter*)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_76(Smoke::Stack x) {
 	// drawContentsOffset(QPainter*, int, int, int, int, int, int)
 	this->QScrollView::drawContentsOffset((QPainter*)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int,(int)x[6].s_int,(int)x[7].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_77(Smoke::Stack x) {
 	// contentsMousePressEvent(QMouseEvent*)
 	this->QScrollView::contentsMousePressEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_78(Smoke::Stack x) {
 	// contentsMouseReleaseEvent(QMouseEvent*)
 	this->QScrollView::contentsMouseReleaseEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_79(Smoke::Stack x) {
 	// contentsMouseDoubleClickEvent(QMouseEvent*)
 	this->QScrollView::contentsMouseDoubleClickEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_80(Smoke::Stack x) {
 	// contentsMouseMoveEvent(QMouseEvent*)
 	this->QScrollView::contentsMouseMoveEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_81(Smoke::Stack x) {
 	// contentsDragEnterEvent(QDragEnterEvent*)
 	this->QScrollView::contentsDragEnterEvent((QDragEnterEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_82(Smoke::Stack x) {
 	// contentsDragMoveEvent(QDragMoveEvent*)
 	this->QScrollView::contentsDragMoveEvent((QDragMoveEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_83(Smoke::Stack x) {
 	// contentsDragLeaveEvent(QDragLeaveEvent*)
 	this->QScrollView::contentsDragLeaveEvent((QDragLeaveEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_84(Smoke::Stack x) {
 	// contentsDropEvent(QDropEvent*)
 	this->QScrollView::contentsDropEvent((QDropEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_85(Smoke::Stack x) {
 	// contentsWheelEvent(QWheelEvent*)
 	this->QScrollView::contentsWheelEvent((QWheelEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_86(Smoke::Stack x) {
 	// contentsContextMenuEvent(QContextMenuEvent*)
 	this->QScrollView::contentsContextMenuEvent((QContextMenuEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_87(Smoke::Stack x) {
 	// viewportPaintEvent(QPaintEvent*)
 	this->QScrollView::viewportPaintEvent((QPaintEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_88(Smoke::Stack x) {
 	// viewportResizeEvent(QResizeEvent*)
 	this->QScrollView::viewportResizeEvent((QResizeEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_89(Smoke::Stack x) {
 	// viewportMousePressEvent(QMouseEvent*)
 	this->QScrollView::viewportMousePressEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_90(Smoke::Stack x) {
 	// viewportMouseReleaseEvent(QMouseEvent*)
 	this->QScrollView::viewportMouseReleaseEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_91(Smoke::Stack x) {
 	// viewportMouseDoubleClickEvent(QMouseEvent*)
 	this->QScrollView::viewportMouseDoubleClickEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_92(Smoke::Stack x) {
 	// viewportMouseMoveEvent(QMouseEvent*)
 	this->QScrollView::viewportMouseMoveEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_93(Smoke::Stack x) {
 	// viewportDragEnterEvent(QDragEnterEvent*)
 	this->QScrollView::viewportDragEnterEvent((QDragEnterEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_94(Smoke::Stack x) {
 	// viewportDragMoveEvent(QDragMoveEvent*)
 	this->QScrollView::viewportDragMoveEvent((QDragMoveEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_95(Smoke::Stack x) {
 	// viewportDragLeaveEvent(QDragLeaveEvent*)
 	this->QScrollView::viewportDragLeaveEvent((QDragLeaveEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_96(Smoke::Stack x) {
 	// viewportDropEvent(QDropEvent*)
 	this->QScrollView::viewportDropEvent((QDropEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_97(Smoke::Stack x) {
 	// viewportWheelEvent(QWheelEvent*)
 	this->QScrollView::viewportWheelEvent((QWheelEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_98(Smoke::Stack x) {
 	// viewportContextMenuEvent(QContextMenuEvent*)
 	this->QScrollView::viewportContextMenuEvent((QContextMenuEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_99(Smoke::Stack x) {
 	// frameChanged()
 	this->QScrollView::frameChanged();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_100(Smoke::Stack x) {
 	// setMargins(int, int, int, int)
 	this->QScrollView::setMargins((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_101(Smoke::Stack x) const {
 	// leftMargin()
@@ -483,38 +549,47 @@ public:
     void x_106(Smoke::Stack x) {
 	// setHBarGeometry(QScrollBar&, int, int, int, int)
 	this->QScrollView::setHBarGeometry(*(QScrollBar *)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_107(Smoke::Stack x) {
 	// setVBarGeometry(QScrollBar&, int, int, int, int)
 	this->QScrollView::setVBarGeometry(*(QScrollBar *)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_108(Smoke::Stack x) {
 	// resizeEvent(QResizeEvent*)
 	this->QScrollView::resizeEvent((QResizeEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_109(Smoke::Stack x) {
 	// mousePressEvent(QMouseEvent*)
 	this->QScrollView::mousePressEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_110(Smoke::Stack x) {
 	// mouseReleaseEvent(QMouseEvent*)
 	this->QScrollView::mouseReleaseEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_111(Smoke::Stack x) {
 	// mouseDoubleClickEvent(QMouseEvent*)
 	this->QScrollView::mouseDoubleClickEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_112(Smoke::Stack x) {
 	// mouseMoveEvent(QMouseEvent*)
 	this->QScrollView::mouseMoveEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_113(Smoke::Stack x) {
 	// wheelEvent(QWheelEvent*)
 	this->QScrollView::wheelEvent((QWheelEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_114(Smoke::Stack x) {
 	// contextMenuEvent(QContextMenuEvent*)
 	this->QScrollView::contextMenuEvent((QContextMenuEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_115(Smoke::Stack x) {
 	// eventFilter(QObject*, QEvent*)

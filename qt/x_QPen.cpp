@@ -69,6 +69,7 @@ public:
     void x_9(Smoke::Stack x) {
 	// setStyle(Qt::PenStyle)
 	this->QPen::setStyle(*(Qt::PenStyle *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_10(Smoke::Stack x) const {
 	// width()
@@ -78,6 +79,7 @@ public:
     void x_11(Smoke::Stack x) {
 	// setWidth(uint)
 	this->QPen::setWidth((uint)x[1].s_uint);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_12(Smoke::Stack x) const {
 	// color()
@@ -87,6 +89,7 @@ public:
     void x_13(Smoke::Stack x) {
 	// setColor(const QColor&)
 	this->QPen::setColor(*(const QColor *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_14(Smoke::Stack x) const {
 	// capStyle()
@@ -96,6 +99,7 @@ public:
     void x_15(Smoke::Stack x) {
 	// setCapStyle(Qt::PenCapStyle)
 	this->QPen::setCapStyle(*(Qt::PenCapStyle *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_16(Smoke::Stack x) const {
 	// joinStyle()
@@ -105,6 +109,7 @@ public:
     void x_17(Smoke::Stack x) {
 	// setJoinStyle(Qt::PenJoinStyle)
 	this->QPen::setJoinStyle(*(Qt::PenJoinStyle *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_18(Smoke::Stack x) const {
 	// operator==(const QPen&)

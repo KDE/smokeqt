@@ -114,6 +114,7 @@ public:
     void x_14(Smoke::Stack x) {
 	// setTextFormat(Qt::TextFormat)
 	this->QLabel::setTextFormat(*(Qt::TextFormat *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_15(Smoke::Stack x) const {
 	// alignment()
@@ -123,6 +124,7 @@ public:
     void x_16(Smoke::Stack x) {
 	// setAlignment(int)
 	this->QLabel::setAlignment((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_17(Smoke::Stack x) const {
 	// indent()
@@ -132,6 +134,7 @@ public:
     void x_18(Smoke::Stack x) {
 	// setIndent(int)
 	this->QLabel::setIndent((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_19(Smoke::Stack x) const {
 	// autoResize()
@@ -141,6 +144,7 @@ public:
     void x_20(Smoke::Stack x) {
 	// setAutoResize(bool)
 	this->QLabel::setAutoResize((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_21(Smoke::Stack x) const {
 	// hasScaledContents()
@@ -150,6 +154,7 @@ public:
     void x_22(Smoke::Stack x) {
 	// setScaledContents(bool)
 	this->QLabel::setScaledContents((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_23(Smoke::Stack x) const {
 	// sizeHint()
@@ -164,6 +169,7 @@ public:
     void x_25(Smoke::Stack x) {
 	// setBuddy(QWidget*)
 	this->QLabel::setBuddy((QWidget*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_26(Smoke::Stack x) const {
 	// buddy()
@@ -178,46 +184,57 @@ public:
     void x_28(Smoke::Stack x) {
 	// setFont(const QFont&)
 	this->QLabel::setFont(*(const QFont *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_29(Smoke::Stack x) {
 	// setText(const QString&)
 	this->QLabel::setText(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_30(Smoke::Stack x) {
 	// setPixmap(const QPixmap&)
 	this->QLabel::setPixmap(*(const QPixmap *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_31(Smoke::Stack x) {
 	// setPicture(const QPicture&)
 	this->QLabel::setPicture(*(const QPicture *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_32(Smoke::Stack x) {
 	// setMovie(const QMovie&)
 	this->QLabel::setMovie(*(const QMovie *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_33(Smoke::Stack x) {
 	// setNum(int)
 	this->QLabel::setNum((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_34(Smoke::Stack x) {
 	// setNum(double)
 	this->QLabel::setNum((double)x[1].s_double);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_35(Smoke::Stack x) {
 	// clear()
 	this->QLabel::clear();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_36(Smoke::Stack x) {
 	// drawContents(QPainter*)
 	this->QLabel::drawContents((QPainter*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_37(Smoke::Stack x) {
 	// fontChange(const QFont&)
 	this->QLabel::fontChange(*(const QFont *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_38(Smoke::Stack x) {
 	// resizeEvent(QResizeEvent*)
 	this->QLabel::resizeEvent((QResizeEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void adjustSize() {
 	Smoke::StackItem x[1];

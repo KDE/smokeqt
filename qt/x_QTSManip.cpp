@@ -15,6 +15,7 @@ public:
     void x_1(Smoke::Stack x) {
 	// exec(QTextStream&)
 	this->QTSManip::exec(*(QTextStream *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     ~x_QTSManip() {}
 };

@@ -51,10 +51,12 @@ public:
     static void x_11(Smoke::Stack x) {
 	// setReason(QFocusEvent::Reason)
 	QFocusEvent::setReason(*(QFocusEvent::Reason *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_12(Smoke::Stack x) {
 	// resetReason()
 	QFocusEvent::resetReason();
+	x[0].s_int = x[0].s_int; // noop
     }
     ~x_QFocusEvent() {}
 };

@@ -84,6 +84,7 @@ public:
     void x_12(Smoke::Stack x) {
 	// setOrientation(Qt::Orientation)
 	this->QSlider::setOrientation(*(Qt::Orientation *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_13(Smoke::Stack x) const {
 	// orientation()
@@ -93,6 +94,7 @@ public:
     void x_14(Smoke::Stack x) {
 	// setTracking(bool)
 	this->QSlider::setTracking((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_15(Smoke::Stack x) const {
 	// tracking()
@@ -102,6 +104,7 @@ public:
     void x_16(Smoke::Stack x) {
 	// setPalette(const QPalette&)
 	this->QSlider::setPalette(*(const QPalette *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_17(Smoke::Stack x) const {
 	// sliderStart()
@@ -131,6 +134,7 @@ public:
     void x_22(Smoke::Stack x) {
 	// setTickmarks(QSlider::TickSetting)
 	this->QSlider::setTickmarks(*(QSlider::TickSetting *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_23(Smoke::Stack x) const {
 	// tickmarks()
@@ -140,6 +144,7 @@ public:
     void x_24(Smoke::Stack x) {
 	// setTickInterval(int)
 	this->QSlider::setTickInterval((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_25(Smoke::Stack x) const {
 	// tickInterval()
@@ -159,10 +164,12 @@ public:
     void x_28(Smoke::Stack x) {
 	// setMinValue(int)
 	this->QSlider::setMinValue((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_29(Smoke::Stack x) {
 	// setMaxValue(int)
 	this->QSlider::setMaxValue((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_30(Smoke::Stack x) const {
 	// lineStep()
@@ -177,10 +184,12 @@ public:
     void x_32(Smoke::Stack x) {
 	// setLineStep(int)
 	this->QSlider::setLineStep((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_33(Smoke::Stack x) {
 	// setPageStep(int)
 	this->QSlider::setPageStep((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_34(Smoke::Stack x) const {
 	// value()
@@ -190,78 +199,97 @@ public:
     void x_35(Smoke::Stack x) {
 	// setValue(int)
 	this->QSlider::setValue((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_36(Smoke::Stack x) {
 	// addStep()
 	this->QSlider::addStep();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_37(Smoke::Stack x) {
 	// subtractStep()
 	this->QSlider::subtractStep();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_38(Smoke::Stack x) {
 	// valueChanged(int)
 	this->QSlider::valueChanged((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_39(Smoke::Stack x) {
 	// sliderPressed()
 	this->QSlider::sliderPressed();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_40(Smoke::Stack x) {
 	// sliderMoved(int)
 	this->QSlider::sliderMoved((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_41(Smoke::Stack x) {
 	// sliderReleased()
 	this->QSlider::sliderReleased();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_42(Smoke::Stack x) {
 	// resizeEvent(QResizeEvent*)
 	this->QSlider::resizeEvent((QResizeEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_43(Smoke::Stack x) {
 	// paintEvent(QPaintEvent*)
 	this->QSlider::paintEvent((QPaintEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_44(Smoke::Stack x) {
 	// keyPressEvent(QKeyEvent*)
 	this->QSlider::keyPressEvent((QKeyEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_45(Smoke::Stack x) {
 	// mousePressEvent(QMouseEvent*)
 	this->QSlider::mousePressEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_46(Smoke::Stack x) {
 	// mouseReleaseEvent(QMouseEvent*)
 	this->QSlider::mouseReleaseEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_47(Smoke::Stack x) {
 	// mouseMoveEvent(QMouseEvent*)
 	this->QSlider::mouseMoveEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_48(Smoke::Stack x) {
 	// wheelEvent(QWheelEvent*)
 	this->QSlider::wheelEvent((QWheelEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_49(Smoke::Stack x) {
 	// focusInEvent(QFocusEvent*)
 	this->QSlider::focusInEvent((QFocusEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_50(Smoke::Stack x) {
 	// focusOutEvent(QFocusEvent*)
 	this->QSlider::focusOutEvent((QFocusEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_51(Smoke::Stack x) {
 	// styleChange(QStyle&)
 	this->QSlider::styleChange(*(QStyle *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_52(Smoke::Stack x) {
 	// valueChange()
 	this->QSlider::valueChange();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_53(Smoke::Stack x) {
 	// rangeChange()
 	this->QSlider::rangeChange();
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void adjustSize() {
 	Smoke::StackItem x[1];

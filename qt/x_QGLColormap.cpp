@@ -39,22 +39,27 @@ public:
     void x_5(Smoke::Stack x) {
 	// detach()
 	this->QGLColormap::detach();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_6(Smoke::Stack x) {
 	// setEntries(int, const QRgb*, int)
 	this->QGLColormap::setEntries((int)x[1].s_int,(const QRgb*)x[2].s_class,(int)x[3].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_7(Smoke::Stack x) {
 	// setEntries(int, const QRgb*)
 	this->QGLColormap::setEntries((int)x[1].s_int,(const QRgb*)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_8(Smoke::Stack x) {
 	// setEntry(int, QRgb)
 	this->QGLColormap::setEntry((int)x[1].s_int,*(QRgb *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_9(Smoke::Stack x) {
 	// setEntry(int, const QColor&)
 	this->QGLColormap::setEntry((int)x[1].s_int,*(const QColor *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_10(Smoke::Stack x) const {
 	// entryRgb(int)

@@ -23,70 +23,87 @@ public:
     void x_2(Smoke::Stack x) {
 	// parseDir(const QString&, QUrlInfo&)
 	this->QFtp::parseDir(*(const QString *)x[1].s_class,*(QUrlInfo *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_3(Smoke::Stack x) {
 	// operationListChildren(QNetworkOperation*)
 	this->QFtp::operationListChildren((QNetworkOperation*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_4(Smoke::Stack x) {
 	// operationMkDir(QNetworkOperation*)
 	this->QFtp::operationMkDir((QNetworkOperation*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_5(Smoke::Stack x) {
 	// operationRemove(QNetworkOperation*)
 	this->QFtp::operationRemove((QNetworkOperation*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_6(Smoke::Stack x) {
 	// operationRename(QNetworkOperation*)
 	this->QFtp::operationRename((QNetworkOperation*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_7(Smoke::Stack x) {
 	// operationGet(QNetworkOperation*)
 	this->QFtp::operationGet((QNetworkOperation*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_8(Smoke::Stack x) {
 	// operationPut(QNetworkOperation*)
 	this->QFtp::operationPut((QNetworkOperation*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_9(Smoke::Stack x) {
 	// hostFound()
 	this->QFtp::hostFound();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_10(Smoke::Stack x) {
 	// connected()
 	this->QFtp::connected();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_11(Smoke::Stack x) {
 	// closed()
 	this->QFtp::closed();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_12(Smoke::Stack x) {
 	// readyRead()
 	this->QFtp::readyRead();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_13(Smoke::Stack x) {
 	// dataHostFound()
 	this->QFtp::dataHostFound();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_14(Smoke::Stack x) {
 	// dataConnected()
 	this->QFtp::dataConnected();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_15(Smoke::Stack x) {
 	// dataClosed()
 	this->QFtp::dataClosed();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_16(Smoke::Stack x) {
 	// dataReadyRead()
 	this->QFtp::dataReadyRead();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_17(Smoke::Stack x) {
 	// dataBytesWritten(int)
 	this->QFtp::dataBytesWritten((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_18(Smoke::Stack x) {
 	// error(int)
 	this->QFtp::error((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void addOperation(QNetworkOperation* x1) {
 	Smoke::StackItem x[2];

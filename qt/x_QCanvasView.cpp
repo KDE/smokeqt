@@ -88,6 +88,7 @@ public:
     void x_9(Smoke::Stack x) {
 	// setCanvas(QCanvas*)
 	this->QCanvasView::setCanvas((QCanvas*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_10(Smoke::Stack x) const {
 	// worldMatrix()
@@ -107,6 +108,7 @@ public:
     void x_13(Smoke::Stack x) {
 	// drawContents(QPainter*, int, int, int, int)
 	this->QCanvasView::drawContents((QPainter*)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_14(Smoke::Stack x) const {
 	// sizeHint()

@@ -130,10 +130,12 @@ public:
     static void x_24(Smoke::Stack x) {
 	// setCodecForLocale(QTextCodec*)
 	QTextCodec::setCodecForLocale((QTextCodec*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_25(Smoke::Stack x) {
 	// deleteAllCodecs()
 	QTextCodec::deleteAllCodecs();
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_26(Smoke::Stack x) {
 	// locale()

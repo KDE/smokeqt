@@ -131,18 +131,22 @@ public:
     void x_21(Smoke::Stack x) {
 	// setSelectedFilter(const QString&)
 	this->QFileDialog::setSelectedFilter(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_22(Smoke::Stack x) {
 	// setSelectedFilter(int)
 	this->QFileDialog::setSelectedFilter((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_23(Smoke::Stack x) {
 	// setSelection(const QString&)
 	this->QFileDialog::setSelection(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_24(Smoke::Stack x) {
 	// selectAll(bool)
 	this->QFileDialog::selectAll((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_25(Smoke::Stack x) const {
 	// selectedFiles()
@@ -157,6 +161,7 @@ public:
     void x_27(Smoke::Stack x) {
 	// setDir(const QDir&)
 	this->QFileDialog::setDir(*(const QDir *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_28(Smoke::Stack x) const {
 	// dir()
@@ -166,6 +171,7 @@ public:
     void x_29(Smoke::Stack x) {
 	// setShowHiddenFiles(bool)
 	this->QFileDialog::setShowHiddenFiles((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_30(Smoke::Stack x) const {
 	// showHiddenFiles()
@@ -175,14 +181,17 @@ public:
     void x_31(Smoke::Stack x) {
 	// rereadDir()
 	this->QFileDialog::rereadDir();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_32(Smoke::Stack x) {
 	// resortDir()
 	this->QFileDialog::resortDir();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_33(Smoke::Stack x) {
 	// setMode(QFileDialog::Mode)
 	this->QFileDialog::setMode(*(QFileDialog::Mode *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_34(Smoke::Stack x) const {
 	// mode()
@@ -192,6 +201,7 @@ public:
     void x_35(Smoke::Stack x) {
 	// setViewMode(QFileDialog::ViewMode)
 	this->QFileDialog::setViewMode(*(QFileDialog::ViewMode *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_36(Smoke::Stack x) const {
 	// viewMode()
@@ -201,6 +211,7 @@ public:
     void x_37(Smoke::Stack x) {
 	// setPreviewMode(QFileDialog::PreviewMode)
 	this->QFileDialog::setPreviewMode(*(QFileDialog::PreviewMode *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_38(Smoke::Stack x) const {
 	// previewMode()
@@ -225,18 +236,22 @@ public:
     void x_42(Smoke::Stack x) {
 	// setInfoPreviewEnabled(bool)
 	this->QFileDialog::setInfoPreviewEnabled((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_43(Smoke::Stack x) {
 	// setContentsPreviewEnabled(bool)
 	this->QFileDialog::setContentsPreviewEnabled((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_44(Smoke::Stack x) {
 	// setInfoPreview(QWidget*, QFilePreview*)
 	this->QFileDialog::setInfoPreview((QWidget*)x[1].s_class,(QFilePreview*)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_45(Smoke::Stack x) {
 	// setContentsPreview(QWidget*, QFilePreview*)
 	this->QFileDialog::setContentsPreview((QWidget*)x[1].s_class,(QFilePreview*)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_46(Smoke::Stack x) const {
 	// url()
@@ -246,54 +261,67 @@ public:
     void x_47(Smoke::Stack x) {
 	// addFilter(const QString&)
 	this->QFileDialog::addFilter(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_48(Smoke::Stack x) {
 	// done(int)
 	this->QFileDialog::done((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_49(Smoke::Stack x) {
 	// setDir(const QString&)
 	this->QFileDialog::setDir(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_50(Smoke::Stack x) {
 	// setUrl(const QUrlOperator&)
 	this->QFileDialog::setUrl(*(const QUrlOperator *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_51(Smoke::Stack x) {
 	// setFilter(const QString&)
 	this->QFileDialog::setFilter(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_52(Smoke::Stack x) {
 	// setFilters(const QString&)
 	this->QFileDialog::setFilters(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_53(Smoke::Stack x) {
 	// setFilters(const char**)
 	this->QFileDialog::setFilters((const char**)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_54(Smoke::Stack x) {
 	// setFilters(const QStringList&)
 	this->QFileDialog::setFilters(*(const QStringList *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_55(Smoke::Stack x) {
 	// fileHighlighted(const QString&)
 	this->QFileDialog::fileHighlighted(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_56(Smoke::Stack x) {
 	// fileSelected(const QString&)
 	this->QFileDialog::fileSelected(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_57(Smoke::Stack x) {
 	// filesSelected(const QStringList&)
 	this->QFileDialog::filesSelected(*(const QStringList *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_58(Smoke::Stack x) {
 	// dirEntered(const QString&)
 	this->QFileDialog::dirEntered(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_59(Smoke::Stack x) {
 	// filterSelected(const QString&)
 	this->QFileDialog::filterSelected(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_60(Smoke::Stack x) {
 	// getOpenFileName(const QString&, const QString&, QWidget*, const char*, const QString&, QString*, bool)
@@ -453,6 +481,7 @@ public:
     static void x_91(Smoke::Stack x) {
 	// setIconProvider(QFileIconProvider*)
 	QFileDialog::setIconProvider((QFileIconProvider*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_92(Smoke::Stack x) {
 	// iconProvider()
@@ -462,30 +491,37 @@ public:
     void x_93(Smoke::Stack x) {
 	// resizeEvent(QResizeEvent*)
 	this->QFileDialog::resizeEvent((QResizeEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_94(Smoke::Stack x) {
 	// keyPressEvent(QKeyEvent*)
 	this->QFileDialog::keyPressEvent((QKeyEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_95(Smoke::Stack x) {
 	// addWidgets(QLabel*, QWidget*, QPushButton*)
 	this->QFileDialog::addWidgets((QLabel*)x[1].s_class,(QWidget*)x[2].s_class,(QPushButton*)x[3].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_96(Smoke::Stack x) {
 	// addToolButton(QButton*, bool)
 	this->QFileDialog::addToolButton((QButton*)x[1].s_class,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_97(Smoke::Stack x) {
 	// addToolButton(QButton*)
 	this->QFileDialog::addToolButton((QButton*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_98(Smoke::Stack x) {
 	// addLeftWidget(QWidget*)
 	this->QFileDialog::addLeftWidget((QWidget*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_99(Smoke::Stack x) {
 	// addRightWidget(QWidget*)
 	this->QFileDialog::addRightWidget((QWidget*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void accept() {
 	Smoke::StackItem x[1];

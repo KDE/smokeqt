@@ -118,10 +118,12 @@ public:
     void x_14(Smoke::Stack x) {
 	// setExclusive(bool)
 	this->QButtonGroup::setExclusive((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_15(Smoke::Stack x) {
 	// setRadioButtonExclusive(bool)
 	this->QButtonGroup::setRadioButtonExclusive((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_16(Smoke::Stack x) {
 	// insert(QButton*, int)
@@ -136,6 +138,7 @@ public:
     void x_18(Smoke::Stack x) {
 	// remove(QButton*)
 	this->QButtonGroup::remove((QButton*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_19(Smoke::Stack x) const {
 	// find(int)
@@ -155,10 +158,12 @@ public:
     void x_22(Smoke::Stack x) {
 	// setButton(int)
 	this->QButtonGroup::setButton((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_23(Smoke::Stack x) {
 	// moveFocus(int)
 	this->QButtonGroup::moveFocus((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_24(Smoke::Stack x) const {
 	// selected()
@@ -168,30 +173,37 @@ public:
     void x_25(Smoke::Stack x) {
 	// pressed(int)
 	this->QButtonGroup::pressed((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_26(Smoke::Stack x) {
 	// released(int)
 	this->QButtonGroup::released((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_27(Smoke::Stack x) {
 	// clicked(int)
 	this->QButtonGroup::clicked((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_28(Smoke::Stack x) {
 	// buttonPressed()
 	this->QButtonGroup::buttonPressed();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_29(Smoke::Stack x) {
 	// buttonReleased()
 	this->QButtonGroup::buttonReleased();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_30(Smoke::Stack x) {
 	// buttonClicked()
 	this->QButtonGroup::buttonClicked();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_31(Smoke::Stack x) {
 	// buttonToggled(bool)
 	this->QButtonGroup::buttonToggled((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void adjustSize() {
 	Smoke::StackItem x[1];

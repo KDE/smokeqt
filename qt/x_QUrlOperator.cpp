@@ -48,6 +48,7 @@ public:
     void x_5(Smoke::Stack x) {
 	// setPath(const QString&)
 	this->QUrlOperator::setPath(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_6(Smoke::Stack x) {
 	// cdUp()
@@ -112,10 +113,12 @@ public:
     void x_18(Smoke::Stack x) {
 	// copy(const QStringList&, const QString&, bool)
 	this->QUrlOperator::copy(*(const QStringList *)x[1].s_class,*(const QString *)x[2].s_class,(bool)x[3].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_19(Smoke::Stack x) {
 	// copy(const QStringList&, const QString&)
 	this->QUrlOperator::copy(*(const QStringList *)x[1].s_class,*(const QString *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_20(Smoke::Stack x) {
 	// isDir(bool*)
@@ -130,6 +133,7 @@ public:
     void x_22(Smoke::Stack x) {
 	// setNameFilter(const QString&)
 	this->QUrlOperator::setNameFilter(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_23(Smoke::Stack x) const {
 	// nameFilter()
@@ -154,50 +158,62 @@ public:
     void x_27(Smoke::Stack x) {
 	// stop()
 	this->QUrlOperator::stop();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_28(Smoke::Stack x) {
 	// newChildren(const QValueList<QUrlInfo>&, QNetworkOperation*)
 	this->QUrlOperator::newChildren(*(const QValueList<QUrlInfo> *)x[1].s_class,(QNetworkOperation*)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_29(Smoke::Stack x) {
 	// finished(QNetworkOperation*)
 	this->QUrlOperator::finished((QNetworkOperation*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_30(Smoke::Stack x) {
 	// start(QNetworkOperation*)
 	this->QUrlOperator::start((QNetworkOperation*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_31(Smoke::Stack x) {
 	// createdDirectory(const QUrlInfo&, QNetworkOperation*)
 	this->QUrlOperator::createdDirectory(*(const QUrlInfo *)x[1].s_class,(QNetworkOperation*)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_32(Smoke::Stack x) {
 	// removed(QNetworkOperation*)
 	this->QUrlOperator::removed((QNetworkOperation*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_33(Smoke::Stack x) {
 	// itemChanged(QNetworkOperation*)
 	this->QUrlOperator::itemChanged((QNetworkOperation*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_34(Smoke::Stack x) {
 	// data(const QByteArray&, QNetworkOperation*)
 	this->QUrlOperator::data(*(const QByteArray *)x[1].s_class,(QNetworkOperation*)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_35(Smoke::Stack x) {
 	// dataTransferProgress(int, int, QNetworkOperation*)
 	this->QUrlOperator::dataTransferProgress((int)x[1].s_int,(int)x[2].s_int,(QNetworkOperation*)x[3].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_36(Smoke::Stack x) {
 	// startedNextCopy(const QPtrList<QNetworkOperation>&)
 	this->QUrlOperator::startedNextCopy(*(const QPtrList<QNetworkOperation> *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_37(Smoke::Stack x) {
 	// connectionStateChanged(int, const QString&)
 	this->QUrlOperator::connectionStateChanged((int)x[1].s_int,*(const QString *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_38(Smoke::Stack x) {
 	// reset()
 	this->QUrlOperator::reset();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_39(Smoke::Stack x) {
 	// parse(const QString&)
@@ -212,14 +228,17 @@ public:
     void x_41(Smoke::Stack x) {
 	// clearEntries()
 	this->QUrlOperator::clearEntries();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_42(Smoke::Stack x) {
 	// getNetworkProtocol()
 	this->QUrlOperator::getNetworkProtocol();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_43(Smoke::Stack x) {
 	// deleteNetworkProtocol()
 	this->QUrlOperator::deleteNetworkProtocol();
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void addPath(const QString& x1) {
 	Smoke::StackItem x[2];

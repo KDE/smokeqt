@@ -49,10 +49,12 @@ public:
     void x_8(Smoke::Stack x) {
 	// setPixmap(const QPixmap&)
 	this->QTableItem::setPixmap(*(const QPixmap *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_9(Smoke::Stack x) {
 	// setText(const QString&)
 	this->QTableItem::setText(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_10(Smoke::Stack x) const {
 	// table()
@@ -67,6 +69,7 @@ public:
     void x_12(Smoke::Stack x) {
 	// setWordWrap(bool)
 	this->QTableItem::setWordWrap((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_13(Smoke::Stack x) const {
 	// wordWrap()
@@ -86,10 +89,12 @@ public:
     void x_16(Smoke::Stack x) {
 	// setContentFromEditor(QWidget*)
 	this->QTableItem::setContentFromEditor((QWidget*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_17(Smoke::Stack x) {
 	// setReplaceable(bool)
 	this->QTableItem::setReplaceable((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_18(Smoke::Stack x) const {
 	// isReplaceable()
@@ -109,6 +114,7 @@ public:
     void x_21(Smoke::Stack x) {
 	// setSpan(int, int)
 	this->QTableItem::setSpan((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_22(Smoke::Stack x) const {
 	// rowSpan()
@@ -123,10 +129,12 @@ public:
     void x_24(Smoke::Stack x) {
 	// setRow(int)
 	this->QTableItem::setRow((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_25(Smoke::Stack x) {
 	// setCol(int)
 	this->QTableItem::setCol((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_26(Smoke::Stack x) const {
 	// row()
@@ -141,14 +149,17 @@ public:
     void x_28(Smoke::Stack x) {
 	// paint(QPainter*, const QColorGroup&, const QRect&, bool)
 	this->QTableItem::paint((QPainter*)x[1].s_class,*(const QColorGroup *)x[2].s_class,*(const QRect *)x[3].s_class,(bool)x[4].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_29(Smoke::Stack x) {
 	// updateEditor(int, int)
 	this->QTableItem::updateEditor((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_30(Smoke::Stack x) {
 	// setEnabled(bool)
 	this->QTableItem::setEnabled((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_31(Smoke::Stack x) const {
 	// isEnabled()

@@ -38,6 +38,7 @@ public:
     void x_2(Smoke::Stack x) {
 	// message(const QString&)
 	this->QErrorMessage::message(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_3(Smoke::Stack x) {
 	// qtHandler()
@@ -47,6 +48,7 @@ public:
     void x_4(Smoke::Stack x) {
 	// done(int)
 	this->QErrorMessage::done((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void accept() {
 	Smoke::StackItem x[1];

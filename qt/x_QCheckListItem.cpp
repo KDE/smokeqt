@@ -78,10 +78,12 @@ public:
     void x_11(Smoke::Stack x) {
 	// paintCell(QPainter*, const QColorGroup&, int, int, int)
 	this->QCheckListItem::paintCell((QPainter*)x[1].s_class,*(const QColorGroup *)x[2].s_class,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_12(Smoke::Stack x) {
 	// paintFocus(QPainter*, const QColorGroup&, const QRect&)
 	this->QCheckListItem::paintFocus((QPainter*)x[1].s_class,*(const QColorGroup *)x[2].s_class,*(const QRect *)x[3].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_13(Smoke::Stack x) const {
 	// width(const QFontMetrics&, const QListView*, int)
@@ -91,10 +93,12 @@ public:
     void x_14(Smoke::Stack x) {
 	// setup()
 	this->QCheckListItem::setup();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_15(Smoke::Stack x) {
 	// setOn(bool)
 	this->QCheckListItem::setOn((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_16(Smoke::Stack x) const {
 	// isOn()
@@ -124,14 +128,17 @@ public:
     void x_21(Smoke::Stack x) {
 	// activate()
 	this->QCheckListItem::activate();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_22(Smoke::Stack x) {
 	// turnOffChild()
 	this->QCheckListItem::turnOffChild();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_23(Smoke::Stack x) {
 	// stateChange(bool)
 	this->QCheckListItem::stateChange((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual bool acceptDrop(const QMimeSource* x1) const {
 	Smoke::StackItem x[2];

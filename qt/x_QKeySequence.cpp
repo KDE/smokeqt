@@ -30,10 +30,12 @@ public:
     void x_3(Smoke::Stack x) const {
 	// operator QString()
 	this->QKeySequence::operator QString();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_4(Smoke::Stack x) const {
 	// operator int()
 	this->QKeySequence::operator int();
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_5(Smoke::Stack x) {
 	// QKeySequence(const QKeySequence&)

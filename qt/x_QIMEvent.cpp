@@ -31,10 +31,12 @@ public:
     void x_4(Smoke::Stack x) {
 	// accept()
 	this->QIMEvent::accept();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_5(Smoke::Stack x) {
 	// ignore()
 	this->QIMEvent::ignore();
+	x[0].s_int = x[0].s_int; // noop
     }
     ~x_QIMEvent() {}
 };

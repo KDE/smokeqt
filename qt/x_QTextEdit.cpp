@@ -156,6 +156,7 @@ public:
     void x_33(Smoke::Stack x) {
 	// setPalette(const QPalette&)
 	this->QTextEdit::setPalette(*(const QPalette *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_34(Smoke::Stack x) const {
 	// text()
@@ -185,10 +186,12 @@ public:
     void x_39(Smoke::Stack x) const {
 	// getSelection(int*, int*, int*, int*, int)
 	this->QTextEdit::getSelection((int*)x[1].s_class,(int*)x[2].s_class,(int*)x[3].s_class,(int*)x[4].s_class,(int)x[5].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_40(Smoke::Stack x) const {
 	// getSelection(int*, int*, int*, int*)
 	this->QTextEdit::getSelection((int*)x[1].s_class,(int*)x[2].s_class,(int*)x[3].s_class,(int*)x[4].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_41(Smoke::Stack x) {
 	// find(const QString&, bool, bool, bool, int*, int*)
@@ -338,6 +341,7 @@ public:
     void x_70(Smoke::Stack x) const {
 	// getCursorPosition(int*, int*)
 	this->QTextEdit::getCursorPosition((int*)x[1].s_class,(int*)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_71(Smoke::Stack x) const {
 	// isModified()
@@ -422,354 +426,442 @@ public:
     void x_87(Smoke::Stack x) {
 	// setEnabled(bool)
 	this->QTextEdit::setEnabled((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_88(Smoke::Stack x) {
 	// setMimeSourceFactory(QMimeSourceFactory*)
 	this->QTextEdit::setMimeSourceFactory((QMimeSourceFactory*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_89(Smoke::Stack x) {
 	// setStyleSheet(QStyleSheet*)
 	this->QTextEdit::setStyleSheet((QStyleSheet*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_90(Smoke::Stack x) {
 	// scrollToAnchor(const QString&)
 	this->QTextEdit::scrollToAnchor(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_91(Smoke::Stack x) {
 	// setPaper(const QBrush&)
 	this->QTextEdit::setPaper(*(const QBrush *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_92(Smoke::Stack x) {
 	// setLinkUnderline(bool)
 	this->QTextEdit::setLinkUnderline((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_93(Smoke::Stack x) {
 	// setWordWrap(QTextEdit::WordWrap)
 	this->QTextEdit::setWordWrap(*(QTextEdit::WordWrap *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_94(Smoke::Stack x) {
 	// setWrapColumnOrWidth(int)
 	this->QTextEdit::setWrapColumnOrWidth((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_95(Smoke::Stack x) {
 	// setWrapPolicy(QTextEdit::WrapPolicy)
 	this->QTextEdit::setWrapPolicy(*(QTextEdit::WrapPolicy *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_96(Smoke::Stack x) {
 	// copy()
 	this->QTextEdit::copy();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_97(Smoke::Stack x) {
 	// append(const QString&)
 	this->QTextEdit::append(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_98(Smoke::Stack x) {
 	// setText(const QString&)
 	this->QTextEdit::setText(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_99(Smoke::Stack x) {
 	// setText(const QString&, const QString&)
 	this->QTextEdit::setText(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_100(Smoke::Stack x) {
 	// setTextFormat(Qt::TextFormat)
 	this->QTextEdit::setTextFormat(*(Qt::TextFormat *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_101(Smoke::Stack x) {
 	// selectAll(bool)
 	this->QTextEdit::selectAll((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_102(Smoke::Stack x) {
 	// selectAll()
 	this->QTextEdit::selectAll();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_103(Smoke::Stack x) {
 	// setTabStopWidth(int)
 	this->QTextEdit::setTabStopWidth((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_104(Smoke::Stack x) {
 	// zoomIn(int)
 	this->QTextEdit::zoomIn((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_105(Smoke::Stack x) {
 	// zoomIn()
 	this->QTextEdit::zoomIn();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_106(Smoke::Stack x) {
 	// zoomOut(int)
 	this->QTextEdit::zoomOut((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_107(Smoke::Stack x) {
 	// zoomOut()
 	this->QTextEdit::zoomOut();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_108(Smoke::Stack x) {
 	// zoomTo(int)
 	this->QTextEdit::zoomTo((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_109(Smoke::Stack x) {
 	// sync()
 	this->QTextEdit::sync();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_110(Smoke::Stack x) {
 	// setReadOnly(bool)
 	this->QTextEdit::setReadOnly((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_111(Smoke::Stack x) {
 	// undo()
 	this->QTextEdit::undo();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_112(Smoke::Stack x) {
 	// redo()
 	this->QTextEdit::redo();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_113(Smoke::Stack x) {
 	// cut()
 	this->QTextEdit::cut();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_114(Smoke::Stack x) {
 	// paste()
 	this->QTextEdit::paste();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_115(Smoke::Stack x) {
 	// pasteSubType(const QCString&)
 	this->QTextEdit::pasteSubType(*(const QCString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_116(Smoke::Stack x) {
 	// clear()
 	this->QTextEdit::clear();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_117(Smoke::Stack x) {
 	// del()
 	this->QTextEdit::del();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_118(Smoke::Stack x) {
 	// indent()
 	this->QTextEdit::indent();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_119(Smoke::Stack x) {
 	// setItalic(bool)
 	this->QTextEdit::setItalic((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_120(Smoke::Stack x) {
 	// setBold(bool)
 	this->QTextEdit::setBold((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_121(Smoke::Stack x) {
 	// setUnderline(bool)
 	this->QTextEdit::setUnderline((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_122(Smoke::Stack x) {
 	// setFamily(const QString&)
 	this->QTextEdit::setFamily(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_123(Smoke::Stack x) {
 	// setPointSize(int)
 	this->QTextEdit::setPointSize((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_124(Smoke::Stack x) {
 	// setColor(const QColor&)
 	this->QTextEdit::setColor(*(const QColor *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_125(Smoke::Stack x) {
 	// setFont(const QFont&)
 	this->QTextEdit::setFont(*(const QFont *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_126(Smoke::Stack x) {
 	// setVerticalAlignment(QTextEdit::VerticalAlignment)
 	this->QTextEdit::setVerticalAlignment(*(QTextEdit::VerticalAlignment *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_127(Smoke::Stack x) {
 	// setAlignment(int)
 	this->QTextEdit::setAlignment((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_128(Smoke::Stack x) {
 	// setParagType(QStyleSheetItem::DisplayMode, QStyleSheetItem::ListStyle)
 	this->QTextEdit::setParagType(*(QStyleSheetItem::DisplayMode *)x[1].s_class,*(QStyleSheetItem::ListStyle *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_129(Smoke::Stack x) {
 	// setCursorPosition(int, int)
 	this->QTextEdit::setCursorPosition((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_130(Smoke::Stack x) {
 	// setSelection(int, int, int, int, int)
 	this->QTextEdit::setSelection((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_131(Smoke::Stack x) {
 	// setSelection(int, int, int, int)
 	this->QTextEdit::setSelection((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_132(Smoke::Stack x) {
 	// setSelectionAttributes(int, const QColor&, bool)
 	this->QTextEdit::setSelectionAttributes((int)x[1].s_int,*(const QColor *)x[2].s_class,(bool)x[3].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_133(Smoke::Stack x) {
 	// setModified(bool)
 	this->QTextEdit::setModified((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_134(Smoke::Stack x) {
 	// resetFormat()
 	this->QTextEdit::resetFormat();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_135(Smoke::Stack x) {
 	// setUndoDepth(int)
 	this->QTextEdit::setUndoDepth((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_136(Smoke::Stack x) {
 	// setFormat(QTextFormat*, int)
 	this->QTextEdit::setFormat((QTextFormat*)x[1].s_class,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_137(Smoke::Stack x) {
 	// ensureCursorVisible()
 	this->QTextEdit::ensureCursorVisible();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_138(Smoke::Stack x) {
 	// placeCursor(const QPoint&, QTextCursor*)
 	this->QTextEdit::placeCursor(*(const QPoint *)x[1].s_class,(QTextCursor*)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_139(Smoke::Stack x) {
 	// placeCursor(const QPoint&)
 	this->QTextEdit::placeCursor(*(const QPoint *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_140(Smoke::Stack x) {
 	// moveCursor(QTextEdit::CursorAction, bool)
 	this->QTextEdit::moveCursor(*(QTextEdit::CursorAction *)x[1].s_class,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_141(Smoke::Stack x) {
 	// doKeyboardAction(QTextEdit::KeyboardAction)
 	this->QTextEdit::doKeyboardAction(*(QTextEdit::KeyboardAction *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_142(Smoke::Stack x) {
 	// removeSelectedText(int)
 	this->QTextEdit::removeSelectedText((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_143(Smoke::Stack x) {
 	// removeSelectedText()
 	this->QTextEdit::removeSelectedText();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_144(Smoke::Stack x) {
 	// removeSelection(int)
 	this->QTextEdit::removeSelection((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_145(Smoke::Stack x) {
 	// removeSelection()
 	this->QTextEdit::removeSelection();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_146(Smoke::Stack x) {
 	// setCurrentFont(const QFont&)
 	this->QTextEdit::setCurrentFont(*(const QFont *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_147(Smoke::Stack x) {
 	// setOverwriteMode(bool)
 	this->QTextEdit::setOverwriteMode((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_148(Smoke::Stack x) {
 	// scrollToBottom()
 	this->QTextEdit::scrollToBottom();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_149(Smoke::Stack x) {
 	// insert(const QString&, bool, bool, bool)
 	this->QTextEdit::insert(*(const QString *)x[1].s_class,(bool)x[2].s_bool,(bool)x[3].s_bool,(bool)x[4].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_150(Smoke::Stack x) {
 	// insert(const QString&, bool, bool)
 	this->QTextEdit::insert(*(const QString *)x[1].s_class,(bool)x[2].s_bool,(bool)x[3].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_151(Smoke::Stack x) {
 	// insert(const QString&, bool)
 	this->QTextEdit::insert(*(const QString *)x[1].s_class,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_152(Smoke::Stack x) {
 	// insert(const QString&)
 	this->QTextEdit::insert(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_153(Smoke::Stack x) {
 	// insertAt(const QString&, int, int)
 	this->QTextEdit::insertAt(*(const QString *)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_154(Smoke::Stack x) {
 	// removeParagraph(int)
 	this->QTextEdit::removeParagraph((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_155(Smoke::Stack x) {
 	// insertParagraph(const QString&, int)
 	this->QTextEdit::insertParagraph(*(const QString *)x[1].s_class,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_156(Smoke::Stack x) {
 	// setParagraphBackgroundColor(int, const QColor&)
 	this->QTextEdit::setParagraphBackgroundColor((int)x[1].s_int,*(const QColor *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_157(Smoke::Stack x) {
 	// clearParagraphBackground(int)
 	this->QTextEdit::clearParagraphBackground((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_158(Smoke::Stack x) {
 	// setUndoRedoEnabled(bool)
 	this->QTextEdit::setUndoRedoEnabled((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_159(Smoke::Stack x) {
 	// textChanged()
 	this->QTextEdit::textChanged();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_160(Smoke::Stack x) {
 	// selectionChanged()
 	this->QTextEdit::selectionChanged();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_161(Smoke::Stack x) {
 	// copyAvailable(bool)
 	this->QTextEdit::copyAvailable((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_162(Smoke::Stack x) {
 	// undoAvailable(bool)
 	this->QTextEdit::undoAvailable((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_163(Smoke::Stack x) {
 	// redoAvailable(bool)
 	this->QTextEdit::redoAvailable((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_164(Smoke::Stack x) {
 	// currentFontChanged(const QFont&)
 	this->QTextEdit::currentFontChanged(*(const QFont *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_165(Smoke::Stack x) {
 	// currentColorChanged(const QColor&)
 	this->QTextEdit::currentColorChanged(*(const QColor *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_166(Smoke::Stack x) {
 	// currentAlignmentChanged(int)
 	this->QTextEdit::currentAlignmentChanged((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_167(Smoke::Stack x) {
 	// currentVerticalAlignmentChanged(QTextEdit::VerticalAlignment)
 	this->QTextEdit::currentVerticalAlignmentChanged(*(QTextEdit::VerticalAlignment *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_168(Smoke::Stack x) {
 	// cursorPositionChanged(QTextCursor*)
 	this->QTextEdit::cursorPositionChanged((QTextCursor*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_169(Smoke::Stack x) {
 	// cursorPositionChanged(int, int)
 	this->QTextEdit::cursorPositionChanged((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_170(Smoke::Stack x) {
 	// returnPressed()
 	this->QTextEdit::returnPressed();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_171(Smoke::Stack x) {
 	// modificationChanged(bool)
 	this->QTextEdit::modificationChanged((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_172(Smoke::Stack x) {
 	// repaintChanged()
 	this->QTextEdit::repaintChanged();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_173(Smoke::Stack x) {
 	// updateStyles()
 	this->QTextEdit::updateStyles();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_174(Smoke::Stack x) {
 	// drawContents(QPainter*, int, int, int, int)
 	this->QTextEdit::drawContents((QPainter*)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_175(Smoke::Stack x) {
 	// event(QEvent*)
@@ -779,66 +871,82 @@ public:
     void x_176(Smoke::Stack x) {
 	// keyPressEvent(QKeyEvent*)
 	this->QTextEdit::keyPressEvent((QKeyEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_177(Smoke::Stack x) {
 	// resizeEvent(QResizeEvent*)
 	this->QTextEdit::resizeEvent((QResizeEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_178(Smoke::Stack x) {
 	// viewportResizeEvent(QResizeEvent*)
 	this->QTextEdit::viewportResizeEvent((QResizeEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_179(Smoke::Stack x) {
 	// contentsMousePressEvent(QMouseEvent*)
 	this->QTextEdit::contentsMousePressEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_180(Smoke::Stack x) {
 	// contentsMouseMoveEvent(QMouseEvent*)
 	this->QTextEdit::contentsMouseMoveEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_181(Smoke::Stack x) {
 	// contentsMouseReleaseEvent(QMouseEvent*)
 	this->QTextEdit::contentsMouseReleaseEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_182(Smoke::Stack x) {
 	// contentsMouseDoubleClickEvent(QMouseEvent*)
 	this->QTextEdit::contentsMouseDoubleClickEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_183(Smoke::Stack x) {
 	// contentsWheelEvent(QWheelEvent*)
 	this->QTextEdit::contentsWheelEvent((QWheelEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_184(Smoke::Stack x) {
 	// imStartEvent(QIMEvent*)
 	this->QTextEdit::imStartEvent((QIMEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_185(Smoke::Stack x) {
 	// imComposeEvent(QIMEvent*)
 	this->QTextEdit::imComposeEvent((QIMEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_186(Smoke::Stack x) {
 	// imEndEvent(QIMEvent*)
 	this->QTextEdit::imEndEvent((QIMEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_187(Smoke::Stack x) {
 	// contentsDragEnterEvent(QDragEnterEvent*)
 	this->QTextEdit::contentsDragEnterEvent((QDragEnterEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_188(Smoke::Stack x) {
 	// contentsDragMoveEvent(QDragMoveEvent*)
 	this->QTextEdit::contentsDragMoveEvent((QDragMoveEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_189(Smoke::Stack x) {
 	// contentsDragLeaveEvent(QDragLeaveEvent*)
 	this->QTextEdit::contentsDragLeaveEvent((QDragLeaveEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_190(Smoke::Stack x) {
 	// contentsDropEvent(QDropEvent*)
 	this->QTextEdit::contentsDropEvent((QDropEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_191(Smoke::Stack x) {
 	// contentsContextMenuEvent(QContextMenuEvent*)
 	this->QTextEdit::contentsContextMenuEvent((QContextMenuEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_192(Smoke::Stack x) {
 	// focusNextPrevChild(bool)
@@ -858,6 +966,7 @@ public:
     void x_195(Smoke::Stack x) {
 	// setDocument(QTextDocument*)
 	this->QTextEdit::setDocument((QTextDocument*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_196(Smoke::Stack x) {
 	// createPopupMenu(const QPoint&)
@@ -872,14 +981,17 @@ public:
     void x_198(Smoke::Stack x) {
 	// drawCursor(bool)
 	this->QTextEdit::drawCursor((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_199(Smoke::Stack x) {
 	// windowActivationChange(bool)
 	this->QTextEdit::windowActivationChange((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_200(Smoke::Stack x) {
 	// doChangeInterval()
 	this->QTextEdit::doChangeInterval();
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void addChild(QWidget* x1, int x2, int x3) {
 	Smoke::StackItem x[4];

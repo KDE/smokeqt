@@ -28,6 +28,7 @@ public:
     void x_2(Smoke::Stack x) {
 	// append(const QIconDragItem&, const QRect&, const QRect&)
 	this->QIconDrag::append(*(const QIconDragItem *)x[1].s_class,*(const QRect *)x[2].s_class,*(const QRect *)x[3].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_3(Smoke::Stack x) const {
 	// format(int)

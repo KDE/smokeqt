@@ -45,18 +45,22 @@ public:
     void x_3(Smoke::Stack x) {
 	// popup(const QPoint&, int)
 	this->QPopupMenu::popup(*(const QPoint *)x[1].s_class,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_4(Smoke::Stack x) {
 	// popup(const QPoint&)
 	this->QPopupMenu::popup(*(const QPoint *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_5(Smoke::Stack x) {
 	// updateItem(int)
 	this->QPopupMenu::updateItem((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_6(Smoke::Stack x) {
 	// setCheckable(bool)
 	this->QPopupMenu::setCheckable((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_7(Smoke::Stack x) const {
 	// isCheckable()
@@ -66,14 +70,17 @@ public:
     void x_8(Smoke::Stack x) {
 	// setFont(const QFont&)
 	this->QPopupMenu::setFont(*(const QFont *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_9(Smoke::Stack x) {
 	// show()
 	this->QPopupMenu::show();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_10(Smoke::Stack x) {
 	// hide()
 	this->QPopupMenu::hide();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_11(Smoke::Stack x) {
 	// exec()
@@ -93,6 +100,7 @@ public:
     void x_14(Smoke::Stack x) {
 	// setActiveItem(int)
 	this->QPopupMenu::setActiveItem((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_15(Smoke::Stack x) const {
 	// sizeHint()
@@ -132,6 +140,7 @@ public:
     void x_22(Smoke::Stack x) {
 	// activateItemAt(int)
 	this->QPopupMenu::activateItemAt((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_23(Smoke::Stack x) {
 	// itemGeometry(int)
@@ -141,26 +150,32 @@ public:
     void x_24(Smoke::Stack x) {
 	// activated(int)
 	this->QPopupMenu::activated((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_25(Smoke::Stack x) {
 	// highlighted(int)
 	this->QPopupMenu::highlighted((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_26(Smoke::Stack x) {
 	// activatedRedirect(int)
 	this->QPopupMenu::activatedRedirect((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_27(Smoke::Stack x) {
 	// highlightedRedirect(int)
 	this->QPopupMenu::highlightedRedirect((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_28(Smoke::Stack x) {
 	// aboutToShow()
 	this->QPopupMenu::aboutToShow();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_29(Smoke::Stack x) {
 	// aboutToHide()
 	this->QPopupMenu::aboutToHide();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_30(Smoke::Stack x) const {
 	// itemHeight(int)
@@ -175,54 +190,67 @@ public:
     void x_32(Smoke::Stack x) {
 	// drawItem(QPainter*, int, QMenuItem*, bool, int, int, int, int)
 	this->QPopupMenu::drawItem((QPainter*)x[1].s_class,(int)x[2].s_int,(QMenuItem*)x[3].s_class,(bool)x[4].s_bool,(int)x[5].s_int,(int)x[6].s_int,(int)x[7].s_int,(int)x[8].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_33(Smoke::Stack x) {
 	// drawContents(QPainter*)
 	this->QPopupMenu::drawContents((QPainter*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_34(Smoke::Stack x) {
 	// closeEvent(QCloseEvent*)
 	this->QPopupMenu::closeEvent((QCloseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_35(Smoke::Stack x) {
 	// paintEvent(QPaintEvent*)
 	this->QPopupMenu::paintEvent((QPaintEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_36(Smoke::Stack x) {
 	// mousePressEvent(QMouseEvent*)
 	this->QPopupMenu::mousePressEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_37(Smoke::Stack x) {
 	// mouseReleaseEvent(QMouseEvent*)
 	this->QPopupMenu::mouseReleaseEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_38(Smoke::Stack x) {
 	// mouseMoveEvent(QMouseEvent*)
 	this->QPopupMenu::mouseMoveEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_39(Smoke::Stack x) {
 	// keyPressEvent(QKeyEvent*)
 	this->QPopupMenu::keyPressEvent((QKeyEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_40(Smoke::Stack x) {
 	// focusInEvent(QFocusEvent*)
 	this->QPopupMenu::focusInEvent((QFocusEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_41(Smoke::Stack x) {
 	// focusOutEvent(QFocusEvent*)
 	this->QPopupMenu::focusOutEvent((QFocusEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_42(Smoke::Stack x) {
 	// timerEvent(QTimerEvent*)
 	this->QPopupMenu::timerEvent((QTimerEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_43(Smoke::Stack x) {
 	// leaveEvent(QEvent*)
 	this->QPopupMenu::leaveEvent((QEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_44(Smoke::Stack x) {
 	// styleChange(QStyle&)
 	this->QPopupMenu::styleChange(*(QStyle *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_45(Smoke::Stack x) const {
 	// columns()

@@ -77,6 +77,7 @@ public:
     void x_11(Smoke::Stack x) {
 	// setWidget(QWidget*)
 	this->QDockWindow::setWidget((QWidget*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_12(Smoke::Stack x) const {
 	// widget()
@@ -96,6 +97,7 @@ public:
     void x_15(Smoke::Stack x) {
 	// setCloseMode(int)
 	this->QDockWindow::setCloseMode((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_16(Smoke::Stack x) const {
 	// isCloseEnabled()
@@ -110,10 +112,12 @@ public:
     void x_18(Smoke::Stack x) {
 	// setResizeEnabled(bool)
 	this->QDockWindow::setResizeEnabled((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_19(Smoke::Stack x) {
 	// setMovingEnabled(bool)
 	this->QDockWindow::setMovingEnabled((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_20(Smoke::Stack x) const {
 	// isResizeEnabled()
@@ -128,10 +132,12 @@ public:
     void x_22(Smoke::Stack x) {
 	// setHorizontallyStretchable(bool)
 	this->QDockWindow::setHorizontallyStretchable((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_23(Smoke::Stack x) {
 	// setVerticallyStretchable(bool)
 	this->QDockWindow::setVerticallyStretchable((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_24(Smoke::Stack x) const {
 	// isHorizontallyStretchable()
@@ -146,10 +152,12 @@ public:
     void x_26(Smoke::Stack x) {
 	// setHorizontalStretchable(bool)
 	this->QDockWindow::setHorizontalStretchable((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_27(Smoke::Stack x) {
 	// setVerticalStretchable(bool)
 	this->QDockWindow::setVerticalStretchable((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_28(Smoke::Stack x) const {
 	// isHorizontalStretchable()
@@ -169,6 +177,7 @@ public:
     void x_31(Smoke::Stack x) {
 	// setOffset(int)
 	this->QDockWindow::setOffset((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_32(Smoke::Stack x) const {
 	// offset()
@@ -178,10 +187,12 @@ public:
     void x_33(Smoke::Stack x) {
 	// setFixedExtentWidth(int)
 	this->QDockWindow::setFixedExtentWidth((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_34(Smoke::Stack x) {
 	// setFixedExtentHeight(int)
 	this->QDockWindow::setFixedExtentHeight((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_35(Smoke::Stack x) const {
 	// fixedExtent()
@@ -191,6 +202,7 @@ public:
     void x_36(Smoke::Stack x) {
 	// setNewLine(bool)
 	this->QDockWindow::setNewLine((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_37(Smoke::Stack x) const {
 	// newLine()
@@ -225,6 +237,7 @@ public:
     void x_43(Smoke::Stack x) {
 	// setOpaqueMoving(bool)
 	this->QDockWindow::setOpaqueMoving((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_44(Smoke::Stack x) const {
 	// opaqueMoving()
@@ -244,54 +257,67 @@ public:
     void x_47(Smoke::Stack x) {
 	// undock(QWidget*)
 	this->QDockWindow::undock((QWidget*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_48(Smoke::Stack x) {
 	// undock()
 	this->QDockWindow::undock();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_49(Smoke::Stack x) {
 	// dock()
 	this->QDockWindow::dock();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_50(Smoke::Stack x) {
 	// setOrientation(Qt::Orientation)
 	this->QDockWindow::setOrientation(*(Qt::Orientation *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_51(Smoke::Stack x) {
 	// setCaption(const QString&)
 	this->QDockWindow::setCaption(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_52(Smoke::Stack x) {
 	// orientationChanged(Qt::Orientation)
 	this->QDockWindow::orientationChanged(*(Qt::Orientation *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_53(Smoke::Stack x) {
 	// placeChanged(QDockWindow::Place)
 	this->QDockWindow::placeChanged(*(QDockWindow::Place *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_54(Smoke::Stack x) {
 	// visibilityChanged(bool)
 	this->QDockWindow::visibilityChanged((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_55(Smoke::Stack x) {
 	// resizeEvent(QResizeEvent*)
 	this->QDockWindow::resizeEvent((QResizeEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_56(Smoke::Stack x) {
 	// showEvent(QShowEvent*)
 	this->QDockWindow::showEvent((QShowEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_57(Smoke::Stack x) {
 	// hideEvent(QHideEvent*)
 	this->QDockWindow::hideEvent((QHideEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_58(Smoke::Stack x) {
 	// contextMenuEvent(QContextMenuEvent*)
 	this->QDockWindow::contextMenuEvent((QContextMenuEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_59(Smoke::Stack x) {
 	// drawFrame(QPainter*)
 	this->QDockWindow::drawFrame((QPainter*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_60(Smoke::Stack x) {
 	// event(QEvent*)

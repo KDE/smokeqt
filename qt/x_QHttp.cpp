@@ -21,10 +21,12 @@ public:
     void x_2(Smoke::Stack x) {
 	// operationGet(QNetworkOperation*)
 	this->QHttp::operationGet((QNetworkOperation*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_3(Smoke::Stack x) {
 	// operationPut(QNetworkOperation*)
 	this->QHttp::operationPut((QNetworkOperation*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void addOperation(QNetworkOperation* x1) {
 	Smoke::StackItem x[2];

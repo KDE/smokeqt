@@ -43,22 +43,27 @@ public:
     void x_5(Smoke::Stack x) {
 	// setRange(double, double, int)
 	this->QDoubleValidator::setRange((double)x[1].s_double,(double)x[2].s_double,(int)x[3].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_6(Smoke::Stack x) {
 	// setRange(double, double)
 	this->QDoubleValidator::setRange((double)x[1].s_double,(double)x[2].s_double);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_7(Smoke::Stack x) {
 	// setBottom(double)
 	this->QDoubleValidator::setBottom((double)x[1].s_double);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_8(Smoke::Stack x) {
 	// setTop(double)
 	this->QDoubleValidator::setTop((double)x[1].s_double);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_9(Smoke::Stack x) {
 	// setDecimals(int)
 	this->QDoubleValidator::setDecimals((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_10(Smoke::Stack x) const {
 	// bottom()

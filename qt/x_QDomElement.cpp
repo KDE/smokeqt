@@ -38,22 +38,27 @@ public:
     void x_5(Smoke::Stack x) {
 	// setAttribute(const QString&, const QString&)
 	this->QDomElement::setAttribute(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_6(Smoke::Stack x) {
 	// setAttribute(const QString&, int)
 	this->QDomElement::setAttribute(*(const QString *)x[1].s_class,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_7(Smoke::Stack x) {
 	// setAttribute(const QString&, uint)
 	this->QDomElement::setAttribute(*(const QString *)x[1].s_class,(uint)x[2].s_uint);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_8(Smoke::Stack x) {
 	// setAttribute(const QString&, double)
 	this->QDomElement::setAttribute(*(const QString *)x[1].s_class,(double)x[2].s_double);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_9(Smoke::Stack x) {
 	// removeAttribute(const QString&)
 	this->QDomElement::removeAttribute(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_10(Smoke::Stack x) {
 	// attributeNode(const QString&)
@@ -88,22 +93,27 @@ public:
     void x_16(Smoke::Stack x) {
 	// setAttributeNS(const QString, const QString&, const QString&)
 	this->QDomElement::setAttributeNS(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,*(const QString *)x[3].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_17(Smoke::Stack x) {
 	// setAttributeNS(const QString, const QString&, int)
 	this->QDomElement::setAttributeNS(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,(int)x[3].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_18(Smoke::Stack x) {
 	// setAttributeNS(const QString, const QString&, uint)
 	this->QDomElement::setAttributeNS(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,(uint)x[3].s_uint);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_19(Smoke::Stack x) {
 	// setAttributeNS(const QString, const QString&, double)
 	this->QDomElement::setAttributeNS(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,(double)x[3].s_double);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_20(Smoke::Stack x) {
 	// removeAttributeNS(const QString&, const QString&)
 	this->QDomElement::removeAttributeNS(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_21(Smoke::Stack x) {
 	// attributeNodeNS(const QString&, const QString&)
@@ -133,6 +143,7 @@ public:
     void x_26(Smoke::Stack x) {
 	// setTagName(const QString&)
 	this->QDomElement::setTagName(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_27(Smoke::Stack x) const {
 	// attributes()

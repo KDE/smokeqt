@@ -66,38 +66,47 @@ public:
     void x_7(Smoke::Stack x) {
 	// setScrollBarsEnabled(bool)
 	this->QWorkspace::setScrollBarsEnabled((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_8(Smoke::Stack x) {
 	// setPaletteBackgroundColor(const QColor&)
 	this->QWorkspace::setPaletteBackgroundColor(*(const QColor *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_9(Smoke::Stack x) {
 	// setPaletteBackgroundPixmap(const QPixmap&)
 	this->QWorkspace::setPaletteBackgroundPixmap(*(const QPixmap *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_10(Smoke::Stack x) {
 	// cascade()
 	this->QWorkspace::cascade();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_11(Smoke::Stack x) {
 	// tile()
 	this->QWorkspace::tile();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_12(Smoke::Stack x) {
 	// windowActivated(QWidget*)
 	this->QWorkspace::windowActivated((QWidget*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_13(Smoke::Stack x) {
 	// styleChange(QStyle&)
 	this->QWorkspace::styleChange(*(QStyle *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_14(Smoke::Stack x) {
 	// childEvent(QChildEvent*)
 	this->QWorkspace::childEvent((QChildEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_15(Smoke::Stack x) {
 	// resizeEvent(QResizeEvent*)
 	this->QWorkspace::resizeEvent((QResizeEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_16(Smoke::Stack x) {
 	// eventFilter(QObject*, QEvent*)
@@ -107,14 +116,17 @@ public:
     void x_17(Smoke::Stack x) {
 	// showEvent(QShowEvent*)
 	this->QWorkspace::showEvent((QShowEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_18(Smoke::Stack x) {
 	// hideEvent(QHideEvent*)
 	this->QWorkspace::hideEvent((QHideEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_19(Smoke::Stack x) {
 	// wheelEvent(QWheelEvent*)
 	this->QWorkspace::wheelEvent((QWheelEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void adjustSize() {
 	Smoke::StackItem x[1];

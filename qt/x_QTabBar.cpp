@@ -62,10 +62,12 @@ public:
     void x_8(Smoke::Stack x) {
 	// setShape(QTabBar::Shape)
 	this->QTabBar::setShape(*(QTabBar::Shape *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_9(Smoke::Stack x) {
 	// show()
 	this->QTabBar::show();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_10(Smoke::Stack x) {
 	// addTab(QTab*)
@@ -85,10 +87,12 @@ public:
     void x_13(Smoke::Stack x) {
 	// removeTab(QTab*)
 	this->QTabBar::removeTab((QTab*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_14(Smoke::Stack x) {
 	// setTabEnabled(int, bool)
 	this->QTabBar::setTabEnabled((int)x[1].s_int,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_15(Smoke::Stack x) const {
 	// isTabEnabled(int)
@@ -138,6 +142,7 @@ public:
     void x_24(Smoke::Stack x) {
 	// layoutTabs()
 	this->QTabBar::layoutTabs();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_25(Smoke::Stack x) const {
 	// selectTab(const QPoint&)
@@ -147,10 +152,12 @@ public:
     void x_26(Smoke::Stack x) {
 	// removeToolTip(int)
 	this->QTabBar::removeToolTip((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_27(Smoke::Stack x) {
 	// setToolTip(int, const QString&)
 	this->QTabBar::setToolTip((int)x[1].s_int,*(const QString *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_28(Smoke::Stack x) const {
 	// toolTip(int)
@@ -160,62 +167,77 @@ public:
     void x_29(Smoke::Stack x) {
 	// setCurrentTab(int)
 	this->QTabBar::setCurrentTab((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_30(Smoke::Stack x) {
 	// setCurrentTab(QTab*)
 	this->QTabBar::setCurrentTab((QTab*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_31(Smoke::Stack x) {
 	// selected(int)
 	this->QTabBar::selected((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_32(Smoke::Stack x) const {
 	// paint(QPainter*, QTab*, bool)
 	this->QTabBar::paint((QPainter*)x[1].s_class,(QTab*)x[2].s_class,(bool)x[3].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_33(Smoke::Stack x) const {
 	// paintLabel(QPainter*, const QRect&, QTab*, bool)
 	this->QTabBar::paintLabel((QPainter*)x[1].s_class,*(const QRect *)x[2].s_class,(QTab*)x[3].s_class,(bool)x[4].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_34(Smoke::Stack x) {
 	// focusInEvent(QFocusEvent*)
 	this->QTabBar::focusInEvent((QFocusEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_35(Smoke::Stack x) {
 	// focusOutEvent(QFocusEvent*)
 	this->QTabBar::focusOutEvent((QFocusEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_36(Smoke::Stack x) {
 	// resizeEvent(QResizeEvent*)
 	this->QTabBar::resizeEvent((QResizeEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_37(Smoke::Stack x) {
 	// paintEvent(QPaintEvent*)
 	this->QTabBar::paintEvent((QPaintEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_38(Smoke::Stack x) {
 	// mousePressEvent(QMouseEvent*)
 	this->QTabBar::mousePressEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_39(Smoke::Stack x) {
 	// mouseMoveEvent(QMouseEvent*)
 	this->QTabBar::mouseMoveEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_40(Smoke::Stack x) {
 	// mouseReleaseEvent(QMouseEvent*)
 	this->QTabBar::mouseReleaseEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_41(Smoke::Stack x) {
 	// keyPressEvent(QKeyEvent*)
 	this->QTabBar::keyPressEvent((QKeyEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_42(Smoke::Stack x) {
 	// styleChange(QStyle&)
 	this->QTabBar::styleChange(*(QStyle *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_43(Smoke::Stack x) {
 	// fontChange(const QFont&)
 	this->QTabBar::fontChange(*(const QFont *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_44(Smoke::Stack x) {
 	// tabList()

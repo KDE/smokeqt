@@ -80,6 +80,7 @@ public:
     void x_11(Smoke::Stack x) {
 	// setBoundaryChecking(bool)
 	this->QDataBrowser::setBoundaryChecking((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_12(Smoke::Stack x) const {
 	// boundaryChecking()
@@ -89,10 +90,12 @@ public:
     void x_13(Smoke::Stack x) {
 	// setSort(const QSqlIndex&)
 	this->QDataBrowser::setSort(*(const QSqlIndex *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_14(Smoke::Stack x) {
 	// setSort(const QStringList&)
 	this->QDataBrowser::setSort(*(const QStringList *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_15(Smoke::Stack x) const {
 	// sort()
@@ -102,6 +105,7 @@ public:
     void x_16(Smoke::Stack x) {
 	// setFilter(const QString&)
 	this->QDataBrowser::setFilter(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_17(Smoke::Stack x) const {
 	// filter()
@@ -111,10 +115,12 @@ public:
     void x_18(Smoke::Stack x) {
 	// setSqlCursor(QSqlCursor*, bool)
 	this->QDataBrowser::setSqlCursor((QSqlCursor*)x[1].s_class,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_19(Smoke::Stack x) {
 	// setSqlCursor(QSqlCursor*)
 	this->QDataBrowser::setSqlCursor((QSqlCursor*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_20(Smoke::Stack x) const {
 	// sqlCursor()
@@ -124,6 +130,7 @@ public:
     void x_21(Smoke::Stack x) {
 	// setForm(QSqlForm*)
 	this->QDataBrowser::setForm((QSqlForm*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_22(Smoke::Stack x) {
 	// form()
@@ -133,22 +140,27 @@ public:
     void x_23(Smoke::Stack x) {
 	// setConfirmEdits(bool)
 	this->QDataBrowser::setConfirmEdits((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_24(Smoke::Stack x) {
 	// setConfirmInsert(bool)
 	this->QDataBrowser::setConfirmInsert((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_25(Smoke::Stack x) {
 	// setConfirmUpdate(bool)
 	this->QDataBrowser::setConfirmUpdate((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_26(Smoke::Stack x) {
 	// setConfirmDelete(bool)
 	this->QDataBrowser::setConfirmDelete((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_27(Smoke::Stack x) {
 	// setConfirmCancels(bool)
 	this->QDataBrowser::setConfirmCancels((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_28(Smoke::Stack x) const {
 	// confirmEdits()
@@ -178,6 +190,7 @@ public:
     void x_33(Smoke::Stack x) {
 	// setReadOnly(bool)
 	this->QDataBrowser::setReadOnly((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_34(Smoke::Stack x) const {
 	// isReadOnly()
@@ -187,6 +200,7 @@ public:
     void x_35(Smoke::Stack x) {
 	// setAutoEdit(bool)
 	this->QDataBrowser::setAutoEdit((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_36(Smoke::Stack x) const {
 	// autoEdit()
@@ -206,98 +220,122 @@ public:
     void x_39(Smoke::Stack x) {
 	// refresh()
 	this->QDataBrowser::refresh();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_40(Smoke::Stack x) {
 	// insert()
 	this->QDataBrowser::insert();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_41(Smoke::Stack x) {
 	// update()
 	this->QDataBrowser::update();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_42(Smoke::Stack x) {
 	// del()
 	this->QDataBrowser::del();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_43(Smoke::Stack x) {
 	// first()
 	this->QDataBrowser::first();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_44(Smoke::Stack x) {
 	// last()
 	this->QDataBrowser::last();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_45(Smoke::Stack x) {
 	// next()
 	this->QDataBrowser::next();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_46(Smoke::Stack x) {
 	// prev()
 	this->QDataBrowser::prev();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_47(Smoke::Stack x) {
 	// readFields()
 	this->QDataBrowser::readFields();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_48(Smoke::Stack x) {
 	// writeFields()
 	this->QDataBrowser::writeFields();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_49(Smoke::Stack x) {
 	// clearValues()
 	this->QDataBrowser::clearValues();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_50(Smoke::Stack x) {
 	// updateBoundary()
 	this->QDataBrowser::updateBoundary();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_51(Smoke::Stack x) {
 	// firstRecordAvailable(bool)
 	this->QDataBrowser::firstRecordAvailable((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_52(Smoke::Stack x) {
 	// lastRecordAvailable(bool)
 	this->QDataBrowser::lastRecordAvailable((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_53(Smoke::Stack x) {
 	// nextRecordAvailable(bool)
 	this->QDataBrowser::nextRecordAvailable((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_54(Smoke::Stack x) {
 	// prevRecordAvailable(bool)
 	this->QDataBrowser::prevRecordAvailable((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_55(Smoke::Stack x) {
 	// currentChanged(const QSqlRecord*)
 	this->QDataBrowser::currentChanged((const QSqlRecord*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_56(Smoke::Stack x) {
 	// primeInsert(QSqlRecord*)
 	this->QDataBrowser::primeInsert((QSqlRecord*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_57(Smoke::Stack x) {
 	// primeUpdate(QSqlRecord*)
 	this->QDataBrowser::primeUpdate((QSqlRecord*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_58(Smoke::Stack x) {
 	// primeDelete(QSqlRecord*)
 	this->QDataBrowser::primeDelete((QSqlRecord*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_59(Smoke::Stack x) {
 	// beforeInsert(QSqlRecord*)
 	this->QDataBrowser::beforeInsert((QSqlRecord*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_60(Smoke::Stack x) {
 	// beforeUpdate(QSqlRecord*)
 	this->QDataBrowser::beforeUpdate((QSqlRecord*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_61(Smoke::Stack x) {
 	// beforeDelete(QSqlRecord*)
 	this->QDataBrowser::beforeDelete((QSqlRecord*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_62(Smoke::Stack x) {
 	// cursorChanged(QSqlCursor::Mode)
 	this->QDataBrowser::cursorChanged(*(QSqlCursor::Mode *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_63(Smoke::Stack x) {
 	// insertCurrent()
@@ -332,6 +370,7 @@ public:
     void x_69(Smoke::Stack x) {
 	// handleError(const QSqlError&)
 	this->QDataBrowser::handleError(*(const QSqlError *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void adjustSize() {
 	Smoke::StackItem x[1];

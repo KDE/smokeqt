@@ -120,14 +120,17 @@ public:
     void x_21(Smoke::Stack x) {
 	// setOpen(bool)
 	this->QSqlDriver::setOpen((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_22(Smoke::Stack x) {
 	// setOpenError(bool)
 	this->QSqlDriver::setOpenError((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_23(Smoke::Stack x) {
 	// setLastError(const QSqlError&)
 	this->QSqlDriver::setLastError(*(const QSqlError *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual bool beginTransaction() {
 	Smoke::StackItem x[1];

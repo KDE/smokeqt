@@ -51,6 +51,7 @@ public:
     void x_5(Smoke::Stack x) {
 	// setEditWidget(QWidget*)
 	this->QSpinWidget::setEditWidget((QWidget*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_6(Smoke::Stack x) {
 	// editWidget()
@@ -70,10 +71,12 @@ public:
     void x_9(Smoke::Stack x) {
 	// setUpEnabled(bool)
 	this->QSpinWidget::setUpEnabled((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_10(Smoke::Stack x) {
 	// setDownEnabled(bool)
 	this->QSpinWidget::setDownEnabled((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_11(Smoke::Stack x) const {
 	// isUpEnabled()
@@ -88,6 +91,7 @@ public:
     void x_13(Smoke::Stack x) {
 	// setButtonSymbols(QSpinWidget::ButtonSymbols)
 	this->QSpinWidget::setButtonSymbols(*(QSpinWidget::ButtonSymbols *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_14(Smoke::Stack x) const {
 	// buttonSymbols()
@@ -97,58 +101,72 @@ public:
     void x_15(Smoke::Stack x) {
 	// arrange()
 	this->QSpinWidget::arrange();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_16(Smoke::Stack x) {
 	// stepUp()
 	this->QSpinWidget::stepUp();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_17(Smoke::Stack x) {
 	// stepDown()
 	this->QSpinWidget::stepDown();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_18(Smoke::Stack x) {
 	// stepUpPressed()
 	this->QSpinWidget::stepUpPressed();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_19(Smoke::Stack x) {
 	// stepDownPressed()
 	this->QSpinWidget::stepDownPressed();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_20(Smoke::Stack x) {
 	// mousePressEvent(QMouseEvent*)
 	this->QSpinWidget::mousePressEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_21(Smoke::Stack x) {
 	// resizeEvent(QResizeEvent*)
 	this->QSpinWidget::resizeEvent((QResizeEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_22(Smoke::Stack x) {
 	// mouseReleaseEvent(QMouseEvent*)
 	this->QSpinWidget::mouseReleaseEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_23(Smoke::Stack x) {
 	// mouseMoveEvent(QMouseEvent*)
 	this->QSpinWidget::mouseMoveEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_24(Smoke::Stack x) {
 	// wheelEvent(QWheelEvent*)
 	this->QSpinWidget::wheelEvent((QWheelEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_25(Smoke::Stack x) {
 	// styleChange(QStyle&)
 	this->QSpinWidget::styleChange(*(QStyle *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_26(Smoke::Stack x) {
 	// paintEvent(QPaintEvent*)
 	this->QSpinWidget::paintEvent((QPaintEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_27(Smoke::Stack x) {
 	// enableChanged(bool)
 	this->QSpinWidget::enableChanged((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_28(Smoke::Stack x) {
 	// windowActivationChange(bool)
 	this->QSpinWidget::windowActivationChange((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void adjustSize() {
 	Smoke::StackItem x[1];

@@ -81,10 +81,12 @@ public:
     void x_14(Smoke::Stack x) {
 	// clear()
 	this->QXmlAttributes::clear();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_15(Smoke::Stack x) {
 	// append(const QString&, const QString&, const QString&, const QString&)
 	this->QXmlAttributes::append(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,*(const QString *)x[3].s_class,*(const QString *)x[4].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     ~x_QXmlAttributes() {}
 };

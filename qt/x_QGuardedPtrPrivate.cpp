@@ -21,6 +21,7 @@ public:
     void x_2(Smoke::Stack x) {
 	// reconnect(QObject*)
 	this->QGuardedPtrPrivate::reconnect((QObject*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual bool checkConnectArgs(const char* x1, const QObject* x2, const char* x3) {
 	Smoke::StackItem x[4];

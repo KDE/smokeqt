@@ -143,6 +143,7 @@ public:
     void x_25(Smoke::Stack x) {
 	// start()
 	this->QTime::start();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_26(Smoke::Stack x) {
 	// restart()

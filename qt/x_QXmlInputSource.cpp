@@ -40,14 +40,17 @@ public:
     void x_4(Smoke::Stack x) {
 	// setData(const QString&)
 	this->QXmlInputSource::setData(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_5(Smoke::Stack x) {
 	// setData(const QByteArray&)
 	this->QXmlInputSource::setData(*(const QByteArray *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_6(Smoke::Stack x) {
 	// fetchData()
 	this->QXmlInputSource::fetchData();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_7(Smoke::Stack x) {
 	// data()
@@ -62,6 +65,7 @@ public:
     void x_9(Smoke::Stack x) {
 	// reset()
 	this->QXmlInputSource::reset();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_10(Smoke::Stack x) {
 	// fromRawData(const QByteArray&, bool)

@@ -45,22 +45,27 @@ public:
     void x_3(Smoke::Stack x) {
 	// addWidget(QWidget*, int, bool)
 	this->QStatusBar::addWidget((QWidget*)x[1].s_class,(int)x[2].s_int,(bool)x[3].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_4(Smoke::Stack x) {
 	// addWidget(QWidget*, int)
 	this->QStatusBar::addWidget((QWidget*)x[1].s_class,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_5(Smoke::Stack x) {
 	// addWidget(QWidget*)
 	this->QStatusBar::addWidget((QWidget*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_6(Smoke::Stack x) {
 	// removeWidget(QWidget*)
 	this->QStatusBar::removeWidget((QWidget*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_7(Smoke::Stack x) {
 	// setSizeGripEnabled(bool)
 	this->QStatusBar::setSizeGripEnabled((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_8(Smoke::Stack x) const {
 	// isSizeGripEnabled()
@@ -70,30 +75,37 @@ public:
     void x_9(Smoke::Stack x) {
 	// message(const QString&)
 	this->QStatusBar::message(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_10(Smoke::Stack x) {
 	// message(const QString&, int)
 	this->QStatusBar::message(*(const QString *)x[1].s_class,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_11(Smoke::Stack x) {
 	// clear()
 	this->QStatusBar::clear();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_12(Smoke::Stack x) {
 	// paintEvent(QPaintEvent*)
 	this->QStatusBar::paintEvent((QPaintEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_13(Smoke::Stack x) {
 	// resizeEvent(QResizeEvent*)
 	this->QStatusBar::resizeEvent((QResizeEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_14(Smoke::Stack x) {
 	// reformat()
 	this->QStatusBar::reformat();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_15(Smoke::Stack x) {
 	// hideOrShow()
 	this->QStatusBar::hideOrShow();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_16(Smoke::Stack x) {
 	// event(QEvent*)

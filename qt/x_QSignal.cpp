@@ -45,6 +45,7 @@ public:
     void x_6(Smoke::Stack x) {
 	// activate()
 	this->QSignal::activate();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_7(Smoke::Stack x) const {
 	// isBlocked()
@@ -54,10 +55,12 @@ public:
     void x_8(Smoke::Stack x) {
 	// block(bool)
 	this->QSignal::block((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_9(Smoke::Stack x) {
 	// setParameter(int)
 	this->QSignal::setParameter((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_10(Smoke::Stack x) const {
 	// parameter()
@@ -67,6 +70,7 @@ public:
     void x_11(Smoke::Stack x) {
 	// setValue(const QVariant&)
 	this->QSignal::setValue(*(const QVariant *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_12(Smoke::Stack x) const {
 	// value()
@@ -76,10 +80,12 @@ public:
     void x_13(Smoke::Stack x) {
 	// signal(const QVariant&)
 	this->QSignal::signal(*(const QVariant *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_14(Smoke::Stack x) {
 	// intSignal(int)
 	this->QSignal::intSignal((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual bool checkConnectArgs(const char* x1, const QObject* x2, const char* x3) {
 	Smoke::StackItem x[4];

@@ -170,6 +170,7 @@ public:
     void x_52(Smoke::Stack x) {
 	// setResolution(int)
 	this->QPaintDevice::setResolution((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_53(Smoke::Stack x) const {
 	// resolution()

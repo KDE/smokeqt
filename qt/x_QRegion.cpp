@@ -106,6 +106,7 @@ public:
     void x_16(Smoke::Stack x) {
 	// translate(int, int)
 	this->QRegion::translate((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_17(Smoke::Stack x) const {
 	// unite(const QRegion&)
@@ -140,6 +141,7 @@ public:
     void x_23(Smoke::Stack x) {
 	// setRects(const QRect*, int)
 	this->QRegion::setRects((const QRect*)x[1].s_class,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_24(Smoke::Stack x) const {
 	// operator|(const QRegion&)

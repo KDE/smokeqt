@@ -75,6 +75,7 @@ public:
     void x_12(Smoke::Stack x) {
 	// setSelectable(bool)
 	this->QListBoxItem::setSelectable((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_13(Smoke::Stack x) const {
 	// isSelectable()
@@ -99,10 +100,12 @@ public:
     void x_17(Smoke::Stack x) {
 	// setText(const QString&)
 	this->QListBoxItem::setText(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_18(Smoke::Stack x) {
 	// setCustomHighlighting(bool)
 	this->QListBoxItem::setCustomHighlighting((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual int height(const QListBox* x1) const {
 	Smoke::StackItem x[2];

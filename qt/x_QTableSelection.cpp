@@ -15,10 +15,12 @@ public:
     void x_1(Smoke::Stack x) {
 	// init(int, int)
 	this->QTableSelection::init((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_2(Smoke::Stack x) {
 	// expandTo(int, int)
 	this->QTableSelection::expandTo((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_3(Smoke::Stack x) const {
 	// operator==(const QTableSelection&)

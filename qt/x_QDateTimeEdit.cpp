@@ -77,6 +77,7 @@ public:
     void x_8(Smoke::Stack x) {
 	// setDateTime(const QDateTime&)
 	this->QDateTimeEdit::setDateTime(*(const QDateTime *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_9(Smoke::Stack x) const {
 	// dateTime()
@@ -96,6 +97,7 @@ public:
     void x_12(Smoke::Stack x) {
 	// setAutoAdvance(bool)
 	this->QDateTimeEdit::setAutoAdvance((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_13(Smoke::Stack x) const {
 	// autoAdvance()
@@ -105,26 +107,32 @@ public:
     void x_14(Smoke::Stack x) {
 	// valueChanged(const QDateTime&)
 	this->QDateTimeEdit::valueChanged(*(const QDateTime *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_15(Smoke::Stack x) {
 	// init()
 	this->QDateTimeEdit::init();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_16(Smoke::Stack x) {
 	// resizeEvent(QResizeEvent*)
 	this->QDateTimeEdit::resizeEvent((QResizeEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_17(Smoke::Stack x) {
 	// layoutEditors()
 	this->QDateTimeEdit::layoutEditors();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_18(Smoke::Stack x) {
 	// newValue(const QDate&)
 	this->QDateTimeEdit::newValue(*(const QDate *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_19(Smoke::Stack x) {
 	// newValue(const QTime&)
 	this->QDateTimeEdit::newValue(*(const QTime *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void adjustSize() {
 	Smoke::StackItem x[1];

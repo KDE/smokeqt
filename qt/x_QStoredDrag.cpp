@@ -33,6 +33,7 @@ public:
     void x_3(Smoke::Stack x) {
 	// setEncodedData(const QByteArray&)
 	this->QStoredDrag::setEncodedData(*(const QByteArray *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_4(Smoke::Stack x) const {
 	// format(int)

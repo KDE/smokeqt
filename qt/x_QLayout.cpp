@@ -104,10 +104,12 @@ public:
     void x_16(Smoke::Stack x) {
 	// setMargin(int)
 	this->QLayout::setMargin((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_17(Smoke::Stack x) {
 	// setSpacing(int)
 	this->QLayout::setSpacing((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_18(Smoke::Stack x) const {
 	// defaultBorder()
@@ -117,14 +119,17 @@ public:
     void x_19(Smoke::Stack x) {
 	// freeze(int, int)
 	this->QLayout::freeze((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_20(Smoke::Stack x) {
 	// freeze()
 	this->QLayout::freeze();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_21(Smoke::Stack x) {
 	// setResizeMode(QLayout::ResizeMode)
 	this->QLayout::setResizeMode(*(QLayout::ResizeMode *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_22(Smoke::Stack x) const {
 	// resizeMode()
@@ -134,6 +139,7 @@ public:
     void x_23(Smoke::Stack x) {
 	// setMenuBar(QMenuBar*)
 	this->QLayout::setMenuBar((QMenuBar*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_24(Smoke::Stack x) const {
 	// menuBar()
@@ -153,6 +159,7 @@ public:
     void x_27(Smoke::Stack x) {
 	// setAutoAdd(bool)
 	this->QLayout::setAutoAdd((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_28(Smoke::Stack x) const {
 	// autoAdd()
@@ -162,6 +169,7 @@ public:
     void x_29(Smoke::Stack x) {
 	// invalidate()
 	this->QLayout::invalidate();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_30(Smoke::Stack x) const {
 	// geometry()
@@ -176,6 +184,7 @@ public:
     void x_32(Smoke::Stack x) {
 	// add(QWidget*)
 	this->QLayout::add((QWidget*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_33(Smoke::Stack x) const {
 	// expanding()
@@ -230,6 +239,7 @@ public:
     void x_43(Smoke::Stack x) {
 	// setEnabled(bool)
 	this->QLayout::setEnabled((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_44(Smoke::Stack x) const {
 	// isEnabled()
@@ -244,18 +254,22 @@ public:
     void x_46(Smoke::Stack x) {
 	// childEvent(QChildEvent*)
 	this->QLayout::childEvent((QChildEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_47(Smoke::Stack x) {
 	// addChildLayout(QLayout*)
 	this->QLayout::addChildLayout((QLayout*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_48(Smoke::Stack x) {
 	// deleteAllItems()
 	this->QLayout::deleteAllItems();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_49(Smoke::Stack x) {
 	// setSupportsMargin(bool)
 	this->QLayout::setSupportsMargin((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_50(Smoke::Stack x) const {
 	// alignmentRect(const QRect&)

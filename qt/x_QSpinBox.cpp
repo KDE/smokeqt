@@ -99,6 +99,7 @@ public:
     void x_13(Smoke::Stack x) {
 	// setSpecialValueText(const QString&)
 	this->QSpinBox::setSpecialValueText(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_14(Smoke::Stack x) const {
 	// specialValueText()
@@ -108,6 +109,7 @@ public:
     void x_15(Smoke::Stack x) {
 	// setWrapping(bool)
 	this->QSpinBox::setWrapping((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_16(Smoke::Stack x) const {
 	// wrapping()
@@ -117,6 +119,7 @@ public:
     void x_17(Smoke::Stack x) {
 	// setButtonSymbols(QSpinBox::ButtonSymbols)
 	this->QSpinBox::setButtonSymbols(*(QSpinBox::ButtonSymbols *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_18(Smoke::Stack x) const {
 	// buttonSymbols()
@@ -126,6 +129,7 @@ public:
     void x_19(Smoke::Stack x) {
 	// setValidator(const QValidator*)
 	this->QSpinBox::setValidator((const QValidator*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_20(Smoke::Stack x) const {
 	// validator()
@@ -155,10 +159,12 @@ public:
     void x_25(Smoke::Stack x) {
 	// setMinValue(int)
 	this->QSpinBox::setMinValue((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_26(Smoke::Stack x) {
 	// setMaxValue(int)
 	this->QSpinBox::setMaxValue((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_27(Smoke::Stack x) const {
 	// lineStep()
@@ -168,6 +174,7 @@ public:
     void x_28(Smoke::Stack x) {
 	// setLineStep(int)
 	this->QSpinBox::setLineStep((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_29(Smoke::Stack x) const {
 	// value()
@@ -187,38 +194,47 @@ public:
     void x_32(Smoke::Stack x) {
 	// setValue(int)
 	this->QSpinBox::setValue((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_33(Smoke::Stack x) {
 	// setPrefix(const QString&)
 	this->QSpinBox::setPrefix(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_34(Smoke::Stack x) {
 	// setSuffix(const QString&)
 	this->QSpinBox::setSuffix(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_35(Smoke::Stack x) {
 	// stepUp()
 	this->QSpinBox::stepUp();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_36(Smoke::Stack x) {
 	// stepDown()
 	this->QSpinBox::stepDown();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_37(Smoke::Stack x) {
 	// setEnabled(bool)
 	this->QSpinBox::setEnabled((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_38(Smoke::Stack x) {
 	// selectAll()
 	this->QSpinBox::selectAll();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_39(Smoke::Stack x) {
 	// valueChanged(int)
 	this->QSpinBox::valueChanged((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_40(Smoke::Stack x) {
 	// valueChanged(const QString&)
 	this->QSpinBox::valueChanged(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_41(Smoke::Stack x) {
 	// mapValueToText(int)
@@ -238,10 +254,12 @@ public:
     void x_44(Smoke::Stack x) {
 	// updateDisplay()
 	this->QSpinBox::updateDisplay();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_45(Smoke::Stack x) {
 	// interpretText()
 	this->QSpinBox::interpretText();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_46(Smoke::Stack x) const {
 	// editor()
@@ -251,10 +269,12 @@ public:
     void x_47(Smoke::Stack x) {
 	// valueChange()
 	this->QSpinBox::valueChange();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_48(Smoke::Stack x) {
 	// rangeChange()
 	this->QSpinBox::rangeChange();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_49(Smoke::Stack x) {
 	// eventFilter(QObject*, QEvent*)
@@ -264,22 +284,27 @@ public:
     void x_50(Smoke::Stack x) {
 	// resizeEvent(QResizeEvent*)
 	this->QSpinBox::resizeEvent((QResizeEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_51(Smoke::Stack x) {
 	// wheelEvent(QWheelEvent*)
 	this->QSpinBox::wheelEvent((QWheelEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_52(Smoke::Stack x) {
 	// leaveEvent(QEvent*)
 	this->QSpinBox::leaveEvent((QEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_53(Smoke::Stack x) {
 	// styleChange(QStyle&)
 	this->QSpinBox::styleChange(*(QStyle *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_54(Smoke::Stack x) {
 	// textChanged()
 	this->QSpinBox::textChanged();
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void adjustSize() {
 	Smoke::StackItem x[1];

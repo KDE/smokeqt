@@ -87,22 +87,27 @@ public:
     void x_10(Smoke::Stack x) {
 	// removeLabel(int)
 	this->QHeader::removeLabel((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_11(Smoke::Stack x) {
 	// setLabel(int, const QString&, int)
 	this->QHeader::setLabel((int)x[1].s_int,*(const QString *)x[2].s_class,(int)x[3].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_12(Smoke::Stack x) {
 	// setLabel(int, const QString&)
 	this->QHeader::setLabel((int)x[1].s_int,*(const QString *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_13(Smoke::Stack x) {
 	// setLabel(int, const QIconSet&, const QString&, int)
 	this->QHeader::setLabel((int)x[1].s_int,*(const QIconSet *)x[2].s_class,*(const QString *)x[3].s_class,(int)x[4].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_14(Smoke::Stack x) {
 	// setLabel(int, const QIconSet&, const QString&)
 	this->QHeader::setLabel((int)x[1].s_int,*(const QIconSet *)x[2].s_class,*(const QString *)x[3].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_15(Smoke::Stack x) const {
 	// label(int)
@@ -117,6 +122,7 @@ public:
     void x_17(Smoke::Stack x) {
 	// setOrientation(Qt::Orientation)
 	this->QHeader::setOrientation(*(Qt::Orientation *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_18(Smoke::Stack x) const {
 	// orientation()
@@ -126,6 +132,7 @@ public:
     void x_19(Smoke::Stack x) {
 	// setTracking(bool)
 	this->QHeader::setTracking((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_20(Smoke::Stack x) const {
 	// tracking()
@@ -135,30 +142,37 @@ public:
     void x_21(Smoke::Stack x) {
 	// setClickEnabled(bool, int)
 	this->QHeader::setClickEnabled((bool)x[1].s_bool,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_22(Smoke::Stack x) {
 	// setClickEnabled(bool)
 	this->QHeader::setClickEnabled((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_23(Smoke::Stack x) {
 	// setResizeEnabled(bool, int)
 	this->QHeader::setResizeEnabled((bool)x[1].s_bool,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_24(Smoke::Stack x) {
 	// setResizeEnabled(bool)
 	this->QHeader::setResizeEnabled((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_25(Smoke::Stack x) {
 	// setMovingEnabled(bool)
 	this->QHeader::setMovingEnabled((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_26(Smoke::Stack x) {
 	// setStretchEnabled(bool, int)
 	this->QHeader::setStretchEnabled((bool)x[1].s_bool,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_27(Smoke::Stack x) {
 	// setStretchEnabled(bool)
 	this->QHeader::setStretchEnabled((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_28(Smoke::Stack x) const {
 	// isClickEnabled(int)
@@ -198,6 +212,7 @@ public:
     void x_35(Smoke::Stack x) {
 	// resizeSection(int, int)
 	this->QHeader::resizeSection((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_36(Smoke::Stack x) const {
 	// sectionSize(int)
@@ -232,6 +247,7 @@ public:
     void x_42(Smoke::Stack x) {
 	// setCellSize(int, int)
 	this->QHeader::setCellSize((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_43(Smoke::Stack x) const {
 	// cellSize(int)
@@ -281,70 +297,87 @@ public:
     void x_52(Smoke::Stack x) {
 	// moveSection(int, int)
 	this->QHeader::moveSection((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_53(Smoke::Stack x) {
 	// moveCell(int, int)
 	this->QHeader::moveCell((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_54(Smoke::Stack x) {
 	// setSortIndicator(int, bool)
 	this->QHeader::setSortIndicator((int)x[1].s_int,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_55(Smoke::Stack x) {
 	// setSortIndicator(int)
 	this->QHeader::setSortIndicator((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_56(Smoke::Stack x) {
 	// adjustHeaderSize()
 	this->QHeader::adjustHeaderSize();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_57(Smoke::Stack x) {
 	// setUpdatesEnabled(bool)
 	this->QHeader::setUpdatesEnabled((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_58(Smoke::Stack x) {
 	// setOffset(int)
 	this->QHeader::setOffset((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_59(Smoke::Stack x) {
 	// clicked(int)
 	this->QHeader::clicked((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_60(Smoke::Stack x) {
 	// pressed(int)
 	this->QHeader::pressed((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_61(Smoke::Stack x) {
 	// released(int)
 	this->QHeader::released((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_62(Smoke::Stack x) {
 	// sizeChange(int, int, int)
 	this->QHeader::sizeChange((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_63(Smoke::Stack x) {
 	// indexChange(int, int, int)
 	this->QHeader::indexChange((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_64(Smoke::Stack x) {
 	// sectionClicked(int)
 	this->QHeader::sectionClicked((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_65(Smoke::Stack x) {
 	// moved(int, int)
 	this->QHeader::moved((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_66(Smoke::Stack x) {
 	// paintEvent(QPaintEvent*)
 	this->QHeader::paintEvent((QPaintEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_67(Smoke::Stack x) {
 	// showEvent(QShowEvent*)
 	this->QHeader::showEvent((QShowEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_68(Smoke::Stack x) {
 	// resizeEvent(QResizeEvent*)
 	this->QHeader::resizeEvent((QResizeEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_69(Smoke::Stack x) {
 	// sRect(int)
@@ -354,22 +387,27 @@ public:
     void x_70(Smoke::Stack x) {
 	// paintSection(QPainter*, int, const QRect&)
 	this->QHeader::paintSection((QPainter*)x[1].s_class,(int)x[2].s_int,*(const QRect *)x[3].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_71(Smoke::Stack x) {
 	// paintSectionLabel(QPainter*, int, const QRect&)
 	this->QHeader::paintSectionLabel((QPainter*)x[1].s_class,(int)x[2].s_int,*(const QRect *)x[3].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_72(Smoke::Stack x) {
 	// mousePressEvent(QMouseEvent*)
 	this->QHeader::mousePressEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_73(Smoke::Stack x) {
 	// mouseReleaseEvent(QMouseEvent*)
 	this->QHeader::mouseReleaseEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_74(Smoke::Stack x) {
 	// mouseMoveEvent(QMouseEvent*)
 	this->QHeader::mouseMoveEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void adjustSize() {
 	Smoke::StackItem x[1];

@@ -109,6 +109,7 @@ public:
     void x_19(Smoke::Stack x) {
 	// setNumDigits(int)
 	this->QLCDNumber::setNumDigits((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_20(Smoke::Stack x) const {
 	// checkOverflow(double)
@@ -128,6 +129,7 @@ public:
     void x_23(Smoke::Stack x) {
 	// setMode(QLCDNumber::Mode)
 	this->QLCDNumber::setMode(*(QLCDNumber::Mode *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_24(Smoke::Stack x) const {
 	// segmentStyle()
@@ -137,6 +139,7 @@ public:
     void x_25(Smoke::Stack x) {
 	// setSegmentStyle(QLCDNumber::SegmentStyle)
 	this->QLCDNumber::setSegmentStyle(*(QLCDNumber::SegmentStyle *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_26(Smoke::Stack x) const {
 	// value()
@@ -156,42 +159,52 @@ public:
     void x_29(Smoke::Stack x) {
 	// display(const QString&)
 	this->QLCDNumber::display(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_30(Smoke::Stack x) {
 	// display(int)
 	this->QLCDNumber::display((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_31(Smoke::Stack x) {
 	// display(double)
 	this->QLCDNumber::display((double)x[1].s_double);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_32(Smoke::Stack x) {
 	// setHexMode()
 	this->QLCDNumber::setHexMode();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_33(Smoke::Stack x) {
 	// setDecMode()
 	this->QLCDNumber::setDecMode();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_34(Smoke::Stack x) {
 	// setOctMode()
 	this->QLCDNumber::setOctMode();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_35(Smoke::Stack x) {
 	// setBinMode()
 	this->QLCDNumber::setBinMode();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_36(Smoke::Stack x) {
 	// setSmallDecimalPoint(bool)
 	this->QLCDNumber::setSmallDecimalPoint((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_37(Smoke::Stack x) {
 	// overflow()
 	this->QLCDNumber::overflow();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_38(Smoke::Stack x) {
 	// drawContents(QPainter*)
 	this->QLCDNumber::drawContents((QPainter*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void adjustSize() {
 	Smoke::StackItem x[1];

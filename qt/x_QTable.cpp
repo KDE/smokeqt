@@ -108,6 +108,7 @@ public:
     void x_18(Smoke::Stack x) {
 	// setSelectionMode(QTable::SelectionMode)
 	this->QTable::setSelectionMode(*(QTable::SelectionMode *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_19(Smoke::Stack x) const {
 	// selectionMode()
@@ -117,14 +118,17 @@ public:
     void x_20(Smoke::Stack x) {
 	// setItem(int, int, QTableItem*)
 	this->QTable::setItem((int)x[1].s_int,(int)x[2].s_int,(QTableItem*)x[3].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_21(Smoke::Stack x) {
 	// setText(int, int, const QString&)
 	this->QTable::setText((int)x[1].s_int,(int)x[2].s_int,*(const QString *)x[3].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_22(Smoke::Stack x) {
 	// setPixmap(int, int, const QPixmap&)
 	this->QTable::setPixmap((int)x[1].s_int,(int)x[2].s_int,*(const QPixmap *)x[3].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_23(Smoke::Stack x) const {
 	// item(int, int)
@@ -144,6 +148,7 @@ public:
     void x_26(Smoke::Stack x) {
 	// clearCell(int, int)
 	this->QTable::clearCell((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_27(Smoke::Stack x) const {
 	// cellGeometry(int, int)
@@ -193,6 +198,7 @@ public:
     void x_36(Smoke::Stack x) {
 	// updateCell(int, int)
 	this->QTable::updateCell((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_37(Smoke::Stack x) {
 	// eventFilter(QObject*, QEvent*)
@@ -212,6 +218,7 @@ public:
     void x_40(Smoke::Stack x) {
 	// ensureCellVisible(int, int)
 	this->QTable::ensureCellVisible((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_41(Smoke::Stack x) const {
 	// isSelected(int, int)
@@ -256,10 +263,12 @@ public:
     void x_49(Smoke::Stack x) {
 	// removeSelection(const QTableSelection&)
 	this->QTable::removeSelection(*(const QTableSelection *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_50(Smoke::Stack x) {
 	// removeSelection(int)
 	this->QTable::removeSelection((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_51(Smoke::Stack x) const {
 	// currentSelection()
@@ -284,14 +293,17 @@ public:
     void x_55(Smoke::Stack x) {
 	// sortColumn(int, bool, bool)
 	this->QTable::sortColumn((int)x[1].s_int,(bool)x[2].s_bool,(bool)x[3].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_56(Smoke::Stack x) {
 	// sortColumn(int, bool)
 	this->QTable::sortColumn((int)x[1].s_int,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_57(Smoke::Stack x) {
 	// sortColumn(int)
 	this->QTable::sortColumn((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_58(Smoke::Stack x) const {
 	// sorting()
@@ -301,10 +313,12 @@ public:
     void x_59(Smoke::Stack x) {
 	// takeItem(QTableItem*)
 	this->QTable::takeItem((QTableItem*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_60(Smoke::Stack x) {
 	// setCellWidget(int, int, QWidget*)
 	this->QTable::setCellWidget((int)x[1].s_int,(int)x[2].s_int,(QWidget*)x[3].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_61(Smoke::Stack x) const {
 	// cellWidget(int, int)
@@ -314,6 +328,7 @@ public:
     void x_62(Smoke::Stack x) {
 	// clearCellWidget(int, int)
 	this->QTable::clearCellWidget((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_63(Smoke::Stack x) const {
 	// cellRect(int, int)
@@ -323,14 +338,17 @@ public:
     void x_64(Smoke::Stack x) {
 	// paintCell(QPainter*, int, int, const QRect&, bool)
 	this->QTable::paintCell((QPainter*)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int,*(const QRect *)x[4].s_class,(bool)x[5].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_65(Smoke::Stack x) {
 	// paintCell(QPainter*, int, int, const QRect&, bool, const QColorGroup&)
 	this->QTable::paintCell((QPainter*)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int,*(const QRect *)x[4].s_class,(bool)x[5].s_bool,*(const QColorGroup *)x[6].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_66(Smoke::Stack x) {
 	// paintFocus(QPainter*, const QRect&)
 	this->QTable::paintFocus((QPainter*)x[1].s_class,*(const QRect *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_67(Smoke::Stack x) const {
 	// sizeHint()
@@ -355,14 +373,17 @@ public:
     void x_71(Smoke::Stack x) {
 	// setEnabled(bool)
 	this->QTable::setEnabled((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_72(Smoke::Stack x) {
 	// repaintSelections()
 	this->QTable::repaintSelections();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_73(Smoke::Stack x) {
 	// setFocusStyle(QTable::FocusStyle)
 	this->QTable::setFocusStyle(*(QTable::FocusStyle *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_74(Smoke::Stack x) const {
 	// focusStyle()
@@ -372,54 +393,67 @@ public:
     void x_75(Smoke::Stack x) {
 	// setNumRows(int)
 	this->QTable::setNumRows((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_76(Smoke::Stack x) {
 	// setNumCols(int)
 	this->QTable::setNumCols((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_77(Smoke::Stack x) {
 	// setShowGrid(bool)
 	this->QTable::setShowGrid((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_78(Smoke::Stack x) {
 	// hideRow(int)
 	this->QTable::hideRow((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_79(Smoke::Stack x) {
 	// hideColumn(int)
 	this->QTable::hideColumn((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_80(Smoke::Stack x) {
 	// showRow(int)
 	this->QTable::showRow((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_81(Smoke::Stack x) {
 	// showColumn(int)
 	this->QTable::showColumn((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_82(Smoke::Stack x) {
 	// setColumnWidth(int, int)
 	this->QTable::setColumnWidth((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_83(Smoke::Stack x) {
 	// setRowHeight(int, int)
 	this->QTable::setRowHeight((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_84(Smoke::Stack x) {
 	// adjustColumn(int)
 	this->QTable::adjustColumn((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_85(Smoke::Stack x) {
 	// adjustRow(int)
 	this->QTable::adjustRow((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_86(Smoke::Stack x) {
 	// setColumnStretchable(int, bool)
 	this->QTable::setColumnStretchable((int)x[1].s_int,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_87(Smoke::Stack x) {
 	// setRowStretchable(int, bool)
 	this->QTable::setRowStretchable((int)x[1].s_int,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_88(Smoke::Stack x) const {
 	// isColumnStretchable(int)
@@ -434,70 +468,87 @@ public:
     void x_90(Smoke::Stack x) {
 	// setSorting(bool)
 	this->QTable::setSorting((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_91(Smoke::Stack x) {
 	// swapRows(int, int, bool)
 	this->QTable::swapRows((int)x[1].s_int,(int)x[2].s_int,(bool)x[3].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_92(Smoke::Stack x) {
 	// swapRows(int, int)
 	this->QTable::swapRows((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_93(Smoke::Stack x) {
 	// swapColumns(int, int, bool)
 	this->QTable::swapColumns((int)x[1].s_int,(int)x[2].s_int,(bool)x[3].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_94(Smoke::Stack x) {
 	// swapColumns(int, int)
 	this->QTable::swapColumns((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_95(Smoke::Stack x) {
 	// swapCells(int, int, int, int)
 	this->QTable::swapCells((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_96(Smoke::Stack x) {
 	// setLeftMargin(int)
 	this->QTable::setLeftMargin((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_97(Smoke::Stack x) {
 	// setTopMargin(int)
 	this->QTable::setTopMargin((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_98(Smoke::Stack x) {
 	// setCurrentCell(int, int)
 	this->QTable::setCurrentCell((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_99(Smoke::Stack x) {
 	// clearSelection(bool)
 	this->QTable::clearSelection((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_100(Smoke::Stack x) {
 	// clearSelection()
 	this->QTable::clearSelection();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_101(Smoke::Stack x) {
 	// setColumnMovingEnabled(bool)
 	this->QTable::setColumnMovingEnabled((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_102(Smoke::Stack x) {
 	// setRowMovingEnabled(bool)
 	this->QTable::setRowMovingEnabled((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_103(Smoke::Stack x) {
 	// setReadOnly(bool)
 	this->QTable::setReadOnly((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_104(Smoke::Stack x) {
 	// setRowReadOnly(int, bool)
 	this->QTable::setRowReadOnly((int)x[1].s_int,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_105(Smoke::Stack x) {
 	// setColumnReadOnly(int, bool)
 	this->QTable::setColumnReadOnly((int)x[1].s_int,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_106(Smoke::Stack x) {
 	// setDragEnabled(bool)
 	this->QTable::setDragEnabled((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_107(Smoke::Stack x) const {
 	// dragEnabled()
@@ -507,138 +558,172 @@ public:
     void x_108(Smoke::Stack x) {
 	// insertRows(int, int)
 	this->QTable::insertRows((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_109(Smoke::Stack x) {
 	// insertRows(int)
 	this->QTable::insertRows((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_110(Smoke::Stack x) {
 	// insertColumns(int, int)
 	this->QTable::insertColumns((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_111(Smoke::Stack x) {
 	// insertColumns(int)
 	this->QTable::insertColumns((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_112(Smoke::Stack x) {
 	// removeRow(int)
 	this->QTable::removeRow((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_113(Smoke::Stack x) {
 	// removeRows(const QMemArray<int>&)
 	this->QTable::removeRows(*(const QMemArray<int> *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_114(Smoke::Stack x) {
 	// removeColumn(int)
 	this->QTable::removeColumn((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_115(Smoke::Stack x) {
 	// removeColumns(const QMemArray<int>&)
 	this->QTable::removeColumns(*(const QMemArray<int> *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_116(Smoke::Stack x) {
 	// editCell(int, int, bool)
 	this->QTable::editCell((int)x[1].s_int,(int)x[2].s_int,(bool)x[3].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_117(Smoke::Stack x) {
 	// editCell(int, int)
 	this->QTable::editCell((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_118(Smoke::Stack x) {
 	// currentChanged(int, int)
 	this->QTable::currentChanged((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_119(Smoke::Stack x) {
 	// clicked(int, int, int, const QPoint&)
 	this->QTable::clicked((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,*(const QPoint *)x[4].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_120(Smoke::Stack x) {
 	// doubleClicked(int, int, int, const QPoint&)
 	this->QTable::doubleClicked((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,*(const QPoint *)x[4].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_121(Smoke::Stack x) {
 	// pressed(int, int, int, const QPoint&)
 	this->QTable::pressed((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,*(const QPoint *)x[4].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_122(Smoke::Stack x) {
 	// selectionChanged()
 	this->QTable::selectionChanged();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_123(Smoke::Stack x) {
 	// valueChanged(int, int)
 	this->QTable::valueChanged((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_124(Smoke::Stack x) {
 	// contextMenuRequested(int, int, const QPoint&)
 	this->QTable::contextMenuRequested((int)x[1].s_int,(int)x[2].s_int,*(const QPoint *)x[3].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_125(Smoke::Stack x) {
 	// dropped(QDropEvent*)
 	this->QTable::dropped((QDropEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_126(Smoke::Stack x) {
 	// drawContents(QPainter*, int, int, int, int)
 	this->QTable::drawContents((QPainter*)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_127(Smoke::Stack x) {
 	// contentsMousePressEvent(QMouseEvent*)
 	this->QTable::contentsMousePressEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_128(Smoke::Stack x) {
 	// contentsMouseMoveEvent(QMouseEvent*)
 	this->QTable::contentsMouseMoveEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_129(Smoke::Stack x) {
 	// contentsMouseDoubleClickEvent(QMouseEvent*)
 	this->QTable::contentsMouseDoubleClickEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_130(Smoke::Stack x) {
 	// contentsMouseReleaseEvent(QMouseEvent*)
 	this->QTable::contentsMouseReleaseEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_131(Smoke::Stack x) {
 	// contentsContextMenuEvent(QContextMenuEvent*)
 	this->QTable::contentsContextMenuEvent((QContextMenuEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_132(Smoke::Stack x) {
 	// keyPressEvent(QKeyEvent*)
 	this->QTable::keyPressEvent((QKeyEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_133(Smoke::Stack x) {
 	// focusInEvent(QFocusEvent*)
 	this->QTable::focusInEvent((QFocusEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_134(Smoke::Stack x) {
 	// focusOutEvent(QFocusEvent*)
 	this->QTable::focusOutEvent((QFocusEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_135(Smoke::Stack x) {
 	// viewportResizeEvent(QResizeEvent*)
 	this->QTable::viewportResizeEvent((QResizeEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_136(Smoke::Stack x) {
 	// showEvent(QShowEvent*)
 	this->QTable::showEvent((QShowEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_137(Smoke::Stack x) {
 	// setEditMode(QTable::EditMode, int, int)
 	this->QTable::setEditMode(*(QTable::EditMode *)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_138(Smoke::Stack x) {
 	// contentsDragEnterEvent(QDragEnterEvent*)
 	this->QTable::contentsDragEnterEvent((QDragEnterEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_139(Smoke::Stack x) {
 	// contentsDragMoveEvent(QDragMoveEvent*)
 	this->QTable::contentsDragMoveEvent((QDragMoveEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_140(Smoke::Stack x) {
 	// contentsDragLeaveEvent(QDragLeaveEvent*)
 	this->QTable::contentsDragLeaveEvent((QDragLeaveEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_141(Smoke::Stack x) {
 	// contentsDropEvent(QDropEvent*)
 	this->QTable::contentsDropEvent((QDropEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_142(Smoke::Stack x) {
 	// dragObject()
@@ -648,14 +733,17 @@ public:
     void x_143(Smoke::Stack x) {
 	// startDrag()
 	this->QTable::startDrag();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_144(Smoke::Stack x) {
 	// paintEmptyArea(QPainter*, int, int, int, int)
 	this->QTable::paintEmptyArea((QPainter*)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_145(Smoke::Stack x) {
 	// activateNextCell()
 	this->QTable::activateNextCell();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_146(Smoke::Stack x) const {
 	// createEditor(int, int, bool)
@@ -665,6 +753,7 @@ public:
     void x_147(Smoke::Stack x) {
 	// setCellContentFromEditor(int, int)
 	this->QTable::setCellContentFromEditor((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_148(Smoke::Stack x) {
 	// beginEdit(int, int, bool)
@@ -674,14 +763,17 @@ public:
     void x_149(Smoke::Stack x) {
 	// endEdit(int, int, bool, bool)
 	this->QTable::endEdit((int)x[1].s_int,(int)x[2].s_int,(bool)x[3].s_bool,(bool)x[4].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_150(Smoke::Stack x) {
 	// resizeData(int)
 	this->QTable::resizeData((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_151(Smoke::Stack x) {
 	// insertWidget(int, int, QWidget*)
 	this->QTable::insertWidget((int)x[1].s_int,(int)x[2].s_int,(QWidget*)x[3].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_152(Smoke::Stack x) const {
 	// indexOf(int, int)
@@ -691,6 +783,7 @@ public:
     void x_153(Smoke::Stack x) {
 	// windowActivationChange(bool)
 	this->QTable::windowActivationChange((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_154(Smoke::Stack x) const {
 	// isEditing()
@@ -715,22 +808,27 @@ public:
     void x_158(Smoke::Stack x) {
 	// columnWidthChanged(int)
 	this->QTable::columnWidthChanged((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_159(Smoke::Stack x) {
 	// rowHeightChanged(int)
 	this->QTable::rowHeightChanged((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_160(Smoke::Stack x) {
 	// columnIndexChanged(int, int, int)
 	this->QTable::columnIndexChanged((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_161(Smoke::Stack x) {
 	// rowIndexChanged(int, int, int)
 	this->QTable::rowIndexChanged((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_162(Smoke::Stack x) {
 	// columnClicked(int)
 	this->QTable::columnClicked((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void activateNextCell() {
 	Smoke::StackItem x[1];

@@ -411,6 +411,7 @@ public:
     void x_75(Smoke::Stack x) {
 	// clear()
 	this->QVariant::clear();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_76(Smoke::Stack x) const {
 	// toString()
@@ -775,10 +776,12 @@ public:
     void x_148(Smoke::Stack x) {
 	// load(QDataStream&)
 	this->QVariant::load(*(QDataStream *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_149(Smoke::Stack x) const {
 	// save(QDataStream&)
 	this->QVariant::save(*(QDataStream *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_150(Smoke::Stack x) {
 	// typeToName(QVariant::Type)

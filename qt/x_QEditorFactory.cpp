@@ -40,6 +40,7 @@ public:
     static void x_5(Smoke::Stack x) {
 	// installDefaultFactory(QEditorFactory*)
 	QEditorFactory::installDefaultFactory((QEditorFactory*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual bool checkConnectArgs(const char* x1, const QObject* x2, const char* x3) {
 	Smoke::StackItem x[4];

@@ -9,10 +9,12 @@ public:
     void x_0(Smoke::Stack x) {
 	// sort()
 	this->QCanvasItemList::sort();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_1(Smoke::Stack x) {
 	// drawUnique(QPainter&)
 	this->QCanvasItemList::drawUnique(*(QPainter *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_2(Smoke::Stack x) {
 	// QCanvasItemList()

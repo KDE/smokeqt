@@ -20,10 +20,12 @@ public:
     void x_1(Smoke::Stack x) {
 	// setControlPoints(QPointArray, bool)
 	this->QCanvasSpline::setControlPoints(*(QPointArray *)x[1].s_class,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_2(Smoke::Stack x) {
 	// setControlPoints(QPointArray)
 	this->QCanvasSpline::setControlPoints(*(QPointArray *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_3(Smoke::Stack x) const {
 	// controlPoints()

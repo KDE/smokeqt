@@ -74,10 +74,12 @@ public:
     void x_12(Smoke::Stack x) {
 	// accept()
 	this->QMouseEvent::accept();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_13(Smoke::Stack x) {
 	// ignore()
 	this->QMouseEvent::ignore();
+	x[0].s_int = x[0].s_int; // noop
     }
     ~x_QMouseEvent() {}
 };

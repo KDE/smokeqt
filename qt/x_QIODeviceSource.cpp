@@ -27,6 +27,7 @@ public:
     void x_3(Smoke::Stack x) {
 	// sendTo(QDataSink*, int)
 	this->QIODeviceSource::sendTo((QDataSink*)x[1].s_class,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_4(Smoke::Stack x) const {
 	// rewindable()
@@ -36,10 +37,12 @@ public:
     void x_5(Smoke::Stack x) {
 	// enableRewind(bool)
 	this->QIODeviceSource::enableRewind((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_6(Smoke::Stack x) {
 	// rewind()
 	this->QIODeviceSource::rewind();
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void enableRewind(bool x1) {
 	Smoke::StackItem x[2];

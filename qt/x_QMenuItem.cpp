@@ -87,14 +87,17 @@ public:
     void x_15(Smoke::Stack x) {
 	// setText(const QString&)
 	this->QMenuItem::setText(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_16(Smoke::Stack x) {
 	// setDirty(bool)
 	this->QMenuItem::setDirty((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_17(Smoke::Stack x) {
 	// setWhatsThis(const QString&)
 	this->QMenuItem::setWhatsThis(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     ~x_QMenuItem() {}
 };

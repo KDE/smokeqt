@@ -700,22 +700,27 @@ public:
     void x_227(Smoke::Stack x) {
 	// polish(QWidget*)
 	this->QStyle::polish((QWidget*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_228(Smoke::Stack x) {
 	// unPolish(QWidget*)
 	this->QStyle::unPolish((QWidget*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_229(Smoke::Stack x) {
 	// polish(QApplication*)
 	this->QStyle::polish((QApplication*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_230(Smoke::Stack x) {
 	// unPolish(QApplication*)
 	this->QStyle::unPolish((QApplication*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_231(Smoke::Stack x) {
 	// polish(QPalette&)
 	this->QStyle::polish(*(QPalette *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_232(Smoke::Stack x) const {
 	// itemRect(QPainter*, const QRect&, int, bool, const QPixmap*, const QString&, int)
@@ -730,14 +735,17 @@ public:
     void x_234(Smoke::Stack x) const {
 	// drawItem(QPainter*, const QRect&, int, const QColorGroup&, bool, const QPixmap*, const QString&, int, const QColor*)
 	this->QStyle::drawItem((QPainter*)x[1].s_class,*(const QRect *)x[2].s_class,(int)x[3].s_int,*(const QColorGroup *)x[4].s_class,(bool)x[5].s_bool,(const QPixmap*)x[6].s_class,*(const QString *)x[7].s_class,(int)x[8].s_int,(const QColor*)x[9].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_235(Smoke::Stack x) const {
 	// drawItem(QPainter*, const QRect&, int, const QColorGroup&, bool, const QPixmap*, const QString&, int)
 	this->QStyle::drawItem((QPainter*)x[1].s_class,*(const QRect *)x[2].s_class,(int)x[3].s_int,*(const QColorGroup *)x[4].s_class,(bool)x[5].s_bool,(const QPixmap*)x[6].s_class,*(const QString *)x[7].s_class,(int)x[8].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_236(Smoke::Stack x) const {
 	// drawItem(QPainter*, const QRect&, int, const QColorGroup&, bool, const QPixmap*, const QString&)
 	this->QStyle::drawItem((QPainter*)x[1].s_class,*(const QRect *)x[2].s_class,(int)x[3].s_int,*(const QColorGroup *)x[4].s_class,(bool)x[5].s_bool,(const QPixmap*)x[6].s_class,*(const QString *)x[7].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_237(Smoke::Stack x) const {
 	// defaultFrameWidth()
@@ -747,6 +755,7 @@ public:
     void x_238(Smoke::Stack x) const {
 	// tabbarMetrics(const QWidget*, int&, int&, int&)
 	this->QStyle::tabbarMetrics((const QWidget*)x[1].s_class,*(int *)x[2].s_class,*(int *)x[3].s_class,*(int *)x[4].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_239(Smoke::Stack x) const {
 	// scrollBarExtent()

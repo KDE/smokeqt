@@ -25,10 +25,12 @@ public:
     void x_2(Smoke::Stack x) {
 	// setPen(QPen)
 	this->QCanvasPolygonalItem::setPen(*(QPen *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_3(Smoke::Stack x) {
 	// setBrush(QBrush)
 	this->QCanvasPolygonalItem::setBrush(*(QBrush *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_4(Smoke::Stack x) const {
 	// pen()
@@ -58,6 +60,7 @@ public:
     void x_9(Smoke::Stack x) {
 	// draw(QPainter&)
 	this->QCanvasPolygonalItem::draw(*(QPainter *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_10(Smoke::Stack x) const {
 	// winding()
@@ -67,6 +70,7 @@ public:
     void x_11(Smoke::Stack x) {
 	// setWinding(bool)
 	this->QCanvasPolygonalItem::setWinding((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void advance(int x1) {
 	Smoke::StackItem x[2];

@@ -151,10 +151,12 @@ public:
     void x_23(Smoke::Stack x) {
 	// setRowStretch(int, int)
 	this->QGridLayout::setRowStretch((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_24(Smoke::Stack x) {
 	// setColStretch(int, int)
 	this->QGridLayout::setColStretch((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_25(Smoke::Stack x) const {
 	// rowStretch(int)
@@ -199,66 +201,82 @@ public:
     void x_33(Smoke::Stack x) {
 	// invalidate()
 	this->QGridLayout::invalidate();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_34(Smoke::Stack x) {
 	// addItem(QLayoutItem*)
 	this->QGridLayout::addItem((QLayoutItem*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_35(Smoke::Stack x) {
 	// addItem(QLayoutItem*, int, int)
 	this->QGridLayout::addItem((QLayoutItem*)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_36(Smoke::Stack x) {
 	// addMultiCell(QLayoutItem*, int, int, int, int, int)
 	this->QGridLayout::addMultiCell((QLayoutItem*)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int,(int)x[6].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_37(Smoke::Stack x) {
 	// addMultiCell(QLayoutItem*, int, int, int, int)
 	this->QGridLayout::addMultiCell((QLayoutItem*)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_38(Smoke::Stack x) {
 	// addWidget(QWidget*, int, int, int)
 	this->QGridLayout::addWidget((QWidget*)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_39(Smoke::Stack x) {
 	// addWidget(QWidget*, int, int)
 	this->QGridLayout::addWidget((QWidget*)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_40(Smoke::Stack x) {
 	// addMultiCellWidget(QWidget*, int, int, int, int, int)
 	this->QGridLayout::addMultiCellWidget((QWidget*)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int,(int)x[6].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_41(Smoke::Stack x) {
 	// addMultiCellWidget(QWidget*, int, int, int, int)
 	this->QGridLayout::addMultiCellWidget((QWidget*)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_42(Smoke::Stack x) {
 	// addLayout(QLayout*, int, int)
 	this->QGridLayout::addLayout((QLayout*)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_43(Smoke::Stack x) {
 	// addMultiCellLayout(QLayout*, int, int, int, int, int)
 	this->QGridLayout::addMultiCellLayout((QLayout*)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int,(int)x[6].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_44(Smoke::Stack x) {
 	// addMultiCellLayout(QLayout*, int, int, int, int)
 	this->QGridLayout::addMultiCellLayout((QLayout*)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_45(Smoke::Stack x) {
 	// addRowSpacing(int, int)
 	this->QGridLayout::addRowSpacing((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_46(Smoke::Stack x) {
 	// addColSpacing(int, int)
 	this->QGridLayout::addColSpacing((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_47(Smoke::Stack x) {
 	// expand(int, int)
 	this->QGridLayout::expand((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_48(Smoke::Stack x) {
 	// setOrigin(QGridLayout::Corner)
 	this->QGridLayout::setOrigin(*(QGridLayout::Corner *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_49(Smoke::Stack x) const {
 	// origin()
@@ -273,6 +291,7 @@ public:
     void x_51(Smoke::Stack x) {
 	// setGeometry(const QRect&)
 	this->QGridLayout::setGeometry(*(const QRect *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_52(Smoke::Stack x) {
 	// findWidget(QWidget*, int*, int*)
@@ -282,6 +301,7 @@ public:
     void x_53(Smoke::Stack x) {
 	// add(QLayoutItem*, int, int)
 	this->QGridLayout::add((QLayoutItem*)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void addItem(QLayoutItem* x1) {
 	Smoke::StackItem x[2];

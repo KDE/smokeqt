@@ -41,6 +41,7 @@ public:
     void x_5(Smoke::Stack x) {
 	// detach()
 	this->QGArray::detach();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_6(Smoke::Stack x) const {
 	// data()
@@ -95,6 +96,7 @@ public:
     void x_16(Smoke::Stack x) {
 	// store(const char*, uint)
 	this->QGArray::store((const char*)x[1].s_class,(uint)x[2].s_uint);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_17(Smoke::Stack x) const {
 	// sharedBlock()
@@ -104,6 +106,7 @@ public:
     void x_18(Smoke::Stack x) {
 	// setSharedBlock(QGArray::array_data*)
 	this->QGArray::setSharedBlock((QGArray::array_data*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_19(Smoke::Stack x) {
 	// setRawData(const char*, uint)
@@ -113,6 +116,7 @@ public:
     void x_20(Smoke::Stack x) {
 	// resetRawData(const char*, uint)
 	this->QGArray::resetRawData((const char*)x[1].s_class,(uint)x[2].s_uint);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_21(Smoke::Stack x) const {
 	// find(const char*, uint, uint)
@@ -127,6 +131,7 @@ public:
     void x_23(Smoke::Stack x) {
 	// sort(uint)
 	this->QGArray::sort((uint)x[1].s_uint);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_24(Smoke::Stack x) const {
 	// bsearch(const char*, uint)
@@ -151,6 +156,7 @@ public:
     void x_28(Smoke::Stack x) {
 	// deleteData(QGArray::array_data*)
 	this->QGArray::deleteData((QGArray::array_data*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void deleteData(QGArray::array_data* x1) {
 	Smoke::StackItem x[2];

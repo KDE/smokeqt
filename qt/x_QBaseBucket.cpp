@@ -24,6 +24,7 @@ public:
     void x_3(Smoke::Stack x) {
 	// setNext(QBaseBucket*)
 	this->QBaseBucket::setNext((QBaseBucket*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_4(Smoke::Stack x) {
 	// QBaseBucket(QPtrCollection::Item, QBaseBucket*)

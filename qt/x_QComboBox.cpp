@@ -91,66 +91,82 @@ public:
     void x_13(Smoke::Stack x) {
 	// insertStringList(const QStringList&, int)
 	this->QComboBox::insertStringList(*(const QStringList *)x[1].s_class,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_14(Smoke::Stack x) {
 	// insertStringList(const QStringList&)
 	this->QComboBox::insertStringList(*(const QStringList *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_15(Smoke::Stack x) {
 	// insertStrList(const QStrList&, int)
 	this->QComboBox::insertStrList(*(const QStrList *)x[1].s_class,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_16(Smoke::Stack x) {
 	// insertStrList(const QStrList&)
 	this->QComboBox::insertStrList(*(const QStrList *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_17(Smoke::Stack x) {
 	// insertStrList(const QStrList*, int)
 	this->QComboBox::insertStrList((const QStrList*)x[1].s_class,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_18(Smoke::Stack x) {
 	// insertStrList(const QStrList*)
 	this->QComboBox::insertStrList((const QStrList*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_19(Smoke::Stack x) {
 	// insertStrList(const char**, int, int)
 	this->QComboBox::insertStrList((const char**)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_20(Smoke::Stack x) {
 	// insertStrList(const char**, int)
 	this->QComboBox::insertStrList((const char**)x[1].s_class,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_21(Smoke::Stack x) {
 	// insertStrList(const char**)
 	this->QComboBox::insertStrList((const char**)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_22(Smoke::Stack x) {
 	// insertItem(const QString&, int)
 	this->QComboBox::insertItem(*(const QString *)x[1].s_class,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_23(Smoke::Stack x) {
 	// insertItem(const QString&)
 	this->QComboBox::insertItem(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_24(Smoke::Stack x) {
 	// insertItem(const QPixmap&, int)
 	this->QComboBox::insertItem(*(const QPixmap *)x[1].s_class,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_25(Smoke::Stack x) {
 	// insertItem(const QPixmap&)
 	this->QComboBox::insertItem(*(const QPixmap *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_26(Smoke::Stack x) {
 	// insertItem(const QPixmap&, const QString&, int)
 	this->QComboBox::insertItem(*(const QPixmap *)x[1].s_class,*(const QString *)x[2].s_class,(int)x[3].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_27(Smoke::Stack x) {
 	// insertItem(const QPixmap&, const QString&)
 	this->QComboBox::insertItem(*(const QPixmap *)x[1].s_class,*(const QString *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_28(Smoke::Stack x) {
 	// removeItem(int)
 	this->QComboBox::removeItem((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_29(Smoke::Stack x) const {
 	// currentItem()
@@ -160,6 +176,7 @@ public:
     void x_30(Smoke::Stack x) {
 	// setCurrentItem(int)
 	this->QComboBox::setCurrentItem((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_31(Smoke::Stack x) const {
 	// currentText()
@@ -169,6 +186,7 @@ public:
     void x_32(Smoke::Stack x) {
 	// setCurrentText(const QString&)
 	this->QComboBox::setCurrentText(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_33(Smoke::Stack x) const {
 	// text(int)
@@ -183,14 +201,17 @@ public:
     void x_35(Smoke::Stack x) {
 	// changeItem(const QString&, int)
 	this->QComboBox::changeItem(*(const QString *)x[1].s_class,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_36(Smoke::Stack x) {
 	// changeItem(const QPixmap&, int)
 	this->QComboBox::changeItem(*(const QPixmap *)x[1].s_class,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_37(Smoke::Stack x) {
 	// changeItem(const QPixmap&, const QString&, int)
 	this->QComboBox::changeItem(*(const QPixmap *)x[1].s_class,*(const QString *)x[2].s_class,(int)x[3].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_38(Smoke::Stack x) const {
 	// autoResize()
@@ -200,6 +221,7 @@ public:
     void x_39(Smoke::Stack x) {
 	// setAutoResize(bool)
 	this->QComboBox::setAutoResize((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_40(Smoke::Stack x) const {
 	// sizeHint()
@@ -209,18 +231,22 @@ public:
     void x_41(Smoke::Stack x) {
 	// setPalette(const QPalette&)
 	this->QComboBox::setPalette(*(const QPalette *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_42(Smoke::Stack x) {
 	// setFont(const QFont&)
 	this->QComboBox::setFont(*(const QFont *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_43(Smoke::Stack x) {
 	// setEnabled(bool)
 	this->QComboBox::setEnabled((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_44(Smoke::Stack x) {
 	// setSizeLimit(int)
 	this->QComboBox::setSizeLimit((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_45(Smoke::Stack x) const {
 	// sizeLimit()
@@ -230,6 +256,7 @@ public:
     void x_46(Smoke::Stack x) {
 	// setMaxCount(int)
 	this->QComboBox::setMaxCount((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_47(Smoke::Stack x) const {
 	// maxCount()
@@ -239,6 +266,7 @@ public:
     void x_48(Smoke::Stack x) {
 	// setInsertionPolicy(QComboBox::Policy)
 	this->QComboBox::setInsertionPolicy(*(QComboBox::Policy *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_49(Smoke::Stack x) const {
 	// insertionPolicy()
@@ -248,6 +276,7 @@ public:
     void x_50(Smoke::Stack x) {
 	// setValidator(const QValidator*)
 	this->QComboBox::setValidator((const QValidator*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_51(Smoke::Stack x) const {
 	// validator()
@@ -257,6 +286,7 @@ public:
     void x_52(Smoke::Stack x) {
 	// setListBox(QListBox*)
 	this->QComboBox::setListBox((QListBox*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_53(Smoke::Stack x) const {
 	// listBox()
@@ -266,6 +296,7 @@ public:
     void x_54(Smoke::Stack x) {
 	// setLineEdit(QLineEdit*)
 	this->QComboBox::setLineEdit((QLineEdit*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_55(Smoke::Stack x) const {
 	// lineEdit()
@@ -275,6 +306,7 @@ public:
     void x_56(Smoke::Stack x) {
 	// setAutoCompletion(bool)
 	this->QComboBox::setAutoCompletion((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_57(Smoke::Stack x) const {
 	// autoCompletion()
@@ -289,6 +321,7 @@ public:
     void x_59(Smoke::Stack x) {
 	// setDuplicatesEnabled(bool)
 	this->QComboBox::setDuplicatesEnabled((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_60(Smoke::Stack x) const {
 	// duplicatesEnabled()
@@ -303,86 +336,107 @@ public:
     void x_62(Smoke::Stack x) {
 	// setEditable(bool)
 	this->QComboBox::setEditable((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_63(Smoke::Stack x) {
 	// popup()
 	this->QComboBox::popup();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_64(Smoke::Stack x) {
 	// clear()
 	this->QComboBox::clear();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_65(Smoke::Stack x) {
 	// clearValidator()
 	this->QComboBox::clearValidator();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_66(Smoke::Stack x) {
 	// clearEdit()
 	this->QComboBox::clearEdit();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_67(Smoke::Stack x) {
 	// setEditText(const QString&)
 	this->QComboBox::setEditText(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_68(Smoke::Stack x) {
 	// activated(int)
 	this->QComboBox::activated((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_69(Smoke::Stack x) {
 	// highlighted(int)
 	this->QComboBox::highlighted((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_70(Smoke::Stack x) {
 	// activated(const QString&)
 	this->QComboBox::activated(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_71(Smoke::Stack x) {
 	// highlighted(const QString&)
 	this->QComboBox::highlighted(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_72(Smoke::Stack x) {
 	// textChanged(const QString&)
 	this->QComboBox::textChanged(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_73(Smoke::Stack x) {
 	// paintEvent(QPaintEvent*)
 	this->QComboBox::paintEvent((QPaintEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_74(Smoke::Stack x) {
 	// resizeEvent(QResizeEvent*)
 	this->QComboBox::resizeEvent((QResizeEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_75(Smoke::Stack x) {
 	// mousePressEvent(QMouseEvent*)
 	this->QComboBox::mousePressEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_76(Smoke::Stack x) {
 	// mouseMoveEvent(QMouseEvent*)
 	this->QComboBox::mouseMoveEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_77(Smoke::Stack x) {
 	// mouseReleaseEvent(QMouseEvent*)
 	this->QComboBox::mouseReleaseEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_78(Smoke::Stack x) {
 	// mouseDoubleClickEvent(QMouseEvent*)
 	this->QComboBox::mouseDoubleClickEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_79(Smoke::Stack x) {
 	// keyPressEvent(QKeyEvent*)
 	this->QComboBox::keyPressEvent((QKeyEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_80(Smoke::Stack x) {
 	// focusInEvent(QFocusEvent*)
 	this->QComboBox::focusInEvent((QFocusEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_81(Smoke::Stack x) {
 	// styleChange(QStyle&)
 	this->QComboBox::styleChange(*(QStyle *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_82(Smoke::Stack x) {
 	// updateMask()
 	this->QComboBox::updateMask();
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void adjustSize() {
 	Smoke::StackItem x[1];

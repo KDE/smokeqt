@@ -92,10 +92,12 @@ public:
     void x_17(Smoke::Stack x) {
 	// setMainWidget(QWidget*)
 	this->QApplication::setMainWidget((QWidget*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_18(Smoke::Stack x) {
 	// polish(QWidget*)
 	this->QApplication::polish((QWidget*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_19(Smoke::Stack x) const {
 	// focusWidget()
@@ -115,14 +117,17 @@ public:
     void x_22(Smoke::Stack x) {
 	// processEvents()
 	this->QApplication::processEvents();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_23(Smoke::Stack x) {
 	// processEvents(int)
 	this->QApplication::processEvents((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_24(Smoke::Stack x) {
 	// processOneEvent()
 	this->QApplication::processOneEvent();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_25(Smoke::Stack x) {
 	// hasPendingEvents()
@@ -137,6 +142,7 @@ public:
     void x_27(Smoke::Stack x) {
 	// exit_loop()
 	this->QApplication::exit_loop();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_28(Smoke::Stack x) const {
 	// loopLevel()
@@ -151,6 +157,7 @@ public:
     void x_30(Smoke::Stack x) {
 	// setDefaultCodec(QTextCodec*)
 	this->QApplication::setDefaultCodec((QTextCodec*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_31(Smoke::Stack x) const {
 	// defaultCodec()
@@ -160,10 +167,12 @@ public:
     void x_32(Smoke::Stack x) {
 	// installTranslator(QTranslator*)
 	this->QApplication::installTranslator((QTranslator*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_33(Smoke::Stack x) {
 	// removeTranslator(QTranslator*)
 	this->QApplication::removeTranslator((QTranslator*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_34(Smoke::Stack x) const {
 	// translate(const char*, const char*, const char*, QApplication::Encoding)
@@ -193,34 +202,42 @@ public:
     void x_39(Smoke::Stack x) {
 	// commitData(QSessionManager&)
 	this->QApplication::commitData(*(QSessionManager *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_40(Smoke::Stack x) {
 	// saveState(QSessionManager&)
 	this->QApplication::saveState(*(QSessionManager *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_41(Smoke::Stack x) {
 	// wakeUpGuiThread()
 	this->QApplication::wakeUpGuiThread();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_42(Smoke::Stack x) {
 	// quit()
 	this->QApplication::quit();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_43(Smoke::Stack x) {
 	// closeAllWindows()
 	this->QApplication::closeAllWindows();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_44(Smoke::Stack x) {
 	// lastWindowClosed()
 	this->QApplication::lastWindowClosed();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_45(Smoke::Stack x) {
 	// aboutToQuit()
 	this->QApplication::aboutToQuit();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_46(Smoke::Stack x) {
 	// guiThreadAwake()
 	this->QApplication::guiThreadAwake();
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_47(Smoke::Stack x) {
 	// style()
@@ -230,6 +247,7 @@ public:
     static void x_48(Smoke::Stack x) {
 	// setStyle(QStyle*)
 	QApplication::setStyle((QStyle*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_49(Smoke::Stack x) {
 	// setStyle(const QString&)
@@ -244,6 +262,7 @@ public:
     static void x_51(Smoke::Stack x) {
 	// setColorMode(QApplication::ColorMode)
 	QApplication::setColorMode(*(QApplication::ColorMode *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_52(Smoke::Stack x) {
 	// colorSpec()
@@ -253,6 +272,7 @@ public:
     static void x_53(Smoke::Stack x) {
 	// setColorSpec(int)
 	QApplication::setColorSpec((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_54(Smoke::Stack x) {
 	// overrideCursor()
@@ -262,14 +282,17 @@ public:
     static void x_55(Smoke::Stack x) {
 	// setOverrideCursor(const QCursor&, bool)
 	QApplication::setOverrideCursor(*(const QCursor *)x[1].s_class,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_56(Smoke::Stack x) {
 	// setOverrideCursor(const QCursor&)
 	QApplication::setOverrideCursor(*(const QCursor *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_57(Smoke::Stack x) {
 	// restoreOverrideCursor()
 	QApplication::restoreOverrideCursor();
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_58(Smoke::Stack x) {
 	// hasGlobalMouseTracking()
@@ -279,6 +302,7 @@ public:
     static void x_59(Smoke::Stack x) {
 	// setGlobalMouseTracking(bool)
 	QApplication::setGlobalMouseTracking((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_60(Smoke::Stack x) {
 	// palette(const QWidget*)
@@ -293,14 +317,17 @@ public:
     static void x_62(Smoke::Stack x) {
 	// setPalette(const QPalette&, bool, const char*)
 	QApplication::setPalette(*(const QPalette *)x[1].s_class,(bool)x[2].s_bool,(const char*)x[3].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_63(Smoke::Stack x) {
 	// setPalette(const QPalette&, bool)
 	QApplication::setPalette(*(const QPalette *)x[1].s_class,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_64(Smoke::Stack x) {
 	// setPalette(const QPalette&)
 	QApplication::setPalette(*(const QPalette *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_65(Smoke::Stack x) {
 	// font(const QWidget*)
@@ -315,14 +342,17 @@ public:
     static void x_67(Smoke::Stack x) {
 	// setFont(const QFont&, bool, const char*)
 	QApplication::setFont(*(const QFont *)x[1].s_class,(bool)x[2].s_bool,(const char*)x[3].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_68(Smoke::Stack x) {
 	// setFont(const QFont&, bool)
 	QApplication::setFont(*(const QFont *)x[1].s_class,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_69(Smoke::Stack x) {
 	// setFont(const QFont&)
 	QApplication::setFont(*(const QFont *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_70(Smoke::Stack x) {
 	// fontMetrics()
@@ -382,10 +412,12 @@ public:
     static void x_81(Smoke::Stack x) {
 	// exit(int)
 	QApplication::exit((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_82(Smoke::Stack x) {
 	// exit()
 	QApplication::exit();
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_83(Smoke::Stack x) {
 	// sendEvent(QObject*, QEvent*)
@@ -395,18 +427,22 @@ public:
     static void x_84(Smoke::Stack x) {
 	// postEvent(QObject*, QEvent*)
 	QApplication::postEvent((QObject*)x[1].s_class,(QEvent*)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_85(Smoke::Stack x) {
 	// sendPostedEvents(QObject*, int)
 	QApplication::sendPostedEvents((QObject*)x[1].s_class,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_86(Smoke::Stack x) {
 	// sendPostedEvents()
 	QApplication::sendPostedEvents();
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_87(Smoke::Stack x) {
 	// removePostedEvents(QObject*)
 	QApplication::removePostedEvents((QObject*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_88(Smoke::Stack x) {
 	// startingUp()
@@ -421,22 +457,27 @@ public:
     static void x_90(Smoke::Stack x) {
 	// flushX()
 	QApplication::flushX();
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_91(Smoke::Stack x) {
 	// flush()
 	QApplication::flush();
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_92(Smoke::Stack x) {
 	// syncX()
 	QApplication::syncX();
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_93(Smoke::Stack x) {
 	// beep()
 	QApplication::beep();
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_94(Smoke::Stack x) {
 	// setWinStyleHighlightColor(const QColor&)
 	QApplication::setWinStyleHighlightColor(*(const QColor *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_95(Smoke::Stack x) {
 	// winStyleHighlightColor()
@@ -446,6 +487,7 @@ public:
     static void x_96(Smoke::Stack x) {
 	// setDesktopSettingsAware(bool)
 	QApplication::setDesktopSettingsAware((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_97(Smoke::Stack x) {
 	// desktopSettingsAware()
@@ -455,6 +497,7 @@ public:
     static void x_98(Smoke::Stack x) {
 	// setCursorFlashTime(int)
 	QApplication::setCursorFlashTime((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_99(Smoke::Stack x) {
 	// cursorFlashTime()
@@ -464,6 +507,7 @@ public:
     static void x_100(Smoke::Stack x) {
 	// setDoubleClickInterval(int)
 	QApplication::setDoubleClickInterval((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_101(Smoke::Stack x) {
 	// doubleClickInterval()
@@ -473,6 +517,7 @@ public:
     static void x_102(Smoke::Stack x) {
 	// setWheelScrollLines(int)
 	QApplication::setWheelScrollLines((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_103(Smoke::Stack x) {
 	// wheelScrollLines()
@@ -482,6 +527,7 @@ public:
     static void x_104(Smoke::Stack x) {
 	// setGlobalStrut(const QSize&)
 	QApplication::setGlobalStrut(*(const QSize *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_105(Smoke::Stack x) {
 	// globalStrut()
@@ -491,6 +537,7 @@ public:
     static void x_106(Smoke::Stack x) {
 	// setLibraryPaths(const QStringList&)
 	QApplication::setLibraryPaths(*(const QStringList *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_107(Smoke::Stack x) {
 	// libraryPaths()
@@ -500,14 +547,17 @@ public:
     static void x_108(Smoke::Stack x) {
 	// addLibraryPath(const QString&)
 	QApplication::addLibraryPath(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_109(Smoke::Stack x) {
 	// removeLibraryPath(const QString&)
 	QApplication::removeLibraryPath(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_110(Smoke::Stack x) {
 	// setStartDragTime(int)
 	QApplication::setStartDragTime((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_111(Smoke::Stack x) {
 	// startDragTime()
@@ -517,6 +567,7 @@ public:
     static void x_112(Smoke::Stack x) {
 	// setStartDragDistance(int)
 	QApplication::setStartDragDistance((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_113(Smoke::Stack x) {
 	// startDragDistance()
@@ -526,6 +577,7 @@ public:
     static void x_114(Smoke::Stack x) {
 	// setReverseLayout(bool)
 	QApplication::setReverseLayout((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_115(Smoke::Stack x) {
 	// reverseLayout()
@@ -545,10 +597,12 @@ public:
     static void x_118(Smoke::Stack x) {
 	// setEffectEnabled(Qt::UIEffect, bool)
 	QApplication::setEffectEnabled(*(Qt::UIEffect *)x[1].s_class,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_119(Smoke::Stack x) {
 	// setEffectEnabled(Qt::UIEffect)
 	QApplication::setEffectEnabled(*(Qt::UIEffect *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual bool checkConnectArgs(const char* x1, const QObject* x2, const char* x3) {
 	Smoke::StackItem x[4];

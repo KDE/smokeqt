@@ -22,10 +22,12 @@ public:
     void x_2(Smoke::Stack x) {
 	// deleteSelf()
 	this->QStringData::deleteSelf();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_3(Smoke::Stack x) {
 	// setDirty()
 	this->QStringData::setDirty();
+	x[0].s_int = x[0].s_int; // noop
     }
     ~x_QStringData() {}
 };

@@ -93,14 +93,17 @@ public:
     void x_14(Smoke::Stack x) {
 	// clearArguments()
 	this->QProcess::clearArguments();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_15(Smoke::Stack x) {
 	// setArguments(const QStringList&)
 	this->QProcess::setArguments(*(const QStringList *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_16(Smoke::Stack x) {
 	// addArgument(const QString&)
 	this->QProcess::addArgument(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_17(Smoke::Stack x) const {
 	// workingDirectory()
@@ -110,10 +113,12 @@ public:
     void x_18(Smoke::Stack x) {
 	// setWorkingDirectory(const QDir&)
 	this->QProcess::setWorkingDirectory(*(const QDir *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_19(Smoke::Stack x) {
 	// setCommunication(int)
 	this->QProcess::setCommunication((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_20(Smoke::Stack x) const {
 	// communication()
@@ -203,54 +208,67 @@ public:
     void x_37(Smoke::Stack x) {
 	// flushStdin()
 	this->QProcess::flushStdin();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_38(Smoke::Stack x) const {
 	// tryTerminate()
 	this->QProcess::tryTerminate();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_39(Smoke::Stack x) const {
 	// kill()
 	this->QProcess::kill();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_40(Smoke::Stack x) {
 	// writeToStdin(const QByteArray&)
 	this->QProcess::writeToStdin(*(const QByteArray *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_41(Smoke::Stack x) {
 	// writeToStdin(const QString&)
 	this->QProcess::writeToStdin(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_42(Smoke::Stack x) {
 	// closeStdin()
 	this->QProcess::closeStdin();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_43(Smoke::Stack x) {
 	// readyReadStdout()
 	this->QProcess::readyReadStdout();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_44(Smoke::Stack x) {
 	// readyReadStderr()
 	this->QProcess::readyReadStderr();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_45(Smoke::Stack x) {
 	// processExited()
 	this->QProcess::processExited();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_46(Smoke::Stack x) {
 	// wroteToStdin()
 	this->QProcess::wroteToStdin();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_47(Smoke::Stack x) {
 	// launchFinished()
 	this->QProcess::launchFinished();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_48(Smoke::Stack x) {
 	// connectNotify(const char*)
 	this->QProcess::connectNotify((const char*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_49(Smoke::Stack x) {
 	// disconnectNotify(const char*)
 	this->QProcess::disconnectNotify((const char*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void addArgument(const QString& x1) {
 	Smoke::StackItem x[2];

@@ -79,14 +79,17 @@ public:
     void x_15(Smoke::Stack x) {
 	// setFile(const QString&)
 	this->QFileInfo::setFile(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_16(Smoke::Stack x) {
 	// setFile(const QFile&)
 	this->QFileInfo::setFile(*(const QFile *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_17(Smoke::Stack x) {
 	// setFile(const QDir&, const QString&)
 	this->QFileInfo::setFile(*(const QDir *)x[1].s_class,*(const QString *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_18(Smoke::Stack x) const {
 	// exists()
@@ -96,6 +99,7 @@ public:
     void x_19(Smoke::Stack x) const {
 	// refresh()
 	this->QFileInfo::refresh();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_20(Smoke::Stack x) const {
 	// caching()
@@ -105,6 +109,7 @@ public:
     void x_21(Smoke::Stack x) {
 	// setCaching(bool)
 	this->QFileInfo::setCaching((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_22(Smoke::Stack x) const {
 	// filePath()

@@ -42,10 +42,12 @@ public:
     void x_6(Smoke::Stack x) {
 	// setDevice(QIODevice*)
 	this->QDataStream::setDevice((QIODevice*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_7(Smoke::Stack x) {
 	// unsetDevice()
 	this->QDataStream::unsetDevice();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_8(Smoke::Stack x) const {
 	// atEnd()
@@ -65,6 +67,7 @@ public:
     void x_11(Smoke::Stack x) {
 	// setByteOrder(int)
 	this->QDataStream::setByteOrder((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_12(Smoke::Stack x) const {
 	// isPrintableData()
@@ -74,6 +77,7 @@ public:
     void x_13(Smoke::Stack x) {
 	// setPrintableData(bool)
 	this->QDataStream::setPrintableData((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_14(Smoke::Stack x) const {
 	// version()
@@ -83,6 +87,7 @@ public:
     void x_15(Smoke::Stack x) {
 	// setVersion(int)
 	this->QDataStream::setVersion((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_16(Smoke::Stack x) {
 	// operator>>(Q_INT8&)

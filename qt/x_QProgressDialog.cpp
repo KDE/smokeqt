@@ -94,14 +94,17 @@ public:
     void x_10(Smoke::Stack x) {
 	// setLabel(QLabel*)
 	this->QProgressDialog::setLabel((QLabel*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_11(Smoke::Stack x) {
 	// setCancelButton(QPushButton*)
 	this->QProgressDialog::setCancelButton((QPushButton*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_12(Smoke::Stack x) {
 	// setBar(QProgressBar*)
 	this->QProgressDialog::setBar((QProgressBar*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_13(Smoke::Stack x) const {
 	// wasCancelled()
@@ -131,6 +134,7 @@ public:
     void x_18(Smoke::Stack x) {
 	// setAutoReset(bool)
 	this->QProgressDialog::setAutoReset((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_19(Smoke::Stack x) const {
 	// autoReset()
@@ -140,6 +144,7 @@ public:
     void x_20(Smoke::Stack x) {
 	// setAutoClose(bool)
 	this->QProgressDialog::setAutoClose((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_21(Smoke::Stack x) const {
 	// autoClose()
@@ -154,54 +159,67 @@ public:
     void x_23(Smoke::Stack x) {
 	// cancel()
 	this->QProgressDialog::cancel();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_24(Smoke::Stack x) {
 	// reset()
 	this->QProgressDialog::reset();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_25(Smoke::Stack x) {
 	// setTotalSteps(int)
 	this->QProgressDialog::setTotalSteps((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_26(Smoke::Stack x) {
 	// setProgress(int)
 	this->QProgressDialog::setProgress((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_27(Smoke::Stack x) {
 	// setLabelText(const QString&)
 	this->QProgressDialog::setLabelText(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_28(Smoke::Stack x) {
 	// setCancelButtonText(const QString&)
 	this->QProgressDialog::setCancelButtonText(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_29(Smoke::Stack x) {
 	// setMinimumDuration(int)
 	this->QProgressDialog::setMinimumDuration((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_30(Smoke::Stack x) {
 	// cancelled()
 	this->QProgressDialog::cancelled();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_31(Smoke::Stack x) {
 	// resizeEvent(QResizeEvent*)
 	this->QProgressDialog::resizeEvent((QResizeEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_32(Smoke::Stack x) {
 	// closeEvent(QCloseEvent*)
 	this->QProgressDialog::closeEvent((QCloseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_33(Smoke::Stack x) {
 	// styleChange(QStyle&)
 	this->QProgressDialog::styleChange(*(QStyle *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_34(Smoke::Stack x) {
 	// showEvent(QShowEvent*)
 	this->QProgressDialog::showEvent((QShowEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_35(Smoke::Stack x) {
 	// forceShow()
 	this->QProgressDialog::forceShow();
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void accept() {
 	Smoke::StackItem x[1];

@@ -25,14 +25,17 @@ public:
     void x_2(Smoke::Stack x) {
 	// setContentFromEditor(QWidget*)
 	this->QCheckTableItem::setContentFromEditor((QWidget*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_3(Smoke::Stack x) {
 	// paint(QPainter*, const QColorGroup&, const QRect&, bool)
 	this->QCheckTableItem::paint((QPainter*)x[1].s_class,*(const QColorGroup *)x[2].s_class,*(const QRect *)x[3].s_class,(bool)x[4].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_4(Smoke::Stack x) {
 	// setChecked(bool)
 	this->QCheckTableItem::setChecked((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_5(Smoke::Stack x) const {
 	// isChecked()

@@ -56,50 +56,62 @@ public:
     void x_4(Smoke::Stack x) {
 	// setSource(const QString&)
 	this->QTextBrowser::setSource(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_5(Smoke::Stack x) {
 	// backward()
 	this->QTextBrowser::backward();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_6(Smoke::Stack x) {
 	// forward()
 	this->QTextBrowser::forward();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_7(Smoke::Stack x) {
 	// home()
 	this->QTextBrowser::home();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_8(Smoke::Stack x) {
 	// reload()
 	this->QTextBrowser::reload();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_9(Smoke::Stack x) {
 	// setText(const QString&)
 	this->QTextBrowser::setText(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_10(Smoke::Stack x) {
 	// setText(const QString&, const QString&)
 	this->QTextBrowser::setText(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_11(Smoke::Stack x) {
 	// backwardAvailable(bool)
 	this->QTextBrowser::backwardAvailable((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_12(Smoke::Stack x) {
 	// forwardAvailable(bool)
 	this->QTextBrowser::forwardAvailable((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_13(Smoke::Stack x) {
 	// highlighted(const QString&)
 	this->QTextBrowser::highlighted(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_14(Smoke::Stack x) {
 	// linkClicked(const QString&)
 	this->QTextBrowser::linkClicked(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_15(Smoke::Stack x) {
 	// keyPressEvent(QKeyEvent*)
 	this->QTextBrowser::keyPressEvent((QKeyEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void addChild(QWidget* x1, int x2, int x3) {
 	Smoke::StackItem x[4];

@@ -43,14 +43,17 @@ public:
     void x_3(Smoke::Stack x) {
 	// paintEvent(QPaintEvent*)
 	this->QSizeGrip::paintEvent((QPaintEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_4(Smoke::Stack x) {
 	// mousePressEvent(QMouseEvent*)
 	this->QSizeGrip::mousePressEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_5(Smoke::Stack x) {
 	// mouseMoveEvent(QMouseEvent*)
 	this->QSizeGrip::mouseMoveEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_6(Smoke::Stack x) {
 	// eventFilter(QObject*, QEvent*)

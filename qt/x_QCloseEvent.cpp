@@ -20,10 +20,12 @@ public:
     void x_2(Smoke::Stack x) {
 	// accept()
 	this->QCloseEvent::accept();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_3(Smoke::Stack x) {
 	// ignore()
 	this->QCloseEvent::ignore();
+	x[0].s_int = x[0].s_int; // noop
     }
     ~x_QCloseEvent() {}
 };

@@ -60,54 +60,67 @@ public:
     void x_5(Smoke::Stack x) {
 	// show()
 	this->QTabDialog::show();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_6(Smoke::Stack x) {
 	// setFont(const QFont&)
 	this->QTabDialog::setFont(*(const QFont *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_7(Smoke::Stack x) {
 	// addTab(QWidget*, const QString&)
 	this->QTabDialog::addTab((QWidget*)x[1].s_class,*(const QString *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_8(Smoke::Stack x) {
 	// addTab(QWidget*, const QIconSet&, const QString&)
 	this->QTabDialog::addTab((QWidget*)x[1].s_class,*(const QIconSet *)x[2].s_class,*(const QString *)x[3].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_9(Smoke::Stack x) {
 	// addTab(QWidget*, QTab*)
 	this->QTabDialog::addTab((QWidget*)x[1].s_class,(QTab*)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_10(Smoke::Stack x) {
 	// insertTab(QWidget*, const QString&, int)
 	this->QTabDialog::insertTab((QWidget*)x[1].s_class,*(const QString *)x[2].s_class,(int)x[3].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_11(Smoke::Stack x) {
 	// insertTab(QWidget*, const QString&)
 	this->QTabDialog::insertTab((QWidget*)x[1].s_class,*(const QString *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_12(Smoke::Stack x) {
 	// insertTab(QWidget*, const QIconSet&, const QString&, int)
 	this->QTabDialog::insertTab((QWidget*)x[1].s_class,*(const QIconSet *)x[2].s_class,*(const QString *)x[3].s_class,(int)x[4].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_13(Smoke::Stack x) {
 	// insertTab(QWidget*, const QIconSet&, const QString&)
 	this->QTabDialog::insertTab((QWidget*)x[1].s_class,*(const QIconSet *)x[2].s_class,*(const QString *)x[3].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_14(Smoke::Stack x) {
 	// insertTab(QWidget*, QTab*, int)
 	this->QTabDialog::insertTab((QWidget*)x[1].s_class,(QTab*)x[2].s_class,(int)x[3].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_15(Smoke::Stack x) {
 	// insertTab(QWidget*, QTab*)
 	this->QTabDialog::insertTab((QWidget*)x[1].s_class,(QTab*)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_16(Smoke::Stack x) {
 	// changeTab(QWidget*, const QString&)
 	this->QTabDialog::changeTab((QWidget*)x[1].s_class,*(const QString *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_17(Smoke::Stack x) {
 	// changeTab(QWidget*, const QIconSet&, const QString&)
 	this->QTabDialog::changeTab((QWidget*)x[1].s_class,*(const QIconSet *)x[2].s_class,*(const QString *)x[3].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_18(Smoke::Stack x) const {
 	// isTabEnabled(QWidget*)
@@ -117,6 +130,7 @@ public:
     void x_19(Smoke::Stack x) {
 	// setTabEnabled(QWidget*, bool)
 	this->QTabDialog::setTabEnabled((QWidget*)x[1].s_class,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_20(Smoke::Stack x) const {
 	// isTabEnabled(const char*)
@@ -126,14 +140,17 @@ public:
     void x_21(Smoke::Stack x) {
 	// setTabEnabled(const char*, bool)
 	this->QTabDialog::setTabEnabled((const char*)x[1].s_class,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_22(Smoke::Stack x) {
 	// showPage(QWidget*)
 	this->QTabDialog::showPage((QWidget*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_23(Smoke::Stack x) {
 	// removePage(QWidget*)
 	this->QTabDialog::removePage((QWidget*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_24(Smoke::Stack x) {
 	// tabLabel(QWidget*)
@@ -148,10 +165,12 @@ public:
     void x_26(Smoke::Stack x) {
 	// setDefaultButton(const QString&)
 	this->QTabDialog::setDefaultButton(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_27(Smoke::Stack x) {
 	// setDefaultButton()
 	this->QTabDialog::setDefaultButton();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_28(Smoke::Stack x) const {
 	// hasDefaultButton()
@@ -161,10 +180,12 @@ public:
     void x_29(Smoke::Stack x) {
 	// setHelpButton(const QString&)
 	this->QTabDialog::setHelpButton(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_30(Smoke::Stack x) {
 	// setHelpButton()
 	this->QTabDialog::setHelpButton();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_31(Smoke::Stack x) const {
 	// hasHelpButton()
@@ -174,10 +195,12 @@ public:
     void x_32(Smoke::Stack x) {
 	// setCancelButton(const QString&)
 	this->QTabDialog::setCancelButton(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_33(Smoke::Stack x) {
 	// setCancelButton()
 	this->QTabDialog::setCancelButton();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_34(Smoke::Stack x) const {
 	// hasCancelButton()
@@ -187,10 +210,12 @@ public:
     void x_35(Smoke::Stack x) {
 	// setApplyButton(const QString&)
 	this->QTabDialog::setApplyButton(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_36(Smoke::Stack x) {
 	// setApplyButton()
 	this->QTabDialog::setApplyButton();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_37(Smoke::Stack x) const {
 	// hasApplyButton()
@@ -200,18 +225,22 @@ public:
     void x_38(Smoke::Stack x) {
 	// setOKButton(const QString&)
 	this->QTabDialog::setOKButton(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_39(Smoke::Stack x) {
 	// setOKButton()
 	this->QTabDialog::setOKButton();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_40(Smoke::Stack x) {
 	// setOkButton(const QString&)
 	this->QTabDialog::setOkButton(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_41(Smoke::Stack x) {
 	// setOkButton()
 	this->QTabDialog::setOkButton();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_42(Smoke::Stack x) const {
 	// hasOkButton()
@@ -221,46 +250,57 @@ public:
     void x_43(Smoke::Stack x) {
 	// aboutToShow()
 	this->QTabDialog::aboutToShow();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_44(Smoke::Stack x) {
 	// applyButtonPressed()
 	this->QTabDialog::applyButtonPressed();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_45(Smoke::Stack x) {
 	// cancelButtonPressed()
 	this->QTabDialog::cancelButtonPressed();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_46(Smoke::Stack x) {
 	// defaultButtonPressed()
 	this->QTabDialog::defaultButtonPressed();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_47(Smoke::Stack x) {
 	// helpButtonPressed()
 	this->QTabDialog::helpButtonPressed();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_48(Smoke::Stack x) {
 	// currentChanged(QWidget*)
 	this->QTabDialog::currentChanged((QWidget*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_49(Smoke::Stack x) {
 	// selected(const QString&)
 	this->QTabDialog::selected(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_50(Smoke::Stack x) {
 	// paintEvent(QPaintEvent*)
 	this->QTabDialog::paintEvent((QPaintEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_51(Smoke::Stack x) {
 	// resizeEvent(QResizeEvent*)
 	this->QTabDialog::resizeEvent((QResizeEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_52(Smoke::Stack x) {
 	// styleChange(QStyle&)
 	this->QTabDialog::styleChange(*(QStyle *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_53(Smoke::Stack x) {
 	// setTabBar(QTabBar*)
 	this->QTabDialog::setTabBar((QTabBar*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_54(Smoke::Stack x) const {
 	// tabBar()

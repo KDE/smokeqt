@@ -46,6 +46,7 @@ public:
     void x_6(Smoke::Stack x) {
 	// setData(const char*, uint)
 	this->QPicture::setData((const char*)x[1].s_class,(uint)x[2].s_uint);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_7(Smoke::Stack x) {
 	// play(QPainter*)
@@ -115,6 +116,7 @@ public:
     void x_20(Smoke::Stack x) {
 	// detach()
 	this->QPicture::detach();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_21(Smoke::Stack x) const {
 	// copy()

@@ -61,10 +61,12 @@ public:
     void x_11(Smoke::Stack x) {
 	// setMaxCost(int)
 	this->QGCache::setMaxCost((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_12(Smoke::Stack x) {
 	// clear()
 	this->QGCache::clear();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_13(Smoke::Stack x) {
 	// insert_string(const QString&, QPtrCollection::Item, int, int)
@@ -119,6 +121,7 @@ public:
     void x_23(Smoke::Stack x) const {
 	// statistics()
 	this->QGCache::statistics();
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void clear() {
 	Smoke::StackItem x[1];

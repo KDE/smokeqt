@@ -41,6 +41,7 @@ public:
     void x_5(Smoke::Stack x) {
 	// setLoops(int)
 	this->QSound::setLoops((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_6(Smoke::Stack x) const {
 	// fileName()
@@ -55,10 +56,12 @@ public:
     void x_8(Smoke::Stack x) {
 	// play()
 	this->QSound::play();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_9(Smoke::Stack x) {
 	// stop()
 	this->QSound::stop();
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_10(Smoke::Stack x) {
 	// isAvailable()
@@ -68,6 +71,7 @@ public:
     static void x_11(Smoke::Stack x) {
 	// play(const QString&)
 	QSound::play(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_12(Smoke::Stack x) {
 	// available()

@@ -42,6 +42,7 @@ public:
     void x_6(Smoke::Stack x) {
 	// deleteCurrent()
 	this->QLayoutIterator::deleteCurrent();
+	x[0].s_int = x[0].s_int; // noop
     }
     ~x_QLayoutIterator() {}
 };

@@ -80,6 +80,7 @@ public:
     void x_8(Smoke::Stack x) {
 	// setSpacing(int)
 	this->QGrid::setSpacing((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_9(Smoke::Stack x) const {
 	// sizeHint()
@@ -89,6 +90,7 @@ public:
     void x_10(Smoke::Stack x) {
 	// frameChanged()
 	this->QGrid::frameChanged();
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void adjustSize() {
 	Smoke::StackItem x[1];

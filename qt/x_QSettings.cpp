@@ -156,10 +156,12 @@ public:
     void x_30(Smoke::Stack x) {
 	// insertSearchPath(QSettings::System, const QString&)
 	this->QSettings::insertSearchPath(*(QSettings::System *)x[1].s_class,*(const QString *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_31(Smoke::Stack x) {
 	// removeSearchPath(QSettings::System, const QString&)
 	this->QSettings::removeSearchPath(*(QSettings::System *)x[1].s_class,*(const QString *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     ~x_QSettings() {}
 };

@@ -15,6 +15,7 @@ public:
     void x_1(Smoke::Stack x) {
 	// ref()
 	this->QShared::ref();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_2(Smoke::Stack x) {
 	// deref()

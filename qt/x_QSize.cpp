@@ -48,14 +48,17 @@ public:
     void x_7(Smoke::Stack x) {
 	// setWidth(int)
 	this->QSize::setWidth((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_8(Smoke::Stack x) {
 	// setHeight(int)
 	this->QSize::setHeight((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_9(Smoke::Stack x) {
 	// transpose()
 	this->QSize::transpose();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_10(Smoke::Stack x) const {
 	// expandedTo(const QSize&)

@@ -82,6 +82,7 @@ public:
     void x_12(Smoke::Stack x) {
 	// setImage(int, QCanvasPixmap*)
 	this->QCanvasPixmapArray::setImage((int)x[1].s_int,(QCanvasPixmap*)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_13(Smoke::Stack x) const {
 	// count()

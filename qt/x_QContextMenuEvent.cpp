@@ -78,14 +78,17 @@ public:
     void x_14(Smoke::Stack x) {
 	// consume()
 	this->QContextMenuEvent::consume();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_15(Smoke::Stack x) {
 	// accept()
 	this->QContextMenuEvent::accept();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_16(Smoke::Stack x) {
 	// ignore()
 	this->QContextMenuEvent::ignore();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_17(Smoke::Stack x) const {
 	// reason()

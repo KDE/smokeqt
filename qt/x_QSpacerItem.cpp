@@ -32,14 +32,17 @@ public:
     void x_3(Smoke::Stack x) {
 	// changeSize(int, int, QSizePolicy::SizeType, QSizePolicy::SizeType)
 	this->QSpacerItem::changeSize((int)x[1].s_int,(int)x[2].s_int,*(QSizePolicy::SizeType *)x[3].s_class,*(QSizePolicy::SizeType *)x[4].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_4(Smoke::Stack x) {
 	// changeSize(int, int, QSizePolicy::SizeType)
 	this->QSpacerItem::changeSize((int)x[1].s_int,(int)x[2].s_int,*(QSizePolicy::SizeType *)x[3].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_5(Smoke::Stack x) {
 	// changeSize(int, int)
 	this->QSpacerItem::changeSize((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_6(Smoke::Stack x) const {
 	// sizeHint()
@@ -69,6 +72,7 @@ public:
     void x_11(Smoke::Stack x) {
 	// setGeometry(const QRect&)
 	this->QSpacerItem::setGeometry(*(const QRect *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_12(Smoke::Stack x) const {
 	// geometry()

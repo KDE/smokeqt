@@ -90,38 +90,47 @@ public:
     void x_10(Smoke::Stack x) {
 	// addColumn(const QString&, const QString&, int, const QIconSet&)
 	this->QDataTable::addColumn(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,(int)x[3].s_int,*(const QIconSet *)x[4].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_11(Smoke::Stack x) {
 	// addColumn(const QString&, const QString&, int)
 	this->QDataTable::addColumn(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class,(int)x[3].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_12(Smoke::Stack x) {
 	// addColumn(const QString&, const QString&)
 	this->QDataTable::addColumn(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_13(Smoke::Stack x) {
 	// addColumn(const QString&)
 	this->QDataTable::addColumn(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_14(Smoke::Stack x) {
 	// removeColumn(uint)
 	this->QDataTable::removeColumn((uint)x[1].s_uint);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_15(Smoke::Stack x) {
 	// setColumn(uint, const QString&, const QString&, int, const QIconSet&)
 	this->QDataTable::setColumn((uint)x[1].s_uint,*(const QString *)x[2].s_class,*(const QString *)x[3].s_class,(int)x[4].s_int,*(const QIconSet *)x[5].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_16(Smoke::Stack x) {
 	// setColumn(uint, const QString&, const QString&, int)
 	this->QDataTable::setColumn((uint)x[1].s_uint,*(const QString *)x[2].s_class,*(const QString *)x[3].s_class,(int)x[4].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_17(Smoke::Stack x) {
 	// setColumn(uint, const QString&, const QString&)
 	this->QDataTable::setColumn((uint)x[1].s_uint,*(const QString *)x[2].s_class,*(const QString *)x[3].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_18(Smoke::Stack x) {
 	// setColumn(uint, const QString&)
 	this->QDataTable::setColumn((uint)x[1].s_uint,*(const QString *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_19(Smoke::Stack x) const {
 	// nullText()
@@ -191,18 +200,22 @@ public:
     void x_32(Smoke::Stack x) {
 	// setSqlCursor(QSqlCursor*, bool, bool)
 	this->QDataTable::setSqlCursor((QSqlCursor*)x[1].s_class,(bool)x[2].s_bool,(bool)x[3].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_33(Smoke::Stack x) {
 	// setSqlCursor(QSqlCursor*, bool)
 	this->QDataTable::setSqlCursor((QSqlCursor*)x[1].s_class,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_34(Smoke::Stack x) {
 	// setSqlCursor(QSqlCursor*)
 	this->QDataTable::setSqlCursor((QSqlCursor*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_35(Smoke::Stack x) {
 	// setSqlCursor()
 	this->QDataTable::setSqlCursor();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_36(Smoke::Stack x) const {
 	// sqlCursor()
@@ -212,74 +225,92 @@ public:
     void x_37(Smoke::Stack x) {
 	// setNullText(const QString&)
 	this->QDataTable::setNullText(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_38(Smoke::Stack x) {
 	// setTrueText(const QString&)
 	this->QDataTable::setTrueText(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_39(Smoke::Stack x) {
 	// setFalseText(const QString&)
 	this->QDataTable::setFalseText(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_40(Smoke::Stack x) {
 	// setDateFormat(const Qt::DateFormat)
 	this->QDataTable::setDateFormat(*(const Qt::DateFormat *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_41(Smoke::Stack x) {
 	// setConfirmEdits(bool)
 	this->QDataTable::setConfirmEdits((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_42(Smoke::Stack x) {
 	// setConfirmInsert(bool)
 	this->QDataTable::setConfirmInsert((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_43(Smoke::Stack x) {
 	// setConfirmUpdate(bool)
 	this->QDataTable::setConfirmUpdate((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_44(Smoke::Stack x) {
 	// setConfirmDelete(bool)
 	this->QDataTable::setConfirmDelete((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_45(Smoke::Stack x) {
 	// setConfirmCancels(bool)
 	this->QDataTable::setConfirmCancels((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_46(Smoke::Stack x) {
 	// setAutoDelete(bool)
 	this->QDataTable::setAutoDelete((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_47(Smoke::Stack x) {
 	// setAutoEdit(bool)
 	this->QDataTable::setAutoEdit((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_48(Smoke::Stack x) {
 	// setFilter(const QString&)
 	this->QDataTable::setFilter(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_49(Smoke::Stack x) {
 	// setSort(const QStringList&)
 	this->QDataTable::setSort(*(const QStringList *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_50(Smoke::Stack x) {
 	// setSort(const QSqlIndex&)
 	this->QDataTable::setSort(*(const QSqlIndex *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_51(Smoke::Stack x) {
 	// refresh(QDataTable::Refresh)
 	this->QDataTable::refresh(*(QDataTable::Refresh *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_52(Smoke::Stack x) {
 	// sortColumn(int, bool, bool)
 	this->QDataTable::sortColumn((int)x[1].s_int,(bool)x[2].s_bool,(bool)x[3].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_53(Smoke::Stack x) {
 	// sortColumn(int, bool)
 	this->QDataTable::sortColumn((int)x[1].s_int,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_54(Smoke::Stack x) {
 	// sortColumn(int)
 	this->QDataTable::sortColumn((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_55(Smoke::Stack x) const {
 	// text(int, int)
@@ -299,10 +330,12 @@ public:
     void x_58(Smoke::Stack x) {
 	// installEditorFactory(QSqlEditorFactory*)
 	this->QDataTable::installEditorFactory((QSqlEditorFactory*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_59(Smoke::Stack x) {
 	// installPropertyMap(QSqlPropertyMap*)
 	this->QDataTable::installPropertyMap((QSqlPropertyMap*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_60(Smoke::Stack x) const {
 	// numCols()
@@ -317,10 +350,12 @@ public:
     void x_62(Smoke::Stack x) {
 	// setNumCols(int)
 	this->QDataTable::setNumCols((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_63(Smoke::Stack x) {
 	// setNumRows(int)
 	this->QDataTable::setNumRows((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_64(Smoke::Stack x) {
 	// findBuffer(const QSqlIndex&, int)
@@ -335,54 +370,67 @@ public:
     void x_66(Smoke::Stack x) {
 	// find(const QString&, bool, bool)
 	this->QDataTable::find(*(const QString *)x[1].s_class,(bool)x[2].s_bool,(bool)x[3].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_67(Smoke::Stack x) {
 	// sortAscending(int)
 	this->QDataTable::sortAscending((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_68(Smoke::Stack x) {
 	// sortDescending(int)
 	this->QDataTable::sortDescending((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_69(Smoke::Stack x) {
 	// refresh()
 	this->QDataTable::refresh();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_70(Smoke::Stack x) {
 	// setColumnWidth(int, int)
 	this->QDataTable::setColumnWidth((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_71(Smoke::Stack x) {
 	// currentChanged(QSqlRecord*)
 	this->QDataTable::currentChanged((QSqlRecord*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_72(Smoke::Stack x) {
 	// primeInsert(QSqlRecord*)
 	this->QDataTable::primeInsert((QSqlRecord*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_73(Smoke::Stack x) {
 	// primeUpdate(QSqlRecord*)
 	this->QDataTable::primeUpdate((QSqlRecord*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_74(Smoke::Stack x) {
 	// primeDelete(QSqlRecord*)
 	this->QDataTable::primeDelete((QSqlRecord*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_75(Smoke::Stack x) {
 	// beforeInsert(QSqlRecord*)
 	this->QDataTable::beforeInsert((QSqlRecord*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_76(Smoke::Stack x) {
 	// beforeUpdate(QSqlRecord*)
 	this->QDataTable::beforeUpdate((QSqlRecord*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_77(Smoke::Stack x) {
 	// beforeDelete(QSqlRecord*)
 	this->QDataTable::beforeDelete((QSqlRecord*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_78(Smoke::Stack x) {
 	// cursorChanged(QSql::Op)
 	this->QDataTable::cursorChanged(*(QSql::Op *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_79(Smoke::Stack x) {
 	// insertCurrent()
@@ -412,6 +460,7 @@ public:
     void x_84(Smoke::Stack x) {
 	// handleError(const QSqlError&)
 	this->QDataTable::handleError(*(const QSqlError *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_85(Smoke::Stack x) {
 	// beginInsert()
@@ -431,18 +480,22 @@ public:
     void x_88(Smoke::Stack x) {
 	// resizeEvent(QResizeEvent*)
 	this->QDataTable::resizeEvent((QResizeEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_89(Smoke::Stack x) {
 	// contentsMousePressEvent(QMouseEvent*)
 	this->QDataTable::contentsMousePressEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_90(Smoke::Stack x) {
 	// contentsContextMenuEvent(QContextMenuEvent*)
 	this->QDataTable::contentsContextMenuEvent((QContextMenuEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_91(Smoke::Stack x) {
 	// endEdit(int, int, bool, bool)
 	this->QDataTable::endEdit((int)x[1].s_int,(int)x[2].s_int,(bool)x[3].s_bool,(bool)x[4].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_92(Smoke::Stack x) const {
 	// createEditor(int, int, bool)
@@ -452,6 +505,7 @@ public:
     void x_93(Smoke::Stack x) {
 	// activateNextCell()
 	this->QDataTable::activateNextCell();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_94(Smoke::Stack x) const {
 	// indexOf(uint)
@@ -461,22 +515,27 @@ public:
     void x_95(Smoke::Stack x) {
 	// reset()
 	this->QDataTable::reset();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_96(Smoke::Stack x) {
 	// setSize(QSqlCursor*)
 	this->QDataTable::setSize((QSqlCursor*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_97(Smoke::Stack x) {
 	// repaintCell(int, int)
 	this->QDataTable::repaintCell((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_98(Smoke::Stack x) {
 	// paintCell(QPainter*, int, int, const QRect&, bool, const QColorGroup&)
 	this->QDataTable::paintCell((QPainter*)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int,*(const QRect *)x[4].s_class,(bool)x[5].s_bool,*(const QColorGroup *)x[6].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_99(Smoke::Stack x) {
 	// paintField(QPainter*, const QSqlField*, const QRect&, bool)
 	this->QDataTable::paintField((QPainter*)x[1].s_class,(const QSqlField*)x[2].s_class,*(const QRect *)x[3].s_class,(bool)x[4].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_100(Smoke::Stack x) {
 	// fieldAlignment(const QSqlField*)
@@ -486,10 +545,12 @@ public:
     void x_101(Smoke::Stack x) {
 	// columnClicked(int)
 	this->QDataTable::columnClicked((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_102(Smoke::Stack x) {
 	// resizeData(int)
 	this->QDataTable::resizeData((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_103(Smoke::Stack x) const {
 	// item(int, int)
@@ -499,18 +560,22 @@ public:
     void x_104(Smoke::Stack x) {
 	// setItem(int, int, QTableItem*)
 	this->QDataTable::setItem((int)x[1].s_int,(int)x[2].s_int,(QTableItem*)x[3].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_105(Smoke::Stack x) {
 	// clearCell(int, int)
 	this->QDataTable::clearCell((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_106(Smoke::Stack x) {
 	// setPixmap(int, int, const QPixmap&)
 	this->QDataTable::setPixmap((int)x[1].s_int,(int)x[2].s_int,*(const QPixmap *)x[3].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_107(Smoke::Stack x) {
 	// takeItem(QTableItem*)
 	this->QDataTable::takeItem((QTableItem*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void activateNextCell() {
 	Smoke::StackItem x[1];

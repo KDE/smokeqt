@@ -117,6 +117,7 @@ public:
     void x_24(Smoke::Stack x) {
 	// clear()
 	this->QMetaProperty::clear();
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_25(Smoke::Stack x) {
 	// QMetaProperty()

@@ -71,7 +71,6 @@ public:
 	tf_ptr = 0x20,   	// Pointer, 'type*'
 	tf_ref = 0x30,   	// Reference, 'type&'
 	// Can | whatever ones of these apply
-	tf_copy = 0x40,   	// deprecated, FIXME
 	tf_const = 0x40		// const argument
     };
     /**

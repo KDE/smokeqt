@@ -40,10 +40,12 @@ public:
     void x_5(Smoke::Stack x) {
 	// close()
 	this->QBuffer::close();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_6(Smoke::Stack x) {
 	// flush()
 	this->QBuffer::flush();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_7(Smoke::Stack x) const {
 	// size()

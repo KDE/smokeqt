@@ -21,6 +21,7 @@ public:
     void x_2(Smoke::Stack x) {
 	// setData(const QByteArray&)
 	this->QIconDragItem::setData(*(const QByteArray *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_3(Smoke::Stack x) const {
 	// operator==(const QIconDragItem&)

@@ -22,14 +22,17 @@ public:
     void x_2(Smoke::Stack x) {
 	// setProperty(QWidget*, const QVariant&)
 	this->QSqlPropertyMap::setProperty((QWidget*)x[1].s_class,*(const QVariant *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_3(Smoke::Stack x) {
 	// insert(const QString&, const QString&)
 	this->QSqlPropertyMap::insert(*(const QString *)x[1].s_class,*(const QString *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_4(Smoke::Stack x) {
 	// remove(const QString&)
 	this->QSqlPropertyMap::remove(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_5(Smoke::Stack x) {
 	// defaultMap()
@@ -39,6 +42,7 @@ public:
     static void x_6(Smoke::Stack x) {
 	// installDefaultMap(QSqlPropertyMap*)
 	QSqlPropertyMap::installDefaultMap((QSqlPropertyMap*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void setProperty(QWidget* x1, const QVariant& x2) {
 	Smoke::StackItem x[3];

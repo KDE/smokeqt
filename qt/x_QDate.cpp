@@ -199,6 +199,7 @@ public:
     static void x_37(Smoke::Stack x) {
 	// julianToGregorian(uint, int&, int&, int&)
 	QDate::julianToGregorian((uint)x[1].s_uint,*(int *)x[2].s_class,*(int *)x[3].s_class,*(int *)x[4].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     ~x_QDate() {}
 };

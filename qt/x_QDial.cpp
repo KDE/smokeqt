@@ -88,6 +88,7 @@ public:
     void x_10(Smoke::Stack x) {
 	// setNotchTarget(double)
 	this->QDial::setNotchTarget((double)x[1].s_double);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_11(Smoke::Stack x) const {
 	// notchTarget()
@@ -122,10 +123,12 @@ public:
     void x_17(Smoke::Stack x) {
 	// setMinValue(int)
 	this->QDial::setMinValue((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_18(Smoke::Stack x) {
 	// setMaxValue(int)
 	this->QDial::setMaxValue((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_19(Smoke::Stack x) const {
 	// lineStep()
@@ -140,10 +143,12 @@ public:
     void x_21(Smoke::Stack x) {
 	// setLineStep(int)
 	this->QDial::setLineStep((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_22(Smoke::Stack x) {
 	// setPageStep(int)
 	this->QDial::setPageStep((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_23(Smoke::Stack x) const {
 	// value()
@@ -153,102 +158,127 @@ public:
     void x_24(Smoke::Stack x) {
 	// setValue(int)
 	this->QDial::setValue((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_25(Smoke::Stack x) {
 	// addLine()
 	this->QDial::addLine();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_26(Smoke::Stack x) {
 	// subtractLine()
 	this->QDial::subtractLine();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_27(Smoke::Stack x) {
 	// addPage()
 	this->QDial::addPage();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_28(Smoke::Stack x) {
 	// subtractPage()
 	this->QDial::subtractPage();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_29(Smoke::Stack x) {
 	// setNotchesVisible(bool)
 	this->QDial::setNotchesVisible((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_30(Smoke::Stack x) {
 	// setWrapping(bool)
 	this->QDial::setWrapping((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_31(Smoke::Stack x) {
 	// setTracking(bool)
 	this->QDial::setTracking((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_32(Smoke::Stack x) {
 	// valueChanged(int)
 	this->QDial::valueChanged((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_33(Smoke::Stack x) {
 	// dialPressed()
 	this->QDial::dialPressed();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_34(Smoke::Stack x) {
 	// dialMoved(int)
 	this->QDial::dialMoved((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_35(Smoke::Stack x) {
 	// dialReleased()
 	this->QDial::dialReleased();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_36(Smoke::Stack x) {
 	// resizeEvent(QResizeEvent*)
 	this->QDial::resizeEvent((QResizeEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_37(Smoke::Stack x) {
 	// paintEvent(QPaintEvent*)
 	this->QDial::paintEvent((QPaintEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_38(Smoke::Stack x) {
 	// keyPressEvent(QKeyEvent*)
 	this->QDial::keyPressEvent((QKeyEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_39(Smoke::Stack x) {
 	// mousePressEvent(QMouseEvent*)
 	this->QDial::mousePressEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_40(Smoke::Stack x) {
 	// mouseReleaseEvent(QMouseEvent*)
 	this->QDial::mouseReleaseEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_41(Smoke::Stack x) {
 	// mouseMoveEvent(QMouseEvent*)
 	this->QDial::mouseMoveEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_42(Smoke::Stack x) {
 	// wheelEvent(QWheelEvent*)
 	this->QDial::wheelEvent((QWheelEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_43(Smoke::Stack x) {
 	// focusInEvent(QFocusEvent*)
 	this->QDial::focusInEvent((QFocusEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_44(Smoke::Stack x) {
 	// focusOutEvent(QFocusEvent*)
 	this->QDial::focusOutEvent((QFocusEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_45(Smoke::Stack x) {
 	// valueChange()
 	this->QDial::valueChange();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_46(Smoke::Stack x) {
 	// rangeChange()
 	this->QDial::rangeChange();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_47(Smoke::Stack x) {
 	// repaintScreen(const QRect*)
 	this->QDial::repaintScreen((const QRect*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_48(Smoke::Stack x) {
 	// repaintScreen()
 	this->QDial::repaintScreen();
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void adjustSize() {
 	Smoke::StackItem x[1];

@@ -43,6 +43,7 @@ public:
     void x_6(Smoke::Stack x) {
 	// setGeometry(const QRect&)
 	this->QWidgetItem::setGeometry(*(const QRect *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_7(Smoke::Stack x) const {
 	// geometry()

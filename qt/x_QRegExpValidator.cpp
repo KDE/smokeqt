@@ -44,6 +44,7 @@ public:
     void x_5(Smoke::Stack x) {
 	// setRegExp(const QRegExp&)
 	this->QRegExpValidator::setRegExp(*(const QRegExp *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_6(Smoke::Stack x) const {
 	// regExp()

@@ -34,18 +34,22 @@ public:
     void x_4(Smoke::Stack x) {
 	// setDelay(bool)
 	this->QToolTipGroup::setDelay((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_5(Smoke::Stack x) {
 	// setEnabled(bool)
 	this->QToolTipGroup::setEnabled((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_6(Smoke::Stack x) {
 	// showTip(const QString&)
 	this->QToolTipGroup::showTip(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_7(Smoke::Stack x) {
 	// removeTip()
 	this->QToolTipGroup::removeTip();
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual bool checkConnectArgs(const char* x1, const QObject* x2, const char* x3) {
 	Smoke::StackItem x[4];

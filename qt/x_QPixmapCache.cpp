@@ -22,6 +22,7 @@ public:
     static void x_2(Smoke::Stack x) {
 	// setCacheLimit(int)
 	QPixmapCache::setCacheLimit((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_3(Smoke::Stack x) {
 	// find(const QString&)
@@ -46,6 +47,7 @@ public:
     static void x_7(Smoke::Stack x) {
 	// clear()
 	QPixmapCache::clear();
+	x[0].s_int = x[0].s_int; // noop
     }
     ~x_QPixmapCache() {}
 };

@@ -121,6 +121,7 @@ public:
     void x_27(Smoke::Stack x) {
 	// normalize()
 	this->QDomNode::normalize();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_28(Smoke::Stack x) const {
 	// isSupported(const QString&, const QString&)
@@ -200,6 +201,7 @@ public:
     void x_43(Smoke::Stack x) {
 	// setNodeValue(const QString&)
 	this->QDomNode::setNodeValue(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_44(Smoke::Stack x) const {
 	// prefix()
@@ -209,6 +211,7 @@ public:
     void x_45(Smoke::Stack x) {
 	// setPrefix(const QString&)
 	this->QDomNode::setPrefix(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_46(Smoke::Stack x) const {
 	// isAttr()
@@ -288,6 +291,7 @@ public:
     void x_61(Smoke::Stack x) {
 	// clear()
 	this->QDomNode::clear();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_62(Smoke::Stack x) {
 	// toAttr()
@@ -357,6 +361,7 @@ public:
     void x_75(Smoke::Stack x) const {
 	// save(QTextStream&, int)
 	this->QDomNode::save(*(QTextStream *)x[1].s_class,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_76(Smoke::Stack x) {
 	// QDomNode(QDomNodePrivate*)

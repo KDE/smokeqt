@@ -51,14 +51,17 @@ public:
     void x_5(Smoke::Stack x) {
 	// updateItem(int)
 	this->QMenuBar::updateItem((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_6(Smoke::Stack x) {
 	// show()
 	this->QMenuBar::show();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_7(Smoke::Stack x) {
 	// hide()
 	this->QMenuBar::hide();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_8(Smoke::Stack x) {
 	// eventFilter(QObject*, QEvent*)
@@ -78,10 +81,12 @@ public:
     void x_11(Smoke::Stack x) {
 	// setSeparator(QMenuBar::Separator)
 	this->QMenuBar::setSeparator(*(QMenuBar::Separator *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_12(Smoke::Stack x) {
 	// setDefaultUp(bool)
 	this->QMenuBar::setDefaultUp((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_13(Smoke::Stack x) const {
 	// isDefaultUp()
@@ -111,66 +116,82 @@ public:
     void x_18(Smoke::Stack x) {
 	// activateItemAt(int)
 	this->QMenuBar::activateItemAt((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_19(Smoke::Stack x) {
 	// activated(int)
 	this->QMenuBar::activated((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_20(Smoke::Stack x) {
 	// highlighted(int)
 	this->QMenuBar::highlighted((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_21(Smoke::Stack x) {
 	// drawContents(QPainter*)
 	this->QMenuBar::drawContents((QPainter*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_22(Smoke::Stack x) {
 	// fontChange(const QFont&)
 	this->QMenuBar::fontChange(*(const QFont *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_23(Smoke::Stack x) {
 	// mousePressEvent(QMouseEvent*)
 	this->QMenuBar::mousePressEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_24(Smoke::Stack x) {
 	// mouseReleaseEvent(QMouseEvent*)
 	this->QMenuBar::mouseReleaseEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_25(Smoke::Stack x) {
 	// mouseMoveEvent(QMouseEvent*)
 	this->QMenuBar::mouseMoveEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_26(Smoke::Stack x) {
 	// keyPressEvent(QKeyEvent*)
 	this->QMenuBar::keyPressEvent((QKeyEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_27(Smoke::Stack x) {
 	// focusInEvent(QFocusEvent*)
 	this->QMenuBar::focusInEvent((QFocusEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_28(Smoke::Stack x) {
 	// focusOutEvent(QFocusEvent*)
 	this->QMenuBar::focusOutEvent((QFocusEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_29(Smoke::Stack x) {
 	// resizeEvent(QResizeEvent*)
 	this->QMenuBar::resizeEvent((QResizeEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_30(Smoke::Stack x) {
 	// leaveEvent(QEvent*)
 	this->QMenuBar::leaveEvent((QEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_31(Smoke::Stack x) {
 	// menuContentsChanged()
 	this->QMenuBar::menuContentsChanged();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_32(Smoke::Stack x) {
 	// menuStateChanged()
 	this->QMenuBar::menuStateChanged();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_33(Smoke::Stack x) {
 	// styleChange(QStyle&)
 	this->QMenuBar::styleChange(*(QStyle *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_34(Smoke::Stack x) {
 	// itemAtPos(const QPoint&)
@@ -180,6 +201,7 @@ public:
     void x_35(Smoke::Stack x) {
 	// hidePopups()
 	this->QMenuBar::hidePopups();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_36(Smoke::Stack x) {
 	// itemRect(int)

@@ -43,6 +43,7 @@ public:
     void x_5(Smoke::Stack x) {
 	// setOffset(int, int)
 	this->QCanvasPixmap::setOffset((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual bool cmd(int x1, QPainter* x2, QPDevCmdParam* x3) {
 	Smoke::StackItem x[4];

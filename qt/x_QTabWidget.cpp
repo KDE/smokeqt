@@ -65,46 +65,57 @@ public:
     void x_8(Smoke::Stack x) {
 	// addTab(QWidget*, const QString&)
 	this->QTabWidget::addTab((QWidget*)x[1].s_class,*(const QString *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_9(Smoke::Stack x) {
 	// addTab(QWidget*, const QIconSet&, const QString&)
 	this->QTabWidget::addTab((QWidget*)x[1].s_class,*(const QIconSet *)x[2].s_class,*(const QString *)x[3].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_10(Smoke::Stack x) {
 	// addTab(QWidget*, QTab*)
 	this->QTabWidget::addTab((QWidget*)x[1].s_class,(QTab*)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_11(Smoke::Stack x) {
 	// insertTab(QWidget*, const QString&, int)
 	this->QTabWidget::insertTab((QWidget*)x[1].s_class,*(const QString *)x[2].s_class,(int)x[3].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_12(Smoke::Stack x) {
 	// insertTab(QWidget*, const QString&)
 	this->QTabWidget::insertTab((QWidget*)x[1].s_class,*(const QString *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_13(Smoke::Stack x) {
 	// insertTab(QWidget*, const QIconSet&, const QString&, int)
 	this->QTabWidget::insertTab((QWidget*)x[1].s_class,*(const QIconSet *)x[2].s_class,*(const QString *)x[3].s_class,(int)x[4].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_14(Smoke::Stack x) {
 	// insertTab(QWidget*, const QIconSet&, const QString&)
 	this->QTabWidget::insertTab((QWidget*)x[1].s_class,*(const QIconSet *)x[2].s_class,*(const QString *)x[3].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_15(Smoke::Stack x) {
 	// insertTab(QWidget*, QTab*, int)
 	this->QTabWidget::insertTab((QWidget*)x[1].s_class,(QTab*)x[2].s_class,(int)x[3].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_16(Smoke::Stack x) {
 	// insertTab(QWidget*, QTab*)
 	this->QTabWidget::insertTab((QWidget*)x[1].s_class,(QTab*)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_17(Smoke::Stack x) {
 	// changeTab(QWidget*, const QString&)
 	this->QTabWidget::changeTab((QWidget*)x[1].s_class,*(const QString *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_18(Smoke::Stack x) {
 	// changeTab(QWidget*, const QIconSet&, const QString&)
 	this->QTabWidget::changeTab((QWidget*)x[1].s_class,*(const QIconSet *)x[2].s_class,*(const QString *)x[3].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_19(Smoke::Stack x) const {
 	// isTabEnabled(QWidget*)
@@ -114,6 +125,7 @@ public:
     void x_20(Smoke::Stack x) {
 	// setTabEnabled(QWidget*, bool)
 	this->QTabWidget::setTabEnabled((QWidget*)x[1].s_class,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_21(Smoke::Stack x) const {
 	// tabLabel(QWidget*)
@@ -123,6 +135,7 @@ public:
     void x_22(Smoke::Stack x) {
 	// setTabLabel(QWidget*, const QString&)
 	this->QTabWidget::setTabLabel((QWidget*)x[1].s_class,*(const QString *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_23(Smoke::Stack x) const {
 	// tabIconSet(QWidget*)
@@ -132,14 +145,17 @@ public:
     void x_24(Smoke::Stack x) {
 	// setTabIconSet(QWidget*, const QIconSet&)
 	this->QTabWidget::setTabIconSet((QWidget*)x[1].s_class,*(const QIconSet *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_25(Smoke::Stack x) {
 	// removeTabToolTip(QWidget*)
 	this->QTabWidget::removeTabToolTip((QWidget*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_26(Smoke::Stack x) {
 	// setTabToolTip(QWidget*, const QString&)
 	this->QTabWidget::setTabToolTip((QWidget*)x[1].s_class,*(const QString *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_27(Smoke::Stack x) const {
 	// tabToolTip(QWidget*)
@@ -189,6 +205,7 @@ public:
     void x_36(Smoke::Stack x) {
 	// setTabPosition(QTabWidget::TabPosition)
 	this->QTabWidget::setTabPosition(*(QTabWidget::TabPosition *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_37(Smoke::Stack x) const {
 	// tabShape()
@@ -198,6 +215,7 @@ public:
     void x_38(Smoke::Stack x) {
 	// setTabShape(QTabWidget::TabShape)
 	this->QTabWidget::setTabShape(*(QTabWidget::TabShape *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_39(Smoke::Stack x) const {
 	// margin()
@@ -207,6 +225,7 @@ public:
     void x_40(Smoke::Stack x) {
 	// setMargin(int)
 	this->QTabWidget::setMargin((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_41(Smoke::Stack x) const {
 	// count()
@@ -216,34 +235,42 @@ public:
     void x_42(Smoke::Stack x) {
 	// setCurrentPage(int)
 	this->QTabWidget::setCurrentPage((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_43(Smoke::Stack x) {
 	// showPage(QWidget*)
 	this->QTabWidget::showPage((QWidget*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_44(Smoke::Stack x) {
 	// removePage(QWidget*)
 	this->QTabWidget::removePage((QWidget*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_45(Smoke::Stack x) {
 	// currentChanged(QWidget*)
 	this->QTabWidget::currentChanged((QWidget*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_46(Smoke::Stack x) {
 	// selected(const QString&)
 	this->QTabWidget::selected(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_47(Smoke::Stack x) {
 	// showEvent(QShowEvent*)
 	this->QTabWidget::showEvent((QShowEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_48(Smoke::Stack x) {
 	// resizeEvent(QResizeEvent*)
 	this->QTabWidget::resizeEvent((QResizeEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_49(Smoke::Stack x) {
 	// setTabBar(QTabBar*)
 	this->QTabWidget::setTabBar((QTabBar*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_50(Smoke::Stack x) const {
 	// tabBar()
@@ -253,10 +280,12 @@ public:
     void x_51(Smoke::Stack x) {
 	// styleChange(QStyle&)
 	this->QTabWidget::styleChange(*(QStyle *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_52(Smoke::Stack x) {
 	// updateMask()
 	this->QTabWidget::updateMask();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_53(Smoke::Stack x) {
 	// eventFilter(QObject*, QEvent*)

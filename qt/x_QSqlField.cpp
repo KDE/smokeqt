@@ -48,6 +48,7 @@ public:
     void x_6(Smoke::Stack x) {
 	// setValue(const QVariant&)
 	this->QSqlField::setValue(*(const QVariant *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_7(Smoke::Stack x) const {
 	// value()
@@ -57,6 +58,7 @@ public:
     void x_8(Smoke::Stack x) {
 	// setName(const QString&)
 	this->QSqlField::setName(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_9(Smoke::Stack x) const {
 	// name()
@@ -66,6 +68,7 @@ public:
     void x_10(Smoke::Stack x) {
 	// setNull()
 	this->QSqlField::setNull();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_11(Smoke::Stack x) const {
 	// isNull()
@@ -75,6 +78,7 @@ public:
     void x_12(Smoke::Stack x) {
 	// setReadOnly(bool)
 	this->QSqlField::setReadOnly((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_13(Smoke::Stack x) const {
 	// isReadOnly()
@@ -84,10 +88,12 @@ public:
     void x_14(Smoke::Stack x) {
 	// clear(bool)
 	this->QSqlField::clear((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_15(Smoke::Stack x) {
 	// clear()
 	this->QSqlField::clear();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_16(Smoke::Stack x) const {
 	// type()

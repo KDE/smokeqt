@@ -55,6 +55,7 @@ public:
     void x_5(Smoke::Stack x) {
 	// removeWidget(QWidget*)
 	this->QWidgetStack::removeWidget((QWidget*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_6(Smoke::Stack x) const {
 	// sizeHint()
@@ -69,6 +70,7 @@ public:
     void x_8(Smoke::Stack x) {
 	// show()
 	this->QWidgetStack::show();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_9(Smoke::Stack x) const {
 	// widget(int)
@@ -88,38 +90,47 @@ public:
     void x_12(Smoke::Stack x) {
 	// setFrameRect(const QRect&)
 	this->QWidgetStack::setFrameRect(*(const QRect *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_13(Smoke::Stack x) {
 	// raiseWidget(int)
 	this->QWidgetStack::raiseWidget((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_14(Smoke::Stack x) {
 	// raiseWidget(QWidget*)
 	this->QWidgetStack::raiseWidget((QWidget*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_15(Smoke::Stack x) {
 	// aboutToShow(int)
 	this->QWidgetStack::aboutToShow((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_16(Smoke::Stack x) {
 	// aboutToShow(QWidget*)
 	this->QWidgetStack::aboutToShow((QWidget*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_17(Smoke::Stack x) {
 	// frameChanged()
 	this->QWidgetStack::frameChanged();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_18(Smoke::Stack x) {
 	// resizeEvent(QResizeEvent*)
 	this->QWidgetStack::resizeEvent((QResizeEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_19(Smoke::Stack x) {
 	// setChildGeometries()
 	this->QWidgetStack::setChildGeometries();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_20(Smoke::Stack x) {
 	// childEvent(QChildEvent*)
 	this->QWidgetStack::childEvent((QChildEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void adjustSize() {
 	Smoke::StackItem x[1];

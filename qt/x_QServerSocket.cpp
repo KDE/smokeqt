@@ -103,6 +103,7 @@ public:
     void x_14(Smoke::Stack x) {
 	// setSocket(int)
 	this->QServerSocket::setSocket((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_15(Smoke::Stack x) const {
 	// address()

@@ -109,22 +109,27 @@ public:
     void x_17(Smoke::Stack x) {
 	// flush(const QRegion&, QPainter::CoordinateMode)
 	this->QPainter::flush(*(const QRegion *)x[1].s_class,*(QPainter::CoordinateMode *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_18(Smoke::Stack x) {
 	// flush(const QRegion&)
 	this->QPainter::flush(*(const QRegion *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_19(Smoke::Stack x) {
 	// flush()
 	this->QPainter::flush();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_20(Smoke::Stack x) {
 	// save()
 	this->QPainter::save();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_21(Smoke::Stack x) {
 	// restore()
 	this->QPainter::restore();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_22(Smoke::Stack x) const {
 	// fontMetrics()
@@ -144,6 +149,7 @@ public:
     void x_25(Smoke::Stack x) {
 	// setFont(const QFont&)
 	this->QPainter::setFont(*(const QFont *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_26(Smoke::Stack x) const {
 	// pen()
@@ -153,14 +159,17 @@ public:
     void x_27(Smoke::Stack x) {
 	// setPen(const QPen&)
 	this->QPainter::setPen(*(const QPen *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_28(Smoke::Stack x) {
 	// setPen(Qt::PenStyle)
 	this->QPainter::setPen(*(Qt::PenStyle *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_29(Smoke::Stack x) {
 	// setPen(const QColor&)
 	this->QPainter::setPen(*(const QColor *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_30(Smoke::Stack x) const {
 	// brush()
@@ -170,14 +179,17 @@ public:
     void x_31(Smoke::Stack x) {
 	// setBrush(const QBrush&)
 	this->QPainter::setBrush(*(const QBrush *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_32(Smoke::Stack x) {
 	// setBrush(Qt::BrushStyle)
 	this->QPainter::setBrush(*(Qt::BrushStyle *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_33(Smoke::Stack x) {
 	// setBrush(const QColor&)
 	this->QPainter::setBrush(*(const QColor *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_34(Smoke::Stack x) const {
 	// pos()
@@ -192,6 +204,7 @@ public:
     void x_36(Smoke::Stack x) {
 	// setBackgroundColor(const QColor&)
 	this->QPainter::setBackgroundColor(*(const QColor *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_37(Smoke::Stack x) const {
 	// backgroundMode()
@@ -201,6 +214,7 @@ public:
     void x_38(Smoke::Stack x) {
 	// setBackgroundMode(Qt::BGMode)
 	this->QPainter::setBackgroundMode(*(Qt::BGMode *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_39(Smoke::Stack x) const {
 	// rasterOp()
@@ -210,6 +224,7 @@ public:
     void x_40(Smoke::Stack x) {
 	// setRasterOp(Qt::RasterOp)
 	this->QPainter::setRasterOp(*(Qt::RasterOp *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_41(Smoke::Stack x) const {
 	// brushOrigin()
@@ -219,10 +234,12 @@ public:
     void x_42(Smoke::Stack x) {
 	// setBrushOrigin(int, int)
 	this->QPainter::setBrushOrigin((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_43(Smoke::Stack x) {
 	// setBrushOrigin(const QPoint&)
 	this->QPainter::setBrushOrigin(*(const QPoint *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_44(Smoke::Stack x) const {
 	// hasViewXForm()
@@ -237,6 +254,7 @@ public:
     void x_46(Smoke::Stack x) {
 	// setViewXForm(bool)
 	this->QPainter::setViewXForm((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_47(Smoke::Stack x) const {
 	// window()
@@ -246,10 +264,12 @@ public:
     void x_48(Smoke::Stack x) {
 	// setWindow(const QRect&)
 	this->QPainter::setWindow(*(const QRect *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_49(Smoke::Stack x) {
 	// setWindow(int, int, int, int)
 	this->QPainter::setWindow((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_50(Smoke::Stack x) const {
 	// viewport()
@@ -259,14 +279,17 @@ public:
     void x_51(Smoke::Stack x) {
 	// setViewport(const QRect&)
 	this->QPainter::setViewport(*(const QRect *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_52(Smoke::Stack x) {
 	// setViewport(int, int, int, int)
 	this->QPainter::setViewport((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_53(Smoke::Stack x) {
 	// setWorldXForm(bool)
 	this->QPainter::setWorldXForm((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_54(Smoke::Stack x) const {
 	// worldMatrix()
@@ -276,38 +299,47 @@ public:
     void x_55(Smoke::Stack x) {
 	// setWorldMatrix(const QWMatrix&, bool)
 	this->QPainter::setWorldMatrix(*(const QWMatrix *)x[1].s_class,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_56(Smoke::Stack x) {
 	// setWorldMatrix(const QWMatrix&)
 	this->QPainter::setWorldMatrix(*(const QWMatrix *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_57(Smoke::Stack x) {
 	// saveWorldMatrix()
 	this->QPainter::saveWorldMatrix();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_58(Smoke::Stack x) {
 	// restoreWorldMatrix()
 	this->QPainter::restoreWorldMatrix();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_59(Smoke::Stack x) {
 	// scale(double, double)
 	this->QPainter::scale((double)x[1].s_double,(double)x[2].s_double);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_60(Smoke::Stack x) {
 	// shear(double, double)
 	this->QPainter::shear((double)x[1].s_double,(double)x[2].s_double);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_61(Smoke::Stack x) {
 	// rotate(double)
 	this->QPainter::rotate((double)x[1].s_double);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_62(Smoke::Stack x) {
 	// translate(double, double)
 	this->QPainter::translate((double)x[1].s_double,(double)x[2].s_double);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_63(Smoke::Stack x) {
 	// resetXForm()
 	this->QPainter::resetXForm();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_64(Smoke::Stack x) const {
 	// translationX()
@@ -362,6 +394,7 @@ public:
     void x_74(Smoke::Stack x) {
 	// setClipping(bool)
 	this->QPainter::setClipping((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_75(Smoke::Stack x) const {
 	// hasClipping()
@@ -381,406 +414,507 @@ public:
     void x_78(Smoke::Stack x) {
 	// setClipRect(const QRect&, QPainter::CoordinateMode)
 	this->QPainter::setClipRect(*(const QRect *)x[1].s_class,*(QPainter::CoordinateMode *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_79(Smoke::Stack x) {
 	// setClipRect(const QRect&)
 	this->QPainter::setClipRect(*(const QRect *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_80(Smoke::Stack x) {
 	// setClipRect(int, int, int, int, QPainter::CoordinateMode)
 	this->QPainter::setClipRect((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,*(QPainter::CoordinateMode *)x[5].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_81(Smoke::Stack x) {
 	// setClipRect(int, int, int, int)
 	this->QPainter::setClipRect((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_82(Smoke::Stack x) {
 	// setClipRegion(const QRegion&, QPainter::CoordinateMode)
 	this->QPainter::setClipRegion(*(const QRegion *)x[1].s_class,*(QPainter::CoordinateMode *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_83(Smoke::Stack x) {
 	// setClipRegion(const QRegion&)
 	this->QPainter::setClipRegion(*(const QRegion *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_84(Smoke::Stack x) {
 	// drawPoint(int, int)
 	this->QPainter::drawPoint((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_85(Smoke::Stack x) {
 	// drawPoint(const QPoint&)
 	this->QPainter::drawPoint(*(const QPoint *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_86(Smoke::Stack x) {
 	// drawPoints(const QPointArray&, int, int)
 	this->QPainter::drawPoints(*(const QPointArray *)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_87(Smoke::Stack x) {
 	// drawPoints(const QPointArray&, int)
 	this->QPainter::drawPoints(*(const QPointArray *)x[1].s_class,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_88(Smoke::Stack x) {
 	// drawPoints(const QPointArray&)
 	this->QPainter::drawPoints(*(const QPointArray *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_89(Smoke::Stack x) {
 	// moveTo(int, int)
 	this->QPainter::moveTo((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_90(Smoke::Stack x) {
 	// moveTo(const QPoint&)
 	this->QPainter::moveTo(*(const QPoint *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_91(Smoke::Stack x) {
 	// lineTo(int, int)
 	this->QPainter::lineTo((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_92(Smoke::Stack x) {
 	// lineTo(const QPoint&)
 	this->QPainter::lineTo(*(const QPoint *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_93(Smoke::Stack x) {
 	// drawLine(int, int, int, int)
 	this->QPainter::drawLine((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_94(Smoke::Stack x) {
 	// drawLine(const QPoint&, const QPoint&)
 	this->QPainter::drawLine(*(const QPoint *)x[1].s_class,*(const QPoint *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_95(Smoke::Stack x) {
 	// drawRect(int, int, int, int)
 	this->QPainter::drawRect((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_96(Smoke::Stack x) {
 	// drawRect(const QRect&)
 	this->QPainter::drawRect(*(const QRect *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_97(Smoke::Stack x) {
 	// drawWinFocusRect(int, int, int, int)
 	this->QPainter::drawWinFocusRect((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_98(Smoke::Stack x) {
 	// drawWinFocusRect(int, int, int, int, const QColor&)
 	this->QPainter::drawWinFocusRect((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,*(const QColor *)x[5].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_99(Smoke::Stack x) {
 	// drawWinFocusRect(const QRect&)
 	this->QPainter::drawWinFocusRect(*(const QRect *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_100(Smoke::Stack x) {
 	// drawWinFocusRect(const QRect&, const QColor&)
 	this->QPainter::drawWinFocusRect(*(const QRect *)x[1].s_class,*(const QColor *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_101(Smoke::Stack x) {
 	// drawRoundRect(int, int, int, int, int, int)
 	this->QPainter::drawRoundRect((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int,(int)x[6].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_102(Smoke::Stack x) {
 	// drawRoundRect(int, int, int, int, int)
 	this->QPainter::drawRoundRect((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_103(Smoke::Stack x) {
 	// drawRoundRect(int, int, int, int)
 	this->QPainter::drawRoundRect((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_104(Smoke::Stack x) {
 	// drawRoundRect(const QRect&, int, int)
 	this->QPainter::drawRoundRect(*(const QRect *)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_105(Smoke::Stack x) {
 	// drawRoundRect(const QRect&, int)
 	this->QPainter::drawRoundRect(*(const QRect *)x[1].s_class,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_106(Smoke::Stack x) {
 	// drawRoundRect(const QRect&)
 	this->QPainter::drawRoundRect(*(const QRect *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_107(Smoke::Stack x) {
 	// drawEllipse(int, int, int, int)
 	this->QPainter::drawEllipse((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_108(Smoke::Stack x) {
 	// drawEllipse(const QRect&)
 	this->QPainter::drawEllipse(*(const QRect *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_109(Smoke::Stack x) {
 	// drawArc(int, int, int, int, int, int)
 	this->QPainter::drawArc((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int,(int)x[6].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_110(Smoke::Stack x) {
 	// drawArc(const QRect&, int, int)
 	this->QPainter::drawArc(*(const QRect *)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_111(Smoke::Stack x) {
 	// drawPie(int, int, int, int, int, int)
 	this->QPainter::drawPie((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int,(int)x[6].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_112(Smoke::Stack x) {
 	// drawPie(const QRect&, int, int)
 	this->QPainter::drawPie(*(const QRect *)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_113(Smoke::Stack x) {
 	// drawChord(int, int, int, int, int, int)
 	this->QPainter::drawChord((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int,(int)x[6].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_114(Smoke::Stack x) {
 	// drawChord(const QRect&, int, int)
 	this->QPainter::drawChord(*(const QRect *)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_115(Smoke::Stack x) {
 	// drawLineSegments(const QPointArray&, int, int)
 	this->QPainter::drawLineSegments(*(const QPointArray *)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_116(Smoke::Stack x) {
 	// drawLineSegments(const QPointArray&, int)
 	this->QPainter::drawLineSegments(*(const QPointArray *)x[1].s_class,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_117(Smoke::Stack x) {
 	// drawLineSegments(const QPointArray&)
 	this->QPainter::drawLineSegments(*(const QPointArray *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_118(Smoke::Stack x) {
 	// drawPolyline(const QPointArray&, int, int)
 	this->QPainter::drawPolyline(*(const QPointArray *)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_119(Smoke::Stack x) {
 	// drawPolyline(const QPointArray&, int)
 	this->QPainter::drawPolyline(*(const QPointArray *)x[1].s_class,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_120(Smoke::Stack x) {
 	// drawPolyline(const QPointArray&)
 	this->QPainter::drawPolyline(*(const QPointArray *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_121(Smoke::Stack x) {
 	// drawPolygon(const QPointArray&, bool, int, int)
 	this->QPainter::drawPolygon(*(const QPointArray *)x[1].s_class,(bool)x[2].s_bool,(int)x[3].s_int,(int)x[4].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_122(Smoke::Stack x) {
 	// drawPolygon(const QPointArray&, bool, int)
 	this->QPainter::drawPolygon(*(const QPointArray *)x[1].s_class,(bool)x[2].s_bool,(int)x[3].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_123(Smoke::Stack x) {
 	// drawPolygon(const QPointArray&, bool)
 	this->QPainter::drawPolygon(*(const QPointArray *)x[1].s_class,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_124(Smoke::Stack x) {
 	// drawPolygon(const QPointArray&)
 	this->QPainter::drawPolygon(*(const QPointArray *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_125(Smoke::Stack x) {
 	// drawConvexPolygon(const QPointArray&, int, int)
 	this->QPainter::drawConvexPolygon(*(const QPointArray *)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_126(Smoke::Stack x) {
 	// drawConvexPolygon(const QPointArray&, int)
 	this->QPainter::drawConvexPolygon(*(const QPointArray *)x[1].s_class,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_127(Smoke::Stack x) {
 	// drawConvexPolygon(const QPointArray&)
 	this->QPainter::drawConvexPolygon(*(const QPointArray *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_128(Smoke::Stack x) {
 	// drawCubicBezier(const QPointArray&, int)
 	this->QPainter::drawCubicBezier(*(const QPointArray *)x[1].s_class,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_129(Smoke::Stack x) {
 	// drawCubicBezier(const QPointArray&)
 	this->QPainter::drawCubicBezier(*(const QPointArray *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_130(Smoke::Stack x) {
 	// drawPixmap(int, int, const QPixmap&, int, int, int, int)
 	this->QPainter::drawPixmap((int)x[1].s_int,(int)x[2].s_int,*(const QPixmap *)x[3].s_class,(int)x[4].s_int,(int)x[5].s_int,(int)x[6].s_int,(int)x[7].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_131(Smoke::Stack x) {
 	// drawPixmap(int, int, const QPixmap&, int, int, int)
 	this->QPainter::drawPixmap((int)x[1].s_int,(int)x[2].s_int,*(const QPixmap *)x[3].s_class,(int)x[4].s_int,(int)x[5].s_int,(int)x[6].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_132(Smoke::Stack x) {
 	// drawPixmap(int, int, const QPixmap&, int, int)
 	this->QPainter::drawPixmap((int)x[1].s_int,(int)x[2].s_int,*(const QPixmap *)x[3].s_class,(int)x[4].s_int,(int)x[5].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_133(Smoke::Stack x) {
 	// drawPixmap(int, int, const QPixmap&, int)
 	this->QPainter::drawPixmap((int)x[1].s_int,(int)x[2].s_int,*(const QPixmap *)x[3].s_class,(int)x[4].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_134(Smoke::Stack x) {
 	// drawPixmap(int, int, const QPixmap&)
 	this->QPainter::drawPixmap((int)x[1].s_int,(int)x[2].s_int,*(const QPixmap *)x[3].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_135(Smoke::Stack x) {
 	// drawPixmap(const QPoint&, const QPixmap&, const QRect&)
 	this->QPainter::drawPixmap(*(const QPoint *)x[1].s_class,*(const QPixmap *)x[2].s_class,*(const QRect *)x[3].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_136(Smoke::Stack x) {
 	// drawPixmap(const QPoint&, const QPixmap&)
 	this->QPainter::drawPixmap(*(const QPoint *)x[1].s_class,*(const QPixmap *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_137(Smoke::Stack x) {
 	// drawPixmap(const QRect&, const QPixmap&)
 	this->QPainter::drawPixmap(*(const QRect *)x[1].s_class,*(const QPixmap *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_138(Smoke::Stack x) {
 	// drawImage(int, int, const QImage&, int, int, int, int, int)
 	this->QPainter::drawImage((int)x[1].s_int,(int)x[2].s_int,*(const QImage *)x[3].s_class,(int)x[4].s_int,(int)x[5].s_int,(int)x[6].s_int,(int)x[7].s_int,(int)x[8].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_139(Smoke::Stack x) {
 	// drawImage(int, int, const QImage&, int, int, int, int)
 	this->QPainter::drawImage((int)x[1].s_int,(int)x[2].s_int,*(const QImage *)x[3].s_class,(int)x[4].s_int,(int)x[5].s_int,(int)x[6].s_int,(int)x[7].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_140(Smoke::Stack x) {
 	// drawImage(int, int, const QImage&, int, int, int)
 	this->QPainter::drawImage((int)x[1].s_int,(int)x[2].s_int,*(const QImage *)x[3].s_class,(int)x[4].s_int,(int)x[5].s_int,(int)x[6].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_141(Smoke::Stack x) {
 	// drawImage(int, int, const QImage&, int, int)
 	this->QPainter::drawImage((int)x[1].s_int,(int)x[2].s_int,*(const QImage *)x[3].s_class,(int)x[4].s_int,(int)x[5].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_142(Smoke::Stack x) {
 	// drawImage(int, int, const QImage&, int)
 	this->QPainter::drawImage((int)x[1].s_int,(int)x[2].s_int,*(const QImage *)x[3].s_class,(int)x[4].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_143(Smoke::Stack x) {
 	// drawImage(int, int, const QImage&)
 	this->QPainter::drawImage((int)x[1].s_int,(int)x[2].s_int,*(const QImage *)x[3].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_144(Smoke::Stack x) {
 	// drawImage(const QPoint&, const QImage&, const QRect&, int)
 	this->QPainter::drawImage(*(const QPoint *)x[1].s_class,*(const QImage *)x[2].s_class,*(const QRect *)x[3].s_class,(int)x[4].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_145(Smoke::Stack x) {
 	// drawImage(const QPoint&, const QImage&, const QRect&)
 	this->QPainter::drawImage(*(const QPoint *)x[1].s_class,*(const QImage *)x[2].s_class,*(const QRect *)x[3].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_146(Smoke::Stack x) {
 	// drawImage(const QPoint&, const QImage&, int)
 	this->QPainter::drawImage(*(const QPoint *)x[1].s_class,*(const QImage *)x[2].s_class,(int)x[3].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_147(Smoke::Stack x) {
 	// drawImage(const QPoint&, const QImage&)
 	this->QPainter::drawImage(*(const QPoint *)x[1].s_class,*(const QImage *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_148(Smoke::Stack x) {
 	// drawImage(const QRect&, const QImage&)
 	this->QPainter::drawImage(*(const QRect *)x[1].s_class,*(const QImage *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_149(Smoke::Stack x) {
 	// drawTiledPixmap(int, int, int, int, const QPixmap&, int, int)
 	this->QPainter::drawTiledPixmap((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,*(const QPixmap *)x[5].s_class,(int)x[6].s_int,(int)x[7].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_150(Smoke::Stack x) {
 	// drawTiledPixmap(int, int, int, int, const QPixmap&, int)
 	this->QPainter::drawTiledPixmap((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,*(const QPixmap *)x[5].s_class,(int)x[6].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_151(Smoke::Stack x) {
 	// drawTiledPixmap(int, int, int, int, const QPixmap&)
 	this->QPainter::drawTiledPixmap((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,*(const QPixmap *)x[5].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_152(Smoke::Stack x) {
 	// drawTiledPixmap(const QRect&, const QPixmap&, const QPoint&)
 	this->QPainter::drawTiledPixmap(*(const QRect *)x[1].s_class,*(const QPixmap *)x[2].s_class,*(const QPoint *)x[3].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_153(Smoke::Stack x) {
 	// drawTiledPixmap(const QRect&, const QPixmap&)
 	this->QPainter::drawTiledPixmap(*(const QRect *)x[1].s_class,*(const QPixmap *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_154(Smoke::Stack x) {
 	// drawPicture(const QPicture&)
 	this->QPainter::drawPicture(*(const QPicture *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_155(Smoke::Stack x) {
 	// drawPicture(int, int, const QPicture&)
 	this->QPainter::drawPicture((int)x[1].s_int,(int)x[2].s_int,*(const QPicture *)x[3].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_156(Smoke::Stack x) {
 	// drawPicture(const QPoint&, const QPicture&)
 	this->QPainter::drawPicture(*(const QPoint *)x[1].s_class,*(const QPicture *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_157(Smoke::Stack x) {
 	// fillRect(int, int, int, int, const QBrush&)
 	this->QPainter::fillRect((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,*(const QBrush *)x[5].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_158(Smoke::Stack x) {
 	// fillRect(const QRect&, const QBrush&)
 	this->QPainter::fillRect(*(const QRect *)x[1].s_class,*(const QBrush *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_159(Smoke::Stack x) {
 	// eraseRect(int, int, int, int)
 	this->QPainter::eraseRect((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_160(Smoke::Stack x) {
 	// eraseRect(const QRect&)
 	this->QPainter::eraseRect(*(const QRect *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_161(Smoke::Stack x) {
 	// drawText(int, int, const QString&, int, QPainter::TextDirection)
 	this->QPainter::drawText((int)x[1].s_int,(int)x[2].s_int,*(const QString *)x[3].s_class,(int)x[4].s_int,*(QPainter::TextDirection *)x[5].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_162(Smoke::Stack x) {
 	// drawText(int, int, const QString&, int)
 	this->QPainter::drawText((int)x[1].s_int,(int)x[2].s_int,*(const QString *)x[3].s_class,(int)x[4].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_163(Smoke::Stack x) {
 	// drawText(int, int, const QString&)
 	this->QPainter::drawText((int)x[1].s_int,(int)x[2].s_int,*(const QString *)x[3].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_164(Smoke::Stack x) {
 	// drawText(const QPoint&, const QString&, int, QPainter::TextDirection)
 	this->QPainter::drawText(*(const QPoint *)x[1].s_class,*(const QString *)x[2].s_class,(int)x[3].s_int,*(QPainter::TextDirection *)x[4].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_165(Smoke::Stack x) {
 	// drawText(const QPoint&, const QString&, int)
 	this->QPainter::drawText(*(const QPoint *)x[1].s_class,*(const QString *)x[2].s_class,(int)x[3].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_166(Smoke::Stack x) {
 	// drawText(const QPoint&, const QString&)
 	this->QPainter::drawText(*(const QPoint *)x[1].s_class,*(const QString *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_167(Smoke::Stack x) {
 	// drawText(int, int, const QString&, int, int, QPainter::TextDirection)
 	this->QPainter::drawText((int)x[1].s_int,(int)x[2].s_int,*(const QString *)x[3].s_class,(int)x[4].s_int,(int)x[5].s_int,*(QPainter::TextDirection *)x[6].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_168(Smoke::Stack x) {
 	// drawText(int, int, const QString&, int, int)
 	this->QPainter::drawText((int)x[1].s_int,(int)x[2].s_int,*(const QString *)x[3].s_class,(int)x[4].s_int,(int)x[5].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_169(Smoke::Stack x) {
 	// drawText(const QPoint&, const QString&, int, int, QPainter::TextDirection)
 	this->QPainter::drawText(*(const QPoint *)x[1].s_class,*(const QString *)x[2].s_class,(int)x[3].s_int,(int)x[4].s_int,*(QPainter::TextDirection *)x[5].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_170(Smoke::Stack x) {
 	// drawText(const QPoint&, const QString&, int, int)
 	this->QPainter::drawText(*(const QPoint *)x[1].s_class,*(const QString *)x[2].s_class,(int)x[3].s_int,(int)x[4].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_171(Smoke::Stack x) {
 	// drawText(int, int, int, int, int, const QString&, int, QRect*, QTextParag**)
 	this->QPainter::drawText((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int,*(const QString *)x[6].s_class,(int)x[7].s_int,(QRect*)x[8].s_class,(QTextParag**)x[9].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_172(Smoke::Stack x) {
 	// drawText(int, int, int, int, int, const QString&, int, QRect*)
 	this->QPainter::drawText((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int,*(const QString *)x[6].s_class,(int)x[7].s_int,(QRect*)x[8].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_173(Smoke::Stack x) {
 	// drawText(int, int, int, int, int, const QString&, int)
 	this->QPainter::drawText((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int,*(const QString *)x[6].s_class,(int)x[7].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_174(Smoke::Stack x) {
 	// drawText(int, int, int, int, int, const QString&)
 	this->QPainter::drawText((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int,*(const QString *)x[6].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_175(Smoke::Stack x) {
 	// drawText(const QRect&, int, const QString&, int, QRect*, QTextParag**)
 	this->QPainter::drawText(*(const QRect *)x[1].s_class,(int)x[2].s_int,*(const QString *)x[3].s_class,(int)x[4].s_int,(QRect*)x[5].s_class,(QTextParag**)x[6].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_176(Smoke::Stack x) {
 	// drawText(const QRect&, int, const QString&, int, QRect*)
 	this->QPainter::drawText(*(const QRect *)x[1].s_class,(int)x[2].s_int,*(const QString *)x[3].s_class,(int)x[4].s_int,(QRect*)x[5].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_177(Smoke::Stack x) {
 	// drawText(const QRect&, int, const QString&, int)
 	this->QPainter::drawText(*(const QRect *)x[1].s_class,(int)x[2].s_int,*(const QString *)x[3].s_class,(int)x[4].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_178(Smoke::Stack x) {
 	// drawText(const QRect&, int, const QString&)
 	this->QPainter::drawText(*(const QRect *)x[1].s_class,(int)x[2].s_int,*(const QString *)x[3].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_179(Smoke::Stack x) {
 	// boundingRect(int, int, int, int, int, const QString&, int, QTextParag**)
@@ -820,6 +954,7 @@ public:
     void x_186(Smoke::Stack x) {
 	// setTabStops(int)
 	this->QPainter::setTabStops((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_187(Smoke::Stack x) const {
 	// tabArray()
@@ -829,18 +964,22 @@ public:
     void x_188(Smoke::Stack x) {
 	// setTabArray(int*)
 	this->QPainter::setTabArray((int*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_189(Smoke::Stack x) {
 	// redirect(QPaintDevice*, QPaintDevice*)
 	QPainter::redirect((QPaintDevice*)x[1].s_class,(QPaintDevice*)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_190(Smoke::Stack x) {
 	// initialize()
 	QPainter::initialize();
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_191(Smoke::Stack x) {
 	// cleanup()
 	QPainter::cleanup();
+	x[0].s_int = x[0].s_int; // noop
     }
     ~x_QPainter() {}
 };

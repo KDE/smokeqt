@@ -59,6 +59,7 @@ public:
     void x_8(Smoke::Stack x) {
 	// paint(QPainter*)
 	this->QListBoxText::paint((QPainter*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual int height(const QListBox* x1) const {
 	Smoke::StackItem x[2];

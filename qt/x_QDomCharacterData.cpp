@@ -33,18 +33,22 @@ public:
     void x_4(Smoke::Stack x) {
 	// appendData(const QString&)
 	this->QDomCharacterData::appendData(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_5(Smoke::Stack x) {
 	// insertData(unsigned long, const QString&)
 	this->QDomCharacterData::insertData(*(unsigned long *)x[1].s_class,*(const QString *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_6(Smoke::Stack x) {
 	// deleteData(unsigned long, unsigned long)
 	this->QDomCharacterData::deleteData(*(unsigned long *)x[1].s_class,*(unsigned long *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_7(Smoke::Stack x) {
 	// replaceData(unsigned long, unsigned long, const QString&)
 	this->QDomCharacterData::replaceData(*(unsigned long *)x[1].s_class,*(unsigned long *)x[2].s_class,*(const QString *)x[3].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_8(Smoke::Stack x) const {
 	// length()
@@ -59,6 +63,7 @@ public:
     void x_10(Smoke::Stack x) {
 	// setData(const QString&)
 	this->QDomCharacterData::setData(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_11(Smoke::Stack x) const {
 	// nodeType()

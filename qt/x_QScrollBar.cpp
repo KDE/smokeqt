@@ -66,6 +66,7 @@ public:
     void x_6(Smoke::Stack x) {
 	// setOrientation(Qt::Orientation)
 	this->QScrollBar::setOrientation(*(Qt::Orientation *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_7(Smoke::Stack x) const {
 	// orientation()
@@ -75,6 +76,7 @@ public:
     void x_8(Smoke::Stack x) {
 	// setTracking(bool)
 	this->QScrollBar::setTracking((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_9(Smoke::Stack x) const {
 	// tracking()
@@ -89,6 +91,7 @@ public:
     void x_11(Smoke::Stack x) {
 	// setPalette(const QPalette&)
 	this->QScrollBar::setPalette(*(const QPalette *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_12(Smoke::Stack x) const {
 	// sizeHint()
@@ -108,10 +111,12 @@ public:
     void x_15(Smoke::Stack x) {
 	// setMinValue(int)
 	this->QScrollBar::setMinValue((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_16(Smoke::Stack x) {
 	// setMaxValue(int)
 	this->QScrollBar::setMaxValue((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_17(Smoke::Stack x) const {
 	// lineStep()
@@ -126,10 +131,12 @@ public:
     void x_19(Smoke::Stack x) {
 	// setLineStep(int)
 	this->QScrollBar::setLineStep((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_20(Smoke::Stack x) {
 	// setPageStep(int)
 	this->QScrollBar::setPageStep((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_21(Smoke::Stack x) const {
 	// value()
@@ -149,90 +156,112 @@ public:
     void x_24(Smoke::Stack x) {
 	// setValue(int)
 	this->QScrollBar::setValue((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_25(Smoke::Stack x) {
 	// valueChanged(int)
 	this->QScrollBar::valueChanged((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_26(Smoke::Stack x) {
 	// sliderPressed()
 	this->QScrollBar::sliderPressed();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_27(Smoke::Stack x) {
 	// sliderMoved(int)
 	this->QScrollBar::sliderMoved((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_28(Smoke::Stack x) {
 	// sliderReleased()
 	this->QScrollBar::sliderReleased();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_29(Smoke::Stack x) {
 	// nextLine()
 	this->QScrollBar::nextLine();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_30(Smoke::Stack x) {
 	// prevLine()
 	this->QScrollBar::prevLine();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_31(Smoke::Stack x) {
 	// nextPage()
 	this->QScrollBar::nextPage();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_32(Smoke::Stack x) {
 	// prevPage()
 	this->QScrollBar::prevPage();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_33(Smoke::Stack x) {
 	// wheelEvent(QWheelEvent*)
 	this->QScrollBar::wheelEvent((QWheelEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_34(Smoke::Stack x) {
 	// keyPressEvent(QKeyEvent*)
 	this->QScrollBar::keyPressEvent((QKeyEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_35(Smoke::Stack x) {
 	// resizeEvent(QResizeEvent*)
 	this->QScrollBar::resizeEvent((QResizeEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_36(Smoke::Stack x) {
 	// paintEvent(QPaintEvent*)
 	this->QScrollBar::paintEvent((QPaintEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_37(Smoke::Stack x) {
 	// mousePressEvent(QMouseEvent*)
 	this->QScrollBar::mousePressEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_38(Smoke::Stack x) {
 	// mouseReleaseEvent(QMouseEvent*)
 	this->QScrollBar::mouseReleaseEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_39(Smoke::Stack x) {
 	// mouseMoveEvent(QMouseEvent*)
 	this->QScrollBar::mouseMoveEvent((QMouseEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_40(Smoke::Stack x) {
 	// contextMenuEvent(QContextMenuEvent*)
 	this->QScrollBar::contextMenuEvent((QContextMenuEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_41(Smoke::Stack x) {
 	// hideEvent(QHideEvent*)
 	this->QScrollBar::hideEvent((QHideEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_42(Smoke::Stack x) {
 	// valueChange()
 	this->QScrollBar::valueChange();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_43(Smoke::Stack x) {
 	// stepChange()
 	this->QScrollBar::stepChange();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_44(Smoke::Stack x) {
 	// rangeChange()
 	this->QScrollBar::rangeChange();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_45(Smoke::Stack x) {
 	// styleChange(QStyle&)
 	this->QScrollBar::styleChange(*(QStyle *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void adjustSize() {
 	Smoke::StackItem x[1];

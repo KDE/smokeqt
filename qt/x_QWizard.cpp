@@ -59,22 +59,27 @@ public:
     void x_5(Smoke::Stack x) {
 	// show()
 	this->QWizard::show();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_6(Smoke::Stack x) {
 	// setFont(const QFont&)
 	this->QWizard::setFont(*(const QFont *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_7(Smoke::Stack x) {
 	// addPage(QWidget*, const QString&)
 	this->QWizard::addPage((QWidget*)x[1].s_class,*(const QString *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_8(Smoke::Stack x) {
 	// insertPage(QWidget*, const QString&, int)
 	this->QWizard::insertPage((QWidget*)x[1].s_class,*(const QString *)x[2].s_class,(int)x[3].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_9(Smoke::Stack x) {
 	// removePage(QWidget*)
 	this->QWizard::removePage((QWidget*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_10(Smoke::Stack x) const {
 	// title(QWidget*)
@@ -84,6 +89,7 @@ public:
     void x_11(Smoke::Stack x) {
 	// setTitle(QWidget*, const QString&)
 	this->QWizard::setTitle((QWidget*)x[1].s_class,*(const QString *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_12(Smoke::Stack x) const {
 	// titleFont()
@@ -93,10 +99,12 @@ public:
     void x_13(Smoke::Stack x) {
 	// setTitleFont(const QFont&)
 	this->QWizard::setTitleFont(*(const QFont *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_14(Smoke::Stack x) {
 	// showPage(QWidget*)
 	this->QWizard::showPage((QWidget*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_15(Smoke::Stack x) const {
 	// currentPage()
@@ -126,6 +134,7 @@ public:
     void x_20(Smoke::Stack x) {
 	// setAppropriate(QWidget*, bool)
 	this->QWizard::setAppropriate((QWidget*)x[1].s_class,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_21(Smoke::Stack x) const {
 	// backButton()
@@ -160,50 +169,62 @@ public:
     void x_27(Smoke::Stack x) {
 	// setBackEnabled(QWidget*, bool)
 	this->QWizard::setBackEnabled((QWidget*)x[1].s_class,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_28(Smoke::Stack x) {
 	// setNextEnabled(QWidget*, bool)
 	this->QWizard::setNextEnabled((QWidget*)x[1].s_class,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_29(Smoke::Stack x) {
 	// setFinishEnabled(QWidget*, bool)
 	this->QWizard::setFinishEnabled((QWidget*)x[1].s_class,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_30(Smoke::Stack x) {
 	// setHelpEnabled(QWidget*, bool)
 	this->QWizard::setHelpEnabled((QWidget*)x[1].s_class,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_31(Smoke::Stack x) {
 	// setFinish(QWidget*, bool)
 	this->QWizard::setFinish((QWidget*)x[1].s_class,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_32(Smoke::Stack x) {
 	// helpClicked()
 	this->QWizard::helpClicked();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_33(Smoke::Stack x) {
 	// selected(const QString&)
 	this->QWizard::selected(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_34(Smoke::Stack x) {
 	// layOutButtonRow(QHBoxLayout*)
 	this->QWizard::layOutButtonRow((QHBoxLayout*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_35(Smoke::Stack x) {
 	// layOutTitleRow(QHBoxLayout*, const QString&)
 	this->QWizard::layOutTitleRow((QHBoxLayout*)x[1].s_class,*(const QString *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_36(Smoke::Stack x) {
 	// back()
 	this->QWizard::back();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_37(Smoke::Stack x) {
 	// next()
 	this->QWizard::next();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_38(Smoke::Stack x) {
 	// help()
 	this->QWizard::help();
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void accept() {
 	Smoke::StackItem x[1];

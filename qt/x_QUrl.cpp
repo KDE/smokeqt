@@ -49,6 +49,7 @@ public:
     void x_6(Smoke::Stack x) {
 	// setProtocol(const QString&)
 	this->QUrl::setProtocol(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_7(Smoke::Stack x) const {
 	// user()
@@ -58,6 +59,7 @@ public:
     void x_8(Smoke::Stack x) {
 	// setUser(const QString&)
 	this->QUrl::setUser(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_9(Smoke::Stack x) const {
 	// hasUser()
@@ -72,6 +74,7 @@ public:
     void x_11(Smoke::Stack x) {
 	// setPassword(const QString&)
 	this->QUrl::setPassword(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_12(Smoke::Stack x) const {
 	// hasPassword()
@@ -86,6 +89,7 @@ public:
     void x_14(Smoke::Stack x) {
 	// setHost(const QString&)
 	this->QUrl::setHost(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_15(Smoke::Stack x) const {
 	// hasHost()
@@ -100,6 +104,7 @@ public:
     void x_17(Smoke::Stack x) {
 	// setPort(int)
 	this->QUrl::setPort((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_18(Smoke::Stack x) const {
 	// hasPort()
@@ -119,6 +124,7 @@ public:
     void x_21(Smoke::Stack x) {
 	// setPath(const QString&)
 	this->QUrl::setPath(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_22(Smoke::Stack x) const {
 	// hasPath()
@@ -128,6 +134,7 @@ public:
     void x_23(Smoke::Stack x) {
 	// setEncodedPathAndQuery(const QString&)
 	this->QUrl::setEncodedPathAndQuery(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_24(Smoke::Stack x) {
 	// encodedPathAndQuery()
@@ -137,6 +144,7 @@ public:
     void x_25(Smoke::Stack x) {
 	// setQuery(const QString&)
 	this->QUrl::setQuery(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_26(Smoke::Stack x) const {
 	// query()
@@ -151,6 +159,7 @@ public:
     void x_28(Smoke::Stack x) {
 	// setRef(const QString&)
 	this->QUrl::setRef(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_29(Smoke::Stack x) const {
 	// hasRef()
@@ -170,10 +179,12 @@ public:
     void x_32(Smoke::Stack x) {
 	// addPath(const QString&)
 	this->QUrl::addPath(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_33(Smoke::Stack x) {
 	// setFileName(const QString&)
 	this->QUrl::setFileName(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_34(Smoke::Stack x) const {
 	// fileName()
@@ -208,6 +219,7 @@ public:
     void x_40(Smoke::Stack x) const {
 	// operator QString()
 	this->QUrl::operator QString();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_41(Smoke::Stack x) const {
 	// toString(bool, bool)
@@ -232,10 +244,12 @@ public:
     static void x_45(Smoke::Stack x) {
 	// decode(QString&)
 	QUrl::decode(*(QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_46(Smoke::Stack x) {
 	// encode(QString&)
 	QUrl::encode(*(QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_47(Smoke::Stack x) {
 	// isRelativeUrl(const QString&)
@@ -245,6 +259,7 @@ public:
     void x_48(Smoke::Stack x) {
 	// reset()
 	this->QUrl::reset();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_49(Smoke::Stack x) {
 	// parse(const QString&)

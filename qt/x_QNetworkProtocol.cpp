@@ -115,14 +115,17 @@ public:
     void x_33(Smoke::Stack x) {
 	// setUrl(QUrlOperator*)
 	this->QNetworkProtocol::setUrl((QUrlOperator*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_34(Smoke::Stack x) {
 	// setAutoDelete(bool, int)
 	this->QNetworkProtocol::setAutoDelete((bool)x[1].s_bool,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_35(Smoke::Stack x) {
 	// setAutoDelete(bool)
 	this->QNetworkProtocol::setAutoDelete((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_36(Smoke::Stack x) const {
 	// autoDelete()
@@ -137,6 +140,7 @@ public:
     void x_38(Smoke::Stack x) {
 	// addOperation(QNetworkOperation*)
 	this->QNetworkProtocol::addOperation((QNetworkOperation*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_39(Smoke::Stack x) const {
 	// url()
@@ -151,54 +155,67 @@ public:
     void x_41(Smoke::Stack x) {
 	// clearOperationQueue()
 	this->QNetworkProtocol::clearOperationQueue();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_42(Smoke::Stack x) {
 	// stop()
 	this->QNetworkProtocol::stop();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_43(Smoke::Stack x) {
 	// data(const QByteArray&, QNetworkOperation*)
 	this->QNetworkProtocol::data(*(const QByteArray *)x[1].s_class,(QNetworkOperation*)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_44(Smoke::Stack x) {
 	// connectionStateChanged(int, const QString&)
 	this->QNetworkProtocol::connectionStateChanged((int)x[1].s_int,*(const QString *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_45(Smoke::Stack x) {
 	// finished(QNetworkOperation*)
 	this->QNetworkProtocol::finished((QNetworkOperation*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_46(Smoke::Stack x) {
 	// start(QNetworkOperation*)
 	this->QNetworkProtocol::start((QNetworkOperation*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_47(Smoke::Stack x) {
 	// newChildren(const QValueList<QUrlInfo>&, QNetworkOperation*)
 	this->QNetworkProtocol::newChildren(*(const QValueList<QUrlInfo> *)x[1].s_class,(QNetworkOperation*)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_48(Smoke::Stack x) {
 	// newChild(const QUrlInfo&, QNetworkOperation*)
 	this->QNetworkProtocol::newChild(*(const QUrlInfo *)x[1].s_class,(QNetworkOperation*)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_49(Smoke::Stack x) {
 	// createdDirectory(const QUrlInfo&, QNetworkOperation*)
 	this->QNetworkProtocol::createdDirectory(*(const QUrlInfo *)x[1].s_class,(QNetworkOperation*)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_50(Smoke::Stack x) {
 	// removed(QNetworkOperation*)
 	this->QNetworkProtocol::removed((QNetworkOperation*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_51(Smoke::Stack x) {
 	// itemChanged(QNetworkOperation*)
 	this->QNetworkProtocol::itemChanged((QNetworkOperation*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_52(Smoke::Stack x) {
 	// dataTransferProgress(int, int, QNetworkOperation*)
 	this->QNetworkProtocol::dataTransferProgress((int)x[1].s_int,(int)x[2].s_int,(QNetworkOperation*)x[3].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_53(Smoke::Stack x) {
 	// registerNetworkProtocol(const QString&, QNetworkProtocolFactoryBase*)
 	QNetworkProtocol::registerNetworkProtocol(*(const QString *)x[1].s_class,(QNetworkProtocolFactoryBase*)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_54(Smoke::Stack x) {
 	// getNetworkProtocol(const QString&)
@@ -213,34 +230,42 @@ public:
     void x_56(Smoke::Stack x) {
 	// processOperation(QNetworkOperation*)
 	this->QNetworkProtocol::processOperation((QNetworkOperation*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_57(Smoke::Stack x) {
 	// operationListChildren(QNetworkOperation*)
 	this->QNetworkProtocol::operationListChildren((QNetworkOperation*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_58(Smoke::Stack x) {
 	// operationMkDir(QNetworkOperation*)
 	this->QNetworkProtocol::operationMkDir((QNetworkOperation*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_59(Smoke::Stack x) {
 	// operationRemove(QNetworkOperation*)
 	this->QNetworkProtocol::operationRemove((QNetworkOperation*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_60(Smoke::Stack x) {
 	// operationRename(QNetworkOperation*)
 	this->QNetworkProtocol::operationRename((QNetworkOperation*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_61(Smoke::Stack x) {
 	// operationGet(QNetworkOperation*)
 	this->QNetworkProtocol::operationGet((QNetworkOperation*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_62(Smoke::Stack x) {
 	// operationPut(QNetworkOperation*)
 	this->QNetworkProtocol::operationPut((QNetworkOperation*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_63(Smoke::Stack x) {
 	// operationPutChunk(QNetworkOperation*)
 	this->QNetworkProtocol::operationPutChunk((QNetworkOperation*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_64(Smoke::Stack x) {
 	// checkConnection(QNetworkOperation*)

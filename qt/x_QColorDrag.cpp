@@ -55,6 +55,7 @@ public:
     void x_6(Smoke::Stack x) {
 	// setColor(const QColor&)
 	this->QColorDrag::setColor(*(const QColor *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_7(Smoke::Stack x) {
 	// canDecode(QMimeSource*)

@@ -54,10 +54,12 @@ public:
     void x_9(Smoke::Stack x) {
 	// setEnabled(bool)
 	this->QSocketNotifier::setEnabled((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_10(Smoke::Stack x) {
 	// activated(int)
 	this->QSocketNotifier::activated((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_11(Smoke::Stack x) {
 	// event(QEvent*)

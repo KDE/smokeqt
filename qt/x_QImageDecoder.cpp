@@ -42,10 +42,12 @@ public:
     static void x_6(Smoke::Stack x) {
 	// registerDecoderFactory(QImageFormatType*)
 	QImageDecoder::registerDecoderFactory((QImageFormatType*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     static void x_7(Smoke::Stack x) {
 	// unregisterDecoderFactory(QImageFormatType*)
 	QImageDecoder::unregisterDecoderFactory((QImageFormatType*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     ~x_QImageDecoder() {}
 };

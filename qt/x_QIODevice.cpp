@@ -102,6 +102,7 @@ public:
     void x_18(Smoke::Stack x) {
 	// resetStatus()
 	this->QIODevice::resetStatus();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_19(Smoke::Stack x) const {
 	// at()
@@ -141,22 +142,27 @@ public:
     void x_26(Smoke::Stack x) {
 	// setFlags(int)
 	this->QIODevice::setFlags((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_27(Smoke::Stack x) {
 	// setType(int)
 	this->QIODevice::setType((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_28(Smoke::Stack x) {
 	// setMode(int)
 	this->QIODevice::setMode((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_29(Smoke::Stack x) {
 	// setState(int)
 	this->QIODevice::setState((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_30(Smoke::Stack x) {
 	// setStatus(int)
 	this->QIODevice::setStatus((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual QIODevice::Offset at() const {
 	Smoke::StackItem x[1];

@@ -27,22 +27,27 @@ public:
     void x_3(Smoke::Stack x) {
 	// setValue(int)
 	this->QRangeControl::setValue((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_4(Smoke::Stack x) {
 	// addPage()
 	this->QRangeControl::addPage();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_5(Smoke::Stack x) {
 	// subtractPage()
 	this->QRangeControl::subtractPage();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_6(Smoke::Stack x) {
 	// addLine()
 	this->QRangeControl::addLine();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_7(Smoke::Stack x) {
 	// subtractLine()
 	this->QRangeControl::subtractLine();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_8(Smoke::Stack x) const {
 	// minValue()
@@ -57,14 +62,17 @@ public:
     void x_10(Smoke::Stack x) {
 	// setRange(int, int)
 	this->QRangeControl::setRange((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_11(Smoke::Stack x) {
 	// setMinValue(int)
 	this->QRangeControl::setMinValue((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_12(Smoke::Stack x) {
 	// setMaxValue(int)
 	this->QRangeControl::setMaxValue((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_13(Smoke::Stack x) const {
 	// lineStep()
@@ -79,6 +87,7 @@ public:
     void x_15(Smoke::Stack x) {
 	// setSteps(int, int)
 	this->QRangeControl::setSteps((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_16(Smoke::Stack x) const {
 	// bound(int)
@@ -98,6 +107,7 @@ public:
     void x_19(Smoke::Stack x) {
 	// directSetValue(int)
 	this->QRangeControl::directSetValue((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_20(Smoke::Stack x) const {
 	// prevValue()
@@ -107,14 +117,17 @@ public:
     void x_21(Smoke::Stack x) {
 	// valueChange()
 	this->QRangeControl::valueChange();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_22(Smoke::Stack x) {
 	// rangeChange()
 	this->QRangeControl::rangeChange();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_23(Smoke::Stack x) {
 	// stepChange()
 	this->QRangeControl::stepChange();
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void rangeChange() {
 	Smoke::StackItem x[1];

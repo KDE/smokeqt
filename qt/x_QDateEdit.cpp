@@ -89,6 +89,7 @@ public:
     void x_12(Smoke::Stack x) {
 	// setDate(const QDate&)
 	this->QDateEdit::setDate(*(const QDate *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_13(Smoke::Stack x) const {
 	// date()
@@ -98,6 +99,7 @@ public:
     void x_14(Smoke::Stack x) {
 	// setOrder(QDateEdit::Order)
 	this->QDateEdit::setOrder(*(QDateEdit::Order *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_15(Smoke::Stack x) const {
 	// order()
@@ -107,6 +109,7 @@ public:
     void x_16(Smoke::Stack x) {
 	// setAutoAdvance(bool)
 	this->QDateEdit::setAutoAdvance((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_17(Smoke::Stack x) const {
 	// autoAdvance()
@@ -116,6 +119,7 @@ public:
     void x_18(Smoke::Stack x) {
 	// setMinValue(const QDate&)
 	this->QDateEdit::setMinValue(*(const QDate *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_19(Smoke::Stack x) const {
 	// minValue()
@@ -125,6 +129,7 @@ public:
     void x_20(Smoke::Stack x) {
 	// setMaxValue(const QDate&)
 	this->QDateEdit::setMaxValue(*(const QDate *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_21(Smoke::Stack x) const {
 	// maxValue()
@@ -134,6 +139,7 @@ public:
     void x_22(Smoke::Stack x) {
 	// setRange(const QDate&, const QDate&)
 	this->QDateEdit::setRange(*(const QDate *)x[1].s_class,*(const QDate *)x[2].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_23(Smoke::Stack x) const {
 	// separator()
@@ -143,10 +149,12 @@ public:
     void x_24(Smoke::Stack x) {
 	// setSeparator(const QString&)
 	this->QDateEdit::setSeparator(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_25(Smoke::Stack x) {
 	// valueChanged(const QDate&)
 	this->QDateEdit::valueChanged(*(const QDate *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_26(Smoke::Stack x) {
 	// event(QEvent*)
@@ -156,18 +164,22 @@ public:
     void x_27(Smoke::Stack x) {
 	// timerEvent(QTimerEvent*)
 	this->QDateEdit::timerEvent((QTimerEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_28(Smoke::Stack x) {
 	// resizeEvent(QResizeEvent*)
 	this->QDateEdit::resizeEvent((QResizeEvent*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_29(Smoke::Stack x) {
 	// stepUp()
 	this->QDateEdit::stepUp();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_30(Smoke::Stack x) {
 	// stepDown()
 	this->QDateEdit::stepDown();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_31(Smoke::Stack x) {
 	// sectionFormattedText(int)
@@ -177,10 +189,12 @@ public:
     void x_32(Smoke::Stack x) {
 	// addNumber(int, int)
 	this->QDateEdit::addNumber((int)x[1].s_int,(int)x[2].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_33(Smoke::Stack x) {
 	// removeLastNumber(int)
 	this->QDateEdit::removeLastNumber((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_34(Smoke::Stack x) {
 	// setFocusSection(int)
@@ -190,18 +204,22 @@ public:
     void x_35(Smoke::Stack x) {
 	// setYear(int)
 	this->QDateEdit::setYear((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_36(Smoke::Stack x) {
 	// setMonth(int)
 	this->QDateEdit::setMonth((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_37(Smoke::Stack x) {
 	// setDay(int)
 	this->QDateEdit::setDay((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_38(Smoke::Stack x) {
 	// fix()
 	this->QDateEdit::fix();
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_39(Smoke::Stack x) const {
 	// outOfRange(int, int, int)
@@ -211,6 +229,7 @@ public:
     void x_40(Smoke::Stack x) {
 	// updateButtons()
 	this->QDateEdit::updateButtons();
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void addNumber(int x1, int x2) {
 	Smoke::StackItem x[3];

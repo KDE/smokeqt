@@ -21,26 +21,32 @@ public:
     void x_2(Smoke::Stack x) {
 	// operationListChildren(QNetworkOperation*)
 	this->QLocalFs::operationListChildren((QNetworkOperation*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_3(Smoke::Stack x) {
 	// operationMkDir(QNetworkOperation*)
 	this->QLocalFs::operationMkDir((QNetworkOperation*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_4(Smoke::Stack x) {
 	// operationRemove(QNetworkOperation*)
 	this->QLocalFs::operationRemove((QNetworkOperation*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_5(Smoke::Stack x) {
 	// operationRename(QNetworkOperation*)
 	this->QLocalFs::operationRename((QNetworkOperation*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_6(Smoke::Stack x) {
 	// operationGet(QNetworkOperation*)
 	this->QLocalFs::operationGet((QNetworkOperation*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_7(Smoke::Stack x) {
 	// operationPut(QNetworkOperation*)
 	this->QLocalFs::operationPut((QNetworkOperation*)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     virtual void addOperation(QNetworkOperation* x1) {
 	Smoke::StackItem x[2];

@@ -58,26 +58,32 @@ public:
     void x_9(Smoke::Stack x) {
 	// setAt(int)
 	this->QSqlResult::setAt((int)x[1].s_int);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_10(Smoke::Stack x) {
 	// setActive(bool)
 	this->QSqlResult::setActive((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_11(Smoke::Stack x) {
 	// setLastError(const QSqlError&)
 	this->QSqlResult::setLastError(*(const QSqlError *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_12(Smoke::Stack x) {
 	// setQuery(const QString&)
 	this->QSqlResult::setQuery(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_13(Smoke::Stack x) {
 	// setSelect(bool)
 	this->QSqlResult::setSelect((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_14(Smoke::Stack x) {
 	// setForwardOnly(bool)
 	this->QSqlResult::setForwardOnly((bool)x[1].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_15(Smoke::Stack x) {
 	// fetchNext()

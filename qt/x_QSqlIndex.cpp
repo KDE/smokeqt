@@ -45,6 +45,7 @@ public:
     void x_5(Smoke::Stack x) {
 	// setCursorName(const QString&)
 	this->QSqlIndex::setCursorName(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_6(Smoke::Stack x) const {
 	// cursorName()
@@ -54,6 +55,7 @@ public:
     void x_7(Smoke::Stack x) {
 	// setName(const QString&)
 	this->QSqlIndex::setName(*(const QString *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_8(Smoke::Stack x) const {
 	// name()
@@ -63,10 +65,12 @@ public:
     void x_9(Smoke::Stack x) {
 	// append(const QSqlField&)
 	this->QSqlIndex::append(*(const QSqlField *)x[1].s_class);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_10(Smoke::Stack x) {
 	// append(const QSqlField&, bool)
 	this->QSqlIndex::append(*(const QSqlField *)x[1].s_class,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_11(Smoke::Stack x) const {
 	// isDescending(int)
@@ -76,6 +80,7 @@ public:
     void x_12(Smoke::Stack x) {
 	// setDescending(int, bool)
 	this->QSqlIndex::setDescending((int)x[1].s_int,(bool)x[2].s_bool);
+	x[0].s_int = x[0].s_int; // noop
     }
     void x_13(Smoke::Stack x) const {
 	// toString(const QString&, const QString&, bool)
