@@ -42,6 +42,7 @@ my %excludes = (
     'qmotifdialog.h' => 1, # Motif
     'qmotifwidget.h' => 1, # Motif
     'qgl.h' => 1, # OpenGL
+    'qglcolormap.h' => 1, # OpenGL
     'qnp.h' => 1, # NSPlugin
     'qdns.h' => 1, # internal
     'qttableview.h' => 1,  # Not in Qt anymore...
