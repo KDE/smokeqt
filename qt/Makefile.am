@@ -16,6 +16,8 @@ libsmokeqt_la_SOURCES = smokedata.cpp x_1.cpp x_2.cpp x_3.cpp x_4.cpp x_5.cpp x_
  x_8.cpp x_9.cpp x_10.cpp x_11.cpp x_12.cpp x_13.cpp x_14.cpp x_15.cpp \
  x_16.cpp x_17.cpp x_18.cpp x_19.cpp x_20.cpp
 
+libsmokeqt_la_COMPILE_FIRST = smokedata.cpp
+
 smokedata.cpp:
 	perl generate.pl
 
