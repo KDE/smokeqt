@@ -124,7 +124,6 @@ qinterlacestyle.h
 qiodev.h
 qiodevice.h
 qjiscodec.h
-qjpegio.h
 qjpunicode.h
 qkeycode.h
 qkeysequence.h
@@ -150,7 +149,6 @@ qmetaobject.h
 qmetaobj.h
 qmime.h
 qmlined.h
-qmngio.h
 qmodules.h
 qmotifdialog.h
 qmotif.h
