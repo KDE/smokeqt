@@ -88,7 +88,7 @@ public:
     }
     x_QMouseEvent(const QMouseEvent& x1) : QMouseEvent(x1) {
     }
-    ~x_QMouseEvent() { qt_Smoke->binding->deleted(212, (void*)this); }
+    ~x_QMouseEvent() { qt_Smoke->binding->deleted(209, (void*)this); }
 };
 void xcall_QMouseEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QMouseEvent *xself = (x_QMouseEvent*)obj;

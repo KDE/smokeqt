@@ -19,7 +19,7 @@ public:
     }
     x_QObjectUserData(const QObjectUserData& x1) : QObjectUserData(x1) {
     }
-    ~x_QObjectUserData() { qt_Smoke->binding->deleted(224, (void*)this); }
+    ~x_QObjectUserData() { qt_Smoke->binding->deleted(221, (void*)this); }
 };
 void xcall_QObjectUserData(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QObjectUserData *xself = (x_QObjectUserData*)obj;

@@ -24,7 +24,7 @@ public:
     }
     x_QMetaObjectCleanUp(const QMetaObjectCleanUp& x1) : QMetaObjectCleanUp(x1) {
     }
-    ~x_QMetaObjectCleanUp() { qt_Smoke->binding->deleted(206, (void*)this); }
+    ~x_QMetaObjectCleanUp() { qt_Smoke->binding->deleted(205, (void*)this); }
 };
 void xcall_QMetaObjectCleanUp(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QMetaObjectCleanUp *xself = (x_QMetaObjectCleanUp*)obj;

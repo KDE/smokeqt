@@ -221,12 +221,12 @@ public:
     virtual void advance(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(696, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(673, (void*)this, x)) return;
 	this->QCanvasItem::advance(x1);
     }
     virtual QRect boundingRect() const {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(716, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(693, (void*)this, x, true /*pure virtual*/);
 	QRect *xptr = (QRect *)x[0].s_class;
 	QRect xret(*xptr);
 	delete xptr;
@@ -235,7 +235,7 @@ public:
     }
     virtual QRect boundingRectAdvanced() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(717, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(694, (void*)this, x)) {
 	    QRect *xptr = (QRect *)x[0].s_class;
 	    QRect xret(*xptr);
 	    delete xptr;
@@ -246,14 +246,14 @@ public:
     virtual bool collidesWith(const QCanvasItem* x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	qt_Smoke->binding->callMethod(697, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(674, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
     virtual void draw(QPainter& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	qt_Smoke->binding->callMethod(700, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(677, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }
@@ -261,60 +261,60 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_double = x1;
 	x[2].s_double = x2;
-	if(qt_Smoke->binding->callMethod(684, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(661, (void*)this, x)) return;
 	this->QCanvasItem::moveBy(x1, x2);
     }
     virtual int rtti() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(715, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(692, (void*)this, x)) return (int)x[0].s_int;
 	return this->QCanvasItem::rtti();
     }
     virtual void setActive(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(709, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(686, (void*)this, x)) return;
 	this->QCanvasItem::setActive(x1);
     }
     virtual void setAnimated(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(690, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(667, (void*)this, x)) return;
 	this->QCanvasItem::setAnimated(x1);
     }
     virtual void setCanvas(QCanvas* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(699, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(676, (void*)this, x)) return;
 	this->QCanvasItem::setCanvas(x1);
     }
     virtual void setEnabled(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(707, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(684, (void*)this, x)) return;
 	this->QCanvasItem::setEnabled(x1);
     }
     virtual void setSelected(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(705, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(682, (void*)this, x)) return;
 	this->QCanvasItem::setSelected(x1);
     }
     virtual void setVelocity(double x1, double x2) {
 	Smoke::StackItem x[3];
 	x[1].s_double = x1;
 	x[2].s_double = x2;
-	if(qt_Smoke->binding->callMethod(691, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(668, (void*)this, x)) return;
 	this->QCanvasItem::setVelocity(x1, x2);
     }
     virtual void setVisible(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(703, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(680, (void*)this, x)) return;
 	this->QCanvasItem::setVisible(x1);
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {
-	  case 44: //QCanvasItem::RttiValues
+	  case 43: //QCanvasItem::RttiValues
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QCanvasItem::RttiValues;
@@ -332,7 +332,7 @@ public:
 	    break;
 	}
     }
-    ~x_QCanvasItem() { qt_Smoke->binding->deleted(22, (void*)this); }
+    ~x_QCanvasItem() { qt_Smoke->binding->deleted(21, (void*)this); }
 };
 void xenum_QCanvasItem(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
     x_QCanvasItem::xenum_operation(xop, xtype, xdata, xvalue);

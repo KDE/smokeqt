@@ -31,7 +31,7 @@ public:
 	QStyle* xret = QStyleFactory::create(*(const QString *)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
-    ~x_QStyleFactory() { qt_Smoke->binding->deleted(308, (void*)this); }
+    ~x_QStyleFactory() { qt_Smoke->binding->deleted(303, (void*)this); }
 };
 void xcall_QStyleFactory(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QStyleFactory *xself = (x_QStyleFactory*)obj;

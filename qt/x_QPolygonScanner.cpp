@@ -62,13 +62,13 @@ public:
 	x[1].s_int = x1;
 	x[2].s_class = (void*)x2;
 	x[3].s_voidp = (void*)x3;
-	qt_Smoke->binding->callMethod(7426, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(7289, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {
-	  case 457: //QPolygonScanner::Edge
+	  case 453: //QPolygonScanner::Edge
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QPolygonScanner::Edge;
@@ -86,7 +86,7 @@ public:
 	    break;
 	}
     }
-    ~x_QPolygonScanner() { qt_Smoke->binding->deleted(239, (void*)this); }
+    ~x_QPolygonScanner() { qt_Smoke->binding->deleted(235, (void*)this); }
 };
 void xenum_QPolygonScanner(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
     x_QPolygonScanner::xenum_operation(xop, xtype, xdata, xvalue);

@@ -156,7 +156,7 @@ public:
 	QPointArray::cleanBuffers();
 	(void)x; // noop (for compiler warning)
     }
-    ~x_QPointArray() { qt_Smoke->binding->deleted(238, (void*)this); }
+    ~x_QPointArray() { qt_Smoke->binding->deleted(234, (void*)this); }
 };
 void xcall_QPointArray(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QPointArray *xself = (x_QPointArray*)obj;

@@ -19,13 +19,13 @@ public:
     }
     virtual void eof() {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(1649, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(1627, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }
     virtual int readyToReceive() {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(1647, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(1625, (void*)this, x, true /*pure virtual*/);
 	return (int)x[0].s_int;
 	// ABSTRACT
     }
@@ -33,11 +33,11 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)x1;
 	x[2].s_int = x2;
-	qt_Smoke->binding->callMethod(1648, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(1626, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }
-    ~x_QDataSink() { qt_Smoke->binding->deleted(59, (void*)this); }
+    ~x_QDataSink() { qt_Smoke->binding->deleted(58, (void*)this); }
 };
 void xcall_QDataSink(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QDataSink *xself = (x_QDataSink*)obj;

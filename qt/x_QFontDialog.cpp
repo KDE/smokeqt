@@ -100,7 +100,7 @@ public:
 	QFont xret = QFontDialog::getFont((bool*)x[1].s_voidp);
 	x[0].s_class = (void*)new QFont(xret);
     }
-    ~x_QFontDialog() { qt_Smoke->binding->deleted(118, (void*)this); }
+    ~x_QFontDialog() { qt_Smoke->binding->deleted(117, (void*)this); }
 };
 void xcall_QFontDialog(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QFontDialog xtmp(obj), *xself = &xtmp;

@@ -19,7 +19,7 @@ public:
     }
     x_QHideEvent(const QHideEvent& x1) : QHideEvent(x1) {
     }
-    ~x_QHideEvent() { qt_Smoke->binding->deleted(146, (void*)this); }
+    ~x_QHideEvent() { qt_Smoke->binding->deleted(145, (void*)this); }
 };
 void xcall_QHideEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QHideEvent *xself = (x_QHideEvent*)obj;

@@ -29,7 +29,7 @@ public:
 	this->QStringData::setDirty();
 	(void)x; // noop (for compiler warning)
     }
-    ~x_QStringData() { qt_Smoke->binding->deleted(306, (void*)this); }
+    ~x_QStringData() { qt_Smoke->binding->deleted(301, (void*)this); }
 };
 void xcall_QStringData(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QStringData *xself = (x_QStringData*)obj;

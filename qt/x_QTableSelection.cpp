@@ -81,7 +81,7 @@ public:
     }
     x_QTableSelection(const QTableSelection& x1) : QTableSelection(x1) {
     }
-    ~x_QTableSelection() { qt_Smoke->binding->deleted(321, (void*)this); }
+    ~x_QTableSelection() { qt_Smoke->binding->deleted(316, (void*)this); }
 };
 void xcall_QTableSelection(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QTableSelection *xself = (x_QTableSelection*)obj;

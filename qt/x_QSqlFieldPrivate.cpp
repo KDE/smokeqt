@@ -19,7 +19,7 @@ public:
     }
     x_QSqlFieldPrivate(const QSqlFieldPrivate& x1) : QSqlFieldPrivate(x1) {
     }
-    ~x_QSqlFieldPrivate() { qt_Smoke->binding->deleted(292, (void*)this); }
+    ~x_QSqlFieldPrivate() { qt_Smoke->binding->deleted(287, (void*)this); }
 };
 void xcall_QSqlFieldPrivate(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QSqlFieldPrivate *xself = (x_QSqlFieldPrivate*)obj;

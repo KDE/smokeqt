@@ -294,7 +294,7 @@ public:
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {
-	  case 512: //QSettings::System
+	  case 507: //QSettings::System
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QSettings::System;
@@ -310,7 +310,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 511: //QSettings::Scope
+	  case 506: //QSettings::Scope
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QSettings::Scope;
@@ -326,7 +326,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 510: //QSettings::Format
+	  case 505: //QSettings::Format
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QSettings::Format;
@@ -344,7 +344,7 @@ public:
 	    break;
 	}
     }
-    ~x_QSettings() { qt_Smoke->binding->deleted(262, (void*)this); }
+    ~x_QSettings() { qt_Smoke->binding->deleted(257, (void*)this); }
 };
 void xenum_QSettings(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
     x_QSettings::xenum_operation(xop, xtype, xdata, xvalue);

@@ -153,7 +153,7 @@ public:
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {
-	  case 390: //QMetaProperty::Flags
+	  case 389: //QMetaProperty::Flags
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QMetaProperty::Flags;
@@ -171,7 +171,7 @@ public:
 	    break;
 	}
     }
-    ~x_QMetaProperty() { qt_Smoke->binding->deleted(207, (void*)this); }
+    ~x_QMetaProperty() { qt_Smoke->binding->deleted(206, (void*)this); }
 };
 void xenum_QMetaProperty(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
     x_QMetaProperty::xenum_operation(xop, xtype, xdata, xvalue);

@@ -24,7 +24,7 @@ public:
     }
     x_QTimerEvent(const QTimerEvent& x1) : QTimerEvent(x1) {
     }
-    ~x_QTimerEvent() { qt_Smoke->binding->deleted(338, (void*)this); }
+    ~x_QTimerEvent() { qt_Smoke->binding->deleted(333, (void*)this); }
 };
 void xcall_QTimerEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QTimerEvent *xself = (x_QTimerEvent*)obj;

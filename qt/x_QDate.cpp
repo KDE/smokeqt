@@ -223,7 +223,7 @@ public:
 	QDate::julianToGregorian((uint)x[1].s_uint,*(int *)x[2].s_voidp,*(int *)x[3].s_voidp,*(int *)x[4].s_voidp);
 	(void)x; // noop (for compiler warning)
     }
-    ~x_QDate() { qt_Smoke->binding->deleted(64, (void*)this); }
+    ~x_QDate() { qt_Smoke->binding->deleted(63, (void*)this); }
 };
 void xcall_QDate(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QDate *xself = (x_QDate*)obj;

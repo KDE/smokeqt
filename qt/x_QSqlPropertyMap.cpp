@@ -48,10 +48,10 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_class = (void*)x1;
 	x[2].s_class = (void*)&x2;
-	if(qt_Smoke->binding->callMethod(9387, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9212, (void*)this, x)) return;
 	this->QSqlPropertyMap::setProperty(x1, x2);
     }
-    ~x_QSqlPropertyMap() { qt_Smoke->binding->deleted(295, (void*)this); }
+    ~x_QSqlPropertyMap() { qt_Smoke->binding->deleted(290, (void*)this); }
 };
 void xcall_QSqlPropertyMap(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QSqlPropertyMap *xself = (x_QSqlPropertyMap*)obj;

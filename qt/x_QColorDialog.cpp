@@ -131,7 +131,7 @@ public:
 	QColorDialog::setStandardColor((int)x[1].s_int,(QRgb)x[2].s_uint);
 	(void)x; // noop (for compiler warning)
     }
-    ~x_QColorDialog() { qt_Smoke->binding->deleted(44, (void*)this); }
+    ~x_QColorDialog() { qt_Smoke->binding->deleted(43, (void*)this); }
 };
 void xcall_QColorDialog(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QColorDialog xtmp(obj), *xself = &xtmp;

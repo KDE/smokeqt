@@ -48,12 +48,19 @@ my %excludes = (
     'qtmultilineedit.h' => 1,  # Not in Qt anymore...
     'qwidgetfactory.h' => 1,  # Part of designer uilib, not of qt
     'qassistantclient.h' => 1,  # Part of assistant lib, not of qt
-    'qsharedmemory.h' => 1 # "not part of the Qt API" they say
+    'qsharedmemory.h' => 1, # "not part of the Qt API" they say
+    'qwindowsstyle.h' => 1, # Qt windowsstlye, plugin
+    'qmotifstyle.h' => 1,
+    'qmotifplusstyle.h' => 1,
+    'qsgistyle.h' => 1,
+    'qplatinumstyle.h' => 1,
+    'qcdestyle.h' => 1,
+    'qwindowsxpstyle.h' => 1 # play on the safe side
 );
 
 # List Qt headers, and exclude the ones listed above
 my @headers = ();
-$qtinc=$ENV{"QTDIR"} . "/include";
+$qtinc=$ENV{"QTDIR"} . "/include/qt";
 opendir (QT, $qtinc) or die "Couldn't find $qtinc";
 foreach $filename (readdir(QT)) {
     $entry = $qtinc."/".$filename;

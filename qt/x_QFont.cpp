@@ -578,7 +578,7 @@ public:
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {
-	  case 228: //QFont::Script
+	  case 227: //QFont::Script
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QFont::Script;
@@ -594,7 +594,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 231: //QFont::Weight
+	  case 230: //QFont::Weight
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QFont::Weight;
@@ -610,7 +610,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 229: //QFont::StyleHint
+	  case 228: //QFont::StyleHint
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QFont::StyleHint;
@@ -626,7 +626,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 230: //QFont::StyleStrategy
+	  case 229: //QFont::StyleStrategy
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QFont::StyleStrategy;
@@ -644,7 +644,7 @@ public:
 	    break;
 	}
     }
-    ~x_QFont() { qt_Smoke->binding->deleted(116, (void*)this); }
+    ~x_QFont() { qt_Smoke->binding->deleted(115, (void*)this); }
 };
 void xenum_QFont(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
     x_QFont::xenum_operation(xop, xtype, xdata, xvalue);

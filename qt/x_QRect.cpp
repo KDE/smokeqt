@@ -358,7 +358,7 @@ public:
     }
     x_QRect(const QRect& x1) : QRect(x1) {
     }
-    ~x_QRect() { qt_Smoke->binding->deleted(251, (void*)this); }
+    ~x_QRect() { qt_Smoke->binding->deleted(247, (void*)this); }
 };
 void xcall_QRect(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QRect *xself = (x_QRect*)obj;

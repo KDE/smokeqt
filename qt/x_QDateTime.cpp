@@ -175,7 +175,7 @@ public:
 	QDateTime xret = QDateTime::fromString(*(const QString *)x[1].s_voidp);
 	x[0].s_class = (void*)new QDateTime(xret);
     }
-    ~x_QDateTime() { qt_Smoke->binding->deleted(66, (void*)this); }
+    ~x_QDateTime() { qt_Smoke->binding->deleted(65, (void*)this); }
 };
 void xcall_QDateTime(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QDateTime *xself = (x_QDateTime*)obj;

@@ -205,7 +205,7 @@ public:
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {
-	  case 74: //QClipboard::Mode
+	  case 73: //QClipboard::Mode
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QClipboard::Mode;
@@ -223,7 +223,7 @@ public:
 	    break;
 	}
     }
-    ~x_QClipboard() { qt_Smoke->binding->deleted(41, (void*)this); }
+    ~x_QClipboard() { qt_Smoke->binding->deleted(40, (void*)this); }
 };
 void xenum_QClipboard(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
     x_QClipboard::xenum_operation(xop, xtype, xdata, xvalue);

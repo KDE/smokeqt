@@ -19,7 +19,7 @@ public:
     }
     x_QSqlRecordShared(const QSqlRecordShared& x1) : QSqlRecordShared(x1) {
     }
-    ~x_QSqlRecordShared() { qt_Smoke->binding->deleted(299, (void*)this); }
+    ~x_QSqlRecordShared() { qt_Smoke->binding->deleted(294, (void*)this); }
 };
 void xcall_QSqlRecordShared(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QSqlRecordShared *xself = (x_QSqlRecordShared*)obj;

@@ -121,7 +121,7 @@ public:
 	bool xret = this->QPen::operator!=(*(const QPen *)x[1].s_class);
 	x[0].s_bool = xret;
     }
-    ~x_QPen() { qt_Smoke->binding->deleted(232, (void*)this); }
+    ~x_QPen() { qt_Smoke->binding->deleted(229, (void*)this); }
 };
 void xcall_QPen(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QPen *xself = (x_QPen*)obj;

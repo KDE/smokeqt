@@ -81,7 +81,7 @@ public:
 	int xret = this->QGLColormap::findNearest((QRgb)x[1].s_uint);
 	x[0].s_int = xret;
     }
-    ~x_QGLColormap() { qt_Smoke->binding->deleted(128, (void*)this); }
+    ~x_QGLColormap() { qt_Smoke->binding->deleted(127, (void*)this); }
 };
 void xcall_QGLColormap(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QGLColormap *xself = (x_QGLColormap*)obj;

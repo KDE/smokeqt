@@ -178,7 +178,7 @@ public:
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {
-	  case 529: //QSizePolicy::ExpandData
+	  case 524: //QSizePolicy::ExpandData
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QSizePolicy::ExpandData;
@@ -194,7 +194,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 530: //QSizePolicy::SizeType
+	  case 525: //QSizePolicy::SizeType
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QSizePolicy::SizeType;
@@ -212,7 +212,7 @@ public:
 	    break;
 	}
     }
-    ~x_QSizePolicy() { qt_Smoke->binding->deleted(271, (void*)this); }
+    ~x_QSizePolicy() { qt_Smoke->binding->deleted(266, (void*)this); }
 };
 void xenum_QSizePolicy(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
     x_QSizePolicy::xenum_operation(xop, xtype, xdata, xvalue);

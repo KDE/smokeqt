@@ -50,7 +50,7 @@ public:
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {
-	  case 554: //QSql::Location
+	  case 549: //QSql::Location
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QSql::Location;
@@ -66,7 +66,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 555: //QSql::Op
+	  case 550: //QSql::Op
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QSql::Op;
@@ -82,7 +82,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 556: //QSql::ParameterType
+	  case 551: //QSql::ParameterType
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QSql::ParameterType;
@@ -98,7 +98,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 553: //QSql::Confirm
+	  case 548: //QSql::Confirm
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QSql::Confirm;
@@ -116,7 +116,7 @@ public:
 	    break;
 	}
     }
-    ~x_QSql() { qt_Smoke->binding->deleted(282, (void*)this); }
+    ~x_QSql() { qt_Smoke->binding->deleted(277, (void*)this); }
 };
 void xenum_QSql(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
     x_QSql::xenum_operation(xop, xtype, xdata, xvalue);

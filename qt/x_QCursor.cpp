@@ -126,7 +126,7 @@ public:
 	QCursor::cleanup();
 	(void)x; // noop (for compiler warning)
     }
-    ~x_QCursor() { qt_Smoke->binding->deleted(54, (void*)this); }
+    ~x_QCursor() { qt_Smoke->binding->deleted(53, (void*)this); }
 };
 void xcall_QCursor(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QCursor *xself = (x_QCursor*)obj;

@@ -48,7 +48,7 @@ public:
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {
-	  case 329: //QInternal::PaintDeviceFlags
+	  case 328: //QInternal::PaintDeviceFlags
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QInternal::PaintDeviceFlags;
@@ -66,7 +66,7 @@ public:
 	    break;
 	}
     }
-    ~x_QInternal() { qt_Smoke->binding->deleted(174, (void*)this); }
+    ~x_QInternal() { qt_Smoke->binding->deleted(173, (void*)this); }
 };
 void xenum_QInternal(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
     x_QInternal::xenum_operation(xop, xtype, xdata, xvalue);

@@ -841,7 +841,7 @@ public:
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {
-	  case 739: //QVariant::Type
+	  case 734: //QVariant::Type
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QVariant::Type;
@@ -859,7 +859,7 @@ public:
 	    break;
 	}
     }
-    ~x_QVariant() { qt_Smoke->binding->deleted(360, (void*)this); }
+    ~x_QVariant() { qt_Smoke->binding->deleted(355, (void*)this); }
 };
 void xenum_QVariant(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
     x_QVariant::xenum_operation(xop, xtype, xdata, xvalue);

@@ -20,7 +20,7 @@ public:
     }
     x_QIMComposeEvent(const QIMComposeEvent& x1) : QIMComposeEvent(x1) {
     }
-    ~x_QIMComposeEvent() { qt_Smoke->binding->deleted(152, (void*)this); }
+    ~x_QIMComposeEvent() { qt_Smoke->binding->deleted(151, (void*)this); }
 };
 void xcall_QIMComposeEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QIMComposeEvent *xself = (x_QIMComposeEvent*)obj;

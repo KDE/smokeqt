@@ -19,7 +19,7 @@ public:
     }
     x_QDropSite(const QDropSite& x1) : QDropSite(x1) {
     }
-    ~x_QDropSite() { qt_Smoke->binding->deleted(102, (void*)this); }
+    ~x_QDropSite() { qt_Smoke->binding->deleted(101, (void*)this); }
 };
 void xcall_QDropSite(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QDropSite *xself = (x_QDropSite*)obj;

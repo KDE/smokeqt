@@ -30,7 +30,7 @@ public:
     }
     x_QPNGImagePacker(const QPNGImagePacker& x1) : QPNGImagePacker(x1) {
     }
-    ~x_QPNGImagePacker() { qt_Smoke->binding->deleted(225, (void*)this); }
+    ~x_QPNGImagePacker() { qt_Smoke->binding->deleted(222, (void*)this); }
 };
 void xcall_QPNGImagePacker(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QPNGImagePacker *xself = (x_QPNGImagePacker*)obj;

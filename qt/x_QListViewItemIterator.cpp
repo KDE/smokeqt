@@ -78,7 +78,7 @@ public:
 	QListViewItem* xret = this->QListViewItemIterator::current();
 	x[0].s_class = (void*)xret;
     }
-    ~x_QListViewItemIterator() { qt_Smoke->binding->deleted(193, (void*)this); }
+    ~x_QListViewItemIterator() { qt_Smoke->binding->deleted(192, (void*)this); }
 };
 void xcall_QListViewItemIterator(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QListViewItemIterator *xself = (x_QListViewItemIterator*)obj;

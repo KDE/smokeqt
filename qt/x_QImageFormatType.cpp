@@ -23,17 +23,17 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)x1;
 	x[2].s_int = x2;
-	qt_Smoke->binding->callMethod(4876, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(4856, (void*)this, x, true /*pure virtual*/);
 	return (QImageFormat*)x[0].s_class;
 	// ABSTRACT
     }
     virtual const char* formatName() const {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(4877, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(4857, (void*)this, x, true /*pure virtual*/);
 	return (const char*)x[0].s_class;
 	// ABSTRACT
     }
-    ~x_QImageFormatType() { qt_Smoke->binding->deleted(168, (void*)this); }
+    ~x_QImageFormatType() { qt_Smoke->binding->deleted(167, (void*)this); }
 };
 void xcall_QImageFormatType(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QImageFormatType *xself = (x_QImageFormatType*)obj;

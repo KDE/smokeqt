@@ -19,7 +19,7 @@ public:
     }
     x_QShowEvent(const QShowEvent& x1) : QShowEvent(x1) {
     }
-    ~x_QShowEvent() { qt_Smoke->binding->deleted(264, (void*)this); }
+    ~x_QShowEvent() { qt_Smoke->binding->deleted(259, (void*)this); }
 };
 void xcall_QShowEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QShowEvent *xself = (x_QShowEvent*)obj;

@@ -178,7 +178,7 @@ public:
 	x[2].s_enum = x2;
 	x[3].s_enum = x3;
 	x[4].s_enum = x4;
-	if(qt_Smoke->binding->callMethod(4453, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(4433, (void*)this, x)) return;
 	this->QIconSet::setPixmap(x1, x2, x3, x4);
     }
     virtual void setPixmap(const QString& x1, QIconSet::Size x2, QIconSet::Mode x3, QIconSet::State x4) {
@@ -187,12 +187,12 @@ public:
 	x[2].s_enum = x2;
 	x[3].s_enum = x3;
 	x[4].s_enum = x4;
-	if(qt_Smoke->binding->callMethod(4456, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(4436, (void*)this, x)) return;
 	this->QIconSet::setPixmap(x1, x2, x3, x4);
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {
-	  case 302: //QIconSet::Mode
+	  case 301: //QIconSet::Mode
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QIconSet::Mode;
@@ -208,7 +208,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 303: //QIconSet::Size
+	  case 302: //QIconSet::Size
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QIconSet::Size;
@@ -224,7 +224,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 304: //QIconSet::State
+	  case 303: //QIconSet::State
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QIconSet::State;
@@ -242,7 +242,7 @@ public:
 	    break;
 	}
     }
-    ~x_QIconSet() { qt_Smoke->binding->deleted(159, (void*)this); }
+    ~x_QIconSet() { qt_Smoke->binding->deleted(158, (void*)this); }
 };
 void xenum_QIconSet(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
     x_QIconSet::xenum_operation(xop, xtype, xdata, xvalue);

@@ -19,7 +19,7 @@ public:
     }
     x_QWExtra(const QWExtra& x1) : QWExtra(x1) {
     }
-    ~x_QWExtra() { qt_Smoke->binding->deleted(361, (void*)this); }
+    ~x_QWExtra() { qt_Smoke->binding->deleted(356, (void*)this); }
 };
 void xcall_QWExtra(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QWExtra *xself = (x_QWExtra*)obj;

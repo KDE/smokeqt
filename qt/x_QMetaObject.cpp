@@ -268,7 +268,7 @@ public:
 	bool xret = QMetaObject::hasMetaObject((const char*)x[1].s_voidp);
 	x[0].s_bool = xret;
     }
-    ~x_QMetaObject() { qt_Smoke->binding->deleted(205, (void*)this); }
+    ~x_QMetaObject() { qt_Smoke->binding->deleted(204, (void*)this); }
 };
 void xcall_QMetaObject(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QMetaObject *xself = (x_QMetaObject*)obj;

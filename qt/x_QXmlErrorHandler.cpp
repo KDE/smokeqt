@@ -23,13 +23,13 @@ public:
     virtual bool error(const QXmlParseException& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	qt_Smoke->binding->callMethod(12469, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(12257, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
     virtual QString errorString() {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(12471, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(12259, (void*)this, x, true /*pure virtual*/);
 	QString *xptr = (QString *)x[0].s_class;
 	QString xret(*xptr);
 	delete xptr;
@@ -39,18 +39,18 @@ public:
     virtual bool fatalError(const QXmlParseException& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	qt_Smoke->binding->callMethod(12470, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(12258, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
     virtual bool warning(const QXmlParseException& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	qt_Smoke->binding->callMethod(12468, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(12256, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
-    ~x_QXmlErrorHandler() { qt_Smoke->binding->deleted(382, (void*)this); }
+    ~x_QXmlErrorHandler() { qt_Smoke->binding->deleted(376, (void*)this); }
 };
 void xcall_QXmlErrorHandler(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QXmlErrorHandler *xself = (x_QXmlErrorHandler*)obj;

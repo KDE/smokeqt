@@ -56,7 +56,7 @@ public:
 	QImageDecoder::unregisterDecoderFactory((QImageFormatType*)x[1].s_class);
 	(void)x; // noop (for compiler warning)
     }
-    ~x_QImageDecoder() { qt_Smoke->binding->deleted(164, (void*)this); }
+    ~x_QImageDecoder() { qt_Smoke->binding->deleted(163, (void*)this); }
 };
 void xcall_QImageDecoder(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QImageDecoder *xself = (x_QImageDecoder*)obj;

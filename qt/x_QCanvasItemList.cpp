@@ -23,7 +23,7 @@ public:
     }
     x_QCanvasItemList() : QCanvasItemList() {
     }
-    ~x_QCanvasItemList() { qt_Smoke->binding->deleted(23, (void*)this); }
+    ~x_QCanvasItemList() { qt_Smoke->binding->deleted(22, (void*)this); }
 };
 void xcall_QCanvasItemList(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QCanvasItemList *xself = (x_QCanvasItemList*)obj;

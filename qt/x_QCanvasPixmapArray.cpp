@@ -89,7 +89,7 @@ public:
 	uint xret = this->QCanvasPixmapArray::count();
 	x[0].s_uint = xret;
     }
-    ~x_QCanvasPixmapArray() { qt_Smoke->binding->deleted(26, (void*)this); }
+    ~x_QCanvasPixmapArray() { qt_Smoke->binding->deleted(25, (void*)this); }
 };
 void xcall_QCanvasPixmapArray(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QCanvasPixmapArray *xself = (x_QCanvasPixmapArray*)obj;

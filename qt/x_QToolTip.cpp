@@ -159,11 +159,11 @@ public:
     virtual void maybeTip(const QPoint& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	qt_Smoke->binding->callMethod(11226, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(11051, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }
-    ~x_QToolTip() { qt_Smoke->binding->deleted(341, (void*)this); }
+    ~x_QToolTip() { qt_Smoke->binding->deleted(336, (void*)this); }
 };
 void xcall_QToolTip(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QToolTip *xself = (x_QToolTip*)obj;

@@ -26,7 +26,7 @@ public:
     }
     x_QStringBucket(const QStringBucket& x1) : QStringBucket(x1) {
     }
-    ~x_QStringBucket() { qt_Smoke->binding->deleted(305, (void*)this); }
+    ~x_QStringBucket() { qt_Smoke->binding->deleted(300, (void*)this); }
 };
 void xcall_QStringBucket(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QStringBucket *xself = (x_QStringBucket*)obj;

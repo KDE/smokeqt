@@ -50,7 +50,7 @@ public:
     }
     x_QIMEvent(const QIMEvent& x1) : QIMEvent(x1) {
     }
-    ~x_QIMEvent() { qt_Smoke->binding->deleted(153, (void*)this); }
+    ~x_QIMEvent() { qt_Smoke->binding->deleted(152, (void*)this); }
 };
 void xcall_QIMEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QIMEvent *xself = (x_QIMEvent*)obj;

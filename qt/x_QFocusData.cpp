@@ -43,7 +43,7 @@ public:
 	int xret = xthis->QFocusData::count();
 	x[0].s_int = xret;
     }
-    ~x_QFocusData() { qt_Smoke->binding->deleted(114, (void*)this); }
+    ~x_QFocusData() { qt_Smoke->binding->deleted(113, (void*)this); }
 };
 void xcall_QFocusData(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QFocusData xtmp(obj), *xself = &xtmp;

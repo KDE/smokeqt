@@ -24,7 +24,7 @@ public:
 	QWidgetList& xret = this->QWidgetList::operator=(*(const QWidgetList *)x[1].s_class);
 	x[0].s_class = (void*)&xret;
     }
-    ~x_QWidgetList() { qt_Smoke->binding->deleted(369, (void*)this); }
+    ~x_QWidgetList() { qt_Smoke->binding->deleted(364, (void*)this); }
 };
 void xcall_QWidgetList(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QWidgetList *xself = (x_QWidgetList*)obj;

@@ -192,7 +192,7 @@ public:
 	bool xret = QTime::isValid((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int);
 	x[0].s_bool = xret;
     }
-    ~x_QTime() { qt_Smoke->binding->deleted(335, (void*)this); }
+    ~x_QTime() { qt_Smoke->binding->deleted(330, (void*)this); }
 };
 void xcall_QTime(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QTime *xself = (x_QTime*)obj;

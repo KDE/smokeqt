@@ -33,7 +33,7 @@ public:
     virtual QByteArray encodedData(const char* x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	qt_Smoke->binding->callMethod(6387, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(6367, (void*)this, x, true /*pure virtual*/);
 	QByteArray *xptr = (QByteArray *)x[0].s_class;
 	QByteArray xret(*xptr);
 	delete xptr;
@@ -43,17 +43,17 @@ public:
     virtual const char* format(int x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	qt_Smoke->binding->callMethod(6384, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(6364, (void*)this, x, true /*pure virtual*/);
 	return (const char*)x[0].s_class;
 	// ABSTRACT
     }
     virtual bool provides(const char* x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(6386, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(6366, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QMimeSource::provides(x1);
     }
-    ~x_QMimeSource() { qt_Smoke->binding->deleted(208, (void*)this); }
+    ~x_QMimeSource() { qt_Smoke->binding->deleted(207, (void*)this); }
 };
 void xcall_QMimeSource(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QMimeSource *xself = (x_QMimeSource*)obj;

@@ -25,7 +25,7 @@ public:
     }
     x_QIntBucket(const QIntBucket& x1) : QIntBucket(x1) {
     }
-    ~x_QIntBucket() { qt_Smoke->binding->deleted(172, (void*)this); }
+    ~x_QIntBucket() { qt_Smoke->binding->deleted(171, (void*)this); }
 };
 void xcall_QIntBucket(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QIntBucket *xself = (x_QIntBucket*)obj;

@@ -22,31 +22,31 @@ public:
     }
     virtual QXmlDTDHandler* DTDHandler() const {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(12544, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(12332, (void*)this, x, true /*pure virtual*/);
 	return (QXmlDTDHandler*)x[0].s_class;
 	// ABSTRACT
     }
     virtual QXmlContentHandler* contentHandler() const {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(12546, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(12334, (void*)this, x, true /*pure virtual*/);
 	return (QXmlContentHandler*)x[0].s_class;
 	// ABSTRACT
     }
     virtual QXmlDeclHandler* declHandler() const {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(12552, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(12340, (void*)this, x, true /*pure virtual*/);
 	return (QXmlDeclHandler*)x[0].s_class;
 	// ABSTRACT
     }
     virtual QXmlEntityResolver* entityResolver() const {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(12542, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(12330, (void*)this, x, true /*pure virtual*/);
 	return (QXmlEntityResolver*)x[0].s_class;
 	// ABSTRACT
     }
     virtual QXmlErrorHandler* errorHandler() const {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(12548, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(12336, (void*)this, x, true /*pure virtual*/);
 	return (QXmlErrorHandler*)x[0].s_class;
 	// ABSTRACT
     }
@@ -54,41 +54,41 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_voidp = (void*)x2;
-	qt_Smoke->binding->callMethod(12533, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(12321, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
     virtual bool hasFeature(const QString& x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	qt_Smoke->binding->callMethod(12536, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(12324, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
     virtual bool hasProperty(const QString& x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	qt_Smoke->binding->callMethod(12540, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(12328, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
     virtual QXmlLexicalHandler* lexicalHandler() const {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(12550, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(12338, (void*)this, x, true /*pure virtual*/);
 	return (QXmlLexicalHandler*)x[0].s_class;
 	// ABSTRACT
     }
     virtual bool parse(const QXmlInputSource& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	qt_Smoke->binding->callMethod(12553, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(12341, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
     virtual bool parse(const QXmlInputSource* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	qt_Smoke->binding->callMethod(12554, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(12342, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
@@ -96,42 +96,42 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_voidp = (void*)x2;
-	qt_Smoke->binding->callMethod(12537, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(12325, (void*)this, x, true /*pure virtual*/);
 	return (void*)x[0].s_voidp;
 	// ABSTRACT
     }
     virtual void setContentHandler(QXmlContentHandler* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	qt_Smoke->binding->callMethod(12545, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(12333, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }
     virtual void setDTDHandler(QXmlDTDHandler* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	qt_Smoke->binding->callMethod(12543, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(12331, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }
     virtual void setDeclHandler(QXmlDeclHandler* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	qt_Smoke->binding->callMethod(12551, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(12339, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }
     virtual void setEntityResolver(QXmlEntityResolver* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	qt_Smoke->binding->callMethod(12541, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(12329, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }
     virtual void setErrorHandler(QXmlErrorHandler* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	qt_Smoke->binding->callMethod(12547, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(12335, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }
@@ -139,14 +139,14 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_bool = x2;
-	qt_Smoke->binding->callMethod(12535, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(12323, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }
     virtual void setLexicalHandler(QXmlLexicalHandler* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	qt_Smoke->binding->callMethod(12549, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(12337, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }
@@ -154,11 +154,11 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_voidp = (void*)x2;
-	qt_Smoke->binding->callMethod(12539, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(12327, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }
-    ~x_QXmlReader() { qt_Smoke->binding->deleted(388, (void*)this); }
+    ~x_QXmlReader() { qt_Smoke->binding->deleted(382, (void*)this); }
 };
 void xcall_QXmlReader(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QXmlReader *xself = (x_QXmlReader*)obj;

@@ -96,7 +96,7 @@ public:
 	QPtrCollection::Item xret = this->QGCacheIterator::operator-=((uint)x[1].s_uint);
 	x[0].s_voidp = (void*)new QPtrCollection::Item(xret);
     }
-    ~x_QGCacheIterator() { qt_Smoke->binding->deleted(126, (void*)this); }
+    ~x_QGCacheIterator() { qt_Smoke->binding->deleted(125, (void*)this); }
 };
 void xcall_QGCacheIterator(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QGCacheIterator *xself = (x_QGCacheIterator*)obj;

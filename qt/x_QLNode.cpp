@@ -14,7 +14,7 @@ public:
 	QPtrCollection::Item xret = xthis->QLNode::getData();
 	x[0].s_voidp = (void*)new QPtrCollection::Item(xret);
     }
-    ~x_QLNode() { qt_Smoke->binding->deleted(180, (void*)this); }
+    ~x_QLNode() { qt_Smoke->binding->deleted(179, (void*)this); }
 };
 void xcall_QLNode(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QLNode xtmp(obj), *xself = &xtmp;

@@ -23,11 +23,11 @@ public:
     virtual void previewUrl(const QUrl& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	qt_Smoke->binding->callMethod(3226, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(3206, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }
-    ~x_QFilePreview() { qt_Smoke->binding->deleted(113, (void*)this); }
+    ~x_QFilePreview() { qt_Smoke->binding->deleted(112, (void*)this); }
 };
 void xcall_QFilePreview(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QFilePreview *xself = (x_QFilePreview*)obj;

@@ -57,7 +57,7 @@ public:
     }
     x_QPaintEvent(const QPaintEvent& x1) : QPaintEvent(x1) {
     }
-    ~x_QPaintEvent() { qt_Smoke->binding->deleted(229, (void*)this); }
+    ~x_QPaintEvent() { qt_Smoke->binding->deleted(226, (void*)this); }
 };
 void xcall_QPaintEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QPaintEvent *xself = (x_QPaintEvent*)obj;

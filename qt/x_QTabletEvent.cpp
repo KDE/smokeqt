@@ -111,7 +111,7 @@ public:
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {
-	  case 656: //QTabletEvent::TabletDevice
+	  case 651: //QTabletEvent::TabletDevice
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QTabletEvent::TabletDevice;
@@ -129,7 +129,7 @@ public:
 	    break;
 	}
     }
-    ~x_QTabletEvent() { qt_Smoke->binding->deleted(322, (void*)this); }
+    ~x_QTabletEvent() { qt_Smoke->binding->deleted(317, (void*)this); }
 };
 void xenum_QTabletEvent(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
     x_QTabletEvent::xenum_operation(xop, xtype, xdata, xvalue);

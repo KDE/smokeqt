@@ -1805,7 +1805,7 @@ public:
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {
-	  case 803: //Qt::ArrowType
+	  case 797: //Qt::ArrowType
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new Qt::ArrowType;
@@ -1821,7 +1821,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 834: //Qt::WidgetFlags
+	  case 828: //Qt::WidgetFlags
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new Qt::WidgetFlags;
@@ -1837,7 +1837,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 801: //Qt::AlignmentFlags
+	  case 795: //Qt::AlignmentFlags
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new Qt::AlignmentFlags;
@@ -1853,7 +1853,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 802: //Qt::AnchorAttribute
+	  case 796: //Qt::AnchorAttribute
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new Qt::AnchorAttribute;
@@ -1869,7 +1869,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 822: //Qt::PenJoinStyle
+	  case 816: //Qt::PenJoinStyle
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new Qt::PenJoinStyle;
@@ -1885,7 +1885,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 829: //Qt::TimeSpec
+	  case 823: //Qt::TimeSpec
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new Qt::TimeSpec;
@@ -1901,7 +1901,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 810: //Qt::DateFormat
+	  case 804: //Qt::DateFormat
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new Qt::DateFormat;
@@ -1917,7 +1917,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 823: //Qt::PenStyle
+	  case 817: //Qt::PenStyle
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new Qt::PenStyle;
@@ -1933,7 +1933,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 825: //Qt::SequenceMatch
+	  case 819: //Qt::SequenceMatch
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new Qt::SequenceMatch;
@@ -1949,7 +1949,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 806: //Qt::BrushStyle
+	  case 800: //Qt::BrushStyle
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new Qt::BrushStyle;
@@ -1965,7 +1965,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 827: //Qt::TextFlags
+	  case 821: //Qt::TextFlags
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new Qt::TextFlags;
@@ -1981,7 +1981,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 809: //Qt::CursorShape
+	  case 803: //Qt::CursorShape
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new Qt::CursorShape;
@@ -1997,7 +1997,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 819: //Qt::Orientation
+	  case 813: //Qt::Orientation
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new Qt::Orientation;
@@ -2013,7 +2013,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 816: //Qt::Key
+	  case 810: //Qt::Key
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new Qt::Key;
@@ -2029,7 +2029,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 815: //Qt::ImageConversionFlags
+	  case 809: //Qt::ImageConversionFlags
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new Qt::ImageConversionFlags;
@@ -2045,7 +2045,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 804: //Qt::BGMode
+	  case 798: //Qt::BGMode
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new Qt::BGMode;
@@ -2061,7 +2061,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 813: //Qt::GUIStyle
+	  case 807: //Qt::GUIStyle
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new Qt::GUIStyle;
@@ -2077,7 +2077,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 820: //Qt::PaintUnit
+	  case 814: //Qt::PaintUnit
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new Qt::PaintUnit;
@@ -2093,7 +2093,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 835: //Qt::WidgetState
+	  case 829: //Qt::WidgetState
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new Qt::WidgetState;
@@ -2109,7 +2109,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 828: //Qt::TextFormat
+	  case 822: //Qt::TextFormat
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new Qt::TextFormat;
@@ -2125,7 +2125,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 821: //Qt::PenCapStyle
+	  case 815: //Qt::PenCapStyle
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new Qt::PenCapStyle;
@@ -2141,7 +2141,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 811: //Qt::Dock
+	  case 805: //Qt::Dock
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new Qt::Dock;
@@ -2157,7 +2157,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 805: //Qt::BackgroundMode
+	  case 799: //Qt::BackgroundMode
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new Qt::BackgroundMode;
@@ -2173,7 +2173,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 831: //Qt::UIEffect
+	  case 825: //Qt::UIEffect
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new Qt::UIEffect;
@@ -2189,7 +2189,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 836: //Qt::WindowsVersion
+	  case 830: //Qt::WindowsVersion
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new Qt::WindowsVersion;
@@ -2205,7 +2205,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 807: //Qt::ButtonState
+	  case 801: //Qt::ButtonState
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new Qt::ButtonState;
@@ -2221,7 +2221,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 817: //Qt::MacintoshVersion
+	  case 811: //Qt::MacintoshVersion
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new Qt::MacintoshVersion;
@@ -2237,7 +2237,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 826: //Qt::StringComparisonMode
+	  case 820: //Qt::StringComparisonMode
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new Qt::StringComparisonMode;
@@ -2253,7 +2253,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 818: //Qt::Modifier
+	  case 812: //Qt::Modifier
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new Qt::Modifier;
@@ -2269,7 +2269,7 @@ public:
 		break;
 	    }
 	    break;
-	  case 824: //Qt::RasterOp
+	  case 818: //Qt::RasterOp
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new Qt::RasterOp;
@@ -2287,7 +2287,7 @@ public:
 	    break;
 	}
     }
-    ~x_Qt() { qt_Smoke->binding->deleted(390, (void*)this); }
+    ~x_Qt() { qt_Smoke->binding->deleted(384, (void*)this); }
 };
 void xenum_Qt(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
     x_Qt::xenum_operation(xop, xtype, xdata, xvalue);

@@ -21,11 +21,11 @@ public:
     }
     virtual QNetworkProtocol* createObject() {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(6734, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(6629, (void*)this, x, true /*pure virtual*/);
 	return (QNetworkProtocol*)x[0].s_class;
 	// ABSTRACT
     }
-    ~x_QNetworkProtocolFactoryBase() { qt_Smoke->binding->deleted(218, (void*)this); }
+    ~x_QNetworkProtocolFactoryBase() { qt_Smoke->binding->deleted(215, (void*)this); }
 };
 void xcall_QNetworkProtocolFactoryBase(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QNetworkProtocolFactoryBase *xself = (x_QNetworkProtocolFactoryBase*)obj;

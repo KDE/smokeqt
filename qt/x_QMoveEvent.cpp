@@ -30,7 +30,7 @@ public:
     }
     x_QMoveEvent(const QMoveEvent& x1) : QMoveEvent(x1) {
     }
-    ~x_QMoveEvent() { qt_Smoke->binding->deleted(213, (void*)this); }
+    ~x_QMoveEvent() { qt_Smoke->binding->deleted(210, (void*)this); }
 };
 void xcall_QMoveEvent(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QMoveEvent *xself = (x_QMoveEvent*)obj;

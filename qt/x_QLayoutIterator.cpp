@@ -44,7 +44,7 @@ public:
 	this->QLayoutIterator::deleteCurrent();
 	(void)x; // noop (for compiler warning)
     }
-    ~x_QLayoutIterator() { qt_Smoke->binding->deleted(184, (void*)this); }
+    ~x_QLayoutIterator() { qt_Smoke->binding->deleted(183, (void*)this); }
 };
 void xcall_QLayoutIterator(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QLayoutIterator *xself = (x_QLayoutIterator*)obj;

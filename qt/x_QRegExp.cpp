@@ -218,7 +218,7 @@ public:
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {
-	  case 490: //QRegExp::CaretMode
+	  case 486: //QRegExp::CaretMode
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QRegExp::CaretMode;
@@ -236,7 +236,7 @@ public:
 	    break;
 	}
     }
-    ~x_QRegExp() { qt_Smoke->binding->deleted(252, (void*)this); }
+    ~x_QRegExp() { qt_Smoke->binding->deleted(248, (void*)this); }
 };
 void xenum_QRegExp(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
     x_QRegExp::xenum_operation(xop, xtype, xdata, xvalue);

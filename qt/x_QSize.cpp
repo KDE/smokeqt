@@ -138,7 +138,7 @@ public:
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {
-	  case 523: //QSize::ScaleMode
+	  case 518: //QSize::ScaleMode
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QSize::ScaleMode;
@@ -156,7 +156,7 @@ public:
 	    break;
 	}
     }
-    ~x_QSize() { qt_Smoke->binding->deleted(269, (void*)this); }
+    ~x_QSize() { qt_Smoke->binding->deleted(264, (void*)this); }
 };
 void xenum_QSize(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
     x_QSize::xenum_operation(xop, xtype, xdata, xvalue);
