@@ -317,7 +317,6 @@ qvariant.h
 qvbox.h
 qvbuttongroup.h
 qvector.h
-qvfbhdr.h
 qvgroupbox.h
 qwaitcondition.h
 qwhatsthis.h
