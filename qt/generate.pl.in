@@ -61,6 +61,7 @@ my %excludes = (
     'qsgistyle.h' => 1,
     'qplatinumstyle.h' => 1,
     'qcdestyle.h' => 1,
+	 'qworkspace.h' => 1,
     'qwindowsxpstyle.h' => 1 # play on the safe side 
 );
 
