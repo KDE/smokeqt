@@ -325,7 +325,7 @@ public:
 	Index mid = idMethod(c, name);
 	if(mid) return mid;
 	if(!classes[c].parents) return 0;
-	for(int p = classes[c].parents; inheritanceList[p]; p++) {
+	for(int p = classes[c].parents; inheritanceList[p] != -1; p++) {
 	    mid = findMethod(inheritanceList[p], name);
 	    if(mid) return mid;
 	}
