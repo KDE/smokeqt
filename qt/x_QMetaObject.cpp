@@ -96,22 +96,22 @@ public:
     void x_17(Smoke::Stack x) const {
 	// slotNames(bool)
 	QStrList xret = this->QMetaObject::slotNames((bool)x[1].s_bool);
-	x[0].s_class = (void*)new QStrList(xret);
+	x[0].s_voidp = (void*)new QStrList(xret);
     }
     void x_18(Smoke::Stack x) const {
 	// slotNames()
 	QStrList xret = this->QMetaObject::slotNames();
-	x[0].s_class = (void*)new QStrList(xret);
+	x[0].s_voidp = (void*)new QStrList(xret);
     }
     void x_19(Smoke::Stack x) const {
 	// signalNames(bool)
 	QStrList xret = this->QMetaObject::signalNames((bool)x[1].s_bool);
-	x[0].s_class = (void*)new QStrList(xret);
+	x[0].s_voidp = (void*)new QStrList(xret);
     }
     void x_20(Smoke::Stack x) const {
 	// signalNames()
 	QStrList xret = this->QMetaObject::signalNames();
-	x[0].s_class = (void*)new QStrList(xret);
+	x[0].s_voidp = (void*)new QStrList(xret);
     }
     void x_21(Smoke::Stack x) const {
 	// slotOffset()
@@ -201,12 +201,12 @@ public:
     void x_38(Smoke::Stack x) const {
 	// propertyNames(bool)
 	QStrList xret = this->QMetaObject::propertyNames((bool)x[1].s_bool);
-	x[0].s_class = (void*)new QStrList(xret);
+	x[0].s_voidp = (void*)new QStrList(xret);
     }
     void x_39(Smoke::Stack x) const {
 	// propertyNames()
 	QStrList xret = this->QMetaObject::propertyNames();
-	x[0].s_class = (void*)new QStrList(xret);
+	x[0].s_voidp = (void*)new QStrList(xret);
     }
     void x_40(Smoke::Stack x) const {
 	// numProperties(bool)

@@ -156,7 +156,7 @@ public:
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {
-	  case 603: //QStyleOption::StyleOptionDefault
+	  case 602: //QStyleOption::StyleOptionDefault
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QStyleOption::StyleOptionDefault;
@@ -174,7 +174,7 @@ public:
 	    break;
 	}
     }
-    ~x_QStyleOption() { qt_Smoke->binding->deleted(304, (void*)this); }
+    ~x_QStyleOption() { qt_Smoke->binding->deleted(302, (void*)this); }
 };
 void xenum_QStyleOption(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
     x_QStyleOption::xenum_operation(xop, xtype, xdata, xvalue);

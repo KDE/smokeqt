@@ -167,7 +167,7 @@ public:
     }
     static void x_38(Smoke::Stack x) {
 	// QVariant(const QStringList&)
-	x_QVariant* xret = new x_QVariant(*(const QStringList *)x[1].s_class);
+	x_QVariant* xret = new x_QVariant(*(const QStringList *)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QVariant(const QStringList& x1) : QVariant(x1) {
@@ -426,7 +426,7 @@ public:
     void x_78(Smoke::Stack x) const {
 	// toStringList()
 	const QStringList xret = this->QVariant::toStringList();
-	x[0].s_class = (void*)new QStringList(xret);
+	x[0].s_voidp = (void*)new QStringList(xret);
     }
     void x_79(Smoke::Stack x) const {
 	// toFont()
@@ -631,7 +631,7 @@ public:
     void x_119(Smoke::Stack x) {
 	// asStringList()
 	QStringList& xret = this->QVariant::asStringList();
-	x[0].s_class = (void*)&xret;
+	x[0].s_voidp = (void*)&xret;
     }
     void x_120(Smoke::Stack x) {
 	// asFont()
@@ -795,7 +795,7 @@ public:
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {
-	  case 716: //QVariant::Type
+	  case 715: //QVariant::Type
 	    switch(xop) {
 	      case Smoke::EnumNew:
 		xdata = (void*)new QVariant::Type;
@@ -813,7 +813,7 @@ public:
 	    break;
 	}
     }
-    ~x_QVariant() { qt_Smoke->binding->deleted(355, (void*)this); }
+    ~x_QVariant() { qt_Smoke->binding->deleted(353, (void*)this); }
 };
 void xenum_QVariant(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
     x_QVariant::xenum_operation(xop, xtype, xdata, xvalue);

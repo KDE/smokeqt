@@ -18,12 +18,12 @@ public:
     void x_1(Smoke::Stack x) const {
 	// families()
 	QStringList xret = this->QFontDatabase::families();
-	x[0].s_class = (void*)new QStringList(xret);
+	x[0].s_voidp = (void*)new QStringList(xret);
     }
     void x_2(Smoke::Stack x) const {
 	// styles(const QString&)
 	QStringList xret = this->QFontDatabase::styles(*(const QString *)x[1].s_voidp);
-	x[0].s_class = (void*)new QStringList(xret);
+	x[0].s_voidp = (void*)new QStringList(xret);
     }
     void x_3(Smoke::Stack x) {
 	// pointSizes(const QString&, const QString&)
@@ -108,12 +108,12 @@ public:
     void x_19(Smoke::Stack x) const {
 	// families(bool)
 	QStringList xret = this->QFontDatabase::families((bool)x[1].s_bool);
-	x[0].s_class = (void*)new QStringList(xret);
+	x[0].s_voidp = (void*)new QStringList(xret);
     }
     void x_20(Smoke::Stack x) const {
 	// styles(const QString&, const QString&)
 	QStringList xret = this->QFontDatabase::styles(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
-	x[0].s_class = (void*)new QStringList(xret);
+	x[0].s_voidp = (void*)new QStringList(xret);
     }
     void x_21(Smoke::Stack x) {
 	// pointSizes(const QString&, const QString&, const QString&)

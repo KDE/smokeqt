@@ -24,7 +24,7 @@ public:
     }
     x_QTSManip(const QTSManip& x1) : QTSManip(x1) {
     }
-    ~x_QTSManip() { qt_Smoke->binding->deleted(309, (void*)this); }
+    ~x_QTSManip() { qt_Smoke->binding->deleted(307, (void*)this); }
 };
 void xcall_QTSManip(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QTSManip *xself = (x_QTSManip*)obj;

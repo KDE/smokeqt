@@ -141,12 +141,12 @@ public:
     static void x_25(Smoke::Stack x) {
 	// inputFormats()
 	QStrList xret = QImageIO::inputFormats();
-	x[0].s_class = (void*)new QStrList(xret);
+	x[0].s_voidp = (void*)new QStrList(xret);
     }
     static void x_26(Smoke::Stack x) {
 	// outputFormats()
 	QStrList xret = QImageIO::outputFormats();
-	x[0].s_class = (void*)new QStrList(xret);
+	x[0].s_voidp = (void*)new QStrList(xret);
     }
     ~x_QImageIO() { qt_Smoke->binding->deleted(163, (void*)this); }
 };

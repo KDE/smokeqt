@@ -537,12 +537,12 @@ public:
     void x_101(Smoke::Stack x) const {
 	// textLanguages()
 	QStringList xret = this->QImage::textLanguages();
-	x[0].s_class = (void*)new QStringList(xret);
+	x[0].s_voidp = (void*)new QStringList(xret);
     }
     void x_102(Smoke::Stack x) const {
 	// textKeys()
 	QStringList xret = this->QImage::textKeys();
-	x[0].s_class = (void*)new QStringList(xret);
+	x[0].s_voidp = (void*)new QStringList(xret);
     }
     void x_103(Smoke::Stack x) const {
 	// text(const char*, const char*)
@@ -582,22 +582,22 @@ public:
     static void x_110(Smoke::Stack x) {
 	// inputFormats()
 	QStrList xret = QImage::inputFormats();
-	x[0].s_class = (void*)new QStrList(xret);
+	x[0].s_voidp = (void*)new QStrList(xret);
     }
     static void x_111(Smoke::Stack x) {
 	// outputFormats()
 	QStrList xret = QImage::outputFormats();
-	x[0].s_class = (void*)new QStrList(xret);
+	x[0].s_voidp = (void*)new QStrList(xret);
     }
     static void x_112(Smoke::Stack x) {
 	// inputFormatList()
 	QStringList xret = QImage::inputFormatList();
-	x[0].s_class = (void*)new QStringList(xret);
+	x[0].s_voidp = (void*)new QStringList(xret);
     }
     static void x_113(Smoke::Stack x) {
 	// outputFormatList()
 	QStringList xret = QImage::outputFormatList();
-	x[0].s_class = (void*)new QStringList(xret);
+	x[0].s_voidp = (void*)new QStringList(xret);
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {

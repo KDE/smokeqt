@@ -42,12 +42,12 @@ public:
     void x_6(Smoke::Stack x) const {
 	// prefixes()
 	QStringList xret = this->QXmlNamespaceSupport::prefixes();
-	x[0].s_class = (void*)new QStringList(xret);
+	x[0].s_voidp = (void*)new QStringList(xret);
     }
     void x_7(Smoke::Stack x) const {
 	// prefixes(const QString&)
 	QStringList xret = this->QXmlNamespaceSupport::prefixes(*(const QString *)x[1].s_voidp);
-	x[0].s_class = (void*)new QStringList(xret);
+	x[0].s_voidp = (void*)new QStringList(xret);
     }
     void x_8(Smoke::Stack x) {
 	// pushContext()
@@ -71,7 +71,7 @@ public:
     }
     x_QXmlNamespaceSupport(const QXmlNamespaceSupport& x1) : QXmlNamespaceSupport(x1) {
     }
-    ~x_QXmlNamespaceSupport() { qt_Smoke->binding->deleted(381, (void*)this); }
+    ~x_QXmlNamespaceSupport() { qt_Smoke->binding->deleted(379, (void*)this); }
 };
 void xcall_QXmlNamespaceSupport(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QXmlNamespaceSupport *xself = (x_QXmlNamespaceSupport*)obj;

@@ -109,13 +109,13 @@ public:
     virtual bool clicked(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(11366, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(11347, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QWhatsThis::clicked(x1);
     }
     virtual QString text(const QPoint& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(11365, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(11346, (void*)this, x)) {
 	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;
@@ -123,7 +123,7 @@ public:
 	}
 	return this->QWhatsThis::text(x1);
     }
-    ~x_QWhatsThis() { qt_Smoke->binding->deleted(358, (void*)this); }
+    ~x_QWhatsThis() { qt_Smoke->binding->deleted(356, (void*)this); }
 };
 void xcall_QWhatsThis(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QWhatsThis *xself = (x_QWhatsThis*)obj;

@@ -44,7 +44,7 @@ public:
     static void x_6(Smoke::Stack x) {
 	// inputFormats()
 	QStrList xret = QImageDecoder::inputFormats();
-	x[0].s_class = (void*)new QStrList(xret);
+	x[0].s_voidp = (void*)new QStrList(xret);
     }
     static void x_7(Smoke::Stack x) {
 	// registerDecoderFactory(QImageFormatType*)

@@ -197,70 +197,70 @@ public:
     virtual void setDir(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(10957, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10938, (void*)this, x)) return;
 	this->QUrlInfo::setDir(x1);
     }
     virtual void setFile(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(10958, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10939, (void*)this, x)) return;
 	this->QUrlInfo::setFile(x1);
     }
     virtual void setGroup(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(10961, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10942, (void*)this, x)) return;
 	this->QUrlInfo::setGroup(x1);
     }
     virtual void setLastModified(const QDateTime& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(10966, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10947, (void*)this, x)) return;
 	this->QUrlInfo::setLastModified(x1);
     }
     virtual void setName(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(10956, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10937, (void*)this, x)) return;
 	this->QUrlInfo::setName(x1);
     }
     virtual void setOwner(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(10960, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10941, (void*)this, x)) return;
 	this->QUrlInfo::setOwner(x1);
     }
     virtual void setPermissions(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(10965, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10946, (void*)this, x)) return;
 	this->QUrlInfo::setPermissions(x1);
     }
     virtual void setReadable(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(10964, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10945, (void*)this, x)) return;
 	this->QUrlInfo::setReadable(x1);
     }
     virtual void setSize(uint x1) {
 	Smoke::StackItem x[2];
 	x[1].s_uint = x1;
-	if(qt_Smoke->binding->callMethod(10962, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10943, (void*)this, x)) return;
 	this->QUrlInfo::setSize(x1);
     }
     virtual void setSymLink(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(10959, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10940, (void*)this, x)) return;
 	this->QUrlInfo::setSymLink(x1);
     }
     virtual void setWritable(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(10963, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10944, (void*)this, x)) return;
 	this->QUrlInfo::setWritable(x1);
     }
-    ~x_QUrlInfo() { qt_Smoke->binding->deleted(343, (void*)this); }
+    ~x_QUrlInfo() { qt_Smoke->binding->deleted(341, (void*)this); }
 };
 void xcall_QUrlInfo(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QUrlInfo *xself = (x_QUrlInfo*)obj;

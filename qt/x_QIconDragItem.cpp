@@ -37,7 +37,7 @@ public:
     }
     virtual QByteArray data() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(4167, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(4169, (void*)this, x)) {
 	    QByteArray *xptr = (QByteArray *)x[0].s_class;
 	    QByteArray xret(*xptr);
 	    delete xptr;
@@ -48,7 +48,7 @@ public:
     virtual void setData(const QByteArray& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(4168, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(4170, (void*)this, x)) return;
 	this->QIconDragItem::setData(x1);
     }
     ~x_QIconDragItem() { qt_Smoke->binding->deleted(152, (void*)this); }

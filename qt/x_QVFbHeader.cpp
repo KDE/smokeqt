@@ -19,7 +19,7 @@ public:
     }
     x_QVFbHeader(const QVFbHeader& x1) : QVFbHeader(x1) {
     }
-    ~x_QVFbHeader() { qt_Smoke->binding->deleted(351, (void*)this); }
+    ~x_QVFbHeader() { qt_Smoke->binding->deleted(349, (void*)this); }
 };
 void xcall_QVFbHeader(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QVFbHeader *xself = (x_QVFbHeader*)obj;

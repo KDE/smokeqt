@@ -24,14 +24,14 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)x1;
 	x[2].s_int = x2;
-	qt_Smoke->binding->callMethod(10187, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(10168, (void*)this, x, true /*pure virtual*/);
 	QString *xptr = (QString *)x[0].s_class;
 	QString xret(*xptr);
 	delete xptr;
 	return xret;
 	// ABSTRACT
     }
-    ~x_QTextDecoder() { qt_Smoke->binding->deleted(322, (void*)this); }
+    ~x_QTextDecoder() { qt_Smoke->binding->deleted(320, (void*)this); }
 };
 void xcall_QTextDecoder(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QTextDecoder *xself = (x_QTextDecoder*)obj;

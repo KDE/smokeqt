@@ -94,23 +94,23 @@ public:
     }
     void x_18(Smoke::Stack x) {
 	// setRestartCommand(const QStringList&)
-	xthis->QSessionManager::setRestartCommand(*(const QStringList *)x[1].s_class);
+	xthis->QSessionManager::setRestartCommand(*(const QStringList *)x[1].s_voidp);
 	(void)x; // noop (for compiler warning)
     }
     void x_19(Smoke::Stack x) const {
 	// restartCommand()
 	QStringList xret = xthis->QSessionManager::restartCommand();
-	x[0].s_class = (void*)new QStringList(xret);
+	x[0].s_voidp = (void*)new QStringList(xret);
     }
     void x_20(Smoke::Stack x) {
 	// setDiscardCommand(const QStringList&)
-	xthis->QSessionManager::setDiscardCommand(*(const QStringList *)x[1].s_class);
+	xthis->QSessionManager::setDiscardCommand(*(const QStringList *)x[1].s_voidp);
 	(void)x; // noop (for compiler warning)
     }
     void x_21(Smoke::Stack x) const {
 	// discardCommand()
 	QStringList xret = xthis->QSessionManager::discardCommand();
-	x[0].s_class = (void*)new QStringList(xret);
+	x[0].s_voidp = (void*)new QStringList(xret);
     }
     void x_22(Smoke::Stack x) {
 	// setManagerProperty(const QString&, const QString&)
@@ -119,7 +119,7 @@ public:
     }
     void x_23(Smoke::Stack x) {
 	// setManagerProperty(const QString&, const QStringList&)
-	xthis->QSessionManager::setManagerProperty(*(const QString *)x[1].s_voidp,*(const QStringList *)x[2].s_class);
+	xthis->QSessionManager::setManagerProperty(*(const QString *)x[1].s_voidp,*(const QStringList *)x[2].s_voidp);
 	(void)x; // noop (for compiler warning)
     }
     void x_24(Smoke::Stack x) const {

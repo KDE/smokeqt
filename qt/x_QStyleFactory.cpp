@@ -24,14 +24,14 @@ public:
     static void x_2(Smoke::Stack x) {
 	// keys()
 	QStringList xret = QStyleFactory::keys();
-	x[0].s_class = (void*)new QStringList(xret);
+	x[0].s_voidp = (void*)new QStringList(xret);
     }
     static void x_3(Smoke::Stack x) {
 	// create(const QString&)
 	QStyle* xret = QStyleFactory::create(*(const QString *)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
-    ~x_QStyleFactory() { qt_Smoke->binding->deleted(303, (void*)this); }
+    ~x_QStyleFactory() { qt_Smoke->binding->deleted(301, (void*)this); }
 };
 void xcall_QStyleFactory(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QStyleFactory *xself = (x_QStyleFactory*)obj;

@@ -131,17 +131,17 @@ public:
     }
     virtual void rangeChange() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(7572, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(7574, (void*)this, x)) return;
 	this->QRangeControl::rangeChange();
     }
     virtual void stepChange() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(7573, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(7575, (void*)this, x)) return;
 	this->QRangeControl::stepChange();
     }
     virtual void valueChange() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(7571, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(7573, (void*)this, x)) return;
 	this->QRangeControl::valueChange();
     }
     ~x_QRangeControl() { qt_Smoke->binding->deleted(243, (void*)this); }

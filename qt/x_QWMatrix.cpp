@@ -175,7 +175,7 @@ public:
     }
     x_QWMatrix(const QWMatrix& x1) : QWMatrix(x1) {
     }
-    ~x_QWMatrix() { qt_Smoke->binding->deleted(357, (void*)this); }
+    ~x_QWMatrix() { qt_Smoke->binding->deleted(355, (void*)this); }
 };
 void xcall_QWMatrix(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QWMatrix *xself = (x_QWMatrix*)obj;

@@ -53,13 +53,13 @@ public:
     }
     void x_8(Smoke::Stack x) {
 	// setFilePath(const QStringList&)
-	this->QMimeSourceFactory::setFilePath(*(const QStringList *)x[1].s_class);
+	this->QMimeSourceFactory::setFilePath(*(const QStringList *)x[1].s_voidp);
 	(void)x; // noop (for compiler warning)
     }
     void x_9(Smoke::Stack x) const {
 	// filePath()
 	QStringList xret = this->QMimeSourceFactory::filePath();
-	x[0].s_class = (void*)new QStringList(xret);
+	x[0].s_voidp = (void*)new QStringList(xret);
     }
     void x_10(Smoke::Stack x) {
 	// addFilePath(const QString&)
@@ -106,12 +106,12 @@ public:
     virtual const QMimeSource* data(const QString& x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(6092, (void*)this, x)) return (const QMimeSource*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(6094, (void*)this, x)) return (const QMimeSource*)x[0].s_class;
 	return this->QMimeSourceFactory::data(x1);
     }
     virtual QStringList filePath() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(6100, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(6102, (void*)this, x)) {
 	    QStringList *xptr = (QStringList *)x[0].s_class;
 	    QStringList xret(*xptr);
 	    delete xptr;
@@ -123,7 +123,7 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_voidp = (void*)&x2;
-	if(qt_Smoke->binding->callMethod(6093, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(6095, (void*)this, x)) {
 	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;
@@ -135,41 +135,41 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_class = (void*)x2;
-	if(qt_Smoke->binding->callMethod(6098, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6100, (void*)this, x)) return;
 	this->QMimeSourceFactory::setData(x1, x2);
     }
     virtual void setExtensionType(const QString& x1, const char* x2) {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_voidp = (void*)x2;
-	if(qt_Smoke->binding->callMethod(6102, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6104, (void*)this, x)) return;
 	this->QMimeSourceFactory::setExtensionType(x1, x2);
     }
     virtual void setFilePath(const QStringList& x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(6099, (void*)this, x)) return;
+	x[1].s_voidp = (void*)&x1;
+	if(qt_Smoke->binding->callMethod(6101, (void*)this, x)) return;
 	this->QMimeSourceFactory::setFilePath(x1);
     }
     virtual void setImage(const QString& x1, const QImage& x2) {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_class = (void*)&x2;
-	if(qt_Smoke->binding->callMethod(6096, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6098, (void*)this, x)) return;
 	this->QMimeSourceFactory::setImage(x1, x2);
     }
     virtual void setPixmap(const QString& x1, const QPixmap& x2) {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_class = (void*)&x2;
-	if(qt_Smoke->binding->callMethod(6097, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6099, (void*)this, x)) return;
 	this->QMimeSourceFactory::setPixmap(x1, x2);
     }
     virtual void setText(const QString& x1, const QString& x2) {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_voidp = (void*)&x2;
-	if(qt_Smoke->binding->callMethod(6095, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6097, (void*)this, x)) return;
 	this->QMimeSourceFactory::setText(x1, x2);
     }
     ~x_QMimeSourceFactory() { qt_Smoke->binding->deleted(203, (void*)this); }

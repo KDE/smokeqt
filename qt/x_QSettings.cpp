@@ -50,43 +50,43 @@ public:
     }
     void x_9(Smoke::Stack x) {
 	// writeEntry(const QString&, const QStringList&)
-	bool xret = this->QSettings::writeEntry(*(const QString *)x[1].s_voidp,*(const QStringList *)x[2].s_class);
+	bool xret = this->QSettings::writeEntry(*(const QString *)x[1].s_voidp,*(const QStringList *)x[2].s_voidp);
 	x[0].s_bool = xret;
     }
     void x_10(Smoke::Stack x) {
 	// writeEntry(const QString&, const QStringList&, const QChar&)
-	bool xret = this->QSettings::writeEntry(*(const QString *)x[1].s_voidp,*(const QStringList *)x[2].s_class,*(const QChar *)x[3].s_class);
+	bool xret = this->QSettings::writeEntry(*(const QString *)x[1].s_voidp,*(const QStringList *)x[2].s_voidp,*(const QChar *)x[3].s_class);
 	x[0].s_bool = xret;
     }
     void x_11(Smoke::Stack x) const {
 	// entryList(const QString&)
 	QStringList xret = this->QSettings::entryList(*(const QString *)x[1].s_voidp);
-	x[0].s_class = (void*)new QStringList(xret);
+	x[0].s_voidp = (void*)new QStringList(xret);
     }
     void x_12(Smoke::Stack x) const {
 	// subkeyList(const QString&)
 	QStringList xret = this->QSettings::subkeyList(*(const QString *)x[1].s_voidp);
-	x[0].s_class = (void*)new QStringList(xret);
+	x[0].s_voidp = (void*)new QStringList(xret);
     }
     void x_13(Smoke::Stack x) {
 	// readListEntry(const QString&, bool*)
 	QStringList xret = this->QSettings::readListEntry(*(const QString *)x[1].s_voidp,(bool*)x[2].s_voidp);
-	x[0].s_class = (void*)new QStringList(xret);
+	x[0].s_voidp = (void*)new QStringList(xret);
     }
     void x_14(Smoke::Stack x) {
 	// readListEntry(const QString&)
 	QStringList xret = this->QSettings::readListEntry(*(const QString *)x[1].s_voidp);
-	x[0].s_class = (void*)new QStringList(xret);
+	x[0].s_voidp = (void*)new QStringList(xret);
     }
     void x_15(Smoke::Stack x) {
 	// readListEntry(const QString&, const QChar&, bool*)
 	QStringList xret = this->QSettings::readListEntry(*(const QString *)x[1].s_voidp,*(const QChar *)x[2].s_class,(bool*)x[3].s_voidp);
-	x[0].s_class = (void*)new QStringList(xret);
+	x[0].s_voidp = (void*)new QStringList(xret);
     }
     void x_16(Smoke::Stack x) {
 	// readListEntry(const QString&, const QChar&)
 	QStringList xret = this->QSettings::readListEntry(*(const QString *)x[1].s_voidp,*(const QChar *)x[2].s_class);
-	x[0].s_class = (void*)new QStringList(xret);
+	x[0].s_voidp = (void*)new QStringList(xret);
     }
     void x_17(Smoke::Stack x) {
 	// readEntry(const QString&, const QString&, bool*)

@@ -57,7 +57,7 @@ public:
     void x_12(Smoke::Stack x) const {
 	// enumKeys()
 	QStrList xret = this->QMetaProperty::enumKeys();
-	x[0].s_class = (void*)new QStrList(xret);
+	x[0].s_voidp = (void*)new QStrList(xret);
     }
     void x_13(Smoke::Stack x) const {
 	// keyToValue(const char*)
@@ -71,13 +71,13 @@ public:
     }
     void x_15(Smoke::Stack x) const {
 	// keysToValue(const QStrList&)
-	int xret = this->QMetaProperty::keysToValue(*(const QStrList *)x[1].s_class);
+	int xret = this->QMetaProperty::keysToValue(*(const QStrList *)x[1].s_voidp);
 	x[0].s_int = xret;
     }
     void x_16(Smoke::Stack x) const {
 	// valueToKeys(int)
 	QStrList xret = this->QMetaProperty::valueToKeys((int)x[1].s_int);
-	x[0].s_class = (void*)new QStrList(xret);
+	x[0].s_voidp = (void*)new QStrList(xret);
     }
     void x_17(Smoke::Stack x) const {
 	// designable(QObject*)

@@ -183,32 +183,32 @@ public:
     }
     static void x_34(Smoke::Stack x) {
 	// getItem(const QString&, const QString&, const QStringList&, int, bool, bool*, QWidget*, const char*)
-	QString xret = QInputDialog::getItem(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,*(const QStringList *)x[3].s_class,(int)x[4].s_int,(bool)x[5].s_bool,(bool*)x[6].s_voidp,(QWidget*)x[7].s_class,(const char*)x[8].s_voidp);
+	QString xret = QInputDialog::getItem(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,*(const QStringList *)x[3].s_voidp,(int)x[4].s_int,(bool)x[5].s_bool,(bool*)x[6].s_voidp,(QWidget*)x[7].s_class,(const char*)x[8].s_voidp);
 	x[0].s_voidp = (void*)new QString(xret);
     }
     static void x_35(Smoke::Stack x) {
 	// getItem(const QString&, const QString&, const QStringList&, int, bool, bool*, QWidget*)
-	QString xret = QInputDialog::getItem(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,*(const QStringList *)x[3].s_class,(int)x[4].s_int,(bool)x[5].s_bool,(bool*)x[6].s_voidp,(QWidget*)x[7].s_class);
+	QString xret = QInputDialog::getItem(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,*(const QStringList *)x[3].s_voidp,(int)x[4].s_int,(bool)x[5].s_bool,(bool*)x[6].s_voidp,(QWidget*)x[7].s_class);
 	x[0].s_voidp = (void*)new QString(xret);
     }
     static void x_36(Smoke::Stack x) {
 	// getItem(const QString&, const QString&, const QStringList&, int, bool, bool*)
-	QString xret = QInputDialog::getItem(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,*(const QStringList *)x[3].s_class,(int)x[4].s_int,(bool)x[5].s_bool,(bool*)x[6].s_voidp);
+	QString xret = QInputDialog::getItem(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,*(const QStringList *)x[3].s_voidp,(int)x[4].s_int,(bool)x[5].s_bool,(bool*)x[6].s_voidp);
 	x[0].s_voidp = (void*)new QString(xret);
     }
     static void x_37(Smoke::Stack x) {
 	// getItem(const QString&, const QString&, const QStringList&, int, bool)
-	QString xret = QInputDialog::getItem(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,*(const QStringList *)x[3].s_class,(int)x[4].s_int,(bool)x[5].s_bool);
+	QString xret = QInputDialog::getItem(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,*(const QStringList *)x[3].s_voidp,(int)x[4].s_int,(bool)x[5].s_bool);
 	x[0].s_voidp = (void*)new QString(xret);
     }
     static void x_38(Smoke::Stack x) {
 	// getItem(const QString&, const QString&, const QStringList&, int)
-	QString xret = QInputDialog::getItem(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,*(const QStringList *)x[3].s_class,(int)x[4].s_int);
+	QString xret = QInputDialog::getItem(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,*(const QStringList *)x[3].s_voidp,(int)x[4].s_int);
 	x[0].s_voidp = (void*)new QString(xret);
     }
     static void x_39(Smoke::Stack x) {
 	// getItem(const QString&, const QString&, const QStringList&)
-	QString xret = QInputDialog::getItem(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,*(const QStringList *)x[3].s_class);
+	QString xret = QInputDialog::getItem(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,*(const QStringList *)x[3].s_voidp);
 	x[0].s_voidp = (void*)new QString(xret);
     }
     ~x_QInputDialog() { qt_Smoke->binding->deleted(165, (void*)this); }

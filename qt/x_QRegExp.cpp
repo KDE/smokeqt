@@ -160,7 +160,7 @@ public:
     void x_28(Smoke::Stack x) {
 	// capturedTexts()
 	QStringList xret = this->QRegExp::capturedTexts();
-	x[0].s_class = (void*)new QStringList(xret);
+	x[0].s_voidp = (void*)new QStringList(xret);
     }
     void x_29(Smoke::Stack x) {
 	// cap(int)

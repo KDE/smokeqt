@@ -49,21 +49,21 @@ public:
     }
     static void x_7(Smoke::Stack x) {
 	// QUriDrag(QStrList, QWidget*, const char*)
-	x_QUriDrag* xret = new x_QUriDrag(*(QStrList *)x[1].s_class,(QWidget*)x[2].s_class,(const char*)x[3].s_voidp);
+	x_QUriDrag* xret = new x_QUriDrag(*(QStrList *)x[1].s_voidp,(QWidget*)x[2].s_class,(const char*)x[3].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QUriDrag(QStrList x1, QWidget* x2, const char* x3) : QUriDrag(x1, x2, x3) {
     }
     static void x_8(Smoke::Stack x) {
 	// QUriDrag(QStrList, QWidget*)
-	x_QUriDrag* xret = new x_QUriDrag(*(QStrList *)x[1].s_class,(QWidget*)x[2].s_class);
+	x_QUriDrag* xret = new x_QUriDrag(*(QStrList *)x[1].s_voidp,(QWidget*)x[2].s_class);
 	x[0].s_class = (void*)xret;
     }
     x_QUriDrag(QStrList x1, QWidget* x2) : QUriDrag(x1, x2) {
     }
     static void x_9(Smoke::Stack x) {
 	// QUriDrag(QStrList)
-	x_QUriDrag* xret = new x_QUriDrag(*(QStrList *)x[1].s_class);
+	x_QUriDrag* xret = new x_QUriDrag(*(QStrList *)x[1].s_voidp);
 	x[0].s_class = (void*)xret;
     }
     x_QUriDrag(QStrList x1) : QUriDrag(x1) {
@@ -91,22 +91,22 @@ public:
     }
     void x_13(Smoke::Stack x) {
 	// setFilenames(const QStringList&)
-	this->QUriDrag::setFilenames(*(const QStringList *)x[1].s_class);
+	this->QUriDrag::setFilenames(*(const QStringList *)x[1].s_voidp);
 	(void)x; // noop (for compiler warning)
     }
     void x_14(Smoke::Stack x) {
 	// setFileNames(const QStringList&)
-	this->QUriDrag::setFileNames(*(const QStringList *)x[1].s_class);
+	this->QUriDrag::setFileNames(*(const QStringList *)x[1].s_voidp);
 	(void)x; // noop (for compiler warning)
     }
     void x_15(Smoke::Stack x) {
 	// setUnicodeUris(const QStringList&)
-	this->QUriDrag::setUnicodeUris(*(const QStringList *)x[1].s_class);
+	this->QUriDrag::setUnicodeUris(*(const QStringList *)x[1].s_voidp);
 	(void)x; // noop (for compiler warning)
     }
     void x_16(Smoke::Stack x) {
 	// setUris(QStrList)
-	this->QUriDrag::setUris(*(QStrList *)x[1].s_class);
+	this->QUriDrag::setUris(*(QStrList *)x[1].s_voidp);
 	(void)x; // noop (for compiler warning)
     }
     static void x_17(Smoke::Stack x) {
@@ -161,17 +161,17 @@ public:
     }
     static void x_27(Smoke::Stack x) {
 	// decode(const QMimeSource*, QStrList&)
-	bool xret = QUriDrag::decode((const QMimeSource*)x[1].s_class,*(QStrList *)x[2].s_class);
+	bool xret = QUriDrag::decode((const QMimeSource*)x[1].s_class,*(QStrList *)x[2].s_voidp);
 	x[0].s_bool = xret;
     }
     static void x_28(Smoke::Stack x) {
 	// decodeToUnicodeUris(const QMimeSource*, QStringList&)
-	bool xret = QUriDrag::decodeToUnicodeUris((const QMimeSource*)x[1].s_class,*(QStringList *)x[2].s_class);
+	bool xret = QUriDrag::decodeToUnicodeUris((const QMimeSource*)x[1].s_class,*(QStringList *)x[2].s_voidp);
 	x[0].s_bool = xret;
     }
     static void x_29(Smoke::Stack x) {
 	// decodeLocalFiles(const QMimeSource*, QStringList&)
-	bool xret = QUriDrag::decodeLocalFiles((const QMimeSource*)x[1].s_class,*(QStringList *)x[2].s_class);
+	bool xret = QUriDrag::decodeLocalFiles((const QMimeSource*)x[1].s_class,*(QStringList *)x[2].s_voidp);
 	x[0].s_bool = xret;
     }
     virtual bool checkConnectArgs(const char* x1, const QObject* x2, const char* x3) {
@@ -179,48 +179,48 @@ public:
 	x[1].s_voidp = (void*)x1;
 	x[2].s_class = (void*)x2;
 	x[3].s_voidp = (void*)x3;
-	if(qt_Smoke->binding->callMethod(6519, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(6521, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QObject::checkConnectArgs(x1, x2, x3);
     }
     virtual void childEvent(QChildEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(6515, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6517, (void*)this, x)) return;
 	this->QObject::childEvent(x1);
     }
     virtual const char* className() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(10868, (void*)this, x)) return (const char*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(10849, (void*)this, x)) return (const char*)x[0].s_class;
 	return this->QUriDrag::className();
     }
     virtual void connectNotify(const char* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(6517, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6519, (void*)this, x)) return;
 	this->QObject::connectNotify(x1);
     }
     virtual void customEvent(QCustomEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(6516, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6518, (void*)this, x)) return;
 	this->QObject::customEvent(x1);
     }
     virtual void disconnectNotify(const char* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(6518, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6520, (void*)this, x)) return;
 	this->QObject::disconnectNotify(x1);
     }
     virtual bool drag(QDragObject::DragMode x1) {
 	Smoke::StackItem x[2];
 	x[1].s_enum = x1;
-	if(qt_Smoke->binding->callMethod(2822, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(2823, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QDragObject::drag(x1);
     }
     virtual QByteArray encodedData(const char* x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(9159, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(9161, (void*)this, x)) {
 	    QByteArray *xptr = (QByteArray *)x[0].s_class;
 	    QByteArray xret(*xptr);
 	    delete xptr;
@@ -231,37 +231,37 @@ public:
     virtual bool event(QEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(6453, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(6455, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QObject::event(x1);
     }
     virtual bool eventFilter(QObject* x1, QEvent* x2) {
 	Smoke::StackItem x[3];
 	x[1].s_class = (void*)x1;
 	x[2].s_class = (void*)x2;
-	if(qt_Smoke->binding->callMethod(6454, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(6456, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QObject::eventFilter(x1, x2);
     }
     virtual const char* format(int x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(9158, (void*)this, x)) return (const char*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(9160, (void*)this, x)) return (const char*)x[0].s_class;
 	return this->QStoredDrag::format(x1);
     }
     virtual void insertChild(QObject* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(6476, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6478, (void*)this, x)) return;
 	this->QObject::insertChild(x1);
     }
     virtual QMetaObject* metaObject() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(10867, (void*)this, x)) return (QMetaObject*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(10848, (void*)this, x)) return (QMetaObject*)x[0].s_class;
 	return this->QUriDrag::metaObject();
     }
     virtual QVariant property(const char* x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(6490, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(6492, (void*)this, x)) {
 	    QVariant *xptr = (QVariant *)x[0].s_class;
 	    QVariant xret(*xptr);
 	    delete xptr;
@@ -272,27 +272,27 @@ public:
     virtual bool provides(const char* x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(6086, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(6088, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QMimeSource::provides(x1);
     }
     virtual void* qt_cast(const char* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(10869, (void*)this, x)) return (void*)x[0].s_voidp;
+	if(qt_Smoke->binding->callMethod(10850, (void*)this, x)) return (void*)x[0].s_voidp;
 	return this->QUriDrag::qt_cast(x1);
     }
     virtual bool qt_emit(int x1, QUObject* x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_voidp = (void*)x2;
-	if(qt_Smoke->binding->callMethod(10871, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(10852, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QUriDrag::qt_emit(x1, x2);
     }
     virtual bool qt_invoke(int x1, QUObject* x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_voidp = (void*)x2;
-	if(qt_Smoke->binding->callMethod(10870, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(10851, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QUriDrag::qt_invoke(x1, x2);
     }
     virtual bool qt_property(int x1, int x2, QVariant* x3) {
@@ -300,60 +300,60 @@ public:
 	x[1].s_int = x1;
 	x[2].s_int = x2;
 	x[3].s_class = (void*)x3;
-	if(qt_Smoke->binding->callMethod(10872, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(10853, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QUriDrag::qt_property(x1, x2, x3);
     }
     virtual void removeChild(QObject* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(6477, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6479, (void*)this, x)) return;
 	this->QObject::removeChild(x1);
     }
     virtual void setEncodedData(const QByteArray& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(9157, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(9159, (void*)this, x)) return;
 	this->QStoredDrag::setEncodedData(x1);
     }
     virtual void setName(const char* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(6459, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6461, (void*)this, x)) return;
 	this->QObject::setName(x1);
     }
     virtual void setPixmap(QPixmap x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(2810, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(2811, (void*)this, x)) return;
 	this->QDragObject::setPixmap(x1);
     }
     virtual void setPixmap(QPixmap x1, const QPoint& x2) {
 	Smoke::StackItem x[3];
 	x[1].s_class = (void*)&x1;
 	x[2].s_class = (void*)&x2;
-	if(qt_Smoke->binding->callMethod(2811, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(2812, (void*)this, x)) return;
 	this->QDragObject::setPixmap(x1, x2);
     }
     virtual bool setProperty(const char* x1, const QVariant& x2) {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)x1;
 	x[2].s_class = (void*)&x2;
-	if(qt_Smoke->binding->callMethod(6489, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(6491, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QObject::setProperty(x1, x2);
     }
     virtual void setUris(QStrList x1) {
 	Smoke::StackItem x[2];
-	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(10884, (void*)this, x)) return;
+	x[1].s_voidp = (void*)&x1;
+	if(qt_Smoke->binding->callMethod(10865, (void*)this, x)) return;
 	this->QUriDrag::setUris(x1);
     }
     virtual void timerEvent(QTimerEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(6514, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6516, (void*)this, x)) return;
 	this->QObject::timerEvent(x1);
     }
-    ~x_QUriDrag() { qt_Smoke->binding->deleted(341, (void*)this); }
+    ~x_QUriDrag() { qt_Smoke->binding->deleted(339, (void*)this); }
 };
 void xcall_QUriDrag(Smoke::Index xi, void *obj, Smoke::Stack args) {
     x_QUriDrag *xself = (x_QUriDrag*)obj;
