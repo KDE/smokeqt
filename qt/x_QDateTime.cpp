@@ -51,17 +51,17 @@ public:
     void x_7(Smoke::Stack x) {
 	// setDate(const QDate&)
 	this->QDateTime::setDate(*(const QDate *)x[1].s_class);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_8(Smoke::Stack x) {
 	// setTime(const QTime&)
 	this->QDateTime::setTime(*(const QTime *)x[1].s_class);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_9(Smoke::Stack x) {
 	// setTime_t(uint)
 	this->QDateTime::setTime_t((uint)x[1].s_uint);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_10(Smoke::Stack x) const {
 	// toString(Qt::DateFormat)

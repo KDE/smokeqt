@@ -84,7 +84,7 @@ public:
     void x_11(Smoke::Stack x) {
 	// setShape(int)
 	this->QCursor::setShape((int)x[1].s_int);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_12(Smoke::Stack x) const {
 	// bitmap()
@@ -109,37 +109,22 @@ public:
     static void x_16(Smoke::Stack x) {
 	// setPos(int, int)
 	QCursor::setPos((int)x[1].s_int,(int)x[2].s_int);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     static void x_17(Smoke::Stack x) {
 	// setPos(const QPoint&)
 	QCursor::setPos(*(const QPoint *)x[1].s_class);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     static void x_18(Smoke::Stack x) {
-	// pos()
-	QPoint xret = QCursor::pos();
-	x[0].s_class = (void*)new QPoint(xret);
-    }
-    static void x_19(Smoke::Stack x) {
-	// setPos(int, int)
-	QCursor::setPos((int)x[1].s_int,(int)x[2].s_int);
-	(void)x[0].s_int; // noop (for compiler warning)
-    }
-    static void x_20(Smoke::Stack x) {
-	// setPos(const QPoint&)
-	QCursor::setPos(*(const QPoint *)x[1].s_class);
-	(void)x[0].s_int; // noop (for compiler warning)
-    }
-    static void x_21(Smoke::Stack x) {
 	// initialize()
 	QCursor::initialize();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
-    static void x_22(Smoke::Stack x) {
+    static void x_19(Smoke::Stack x) {
 	// cleanup()
 	QCursor::cleanup();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     ~x_QCursor() { qt_Smoke->binding->deleted(53, (void*)this); }
 };
@@ -166,9 +151,6 @@ void xcall_QCursor(Smoke::Index xi, void *obj, Smoke::Stack args) {
 	case 17: x_QCursor::x_17(args);	break;
 	case 18: x_QCursor::x_18(args);	break;
 	case 19: x_QCursor::x_19(args);	break;
-	case 20: x_QCursor::x_20(args);	break;
-	case 21: x_QCursor::x_21(args);	break;
-	case 22: x_QCursor::x_22(args);	break;
-	case 23: delete (QCursor*)xself;	break;
+	case 20: delete (QCursor*)xself;	break;
     }
 }

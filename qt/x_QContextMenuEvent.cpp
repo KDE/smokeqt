@@ -78,17 +78,17 @@ public:
     void x_14(Smoke::Stack x) {
 	// consume()
 	this->QContextMenuEvent::consume();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_15(Smoke::Stack x) {
 	// accept()
 	this->QContextMenuEvent::accept();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_16(Smoke::Stack x) {
 	// ignore()
 	this->QContextMenuEvent::ignore();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_17(Smoke::Stack x) const {
 	// reason()

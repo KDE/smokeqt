@@ -26,42 +26,42 @@ public:
     void x_4(Smoke::Stack x) {
 	// setSequence(QCanvasPixmapArray*)
 	this->QCanvasSprite::setSequence((QCanvasPixmapArray*)x[1].s_class);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_5(Smoke::Stack x) {
 	// move(double, double)
 	this->QCanvasSprite::move((double)x[1].s_double,(double)x[2].s_double);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_6(Smoke::Stack x) {
 	// move(double, double, int)
 	this->QCanvasSprite::move((double)x[1].s_double,(double)x[2].s_double,(int)x[3].s_int);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_7(Smoke::Stack x) {
 	// setFrame(int)
 	this->QCanvasSprite::setFrame((int)x[1].s_int);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_8(Smoke::Stack x) {
 	// setFrameAnimation(QCanvasSprite::FrameAnimationType, int, int)
 	this->QCanvasSprite::setFrameAnimation((QCanvasSprite::FrameAnimationType)x[1].s_enum,(int)x[2].s_int,(int)x[3].s_int);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_9(Smoke::Stack x) {
 	// setFrameAnimation(QCanvasSprite::FrameAnimationType, int)
 	this->QCanvasSprite::setFrameAnimation((QCanvasSprite::FrameAnimationType)x[1].s_enum,(int)x[2].s_int);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_10(Smoke::Stack x) {
 	// setFrameAnimation(QCanvasSprite::FrameAnimationType)
 	this->QCanvasSprite::setFrameAnimation((QCanvasSprite::FrameAnimationType)x[1].s_enum);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_11(Smoke::Stack x) {
 	// setFrameAnimation()
 	this->QCanvasSprite::setFrameAnimation();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_12(Smoke::Stack x) const {
 	// frame()
@@ -156,12 +156,12 @@ public:
     void x_30(Smoke::Stack x) {
 	// advance(int)
 	this->QCanvasSprite::advance((int)x[1].s_int);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_31(Smoke::Stack x) {
 	// draw(QPainter&)
 	this->QCanvasSprite::draw(*(QPainter *)x[1].s_class);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     static void x_32(Smoke::Stack x) {
 	// QCanvasSprite(const QCanvasSprite&)

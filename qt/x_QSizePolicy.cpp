@@ -117,17 +117,17 @@ public:
     void x_25(Smoke::Stack x) {
 	// setHorData(QSizePolicy::SizeType)
 	this->QSizePolicy::setHorData((QSizePolicy::SizeType)x[1].s_enum);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_26(Smoke::Stack x) {
 	// setVerData(QSizePolicy::SizeType)
 	this->QSizePolicy::setVerData((QSizePolicy::SizeType)x[1].s_enum);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_27(Smoke::Stack x) {
 	// setHeightForWidth(bool)
 	this->QSizePolicy::setHeightForWidth((bool)x[1].s_bool);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_28(Smoke::Stack x) const {
 	// hasHeightForWidth()
@@ -157,12 +157,12 @@ public:
     void x_33(Smoke::Stack x) {
 	// setHorStretch(uchar)
 	this->QSizePolicy::setHorStretch((uchar)x[1].s_uchar);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_34(Smoke::Stack x) {
 	// setVerStretch(uchar)
 	this->QSizePolicy::setVerStretch((uchar)x[1].s_uchar);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     static void x_35(Smoke::Stack x) {
 	// QSizePolicy(const QSizePolicy&)

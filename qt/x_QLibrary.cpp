@@ -41,7 +41,7 @@ public:
     void x_6(Smoke::Stack x) {
 	// setAutoUnload(bool)
 	this->QLibrary::setAutoUnload((bool)x[1].s_bool);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_7(Smoke::Stack x) const {
 	// library()
@@ -55,7 +55,7 @@ public:
     }
     virtual bool unload() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(5010, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(5006, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QLibrary::unload();
     }
     ~x_QLibrary() { qt_Smoke->binding->deleted(179, (void*)this); }

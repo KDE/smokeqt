@@ -27,13 +27,13 @@ public:
 	x[3].s_voidp = (void*)&x3;
 	x[4].s_voidp = (void*)&x4;
 	x[5].s_voidp = (void*)&x5;
-	qt_Smoke->binding->callMethod(11941, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(11933, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
     virtual QString errorString() {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(11944, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(11936, (void*)this, x, true /*pure virtual*/);
 	QString *xptr = (QString *)x[0].s_class;
 	QString xret(*xptr);
 	delete xptr;
@@ -45,7 +45,7 @@ public:
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_voidp = (void*)&x2;
 	x[3].s_voidp = (void*)&x3;
-	qt_Smoke->binding->callMethod(11943, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(11935, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT
     }
@@ -53,7 +53,7 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_voidp = (void*)&x2;
-	qt_Smoke->binding->callMethod(11942, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(11934, (void*)this, x, true /*pure virtual*/);
 	return (bool)x[0].s_bool;
 	// ABSTRACT
     }

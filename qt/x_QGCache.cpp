@@ -61,12 +61,12 @@ public:
     void x_11(Smoke::Stack x) {
 	// setMaxCost(int)
 	this->QGCache::setMaxCost((int)x[1].s_int);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_12(Smoke::Stack x) {
 	// clear()
 	this->QGCache::clear();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_13(Smoke::Stack x) {
 	// insert_string(const QString&, QPtrCollection::Item, int, int)
@@ -121,29 +121,29 @@ public:
     void x_23(Smoke::Stack x) const {
 	// statistics()
 	this->QGCache::statistics();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     virtual void clear() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(3594, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(3590, (void*)this, x)) return;
 	this->QGCache::clear();
     }
     virtual uint count() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(3589, (void*)this, x)) return (uint)x[0].s_uint;
+	if(qt_Smoke->binding->callMethod(3585, (void*)this, x)) return (uint)x[0].s_uint;
 	return this->QGCache::count();
     }
     virtual void deleteItem(Item x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	qt_Smoke->binding->callMethod(7485, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(7477, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }
     virtual Item newItem(Item x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(7484, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(7476, (void*)this, x)) {
 	    Item *xptr = (Item *)x[0].s_class;
 	    Item xret(*xptr);
 	    delete xptr;

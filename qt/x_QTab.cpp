@@ -39,7 +39,7 @@ public:
     void x_4(Smoke::Stack x) {
 	// setText(const QString&)
 	this->QTab::setText(*(const QString *)x[1].s_voidp);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_5(Smoke::Stack x) const {
 	// text()
@@ -49,7 +49,7 @@ public:
     void x_6(Smoke::Stack x) {
 	// setIconSet(const QIconSet&)
 	this->QTab::setIconSet(*(const QIconSet *)x[1].s_class);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_7(Smoke::Stack x) const {
 	// iconSet()
@@ -59,7 +59,7 @@ public:
     void x_8(Smoke::Stack x) {
 	// setRect(const QRect&)
 	this->QTab::setRect(*(const QRect *)x[1].s_class);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_9(Smoke::Stack x) const {
 	// rect()
@@ -69,7 +69,7 @@ public:
     void x_10(Smoke::Stack x) {
 	// setEnabled(bool)
 	this->QTab::setEnabled((bool)x[1].s_bool);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_11(Smoke::Stack x) const {
 	// isEnabled()
@@ -79,7 +79,7 @@ public:
     void x_12(Smoke::Stack x) {
 	// setIdentifier(int)
 	this->QTab::setIdentifier((int)x[1].s_int);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_13(Smoke::Stack x) const {
 	// identifier()

@@ -81,12 +81,12 @@ public:
     void x_12(Smoke::Stack x) {
 	// paintCell(QPainter*, const QColorGroup&, int, int, int)
 	this->QCheckListItem::paintCell((QPainter*)x[1].s_class,*(const QColorGroup *)x[2].s_class,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_13(Smoke::Stack x) {
 	// paintFocus(QPainter*, const QColorGroup&, const QRect&)
 	this->QCheckListItem::paintFocus((QPainter*)x[1].s_class,*(const QColorGroup *)x[2].s_class,*(const QRect *)x[3].s_class);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_14(Smoke::Stack x) const {
 	// width(const QFontMetrics&, const QListView*, int)
@@ -96,12 +96,12 @@ public:
     void x_15(Smoke::Stack x) {
 	// setup()
 	this->QCheckListItem::setup();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_16(Smoke::Stack x) {
 	// setOn(bool)
 	this->QCheckListItem::setOn((bool)x[1].s_bool);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_17(Smoke::Stack x) const {
 	// isOn()
@@ -138,22 +138,22 @@ public:
     void x_23(Smoke::Stack x) {
 	// activate()
 	this->QCheckListItem::activate();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_24(Smoke::Stack x) {
 	// turnOffChild()
 	this->QCheckListItem::turnOffChild();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_25(Smoke::Stack x) {
 	// stateChange(bool)
 	this->QCheckListItem::stateChange((bool)x[1].s_bool);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     virtual bool acceptDrop(const QMimeSource* x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(5566, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(5562, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QListViewItem::acceptDrop(x1);
     }
     virtual void activate() {
@@ -164,7 +164,7 @@ public:
     virtual void cancelRename(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(5587, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(5583, (void*)this, x)) return;
 	this->QListViewItem::cancelRename(x1);
     }
     virtual int compare(QListViewItem* x1, int x2, bool x3) const {
@@ -172,46 +172,46 @@ public:
 	x[1].s_class = (void*)x1;
 	x[2].s_int = x2;
 	x[3].s_bool = x3;
-	if(qt_Smoke->binding->callMethod(5537, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(5533, (void*)this, x)) return (int)x[0].s_int;
 	return this->QListViewItem::compare(x1, x2, x3);
     }
     virtual void dragEntered() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(5584, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(5580, (void*)this, x)) return;
 	this->QListViewItem::dragEntered();
     }
     virtual void dragLeft() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(5585, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(5581, (void*)this, x)) return;
 	this->QListViewItem::dragLeft();
     }
     virtual void dropped(QDropEvent* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(5583, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(5579, (void*)this, x)) return;
 	this->QListViewItem::dropped(x1);
     }
     virtual void enforceSortOrder() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(5579, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(5575, (void*)this, x)) return;
 	this->QListViewItem::enforceSortOrder();
     }
     virtual void insertItem(QListViewItem* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(5522, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(5518, (void*)this, x)) return;
 	this->QListViewItem::insertItem(x1);
     }
     virtual void invalidateHeight() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(5526, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(5522, (void*)this, x)) return;
 	this->QListViewItem::invalidateHeight();
     }
     virtual QString key(int x1, bool x2) const {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_bool = x2;
-	if(qt_Smoke->binding->callMethod(5536, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(5532, (void*)this, x)) {
 	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;
@@ -222,7 +222,7 @@ public:
     virtual void okRename(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(5586, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(5582, (void*)this, x)) return;
 	this->QListViewItem::okRename(x1);
     }
     virtual void paintBranches(QPainter* x1, const QColorGroup& x2, int x3, int x4, int x5) {
@@ -232,7 +232,7 @@ public:
 	x[3].s_int = x3;
 	x[4].s_int = x4;
 	x[5].s_int = x5;
-	if(qt_Smoke->binding->callMethod(5546, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(5542, (void*)this, x)) return;
 	this->QListViewItem::paintBranches(x1, x2, x3, x4, x5);
     }
     virtual void paintCell(QPainter* x1, const QColorGroup& x2, int x3, int x4, int x5) {
@@ -256,13 +256,13 @@ public:
     virtual const QPixmap* pixmap(int x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(5535, (void*)this, x)) return (const QPixmap*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(5531, (void*)this, x)) return (const QPixmap*)x[0].s_class;
 	return this->QListViewItem::pixmap(x1);
     }
     virtual void removeItem(QListViewItem* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(5524, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(5520, (void*)this, x)) return;
 	this->QListViewItem::removeItem(x1);
     }
     virtual int rtti() const {
@@ -273,37 +273,37 @@ public:
     virtual void setDragEnabled(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(5562, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(5558, (void*)this, x)) return;
 	this->QListViewItem::setDragEnabled(x1);
     }
     virtual void setDropEnabled(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(5563, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(5559, (void*)this, x)) return;
 	this->QListViewItem::setDropEnabled(x1);
     }
     virtual void setEnabled(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(5572, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(5568, (void*)this, x)) return;
 	this->QListViewItem::setEnabled(x1);
     }
     virtual void setExpandable(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(5557, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(5553, (void*)this, x)) return;
 	this->QListViewItem::setExpandable(x1);
     }
     virtual void setHeight(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(5580, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(5576, (void*)this, x)) return;
 	this->QListViewItem::setHeight(x1);
     }
     virtual void setMultiLinesEnabled(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(5575, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(5571, (void*)this, x)) return;
 	this->QListViewItem::setMultiLinesEnabled(x1);
     }
     virtual void setOn(bool x1) {
@@ -315,40 +315,40 @@ public:
     virtual void setOpen(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(5541, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(5537, (void*)this, x)) return;
 	this->QListViewItem::setOpen(x1);
     }
     virtual void setPixmap(int x1, const QPixmap& x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_class = (void*)&x2;
-	if(qt_Smoke->binding->callMethod(5534, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(5530, (void*)this, x)) return;
 	this->QListViewItem::setPixmap(x1, x2);
     }
     virtual void setRenameEnabled(int x1, bool x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_bool = x2;
-	if(qt_Smoke->binding->callMethod(5569, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(5565, (void*)this, x)) return;
 	this->QListViewItem::setRenameEnabled(x1, x2);
     }
     virtual void setSelectable(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(5555, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(5551, (void*)this, x)) return;
 	this->QListViewItem::setSelectable(x1);
     }
     virtual void setSelected(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(5543, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(5539, (void*)this, x)) return;
 	this->QListViewItem::setSelected(x1);
     }
     virtual void setText(int x1, const QString& x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_voidp = (void*)&x2;
-	if(qt_Smoke->binding->callMethod(5532, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(5528, (void*)this, x)) return;
 	this->QListViewItem::setText(x1, x2);
     }
     virtual void setup() {
@@ -358,20 +358,20 @@ public:
     }
     virtual void sort() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(5560, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(5556, (void*)this, x)) return;
 	this->QListViewItem::sort();
     }
     virtual void sortChildItems(int x1, bool x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_bool = x2;
-	if(qt_Smoke->binding->callMethod(5538, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(5534, (void*)this, x)) return;
 	this->QListViewItem::sortChildItems(x1, x2);
     }
     virtual void startRename(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(5571, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(5567, (void*)this, x)) return;
 	this->QListViewItem::startRename(x1);
     }
     virtual void stateChange(bool x1) {
@@ -383,7 +383,7 @@ public:
     virtual void takeItem(QListViewItem* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(5523, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(5519, (void*)this, x)) return;
 	this->QListViewItem::takeItem(x1);
     }
     virtual QString text(int x1) const {

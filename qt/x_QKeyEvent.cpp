@@ -78,12 +78,12 @@ public:
     void x_12(Smoke::Stack x) {
 	// accept()
 	this->QKeyEvent::accept();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_13(Smoke::Stack x) {
 	// ignore()
 	this->QKeyEvent::ignore();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     static void x_14(Smoke::Stack x) {
 	// QKeyEvent(const QKeyEvent&)

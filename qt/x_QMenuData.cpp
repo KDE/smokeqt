@@ -279,17 +279,17 @@ public:
     void x_53(Smoke::Stack x) {
 	// removeItem(int)
 	this->QMenuData::removeItem((int)x[1].s_int);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_54(Smoke::Stack x) {
 	// removeItemAt(int)
 	this->QMenuData::removeItemAt((int)x[1].s_int);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_55(Smoke::Stack x) {
 	// clear()
 	this->QMenuData::clear();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_56(Smoke::Stack x) const {
 	// accel(int)
@@ -299,7 +299,7 @@ public:
     void x_57(Smoke::Stack x) {
 	// setAccel(const QKeySequence&, int)
 	this->QMenuData::setAccel(*(const QKeySequence *)x[1].s_class,(int)x[2].s_int);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_58(Smoke::Stack x) const {
 	// iconSet(int)
@@ -319,7 +319,7 @@ public:
     void x_61(Smoke::Stack x) {
 	// setWhatsThis(int, const QString&)
 	this->QMenuData::setWhatsThis((int)x[1].s_int,*(const QString *)x[2].s_voidp);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_62(Smoke::Stack x) const {
 	// whatsThis(int)
@@ -329,37 +329,37 @@ public:
     void x_63(Smoke::Stack x) {
 	// changeItem(int, const QString&)
 	this->QMenuData::changeItem((int)x[1].s_int,*(const QString *)x[2].s_voidp);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_64(Smoke::Stack x) {
 	// changeItem(int, const QPixmap&)
 	this->QMenuData::changeItem((int)x[1].s_int,*(const QPixmap *)x[2].s_class);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_65(Smoke::Stack x) {
 	// changeItem(int, const QIconSet&, const QString&)
 	this->QMenuData::changeItem((int)x[1].s_int,*(const QIconSet *)x[2].s_class,*(const QString *)x[3].s_voidp);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_66(Smoke::Stack x) {
 	// changeItem(int, const QIconSet&, const QPixmap&)
 	this->QMenuData::changeItem((int)x[1].s_int,*(const QIconSet *)x[2].s_class,*(const QPixmap *)x[3].s_class);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_67(Smoke::Stack x) {
 	// changeItem(const QString&, int)
 	this->QMenuData::changeItem(*(const QString *)x[1].s_voidp,(int)x[2].s_int);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_68(Smoke::Stack x) {
 	// changeItem(const QPixmap&, int)
 	this->QMenuData::changeItem(*(const QPixmap *)x[1].s_class,(int)x[2].s_int);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_69(Smoke::Stack x) {
 	// changeItem(const QIconSet&, const QString&, int)
 	this->QMenuData::changeItem(*(const QIconSet *)x[1].s_class,*(const QString *)x[2].s_voidp,(int)x[3].s_int);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_70(Smoke::Stack x) const {
 	// isItemActive(int)
@@ -374,7 +374,7 @@ public:
     void x_72(Smoke::Stack x) {
 	// setItemEnabled(int, bool)
 	this->QMenuData::setItemEnabled((int)x[1].s_int,(bool)x[2].s_bool);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_73(Smoke::Stack x) const {
 	// isItemChecked(int)
@@ -384,12 +384,12 @@ public:
     void x_74(Smoke::Stack x) {
 	// setItemChecked(int, bool)
 	this->QMenuData::setItemChecked((int)x[1].s_int,(bool)x[2].s_bool);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_75(Smoke::Stack x) {
 	// updateItem(int)
 	this->QMenuData::updateItem((int)x[1].s_int);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_76(Smoke::Stack x) const {
 	// indexOf(int)
@@ -404,7 +404,7 @@ public:
     void x_78(Smoke::Stack x) {
 	// setId(int, int)
 	this->QMenuData::setId((int)x[1].s_int,(int)x[2].s_int);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_79(Smoke::Stack x) {
 	// connectItem(int, const QObject*, const char*)
@@ -449,67 +449,67 @@ public:
     void x_87(Smoke::Stack x) {
 	// activateItemAt(int)
 	this->QMenuData::activateItemAt((int)x[1].s_int);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_88(Smoke::Stack x) {
 	// menuContentsChanged()
 	this->QMenuData::menuContentsChanged();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_89(Smoke::Stack x) {
 	// menuStateChanged()
 	this->QMenuData::menuStateChanged();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_90(Smoke::Stack x) {
 	// menuInsPopup(QPopupMenu*)
 	this->QMenuData::menuInsPopup((QPopupMenu*)x[1].s_class);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_91(Smoke::Stack x) {
 	// menuDelPopup(QPopupMenu*)
 	this->QMenuData::menuDelPopup((QPopupMenu*)x[1].s_class);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     virtual void activateItemAt(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(5879, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(5875, (void*)this, x)) return;
 	this->QMenuData::activateItemAt(x1);
     }
     virtual void menuContentsChanged() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(5880, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(5876, (void*)this, x)) return;
 	this->QMenuData::menuContentsChanged();
     }
     virtual void menuDelPopup(QPopupMenu* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(5883, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(5879, (void*)this, x)) return;
 	this->QMenuData::menuDelPopup(x1);
     }
     virtual void menuInsPopup(QPopupMenu* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(5882, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(5878, (void*)this, x)) return;
 	this->QMenuData::menuInsPopup(x1);
     }
     virtual void menuStateChanged() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(5881, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(5877, (void*)this, x)) return;
 	this->QMenuData::menuStateChanged();
     }
     virtual void setId(int x1, int x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_int = x2;
-	if(qt_Smoke->binding->callMethod(5870, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(5866, (void*)this, x)) return;
 	this->QMenuData::setId(x1, x2);
     }
     virtual void updateItem(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(5867, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(5863, (void*)this, x)) return;
 	this->QMenuData::updateItem(x1);
     }
     ~x_QMenuData() { qt_Smoke->binding->deleted(193, (void*)this); }

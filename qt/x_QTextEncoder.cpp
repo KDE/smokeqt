@@ -25,7 +25,7 @@ public:
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)&x1;
 	x[2].s_voidp = (void*)&x2;
-	qt_Smoke->binding->callMethod(10439, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(10431, (void*)this, x, true /*pure virtual*/);
 	QCString *xptr = (QCString *)x[0].s_class;
 	QCString xret(*xptr);
 	delete xptr;

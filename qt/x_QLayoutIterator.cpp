@@ -42,7 +42,7 @@ public:
     void x_6(Smoke::Stack x) {
 	// deleteCurrent()
 	this->QLayoutIterator::deleteCurrent();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     ~x_QLayoutIterator() { qt_Smoke->binding->deleted(178, (void*)this); }
 };

@@ -156,12 +156,12 @@ public:
     void x_30(Smoke::Stack x) {
 	// insertSearchPath(QSettings::System, const QString&)
 	this->QSettings::insertSearchPath((QSettings::System)x[1].s_enum,*(const QString *)x[2].s_voidp);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_31(Smoke::Stack x) {
 	// removeSearchPath(QSettings::System, const QString&)
 	this->QSettings::removeSearchPath((QSettings::System)x[1].s_enum,*(const QString *)x[2].s_voidp);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {

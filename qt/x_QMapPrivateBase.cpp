@@ -22,17 +22,17 @@ public:
     void x_2(Smoke::Stack x) {
 	// rotateLeft(QMapNodeBase*, QMapNodeBase*&)
 	this->QMapPrivateBase::rotateLeft((QMapNodeBase*)x[1].s_class,*(QMapNodeBase* *)x[2].s_voidp);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_3(Smoke::Stack x) {
 	// rotateRight(QMapNodeBase*, QMapNodeBase*&)
 	this->QMapPrivateBase::rotateRight((QMapNodeBase*)x[1].s_class,*(QMapNodeBase* *)x[2].s_voidp);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_4(Smoke::Stack x) {
 	// rebalance(QMapNodeBase*, QMapNodeBase*&)
 	this->QMapPrivateBase::rebalance((QMapNodeBase*)x[1].s_class,*(QMapNodeBase* *)x[2].s_voidp);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_5(Smoke::Stack x) {
 	// removeAndRebalance(QMapNodeBase*, QMapNodeBase*&, QMapNodeBase*&, QMapNodeBase*&)

@@ -42,7 +42,7 @@ public:
     void x_5(Smoke::Stack x) const {
 	// operator QString()
 	this->QUuid::operator QString();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_6(Smoke::Stack x) const {
 	// isNull()

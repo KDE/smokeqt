@@ -433,7 +433,7 @@ public:
     void x_120(Smoke::Stack x) const {
 	// operator char()
 	this->QChar::operator char();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_121(Smoke::Stack x) const {
 	// isNull()
@@ -498,12 +498,12 @@ public:
     void x_133(Smoke::Stack x) {
 	// setCell(uchar)
 	this->QChar::setCell((uchar)x[1].s_uchar);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_134(Smoke::Stack x) {
 	// setRow(uchar)
 	this->QChar::setRow((uchar)x[1].s_uchar);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     static void x_135(Smoke::Stack x) {
 	// networkOrdered()

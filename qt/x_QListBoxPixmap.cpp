@@ -75,39 +75,39 @@ public:
     void x_11(Smoke::Stack x) {
 	// paint(QPainter*)
 	this->QListBoxPixmap::paint((QPainter*)x[1].s_class);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     virtual int height(const QListBox* x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(5324, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(5320, (void*)this, x)) return (int)x[0].s_int;
 	return this->QListBoxPixmap::height(x1);
     }
     virtual void paint(QPainter* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(5328, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(5324, (void*)this, x)) return;
 	this->QListBoxPixmap::paint(x1);
     }
     virtual const QPixmap* pixmap() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(5323, (void*)this, x)) return (const QPixmap*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(5319, (void*)this, x)) return (const QPixmap*)x[0].s_class;
 	return this->QListBoxPixmap::pixmap();
     }
     virtual int rtti() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(5326, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(5322, (void*)this, x)) return (int)x[0].s_int;
 	return this->QListBoxPixmap::rtti();
     }
     virtual void setText(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(5314, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(5310, (void*)this, x)) return;
 	this->QListBoxItem::setText(x1);
     }
     virtual QString text() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(5298, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(5294, (void*)this, x)) {
 	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;
@@ -118,7 +118,7 @@ public:
     virtual int width(const QListBox* x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(5325, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(5321, (void*)this, x)) return (int)x[0].s_int;
 	return this->QListBoxPixmap::width(x1);
     }
     ~x_QListBoxPixmap() { qt_Smoke->binding->deleted(183, (void*)this); }

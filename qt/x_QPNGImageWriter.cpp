@@ -28,27 +28,27 @@ public:
     void x_5(Smoke::Stack x) {
 	// setDisposalMethod(QPNGImageWriter::DisposalMethod)
 	this->QPNGImageWriter::setDisposalMethod((QPNGImageWriter::DisposalMethod)x[1].s_enum);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_6(Smoke::Stack x) {
 	// setLooping(int)
 	this->QPNGImageWriter::setLooping((int)x[1].s_int);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_7(Smoke::Stack x) {
 	// setLooping()
 	this->QPNGImageWriter::setLooping();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_8(Smoke::Stack x) {
 	// setFrameDelay(int)
 	this->QPNGImageWriter::setFrameDelay((int)x[1].s_int);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_9(Smoke::Stack x) {
 	// setGamma(float)
 	this->QPNGImageWriter::setGamma((float)x[1].s_float);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_10(Smoke::Stack x) {
 	// writeImage(const QImage&, int, int)

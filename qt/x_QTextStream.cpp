@@ -82,12 +82,12 @@ public:
     void x_24(Smoke::Stack x) {
 	// setEncoding(QTextStream::Encoding)
 	this->QTextStream::setEncoding((QTextStream::Encoding)x[1].s_enum);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_25(Smoke::Stack x) {
 	// setCodec(QTextCodec*)
 	this->QTextStream::setCodec((QTextCodec*)x[1].s_class);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     static void x_26(Smoke::Stack x) {
 	// QTextStream()
@@ -132,12 +132,12 @@ public:
     void x_32(Smoke::Stack x) {
 	// setDevice(QIODevice*)
 	this->QTextStream::setDevice((QIODevice*)x[1].s_class);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_33(Smoke::Stack x) {
 	// unsetDevice()
 	this->QTextStream::unsetDevice();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_34(Smoke::Stack x) const {
 	// atEnd()
@@ -307,7 +307,7 @@ public:
     void x_67(Smoke::Stack x) {
 	// skipWhiteSpace()
 	this->QTextStream::skipWhiteSpace();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_68(Smoke::Stack x) const {
 	// flags()
@@ -337,7 +337,7 @@ public:
     void x_73(Smoke::Stack x) {
 	// reset()
 	this->QTextStream::reset();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_74(Smoke::Stack x) const {
 	// width()

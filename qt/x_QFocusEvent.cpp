@@ -58,12 +58,12 @@ public:
     static void x_12(Smoke::Stack x) {
 	// setReason(QFocusEvent::Reason)
 	QFocusEvent::setReason((QFocusEvent::Reason)x[1].s_enum);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     static void x_13(Smoke::Stack x) {
 	// resetReason()
 	QFocusEvent::resetReason();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {

@@ -16,7 +16,7 @@ public:
     void x_1(Smoke::Stack x) {
 	// setPixelAlignment(int)
 	this->QPNGImagePacker::setPixelAlignment((int)x[1].s_int);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_2(Smoke::Stack x) {
 	// packImage(const QImage&)

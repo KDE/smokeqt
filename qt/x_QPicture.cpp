@@ -46,7 +46,7 @@ public:
     void x_6(Smoke::Stack x) {
 	// setData(const char*, uint)
 	this->QPicture::setData((const char*)x[1].s_voidp,(uint)x[2].s_uint);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_7(Smoke::Stack x) {
 	// play(QPainter*)
@@ -116,7 +116,7 @@ public:
     void x_20(Smoke::Stack x) {
 	// detach()
 	this->QPicture::detach();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_21(Smoke::Stack x) const {
 	// copy()
@@ -128,14 +128,14 @@ public:
 	x[1].s_int = x1;
 	x[2].s_class = (void*)x2;
 	x[3].s_voidp = (void*)x3;
-	if(qt_Smoke->binding->callMethod(6943, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(6935, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QPicture::cmd(x1, x2, x3);
     }
     virtual int fontInf(QFont* x1, int x2) const {
 	Smoke::StackItem x[3];
 	x[1].s_class = (void*)x1;
 	x[2].s_int = x2;
-	if(qt_Smoke->binding->callMethod(6644, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(6636, (void*)this, x)) return (int)x[0].s_int;
 	return this->QPaintDevice::fontInf(x1, x2);
     }
     virtual int fontMet(QFont* x1, int x2, const char* x3, int x4) const {
@@ -144,31 +144,31 @@ public:
 	x[2].s_int = x2;
 	x[3].s_voidp = (void*)x3;
 	x[4].s_int = x4;
-	if(qt_Smoke->binding->callMethod(6641, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(6633, (void*)this, x)) return (int)x[0].s_int;
 	return this->QPaintDevice::fontMet(x1, x2, x3, x4);
     }
     virtual int metric(int x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(6944, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(6936, (void*)this, x)) return (int)x[0].s_int;
 	return this->QPicture::metric(x1);
     }
     virtual int resolution() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(6637, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(6629, (void*)this, x)) return (int)x[0].s_int;
 	return this->QPaintDevice::resolution();
     }
     virtual void setData(const char* x1, uint x2) {
 	Smoke::StackItem x[3];
 	x[1].s_voidp = (void*)x1;
 	x[2].s_uint = x2;
-	if(qt_Smoke->binding->callMethod(6931, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6923, (void*)this, x)) return;
 	this->QPicture::setData(x1, x2);
     }
     virtual void setResolution(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(6636, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6628, (void*)this, x)) return;
 	this->QPaintDevice::setResolution(x1);
     }
     ~x_QPicture() { qt_Smoke->binding->deleted(226, (void*)this); }

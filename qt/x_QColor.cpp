@@ -98,12 +98,12 @@ public:
     void x_16(Smoke::Stack x) {
 	// setNamedColor(const QString&)
 	this->QColor::setNamedColor(*(const QString *)x[1].s_voidp);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_17(Smoke::Stack x) const {
 	// rgb(int*, int*, int*)
 	this->QColor::rgb((int*)x[1].s_voidp,(int*)x[2].s_voidp,(int*)x[3].s_voidp);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_18(Smoke::Stack x) const {
 	// rgb()
@@ -113,12 +113,12 @@ public:
     void x_19(Smoke::Stack x) {
 	// setRgb(int, int, int)
 	this->QColor::setRgb((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_20(Smoke::Stack x) {
 	// setRgb(QRgb)
 	this->QColor::setRgb((QRgb)x[1].s_uint);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_21(Smoke::Stack x) const {
 	// red()
@@ -138,17 +138,17 @@ public:
     void x_24(Smoke::Stack x) const {
 	// hsv(int*, int*, int*)
 	this->QColor::hsv((int*)x[1].s_voidp,(int*)x[2].s_voidp,(int*)x[3].s_voidp);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_25(Smoke::Stack x) const {
 	// getHsv(int&, int&, int&)
 	this->QColor::getHsv(*(int *)x[1].s_voidp,*(int *)x[2].s_voidp,*(int *)x[3].s_voidp);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_26(Smoke::Stack x) {
 	// setHsv(int, int, int)
 	this->QColor::setHsv((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_27(Smoke::Stack x) const {
 	// light(int)
@@ -208,7 +208,7 @@ public:
     static void x_38(Smoke::Stack x) {
 	// leaveAllocContext()
 	QColor::leaveAllocContext();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     static void x_39(Smoke::Stack x) {
 	// currentAllocContext()
@@ -218,17 +218,17 @@ public:
     static void x_40(Smoke::Stack x) {
 	// destroyAllocContext(int)
 	QColor::destroyAllocContext((int)x[1].s_int);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     static void x_41(Smoke::Stack x) {
 	// initialize()
 	QColor::initialize();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     static void x_42(Smoke::Stack x) {
 	// cleanup()
 	QColor::cleanup();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {
 	switch(xtype) {

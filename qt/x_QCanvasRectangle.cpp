@@ -48,7 +48,7 @@ public:
     void x_6(Smoke::Stack x) {
 	// setSize(int, int)
 	this->QCanvasRectangle::setSize((int)x[1].s_int,(int)x[2].s_int);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_7(Smoke::Stack x) const {
 	// size()
@@ -85,7 +85,7 @@ public:
     void x_13(Smoke::Stack x) {
 	// drawShape(QPainter&)
 	this->QCanvasRectangle::drawShape(*(QPainter *)x[1].s_class);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_14(Smoke::Stack x) const {
 	// chunks()

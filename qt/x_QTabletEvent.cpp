@@ -90,12 +90,12 @@ public:
     void x_17(Smoke::Stack x) {
 	// accept()
 	this->QTabletEvent::accept();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_18(Smoke::Stack x) {
 	// ignore()
 	this->QTabletEvent::ignore();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_19(Smoke::Stack x) {
 	// uniqueId()

@@ -49,17 +49,17 @@ public:
     void x_9(Smoke::Stack x) {
 	// accept(bool)
 	this->QDropEvent::accept((bool)x[1].s_bool);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_10(Smoke::Stack x) {
 	// accept()
 	this->QDropEvent::accept();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_11(Smoke::Stack x) {
 	// ignore()
 	this->QDropEvent::ignore();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_12(Smoke::Stack x) const {
 	// isActionAccepted()
@@ -69,17 +69,17 @@ public:
     void x_13(Smoke::Stack x) {
 	// acceptAction(bool)
 	this->QDropEvent::acceptAction((bool)x[1].s_bool);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_14(Smoke::Stack x) {
 	// acceptAction()
 	this->QDropEvent::acceptAction();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_15(Smoke::Stack x) {
 	// setAction(QDropEvent::Action)
 	this->QDropEvent::setAction((QDropEvent::Action)x[1].s_enum);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_16(Smoke::Stack x) const {
 	// action()
@@ -119,7 +119,7 @@ public:
     void x_23(Smoke::Stack x) {
 	// setPoint(const QPoint&)
 	this->QDropEvent::setPoint(*(const QPoint *)x[1].s_class);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     static void x_24(Smoke::Stack x) {
 	// QDropEvent(const QDropEvent&)
@@ -131,7 +131,7 @@ public:
     virtual QByteArray encodedData(const char* x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(2851, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(2847, (void*)this, x)) {
 	    QByteArray *xptr = (QByteArray *)x[0].s_class;
 	    QByteArray xret(*xptr);
 	    delete xptr;
@@ -142,13 +142,13 @@ public:
     virtual const char* format(int x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(2849, (void*)this, x)) return (const char*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(2845, (void*)this, x)) return (const char*)x[0].s_class;
 	return this->QDropEvent::format(x1);
     }
     virtual bool provides(const char* x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(2852, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(2848, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QDropEvent::provides(x1);
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {

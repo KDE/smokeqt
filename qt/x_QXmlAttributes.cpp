@@ -81,12 +81,12 @@ public:
     void x_14(Smoke::Stack x) {
 	// clear()
 	this->QXmlAttributes::clear();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_15(Smoke::Stack x) {
 	// append(const QString&, const QString&, const QString&, const QString&)
 	this->QXmlAttributes::append(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp,*(const QString *)x[3].s_voidp,*(const QString *)x[4].s_voidp);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     static void x_16(Smoke::Stack x) {
 	// QXmlAttributes(const QXmlAttributes&)

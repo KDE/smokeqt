@@ -23,7 +23,7 @@ public:
     void x_2(Smoke::Stack x) {
 	// setPoints(QPointArray)
 	this->QCanvasPolygon::setPoints(*(QPointArray *)x[1].s_class);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_3(Smoke::Stack x) const {
 	// points()
@@ -33,7 +33,7 @@ public:
     void x_4(Smoke::Stack x) {
 	// moveBy(double, double)
 	this->QCanvasPolygon::moveBy((double)x[1].s_double,(double)x[2].s_double);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_5(Smoke::Stack x) const {
 	// areaPoints()
@@ -55,7 +55,7 @@ public:
     void x_8(Smoke::Stack x) {
 	// drawShape(QPainter&)
 	this->QCanvasPolygon::drawShape(*(QPainter *)x[1].s_class);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     virtual void advance(int x1) {
 	Smoke::StackItem x[2];

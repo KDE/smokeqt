@@ -143,7 +143,7 @@ public:
     void x_25(Smoke::Stack x) {
 	// start()
 	this->QTime::start();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_26(Smoke::Stack x) {
 	// restart()

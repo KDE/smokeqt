@@ -147,7 +147,7 @@ public:
     void x_23(Smoke::Stack x) {
 	// detach()
 	this->QImage::detach();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_24(Smoke::Stack x) const {
 	// copy()
@@ -217,12 +217,12 @@ public:
     void x_37(Smoke::Stack x) {
 	// setColor(int, QRgb)
 	this->QImage::setColor((int)x[1].s_int,(QRgb)x[2].s_uint);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_38(Smoke::Stack x) {
 	// setNumColors(int)
 	this->QImage::setNumColors((int)x[1].s_int);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_39(Smoke::Stack x) const {
 	// hasAlphaBuffer()
@@ -232,7 +232,7 @@ public:
     void x_40(Smoke::Stack x) {
 	// setAlphaBuffer(bool)
 	this->QImage::setAlphaBuffer((bool)x[1].s_bool);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_41(Smoke::Stack x) const {
 	// allGray()
@@ -307,22 +307,22 @@ public:
     void x_55(Smoke::Stack x) {
 	// reset()
 	this->QImage::reset();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_56(Smoke::Stack x) {
 	// fill(uint)
 	this->QImage::fill((uint)x[1].s_uint);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_57(Smoke::Stack x) {
 	// invertPixels(bool)
 	this->QImage::invertPixels((bool)x[1].s_bool);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_58(Smoke::Stack x) {
 	// invertPixels()
 	this->QImage::invertPixels();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_59(Smoke::Stack x) const {
 	// convertDepth(int)
@@ -497,7 +497,7 @@ public:
     void x_93(Smoke::Stack x) {
 	// setPixel(int, int, uint)
 	this->QImage::setPixel((int)x[1].s_int,(int)x[2].s_int,(uint)x[3].s_uint);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_94(Smoke::Stack x) const {
 	// dotsPerMeterX()
@@ -512,12 +512,12 @@ public:
     void x_96(Smoke::Stack x) {
 	// setDotsPerMeterX(int)
 	this->QImage::setDotsPerMeterX((int)x[1].s_int);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_97(Smoke::Stack x) {
 	// setDotsPerMeterY(int)
 	this->QImage::setDotsPerMeterY((int)x[1].s_int);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_98(Smoke::Stack x) const {
 	// offset()
@@ -527,7 +527,7 @@ public:
     void x_99(Smoke::Stack x) {
 	// setOffset(const QPoint&)
 	this->QImage::setOffset(*(const QPoint *)x[1].s_class);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_100(Smoke::Stack x) const {
 	// textList()
@@ -562,7 +562,7 @@ public:
     void x_106(Smoke::Stack x) {
 	// setText(const char*, const char*, const QString&)
 	this->QImage::setText((const char*)x[1].s_voidp,(const char*)x[2].s_voidp,*(const QString *)x[3].s_voidp);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     static void x_107(Smoke::Stack x) {
 	// systemBitOrder()

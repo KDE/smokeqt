@@ -50,7 +50,7 @@ public:
     void x_7(Smoke::Stack x) {
 	// clear()
 	xthis->QClipboard::clear();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_8(Smoke::Stack x) const {
 	// supportsSelection()
@@ -70,7 +70,7 @@ public:
     void x_11(Smoke::Stack x) {
 	// setSelectionMode(bool)
 	xthis->QClipboard::setSelectionMode((bool)x[1].s_bool);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_12(Smoke::Stack x) const {
 	// selectionModeEnabled()
@@ -85,7 +85,7 @@ public:
     void x_14(Smoke::Stack x) {
 	// setData(QMimeSource*)
 	xthis->QClipboard::setData((QMimeSource*)x[1].s_class);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_15(Smoke::Stack x) const {
 	// text()
@@ -100,7 +100,7 @@ public:
     void x_17(Smoke::Stack x) {
 	// setText(const QString&)
 	xthis->QClipboard::setText(*(const QString *)x[1].s_voidp);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_18(Smoke::Stack x) const {
 	// image()
@@ -115,12 +115,12 @@ public:
     void x_20(Smoke::Stack x) {
 	// setImage(const QImage&)
 	xthis->QClipboard::setImage(*(const QImage *)x[1].s_class);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_21(Smoke::Stack x) {
 	// setPixmap(const QPixmap&)
 	xthis->QClipboard::setPixmap(*(const QPixmap *)x[1].s_class);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     static void x_22(Smoke::Stack x) {
 	// staticMetaObject()

@@ -70,37 +70,37 @@ public:
     void x_13(Smoke::Stack x) {
 	// reset(const QPixmap&, QIconSet::Size)
 	this->QIconSet::reset(*(const QPixmap *)x[1].s_class,(QIconSet::Size)x[2].s_enum);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_14(Smoke::Stack x) {
 	// setPixmap(const QPixmap&, QIconSet::Size, QIconSet::Mode, QIconSet::State)
 	this->QIconSet::setPixmap(*(const QPixmap *)x[1].s_class,(QIconSet::Size)x[2].s_enum,(QIconSet::Mode)x[3].s_enum,(QIconSet::State)x[4].s_enum);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_15(Smoke::Stack x) {
 	// setPixmap(const QPixmap&, QIconSet::Size, QIconSet::Mode)
 	this->QIconSet::setPixmap(*(const QPixmap *)x[1].s_class,(QIconSet::Size)x[2].s_enum,(QIconSet::Mode)x[3].s_enum);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_16(Smoke::Stack x) {
 	// setPixmap(const QPixmap&, QIconSet::Size)
 	this->QIconSet::setPixmap(*(const QPixmap *)x[1].s_class,(QIconSet::Size)x[2].s_enum);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_17(Smoke::Stack x) {
 	// setPixmap(const QString&, QIconSet::Size, QIconSet::Mode, QIconSet::State)
 	this->QIconSet::setPixmap(*(const QString *)x[1].s_voidp,(QIconSet::Size)x[2].s_enum,(QIconSet::Mode)x[3].s_enum,(QIconSet::State)x[4].s_enum);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_18(Smoke::Stack x) {
 	// setPixmap(const QString&, QIconSet::Size, QIconSet::Mode)
 	this->QIconSet::setPixmap(*(const QString *)x[1].s_voidp,(QIconSet::Size)x[2].s_enum,(QIconSet::Mode)x[3].s_enum);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_19(Smoke::Stack x) {
 	// setPixmap(const QString&, QIconSet::Size)
 	this->QIconSet::setPixmap(*(const QString *)x[1].s_voidp,(QIconSet::Size)x[2].s_enum);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_20(Smoke::Stack x) const {
 	// pixmap(QIconSet::Size, QIconSet::Mode, QIconSet::State)
@@ -140,7 +140,7 @@ public:
     void x_27(Smoke::Stack x) {
 	// clearGenerated()
 	this->QIconSet::clearGenerated();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_28(Smoke::Stack x) const {
 	// isNull()
@@ -150,7 +150,7 @@ public:
     void x_29(Smoke::Stack x) {
 	// detach()
 	this->QIconSet::detach();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_30(Smoke::Stack x) {
 	// operator=(const QIconSet&)
@@ -160,7 +160,7 @@ public:
     static void x_31(Smoke::Stack x) {
 	// setIconSize(QIconSet::Size, const QSize&)
 	QIconSet::setIconSize((QIconSet::Size)x[1].s_enum,*(const QSize *)x[2].s_class);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     static void x_32(Smoke::Stack x) {
 	// iconSize(QIconSet::Size)
@@ -173,7 +173,7 @@ public:
 	x[2].s_enum = x2;
 	x[3].s_enum = x3;
 	x[4].s_enum = x4;
-	if(qt_Smoke->binding->callMethod(4190, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(4186, (void*)this, x)) return;
 	this->QIconSet::setPixmap(x1, x2, x3, x4);
     }
     virtual void setPixmap(const QString& x1, QIconSet::Size x2, QIconSet::Mode x3, QIconSet::State x4) {
@@ -182,7 +182,7 @@ public:
 	x[2].s_enum = x2;
 	x[3].s_enum = x3;
 	x[4].s_enum = x4;
-	if(qt_Smoke->binding->callMethod(4193, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(4189, (void*)this, x)) return;
 	this->QIconSet::setPixmap(x1, x2, x3, x4);
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {

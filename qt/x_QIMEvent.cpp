@@ -31,12 +31,12 @@ public:
     void x_4(Smoke::Stack x) {
 	// accept()
 	this->QIMEvent::accept();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_5(Smoke::Stack x) {
 	// ignore()
 	this->QIMEvent::ignore();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     static void x_6(Smoke::Stack x) {
 	// QIMEvent(const QIMEvent&)

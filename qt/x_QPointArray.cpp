@@ -69,7 +69,7 @@ public:
     void x_10(Smoke::Stack x) {
 	// translate(int, int)
 	this->QPointArray::translate((int)x[1].s_int,(int)x[2].s_int);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_11(Smoke::Stack x) const {
 	// boundingRect()
@@ -79,7 +79,7 @@ public:
     void x_12(Smoke::Stack x) const {
 	// point(uint, int*, int*)
 	this->QPointArray::point((uint)x[1].s_uint,(int*)x[2].s_voidp,(int*)x[3].s_voidp);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_13(Smoke::Stack x) const {
 	// point(uint)
@@ -89,12 +89,12 @@ public:
     void x_14(Smoke::Stack x) {
 	// setPoint(uint, int, int)
 	this->QPointArray::setPoint((uint)x[1].s_uint,(int)x[2].s_int,(int)x[3].s_int);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_15(Smoke::Stack x) {
 	// setPoint(uint, const QPoint&)
 	this->QPointArray::setPoint((uint)x[1].s_uint,*(const QPoint *)x[2].s_class);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_16(Smoke::Stack x) {
 	// setPoints(int, const QCOORD*)
@@ -119,17 +119,17 @@ public:
     void x_20(Smoke::Stack x) {
 	// makeArc(int, int, int, int, int, int)
 	this->QPointArray::makeArc((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int,(int)x[6].s_int);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_21(Smoke::Stack x) {
 	// makeEllipse(int, int, int, int)
 	this->QPointArray::makeEllipse((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_22(Smoke::Stack x) {
 	// makeArc(int, int, int, int, int, int, const QWMatrix&)
 	this->QPointArray::makeArc((int)x[1].s_int,(int)x[2].s_int,(int)x[3].s_int,(int)x[4].s_int,(int)x[5].s_int,(int)x[6].s_int,*(const QWMatrix *)x[7].s_class);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_23(Smoke::Stack x) const {
 	// cubicBezier()
@@ -154,7 +154,7 @@ public:
     static void x_27(Smoke::Stack x) {
 	// cleanBuffers()
 	QPointArray::cleanBuffers();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     ~x_QPointArray() { qt_Smoke->binding->deleted(231, (void*)this); }
 };

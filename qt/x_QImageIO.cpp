@@ -76,47 +76,47 @@ public:
     void x_12(Smoke::Stack x) {
 	// setImage(const QImage&)
 	this->QImageIO::setImage(*(const QImage *)x[1].s_class);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_13(Smoke::Stack x) {
 	// setStatus(int)
 	this->QImageIO::setStatus((int)x[1].s_int);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_14(Smoke::Stack x) {
 	// setFormat(const char*)
 	this->QImageIO::setFormat((const char*)x[1].s_voidp);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_15(Smoke::Stack x) {
 	// setIODevice(QIODevice*)
 	this->QImageIO::setIODevice((QIODevice*)x[1].s_class);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_16(Smoke::Stack x) {
 	// setFileName(const QString&)
 	this->QImageIO::setFileName(*(const QString *)x[1].s_voidp);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_17(Smoke::Stack x) {
 	// setQuality(int)
 	this->QImageIO::setQuality((int)x[1].s_int);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_18(Smoke::Stack x) {
 	// setDescription(const QString&)
 	this->QImageIO::setDescription(*(const QString *)x[1].s_voidp);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_19(Smoke::Stack x) {
 	// setParameters(const char*)
 	this->QImageIO::setParameters((const char*)x[1].s_voidp);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_20(Smoke::Stack x) {
 	// setGamma(float)
 	this->QImageIO::setGamma((float)x[1].s_float);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_21(Smoke::Stack x) {
 	// read()

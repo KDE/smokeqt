@@ -20,12 +20,12 @@ public:
     void x_2(Smoke::Stack x) {
 	// accept()
 	this->QCloseEvent::accept();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_3(Smoke::Stack x) {
 	// ignore()
 	this->QCloseEvent::ignore();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     static void x_4(Smoke::Stack x) {
 	// QCloseEvent(const QCloseEvent&)

@@ -41,7 +41,7 @@ public:
     void x_5(Smoke::Stack x) {
 	// detach()
 	this->QGArray::detach();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_6(Smoke::Stack x) const {
 	// data()
@@ -96,7 +96,7 @@ public:
     void x_16(Smoke::Stack x) {
 	// store(const char*, uint)
 	this->QGArray::store((const char*)x[1].s_voidp,(uint)x[2].s_uint);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_17(Smoke::Stack x) const {
 	// sharedBlock()
@@ -106,7 +106,7 @@ public:
     void x_18(Smoke::Stack x) {
 	// setSharedBlock(QGArray::array_data*)
 	this->QGArray::setSharedBlock((QGArray::array_data*)x[1].s_class);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_19(Smoke::Stack x) {
 	// setRawData(const char*, uint)
@@ -116,7 +116,7 @@ public:
     void x_20(Smoke::Stack x) {
 	// resetRawData(const char*, uint)
 	this->QGArray::resetRawData((const char*)x[1].s_voidp,(uint)x[2].s_uint);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_21(Smoke::Stack x) const {
 	// find(const char*, uint, uint)
@@ -131,7 +131,7 @@ public:
     void x_23(Smoke::Stack x) {
 	// sort(uint)
 	this->QGArray::sort((uint)x[1].s_uint);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_24(Smoke::Stack x) const {
 	// bsearch(const char*, uint)
@@ -156,22 +156,22 @@ public:
     void x_28(Smoke::Stack x) {
 	// deleteData(QGArray::array_data*)
 	this->QGArray::deleteData((QGArray::array_data*)x[1].s_class);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     virtual void deleteData(QGArray::array_data* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(3578, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(3574, (void*)this, x)) return;
 	this->QGArray::deleteData(x1);
     }
     virtual void detach() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(3555, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(3551, (void*)this, x)) return;
 	this->QGArray::detach();
     }
     virtual QGArray::array_data* newData() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(3577, (void*)this, x)) return (QGArray::array_data*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(3573, (void*)this, x)) return (QGArray::array_data*)x[0].s_class;
 	return this->QGArray::newData();
     }
     ~x_QGArray() { qt_Smoke->binding->deleted(125, (void*)this); }

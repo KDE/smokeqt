@@ -37,17 +37,17 @@ public:
     void x_4(Smoke::Stack x) {
 	// setText(const QString&)
 	this->QCanvasText::setText(*(const QString *)x[1].s_voidp);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_5(Smoke::Stack x) {
 	// setFont(const QFont&)
 	this->QCanvasText::setFont(*(const QFont *)x[1].s_class);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_6(Smoke::Stack x) {
 	// setColor(const QColor&)
 	this->QCanvasText::setColor(*(const QColor *)x[1].s_class);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_7(Smoke::Stack x) const {
 	// text()
@@ -67,7 +67,7 @@ public:
     void x_10(Smoke::Stack x) {
 	// moveBy(double, double)
 	this->QCanvasText::moveBy((double)x[1].s_double,(double)x[2].s_double);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_11(Smoke::Stack x) const {
 	// textFlags()
@@ -77,7 +77,7 @@ public:
     void x_12(Smoke::Stack x) {
 	// setTextFlags(int)
 	this->QCanvasText::setTextFlags((int)x[1].s_int);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_13(Smoke::Stack x) const {
 	// boundingRect()
@@ -104,7 +104,7 @@ public:
     void x_17(Smoke::Stack x) {
 	// draw(QPainter&)
 	this->QCanvasText::draw(*(QPainter *)x[1].s_class);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     virtual void advance(int x1) {
 	Smoke::StackItem x[2];

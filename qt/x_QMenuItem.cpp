@@ -87,17 +87,17 @@ public:
     void x_15(Smoke::Stack x) {
 	// setText(const QString&)
 	this->QMenuItem::setText(*(const QString *)x[1].s_voidp);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_16(Smoke::Stack x) {
 	// setDirty(bool)
 	this->QMenuItem::setDirty((bool)x[1].s_bool);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_17(Smoke::Stack x) {
 	// setWhatsThis(const QString&)
 	this->QMenuItem::setWhatsThis(*(const QString *)x[1].s_voidp);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     ~x_QMenuItem() { qt_Smoke->binding->deleted(194, (void*)this); }
 };

@@ -28,17 +28,17 @@ public:
     void x_3(Smoke::Stack x) {
 	// setContentFromEditor(QWidget*)
 	this->QCheckTableItem::setContentFromEditor((QWidget*)x[1].s_class);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_4(Smoke::Stack x) {
 	// paint(QPainter*, const QColorGroup&, const QRect&, bool)
 	this->QCheckTableItem::paint((QPainter*)x[1].s_class,*(const QColorGroup *)x[2].s_class,*(const QRect *)x[3].s_class,(bool)x[4].s_bool);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_5(Smoke::Stack x) {
 	// setChecked(bool)
 	this->QCheckTableItem::setChecked((bool)x[1].s_bool);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_6(Smoke::Stack x) const {
 	// isChecked()
@@ -59,7 +59,7 @@ public:
     }
     virtual int alignment() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(10048, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(10040, (void*)this, x)) return (int)x[0].s_int;
 	return this->QTableItem::alignment();
     }
     virtual QWidget* createEditor() const {
@@ -69,7 +69,7 @@ public:
     }
     virtual QString key() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(10056, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(10048, (void*)this, x)) {
 	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;
@@ -88,7 +88,7 @@ public:
     }
     virtual QPixmap pixmap() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(10043, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(10035, (void*)this, x)) {
 	    QPixmap *xptr = (QPixmap *)x[0].s_class;
 	    QPixmap xret(*xptr);
 	    delete xptr;
@@ -110,7 +110,7 @@ public:
     virtual void setCol(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(10062, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10054, (void*)this, x)) return;
 	this->QTableItem::setCol(x1);
     }
     virtual void setContentFromEditor(QWidget* x1) {
@@ -122,49 +122,49 @@ public:
     virtual void setEnabled(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(10067, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10059, (void*)this, x)) return;
 	this->QTableItem::setEnabled(x1);
     }
     virtual void setPixmap(const QPixmap& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(10045, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10037, (void*)this, x)) return;
 	this->QTableItem::setPixmap(x1);
     }
     virtual void setReplaceable(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(10054, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10046, (void*)this, x)) return;
 	this->QTableItem::setReplaceable(x1);
     }
     virtual void setRow(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(10061, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10053, (void*)this, x)) return;
 	this->QTableItem::setRow(x1);
     }
     virtual void setSpan(int x1, int x2) {
 	Smoke::StackItem x[3];
 	x[1].s_int = x1;
 	x[2].s_int = x2;
-	if(qt_Smoke->binding->callMethod(10058, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10050, (void*)this, x)) return;
 	this->QTableItem::setSpan(x1, x2);
     }
     virtual void setText(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(10046, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10038, (void*)this, x)) return;
 	this->QTableItem::setText(x1);
     }
     virtual void setWordWrap(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(10049, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10041, (void*)this, x)) return;
 	this->QTableItem::setWordWrap(x1);
     }
     virtual QSize sizeHint() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(10057, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(10049, (void*)this, x)) {
 	    QSize *xptr = (QSize *)x[0].s_class;
 	    QSize xret(*xptr);
 	    delete xptr;
@@ -174,7 +174,7 @@ public:
     }
     virtual QString text() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(10044, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(10036, (void*)this, x)) {
 	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;

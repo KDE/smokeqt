@@ -85,7 +85,7 @@ public:
     void x_15(Smoke::Stack x) {
 	// setTranslation(const QString&)
 	this->QTranslatorMessage::setTranslation(*(const QString *)x[1].s_voidp);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_16(Smoke::Stack x) const {
 	// translation()
@@ -95,17 +95,17 @@ public:
     void x_17(Smoke::Stack x) const {
 	// write(QDataStream&, bool, QTranslatorMessage::Prefix)
 	this->QTranslatorMessage::write(*(QDataStream *)x[1].s_class,(bool)x[2].s_bool,(QTranslatorMessage::Prefix)x[3].s_enum);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_18(Smoke::Stack x) const {
 	// write(QDataStream&, bool)
 	this->QTranslatorMessage::write(*(QDataStream *)x[1].s_class,(bool)x[2].s_bool);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_19(Smoke::Stack x) const {
 	// write(QDataStream&)
 	this->QTranslatorMessage::write(*(QDataStream *)x[1].s_class);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_20(Smoke::Stack x) const {
 	// commonPrefix(const QTranslatorMessage&)

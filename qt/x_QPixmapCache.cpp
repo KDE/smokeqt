@@ -29,7 +29,7 @@ public:
     static void x_3(Smoke::Stack x) {
 	// setCacheLimit(int)
 	QPixmapCache::setCacheLimit((int)x[1].s_int);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     static void x_4(Smoke::Stack x) {
 	// find(const QString&)
@@ -54,7 +54,7 @@ public:
     static void x_8(Smoke::Stack x) {
 	// clear()
 	QPixmapCache::clear();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     ~x_QPixmapCache() { qt_Smoke->binding->deleted(228, (void*)this); }
 };

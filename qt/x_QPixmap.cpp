@@ -186,32 +186,32 @@ public:
     void x_31(Smoke::Stack x) {
 	// fill(const QColor&)
 	this->QPixmap::fill(*(const QColor *)x[1].s_class);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_32(Smoke::Stack x) {
 	// fill()
 	this->QPixmap::fill();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_33(Smoke::Stack x) {
 	// fill(const QWidget*, int, int)
 	this->QPixmap::fill((const QWidget*)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_34(Smoke::Stack x) {
 	// fill(const QWidget*, const QPoint&)
 	this->QPixmap::fill((const QWidget*)x[1].s_class,*(const QPoint *)x[2].s_class);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_35(Smoke::Stack x) {
 	// resize(int, int)
 	this->QPixmap::resize((int)x[1].s_int,(int)x[2].s_int);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_36(Smoke::Stack x) {
 	// resize(const QSize&)
 	this->QPixmap::resize(*(const QSize *)x[1].s_class);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_37(Smoke::Stack x) const {
 	// mask()
@@ -221,7 +221,7 @@ public:
     void x_38(Smoke::Stack x) {
 	// setMask(const QBitmap&)
 	this->QPixmap::setMask(*(const QBitmap *)x[1].s_class);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_39(Smoke::Stack x) const {
 	// selfMask()
@@ -341,12 +341,12 @@ public:
     void x_62(Smoke::Stack x) {
 	// setOptimization(QPixmap::Optimization)
 	this->QPixmap::setOptimization((QPixmap::Optimization)x[1].s_enum);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_63(Smoke::Stack x) {
 	// detach()
 	this->QPixmap::detach();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_64(Smoke::Stack x) const {
 	// isQBitmap()
@@ -426,7 +426,7 @@ public:
     static void x_79(Smoke::Stack x) {
 	// setDefaultOptimization(QPixmap::Optimization)
 	QPixmap::setDefaultOptimization((QPixmap::Optimization)x[1].s_enum);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     static void x_80(Smoke::Stack x) {
 	// QPixmap(int, int, const uchar*, bool)
@@ -445,19 +445,19 @@ public:
 	x[1].s_int = x1;
 	x[2].s_class = (void*)x2;
 	x[3].s_voidp = (void*)x3;
-	if(qt_Smoke->binding->callMethod(6639, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(6631, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QPaintDevice::cmd(x1, x2, x3);
     }
     virtual void detach() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(7011, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(7003, (void*)this, x)) return;
 	this->QPixmap::detach();
     }
     virtual int fontInf(QFont* x1, int x2) const {
 	Smoke::StackItem x[3];
 	x[1].s_class = (void*)x1;
 	x[2].s_int = x2;
-	if(qt_Smoke->binding->callMethod(6644, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(6636, (void*)this, x)) return (int)x[0].s_int;
 	return this->QPaintDevice::fontInf(x1, x2);
     }
     virtual int fontMet(QFont* x1, int x2, const char* x3, int x4) const {
@@ -466,24 +466,24 @@ public:
 	x[2].s_int = x2;
 	x[3].s_voidp = (void*)x3;
 	x[4].s_int = x4;
-	if(qt_Smoke->binding->callMethod(6641, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(6633, (void*)this, x)) return (int)x[0].s_int;
 	return this->QPaintDevice::fontMet(x1, x2, x3, x4);
     }
     virtual int metric(int x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(7029, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(7021, (void*)this, x)) return (int)x[0].s_int;
 	return this->QPixmap::metric(x1);
     }
     virtual int resolution() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(6637, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(6629, (void*)this, x)) return (int)x[0].s_int;
 	return this->QPaintDevice::resolution();
     }
     virtual void setResolution(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(6636, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6628, (void*)this, x)) return;
 	this->QPaintDevice::setResolution(x1);
     }
     static void xenum_operation(Smoke::EnumOperation xop, Smoke::Index xtype, void *&xdata, long &xvalue) {

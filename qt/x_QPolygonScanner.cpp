@@ -21,27 +21,27 @@ public:
     void x_4(Smoke::Stack x) {
 	// scan(const QPointArray&, bool, int, int)
 	this->QPolygonScanner::scan(*(const QPointArray *)x[1].s_class,(bool)x[2].s_bool,(int)x[3].s_int,(int)x[4].s_int);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_5(Smoke::Stack x) {
 	// scan(const QPointArray&, bool, int)
 	this->QPolygonScanner::scan(*(const QPointArray *)x[1].s_class,(bool)x[2].s_bool,(int)x[3].s_int);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_6(Smoke::Stack x) {
 	// scan(const QPointArray&, bool)
 	this->QPolygonScanner::scan(*(const QPointArray *)x[1].s_class,(bool)x[2].s_bool);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_7(Smoke::Stack x) {
 	// scan(const QPointArray&, bool, int, int, bool)
 	this->QPolygonScanner::scan(*(const QPointArray *)x[1].s_class,(bool)x[2].s_bool,(int)x[3].s_int,(int)x[4].s_int,(bool)x[5].s_bool);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_8(Smoke::Stack x) {
 	// scan(const QPointArray&, bool, int, int, QPolygonScanner::Edge)
 	this->QPolygonScanner::scan(*(const QPointArray *)x[1].s_class,(bool)x[2].s_bool,(int)x[3].s_int,(int)x[4].s_int,(QPolygonScanner::Edge)x[5].s_enum);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     static void x_9(Smoke::Stack x) {
 	// QPolygonScanner()
@@ -62,7 +62,7 @@ public:
 	x[1].s_int = x1;
 	x[2].s_class = (void*)x2;
 	x[3].s_voidp = (void*)x3;
-	qt_Smoke->binding->callMethod(7128, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(7120, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }

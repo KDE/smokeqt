@@ -43,26 +43,26 @@ public:
     void x_5(Smoke::Stack x) {
 	// setOffset(int, int)
 	this->QCanvasPixmap::setOffset((int)x[1].s_int,(int)x[2].s_int);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     virtual bool cmd(int x1, QPainter* x2, QPDevCmdParam* x3) {
 	Smoke::StackItem x[4];
 	x[1].s_int = x1;
 	x[2].s_class = (void*)x2;
 	x[3].s_voidp = (void*)x3;
-	if(qt_Smoke->binding->callMethod(6639, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(6631, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QPaintDevice::cmd(x1, x2, x3);
     }
     virtual void detach() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(7011, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(7003, (void*)this, x)) return;
 	this->QPixmap::detach();
     }
     virtual int fontInf(QFont* x1, int x2) const {
 	Smoke::StackItem x[3];
 	x[1].s_class = (void*)x1;
 	x[2].s_int = x2;
-	if(qt_Smoke->binding->callMethod(6644, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(6636, (void*)this, x)) return (int)x[0].s_int;
 	return this->QPaintDevice::fontInf(x1, x2);
     }
     virtual int fontMet(QFont* x1, int x2, const char* x3, int x4) const {
@@ -71,24 +71,24 @@ public:
 	x[2].s_int = x2;
 	x[3].s_voidp = (void*)x3;
 	x[4].s_int = x4;
-	if(qt_Smoke->binding->callMethod(6641, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(6633, (void*)this, x)) return (int)x[0].s_int;
 	return this->QPaintDevice::fontMet(x1, x2, x3, x4);
     }
     virtual int metric(int x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(7029, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(7021, (void*)this, x)) return (int)x[0].s_int;
 	return this->QPixmap::metric(x1);
     }
     virtual int resolution() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(6637, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(6629, (void*)this, x)) return (int)x[0].s_int;
 	return this->QPaintDevice::resolution();
     }
     virtual void setResolution(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(6636, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(6628, (void*)this, x)) return;
 	this->QPaintDevice::setResolution(x1);
     }
     ~x_QCanvasPixmap() { qt_Smoke->binding->deleted(24, (void*)this); }

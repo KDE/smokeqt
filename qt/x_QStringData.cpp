@@ -22,12 +22,12 @@ public:
     void x_2(Smoke::Stack x) {
 	// deleteSelf()
 	this->QStringData::deleteSelf();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_3(Smoke::Stack x) {
 	// setDirty()
 	this->QStringData::setDirty();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     static void x_4(Smoke::Stack x) {
 	// QStringData(const QStringData&)

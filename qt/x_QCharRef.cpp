@@ -61,7 +61,7 @@ public:
     void x_10(Smoke::Stack x) const {
 	// operator QChar()
 	xthis->QCharRef::operator QChar();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_11(Smoke::Stack x) const {
 	// isNull()

@@ -8,7 +8,7 @@ public:
     void x_0(Smoke::Stack x) {
 	// connect(QObject*, const char*)
 	this->QAsyncIO::connect((QObject*)x[1].s_class,(const char*)x[2].s_voidp);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     static void x_1(Smoke::Stack x) {
 	// QAsyncIO()
@@ -20,7 +20,7 @@ public:
     void x_2(Smoke::Stack x) {
 	// ready()
 	this->QAsyncIO::ready();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     ~x_QAsyncIO() { qt_Smoke->binding->deleted(6, (void*)this); }
 };

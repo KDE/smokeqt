@@ -43,12 +43,12 @@ public:
     void x_5(Smoke::Stack x) {
 	// setAddress(Q_UINT32)
 	this->QHostAddress::setAddress((Q_UINT32)x[1].s_uint);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_6(Smoke::Stack x) {
 	// setAddress(Q_UINT8*)
 	this->QHostAddress::setAddress((Q_UINT8*)x[1].s_voidp);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_7(Smoke::Stack x) {
 	// setAddress(const QString&)

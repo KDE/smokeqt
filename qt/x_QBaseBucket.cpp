@@ -24,7 +24,7 @@ public:
     void x_3(Smoke::Stack x) {
 	// setNext(QBaseBucket*)
 	this->QBaseBucket::setNext((QBaseBucket*)x[1].s_class);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     static void x_4(Smoke::Stack x) {
 	// QBaseBucket(const QBaseBucket&)

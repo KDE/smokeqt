@@ -30,12 +30,12 @@ public:
     void x_3(Smoke::Stack x) const {
 	// operator QString()
 	this->QKeySequence::operator QString();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_4(Smoke::Stack x) const {
 	// operator int()
 	this->QKeySequence::operator int();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     static void x_5(Smoke::Stack x) {
 	// QKeySequence(const QKeySequence&)

@@ -27,27 +27,27 @@ public:
     void x_3(Smoke::Stack x) {
 	// setValue(int)
 	this->QRangeControl::setValue((int)x[1].s_int);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_4(Smoke::Stack x) {
 	// addPage()
 	this->QRangeControl::addPage();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_5(Smoke::Stack x) {
 	// subtractPage()
 	this->QRangeControl::subtractPage();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_6(Smoke::Stack x) {
 	// addLine()
 	this->QRangeControl::addLine();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_7(Smoke::Stack x) {
 	// subtractLine()
 	this->QRangeControl::subtractLine();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_8(Smoke::Stack x) const {
 	// minValue()
@@ -62,17 +62,17 @@ public:
     void x_10(Smoke::Stack x) {
 	// setRange(int, int)
 	this->QRangeControl::setRange((int)x[1].s_int,(int)x[2].s_int);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_11(Smoke::Stack x) {
 	// setMinValue(int)
 	this->QRangeControl::setMinValue((int)x[1].s_int);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_12(Smoke::Stack x) {
 	// setMaxValue(int)
 	this->QRangeControl::setMaxValue((int)x[1].s_int);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_13(Smoke::Stack x) const {
 	// lineStep()
@@ -87,7 +87,7 @@ public:
     void x_15(Smoke::Stack x) {
 	// setSteps(int, int)
 	this->QRangeControl::setSteps((int)x[1].s_int,(int)x[2].s_int);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_16(Smoke::Stack x) const {
 	// bound(int)
@@ -107,7 +107,7 @@ public:
     void x_19(Smoke::Stack x) {
 	// directSetValue(int)
 	this->QRangeControl::directSetValue((int)x[1].s_int);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_20(Smoke::Stack x) const {
 	// prevValue()
@@ -117,31 +117,31 @@ public:
     void x_21(Smoke::Stack x) {
 	// valueChange()
 	this->QRangeControl::valueChange();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_22(Smoke::Stack x) {
 	// rangeChange()
 	this->QRangeControl::rangeChange();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_23(Smoke::Stack x) {
 	// stepChange()
 	this->QRangeControl::stepChange();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     virtual void rangeChange() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(7580, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(7572, (void*)this, x)) return;
 	this->QRangeControl::rangeChange();
     }
     virtual void stepChange() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(7581, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(7573, (void*)this, x)) return;
 	this->QRangeControl::stepChange();
     }
     virtual void valueChange() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(7579, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(7571, (void*)this, x)) return;
 	this->QRangeControl::valueChange();
     }
     ~x_QRangeControl() { qt_Smoke->binding->deleted(243, (void*)this); }

@@ -9,12 +9,12 @@ public:
     void x_0(Smoke::Stack x) {
 	// sort()
 	this->QCanvasItemList::sort();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_1(Smoke::Stack x) {
 	// drawUnique(QPainter&)
 	this->QCanvasItemList::drawUnique(*(QPainter *)x[1].s_class);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     static void x_2(Smoke::Stack x) {
 	// QCanvasItemList()

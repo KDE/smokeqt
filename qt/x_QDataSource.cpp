@@ -8,7 +8,7 @@ public:
     void x_0(Smoke::Stack x) {
 	// maybeReady()
 	this->QDataSource::maybeReady();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_1(Smoke::Stack x) const {
 	// rewindable()
@@ -18,12 +18,12 @@ public:
     void x_2(Smoke::Stack x) {
 	// enableRewind(bool)
 	this->QDataSource::enableRewind((bool)x[1].s_bool);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_3(Smoke::Stack x) {
 	// rewind()
 	this->QDataSource::rewind();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     static void x_4(Smoke::Stack x) {
 	// QDataSource()
@@ -35,30 +35,30 @@ public:
     virtual void enableRewind(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(1621, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(1618, (void*)this, x)) return;
 	this->QDataSource::enableRewind(x1);
     }
     virtual int readyToSend() {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(1617, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(1614, (void*)this, x, true /*pure virtual*/);
 	return (int)x[0].s_int;
 	// ABSTRACT
     }
     virtual void rewind() {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(1622, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(1619, (void*)this, x)) return;
 	this->QDataSource::rewind();
     }
     virtual bool rewindable() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(1620, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(1617, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QDataSource::rewindable();
     }
     virtual void sendTo(QDataSink* x1, int x2) {
 	Smoke::StackItem x[3];
 	x[1].s_class = (void*)x1;
 	x[2].s_int = x2;
-	qt_Smoke->binding->callMethod(1618, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(1615, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }

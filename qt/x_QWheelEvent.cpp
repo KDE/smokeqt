@@ -88,12 +88,12 @@ public:
     void x_14(Smoke::Stack x) {
 	// accept()
 	this->QWheelEvent::accept();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_15(Smoke::Stack x) {
 	// ignore()
 	this->QWheelEvent::ignore();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     static void x_16(Smoke::Stack x) {
 	// QWheelEvent(const QWheelEvent&)

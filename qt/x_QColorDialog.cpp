@@ -124,7 +124,7 @@ public:
     static void x_22(Smoke::Stack x) {
 	// setCustomColor(int, QRgb)
 	QColorDialog::setCustomColor((int)x[1].s_int,(QRgb)x[2].s_uint);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     ~x_QColorDialog() { qt_Smoke->binding->deleted(43, (void*)this); }
 };

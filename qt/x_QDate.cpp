@@ -206,7 +206,7 @@ public:
     static void x_38(Smoke::Stack x) {
 	// julianToGregorian(uint, int&, int&, int&)
 	QDate::julianToGregorian((uint)x[1].s_uint,*(int *)x[2].s_voidp,*(int *)x[3].s_voidp,*(int *)x[4].s_voidp);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     ~x_QDate() { qt_Smoke->binding->deleted(63, (void*)this); }
 };

@@ -27,7 +27,7 @@ public:
     void x_3(Smoke::Stack x) {
 	// setData(void*)
 	this->QCustomEvent::setData((void*)x[1].s_voidp);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     static void x_4(Smoke::Stack x) {
 	// QCustomEvent(const QCustomEvent&)

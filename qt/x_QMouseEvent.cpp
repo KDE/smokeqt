@@ -74,12 +74,12 @@ public:
     void x_12(Smoke::Stack x) {
 	// accept()
 	this->QMouseEvent::accept();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_13(Smoke::Stack x) {
 	// ignore()
 	this->QMouseEvent::ignore();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     static void x_14(Smoke::Stack x) {
 	// QMouseEvent(const QMouseEvent&)

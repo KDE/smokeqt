@@ -75,17 +75,17 @@ public:
     void x_14(Smoke::Stack x) {
 	// release()
 	xthis->QSessionManager::release();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_15(Smoke::Stack x) {
 	// cancel()
 	xthis->QSessionManager::cancel();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_16(Smoke::Stack x) {
 	// setRestartHint(QSessionManager::RestartHint)
 	xthis->QSessionManager::setRestartHint((QSessionManager::RestartHint)x[1].s_enum);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_17(Smoke::Stack x) const {
 	// restartHint()
@@ -95,7 +95,7 @@ public:
     void x_18(Smoke::Stack x) {
 	// setRestartCommand(const QStringList&)
 	xthis->QSessionManager::setRestartCommand(*(const QStringList *)x[1].s_class);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_19(Smoke::Stack x) const {
 	// restartCommand()
@@ -105,7 +105,7 @@ public:
     void x_20(Smoke::Stack x) {
 	// setDiscardCommand(const QStringList&)
 	xthis->QSessionManager::setDiscardCommand(*(const QStringList *)x[1].s_class);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_21(Smoke::Stack x) const {
 	// discardCommand()
@@ -115,12 +115,12 @@ public:
     void x_22(Smoke::Stack x) {
 	// setManagerProperty(const QString&, const QString&)
 	xthis->QSessionManager::setManagerProperty(*(const QString *)x[1].s_voidp,*(const QString *)x[2].s_voidp);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_23(Smoke::Stack x) {
 	// setManagerProperty(const QString&, const QStringList&)
 	xthis->QSessionManager::setManagerProperty(*(const QString *)x[1].s_voidp,*(const QStringList *)x[2].s_class);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_24(Smoke::Stack x) const {
 	// isPhase2()
@@ -130,7 +130,7 @@ public:
     void x_25(Smoke::Stack x) {
 	// requestPhase2()
 	xthis->QSessionManager::requestPhase2();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     static void x_26(Smoke::Stack x) {
 	// staticMetaObject()

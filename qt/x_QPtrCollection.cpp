@@ -13,7 +13,7 @@ public:
     void x_1(Smoke::Stack x) {
 	// setAutoDelete(bool)
 	this->QPtrCollection::setAutoDelete((bool)x[1].s_bool);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     static void x_2(Smoke::Stack x) {
 	// QPtrCollection()
@@ -36,27 +36,27 @@ public:
     }
     virtual void clear() {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(7481, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(7473, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }
     virtual uint count() const {
 	Smoke::StackItem x[1];
-	qt_Smoke->binding->callMethod(7480, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(7472, (void*)this, x, true /*pure virtual*/);
 	return (uint)x[0].s_uint;
 	// ABSTRACT
     }
     virtual void deleteItem(Item x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	qt_Smoke->binding->callMethod(7485, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(7477, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }
     virtual Item newItem(Item x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(7484, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(7476, (void*)this, x)) {
 	    Item *xptr = (Item *)x[0].s_class;
 	    Item xret(*xptr);
 	    delete xptr;

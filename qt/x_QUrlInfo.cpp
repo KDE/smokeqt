@@ -52,57 +52,57 @@ public:
     void x_6(Smoke::Stack x) {
 	// setName(const QString&)
 	this->QUrlInfo::setName(*(const QString *)x[1].s_voidp);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_7(Smoke::Stack x) {
 	// setDir(bool)
 	this->QUrlInfo::setDir((bool)x[1].s_bool);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_8(Smoke::Stack x) {
 	// setFile(bool)
 	this->QUrlInfo::setFile((bool)x[1].s_bool);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_9(Smoke::Stack x) {
 	// setSymLink(bool)
 	this->QUrlInfo::setSymLink((bool)x[1].s_bool);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_10(Smoke::Stack x) {
 	// setOwner(const QString&)
 	this->QUrlInfo::setOwner(*(const QString *)x[1].s_voidp);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_11(Smoke::Stack x) {
 	// setGroup(const QString&)
 	this->QUrlInfo::setGroup(*(const QString *)x[1].s_voidp);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_12(Smoke::Stack x) {
 	// setSize(uint)
 	this->QUrlInfo::setSize((uint)x[1].s_uint);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_13(Smoke::Stack x) {
 	// setWritable(bool)
 	this->QUrlInfo::setWritable((bool)x[1].s_bool);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_14(Smoke::Stack x) {
 	// setReadable(bool)
 	this->QUrlInfo::setReadable((bool)x[1].s_bool);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_15(Smoke::Stack x) {
 	// setPermissions(int)
 	this->QUrlInfo::setPermissions((int)x[1].s_int);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_16(Smoke::Stack x) {
 	// setLastModified(const QDateTime&)
 	this->QUrlInfo::setLastModified(*(const QDateTime *)x[1].s_class);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_17(Smoke::Stack x) const {
 	// isValid()
@@ -197,67 +197,67 @@ public:
     virtual void setDir(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(10965, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10957, (void*)this, x)) return;
 	this->QUrlInfo::setDir(x1);
     }
     virtual void setFile(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(10966, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10958, (void*)this, x)) return;
 	this->QUrlInfo::setFile(x1);
     }
     virtual void setGroup(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(10969, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10961, (void*)this, x)) return;
 	this->QUrlInfo::setGroup(x1);
     }
     virtual void setLastModified(const QDateTime& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(10974, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10966, (void*)this, x)) return;
 	this->QUrlInfo::setLastModified(x1);
     }
     virtual void setName(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(10964, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10956, (void*)this, x)) return;
 	this->QUrlInfo::setName(x1);
     }
     virtual void setOwner(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(10968, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10960, (void*)this, x)) return;
 	this->QUrlInfo::setOwner(x1);
     }
     virtual void setPermissions(int x1) {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(10973, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10965, (void*)this, x)) return;
 	this->QUrlInfo::setPermissions(x1);
     }
     virtual void setReadable(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(10972, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10964, (void*)this, x)) return;
 	this->QUrlInfo::setReadable(x1);
     }
     virtual void setSize(uint x1) {
 	Smoke::StackItem x[2];
 	x[1].s_uint = x1;
-	if(qt_Smoke->binding->callMethod(10970, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10962, (void*)this, x)) return;
 	this->QUrlInfo::setSize(x1);
     }
     virtual void setSymLink(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(10967, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10959, (void*)this, x)) return;
 	this->QUrlInfo::setSymLink(x1);
     }
     virtual void setWritable(bool x1) {
 	Smoke::StackItem x[2];
 	x[1].s_bool = x1;
-	if(qt_Smoke->binding->callMethod(10971, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(10963, (void*)this, x)) return;
 	this->QUrlInfo::setWritable(x1);
     }
     ~x_QUrlInfo() { qt_Smoke->binding->deleted(343, (void*)this); }

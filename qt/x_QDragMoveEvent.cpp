@@ -30,27 +30,27 @@ public:
     void x_3(Smoke::Stack x) {
 	// accept(bool)
 	this->QDragMoveEvent::accept((bool)x[1].s_bool);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_4(Smoke::Stack x) {
 	// accept()
 	this->QDragMoveEvent::accept();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_5(Smoke::Stack x) {
 	// accept(const QRect&)
 	this->QDragMoveEvent::accept(*(const QRect *)x[1].s_class);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_6(Smoke::Stack x) {
 	// ignore(const QRect&)
 	this->QDragMoveEvent::ignore(*(const QRect *)x[1].s_class);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_7(Smoke::Stack x) {
 	// ignore()
 	this->QDragMoveEvent::ignore();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     static void x_8(Smoke::Stack x) {
 	// QDragMoveEvent(const QDragMoveEvent&)
@@ -62,7 +62,7 @@ public:
     virtual QByteArray encodedData(const char* x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(2851, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(2847, (void*)this, x)) {
 	    QByteArray *xptr = (QByteArray *)x[0].s_class;
 	    QByteArray xret(*xptr);
 	    delete xptr;
@@ -73,13 +73,13 @@ public:
     virtual const char* format(int x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_int = x1;
-	if(qt_Smoke->binding->callMethod(2849, (void*)this, x)) return (const char*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(2845, (void*)this, x)) return (const char*)x[0].s_class;
 	return this->QDropEvent::format(x1);
     }
     virtual bool provides(const char* x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)x1;
-	if(qt_Smoke->binding->callMethod(2852, (void*)this, x)) return (bool)x[0].s_bool;
+	if(qt_Smoke->binding->callMethod(2848, (void*)this, x)) return (bool)x[0].s_bool;
 	return this->QDropEvent::provides(x1);
     }
     ~x_QDragMoveEvent() { qt_Smoke->binding->deleted(101, (void*)this); }

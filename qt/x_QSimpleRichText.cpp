@@ -64,17 +64,17 @@ public:
     void x_7(Smoke::Stack x) {
 	// setWidth(int)
 	this->QSimpleRichText::setWidth((int)x[1].s_int);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_8(Smoke::Stack x) {
 	// setWidth(QPainter*, int)
 	this->QSimpleRichText::setWidth((QPainter*)x[1].s_class,(int)x[2].s_int);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_9(Smoke::Stack x) {
 	// setDefaultFont(const QFont&)
 	this->QSimpleRichText::setDefaultFont(*(const QFont *)x[1].s_class);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_10(Smoke::Stack x) const {
 	// width()
@@ -94,27 +94,27 @@ public:
     void x_13(Smoke::Stack x) {
 	// adjustSize()
 	this->QSimpleRichText::adjustSize();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_14(Smoke::Stack x) const {
 	// draw(QPainter*, int, int, const QRect&, const QColorGroup&, const QBrush*)
 	this->QSimpleRichText::draw((QPainter*)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int,*(const QRect *)x[4].s_class,*(const QColorGroup *)x[5].s_class,(const QBrush*)x[6].s_class);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_15(Smoke::Stack x) const {
 	// draw(QPainter*, int, int, const QRect&, const QColorGroup&)
 	this->QSimpleRichText::draw((QPainter*)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int,*(const QRect *)x[4].s_class,*(const QColorGroup *)x[5].s_class);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_16(Smoke::Stack x) const {
 	// draw(QPainter*, int, int, const QRegion&, const QColorGroup&, const QBrush*)
 	this->QSimpleRichText::draw((QPainter*)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int,*(const QRegion *)x[4].s_class,*(const QColorGroup *)x[5].s_class,(const QBrush*)x[6].s_class);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_17(Smoke::Stack x) const {
 	// draw(QPainter*, int, int, const QRegion&, const QColorGroup&)
 	this->QSimpleRichText::draw((QPainter*)x[1].s_class,(int)x[2].s_int,(int)x[3].s_int,*(const QRegion *)x[4].s_class,*(const QColorGroup *)x[5].s_class);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_18(Smoke::Stack x) const {
 	// context()

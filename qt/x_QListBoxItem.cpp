@@ -78,7 +78,7 @@ public:
     void x_13(Smoke::Stack x) {
 	// setSelectable(bool)
 	this->QListBoxItem::setSelectable((bool)x[1].s_bool);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_14(Smoke::Stack x) const {
 	// isSelectable()
@@ -103,45 +103,45 @@ public:
     void x_18(Smoke::Stack x) {
 	// setText(const QString&)
 	this->QListBoxItem::setText(*(const QString *)x[1].s_voidp);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_19(Smoke::Stack x) {
 	// setCustomHighlighting(bool)
 	this->QListBoxItem::setCustomHighlighting((bool)x[1].s_bool);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     virtual int height(const QListBox* x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(5300, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(5296, (void*)this, x)) return (int)x[0].s_int;
 	return this->QListBoxItem::height(x1);
     }
     virtual void paint(QPainter* x1) {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	qt_Smoke->binding->callMethod(5313, (void*)this, x, true /*pure virtual*/);
+	qt_Smoke->binding->callMethod(5309, (void*)this, x, true /*pure virtual*/);
 	return;
 	// ABSTRACT
     }
     virtual const QPixmap* pixmap() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(5299, (void*)this, x)) return (const QPixmap*)x[0].s_class;
+	if(qt_Smoke->binding->callMethod(5295, (void*)this, x)) return (const QPixmap*)x[0].s_class;
 	return this->QListBoxItem::pixmap();
     }
     virtual int rtti() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(5311, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(5307, (void*)this, x)) return (int)x[0].s_int;
 	return this->QListBoxItem::rtti();
     }
     virtual void setText(const QString& x1) {
 	Smoke::StackItem x[2];
 	x[1].s_voidp = (void*)&x1;
-	if(qt_Smoke->binding->callMethod(5314, (void*)this, x)) return;
+	if(qt_Smoke->binding->callMethod(5310, (void*)this, x)) return;
 	this->QListBoxItem::setText(x1);
     }
     virtual QString text() const {
 	Smoke::StackItem x[1];
-	if(qt_Smoke->binding->callMethod(5298, (void*)this, x)) {
+	if(qt_Smoke->binding->callMethod(5294, (void*)this, x)) {
 	    QString *xptr = (QString *)x[0].s_class;
 	    QString xret(*xptr);
 	    delete xptr;
@@ -152,7 +152,7 @@ public:
     virtual int width(const QListBox* x1) const {
 	Smoke::StackItem x[2];
 	x[1].s_class = (void*)x1;
-	if(qt_Smoke->binding->callMethod(5301, (void*)this, x)) return (int)x[0].s_int;
+	if(qt_Smoke->binding->callMethod(5297, (void*)this, x)) return (int)x[0].s_int;
 	return this->QListBoxItem::width(x1);
     }
     ~x_QListBoxItem() { qt_Smoke->binding->deleted(182, (void*)this); }

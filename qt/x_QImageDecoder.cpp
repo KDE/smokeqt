@@ -49,12 +49,12 @@ public:
     static void x_7(Smoke::Stack x) {
 	// registerDecoderFactory(QImageFormatType*)
 	QImageDecoder::registerDecoderFactory((QImageFormatType*)x[1].s_class);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     static void x_8(Smoke::Stack x) {
 	// unregisterDecoderFactory(QImageFormatType*)
 	QImageDecoder::unregisterDecoderFactory((QImageFormatType*)x[1].s_class);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     ~x_QImageDecoder() { qt_Smoke->binding->deleted(158, (void*)this); }
 };

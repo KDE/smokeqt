@@ -26,7 +26,7 @@ public:
     void x_2(Smoke::Stack x) {
 	// setMatrix(double, double, double, double, double, double)
 	this->QWMatrix::setMatrix((double)x[1].s_double,(double)x[2].s_double,(double)x[3].s_double,(double)x[4].s_double,(double)x[5].s_double,(double)x[6].s_double);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_3(Smoke::Stack x) const {
 	// m11()
@@ -61,12 +61,12 @@ public:
     void x_9(Smoke::Stack x) const {
 	// map(int, int, int*, int*)
 	this->QWMatrix::map((int)x[1].s_int,(int)x[2].s_int,(int*)x[3].s_voidp,(int*)x[4].s_voidp);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_10(Smoke::Stack x) const {
 	// map(double, double, double*, double*)
 	this->QWMatrix::map((double)x[1].s_double,(double)x[2].s_double,(double*)x[3].s_voidp,(double*)x[4].s_voidp);
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_11(Smoke::Stack x) const {
 	// mapRect(const QRect&)
@@ -91,7 +91,7 @@ public:
     void x_15(Smoke::Stack x) {
 	// reset()
 	this->QWMatrix::reset();
-	(void)x[0].s_int; // noop (for compiler warning)
+	(void)x; // noop (for compiler warning)
     }
     void x_16(Smoke::Stack x) const {
 	// isIdentity()
