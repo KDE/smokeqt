@@ -9,10 +9,14 @@ use File::Basename;
 
 my $here = `pwd`;
 chomp $here;
-my $outdir = $here;
+my $outdir = $here . "/generate.pl.tmpdir";
+my $finaloutdir = $here;
+## Note: outdir and finaloutdir should NOT be the same dir!
 
-# Also delete all x_*.cpp files under outdir
+# Delete all x_*.cpp files under outdir (or create outdir if nonexistent)
 if (-d $outdir) { system "rm -f $outdir/x_*.cpp"; } else { mkdir $outdir; }
+
+mkdir $finaloutdir unless (-d $finaloutdir);
 
 # Need to cd to kalyptus's directory so that perl finds Ast.pm etc.
 chdir "$kalyptusdir" or die "Couldn't go to $kalyptusdir (edit script to change dir)\n";
@@ -46,5 +50,32 @@ closedir QT;
 
 
 # Launch kalyptus
-# Then update list of source files in $outdir/Makefile.am
-exec "perl kalyptus @ARGV -fsmoke --outputdir=$outdir @headers && cd $here && perl ./generate_makefile_am.pl";
+system "perl kalyptus @ARGV -fsmoke --outputdir=$outdir @headers";
+my $exit = $? >> 8;
+exit $exit if ($exit);
+
+# Copy changed or new files to finaloutdir
+### What this doesn't notice is deleted files.
+### TODO (readdir in finaloutdir...) when I have a testcase ;)
+opendir (OUT, $outdir) or die "Couldn't opendir $outdir";
+foreach $filename (readdir(OUT)) {
+    next if ( -d "$outdir/$filename" ); # only files, not dirs
+    my $docopy = 1;
+    if ( -f "$finaloutdir/$filename" ) {
+        # How can I do a fast file compare in perl?
+        system "cmp -s $outdir/$filename $finaloutdir/$filename";
+	$docopy = ($?>>8);  # 0 if files identical, 1 if different
+    }
+    if ($docopy) {
+	#print STDERR "Updating $filename...\n";
+	system "cp -f $outdir/$filename $finaloutdir/$filename";
+    }
+}
+closedir OUT;
+
+# Delete outdir
+system "rm -rf $outdir"
+
+# Update list of source files in $outdir/Makefile.am
+chdir $finaloutdir;
+exec "perl ./generate_makefile_am.pl";
