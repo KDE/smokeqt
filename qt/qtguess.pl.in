@@ -44,14 +44,17 @@ $x{'LIBPNG'}  =   '@LIBPNG@';
 $x{'LIBJPEG'} =   '@LIBJPEG@';
 $x{'LIBSM'}   =   '@LIBSM@';
 $x{'LIBSOCKET'} = '@LIBSOCKET@';
+$x{'LIBDL'}      = '@LIBDL@';
+$x{'LIBRESOLV'}  = '@LIBRESOLV@';
 $x{'LIB_X11'} =   '@LIB_X11@';
+$x{'X_PRE_LIBS'} = '@X_PRE_LIBS@';
 $x{'LIB_X11'} =~ s/\$\((.*?)\)/$x{$1}/g;
 
 $qtflags =~ s/\$\((.*?)\)/$x{$1}/g;
 
  -e "$qtinc/qglobal.h" or die "Invalid Qt directory.\n";
 
-my $ccmd = "$cc $ccflags $allinc $alllib -o $tmp $tmp.cpp $qtflags 2>/dev/null";
+my $ccmd = "$cc $ccflags $allinc $alllib -o $tmp $tmp.cpp $qtflags";
 
 my $threshold = defined($opt_t)?$opt_t : $default_threshold;
 $threshold >= 0 or die "invalid testing threshold: $threshold\n";
@@ -93,7 +96,7 @@ sub grab_qglobal_symbols
 {
 	my $cmd = "$cc -E -D__cplusplus -dM -I$qtinc $qtinc/qglobal.h 2>/dev/null";
 	my $symbols = `$cmd`;
-        for(1..2)
+        for(0..1)
         {
 	    if( check_exit_status($?) )
 	    {
@@ -109,11 +112,11 @@ sub grab_qglobal_symbols
 		print "Found ". scalar( keys %qtundefs )." undefined symbol".((scalar( keys %qtundefs ) -1)?"s":"")." in qglobal.h\n" unless ($opt_q or !(keys %qtundefs));
                 last;
 	    }
-	    else
+	    elsif(! $_) # first try
 	    {
 		print  "Failed to run $cmd.\nTrying without __cplusplus (might be already defined)\n";
                 $cmd = "$cc -E -dM -I$qtinc $qtinc/qglobal.h 2>/dev/null";
-                $symbols = $cmd;
+                $symbols = `$cmd`;
                 next;
 	    }
         }
@@ -136,10 +139,19 @@ sub preliminary_test
 	£;
 	print OUT $simple;
 	close OUT;
-	my $a = system($ccmd);
-	if( !check_exit_status($a) )
+        my $out = `$ccmd 2>&1`;
+	if( !check_exit_status($?) )
 	{
-		die "\nFAILED : check your configuration.\nFailed program was:$simple\nCompiled with: $ccmd\n";
+		die <<"EOF";
+
+FAILED : check your configuration.
+Failed program was:
+$simple
+Compiled with:
+$ccmd
+Compiler output:
+$out
+EOF
 	}
 	else
 	{
@@ -181,7 +193,9 @@ sub perform_all_tests
 		£;
 		close OUT;
 
-		my $ok = check_exit_status( system($ccmd) );
+                my $out = `$ccmd 2>&1`;
+
+		my $ok = check_exit_status($?);
 		if( !$ok )
 		{
 			$qtdefs{$_} = 1;
