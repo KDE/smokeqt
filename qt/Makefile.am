@@ -3,6 +3,9 @@ lib_LTLIBRARIES = libsmokeqt.la
 # set the include path for X, qt and KDE
 INCLUDES         = -I.. $(all_includes)
 
+## VERY TEMPORARY
+include_HEADERS = boundaries.h
+
 # the library search path. 
 #libsmokeqt_la_LDFLAGS = -version-info 1:0 -no-undefined $(all_libraries)
 # Can't use -no-undefined yet. call_method is defined in perlqt's main.cpp currently.
