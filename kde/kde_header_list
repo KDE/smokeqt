@@ -432,6 +432,7 @@ kio/uiserver_stub.h
 netwm_def.h
 netwm.h
 knewstuff/knewstuff.h
+knewstuff/knewstuffsecure.h
 knewstuff/engine.h
 knewstuff/entry.h
 knewstuff/provider.h
