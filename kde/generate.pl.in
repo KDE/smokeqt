@@ -78,6 +78,18 @@ close HEADERS;
 # Find out which header files we need to parse
 # We don't want all of them - e.g. not template-based stuff
 my %kdeexcludes = (
+#   These headers don't look suitable for inclusion:
+	'kallocator.h' => 1,
+	'kbookmarkimporter_crash.h' => 1,
+	'kbookmarkimporter_ie.h' => 1,
+	'kbookmarkimporter_opera.h' => 1,
+	'kbookmarkimporter_ns.h' => 1,
+	'kcrash.h' => 1,
+	'kdebug.h' => 1,
+	'kdebugclasses.h' => 1,
+	'kde_terminal_interface.h' => 1,
+	'kdirnotify_stub.h' => 1,
+	
 	'kxmlguifactory.h' => 1,
 	'kxmlguibuilder.h' => 1,
 	'kallocator.h' => 1,
@@ -117,9 +129,6 @@ my %kdeexcludes = (
 	'kparts/pluginselectormodule.h' => 1,
 	'kopenssl.h' => 1,
 	'kdebug.h' => 1,
-	'khtml_events.h' => 1,
-	'khtml_part.h' => 1,
-	'khtmlview.h' => 1,
 	'kautomount.h' => 1,
 	'kdirlister.h' => 1,
 	'kimagefilepreview.h' => 1,
