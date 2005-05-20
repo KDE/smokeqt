@@ -77,7 +77,11 @@ public:
         mf_static = 0x01,
         mf_const = 0x02,
         mf_copyctor = 0x04,  // Copy constructor
-        mf_internal = 0x08   // For internal use only
+        mf_internal = 0x08,   // For internal use only
+        mf_enum = 0x10,   // An enum value
+        mf_ctor = 0x20,
+        mf_dtor = 0x40,
+        mf_protected = 0x80
     };
     /**
      * Describe one method of one class.
