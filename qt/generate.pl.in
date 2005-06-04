@@ -17,10 +17,21 @@ my $defines = "qtdefines";
 my $headerlist = "@srcdir@/header_list";
 my $definespath = "$here/$defines";
 my $headerlistpath = "$here/$headerlist";
+my $qscintilla_headerlist = "";
+my $qscintilla_headerlistpath = "";
+
+if("@qtextscintilla@" eq "yes")
+{
+ $qscintilla_headerlist = "./qscintilla_header_list";
+ $qscintilla_headerlistpath = "$here/$qscintilla_headerlist";
+}
 
 ## If srcdir != builddir, use headerlist from src
 $headerlistpath = $headerlist if ($headerlist =~ /^\//);
-
+if("@qtextscintilla@" eq "yes")
+{
+ $qscintilla_headerlistpath = $qscintilla_headerlist if ($qscintilla_headerlist =~ /^\//);
+}
 ## Note: outdir and finaloutdir should NOT be the same dir!
 
 # Delete all x_*.cpp files under outdir (or create outdir if nonexistent)
@@ -77,6 +88,13 @@ open(HEADERS, $headerlistpath) or die "Couldn't open $headerlistpath: $!\n";
 map { chomp ; $includes{$_} = 1 } <HEADERS>;
 close HEADERS;
 
+if("@qtextscintilla@" eq "yes")
+{
+ open(HEADERS, $qscintilla_headerlistpath) or die "Couldn't open $qscintilla_headerlistpath: $!\n";
+ map { chomp ; $includes{$_} = 1 } <HEADERS>;
+ close HEADERS;
+}
+ 
 # Can we compile the OpenGl module ?
 if("@KDE_HAVE_GL@" eq "yes")
 {
