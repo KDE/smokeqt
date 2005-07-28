@@ -9,7 +9,9 @@ EXTRA_DIST=generate.pl.in qtguess.pl.in qt_smoke.h Makefile.am
 libsmokeqt_la_LDFLAGS = -version-info 3:2:2 -no-undefined $(all_libraries) $(GLINC)
 
 # the libraries to link against.
-libsmokeqt_la_LIBADD   = $(LIB_QT) $(GLLIB) $(LIBQSCINTILLA)
+libsmokeqt_la_LIBADD   = $(LIB_QTCORE) $(LIB_QTGUI) $(LIB_QTNETWORK) \
+						$(LIB_QTOPENGL) $(LIB_QTSQL) $(LIB_QTCORE) $(LIB_QTXML) \
+						$(GLLIB) $(LIBQSCINTILLA)
 
 x_sources = x_1.cpp x_2.cpp x_3.cpp x_4.cpp x_5.cpp x_6.cpp x_7.cpp \
    x_8.cpp x_9.cpp x_10.cpp x_11.cpp x_12.cpp x_13.cpp x_14.cpp x_15.cpp \

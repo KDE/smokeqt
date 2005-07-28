@@ -8,6 +8,7 @@ my $kalyptusdir = "../../kalyptus";
 use File::Basename;
 use File::Copy qw|cp|;
 use File::Compare;
+use File::Find;
 use Cwd;
 
 my $here = getcwd;
@@ -116,24 +117,27 @@ if("@KDE_HAVE_GL@" eq "yes")
 my @headers = ();
 
 $qtinc= '@qt_includes@';
-opendir (QT, $qtinc) or die "Couldn't find $qtinc";
-foreach $filename (readdir(QT)) {
-    $entry = $qtinc."/".$filename;
-    if ( ( -e $entry or -l $entry )         # A real file or a symlink
-        && ( ! -d _ ) )                     # Not a symlink to a dir though
-    {
-        push(@headers, $entry)
-          if ( !defined $excludes{$filename} # Not excluded
-              && $includes{$filename}        # Known header
-	      && $filename =~ /\.h$/ ); # Not a backup file etc. Only headers.
-        undef $includes{$filename}
-    }
-}
-closedir QT;
+
+find(
+    {   wanted => sub {
+	    (-e || -l and !-d) and do {
+	        $f = substr($_, 1 + length $qtinc);
+                push ( @headers, $_ )
+	    	  if( !defined $excludes{$f} # Not excluded
+	    	     && $includes{$f}        # Known header
+	    	     && /\.h$/);     # Not a backup file etc. Only headers.
+	    	undef $includes{$f}   
+	     };
+	},
+	follow_fast => 1,
+	follow_skip => 2,
+	no_chdir => 1
+    }, $qtinc
+ );
 
 # Launch kalyptus
 chdir "../smoke/qt";
-system "perl -I@top_srcdir@/kalyptus @top_srcdir@/kalyptus/kalyptus @ARGV --globspace -fsmoke --name=qt $macros --no-cache --outputdir=$outdir @headers";
+system "perl -I@top_srcdir@/kalyptus @top_srcdir@/kalyptus/kalyptus @ARGV --qt4 --globspace -fsmoke --name=qt $macros --no-cache --outputdir=$outdir @headers";
 my $exit = $? >> 8;
 exit $exit if ($exit);
 chdir "$kalyptusdir";
