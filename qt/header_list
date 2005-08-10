@@ -14,7 +14,6 @@ QtGui/qactiongroup.h
 QtGui/qaction.h
 QtCore/qalgorithms.h
 QtGui/qapplication.h
-QtCore/qatomic.h
 QtCore/qbasictimer.h
 QtCore/qbitarray.h
 QtGui/qbitmap.h
