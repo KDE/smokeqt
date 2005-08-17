@@ -61,6 +61,10 @@ QtCore/qfeatures.h
 QtGui/qfiledialog.h
 QtCore/qfile.h
 QtCore/qfileinfo.h
+QtCore/qlibraryinfo.h
+QtCore/qmimedata.h
+QtGui/qpicture.h
+QtGui/qscrollarea.h
 QtGui/qfontdatabase.h
 QtGui/qfontdialog.h
 QtGui/qfont.h
@@ -68,6 +72,7 @@ QtGui/qfontinfo.h
 QtGui/qfontmetrics.h
 QtGui/qframe.h
 QtNetwork/qftp.h
+QtNetwork/qhostinfo.h
 QtOpenGL/qglcolormap.h
 QtOpenGL/qgl.h
 QtCore/qglobal.h
@@ -77,6 +82,8 @@ QtNetwork/qhostaddress.h
 QtNetwork/qhttp.h
 QtGui/qicon.h
 Qt/qiconset.h
+QtGui/qdockwidget.h
+QtGui/qfocusframe.h
 QtGui/qimage.h
 QtGui/qinputcontextfactory.h
 QtGui/qinputcontext.h
@@ -177,9 +184,13 @@ QtSql/qsql.h
 QtSql/qsqlindex.h
 QtSql/qsqlquery.h
 QtSql/qsqlrecord.h
+QtSql/qsqlrelation.h
 QtSql/qsqlrelationaldelegate.h
 QtSql/qsqlresult.h
+QtSql/qsqltablemodel.h
+QtSql/qsqlquerymodel.h
 QtGui/qstackedlayout.h
+QtGui/qworkspace.h
 QtGui/qstackedwidget.h
 QtCore/qstack.h
 QtGui/qstandarditemmodel.h
