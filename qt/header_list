@@ -90,6 +90,12 @@ QtCore/qiterator.h
 QtGui/qkeysequence.h
 QtGui/qlabel.h
 QtGui/qlayout.h
+QtGui/qgridlayout.h
+QtGui/qstackedlayout.h
+QtGui/qlayoutitem.h
+QtGui/qboxlayout.h
+QtGui/qvboxlayout.h
+QtGui/qhboxlayout.h
 QtGui/qlayoutitem.h
 QtGui/qlcdnumber.h
 QtCore/qlibrary.h

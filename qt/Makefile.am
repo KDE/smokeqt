@@ -20,9 +20,7 @@ x_sources = x_1.cpp x_2.cpp x_3.cpp x_4.cpp x_5.cpp x_6.cpp x_7.cpp \
 # which sources should be compiled for perlqtkde
 libsmokeqt_la_SOURCES = smokedata.cpp $(x_sources)
 
-$(x_sources): smokedata.cpp
-
-smokedata.cpp:
+$(x_sources) smokedata.cpp:
 	perl generate.pl
 
 CLEANFILES = $(libsmokeqt_la_SOURCES)
