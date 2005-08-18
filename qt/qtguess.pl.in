@@ -249,6 +249,7 @@ BEGIN {
 
 our %tests = (
 	"QT_NO_ACCEL" => 		["qaccel.h", "QAccel foo( (QWidget*)NULL );", 5],
+        "QT_NO_ACCESSIBILITY" =>        ["qaccessibleevent.h", "QAccessibleEvent event(QEvent::AccessibilityHelp, 0);", 5],
 	"QT_NO_ACTION" =>		["qaction.h", "QAction foo( (QObject*)NULL );", 5],
 	"QT_NO_ASYNC_IO" =>		["qasyncio.h", "QAsyncIO foo();", 5],
 	"QT_NO_ASYNC_IMAGE_IO"=>	["qasyncimageio.h", "QImageDecoder foo( (QImageConsumer*) NULL );", 5],
