@@ -2,6 +2,7 @@ QtGui/qabstractbutton.h
 QtCore/qabstracteventdispatcher.h
 QtGui/qabstractitemdelegate.h
 QtCore/qabstractitemmodel.h
+QtGui/qstyleoption.h
 QtGui/qabstractitemview.h
 QtGui/qabstractscrollarea.h
 QtGui/qabstractpagesetupdialog.h
@@ -85,6 +86,8 @@ Qt/qiconset.h
 QtGui/qdockwidget.h
 QtGui/qfocusframe.h
 QtGui/qimage.h
+QtGui/qimagereader.h
+QtGui/qimagewriter.h
 QtGui/qinputcontextfactory.h
 QtGui/qinputcontext.h
 QtGui/qinputcontextplugin.h
