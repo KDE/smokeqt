@@ -178,6 +178,7 @@ kiconeffect.h
 kiconloader.h
 kicontheme.h
 kiconview.h
+kiconviewsearchline.h
 kidna.h
 kimageeffect.h
 kimagefilepreview.h
