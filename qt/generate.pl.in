@@ -115,7 +115,7 @@ if("@KDE_HAVE_GL@" eq "yes")
 # List Qt headers, and exclude the ones listed above
 my @headers = ();
 
-$qtinc= '@qt_includes@/Qt';
+$qtinc= '@qt_includes@';
 opendir (QT, $qtinc) or die "Couldn't find $qtinc";
 foreach $filename (readdir(QT)) {
     $entry = $qtinc."/".$filename;
