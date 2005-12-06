@@ -128,6 +128,7 @@ QtGui/qmotifstyle.h
 QtGui/qmovie.h
 QtCore/qmutex.h
 QtCore/qnamespace.h
+QtNetwork/qnetworkproxy.h
 QtCore/qobjectcleanuphandler.h
 QtCore/qobjectdefs.h
 QtCore/qobject.h
