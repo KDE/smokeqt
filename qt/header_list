@@ -1,5 +1,9 @@
 q1xcompatibility.h
 qabstractlayout.h
+qabstractprintdialog.h
+qabstractscrollarea.h
+qabstractslider.h
+qabstractspinbox.h
 qaccel.h
 qaccessible.h
 qaction.h
@@ -11,6 +15,8 @@ qasciidict.h
 qassistantclient.h
 qasyncimageio.h
 qasyncio.h
+qatomic.h
+qbasictimer.h
 qbig5codec.h
 qbitarray.h
 qbitarry.h
@@ -20,9 +26,11 @@ qbttngrp.h
 qbuffer.h
 qbuttongroup.h
 qbutton.h
+qbytearray.h
 qcache.h
 qcanvas.h
 qcdestyle.h
+qchar.h
 qcheckbox.h
 qchkbox.h
 qcleanuphandler.h
@@ -40,6 +48,7 @@ qconfig-dist.h
 qconfig.h
 qconnect.h
 qconnection.h
+qcoreapplication.h
 qcstring.h
 qcursor.h
 qdatabrowser.h
@@ -70,6 +79,7 @@ qeucjpcodec.h
 qeuckrcodec.h
 qevent.h
 qeventloop.h
+qfactoryinterface.h
 qfeatures.h
 qfiledef.h
 qfiledialog.h
@@ -112,6 +122,7 @@ qheader.h
 qhgroupbox.h
 qhostaddress.h
 qhttp.h
+qicon.h
 qiconset.h
 qiconview.h
 qimageformatplugin.h
@@ -129,10 +140,13 @@ qkeycode.h
 qkeysequence.h
 qlabel.h
 qlayout.h
+qlayoutitem.h
 qlcdnumber.h
 qlcdnum.h
 qlocale.h
 qlibrary.h
+qline.h
+qlinef.h
 qlined.h
 qlineedit.h
 qlistbox.h
@@ -141,6 +155,7 @@ qlistview.h
 qlocalfs.h
 qmainwindow.h
 qmap.h
+qmatrix.h
 qmemarray.h
 qmenubar.h
 qmenudata.h
@@ -189,6 +204,8 @@ qpmcache.h
 qpntarry.h
 qpointarray.h
 qpoint.h
+qpolygon.h
+qpolygonf.h
 qpolygonscanner.h
 qpopmenu.h
 qpopupmenu.h
@@ -285,8 +302,17 @@ qtextbrowser.h
 qtextcodecfactory.h
 qtextcodec.h
 qtextcodecplugin.h
+qtextcursor.h
+qtextdocument.h
+qtextdocumentfragment.h
 qtextedit.h
+qtextformat.h
+qtextlayout.h
+qtextlist.h
+qtextobject.h
+qtextoption.h
 qtextstream.h
+qtexttable.h
 qtextview.h
 qt.h
 qthread.h
