@@ -9,6 +9,7 @@ QtGui/qabstractpagesetupdialog.h
 QtGui/qabstractprintdialog.h
 QtGui/qabstractslider.h
 QtNetwork/qabstractsocket.h
+QtNetwork/qnetworkproxy.h
 QtGui/qabstractspinbox.h
 QtGui/qabstracttextdocumentlayout.h
 QtGui/qactiongroup.h
