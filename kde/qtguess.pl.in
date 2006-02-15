@@ -52,7 +52,7 @@ $x{'LIB_X11'} =~ s/\$\((.*?)\)/$x{$1}/g;
 
 $qtflags =~ s/\$\((.*?)\)/$x{$1}/g;
 
- -e "$qtinc/qglobal.h" or die "Invalid Qt directory.\n";
+ -e "$qtinc/QtCore/qglobal.h" or die "Invalid Qt include directory.\n";
 
 my $ccmd = "$cc $ccflags $allinc $alllib -o $tmp $tmp.cpp $qtflags";
 
@@ -94,7 +94,7 @@ sub gettmpfile
 
 sub grab_qglobal_symbols
 {
-	my $cmd = "$cc -E -D__cplusplus -dM -I$qtinc $qtinc/qglobal.h 2>/dev/null";
+	my $cmd = "$cc -E -D__cplusplus -dM -I$qtinc/QtCore $qtinc/QtCore/qglobal.h 2>/dev/null";
 	my $symbols = `$cmd`;
         for(0..1)
         {
@@ -249,6 +249,7 @@ BEGIN {
 
 our %tests = (
 	"QT_NO_ACCEL" => 		["qaccel.h", "QAccel foo( (QWidget*)NULL );", 5],
+	"QT_NO_ACCESSIBILITY" =>        ["qaccessible.h", "QAccessibleEvent event(QEvent::AccessibilityHelp, 0);", 10],
 	"QT_NO_ACTION" =>		["qaction.h", "QAction foo( (QObject*)NULL );", 5],
 	"QT_NO_ASYNC_IO" =>		["qasyncio.h", "QAsyncIO foo();", 5],
 	"QT_NO_ASYNC_IMAGE_IO"=>	["qasyncimageio.h", "QImageDecoder foo( (QImageConsumer*) NULL );", 5],
