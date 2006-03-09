@@ -33,7 +33,7 @@ dnl -------
 AC_ARG_ENABLE(
    qscintilla,
    [  --enable-qscintilla@<:@=yes|no@:>@   Smoke: build Smoke with QScintilla extention for qt @<:@default:no@:>@],
-   [ qtextscintilla="$withval" ],
+   [ qtextscintilla="$enableval" ],
    [ qtextscintilla="no" ]
 )
 AC_SUBST(qtextscintilla)
