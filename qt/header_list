@@ -80,6 +80,7 @@ QtGui/qabstractitemdelegate.h
 QtGui/qabstractitemview.h
 QtGui/qabstractpagesetupdialog.h
 QtGui/qabstractprintdialog.h
+QtGui/qabstractproxymodel.h
 QtGui/qabstractscrollarea.h
 QtGui/qabstractslider.h
 QtGui/qabstractspinbox.h
