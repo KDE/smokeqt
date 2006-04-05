@@ -182,6 +182,7 @@ QtGui/qshortcut.h
 QtGui/qsizegrip.h
 QtGui/qsizepolicy.h
 QtGui/qslider.h
+QtGui/qsortfilterproxymodel.h
 QtGui/qsound.h
 QtGui/qspinbox.h
 QtGui/qsplashscreen.h
