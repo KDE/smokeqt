@@ -9,9 +9,9 @@ AC_SUBST(KDE_HAVE_GL)
 
 AC_ARG_WITH(
    threshold,
-   [  --with-threshold@<:@=0..15@:>@  Smoke: Qt tests threshold Default:15 Lower=more tests],
+   [  --with-threshold@<:@=0..15@:>@  Smoke: Qt tests threshold Default:10 Lower=more tests],
    [ qt_test_threshold="$withval" ],
-   [ qt_test_threshold=15 ]
+   [ qt_test_threshold=10 ]
 )
 AC_SUBST(qt_test_threshold)
 

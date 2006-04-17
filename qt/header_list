@@ -144,6 +144,7 @@ QtGui/qlcdnumber.h
 QtGui/qlineedit.h
 QtGui/qlistview.h
 QtGui/qlistwidget.h
+QtGui/qmacstyle.h
 QtGui/qmainwindow.h
 QtGui/qmatrix.h
 QtGui/qmenubar.h
@@ -163,6 +164,7 @@ QtGui/qpen.h
 QtGui/qpicture.h
 QtGui/qpixmapcache.h
 QtGui/qpixmap.h
+QtGui/qplastiquestyle.h
 QtGui/qpolygon.h
 QtGui/qprintdialog.h
 QtGui/qprintengine.h
@@ -228,6 +230,7 @@ QtGui/qwhatsthis.h
 QtGui/qwidget.h
 QtGui/qwindowdefs.h
 QtGui/qwindowsstyle.h
+QtGui/qwindowsxpstyle.h
 QtGui/qwmatrix.h
 QtGui/qworkspace.h
 QtGui/qx11info_x11.h
