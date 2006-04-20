@@ -199,7 +199,6 @@ sub perform_all_tests
 		if( !$ok )
 		{
 			$qtdefs{$_} = 1;
-			print($out);
 		}
 		print +$opt_q ? ++$count."/$used" : ( $ok ? "*Undefined*\n" : " [Defined]\n" );
 	}
