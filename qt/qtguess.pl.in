@@ -248,7 +248,7 @@ BEGIN {
 # "DEFINE" => ["header-1.h,... header-n.h", "main() code", priority, "Definitions (if needed)"]
 
 our %tests = (
-	"QT_NO_ACCESSIBILITY" =>        ["QtGui/qaccessible.h", "QAccessibleEvent event(QEvent::AccessibilityHelp, 0);", 10],
+	"QT_NO_ACCESSIBILITY" =>        ["QtGui/qaccessible.h", "QAccessibleEvent event(QEvent::AccessibilityHelp, 0);", 15],
 	"QT_NO_ACTION" =>		["QtGui/qaction.h", "QAction foo( (QObject*)NULL );", 5],
 	#QT_NO_BIG_CODECS
  	"QT_NO_BUTTONGROUP" =>		["QtGui/qbuttongroup.h", "QButtonGroup foo( (QObject*)NULL );", 12],
