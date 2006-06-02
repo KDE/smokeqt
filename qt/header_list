@@ -262,5 +262,7 @@ QtSql/qsqlrelationaldelegate.h
 QtSql/qsqlrelation.h
 QtSql/qsqlresult.h
 QtSql/qsqltablemodel.h
+QtSvg/qsvgrenderer.h
+QtSvg/qsvgwidget.h
 QtXml/qdom.h
 QtXml/qxml.h
