@@ -92,7 +92,6 @@ QtGui/qbitmap.h
 QtGui/qboxlayout.h
 QtGui/qbrush.h
 QtGui/qbuttongroup.h
-QtGui/qcdestyle.h
 QtGui/qcheckbox.h
 QtGui/qclipboard.h
 QtGui/qcolordialog.h
