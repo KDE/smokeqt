@@ -152,7 +152,6 @@ QtGui/qmenudata.h
 QtGui/qmenu.h
 QtGui/qmessagebox.h
 QtGui/qmime.h
-QtGui/qmotifstyle.h
 QtGui/qmovie.h
 QtGui/qpagesetupdialog.h
 QtGui/qpaintdevice.h
