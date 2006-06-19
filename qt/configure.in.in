@@ -33,7 +33,7 @@ dnl -------
 AC_ARG_ENABLE(
    qscintilla,
    [  --enable-qscintilla@<:@=yes|no@:>@   Smoke: build Smoke with QScintilla extention for qt @<:@default:no@:>@],
-   [ qtextscintilla="$withval" ],
+   [ qtextscintilla="$enableval" ],
    [ qtextscintilla="no" ]
 )
 AC_SUBST(qtextscintilla)
@@ -79,4 +79,122 @@ AC_SUBST(LIBQSCINTILLA)
 
 if test "X$qtextscintilla" = "Xyes" ; then
   AC_FIND_QSCINTILLA
+fi
+
+dnl -------
+dnl Test for libdbus-qt4-1 (D-Bus support)
+dnl -------
+
+AC_ARG_ENABLE(
+   qtdbus,
+   [  --enable-qtdbus@<:@=yes|no@:>@   Smoke: build Smoke with QtDbus extention for qt @<:@default:no@:>@],
+   [ qtdbus="$enableval" ],
+   [ qtdbus="no" ]
+)
+AC_SUBST(qtdbus)
+
+AC_DEFUN([AC_FIND_QTDBUS],
+[
+AC_MSG_CHECKING([for libdbus-qt4-1])
+AC_CACHE_VAL(ac_cv_lib_qtdbus,
+[
+AC_LANG_SAVE
+AC_LANG_CPLUSPLUS
+
+ kde_ldflags_save="$LDFLAGS"
+ kde_libs_save="$LIBS"
+ kde_cxxflags_save="$CXXFLAGS"
+
+ LIBS="-ldbus-1 -ldbus-qt4-1 -ldbus-glib-1 $LIB_QTCORE $LIB_QTXML $LIBS"
+ CXXFLAGS="$CXXFLAGS $all_includes -DDBUS_COMPILATION"
+ LDFLAGS="$LDFLAGS $all_libraries $USER_LDFLAGS"
+
+AC_TRY_LINK([
+   #include <dbus-1.0/dbus/qdbus.h>
+],
+[
+            QDBusConnection& b = QDBus::sessionBus();
+],
+            eval "ac_cv_lib_qtdbus='-ldbus-1 -ldbus-qt4-1 -ldbus-glib-1'",
+            eval "ac_cv_lib_qtdbus=no")
+
+ LDFLAGS=$kde_ldflags_save
+ LIBS=$kde_libs_save
+ CXXFLAGS=$kde_cxxflags_save
+AC_LANG_RESTORE
+])
+
+if test ! "$ac_cv_lib_qtdbus" = no; then
+  AC_DEFINE_UNQUOTED(HAVE_LIBQTDBUS, 1, [Define if you have libdbus-qt4-1])
+  LIBQTDBUS="$ac_cv_lib_qtdbus"
+  AC_MSG_RESULT($ac_cv_lib_qtdbus)
+else
+  AC_MSG_ERROR(not found. 
+          Check your installation and look into config.log)
+  LIBQTDBUS=""
+fi
+AC_SUBST(LIBQTDBUS)
+])
+
+if test "X$qtdbus" = "Xyes" ; then
+  AC_FIND_QTDBUS
+fi
+
+dnl -------
+dnl Test for libqwt (Scientific Plotting library)
+dnl -------
+
+AC_ARG_ENABLE(
+   qwt,
+   [  --enable-qwt@<:@=yes|no@:>@   Smoke: build Smoke with Qwt extention for qt @<:@default:no@:>@],
+   [ qwt="$enableval" ],
+   [ qwt="no" ]
+)
+AC_SUBST(qwt)
+
+AC_DEFUN([AC_FIND_QWT],
+[
+AC_MSG_CHECKING([for libqwt])
+AC_CACHE_VAL(ac_cv_lib_qwt,
+[
+AC_LANG_SAVE
+AC_LANG_CPLUSPLUS
+
+ kde_ldflags_save="$LDFLAGS"
+ kde_libs_save="$LIBS"
+ kde_cxxflags_save="$CXXFLAGS"
+
+ LIBS="-lqwt $LIB_QTCORE $LIB_QTXML $LIBS"
+ CXXFLAGS="$CXXFLAGS $all_includes"
+ LDFLAGS="$LDFLAGS $all_libraries $USER_LDFLAGS"
+
+AC_TRY_LINK([
+   #include <qwt_plot.h>
+],
+[
+            QwtPlot p;
+],
+            eval "ac_cv_lib_qwt='-lqwt'",
+            eval "ac_cv_lib_qwt=no")
+
+ LDFLAGS=$kde_ldflags_save
+ LIBS=$kde_libs_save
+ CXXFLAGS=$kde_cxxflags_save
+AC_LANG_RESTORE
+])
+
+if test ! "$ac_cv_lib_qwt" = no; then
+  AC_DEFINE_UNQUOTED(HAVE_LIBQWT, 1, [Define if you have libqwt])
+  LIBQWT="$ac_cv_lib_qwt"
+  AC_MSG_RESULT($ac_cv_lib_qwt)
+else
+  AC_MSG_ERROR(not found. 
+          Check your installation and look into config.log)
+  LIBQWT=""
+fi
+AC_SUBST(LIBQWT)
+])
+
+if test "X$qwt" = "Xyes" ; then
+  AC_FIND_QWT
 fi

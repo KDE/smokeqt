@@ -1,0 +1,14 @@
+dbus-1.0/dbus/qdbusabstractadaptor.h
+dbus-1.0/dbus/qdbusabstractinterface.h
+dbus-1.0/dbus/qdbusbus.h
+dbus-1.0/dbus/qdbusconnection.h
+dbus-1.0/dbus/qdbuserror.h
+dbus-1.0/dbus/qdbus.h
+dbus-1.0/dbus/qdbusinterface.h
+dbus-1.0/dbus/qdbusmacros.h
+dbus-1.0/dbus/qdbusmessage.h
+dbus-1.0/dbus/qdbusreply.h
+dbus-1.0/dbus/qdbusserver.h
+dbus-1.0/dbus/qdbustypehelper_p.h
+dbus-1.0/dbus/qdbusutil.h
+

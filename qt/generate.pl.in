@@ -20,6 +20,8 @@ my $definespath = "$here/$defines";
 my $headerlistpath = "$here/$headerlist";
 my $qscintilla_headerlist = "";
 my $qscintilla_headerlistpath = "";
+my $qtdbus_headerlist = "";
+my $qtdbus_headerlistpath = "";
 
 if("@qtextscintilla@" eq "yes")
 {
@@ -27,11 +29,33 @@ if("@qtextscintilla@" eq "yes")
  $qscintilla_headerlistpath = "$here/$qscintilla_headerlist";
 }
 
+if("@qtdbus@" eq "yes")
+{
+ $qtdbus_headerlist = "./qtdbus_header_list";
+ $qtdbus_headerlistpath = "$here/$qtdbus_headerlist";
+}
+
+if("@qwt@" eq "yes")
+{
+ $qwt_headerlist = "./qwt_header_list";
+ $qwt_headerlistpath = "$here/$qwt_headerlist";
+}
+
 ## If srcdir != builddir, use headerlist from src
 $headerlistpath = $headerlist if ($headerlist =~ /^\//);
 if("@qtextscintilla@" eq "yes")
 {
  $qscintilla_headerlistpath = $qscintilla_headerlist if ($qscintilla_headerlist =~ /^\//);
+}
+
+if("@qtdbus@" eq "yes")
+{
+ $qtdbus_headerlistpath = $qtdbus_headerlist if ($qtdbus_headerlist =~ /^\//);
+}
+
+if("@qwt@" eq "yes")
+{
+ $qwt_headerlistpath = $qwt_headerlist if ($qwt_headerlist =~ /^\//);
 }
 ## Note: outdir and finaloutdir should NOT be the same dir!
 
@@ -92,6 +116,20 @@ close HEADERS;
 if("@qtextscintilla@" eq "yes")
 {
  open(HEADERS, $qscintilla_headerlistpath) or die "Couldn't open $qscintilla_headerlistpath: $!\n";
+ map { chomp ; $includes{$_} = 1 } <HEADERS>;
+ close HEADERS;
+}
+
+if("@qtdbus@" eq "yes")
+{
+ open(HEADERS, $qtdbus_headerlistpath) or die "Couldn't open $qtdbus_headerlistpath: $!\n";
+ map { chomp ; $includes{$_} = 1 } <HEADERS>;
+ close HEADERS;
+}
+
+if("@qwt@" eq "yes")
+{
+ open(HEADERS, $qwt_headerlistpath) or die "Couldn't open $qwt_headerlistpath: $!\n";
  map { chomp ; $includes{$_} = 1 } <HEADERS>;
  close HEADERS;
 }
