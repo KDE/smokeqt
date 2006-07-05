@@ -1,7 +1,8 @@
 lib_LTLIBRARIES = libsmokeqt.la
 
 # set the include path for X, qt and KDE
-INCLUDES         = -I$(srcdir)/.. $(all_includes) -I$(qt_includes)/QtUiTools
+INCLUDES         = -I$(srcdir)/.. $(all_includes) -I$(qt_includes)/QtUiTools \
+                   -I$(qt_includes)/QtDBus
 
 EXTRA_DIST=generate.pl.in qtguess.pl.in qt_smoke.h Makefile.am
 
@@ -10,7 +11,7 @@ libsmokeqt_la_LDFLAGS = -version-info 3:3:2 -no-undefined $(all_libraries) $(GLI
 
 # the libraries to link against.
 libsmokeqt_la_LIBADD   = $(LIB_QTCORE) $(LIB_QTGUI) $(LIB_QTNETWORK) \
-						$(LIB_QTOPENGL) $(LIB_QTSQL) $(LIB_QTCORE) $(LIB_QTXML) \
+						$(LIB_QTOPENGL) $(LIB_QTSQL) $(LIB_QTCORE) $(LIB_QTXML) $(LIB_QTSVG) \
 						$(GLLIB) $(LIBQSCINTILLA) \
 						-lQtSvg -lQtUiTools $(LIBQTDBUS) $(LIBQWT)
 
