@@ -273,7 +273,6 @@ QtNetwork/qurlinfo.h
 QtOpenGL/qglcolormap.h
 QtOpenGL/qglframebufferobject.h
 QtOpenGL/qgl.h
-QtOpenGL/qglpbuffer.h
 QtOpenGL/qglpixelbuffer.h
 Qt/qiconset.h
 QtSql/qsqldatabase.h
