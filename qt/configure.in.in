@@ -113,7 +113,7 @@ AC_TRY_LINK([
    #include <QtDBus/qdbusconnection.h>
 ],
 [
-            QDBusConnection b = QDBus::sessionBus();
+            QDBusConnection b = QDBusConnection::sessionBus();
 ],
             eval "ac_cv_lib_qtdbus='-ldbus-1 -lQtDBus -ldbus-glib-1'",
             eval "ac_cv_lib_qtdbus=no")
