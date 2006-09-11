@@ -160,10 +160,24 @@ find(
     {   wanted => sub {
 	    (-e || -l and !-d) and do {
 	        $f = substr($_, 1 + length $qtinc);
-                push ( @headers, $_ )
-	    	  if( !defined $excludes{$f} # Not excluded
-	    	     && $includes{$f}        # Known header
-	    	     && /\.h$/);     # Not a backup file etc. Only headers.
+                if( !defined $excludes{$f} # Not excluded
+                     && $includes{$f}        # Known header
+                     && /\.h$/)     # Not a backup file etc. Only headers.
+                {
+                    my $header = $_;
+                    open(FILE, $_);
+                    my @header_lines = <FILE>;
+                    if (@header_lines == 1) {
+                        $line = $header_lines[0];
+                        if ($line =~ /^#include "(.*)"/) {
+                            push ( @headers, $qtinc . substr($1, 2) );
+                        } else {
+                            push ( @headers, $header );
+                        }
+                    } else {
+                        push ( @headers, $header );
+                    }
+                }
 	    	undef $includes{$f}   
 	     };
 	},
