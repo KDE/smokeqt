@@ -7,7 +7,7 @@ INCLUDES         = -I$(srcdir)/.. $(all_includes) -I$(qt_includes)/QtUiTools \
 EXTRA_DIST=generate.pl.in qtguess.pl.in qt_smoke.h Makefile.am
 
 # the library search path. 
-libsmokeqt_la_LDFLAGS = -version-info 3:3:2 -no-undefined $(all_libraries) $(GLINC)
+libsmokeqt_la_LDFLAGS = -version-info 2:0:0 -no-undefined $(all_libraries) $(GLINC)
 
 # the libraries to link against.
 libsmokeqt_la_LIBADD   = $(LIB_QTCORE) $(LIB_QTGUI) $(LIB_QTNETWORK) \
