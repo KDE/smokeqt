@@ -105,7 +105,7 @@ AC_LANG_CPLUSPLUS
  kde_libs_save="$LIBS"
  kde_cxxflags_save="$CXXFLAGS"
 
- LIBS="-ldbus-1 -lQtDBus $LIB_QTCORE $LIB_QTXML $LIBS"
+ LIBS="-lQtDBus $LIB_QTCORE $LIB_QTXML $LIBS"
  CXXFLAGS="$CXXFLAGS $all_includes -DDBUS_COMPILATION"
  LDFLAGS="$LDFLAGS $all_libraries $USER_LDFLAGS"
 
@@ -115,7 +115,7 @@ AC_TRY_LINK([
 [
             QDBusConnection b = QDBusConnection::sessionBus();
 ],
-            eval "ac_cv_lib_qtdbus='-ldbus-1 -lQtDBus'",
+            eval "ac_cv_lib_qtdbus='-lQtDBus'",
             eval "ac_cv_lib_qtdbus=no")
 
  LDFLAGS=$kde_ldflags_save
