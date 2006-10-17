@@ -1,5 +1,6 @@
 QtDBus/qdbusabstractadaptor.h
 QtDBus/qdbusabstractinterface.h
+QtDBus/qdbusargument.h
 QtDBus/qdbusconnection.h
 QtDBus/qdbusconnectioninterface.h
 QtDBus/qdbuserror.h
