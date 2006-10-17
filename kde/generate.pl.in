@@ -47,30 +47,6 @@ chdir "$kalyptusdir" or die "Couldn't go to $kalyptusdir (edit script to change 
 # Find out which header files we need to parse
 # We don't want all of them - e.g. not template-based stuff
 my %excludes = (
-    'qaccessible.h' => 1,  # Accessibility support is not compiled by defaut
-    'qassistantclient.h' => 1, # Not part of Qt (introduced in Qt-3.1)
-    'qmotif.h' => 1,       # 
-    'qmotifwidget.h' => 1, # Motif extension (introduced in Qt-3.1)
-    'qmotifdialog.h' => 1, #
-    'qxt.h' => 1, # Xt
-    'qxtwidget.h' => 1, # Xt
-    'qdns.h' => 1, # internal
-    'qgl.h' => 1, # OpenGL
-    'qglcolormap.h' => 1, # OpenGL
-    'qnp.h' => 1, # NSPlugin
-    'qttableview.h' => 1,  # Not in Qt anymore...
-    'qtmultilineedit.h' => 1,  # Not in Qt anymore...
-    'qwidgetfactory.h' => 1,  # Just an interface
-    'qsharedmemory.h' => 1, # "not part of the Qt API" they say
-    'qwindowsstyle.h' => 1, # Qt windowsstyle, plugin
-    'qmotifstyle.h' => 1,
-    'qcompactstyle.h' => 1,
-    'qinterlacestyle.h' => 1,
-    'qmotifplusstyle.h' => 1,
-    'qsgistyle.h' => 1,
-    'qplatinumstyle.h' => 1,
-    'qcdestyle.h' => 1,
-    'qwindowsxpstyle.h' => 1 # play on the safe side 
 );
 
 # Some systems have a QTDIR = KDEDIR = PREFIX
@@ -92,29 +68,19 @@ my %kdeexcludes = (
 	'kbookmarkimporter_ns.h' => 1,
 	'kcrash.h' => 1,
 	'kdebug.h' => 1,
-	'kdebugclasses.h' => 1,
 	'kde_terminal_interface.h' => 1,
-	'kdirnotify_stub.h' => 1,
 
 #	These headers currently give problems
-	'kscreensaver.h' => 1,
-	'kdirnotify_stub.h' => 1,
-	'kio/uiserver_stub.h' => 1,
 	'kio/uiserver.h' => 1,
-	'kio/kdesasl.h' => 1,
-	'kio/kpac.h' => 1,
 	'kio/thumbcreator.h' => 1,
 	'kio/file.h' => 1,
 	'kio/chmodjob.h' => 1,
 	'kparts/genericfactory.h' => 1,
-	'kparts/pluginselectormodule.h' => 1,
 	'kopenssl.h' => 1,
 	'kautomount.h' => 1,
 	'kimagefilepreview.h' => 1,
 	'kpropertiesdialog.h' => 1,
 	'knotifydialog.h' => 1,
-	'ksockaddr.h' => 1,
-	'knotifywidgetbase.h' => 1,
 );
 
 # Some systems have a QTDIR = KDEDIR = PREFIX
@@ -146,20 +112,37 @@ if("@KDE_HAVE_GL@" eq "yes")
 my @headers = ();
 
 $qtinc= '@qt_includes@';
-opendir (QT, $qtinc) or die "Couldn't find $qtinc";
-foreach $filename (readdir(QT)) {
-    $entry = $qtinc."/".$filename;
-    if ( ( -e $entry or -l $entry )         # A real file or a symlink
-        && ( ! -d _ ) )                     # Not a symlink to a dir though
-    {
-        push(@headers, $entry)
-          if ( !defined $excludes{$filename} # Not excluded
-              && $includes{$filename}        # Known header
-	      && $filename =~ /\.h$/ ); # Not a backup file etc. Only headers.
-        undef $includes{$filename}
-    }
-}
-closedir QT;
+
+find(
+    {   wanted => sub {
+	    (-e || -l and !-d) and do {
+	        $f = substr($_, 1 + length $qtinc);
+                if( !defined $excludes{$f} # Not excluded
+                     && $includes{$f}        # Known header
+                     && /\.h$/)     # Not a backup file etc. Only headers.
+                {
+                    my $header = $_;
+                    open(FILE, $_);
+                    my @header_lines = <FILE>;
+                    if (@header_lines == 1) {
+                        $line = $header_lines[0];
+                        if ($line =~ /^#include "(.*)"/) {
+                            push ( @headers, $qtinc . substr($1, 2) );
+                        } else {
+                            push ( @headers, $header );
+                        }
+                    } else {
+                        push ( @headers, $header );
+                    }
+                }
+	    	undef $includes{$f}   
+	     };
+	},
+	follow_fast => 1,
+	follow_skip => 2,
+	no_chdir => 1
+    }, $qtinc
+ );
 
 my @kdeheaders = ();
 $kdeprefix = "@KDE_PREFIX@";
@@ -185,7 +168,7 @@ find(
  );
 
 # Launch kalyptus
-system "perl kalyptus @ARGV --globspace -fsmoke --name=qt $macros --no-cache --allow_k_dcop_accessors --outputdir=$outdir @headers @kdeheaders";
+system "perl kalyptus @ARGV --qt4 --globspace -fsmoke --name=qt $macros --no-cache --allow_k_dcop_accessors --outputdir=$outdir @headers @kdeheaders";
 my $exit = $? >> 8;
 exit $exit if ($exit);
 
