@@ -374,6 +374,7 @@ our %tests = (
  	"QT_NO_STYLE_WINDOWSXP" =>	["QtGui/qwindowsxpstyle.h", "QWindowsXPStyle foo;", 16],
  	"QT_NO_STYLE_WINDOWS" =>	["QtGui/qwindowsstyle.h", "QWindowsStyle foo;", 16],
 	"QT_NO_STYLE_MAC" =>	["QtGui/macstyle.h", "QMacStyle foo;", 16],
+	"QT_NO_STYLE_CLEANLOOKS" =>	["QtGui/qcleanlooksstyle.h", "QCleanlooksStyle foo;", 16],
     "QT_NO_TABBAR" =>               ["QtGui/qtabbar.h", "QTabBar foo;", 10],
 	"QT_NO_TABLEVIEW" =>		["QtGui/qtableview.h", "QTableView foo;", 16],
     "QT_NO_TABWIDGET" =>            ["QtGui/qtabwidget.h", "QTabWidget foo;", 10],
