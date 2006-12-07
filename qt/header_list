@@ -26,6 +26,7 @@ QtCore/qfactoryinterface.h
 QtCore/qfeatures.h
 QtCore/qfile.h
 QtCore/qfileinfo.h
+QtCore/qfilesystemwatcher.h
 QtCore/qfsfileengine.h
 QtCore/qglobal.h
 QtCore/qiodevice.h
