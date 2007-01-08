@@ -13,7 +13,7 @@ libsmokekde_la_LDFLAGS = -version-info 2:0:0 -no-undefined $(all_libraries) $(GL
 
 # the libraries to link against.
 libsmokekde_la_LIBADD   = $(LIB_QTCORE) $(LIB_QTGUI) $(LIB_QTNETWORK) \
-						$(LIB_QTOPENGL) $(LIB_QTSQL) $(LIB_QTCORE) $(LIB_QTXML) $(LIB_QTSVG) \
+						$(LIB_QTOPENGL) $(LIB_QTSQL) $(LIB_QTCORE) $(LIB_QTXML) \
 						$(GLLIB) $(LIBQSCINTILLA) \
 						-lQtSvg -lQtUiTools $(LIBQTDBUS) \
 						$(LIB_KHTML) -lkjs -lfontconfig $(LIB_KMDI) $(LIB_KNS) $(LIB_KSPELL) \

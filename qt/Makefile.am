@@ -11,7 +11,7 @@ libsmokeqt_la_LDFLAGS = -version-info 2:0:0 -no-undefined $(all_libraries) $(GLI
 
 # the libraries to link against.
 libsmokeqt_la_LIBADD   = $(LIB_QTCORE) $(LIB_QTGUI) $(LIB_QTNETWORK) \
-						$(LIB_QTOPENGL) $(LIB_QTSQL) $(LIB_QTCORE) $(LIB_QTXML) $(LIB_QTSVG) \
+						$(LIB_QTOPENGL) $(LIB_QTSQL) $(LIB_QTCORE) $(LIB_QTXML) \
 						$(GLLIB) $(LIBQSCINTILLA) \
 						-lQtSvg -lQtUiTools $(LIBQTDBUS) $(LIBQWT)
 
