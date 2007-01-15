@@ -259,6 +259,7 @@ QtGui/qwindowsstyle.h
 QtGui/qwindowsxpstyle.h
 QtGui/qwmatrix.h
 QtGui/qworkspace.h
+QtGui/qx11embed_x11.h
 QtGui/qx11info_x11.h
 QtNetwork/qabstractsocket.h
 QtNetwork/qftp.h
