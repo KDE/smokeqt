@@ -1,10 +1,3 @@
-Qt3Support/q3mimefactory.h
-Qt3Support/q3gridview.h
-Qt3Support/q3listbox.h
-Qt3Support/q3scrollview.h
-Qt3Support/q3wizard.h
-Qt3Support/q3frame.h
-Qt3Support/q3iconview.h
 QtCore/qabstracteventdispatcher.h
 QtCore/qabstractfileengine.h
 QtCore/qabstractitemmodel.h
@@ -88,6 +81,7 @@ QtCore/qvector.h
 QtCore/qwaitcondition.h
 QtDBus/qdbusabstractadaptor.h
 QtDBus/qdbusabstractinterface.h
+QtDBus/qdbusargument.h
 QtDBus/qdbusconnection.h
 QtDBus/qdbusconnectioninterface.h
 QtDBus/qdbuserror.h
@@ -278,6 +272,7 @@ QtGui/qwindowsstyle.h
 QtGui/qwindowsxpstyle.h
 QtGui/qwmatrix.h
 QtGui/qworkspace.h
+QtGui/qx11embed_x11.h
 QtGui/qx11info_x11.h
 QtNetwork/qabstractsocket.h
 QtNetwork/qftp.h
