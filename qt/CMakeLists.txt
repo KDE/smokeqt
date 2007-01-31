@@ -1,16 +1,81 @@
 
-include_directories( ${KDE4_INCLUDE_DIR} ${QT_INCLUDES}  )
+include_directories( ${KDE4_INCLUDE_DIR} ${QT_INCLUDES}  ${CMAKE_CURRENT_SOURCE_DIR}/../ )
 
+# for qtguess.pl
+set(qt_test_threshold 10)
+set(qtflags "-lQtCore -lQtGui")
+FOREACH(filename ${QT_INCLUDES})
+    set(all_includes "-I${filename} ${all_includes}")
+ENDFOREACH(filename)
+
+configure_file(qtguess.pl.cmake ${CMAKE_CURRENT_BINARY_DIR}/qtguess.pl @ONLY)
+configure_file(generate.pl.cmake ${CMAKE_CURRENT_BINARY_DIR}/generate.pl @ONLY )
+
+# macro is defined in qt-copy/src/qbase.pri but couldn't be found by qtguess, so I append it manually
+file(APPEND ${CMAKE_CURRENT_BINARY_DIR}/qtdefines "QT_NO_CAST_TO_ASCII\n")
 
 ########### next target ###############
 
-set(smokeqt_LIB_SRCS smokedata.cpp $(x_sources) )
+add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp 
+		${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp 
+		${CMAKE_CURRENT_BINARY_DIR}/x_2.cpp 
+		${CMAKE_CURRENT_BINARY_DIR}/x_3.cpp 
+		${CMAKE_CURRENT_BINARY_DIR}/x_4.cpp 
+		${CMAKE_CURRENT_BINARY_DIR}/x_5.cpp 
+		${CMAKE_CURRENT_BINARY_DIR}/x_6.cpp 
+		${CMAKE_CURRENT_BINARY_DIR}/x_7.cpp 
+                ${CMAKE_CURRENT_BINARY_DIR}/x_8.cpp
+                ${CMAKE_CURRENT_BINARY_DIR}/x_9.cpp
+                ${CMAKE_CURRENT_BINARY_DIR}/x_10.cpp
+                ${CMAKE_CURRENT_BINARY_DIR}/x_11.cpp
+                ${CMAKE_CURRENT_BINARY_DIR}/x_12.cpp
+                ${CMAKE_CURRENT_BINARY_DIR}/x_13.cpp
+                ${CMAKE_CURRENT_BINARY_DIR}/x_14.cpp
+                ${CMAKE_CURRENT_BINARY_DIR}/x_15.cpp
+                ${CMAKE_CURRENT_BINARY_DIR}/x_16.cpp
+                ${CMAKE_CURRENT_BINARY_DIR}/x_17.cpp
+                ${CMAKE_CURRENT_BINARY_DIR}/x_18.cpp
+                ${CMAKE_CURRENT_BINARY_DIR}/x_19.cpp
+                ${CMAKE_CURRENT_BINARY_DIR}/x_20.cpp
+
+                  COMMAND ${PERL_EXECUTABLE} ARGS ${CMAKE_CURRENT_BINARY_DIR}/qtguess.pl
+                  DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/qtguess.pl
+
+                  COMMAND ${PERL_EXECUTABLE} ARGS ${CMAKE_CURRENT_BINARY_DIR}/generate.pl
+                  DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/generate.pl
+
+                  WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
+
+macro_add_file_dependencies( ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp ${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp )
+
+set(smokeqt_LIB_SRCS ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp  
+		${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp 
+		${CMAKE_CURRENT_BINARY_DIR}/x_2.cpp
+                ${CMAKE_CURRENT_BINARY_DIR}/x_3.cpp
+                ${CMAKE_CURRENT_BINARY_DIR}/x_4.cpp
+                ${CMAKE_CURRENT_BINARY_DIR}/x_5.cpp
+                ${CMAKE_CURRENT_BINARY_DIR}/x_6.cpp
+                ${CMAKE_CURRENT_BINARY_DIR}/x_7.cpp
+                ${CMAKE_CURRENT_BINARY_DIR}/x_8.cpp
+                ${CMAKE_CURRENT_BINARY_DIR}/x_9.cpp
+                ${CMAKE_CURRENT_BINARY_DIR}/x_10.cpp
+                ${CMAKE_CURRENT_BINARY_DIR}/x_11.cpp
+                ${CMAKE_CURRENT_BINARY_DIR}/x_12.cpp
+                ${CMAKE_CURRENT_BINARY_DIR}/x_13.cpp
+                ${CMAKE_CURRENT_BINARY_DIR}/x_14.cpp
+                ${CMAKE_CURRENT_BINARY_DIR}/x_15.cpp
+                ${CMAKE_CURRENT_BINARY_DIR}/x_16.cpp
+                ${CMAKE_CURRENT_BINARY_DIR}/x_17.cpp
+                ${CMAKE_CURRENT_BINARY_DIR}/x_18.cpp
+                ${CMAKE_CURRENT_BINARY_DIR}/x_19.cpp
+                ${CMAKE_CURRENT_BINARY_DIR}/x_20.cpp
+)
 
 kde4_automoc(${smokeqt_LIB_SRCS})
 
 kde4_add_library(smokeqt SHARED ${smokeqt_LIB_SRCS})
 
-target_link_libraries(smokeqt  ${KDE4_KDECORE_LIBS} QtSvg QtUiTools )
+target_link_libraries(smokeqt  ${KDE4_KDECORE_LIBS} QtNetwork QtSql QtOpenGL QtXml QtSvg QtUiTools )
 
 set_target_properties(smokeqt PROPERTIES VERSION 2.0.0 SOVERSION 2 )
 install(TARGETS smokeqt DESTINATION ${LIB_INSTALL_DIR} )

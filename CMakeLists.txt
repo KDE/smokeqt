@@ -2,7 +2,7 @@
 #Laurent reuse configure.in.in
 #message(STATUS "${CMAKE_CURRENT_SOURCE_DIR}: skipped subdir $(kde_build_libsmoke)")
 
-#add_subdirectory(qt)
+add_subdirectory(qt)
 add_subdirectory(kde)
 
 ########### install files ###############
