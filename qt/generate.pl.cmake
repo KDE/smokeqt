@@ -25,19 +25,19 @@ my $qtdbus_headerlistpath = "";
 
 if("@QSCINTILLA_FOUND@" eq "YES")
 {
- $qscintilla_headerlist = "./qscintilla_header_list";
+ $qscintilla_headerlist = "@CMAKE_CURRENT_SOURCE_DIR@/qscintilla2_header_list";
  $qscintilla_headerlistpath = "$here/$qscintilla_headerlist";
 }
 
 if("@QT_DBUS_FOUND@" eq "YES")
 {
- $qtdbus_headerlist = "./qtdbus_header_list";
+ $qtdbus_headerlist = "@CMAKE_CURRENT_SOURCE_DIR@/qtdbus_header_list";
  $qtdbus_headerlistpath = "$here/$qtdbus_headerlist";
 }
 
 if("@QWT_FOUND@" eq "YES")
 {
- $qwt_headerlist = "./qwt_header_list";
+ $qwt_headerlist = "@CMAKE_CURRENT_SOURCE_DIR@/qwt_header_list";
  $qwt_headerlistpath = "$here/$qwt_headerlist";
 }
 
