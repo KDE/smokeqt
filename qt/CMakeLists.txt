@@ -1,11 +1,16 @@
 
 include(FindQScintilla)
+include(FindQwt)
 
 include_directories( ${QT_INCLUDES}  ${CMAKE_CURRENT_SOURCE_DIR}/../ )
 
 if(QSCINTILLA_FOUND)
     include_directories( ${QSCINTILLA_INCLUDE_DIR} )
 endif(QSCINTILLA_FOUND)
+
+if(QWT_FOUND)
+    include_directories( ${QWT_INCLUDE_DIR} )
+endif(QWT_FOUND)
 
 # for qtguess.pl
 set(qt_test_threshold 10)
@@ -80,7 +85,7 @@ set(smokeqt_LIB_SRCS ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp
 kde4_add_library(smokeqt SHARED ${smokeqt_LIB_SRCS})
 # add_library(smokeqt SHARED ${smokeqt_LIB_SRCS})
 
-target_link_libraries(smokeqt ${QT_QTCORE_LIBRARY} QtSvg QtGui QtNetwork QtSql QtOpenGL QtXml QtUiTools ${QSCINTILLA2_LIBRARIES} )
+target_link_libraries(smokeqt ${QT_QTCORE_LIBRARY} QtSvg QtGui QtNetwork QtSql QtOpenGL QtXml QtUiTools ${QSCINTILLA_LIBRARIES} ${QWT_LIBRARIES} )
 
 set_target_properties(smokeqt PROPERTIES VERSION 2.0.0 SOVERSION 2 )
 install(TARGETS smokeqt DESTINATION ${LIB_INSTALL_DIR} )

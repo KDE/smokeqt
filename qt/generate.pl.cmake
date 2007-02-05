@@ -127,10 +127,11 @@ if("@QT_DBUS_FOUND@" eq "YES")
  close HEADERS;
 }
 
+my %qwt_includes;
 if("@QWT_FOUND@" eq "YES")
 {
  open(HEADERS, $qwt_headerlistpath) or die "Couldn't open $qwt_headerlistpath: $!\n";
- map { chomp ; $includes{$_} = 1 } <HEADERS>;
+ map { chomp ; $qwt_includes{$_} = 1 } <HEADERS>;
  close HEADERS;
 }
  
@@ -187,6 +188,25 @@ find(
     }, $qtinc
  );
 
+$qwtinc = '@QWT_INCLUDE_DIR@';
+
+find(
+    {   wanted => sub {
+	    (-e || -l and !-d) and do {
+	        $f = substr($_, 1 + length $qwtinc);
+		push ( @headers, $_ )
+                if( !defined $excludes{$f} # Not excluded
+                     && $qwt_includes{$f}        # Known header
+                     && /\.h$/);     # Not a backup file etc. Only headers.
+	    	undef $qwt_includes{$f}   
+	     };
+	},
+	follow_fast => 1,
+	follow_skip => 2,
+	no_chdir => 1
+    }, $qwtinc
+ );
+ 
 # Launch kalyptus
 chdir "../smoke/qt";
 system "perl -I@kdebindings_SOURCE_DIR@/kalyptus @kdebindings_SOURCE_DIR@/kalyptus/kalyptus @ARGV --qt4 --globspace -fsmoke --name=qt $macros --no-cache --outputdir=$outdir @headers";
