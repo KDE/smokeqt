@@ -26,8 +26,8 @@ getopts('qo:f:t:');
 #	15 - test goodies (default)
 
 my $default_threshold = @qt_test_threshold@;
-my $cc = "@CXX@";
-my $ccflags = $opt_f || "@CXXFLAGS@";
+my $cc = "@CMAKE_CXX_COMPILER@";
+my $ccflags = $opt_f || "@CMAKE_CXX_FLAGS@";
 
 my $nspaces = 50;
 
@@ -35,22 +35,22 @@ my %qtdefs=();
 my %qtundefs=();
 
 my $tmp = gettmpfile();
-my $qtinc = '@qt_includes@';
+my $qtinc = '@QT_INCLUDE_DIR@';
 my $allinc = '@all_includes@';
-my $alllib = '@all_libraries@';
-my $qtflags ='@LIB_QTCORE@ @LIB_QTGUI@ @LIB_QTNETWORK@ @LIB_QTXML@ @LIB_QTSQL@ @LIB_QTOPENGL@';
-my %x;
-$x{'LIBPNG'}  =   '@LIBPNG@';
-$x{'LIBJPEG'} =   '@LIBJPEG@';
-$x{'LIBSM'}   =   '@LIBSM@';
-$x{'LIBSOCKET'} = '@LIBSOCKET@';
-$x{'LIBDL'}      = '@LIBDL@';
-$x{'LIBRESOLV'}  = '@LIBRESOLV@';
-$x{'LIB_X11'} =   '@LIB_X11@';
-$x{'X_PRE_LIBS'} = '@X_PRE_LIBS@';
-$x{'LIB_X11'} =~ s/\$\((.*?)\)/$x{$1}/g;
-
-$qtflags =~ s/\$\((.*?)\)/$x{$1}/g;
+my $alllib = '-L@QT_LIBRARY_DIR@';
+my $qtflags = '@qtflags@';
+#my %x;
+#$x{'LIBPNG'}  =   '@LIBPNG@';
+#$x{'LIBJPEG'} =   '@LIBJPEG@';
+#$x{'LIBSM'}   =   '@LIBSM@';
+#$x{'LIBSOCKET'} = '@LIBSOCKET@';
+#$x{'LIBDL'}      = '@LIBDL@';
+#$x{'LIBRESOLV'}  = '@LIBRESOLV@';
+#$x{'LIB_X11'} =   '@LIB_X11@';
+#$x{'X_PRE_LIBS'} = '@X_PRE_LIBS@';
+#$x{'LIB_X11'} =~ s/\$\((.*?)\)/$x{$1}/g;
+#
+#$qtflags =~ s/\$\((.*?)\)/$x{$1}/g;
 
  -e "$qtinc/QtCore/qglobal.h" or die "Invalid Qt include directory.\n";
 
@@ -66,7 +66,7 @@ my($count, $used, $total);
 map{ $tests{$_}->[2]>=$threshold ? ($used++, $total++):$total++ } keys %tests;
 
 print "Number of defines to be tested : $used/$total\n\n" unless $opt_q;
-open( QTDEFS, ">".($opt_o || "qtdefines") ) or die "Can't open output file: $!\n";
+open( QTDEFS, ">>".($opt_o || "qtdefines") ) or die "Can't open output file: $!\n";
 
 grab_qglobal_symbols();
 preliminary_test();

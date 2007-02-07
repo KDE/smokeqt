@@ -11,9 +11,18 @@ else(OPENGL_FOUND AND OPENGL_GLU_FOUND)
    set(KDE_HAVE_GL "no")
 endif(OPENGL_FOUND AND OPENGL_GLU_FOUND)	
 
+# for qtguess.pl
+set(qt_test_threshold 10)
+set(qtflags "-lQtCore -lQtGui")
+FOREACH(filename ${QT_INCLUDES})
+    set(all_includes "-I${filename} ${all_includes}")
+ENDFOREACH(filename)
+
 configure_file(generate.pl.cmake ${CMAKE_CURRENT_BINARY_DIR}/generate.pl @ONLY )
-#Laurent readd it.
-#configure_file(qtguess.pl.cmake ${CMAKE_CURRENT_BINARY_DIR}/qtguess.pl @ONLY)
+configure_file(qtguess.pl.cmake ${CMAKE_CURRENT_BINARY_DIR}/qtguess.pl @ONLY)
+
+# macro is defined in qt-copy/src/qbase.pri but couldn't be found by qtguess, so I append it manually
+file(APPEND ${CMAKE_CURRENT_BINARY_DIR}/qtdefines "QT_NO_CAST_TO_ASCII\n")
 
 ########### next target ###############
 
@@ -38,6 +47,10 @@ add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp
                 ${CMAKE_CURRENT_BINARY_DIR}/x_18.cpp
                 ${CMAKE_CURRENT_BINARY_DIR}/x_19.cpp
                 ${CMAKE_CURRENT_BINARY_DIR}/x_20.cpp
+
+                  COMMAND ${PERL_EXECUTABLE} ARGS ${CMAKE_CURRENT_BINARY_DIR}/qtguess.pl
+                  DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/qtguess.pl
+
                   COMMAND ${PERL_EXECUTABLE} ARGS ${CMAKE_CURRENT_BINARY_DIR}/generate.pl
                   DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/generate.pl
                   WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
@@ -67,8 +80,6 @@ set(smokekde_LIB_SRCS ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp
                 ${CMAKE_CURRENT_BINARY_DIR}/x_19.cpp
                 ${CMAKE_CURRENT_BINARY_DIR}/x_20.cpp
 )
-
-kde4_automoc(${smokekde_LIB_SRCS})
 
 kde4_add_library(smokekde SHARED ${smokekde_LIB_SRCS})
 
