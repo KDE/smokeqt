@@ -59,6 +59,7 @@ kasyncio.h
 kauthorized.h
 kautomount.h
 kautostart.h
+kcomponentdata.h
 kbookmarkbar.h
 kbookmarkdombuilder.h
 kbookmarkexporter.h
