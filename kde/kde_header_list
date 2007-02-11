@@ -129,7 +129,6 @@ kdefakes.h
 kde_file.h
 kdelibs_export.h
 kdemacros.h
-kdeprint/kiconselectaction.h
 kdeprint/kpreloadobject.h
 kdeprint/kprintdialogpage.h
 kdesktopfile.h
@@ -370,7 +369,6 @@ ksocketdevice.h
 ksocks.h
 ksockssocketdevice.h
 ksortablelist.h
-kspeech.h
 ksplashscreen.h
 ksqueezedtextlabel.h
 ksslall.h
