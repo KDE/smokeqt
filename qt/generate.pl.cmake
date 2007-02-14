@@ -29,7 +29,7 @@ if("@QSCINTILLA_FOUND@" eq "YES")
  $qscintilla_headerlistpath = "$here/$qscintilla_headerlist";
 }
 
-if("@QT_DBUS_FOUND@" eq "YES")
+if("@QT_QTDBUS_FOUND@" eq "1")
 {
  $qtdbus_headerlist = "@CMAKE_CURRENT_SOURCE_DIR@/qtdbus_header_list";
  $qtdbus_headerlistpath = "$here/$qtdbus_headerlist";
@@ -48,7 +48,7 @@ if("@QSCINTILLA_FOUND@" eq "YES")
  $qscintilla_headerlistpath = $qscintilla_headerlist if ($qscintilla_headerlist =~ /^\//);
 }
 
-if("@QT_DBUS_FOUND@" eq "YES")
+if("@QT_QTDBUS_FOUND@" eq "1")
 {
  $qtdbus_headerlistpath = $qtdbus_headerlist if ($qtdbus_headerlist =~ /^\//);
 }
@@ -120,7 +120,7 @@ if("@QSCINTILLA_FOUND@" eq "YES")
  close HEADERS;
 }
 
-if("@QT_DBUS_FOUND@" eq "YES")
+if("@QT_QTDBUS_FOUND@" eq "1")
 {
  open(HEADERS, $qtdbus_headerlistpath) or die "Couldn't open $qtdbus_headerlistpath: $!\n";
  map { chomp ; $includes{$_} = 1 } <HEADERS>;
