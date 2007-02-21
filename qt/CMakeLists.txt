@@ -63,6 +63,8 @@ add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp
 
 macro_add_file_dependencies( ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp ${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp )
 
+include_directories (${CMAKE_SOURCE_DIR}/smoke ${CMAKE_SOURCE_DIR}/smoke/qt  )
+
 set(smokeqt_LIB_SRCS ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp  
 		${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp 
 		${CMAKE_CURRENT_BINARY_DIR}/x_2.cpp
@@ -86,14 +88,13 @@ set(smokeqt_LIB_SRCS ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp
                 ${CMAKE_CURRENT_BINARY_DIR}/x_20.cpp
 )
 
-kde4_add_library(smokeqt SHARED ${smokeqt_LIB_SRCS})
-# add_library(smokeqt SHARED ${smokeqt_LIB_SRCS})
+# kde4_add_library(smokeqt SHARED ${smokeqt_LIB_SRCS})
+add_library(smokeqt SHARED ${smokeqt_LIB_SRCS})
 
 target_link_libraries(smokeqt ${QT_QTCORE_LIBRARY} QtSvg QtGui QtNetwork QtSql QtOpenGL QtXml QtUiTools ${QTDBUS_LIBRARY} ${QSCINTILLA_LIBRARIES} ${QWT_LIBRARIES} )
 
 set_target_properties(smokeqt PROPERTIES VERSION 2.0.0 SOVERSION 2 )
-install(TARGETS smokeqt DESTINATION ${LIB_INSTALL_DIR} )
-
+install(TARGETS smokeqt DESTINATION ${INSTALL_DIR}/lib )
 
 ########### install files ###############
 

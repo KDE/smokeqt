@@ -7,7 +7,11 @@ add_subdirectory(kde)
 
 ########### install files ###############
 
-install( FILES  smoke.h DESTINATION ${INCLUDE_INSTALL_DIR} )
+# KDE specific
+#install( FILES  smoke.h DESTINATION ${INCLUDE_INSTALL_DIR} )
+
+# Qt only
+install( FILES  smoke.h DESTINATION ${INSTALL_DIR}/include )
 
 
 
