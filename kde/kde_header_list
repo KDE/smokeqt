@@ -111,6 +111,7 @@ kconfigdialog.h
 kconfigdialogmanager.h
 kconfig.h
 kconfigskeleton.h
+kconfigflags.h
 kcpuinfo.h
 kcrash.h
 kcursor.h
@@ -228,6 +229,8 @@ kio/statusbarprogress.h
 kio/tcpslavebase.h
 kio/thumbcreator.h
 kio/uiserver.h
+kio/renamedialog.h
+kio/skipdialog.h
 kipc.h
 kjob.h
 kjobuidelegate.h
