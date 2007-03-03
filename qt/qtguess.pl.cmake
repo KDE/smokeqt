@@ -35,7 +35,7 @@ my %qtdefs=();
 my %qtundefs=();
 
 my $tmp = gettmpfile();
-my $qtinc = '@QT_INCLUDE_DIR@';
+my $qtcoreinc = '@QT_QTCORE_INCLUDE_DIR@';
 my $allinc = '@all_includes@';
 my $alllib = '-L@QT_LIBRARY_DIR@';
 my $qtflags = '@qtflags@';
@@ -52,7 +52,7 @@ my $qtflags = '@qtflags@';
 # 
 # $qtflags =~ s/\$\((.*?)\)/$x{$1}/g;
 
- -e "$qtinc/QtCore/qglobal.h" or die "Invalid Qt include directory.\n";
+ -e "$qtcoreinc/qglobal.h" or die "Invalid Qt include directory.\n";
 
 my $ccmd = "$cc $ccflags $allinc $alllib -o $tmp $tmp.cpp $qtflags";
 
@@ -94,7 +94,7 @@ sub gettmpfile
 
 sub grab_qglobal_symbols
 {
-	my $cmd = "$cc -E -D__cplusplus -dM -I$qtinc/QtCore $qtinc/QtCore/qglobal.h 2>/dev/null";
+	my $cmd = "$cc -E -D__cplusplus -dM -I$qtcoreinc $qtcoreinc/qglobal.h 2>/dev/null";
 	my $symbols = `$cmd`;
         for(0..1)
         {
@@ -115,7 +115,7 @@ sub grab_qglobal_symbols
 	    elsif(! $_) # first try
 	    {
 		print  "Failed to run $cmd.\nTrying without __cplusplus (might be already defined)\n";
-                $cmd = "$cc -E -dM -I$qtinc/QtCore $qtinc/QtCore/qglobal.h 2>/dev/null";
+                $cmd = "$cc -E -dM -I$qtcoreinc $qtcoreinc/qglobal.h 2>/dev/null";
                 $symbols = `$cmd`;
                 next;
 	    }
