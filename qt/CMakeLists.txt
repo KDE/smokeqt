@@ -18,10 +18,18 @@ ENDIF(QT_QTDBUS_FOUND)
 
 # for qtguess.pl
 set(qt_test_threshold 10)
-set(qtflags "-lQtCore -lQtGui")
+
 FOREACH(filename ${QT_INCLUDES})
     set(all_includes "-I${filename} ${all_includes}")
 ENDFOREACH(filename)
+
+FOREACH(libname ${QT_QTCORE_LIBRARY})
+    set(all_libs "${libname} ${all_libs}")
+ENDFOREACH(libname)
+
+FOREACH(libname ${QT_QTGUI_LIBRARY})
+    set(all_libs "${libname} ${all_libs}")
+ENDFOREACH(libname)
 
 configure_file(qtguess.pl.cmake ${CMAKE_CURRENT_BINARY_DIR}/qtguess.pl @ONLY)
 configure_file(generate.pl.cmake ${CMAKE_CURRENT_BINARY_DIR}/generate.pl @ONLY )

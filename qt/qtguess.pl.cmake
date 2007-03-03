@@ -37,8 +37,8 @@ my %qtundefs=();
 my $tmp = gettmpfile();
 my $qtcoreinc = '@QT_QTCORE_INCLUDE_DIR@';
 my $allinc = '@all_includes@';
-my $alllib = '-L@QT_LIBRARY_DIR@';
-my $qtflags = '@qtflags@';
+my $alllib = '@all_libs@';
+
 # my %x;
 # $x{'LIBPNG'}  =   '@LIBPNG@';
 # $x{'LIBJPEG'} =   '@LIBJPEG@';
@@ -54,7 +54,7 @@ my $qtflags = '@qtflags@';
 
  -e "$qtcoreinc/qglobal.h" or die "Invalid Qt include directory.\n";
 
-my $ccmd = "$cc $ccflags $allinc $alllib -o $tmp $tmp.cpp $qtflags";
+my $ccmd = "$cc $ccflags $allinc $alllib -o $tmp $tmp.cpp";
 
 my $threshold = defined($opt_t)?$opt_t : $default_threshold;
 $threshold >= 0 or die "invalid testing threshold: $threshold\n";
