@@ -12,39 +12,12 @@ if(QWT_FOUND)
     include_directories( ${QWT_INCLUDE_DIR} )
 endif(QWT_FOUND)
 
-IF(QT_QTDBUS_FOUND)
-    SET(QTDBUS_LIBRARY QtDBus)
-ENDIF(QT_QTDBUS_FOUND)
-
 IF(NOT PERL_FOUND)
     FIND_PACKAGE(PERL REQUIRED)
 ENDIF(NOT PERL_FOUND)
 
 # for qtguess.pl
 set(qt_test_threshold 10)
-
-FOREACH(filename ${QT_INCLUDES})
-    set(all_includes "-I${filename} ${all_includes}")
-ENDFOREACH(filename)
-
-FOREACH(libname ${QT_QTCORE_LIBRARY})
-    set(all_libs "${libname} ${all_libs}")
-ENDFOREACH(libname)
-
-FOREACH(libname ${QT_QTGUI_LIBRARY})
-    set(all_libs "${libname} ${all_libs}")
-ENDFOREACH(libname)
-
-FOREACH(libname ${QT_QTXML_LIBRARY})
-    set(all_libs "${libname} ${all_libs}")
-ENDFOREACH(libname)
-
-FOREACH(libname ${QT_QTNETWORK_LIBRARY})
-    set(all_libs "${libname} ${all_libs}")
-ENDFOREACH(libname)
-
-configure_file(qtguess.pl.cmake ${CMAKE_CURRENT_BINARY_DIR}/qtguess.pl @ONLY)
-configure_file(generate.pl.cmake ${CMAKE_CURRENT_BINARY_DIR}/generate.pl @ONLY )
 
 # macro is defined in qt-copy/src/qbase.pri but couldn't be found by qtguess, so I append it manually
 file(APPEND ${CMAKE_CURRENT_BINARY_DIR}/qtdefines "QT_NO_CAST_TO_ASCII\n")
@@ -111,15 +84,41 @@ set(smokeqt_LIB_SRCS ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp
 # kde4_add_library(smokeqt SHARED ${smokeqt_LIB_SRCS})
 add_library(smokeqt SHARED ${smokeqt_LIB_SRCS})
 
-target_link_libraries(smokeqt ${QT_QTCORE_LIBRARY} QtSvg QtGui QtNetwork QtSql QtOpenGL QtXml QtUiTools ${QTDBUS_LIBRARY} ${QSCINTILLA_LIBRARIES} ${QWT_LIBRARIES} )
+SET(QT_USE_QTNETWORK ${QT_QTNETWORK_FOUND})
+SET(QT_USE_QTOPENGL ${QT_QTOPENGL_FOUND})
+SET(QT_USE_QTSQL ${QT_QTSQL_FOUND})
+SET(QT_USE_QTXML ${QT_QTXML_FOUND})
+SET(QT_USE_QTSVG ${QT_QTSVG_FOUND})
+SET(QT_USE_QTUITOOLS ${QT_QTUITOOLS_FOUND})
+SET(QT_USE_QT3SUPPORT ${QT_QT3SUPPORT_FOUND})
+SET(QT_USE_QTDBUS ${QT_QTDBUS_FOUND})
+INCLUDE(${QT_USE_FILE})
+# At this point, QT_LIBRARIES will contain a list of the found Qt Libs
+# and QT_INCLUDES contains the directories of the found includes
+
+FOREACH(filename ${QT_INCLUDES})
+    set(all_includes "-I${filename} ${all_includes}")
+ENDFOREACH(filename)
+
+FOREACH(incname ${QT_INCLUDES})
+    SET(qt_incs "'${incname}', ${qt_incs}")
+ENDFOREACH(incname)
+
+FOREACH(libname ${QT_LIBRARIES})
+    set(all_libs "${libname} ${all_libs}")
+ENDFOREACH(libname)
+
+
+target_link_libraries(smokeqt ${QT_LIBRARIES} ${QSCINTILLA_LIBRARIES} ${QWT_LIBRARIES} )
 
 set_target_properties(smokeqt PROPERTIES VERSION 2.0.0 SOVERSION 2 )
 install(TARGETS smokeqt DESTINATION ${INSTALL_DIR}/lib )
 
+configure_file(qtguess.pl.cmake ${CMAKE_CURRENT_BINARY_DIR}/qtguess.pl @ONLY)
+configure_file(generate.pl.cmake ${CMAKE_CURRENT_BINARY_DIR}/generate.pl @ONLY )
+
+
 ########### install files ###############
-
-
-
 
 #original Makefile.am contents follow:
 

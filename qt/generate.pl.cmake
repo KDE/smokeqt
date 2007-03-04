@@ -20,19 +20,11 @@ my $definespath = "$here/$defines";
 my $headerlistpath = "$headerlist";
 my $qscintilla_headerlist = "";
 my $qscintilla_headerlistpath = "";
-my $qtdbus_headerlist = "";
-my $qtdbus_headerlistpath = "";
 
 if("@QSCINTILLA_FOUND@" eq "YES")
 {
  $qscintilla_headerlist = "@CMAKE_CURRENT_SOURCE_DIR@/qscintilla2_header_list";
  $qscintilla_headerlistpath = "$here/$qscintilla_headerlist";
-}
-
-if("@QT_QTDBUS_FOUND@" eq "1")
-{
- $qtdbus_headerlist = "@CMAKE_CURRENT_SOURCE_DIR@/qtdbus_header_list";
- $qtdbus_headerlistpath = "$here/$qtdbus_headerlist";
 }
 
 if("@QWT_FOUND@" eq "YES")
@@ -46,11 +38,6 @@ $headerlistpath = $headerlist if ($headerlist =~ /^\//);
 if("@QSCINTILLA_FOUND@" eq "YES")
 {
  $qscintilla_headerlistpath = $qscintilla_headerlist if ($qscintilla_headerlist =~ /^\//);
-}
-
-if("@QT_QTDBUS_FOUND@" eq "1")
-{
- $qtdbus_headerlistpath = $qtdbus_headerlist if ($qtdbus_headerlist =~ /^\//);
 }
 
 if("@QWT_FOUND@" eq "YES")
@@ -78,31 +65,31 @@ chdir "$kalyptusdir" or die "Couldn't go to $kalyptusdir (edit script to change 
 # Find out which header files we need to parse
 # We don't want all of them - e.g. not template-based stuff
 my %excludes = (
-    'qaccessible.h' => 1,  # Accessibility support is not compiled by defaut
-    'qassistantclient.h' => 1, # Not part of Qt (introduced in Qt-3.1)
-    'qmotif.h' => 1,       # 
-    'qmotifwidget.h' => 1, # Motif extension (introduced in Qt-3.1)
-    'qmotifdialog.h' => 1, #
-    'qxt.h' => 1, # Xt
-    'qxtwidget.h' => 1, # Xt
-    'qdns.h' => 1, # internal
-    'qgl.h' => 1, # OpenGL
-    'qglcolormap.h' => 1, # OpenGL
-    'qnp.h' => 1, # NSPlugin
-    'qttableview.h' => 1,  # Not in Qt anymore...
-    'qtmultilineedit.h' => 1,  # Not in Qt anymore...
-    'qwidgetfactory.h' => 1,  # Just an interface
-    'qsharedmemory.h' => 1, # "not part of the Qt API" they say
-    'qwindowsstyle.h' => 1, # Qt windowsstyle, plugin
-    'qmotifstyle.h' => 1,
-    'qcompactstyle.h' => 1,
-    'qinterlacestyle.h' => 1,
-    'qmotifplusstyle.h' => 1,
-    'qsgistyle.h' => 1,
-    'qplatinumstyle.h' => 1,
-    'qcdestyle.h' => 1,
-	 'qworkspace.h' => 1,
-    'qwindowsxpstyle.h' => 1 # play on the safe side 
+#    'qaccessible.h' => 1,  # Accessibility support is not compiled by defaut
+#    'qassistantclient.h' => 1, # Not part of Qt (introduced in Qt-3.1)
+#    'qmotif.h' => 1,       # 
+#    'qmotifwidget.h' => 1, # Motif extension (introduced in Qt-3.1)
+#    'qmotifdialog.h' => 1, #
+#    'qxt.h' => 1, # Xt
+#    'qxtwidget.h' => 1, # Xt
+#    'qdns.h' => 1, # internal
+#    'qgl.h' => 1, # OpenGL
+#    'qglcolormap.h' => 1, # OpenGL
+#    'qnp.h' => 1, # NSPlugin
+ #   'qttableview.h' => 1,  # Not in Qt anymore...
+#    'qtmultilineedit.h' => 1,  # Not in Qt anymore...
+#    'qwidgetfactory.h' => 1,  # Just an interface
+#    'qsharedmemory.h' => 1, # "not part of the Qt API" they say
+#    'qwindowsstyle.h' => 1, # Qt windowsstyle, plugin
+#    'qmotifstyle.h' => 1,
+#    'qcompactstyle.h' => 1,
+#    'qinterlacestyle.h' => 1,
+#    'qmotifplusstyle.h' => 1,
+#    'qsgistyle.h' => 1,
+#    'qplatinumstyle.h' => 1,
+#    'qcdestyle.h' => 1,
+#	 'qworkspace.h' => 1,
+#    'qwindowsxpstyle.h' => 1 # play on the safe side 
 );
 
 # Some systems have a QTDIR = KDEDIR = PREFIX
@@ -116,13 +103,6 @@ close HEADERS;
 if("@QSCINTILLA_FOUND@" eq "YES")
 {
  open(HEADERS, $qscintilla_headerlistpath) or die "Couldn't open $qscintilla_headerlistpath: $!\n";
- map { chomp ; $includes{$_} = 1 } <HEADERS>;
- close HEADERS;
-}
-
-if("@QT_QTDBUS_FOUND@" eq "1")
-{
- open(HEADERS, $qtdbus_headerlistpath) or die "Couldn't open $qtdbus_headerlistpath: $!\n";
  map { chomp ; $includes{$_} = 1 } <HEADERS>;
  close HEADERS;
 }
@@ -155,23 +135,23 @@ if("@QT_OPENGL_FOUND@" eq "YES")
 # List Qt headers, and exclude the ones listed above
 my @headers = ();
 
-$qtinc= '@QT_INCLUDE_DIR@';
+@qtinc= (@qt_incs@);
 
 find(
     {   wanted => sub {
 	    (-e || -l and !-d) and do {
-	        $f = substr($_, 1 + length $qtinc);
+	        $f = $_;
                 if( !defined $excludes{$f} # Not excluded
                      && $includes{$f}        # Known header
                      && /\.h$/)     # Not a backup file etc. Only headers.
                 {
-                    my $header = $_;
-                    open(FILE, $_);
+                    my $header = $File::Find::name;
+                    open(FILE, $header);
                     my @header_lines = <FILE>;
                     if (@header_lines == 1) {
                         $line = $header_lines[0];
                         if ($line =~ /^#include "(.*)"/) {
-                            push ( @headers, $qtinc . substr($1, 2) );
+                            push ( @headers, $File::Find::dir . substr($1, 2) );
                         } else {
                             push ( @headers, $header );
                         }
@@ -184,8 +164,8 @@ find(
 	},
 	follow_fast => 1,
 	follow_skip => 2,
-	no_chdir => 1
-    }, $qtinc
+	no_chdir => 0
+    }, @qtinc
  );
 
 $qwtinc = '@QWT_INCLUDE_DIR@';
