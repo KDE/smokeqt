@@ -35,6 +35,14 @@ FOREACH(libname ${QT_QTGUI_LIBRARY})
     set(all_libs "${libname} ${all_libs}")
 ENDFOREACH(libname)
 
+FOREACH(libname ${QT_QTXML_LIBRARY})
+    set(all_libs "${libname} ${all_libs}")
+ENDFOREACH(libname)
+
+FOREACH(libname ${QT_QTNETWORK_LIBRARY})
+    set(all_libs "${libname} ${all_libs}")
+ENDFOREACH(libname)
+
 configure_file(qtguess.pl.cmake ${CMAKE_CURRENT_BINARY_DIR}/qtguess.pl @ONLY)
 configure_file(generate.pl.cmake ${CMAKE_CURRENT_BINARY_DIR}/generate.pl @ONLY )
 
