@@ -91,7 +91,9 @@ SET(QT_USE_QTXML ${QT_QTXML_FOUND})
 SET(QT_USE_QTSVG ${QT_QTSVG_FOUND})
 SET(QT_USE_QTUITOOLS ${QT_QTUITOOLS_FOUND})
 SET(QT_USE_QT3SUPPORT ${QT_QT3SUPPORT_FOUND})
-SET(QT_USE_QTDBUS ${QT_QTDBUS_FOUND})
+#SET(QT_USE_QTDBUS ${QT_QTDBUS_FOUND)
+# The above line doesn't work with cmake 2.4.6, but should be fixed in later versions
+
 INCLUDE(${QT_USE_FILE})
 # At this point, QT_LIBRARIES will contain a list of the found Qt Libs
 # and QT_INCLUDES contains the directories of the found includes
@@ -109,7 +111,7 @@ FOREACH(libname ${QT_LIBRARIES})
 ENDFOREACH(libname)
 
 
-target_link_libraries(smokeqt ${QT_LIBRARIES} ${QSCINTILLA_LIBRARIES} ${QWT_LIBRARIES} )
+target_link_libraries(smokeqt ${QT_LIBRARIES} ${QSCINTILLA_LIBRARIES} ${QWT_LIBRARIES} ${QT_QTDBUS_LIBRARY} )
 
 set_target_properties(smokeqt PROPERTIES VERSION 2.0.0 SOVERSION 2 )
 install(TARGETS smokeqt DESTINATION ${INSTALL_DIR}/lib )
