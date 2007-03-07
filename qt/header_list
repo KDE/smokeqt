@@ -165,7 +165,7 @@ qlcdnumber.h
 qlineedit.h
 qlistview.h
 qlistwidget.h
-qmacstyle.h
+qmacstyle_mac.h
 qmainwindow.h
 qmatrix.h
 qmenubar.h
