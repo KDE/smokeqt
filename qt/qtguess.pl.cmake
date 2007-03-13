@@ -315,7 +315,7 @@ our %tests = (
 						    void setGeometry( const QRect & ) { };
                             QLayoutItem* itemAt(int) const {return (QLayoutItem*) NULL;}
                             QLayoutItem* takeAt(int) {return (QLayoutItem*) NULL;}
-                            int QFoo::count() const {return 0;}
+                            int count() const {return 0;}
 
  						};
  					"],
