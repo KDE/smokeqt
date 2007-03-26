@@ -316,7 +316,7 @@ kpluginselector.h
 kpreviewwidgetbase.h
 kprintaction.h
 kprinter.h
-kprocio.h
+k3procio.h
 kprogressbar.h
 kprogressdialog.h
 kpropertiesdialog.h
