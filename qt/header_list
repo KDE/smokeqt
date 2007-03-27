@@ -138,6 +138,7 @@ qgraphicsitemanimation.h
 qgraphicsitem.h
 qgraphicssceneevent.h
 qgraphicsscene.h
+qgraphicssvgitem.h
 qgraphicsview.h
 qgridlayout.h
 qgroupbox.h

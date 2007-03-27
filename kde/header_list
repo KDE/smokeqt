@@ -306,6 +306,7 @@ QtSql/qsqlrelation.h
 QtSql/qsqlresult.h
 QtSql/qsqltablemodel.h
 QtSvg/qsvgrenderer.h
+QtSvg/qgraphicssvgitem.h
 QtSvg/qsvgwidget.h
 QtUiTools/quiloader.h
 QtXml/qdom.h
