@@ -95,7 +95,6 @@ target_link_libraries(smokekde
     ${KDE4_KDEUI_LIBS}
     ${KDE4_KIO_LIBS} 
     ${KDE4_KNOTIFYCONFIG_LIBS}
-    ${KDE4_SONNETUI_LIBS}
     ${KDE4_KNEWSTUFF_LIBS}
     ${KDE4_KDNSSD_LIBS}
     ${KDE4_KHTML_LIBS}
