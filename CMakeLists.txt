@@ -19,4 +19,6 @@ message(STATUS "Build Smoke... " ${SMOKE_ENABLED})
 #install( FILES  smoke.h DESTINATION ${INCLUDE_INSTALL_DIR} )
 
 # Qt only
-install( FILES  smoke.h DESTINATION ${INSTALL_DIR}/include )
+#install( FILES  smoke.h DESTINATION ${INSTALL_DIR}/include )
+
+install( FILES  smoke.h DESTINATION ${CMAKE_INSTALL_PREFIX}/include )
