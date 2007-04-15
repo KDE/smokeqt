@@ -1,9 +1,17 @@
+OPTION(ENABLE_SMOKE "build Smoke" ON)
+OPTION(ENABLE_SMOKEKDE "build SmokeKDE" ON)
 
-#Laurent reuse configure.in.in
-#message(STATUS "${CMAKE_CURRENT_SOURCE_DIR}: skipped subdir $(kde_build_libsmoke)")
-
-add_subdirectory(qt)
-add_subdirectory(kde)
+set(SMOKE_ENABLED "no")
+if(ENABLE_SMOKE OR ENABLE_SMOKEKDE)
+    add_subdirectory(qt)
+    if(ENABLE_SMOKEKDE)
+        add_subdirectory(kde)
+        set(SMOKE_ENABLED "yes - Qt and KDE")
+    else(ENABLE_SMOKEKDE)
+        set(SMOKE_ENABLED "yes - Qt only")
+    endif(ENABLE_SMOKEKDE)
+endif(ENABLE_SMOKE OR ENABLE_SMOKEKDE)
+message(STATUS "Build Smoke... " ${SMOKE_ENABLED})
 
 ########### install files ###############
 
@@ -12,11 +20,3 @@ add_subdirectory(kde)
 
 # Qt only
 install( FILES  smoke.h DESTINATION ${INSTALL_DIR}/include )
-
-
-
-#original Makefile.am contents follow:
-
-#SUBDIRS = $(kde_build_libsmoke)
-#
-#include_HEADERS = smoke.h
