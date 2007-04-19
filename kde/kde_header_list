@@ -54,6 +54,7 @@ kauthorized.h
 kautomount.h
 kautostart.h
 kcomponentdata.h
+kcursor.h
 kbookmarkbar.h
 kbookmarkdombuilder.h
 kbookmarkexporter.h
