@@ -449,6 +449,7 @@ kxmessages.h
 kxmlguibuilder.h
 kxmlguiclient.h
 kxmlguifactory.h
+kxmlguiwindow.h
 kxyselector.h
 kzip.h
 netwm.h
