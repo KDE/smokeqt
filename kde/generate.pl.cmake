@@ -3,7 +3,7 @@
 ## Run this first, to generate the x_*.cpp files from the Qt headers
 ## using kalyptus
 
-my $kalyptusdir = "@srcdir@/../../kalyptus";
+my $kalyptusdir = "@CMAKE_CURRENT_SOURCE_DIR@/../../kalyptus";
 
 use File::Basename;
 use File::Copy qw|cp|;
@@ -15,16 +15,15 @@ my $here = getcwd;
 my $outdir = $here . "/generate.pl.tmpdir";
 my $finaloutdir = $here;
 my $defines = "qtdefines";
-my $headerlist = "@srcdir@/header_list";
-my $kdeheaderlist = "@srcdir@/kde_header_list";
+my $headerlist = "@CMAKE_CURRENT_SOURCE_DIR@/header_list";
 my $definespath = "$here/$defines";
-my $headerlistpath = "$here/$headerlist";
+my $headerlistpath = "$headerlist";
+
+my $kdeheaderlist = "@CMAKE_CURRENT_SOURCE_DIR@/kde_header_list";
 my $kdeheaderlistpath = "$here/$kdeheaderlist";
 
-# If srcdir != builddir, then srcdir is probvably an absolute
-# path, and it makes no sense to prepend $here.
-$definespath = $defines if $defines =~ /^\//;
-$headerlistpath = $headerlist if $headerlist =~ /^\//;
+## If srcdir != builddir, use headerlist from src
+$headerlistpath = $headerlist if ($headerlist =~ /^\//);
 $kdeheaderlistpath = $kdeheaderlist if $kdeheaderlist =~ /^\//;
 
 ## Note: outdir and finaloutdir should NOT be the same dir!
@@ -41,6 +40,7 @@ if ( -e $definespath ){
     $macros = " --defines=$definespath ";
 }
 
+mkdir $kalyptusdir, 0777;
 # Need to cd to kalyptus's directory so that perl finds Ast.pm etc.
 chdir "$kalyptusdir" or die "Couldn't go to $kalyptusdir (edit script to change dir)\n";
 
@@ -54,7 +54,7 @@ my %excludes = (
 
 my %includes;
 open(HEADERS, $headerlistpath) or die "Couldn't open $headerlistpath: $!\n";
-map { chomp ; $includes{$_} = 1 unless /^\s*#/ } <HEADERS>;
+map { chomp ; $includes{$_} = 1 } <HEADERS>;
 close HEADERS;
 
 # Find out which header files we need to parse
@@ -111,23 +111,23 @@ if("@KDE_HAVE_GL@" eq "yes")
 # List Qt headers, and exclude the ones listed above
 my @headers = ();
 
-$qtinc= '@qt_includes@';
+@qtinc= '@qt_includes@';
 
 find(
     {   wanted => sub {
 	    (-e || -l and !-d) and do {
-	        $f = substr($_, 1 + length $qtinc);
+	        $f = $_;
                 if( !defined $excludes{$f} # Not excluded
                      && $includes{$f}        # Known header
                      && /\.h$/)     # Not a backup file etc. Only headers.
                 {
-                    my $header = $_;
-                    open(FILE, $_);
+                    my $header = $File::Find::name;
+                    open(FILE, $header);
                     my @header_lines = <FILE>;
                     if (@header_lines == 1) {
                         $line = $header_lines[0];
                         if ($line =~ /^#include "(.*)"/) {
-                            push ( @headers, $qtinc . substr($1, 2) );
+                            push ( @headers, $File::Find::dir . substr($1, 2) );
                         } else {
                             push ( @headers, $header );
                         }
@@ -140,8 +140,8 @@ find(
 	},
 	follow_fast => 1,
 	follow_skip => 2,
-	no_chdir => 1
-    }, $qtinc
+	no_chdir => 0
+    }, @qtinc
  );
 
 my @kdeheaders = ();
@@ -168,9 +168,11 @@ find(
  );
 
 # Launch kalyptus
-system "perl kalyptus @ARGV --qt4 --globspace -fsmoke --name=qt $macros --no-cache --allow_k_dcop_accessors --outputdir=$outdir @headers @kdeheaders";
+chdir "../smoke/kde";
+system "perl -I@kdebindings_SOURCE_DIR@/kalyptus @kdebindings_SOURCE_DIR@/kalyptus/kalyptus @ARGV --qt4 --globspace -fsmoke --name=qt $macros --no-cache --outputdir=$outdir @headers @kdeheaders";
 my $exit = $? >> 8;
 exit $exit if ($exit);
+chdir "$kalyptusdir";
 
 # Generate diff for smokedata.cpp
 unless ( -e "$finaloutdir/smokedata.cpp" ) {
