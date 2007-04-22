@@ -105,6 +105,7 @@ kconfigdata.h
 kconfigdialog.h
 kconfigdialogmanager.h
 kconfig.h
+kconfiggroup.h
 kconfigskeleton.h
 kconfigflags.h
 kcpuinfo.h
