@@ -413,7 +413,7 @@ ktempfile.h
 ktemporaryfile.h
 ktextbrowser.h
 ktextedit.h
-ktimezones.h
+ktimezone.h
 ktimezonewidget.h
 ktip.h
 ktoggleaction.h
