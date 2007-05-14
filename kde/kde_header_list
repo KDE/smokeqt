@@ -83,6 +83,7 @@ kcharsets.h
 kclientsocketbase.h
 kclipboard.h
 kcmdlineargs.h
+kcmodule.h
 kcmodulecontainer.h
 kcmoduleinfo.h
 kcmoduleloader.h
@@ -240,6 +241,7 @@ klauncher_iface.h
 kled.h
 klibloader.h
 klineedit.h
+klistwidget.h
 klocale.h
 klocalizedstring.h
 klockfile.h
