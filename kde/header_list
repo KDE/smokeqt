@@ -322,6 +322,7 @@ qmdisubwindow.h
 qtransform.h
 qwizard.h
 qauthenticator.h
+qssl.h
 qsslcertificate.h
 qsslcipher.h
 qsslerror.h
