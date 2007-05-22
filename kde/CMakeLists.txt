@@ -99,6 +99,7 @@ target_link_libraries(smokekde
     ${KDE4_KDNSSD_LIBS}
     ${KDE4_KHTML_LIBS}
     ${KDE4_KDE3SUPPORT_LIBS}
+    ${KDE4_KUTILS_LIBS}
     kmediaplayer
     kntlm )
 
