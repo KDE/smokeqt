@@ -293,7 +293,6 @@ kselector.h
 kseparator.h
 kservicegroup.h
 kservice.h
-kserviceoffer.h
 kservicetype.h
 kservicetypeprofile.h
 kservicetypetrader.h

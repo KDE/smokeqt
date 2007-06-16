@@ -396,7 +396,7 @@ our %tests = (
 					"],
 	#QT_NO_TEXTDATE
  	"QT_NO_TEXTEDIT" =>		["QtGui/qtextedit.h", "QTextEdit foo;", 13], 
-    "QT_NO_TEXTSTREAM" =>           ["qtextstream.h", "QTextStream foo;", 5],
+    "QT_NO_TEXTSTREAM" =>           ["QtCore/qtextstream.h", "QTextStream foo;", 5],
     "QT_NO_THREAD" =>           ["QtCore/qthread.h", "QFoo foo;", 5, q"
 						class QFoo: public QThread
 						{
