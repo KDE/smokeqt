@@ -59,8 +59,8 @@ macro_add_file_dependencies( ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp ${CMAKE_C
 include_directories (${CMAKE_SOURCE_DIR}/smoke ${CMAKE_SOURCE_DIR}/smoke/qt  )
 
 set(smokeqt_LIB_SRCS ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp  
-		${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp 
-		${CMAKE_CURRENT_BINARY_DIR}/x_2.cpp
+                ${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp 
+                ${CMAKE_CURRENT_BINARY_DIR}/x_2.cpp
                 ${CMAKE_CURRENT_BINARY_DIR}/x_3.cpp
                 ${CMAKE_CURRENT_BINARY_DIR}/x_4.cpp
                 ${CMAKE_CURRENT_BINARY_DIR}/x_5.cpp
@@ -111,7 +111,17 @@ FOREACH(libname ${QT_LIBRARIES})
 ENDFOREACH(libname)
 
 
-target_link_libraries(smokeqt ${QT_LIBRARIES} ${QSCINTILLA_LIBRARIES} ${QWT_LIBRARIES} ${QT_QTDBUS_LIBRARY} )
+target_link_libraries(smokeqt ${QT_QTCORE_LIBRARY}
+                              ${QT_QTGUI_LIBRARY}
+                              ${QT_QTNETWORK_LIBRARY}
+                              ${QT_QTOPENGL_LIBRARY}
+                              ${QT_QTDBUS_LIBRARY}
+                              ${QT_QTSQL_LIBRARY}
+                              ${QT_QTSVG_LIBRARY}
+                              ${QT_QTUITOOLS_LIBRARY}
+                              ${QT_QTXML_LIBRARY}
+                              ${QSCINTILLA_LIBRARIES} 
+                              ${QWT_LIBRARIES} )
 
 set_target_properties(smokeqt PROPERTIES VERSION 2.0.0 SOVERSION 2 )
 
@@ -119,37 +129,3 @@ install(TARGETS smokeqt DESTINATION ${CMAKE_INSTALL_PREFIX}/lib )
 
 configure_file(qtguess.pl.cmake ${CMAKE_CURRENT_BINARY_DIR}/qtguess.pl @ONLY)
 configure_file(generate.pl.cmake ${CMAKE_CURRENT_BINARY_DIR}/generate.pl @ONLY )
-
-
-########### install files ###############
-
-#original Makefile.am contents follow:
-
-#lib_LTLIBRARIES = libsmokeqt.la
-#
-## set the include path for X, qt and KDE
-#INCLUDES         = -I$(srcdir)/.. $(all_includes) -I$(qt_includes)/QtUiTools \
-#                   -I$(qt_includes)/QtDBus
-#
-#EXTRA_DIST=generate.pl.in qtguess.pl.in qt_smoke.h Makefile.am
-#
-## the library search path. 
-#libsmokeqt_la_LDFLAGS = -version-info 2:0:0 -no-undefined $(all_libraries) $(GLINC)
-#
-## the libraries to link against.
-#libsmokeqt_la_LIBADD   = $(LIB_QTCORE) $(LIB_QTGUI) $(LIB_QTNETWORK) \
-#						$(LIB_QTOPENGL) $(LIB_QTSQL) $(LIB_QTCORE) $(LIB_QTXML) $(LIB_QTSVG) \
-#						$(GLLIB) $(LIBQSCINTILLA) \
-#						-lQtSvg -lQtUiTools $(LIBQTDBUS) $(LIBQWT)
-#
-#x_sources = x_1.cpp x_2.cpp x_3.cpp x_4.cpp x_5.cpp x_6.cpp x_7.cpp \
-#   x_8.cpp x_9.cpp x_10.cpp x_11.cpp x_12.cpp x_13.cpp x_14.cpp x_15.cpp \
-#   x_16.cpp x_17.cpp x_18.cpp x_19.cpp x_20.cpp
-#
-## which sources should be compiled for perlqtkde
-#libsmokeqt_la_SOURCES = smokedata.cpp $(x_sources)
-#
-#$(x_sources) smokedata.cpp:
-#	perl generate.pl
-#
-#CLEANFILES = $(libsmokeqt_la_SOURCES)
