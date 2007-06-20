@@ -1,6 +1,6 @@
 
 include(FindQScintilla)
-include(FindQwt)
+include(FindQwt5)
 
 include_directories( ${QT_INCLUDES}  ${CMAKE_CURRENT_SOURCE_DIR}/../ )
 
@@ -8,9 +8,9 @@ if(QSCINTILLA_FOUND)
     include_directories( ${QSCINTILLA_INCLUDE_DIR} )
 endif(QSCINTILLA_FOUND)
 
-if(QWT_FOUND)
-    include_directories( ${QWT_INCLUDE_DIR} )
-endif(QWT_FOUND)
+if(Qwt5_Qt4_FOUND)
+    include_directories( ${Qwt5_INCLUDE_DIR} )
+endif(Qwt5_Qt4_FOUND)
 
 IF(NOT PERL_FOUND)
     FIND_PACKAGE(PERL REQUIRED)
@@ -121,7 +121,7 @@ target_link_libraries(smokeqt ${QT_QTCORE_LIBRARY}
                               ${QT_QTUITOOLS_LIBRARY}
                               ${QT_QTXML_LIBRARY}
                               ${QSCINTILLA_LIBRARIES} 
-                              ${QWT_LIBRARIES} )
+                              ${Qwt5_Qt4_LIBRARY} )
 
 set_target_properties(smokeqt PROPERTIES VERSION 2.0.0 SOVERSION 2 )
 

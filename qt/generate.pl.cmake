@@ -27,7 +27,7 @@ if("@QSCINTILLA_FOUND@" eq "YES")
  $qscintilla_headerlistpath = "$here/$qscintilla_headerlist";
 }
 
-if("@QWT_FOUND@" eq "YES")
+if("@Qwt5_Qt4_FOUND@" eq "TRUE")
 {
  $qwt_headerlist = "@CMAKE_CURRENT_SOURCE_DIR@/qwt_header_list";
  $qwt_headerlistpath = "$here/$qwt_headerlist";
@@ -40,7 +40,7 @@ if("@QSCINTILLA_FOUND@" eq "YES")
  $qscintilla_headerlistpath = $qscintilla_headerlist if ($qscintilla_headerlist =~ /^\//);
 }
 
-if("@QWT_FOUND@" eq "YES")
+if("@Qwt5_Qt4_FOUND@" eq "TRUE")
 {
  $qwt_headerlistpath = $qwt_headerlist if ($qwt_headerlist =~ /^\//);
 }
@@ -108,7 +108,7 @@ if("@QSCINTILLA_FOUND@" eq "YES")
 }
 
 my %qwt_includes;
-if("@QWT_FOUND@" eq "YES")
+if("@Qwt5_Qt4_FOUND@" eq "TRUE")
 {
  open(HEADERS, $qwt_headerlistpath) or die "Couldn't open $qwt_headerlistpath: $!\n";
  map { chomp ; $qwt_includes{$_} = 1 } <HEADERS>;
@@ -168,7 +168,7 @@ find(
     }, @qtinc
  );
 
-$qwtinc = '@QWT_INCLUDE_DIR@';
+$qwtinc = '@Qwt5_INCLUDE_DIR@';
 
 find(
     {   wanted => sub {
