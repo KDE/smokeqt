@@ -107,7 +107,6 @@ kdatewidget.h
 kdbusservicestarter.h
 kdebug.h
 kdedmodule.h
-kdefakes.h
 kde_file.h
 kdemacros.h
 kdeprint/kpreloadobject.h
