@@ -1,9 +1,0 @@
-AC_ARG_WITH(
-   smoke,
-   [  --with-smoke@<:@=qt|kde@:>@   Smoke: build Smoke for qt+kde or qt only @<:@default:qt kde@:>@],
-   [ kde_build_libsmoke="$withval" ],
-   [ kde_build_libsmoke="qt kde" ]
-)
-AC_SUBST(kde_build_libsmoke)
-
-
