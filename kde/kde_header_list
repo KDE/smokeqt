@@ -48,14 +48,12 @@ kassistantdialog.h
 kauthorized.h
 kautomount.h
 kautostart.h
-kbookmarkbar.h
 kbookmarkdombuilder.h
 kbookmarkexporter.h
 kbookmark.h
 kbookmarkimporter_crash.h
 kbookmarkimporter.h
 kbookmarkimporter_ie.h
-kbookmarkimporter_kde1.h
 kbookmarkimporter_ns.h
 kbookmarkimporter_opera.h
 kbookmarkmanager.h
@@ -239,7 +237,6 @@ kpagemodel.h
 kpageview.h
 kpagewidget.h
 kpagewidgetmodel.h
-kpalette.h
 kparts/browserextension.h
 kparts/browserinterface.h
 kparts/browserrun.h
@@ -390,10 +387,6 @@ netwm.h
 sonnet/backgroundchecker.h
 sonnet/configdialog.h
 sonnet/configwidget.h
-sonnet/defaultdictionary.h
 sonnet/dialog.h
-sonnet/filter.h
 sonnet/highlighter.h
-sonnet/loader.h
-sonnet/settings.h
 sonnet/speller.h
