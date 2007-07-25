@@ -197,6 +197,7 @@ kio/slave.h
 kio/slaveinterface.h
 kio/tcpslavebase.h
 kio/thumbcreator.h
+kio/udsentry.h
 kjob.h
 kjobuidelegate.h
 kkeyserver.h
