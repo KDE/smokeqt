@@ -1,5 +1,6 @@
 OPTION(ENABLE_SMOKE "build Smoke" ON)
 OPTION(ENABLE_SMOKEKDE "build SmokeKDE" ON)
+OPTION(ENABLE_SMOKEPLASMA "build SmokePlasma" ON)
 
 set(SMOKE_ENABLED "no")
 if(ENABLE_SMOKE OR ENABLE_SMOKEKDE)
@@ -10,7 +11,13 @@ if(ENABLE_SMOKE OR ENABLE_SMOKEKDE)
     else(ENABLE_SMOKEKDE)
         set(SMOKE_ENABLED "yes - Qt only")
     endif(ENABLE_SMOKEKDE)
+
 endif(ENABLE_SMOKE OR ENABLE_SMOKEKDE)
+
+if(ENABLE_SMOKEPLASMA)
+    add_subdirectory(plasma)
+endif(ENABLE_SMOKEPLASMA)
+
 message(STATUS "Build Smoke... " ${SMOKE_ENABLED})
 
 ########### install files ###############
