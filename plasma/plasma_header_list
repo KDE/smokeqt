@@ -370,6 +370,7 @@ sonnet/highlighter.h
 sonnet/speller.h
 plasma/animator.h
 plasma/applet.h
+plasma/configxml.h
 plasma/corona.h
 plasma/dataengine.h
 plasma/dataenginemanager.h
