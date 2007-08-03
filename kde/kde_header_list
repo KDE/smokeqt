@@ -94,7 +94,6 @@ kconfigflags.h
 kconfiggroup.h
 kconfig.h
 kconfigskeleton.h
-kcpuinfo.h
 kcrash.h
 kcursor.h
 kdatatool.h
@@ -121,7 +120,6 @@ kdirnotify.h
 kdiroperator.h
 kdirselectdialog.h
 kdirwatch.h
-kdrawutil.h
 keditlistbox.h
 kedittoolbar.h
 kemailsettings.h
@@ -160,7 +158,6 @@ kiconeffect.h
 kicon.h
 kiconloader.h
 kicontheme.h
-kimageeffect.h
 kimagefilepreview.h
 kimageio.h
 kinputdialog.h
@@ -253,11 +250,9 @@ kpassivepopup.h
 kpassivepopupmessagehandler.h
 kpassworddialog.h
 kpastetextaction.h
-kpixmapeffect.h
 kpixmapprovider.h
 kpixmapregionselectordialog.h
 kpixmapregionselectorwidget.h
-kpixmapsplitter.h
 kplugininfo.h
 kpluginselector.h
 kpreviewwidgetbase.h
