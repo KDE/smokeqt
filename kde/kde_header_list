@@ -251,8 +251,6 @@ kpassivepopupmessagehandler.h
 kpassworddialog.h
 kpastetextaction.h
 kpixmapprovider.h
-kpixmapregionselectordialog.h
-kpixmapregionselectorwidget.h
 kplugininfo.h
 kpluginselector.h
 kpreviewwidgetbase.h
