@@ -122,18 +122,20 @@ find(
                      && /\.h$/)     # Not a backup file etc. Only headers.
                 {
                     my $header = $File::Find::name;
-                    open(FILE, $header);
-                    my @header_lines = <FILE>;
-                    if (@header_lines == 1) {
-                        $line = $header_lines[0];
-                        if ($line =~ /^#include "(.*)"/) {
-                            push ( @headers, $File::Find::dir . substr($1, 2) );
+                    if ( $header !~ /src/ ) {
+                        open(FILE, $header);
+                        my @header_lines = <FILE>;
+                        if (@header_lines == 1) {
+                            $line = $header_lines[0];
+                            if ($line =~ /^#include "(.*)"/) {
+                                push ( @headers, $File::Find::dir . substr($1, 2) );
+                            } else {
+                                push ( @headers, $header );
+                            }
                         } else {
                             push ( @headers, $header );
                         }
-                    } else {
-                        push ( @headers, $header );
-                    }
+					}
                 }
 	    	undef $includes{$f}   
 	     };
@@ -142,7 +144,7 @@ find(
 	follow_skip => 2,
 	no_chdir => 0
     }, @qtinc
- );
+);
 
 my @kdeheaders = ();
 $kdeprefix = "@KDE_PREFIX@";

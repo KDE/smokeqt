@@ -250,6 +250,7 @@ kpassivepopupmessagehandler.h
 kpassworddialog.h
 kpastetextaction.h
 kpixmapprovider.h
+kpluginfactory.h
 kplugininfo.h
 kpluginselector.h
 kpreviewwidgetbase.h
@@ -299,7 +300,6 @@ ksplashscreen.h
 ksqueezedtextlabel.h
 kstandarddirs.h
 kstartupinfo.h
-kstaticdeleter.h
 kstatusbar.h
 kstdaccel.h
 kstdaction.h
