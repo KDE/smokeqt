@@ -81,6 +81,9 @@ set(smokekde_LIB_SRCS ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp
                 ${CMAKE_CURRENT_BINARY_DIR}/x_20.cpp
 )
 
+# Needed to make QSqlRelationalDelegate compile
+ADD_DEFINITIONS (-DQT_GUI_LIB)
+
 kde4_add_library(smokekde SHARED ${smokekde_LIB_SRCS})
 
 target_link_libraries(smokekde 
