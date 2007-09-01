@@ -126,7 +126,6 @@ kencodingfiledialog.h
 kfiledialog.h
 kfilefiltercombo.h
 kfilefilter.h
-kfile.h
 kfileitem.h
 kfilemetainfo.h
 kfilepreview.h
