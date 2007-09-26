@@ -35,26 +35,26 @@ my %qtdefs=();
 my %qtundefs=();
 
 my $tmp = gettmpfile();
-my $qtinc = '@QT_INCLUDE_DIR@';
+my $qtcoreinc = '@QT_QTCORE_INCLUDE_DIR@';
 my $allinc = '@all_includes@';
-my $alllib = '-L@QT_LIBRARY_DIR@';
-my $qtflags = '@qtflags@';
-#my %x;
-#$x{'LIBPNG'}  =   '@LIBPNG@';
-#$x{'LIBJPEG'} =   '@LIBJPEG@';
-#$x{'LIBSM'}   =   '@LIBSM@';
-#$x{'LIBSOCKET'} = '@LIBSOCKET@';
-#$x{'LIBDL'}      = '@LIBDL@';
-#$x{'LIBRESOLV'}  = '@LIBRESOLV@';
-#$x{'LIB_X11'} =   '@LIB_X11@';
-#$x{'X_PRE_LIBS'} = '@X_PRE_LIBS@';
-#$x{'LIB_X11'} =~ s/\$\((.*?)\)/$x{$1}/g;
-#
-#$qtflags =~ s/\$\((.*?)\)/$x{$1}/g;
+my $alllib = '@all_libs@';
 
- -e "$qtinc/QtCore/qglobal.h" or die "Invalid Qt include directory.\n";
+# my %x;
+# $x{'LIBPNG'}  =   '@LIBPNG@';
+# $x{'LIBJPEG'} =   '@LIBJPEG@';
+# $x{'LIBSM'}   =   '@LIBSM@';
+# $x{'LIBSOCKET'} = '@LIBSOCKET@';
+# $x{'LIBDL'}      = '@LIBDL@';
+# $x{'LIBRESOLV'}  = '@LIBRESOLV@';
+# $x{'LIB_X11'} =   '@LIB_X11@';
+# $x{'X_PRE_LIBS'} = '@X_PRE_LIBS@';
+# $x{'LIB_X11'} =~ s/\$\((.*?)\)/$x{$1}/g;
+# 
+# $qtflags =~ s/\$\((.*?)\)/$x{$1}/g;
 
-my $ccmd = "$cc $ccflags $allinc $alllib -o $tmp $tmp.cpp $qtflags";
+ -e "$qtcoreinc/qglobal.h" or die "Invalid Qt include directory.\n";
+
+my $ccmd = "$cc $ccflags $allinc $alllib -o $tmp $tmp.cpp";
 
 my $threshold = defined($opt_t)?$opt_t : $default_threshold;
 $threshold >= 0 or die "invalid testing threshold: $threshold\n";
@@ -68,7 +68,7 @@ map{ $tests{$_}->[2]>=$threshold ? ($used++, $total++):$total++ } keys %tests;
 print "Number of defines to be tested : $used/$total\n\n" unless $opt_q;
 open( QTDEFS, ">>".($opt_o || "qtdefines") ) or die "Can't open output file: $!\n";
 
-grab_qglobal_symbols();
+#grab_qglobal_symbols();
 preliminary_test();
 perform_all_tests();
 
@@ -94,7 +94,7 @@ sub gettmpfile
 
 sub grab_qglobal_symbols
 {
-	my $cmd = "$cc -E -D__cplusplus -dM -I$qtinc/QtCore $qtinc/QtCore/qglobal.h 2>/dev/null";
+	my $cmd = "$cc -E -D__cplusplus -dM -I$qtcoreinc $qtcoreinc/qglobal.h 2>/dev/null";
 	my $symbols = `$cmd`;
         for(0..1)
         {
@@ -115,7 +115,7 @@ sub grab_qglobal_symbols
 	    elsif(! $_) # first try
 	    {
 		print  "Failed to run $cmd.\nTrying without __cplusplus (might be already defined)\n";
-                $cmd = "$cc -E -dM -I$qtinc/QtCore $qtinc/QtCore/qglobal.h 2>/dev/null";
+                $cmd = "$cc -E -dM -I$qtcoreinc $qtcoreinc/qglobal.h 2>/dev/null";
                 $symbols = `$cmd`;
                 next;
 	    }
@@ -129,14 +129,14 @@ sub preliminary_test
 	my $msg = "Trying to compile and link a small program...";
 	print $msg, " " x ($nspaces - length($msg) + 8);
 	open( OUT, ">${tmp}.cpp" ) or die "Failed to open temp file ${tmp}.cpp: $!\n";
-	my $simple=q£
+	my $simple=q"
 		#include <QtGui/qapplication.h>
 		int main( int argc, char **argv )
 		{
 			QApplication foo( argc, argv );
 			return 0;
 		}
-	£;
+	";
 	print OUT $simple;
 	close OUT;
         my $out = `$ccmd 2>&1`;
@@ -183,7 +183,7 @@ sub perform_all_tests
 		}
 		print OUT "#include <QtCore/qfeatures.h>\n";
 		print OUT $tests{$_}->[3] if $tests{$_}->[3]; # need to define some classes ?
-		print OUT qq£
+		print OUT qq"
 
 		int main( int argc, char ** argv)
 		{
@@ -191,7 +191,7 @@ sub perform_all_tests
 		return 0;
 		}
 
-		£;
+		";
 		close OUT;
 
                 my $out = `$ccmd 2>&1`;
@@ -253,21 +253,21 @@ our %tests = (
 	#QT_NO_BIG_CODECS
  	"QT_NO_BUTTONGROUP" =>		["QtGui/qbuttongroup.h", "QButtonGroup foo( (QObject*)NULL );", 12],
  	"QT_NO_CHECKBOX" =>		["QtGui/qcheckbox.h", "QCheckBox foo( (QWidget*)NULL );", 10],
-	"QT_NO_CLIPBOARD" => 		["QtGui/qapplication.h, QtGui/qclipboard.h", q£
+	"QT_NO_CLIPBOARD" => 		["QtGui/qapplication.h, QtGui/qclipboard.h", q"
 						QApplication foo( argc, argv );
 						QClipboard *baz= foo.clipboard();
-					£, 5],
+					", 5],
  	"QT_NO_COLORDIALOG" =>		["QtGui/qcolordialog.h", "QColorDialog::customCount();", 12],
 	#QT_NO_COLORNAMES
  	"QT_NO_COMBOBOX" =>		["QtGui/qcombobox.h", "QComboBox foo( (QWidget*)NULL );", 10],
-	"QT_NO_COMPAT" =>		["QtGui/qfontmetrics.h", q£
+	"QT_NO_COMPAT" =>		["QtGui/qfontmetrics.h", q"
 						QFontMetrics *foo= new QFontMetrics( QFont() );
 						int bar = foo->width( 'c' );
-					£, 0],
-	"QT_NO_COMPONENT" =>		["QtGui/qapplication.h", q£
+					", 0],
+	"QT_NO_COMPONENT" =>		["QtGui/qapplication.h", q"
  						QApplication foo( argc, argv );
  						foo.addLibraryPath( QString::null );
-					£, 5],
+					", 5],
 	#QT_NO_COP
  	"QT_NO_CURSOR" =>		["QtGui/qcursor.h", "QCursor foo;", 5],
  	"QT_NO_DATASTREAM" =>		["QtCore/qdatastream.h", "QDataStream foo;", 5],
@@ -295,16 +295,16 @@ our %tests = (
 	#QT_NO_IMAGEFORMAT_PNG
 	#QT_NO_IMAGEFORMAT_PPM
 	#QT_NO_IMAGEFORMAT_XBM
- 	"QT_NO_IMAGE_HEURISTIC_MASK" =>	["QtGui/qimage.h", q£
+ 	"QT_NO_IMAGE_HEURISTIC_MASK" =>	["QtGui/qimage.h", q"
 						QImage *foo = new QImage;
 						foo->createHeuristicMask();
-					£, 8],
+					", 8],
 	#QT_NO_IMAGE_TEXT
-	"QT_NO_IMAGEIO" => 		["QtGui/qbitmap.h, QtCore/qstring.h", q£
-						QBitmap foo( QString::fromLatin1("foobar") );
-					£, 5],
+	"QT_NO_IMAGEIO" => 		["QtGui/qbitmap.h, QtCore/qstring.h", q"
+						QBitmap foo( QString::fromLatin1('foobar') );
+					", 5],
 	"QT_NO_LABEL" =>		["QtGui/qlabel.h", "QLabel foo( (QWidget*) NULL );", 10],
-	"QT_NO_LAYOUT" =>		["QtGui/qlayout.h", "QFoo foo;", 10, q£
+	"QT_NO_LAYOUT" =>		["QtGui/qlayout.h", "QFoo foo;", 10, q"
  						class QFoo: public QLayout
  						{
  						public:
@@ -318,7 +318,7 @@ our %tests = (
                             int count() const {return 0;}
 
  						};
- 					£],
+ 					"],
 	"QT_NO_LCDNUMBER" =>		["QtGui/qlcdnumber.h", "QLCDNumber foo;", 12],
 	"QT_NO_LINEEDIT" =>		["QtGui/qlineedit.h", "QLineEdit foo( (QWidget *) NULL );", 12],
 	"QT_NO_LISTVIEW" =>		["QtGui/qlistview.h", "QListView foo;", 13],
@@ -353,10 +353,10 @@ our %tests = (
 	#QT_NO_RESIZEHANDLER
 	#QT_NO_RUBBERBAND
 	"QT_NO_SCROLLBAR" =>		["QtGui/qscrollbar.h", "QScrollBar foo( (QWidget *) NULL );", 12],
-	"QT_NO_SESSIONMANAGER" =>	["QtGui/qapplication.h", q£
+	"QT_NO_SESSIONMANAGER" =>	["QtGui/qapplication.h", q"
   						QApplication foo( argc, argv );
   						foo.sessionId();
-					£, 15],
+					", 15],
 	"QT_NO_SETTINGS" =>		["QtCore/qsettings.h", "QSettings foo;", 5],
 	#QT_NO_SHORTCUT
 	"QT_NO_SIGNALMAPPER" =>		["QtCore/qsignalmapper.h", "QSignalMapper foo( (QObject *) NULL );", 0],
@@ -380,7 +380,7 @@ our %tests = (
     "QT_NO_TABWIDGET" =>            ["QtGui/qtabwidget.h", "QTabWidget foo;", 10],
     "QT_NO_TEXTBROWSER" =>          ["QtGui/qtextbrowser.h", "QTextBrowser foo;", 14],
     "QT_NO_TEXTCODEC" =>            ["QtCore/qtextcodec.h", "QTextCodec::codecForMib(1);", 5],
-    "QT_NO_TEXTCODECPLUGIN" =>      ["QtCore/qtextcodecplugin.h, QtCore/qstringlist.h, QtCore/qlist.h, QtCore/qtextcodec.h", "QFoo foo;", 6, q£ 
+    "QT_NO_TEXTCODECPLUGIN" =>      ["QtCore/qtextcodecplugin.h, QtCore/qstringlist.h, QtCore/qlist.h, QtCore/qtextcodec.h", "QFoo foo;", 6, q"
 						class QFoo: public QTextCodecPlugin
 						{
 						public:
@@ -392,12 +392,12 @@ our %tests = (
                             QTextCodec *createForMib( int mib ) {return (QTextCodec *)NULL;}
                             QList<QByteArray> aliases() const {return QList<QByteArray>();}
 						};
-						Q_EXPORT_PLUGIN2( "Foo", QFoo )
-					£],
+						Q_EXPORT_PLUGIN2( 'Foo', QFoo )
+					"],
 	#QT_NO_TEXTDATE
  	"QT_NO_TEXTEDIT" =>		["QtGui/qtextedit.h", "QTextEdit foo;", 13], 
-    "QT_NO_TEXTSTREAM" =>           ["qtextstream.h", "QTextStream foo;", 5],
-    "QT_NO_THREAD" =>           ["QtCore/qthread.h", "QFoo foo;", 5, q£
+    "QT_NO_TEXTSTREAM" =>           ["QtCore/qtextstream.h", "QTextStream foo;", 5],
+    "QT_NO_THREAD" =>           ["QtCore/qthread.h", "QFoo foo;", 5, q"
 						class QFoo: public QThread
 						{
 						public:
@@ -405,7 +405,7 @@ our %tests = (
 						    ~QFoo() {};
                             void run() {}
 						};
-					£],
+					"],
     "QT_NO_TOOLBAR" =>              ["QtGui/qtoolbar.h", "QToolBar foo;", 10],
     "QT_NO_TOOLBUTTON" =>           ["QtGui/qtoolbutton.h", "QToolButton foo((QWidget *) NULL );", 12],
     "QT_NO_TOOLTIP" =>              ["QtGui/qtooltip.h", "QToolTip::palette();", 10],
@@ -417,6 +417,7 @@ our %tests = (
     "QT_NO_WHATSTHIS" =>            ["QtGui/qwhatsthis.h", "QWhatsThis::inWhatsThisMode();", 10],
 	"QT_NO_WHEELEVENT" =>		["QtGui/qevent.h", "QWheelEvent foo( QPoint(1,1), 1, (Qt::MouseButtons)1, 0 );", 5],
 	"QT_NO_XML" =>			["QtXml/qxml.h", "QXmlNamespaceSupport foo;", 5],
+
 	);
 
 }
