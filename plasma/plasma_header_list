@@ -64,7 +64,6 @@ kbuildsycocaprogressdialog.h
 kbuttongroup.h
 kcalendarsystemfactory.h
 kcalendarsystem.h
-kcatalog.h
 kcharselect.h
 kcharsets.h
 kcmdlineargs.h
@@ -125,7 +124,6 @@ kemailsettings.h
 kencodingfiledialog.h
 kfiledialog.h
 kfilefiltercombo.h
-kfilefilter.h
 kfileitem.h
 kfilemetainfo.h
 kfilepreview.h
