@@ -75,6 +75,7 @@ kcmoduleproxy.h
 kcmultidialog.h
 kcodecs.h
 kcolorbutton.h
+kcolorchoosermode.h
 kcolorcombo.h
 kcolormimedata.h
 kcolorvalueselector.h
@@ -295,7 +296,9 @@ ksmimecrypto.h
 ksortablelist.h
 ksplashscreen.h
 ksqueezedtextlabel.h
+kstandardaction.h
 kstandarddirs.h
+kstandardguiitem.h
 kstartupinfo.h
 kstatusbar.h
 kstdaccel.h
