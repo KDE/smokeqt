@@ -29,7 +29,9 @@ dom/html_object.h
 dom/html_table.h
 fixx11h.h
 k3procio.h
+kaboutapplicationdialog.h
 kaboutdata.h
+kabstractwidgetjobtracker.h
 kacceleratormanager.h
 kaccelgen.h
 kacl.h
@@ -39,6 +41,7 @@ kactionmenu.h
 kactionselector.h
 kactivelabel.h
 kallocator.h
+kanimatedbutton.h
 kapplication.h
 karchive.h
 kar.h
@@ -47,6 +50,7 @@ kascii.h
 kassistantdialog.h
 kauthorized.h
 kautomount.h
+kautosavefile.h
 kautostart.h
 kbookmarkdombuilder.h
 kbookmarkexporter.h
@@ -58,7 +62,6 @@ kbookmarkimporter_ns.h
 kbookmarkimporter_opera.h
 kbookmarkmanager.h
 kbookmarkmenu.h
-kbookmarknotifier.h
 kbugreport.h
 kbuildsycocaprogressdialog.h
 kbuttongroup.h
@@ -73,24 +76,25 @@ kcmoduleinfo.h
 kcmoduleloader.h
 kcmoduleproxy.h
 kcmultidialog.h
+kcodecaction.h
 kcodecs.h
 kcolorbutton.h
 kcolorchoosermode.h
+kcolorcollection.h
 kcolorcombo.h
+kcolordialog.h
 kcolormimedata.h
+kcolorscheme.h
+kcolorutils.h
 kcolorvalueselector.h
-kcombiview.h
 kcombobox.h
 kcompletionbox.h
 kcompletion.h
 kcomponentdata.h
 kcompositejob.h
-kconfigbackend.h
 kconfigbase.h
-kconfigdata.h
 kconfigdialog.h
 kconfigdialogmanager.h
-kconfigflags.h
 kconfiggroup.h
 kconfig.h
 kconfigskeleton.h
@@ -98,6 +102,7 @@ kcrash.h
 kcursor.h
 kdatatool.h
 kdatepicker.h
+kdatetable.h
 kdatetime.h
 kdatetimewidget.h
 kdatewidget.h
@@ -128,7 +133,6 @@ kfiledialog.h
 kfilefiltercombo.h
 kfileitem.h
 kfilemetainfo.h
-kfilepreview.h
 kfileshare.h
 kfiletreebranch.h
 kfileview.h
@@ -137,6 +141,7 @@ kfilterdev.h
 kfinddialog.h
 kfind.h
 kfontaction.h
+kfontchooser.h
 kfontdialog.h
 kfontrequester.h
 kfontsizeaction.h
@@ -147,6 +152,7 @@ kglobalsettings.h
 kguiitem.h
 khbox.h
 khelpmenu.h
+khistorycombobox.h
 khtmldefaults.h
 khtml_events.h
 khtml_part.h
@@ -165,7 +171,7 @@ kio/connection.h
 kio/copyjob.h
 kio/davjob.h
 kio/deletejob.h
-kio/file.h
+kio/directorysizejob.h
 kio/filejob.h
 kio/forwardingslavebase.h
 kio/global.h
@@ -175,9 +181,12 @@ kio/ioslave_defaults.h
 kio/jobclasses.h
 kio/job.h
 kio/jobuidelegate.h
+kio/kio_export.h
+kio/kntlm_export.h
 kio/kntlm.h
 kio/metainfojob.h
 kio/netaccess.h
+kio/passworddialog.h
 kio/paste.h
 kio/previewjob.h
 kio/renamedialog.h
@@ -195,6 +204,7 @@ kio/thumbcreator.h
 kio/udsentry.h
 kjob.h
 kjobuidelegate.h
+kkeysequencewidget.h
 kkeyserver.h
 kkeyserver_x11.h
 klanguagebutton.h
@@ -203,6 +213,7 @@ kled.h
 klibloader.h
 klineedit.h
 klistwidget.h
+klistwidgetsearchline.h
 klocale.h
 klocalizedstring.h
 klockfile.h
@@ -221,6 +232,7 @@ kmimetype.h
 kmimetyperesolver.h
 kmimetypetrader.h
 kmultitabbar.h
+knewpassworddialog.h
 knfsshare.h
 knotification.h
 knotificationrestrictions.h
@@ -284,7 +296,6 @@ kservice.h
 kservicetype.h
 kservicetypeprofile.h
 kservicetypetrader.h
-ksettings/componentsdialog.h
 ksettings/dialog.h
 ksettings/dispatcher.h
 ksettings/pluginpage.h
@@ -292,14 +303,17 @@ ksharedptr.h
 kshellcompletion.h
 kshell.h
 kshortcut.h
+kshortcutsdialog.h
+kshortcutseditor.h
+kshortcutwidget.h
 ksimpleconfig.h
-ksmimecrypto.h
 ksortablelist.h
 ksplashscreen.h
 ksqueezedtextlabel.h
 kstandardaction.h
 kstandarddirs.h
 kstandardguiitem.h
+kstandardshortcut.h
 kstartupinfo.h
 kstatusbar.h
 kstdaccel.h
@@ -322,6 +336,7 @@ ktextedit.h
 ktimezone.h
 ktimezonewidget.h
 ktip.h
+ktitlewidget.h
 ktoggleaction.h
 ktogglefullscreenaction.h
 ktoggletoolbaraction.h
@@ -334,6 +349,8 @@ ktrader.h
 ktreewidgetsearchline.h
 ktypelist.h
 ktzfiletimezone.h
+kuiserverjobtracker.h
+kundostack.h
 kuniqueapplication.h
 kurifilter.h
 kurlcombobox.h
