@@ -56,7 +56,7 @@ map{ $tests{$_}->[2]>=$threshold ? ($used++, $total++):$total++ } keys %tests;
 print "Number of defines to be tested : $used/$total\n\n" unless $opt_q;
 open( QTDEFS, ">>".($opt_o || "qtdefines") ) or die "Can't open output file: $!\n";
 
-# grab_qglobal_symbols();
+grab_qglobal_symbols();
 preliminary_test();
 perform_all_tests();
 
@@ -70,13 +70,11 @@ close;
 sub grab_qglobal_symbols
 {
 	my $cmd = "$cc -E -D__cplusplus -dM -I$qtinc -I$qtcoreinc $qtcoreinc/qglobal.h 2>/dev/null";
-print("cmd: '$cmd'\n");
 	my $symbols = `$cmd`;
         for(0..1)
         {
 	    if( check_exit_status($?) )
 	    {
-print("In grab_qglobal_symbols()\n");
 		while( $symbols =~/^#\s*define\s*(QT_\S+)/gm )
 		{
 			$qtdefs{$1} = 1;
@@ -92,7 +90,7 @@ print("In grab_qglobal_symbols()\n");
 	    elsif(! $_) # first try
 	    {
 		print  "Failed to run $cmd.\nTrying without __cplusplus (might be already defined)\n";
-                $cmd = "$cc -E -dM -I$qtinc/QtCore $qtinc/QtCore/qglobal.h 2>/dev/null";
+                $cmd = "$cc -E -dM -I$qtinc -I$qtcoreinc $qtcoreinc/qglobal.h 2>/dev/null";
                 $symbols = `$cmd`;
                 next;
 	    }
@@ -166,7 +164,9 @@ sub perform_all_tests
 		open( OUT, ">${tmp}.cpp" ) or die "Failed to open temp file ${tmp}.cpp: $!\n";
 		foreach $def(keys %qtdefs)
 		{
-			print OUT "#define $def\n";
+			if ( $def !~ /QT_EDITION/ ) {
+				print OUT "#define $def\n";
+			}
 		}
 		foreach $inc(split /,\s*/, $tests{$_}->[0])
 		{
