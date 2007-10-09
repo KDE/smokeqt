@@ -36,6 +36,7 @@ my %qtundefs=();
 
 my $tmp = gettmpfile();
 my $qtcoreinc = '@QT_QTCORE_INCLUDE_DIR@';
+my $qtinc = '@QT_INCLUDE_DIR@';
 my $allinc = '@all_includes@';
 my $alllib = '-L@QT_LIBRARY_DIR@ @QT_QTGUI_LIBRARY@';
 # my $alllib = '@all_libs@';
@@ -56,6 +57,7 @@ map{ $tests{$_}->[2]>=$threshold ? ($used++, $total++):$total++ } keys %tests;
 print "Number of defines to be tested : $used/$total\n\n" unless $opt_q;
 open( QTDEFS, ">>".($opt_o || "qtdefines") ) or die "Can't open output file: $!\n";
 
+# grab_qglobal_symbols();
 preliminary_test();
 perform_all_tests();
 
@@ -63,6 +65,40 @@ print +scalar(keys %qtdefs) . " defines found.\n";
 
 print QTDEFS join("\n", keys %qtdefs), "\n";
 close;
+
+#--------------------------------------------------------------#
+
+sub grab_qglobal_symbols
+{
+	my $cmd = "$cc -E -D__cplusplus -dM -I$qtinc -I$qtcoreinc $qtcoreinc/qglobal.h 2>/dev/null";
+print("cmd: '$cmd'\n");
+	my $symbols = `$cmd`;
+        for(0..1)
+        {
+	    if( check_exit_status($?) )
+	    {
+print("In grab_qglobal_symbols()\n");
+		while( $symbols =~/^#\s*define\s*(QT_\S+)/gm )
+		{
+			$qtdefs{$1} = 1;
+		}
+		print "Found ". scalar( keys %qtdefs )." predefined symbol".((scalar( keys %qtdefs ) -1)?"s":"")." in qglobal.h\n" unless ($opt_q or !(keys %qtdefs));
+		while( $symbols =~/^#\s*define\s*QT_MODULE_(\S+)/gm )
+		{
+			$qtundefs{"QT_NO_$1"} = 1;
+		}
+		print "Found ". scalar( keys %qtundefs )." undefined symbol".((scalar( keys %qtundefs ) -1)?"s":"")." in qglobal.h\n" unless ($opt_q or !(keys %qtundefs));
+                last;
+	    }
+	    elsif(! $_) # first try
+	    {
+		print  "Failed to run $cmd.\nTrying without __cplusplus (might be already defined)\n";
+                $cmd = "$cc -E -dM -I$qtinc/QtCore $qtinc/QtCore/qglobal.h 2>/dev/null";
+                $symbols = `$cmd`;
+                next;
+	    }
+        }
+}
 
 #--------------------------------------------------------------#
 
