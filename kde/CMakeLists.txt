@@ -82,6 +82,10 @@ set(smokekde_LIB_SRCS ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp
 # Needed to make QSqlRelationalDelegate compile
 ADD_DEFINITIONS (-DQT_GUI_LIB)
 
+INCLUDE(${QT_USE_FILE})
+# At this point, QT_LIBRARIES will contain a list of the found Qt Libs
+# and QT_INCLUDES contains the directories of the found includes
+
 FOREACH(filename ${QT_INCLUDES})
     set(all_includes "-I${filename} ${all_includes}")
 ENDFOREACH(filename)
