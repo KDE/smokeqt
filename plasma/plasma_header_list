@@ -105,8 +105,6 @@ kdebug.h
 kdedmodule.h
 kde_file.h
 kdemacros.h
-kdeprint/kpreloadobject.h
-kdeprint/kprintdialogpage.h
 kdesktopfile.h
 kde_terminal_interface.h
 kdeversion.h
@@ -252,8 +250,6 @@ kpluginfactory.h
 kplugininfo.h
 kpluginselector.h
 kpreviewwidgetbase.h
-kprintaction.h
-kprinter.h
 kprogressdialog.h
 kpropertiesdialog.h
 kpropsdlg.h
