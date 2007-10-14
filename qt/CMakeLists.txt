@@ -4,12 +4,21 @@ include(FindQwt5)
 
 include_directories( ${QT_INCLUDES}  ${CMAKE_CURRENT_SOURCE_DIR}/../ )
 
+set(_smokeqt_optional_libs)
 if(QSCINTILLA_FOUND)
+    message(STATUS "Including QScintilla support into smokeqt")
     include_directories( ${QSCINTILLA_INCLUDE_DIR} )
+    set(_smokeqt_optional_libs ${_smokeqt_optional_libs} ${QSCINTILLA_LIBRARIES})
+else(QSCINTILLA_FOUND)
+    message(STATUS "QScintilla not found, support disabled")
 endif(QSCINTILLA_FOUND)
 
 if(Qwt5_Qt4_FOUND)
+    message(STATUS "Including Qwt5 support into smokeqt")
     include_directories( ${Qwt5_INCLUDE_DIR} )
+    set(_smokeqt_optional_libs ${_smokeqt_optional_libs} ${Qwt5_Qt4_LIBRARY})
+else(Qwt5_Qt4_FOUND)
+    message(STATUS "Qwt5 not found, support disabled")
 endif(Qwt5_Qt4_FOUND)
 
 IF(NOT PERL_FOUND)
@@ -110,7 +119,6 @@ FOREACH(libname ${QT_LIBRARIES})
     set(all_libs "${libname} ${all_libs}")
 ENDFOREACH(libname)
 
-
 target_link_libraries(smokeqt ${QT_QTCORE_LIBRARY}
                               ${QT_QTGUI_LIBRARY}
                               ${QT_QTNETWORK_LIBRARY}
@@ -120,8 +128,7 @@ target_link_libraries(smokeqt ${QT_QTCORE_LIBRARY}
                               ${QT_QTSVG_LIBRARY}
                               ${QT_QTUITOOLS_LIBRARY}
                               ${QT_QTXML_LIBRARY}
-                              ${QSCINTILLA_LIBRARIES} 
-                              ${Qwt5_Qt4_LIBRARY} )
+                              ${_smokeqt_optional_libs} )
 
 set_target_properties(smokeqt PROPERTIES VERSION 2.0.0 SOVERSION 2 )
 
