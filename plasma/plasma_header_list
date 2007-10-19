@@ -274,6 +274,7 @@ kscan.h
 kselectaction.h
 kselector.h
 kseparator.h
+kserviceaction.h
 kservicegroup.h
 kservice.h
 kservicetype.h
