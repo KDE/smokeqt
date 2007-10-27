@@ -163,6 +163,10 @@ kicontheme.h
 kimagefilepreview.h
 kimageio.h
 kinputdialog.h
+kplotaxis.h
+kplotobject.h
+kplotpoint.h
+kplotwidget.h
 kio/authinfo.h
 kio/chmodjob.h
 kio/connection.h
