@@ -205,6 +205,7 @@ kio/tcpslavebase.h
 kio/thumbcreator.h
 kio/udsentry.h
 kjob.h
+kjobtrackerinterface.h
 kjobuidelegate.h
 kkeysequencewidget.h
 kkeyserver.h
