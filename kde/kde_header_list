@@ -156,6 +156,7 @@ khtml_events.h
 khtml_part.h
 khtml_settings.h
 khtmlview.h
+khuesaturationselect.h
 kiconeffect.h
 kicon.h
 kiconloader.h
@@ -266,6 +267,7 @@ kpastetextaction.h
 kpixmapprovider.h
 kpluginfactory.h
 kplugininfo.h
+kpluginloader.h
 kpluginselector.h
 kpreviewwidgetbase.h
 kprogressdialog.h
