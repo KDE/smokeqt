@@ -374,10 +374,13 @@ plasma/packagestructure.h
 plasma/phase.h
 plasma/plasma_export.h
 plasma/plasma.h
+plasma/searchaction.h
+plasma/searchcontext.h
 plasma/svg.h
 plasma/taskmanager.h
 plasma/theme.h
 plasma/uiloader.h
+plasma/view.h
 plasma/widgets/borderlayout.h
 plasma/widgets/boxlayout.h
 plasma/widgets/checkbox.h
