@@ -75,12 +75,12 @@ sub grab_qglobal_symbols
         {
 	    if( check_exit_status($?) )
 	    {
-		while( $symbols =~/^#\s*define\s*(QT_\S+)/gm )
+		while( $symbols =~/^#\s*define\s*(QT_\S+)\s*$/gm )
 		{
 			$qtdefs{$1} = 1;
 		}
 		print "Found ". scalar( keys %qtdefs )." predefined symbol".((scalar( keys %qtdefs ) -1)?"s":"")." in qglobal.h\n" unless ($opt_q or !(keys %qtdefs));
-		while( $symbols =~/^#\s*define\s*QT_MODULE_(\S+)/gm )
+		while( $symbols =~/^#\s*define\s*QT_MODULE_(\S+)\s*$/gm )
 		{
 			$qtundefs{"QT_NO_$1"} = 1;
 		}
@@ -164,9 +164,7 @@ sub perform_all_tests
 		open( OUT, ">${tmp}.cpp" ) or die "Failed to open temp file ${tmp}.cpp: $!\n";
 		foreach $def(keys %qtdefs)
 		{
-			if ( $def !~ /QT_EDITION/ ) {
-				print OUT "#define $def\n";
-			}
+			print OUT "#define $def\n";
 		}
 		foreach $inc(split /,\s*/, $tests{$_}->[0])
 		{
