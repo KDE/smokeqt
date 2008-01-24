@@ -212,6 +212,7 @@ kjobuidelegate.h
 kkeysequencewidget.h
 kkeyserver.h
 kkeyserver_x11.h
+kkeyserver_mac.h
 klanguagebutton.h
 klauncher_iface.h
 kled.h

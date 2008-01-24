@@ -12,8 +12,13 @@ else(OPENGL_FOUND AND OPENGL_GLU_FOUND)
 endif(OPENGL_FOUND AND OPENGL_GLU_FOUND)	
 
 # for qtguess.pl
+if (APPLE)
+set(qt_test_threshold 15)
+set(qtflags "-framework QtCore -framework QtGui")
+else (APPLE)
 set(qt_test_threshold 10)
 set(qtflags "-lQtCore -lQtGui")
+endif (APPLE)
 FOREACH(filename ${QT_INCLUDES})
     set(all_includes "-I${filename} ${all_includes}")
 ENDFOREACH(filename)

@@ -26,7 +26,11 @@ IF(NOT PERL_FOUND)
 ENDIF(NOT PERL_FOUND)
 
 # for qtguess.pl
+if (APPLE)
+set(qt_test_threshold 15)
+else (APPLE)
 set(qt_test_threshold 10)
+endif (APPLE)
 
 # macro is defined in qt-copy/src/qbase.pri but couldn't be found by qtguess, so I append it manually
 file(APPEND ${CMAKE_CURRENT_BINARY_DIR}/qtdefines "QT_NO_CAST_TO_ASCII\n")
