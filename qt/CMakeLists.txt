@@ -104,6 +104,7 @@ SET(QT_USE_QTXML ${QT_QTXML_FOUND})
 SET(QT_USE_QTSVG ${QT_QTSVG_FOUND})
 SET(QT_USE_QTUITOOLS ${QT_QTUITOOLS_FOUND})
 SET(QT_USE_QT3SUPPORT ${QT_QT3SUPPORT_FOUND})
+SET(QT_USE_QTWEBKIT ${QT_QTWEBKIT_FOUND})
 #SET(QT_USE_QTDBUS ${QT_QTDBUS_FOUND)
 # The above line doesn't work with cmake 2.4.6, but should be fixed in later versions
 
@@ -132,6 +133,7 @@ target_link_libraries(smokeqt ${QT_QTCORE_LIBRARY}
                               ${QT_QTSVG_LIBRARY}
                               ${QT_QTUITOOLS_LIBRARY}
                               ${QT_QTXML_LIBRARY}
+                              ${QT_QTWEBKIT_LIBRARY}
                               ${_smokeqt_optional_libs} )
 
 set_target_properties(smokeqt PROPERTIES VERSION 2.0.0 SOVERSION 2 )

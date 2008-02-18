@@ -330,3 +330,10 @@ qsslkey.h
 qsslsocket.h
 qsvggenerator.h
 qxmlstream.h
+qwebframe.h
+qwebhistory.h
+qwebhistoryinterface.h
+qwebkitglobal.h
+qwebpage.h
+qwebsettings.h
+qwebview.h
