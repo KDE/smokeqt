@@ -134,12 +134,17 @@ qfont.h
 qfontinfo.h
 qfontmetrics.h
 qframe.h
+qgraphicsgridlayout.h
 qgraphicsitemanimation.h
 qgraphicsitem.h
+qgraphicslayout.h
+qgraphicslayoutitem.h
+qgraphicslinearlayout.h
+qgraphicsproxywidget.h
 qgraphicssceneevent.h
 qgraphicsscene.h
-qgraphicssvgitem.h
 qgraphicsview.h
+qgraphicswidget.h
 qgridlayout.h
 qgroupbox.h
 qhboxlayout.h
@@ -267,6 +272,7 @@ qftp.h
 qhostaddress.h
 qhostinfo.h
 qhttp.h
+qnetworkaccessmanager.h
 qnetworkinterface.h
 qnetworkproxy.h
 qtcpserver.h
@@ -325,6 +331,7 @@ qauthenticator.h
 qssl.h
 qsslcertificate.h
 qsslcipher.h
+qsslconfiguration.h
 qsslerror.h
 qsslkey.h
 qsslsocket.h
