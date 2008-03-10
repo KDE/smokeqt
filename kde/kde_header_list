@@ -195,7 +195,6 @@ kio/paste.h
 kio/previewjob.h
 kio/renamedialog.h
 kio/renamedlg.h
-kio/safesite.h
 kio/scheduler.h
 kio/sessiondata.h
 kio/skipdialog.h
