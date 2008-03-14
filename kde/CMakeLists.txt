@@ -9,7 +9,11 @@ if(OPENGL_FOUND AND OPENGL_GLU_FOUND)
    set(KDE_HAVE_GL "yes")
 else(OPENGL_FOUND AND OPENGL_GLU_FOUND)
    set(KDE_HAVE_GL "no")
-endif(OPENGL_FOUND AND OPENGL_GLU_FOUND)	
+endif(OPENGL_FOUND AND OPENGL_GLU_FOUND)
+	
+set(SOPRANO_MIN_VERSION "2.0")
+macro_optional_find_package(Soprano)
+macro_log_feature(Soprano_FOUND "Soprano" "Soprano Libraries" "kdesupport" FALSE "" "Required to build Nepomuk.")
 
 # for qtguess.pl
 if (APPLE)
@@ -117,6 +121,7 @@ target_link_libraries(smokekde
     ${QT_QTUITOOLS_LIBRARY} 
     ${QT_QTWEBKIT_LIBRARY} 
     ${QT_QT3SUPPORT_LIBRARY} 
+    ${SOPRANO_LIBRARIES}
     ${KDE4_KDECORE_LIBS} 
     ${KDE4_KDEUI_LIBS}
     ${KDE4_KIO_LIBS} 
