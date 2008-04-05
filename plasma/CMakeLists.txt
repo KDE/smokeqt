@@ -84,6 +84,22 @@ set(smokeplasma_LIB_SRCS ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp
 # Needed to make QSqlRelationalDelegate compile
 ADD_DEFINITIONS (-DQT_GUI_LIB)
 
+INCLUDE(${QT_USE_FILE})
+# At this point, QT_LIBRARIES will contain a list of the found Qt Libs
+# and QT_INCLUDES contains the directories of the found includes
+
+FOREACH(filename ${QT_INCLUDES})
+    set(all_includes "-I${filename} ${all_includes}")
+ENDFOREACH(filename)
+
+FOREACH(incname ${QT_INCLUDES})
+    SET(qt_incs "'${incname}', ${qt_incs}")
+ENDFOREACH(incname)
+
+FOREACH(libname ${QT_LIBRARIES})
+    set(all_libs "${libname} ${all_libs}")
+ENDFOREACH(libname)
+
 kde4_add_library(smokeplasma SHARED ${smokeplasma_LIB_SRCS})
 
 target_link_libraries(smokeplasma 
@@ -93,6 +109,7 @@ target_link_libraries(smokeplasma
     ${QT_QTXML_LIBRARY} 
     ${QT_QTSVG_LIBRARY} 
     ${QT_QTUITOOLS_LIBRARY} 
+    ${QT_QTWEBKIT_LIBRARY} 
     ${QT_QT3SUPPORT_LIBRARY} 
     ${KDE4_KDECORE_LIBS} 
     ${KDE4_KDEUI_LIBS}

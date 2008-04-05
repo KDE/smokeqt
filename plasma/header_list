@@ -228,6 +228,7 @@ qstringlistmodel.h
 qstylefactory.h
 qstyle.h
 qstylepainter.h
+qstyleoption.h
 qstyleplugin.h
 qsyntaxhighlighter.h
 qsystemtrayicon.h
