@@ -406,5 +406,6 @@ plasma/widgets/progressbar.h
 plasma/widgets/pushbutton.h
 plasma/widgets/radiobutton.h
 plasma/widgets/signalplotter.h
+plasma/widgets/webcontent.h
 plasma/widgets/widget.h
 
