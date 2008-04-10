@@ -49,6 +49,7 @@ kcolorbutton.h
 kcolorchoosermode.h
 kcolorcombo.h
 kcolormimedata.h
+kcolorscheme.h
 kcolorvalueselector.h
 kcombiview.h
 kcombobox.h
@@ -210,6 +211,7 @@ ksettings/componentsdialog.h
 ksettings/dialog.h
 ksettings/dispatcher.h
 ksettings/pluginpage.h
+ksharedconfig.h
 ksharedptr.h
 kshellcompletion.h
 kshell.h

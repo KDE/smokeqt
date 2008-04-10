@@ -227,7 +227,9 @@ qstatusbar.h
 qstringlistmodel.h
 qstylefactory.h
 qstyle.h
+qstyleoptions.h
 qstylepainter.h
+qstyleoption.h
 qstyleplugin.h
 qsyntaxhighlighter.h
 qsystemtrayicon.h
