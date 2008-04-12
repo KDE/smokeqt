@@ -246,6 +246,7 @@ ktextedit.h
 ktimezone.h
 ktimezonewidget.h
 ktip.h
+ktitlewidget.h
 ktoggleaction.h
 ktogglefullscreenaction.h
 ktoggletoolbaraction.h
