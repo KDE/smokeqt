@@ -348,6 +348,7 @@ soprano/literalvalue.h
 soprano/node.h
 soprano/statement.h
 plasma/abstractrunner.h
+plasma/animationdriver.h
 plasma/animator.h
 plasma/appletbrowser.h
 plasma/applet.h
@@ -364,7 +365,6 @@ plasma/package.h
 plasma/packagemetadata.h
 plasma/packagestructure.h
 plasma/panelsvg.h
-plasma/phase.h
 plasma/plasma_export.h
 plasma/plasma.h
 plasma/searchcontext.h
@@ -374,6 +374,8 @@ plasma/theme.h
 plasma/uiloader.h
 plasma/view.h
 plasma/widgets/icon.h
+plasma/widgets/meter.h
+plasma/widgets/signalplotter.h
 plasma/widgets/webcontent.h
 
 
