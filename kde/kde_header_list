@@ -98,6 +98,8 @@ kconfigdialogmanager.h
 kconfiggroup.h
 kconfig.h
 ksharedconfig.h
+kconfigskeleton.h
+kcoreconfigskeleton.h
 kcrash.h
 kcursor.h
 kdatatool.h
