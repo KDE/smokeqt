@@ -347,7 +347,6 @@ netwm.h
 soprano/literalvalue.h
 soprano/node.h
 soprano/statement.h
-plasma/abstractrunner.h
 plasma/animationdriver.h
 plasma/animator.h
 plasma/appletbrowser.h
@@ -367,8 +366,6 @@ plasma/packagestructure.h
 plasma/panelsvg.h
 plasma/plasma_export.h
 plasma/plasma.h
-plasma/searchcontext.h
-plasma/searchmatch.h
 plasma/svg.h
 plasma/theme.h
 plasma/uiloader.h
