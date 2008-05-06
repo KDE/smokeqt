@@ -138,7 +138,9 @@ target_link_libraries(smokeqt ${QT_QTCORE_LIBRARY}
 
 set_target_properties(smokeqt PROPERTIES VERSION 2.0.0 SOVERSION 2 )
 
-install(TARGETS smokeqt DESTINATION ${LIB_INSTALL_DIR} )
+# Don't use the KDE ${LIB_INSTALL_DIR} macro here as this file is
+# for Qt only installs
+install(TARGETS smokeqt DESTINATION ${CMAKE_INSTALL_PREFIX}/lib )
 
 configure_file(qtguess.pl.cmake ${CMAKE_CURRENT_BINARY_DIR}/qtguess.pl @ONLY)
 configure_file(generate.pl.cmake ${CMAKE_CURRENT_BINARY_DIR}/generate.pl @ONLY )
