@@ -2,9 +2,12 @@
 #define SMOKE_H
 
 #include <string.h>
+#include <string>
+#include <map>
 
 /*
    Copyright (C) 2002, Ashley Winters <qaqortog@nwlink.com>
+   Copyright (C) 2007, Arno Rehn <arno@arnorehn.de>
 
     BSD License
 
@@ -34,10 +37,34 @@
     THE POSSIBILITY OF SUCH DAMAGE.
 */
 
+#ifdef WIN32
+  #define SMOKE_IMPORT __declspec(dllimport)
+  #define SMOKE_EXPORT __declspec(dllexport)
+  #define SMOKE_DLLLOCAL
+  #define SMOKE_DLLPUBLIC
+#else
+  #ifdef GCC_VISIBILITY
+    #define SMOKE_IMPORT __attribute__ ((visibility("default")))
+    #define SMOKE_EXPORT __attribute__ ((visibility("default")))
+    #define SMOKE_DLLLOCAL __attribute__ ((visibility("hidden")))
+    #define SMOKE_DLLPUBLIC __attribute__ ((visibility("default")))
+  #else
+    #define SMOKE_IMPORT
+    #define SMOKE_EXPORT
+    #define SMOKE_DLLLOCAL
+    #define SMOKE_DLLPUBLIC
+  #endif
+#endif
+
 class SmokeBinding;
 
-class Smoke {
+class SMOKE_EXPORT Smoke {
+private:
+    const char *module_name;
+
 public:
+    static SMOKE_EXPORT std::map<std::string, Smoke*> classMap;
+
     union StackItem; // defined below
     /**
      * A stack is an array of arguments, passed to a method when calling it.
@@ -56,6 +83,18 @@ public:
     typedef void* (*CastFn)(void* obj, Index from, Index to);
     typedef void (*EnumFn)(EnumOperation, Index, void*&, long&);
 
+    /**
+     * Describe one index in a given module.
+     */
+    struct ModuleIndex {
+	Smoke* smoke;
+	Index index;
+    };
+    /**
+     * A ModuleIndex with both fields set to 0.
+     */
+    ModuleIndex NullModuleIndex; // initialized in constructor
+
     enum ClassFlags {
         cf_constructor = 0x01,  // has a constructor
         cf_deepcopy = 0x02,     // has copy constructor
@@ -67,6 +106,7 @@ public:
      */
     struct Class {
 	const char *className;	// Name of the class
+	bool external;		// Whether the class is in another module
 	Index parents;		// Index into inheritanceList
 	ClassFn classFn;	// Calls any method in the class
 	EnumFn enumFn;		// Handles enum pointers
@@ -204,12 +244,12 @@ public:
     Index numTypes;
 
     /**
-     * Groups of class IDs (-1 separated) used as super class lists.
+     * Groups of Indexes (0 separated) used as super class lists.
      * For classes with super classes: Class.parents = index into this array.
      */
     Index *inheritanceList;
     /**
-     * Groups of type IDs (-1 separated), describing the types of argument for a method.
+     * Groups of type IDs (0 separated), describing the types of argument for a method.
      * Method.args = index into this array.
      */
     Index *argumentList;
@@ -229,7 +269,8 @@ public:
     /**
      * Constructor
      */
-    Smoke(Class *_classes, Index _numClasses,
+    Smoke(const char *_moduleName,
+	  Class *_classes, Index _numClasses,
 	  Method *_methods, Index _numMethods,
 	  MethodMap *_methodMaps, Index _numMethodMaps,
 	  const char **_methodNames, Index _numMethodNames,
@@ -238,6 +279,7 @@ public:
 	  Index *_argumentList,
 	  Index *_ambiguousMethodList,
 	  CastFn _castFn) :
+		module_name(_moduleName),
 		classes(_classes), numClasses(_numClasses),
 		methods(_methods), numMethods(_numMethods),
 		methodMaps(_methodMaps), numMethodMaps(_numMethodMaps),
@@ -249,7 +291,22 @@ public:
 		castFn(_castFn),
 
 		binding(0)
-		{}
+		{
+		    NullModuleIndex.smoke = 0;
+		    NullModuleIndex.index = 0;
+
+		    for (Index i = 1; i < numClasses; ++i) {
+			if (!classes[i].external)
+			    classMap[className(i)] = this;
+		    }
+		}
+
+    /**
+     * Returns the name of the module (e.g. "qt" or "kde")
+     */
+    inline const char *moduleName() {
+	return module_name;
+    }
 
     inline void *cast(void *ptr, Index from, Index to) {
 	if(!castFn) return ptr;
@@ -289,8 +346,8 @@ public:
 	return (!icmp) ? icur : 0;
     }
 
-    inline Index idClass(const char *c) {
-	if(!c) return 0;
+    inline ModuleIndex idClass(const char *c, bool external = false) {
+	if(!c) return NullModuleIndex;
 	Index imax = numClasses;
 	Index imin = 0;
 	Index icur = -1;
@@ -309,11 +366,20 @@ public:
 		imin = icur + 1;
 	}
 
-	return (!icmp) ? icur : 0;
+	Index idx = (!icmp) ? icur : 0;
+	if (idx && classes[idx].external && !external) idx = 0;
+	ModuleIndex ret = { (idx) ? this : 0, idx };
+	return ret;
     }
 
-    inline Index idMethodName(const char *m) {
-	if(!m) return 0;
+    inline ModuleIndex findClass(const char *c) {
+	Smoke *s = classMap[c];
+	if (!s) return NullModuleIndex;
+	return s->idClass(c);
+    }
+
+    inline ModuleIndex idMethodName(const char *m) {
+	if(!m) return NullModuleIndex;
 	Index imax = numMethodNames;
 	Index imin = 0;
 	Index icur = -1;
@@ -328,10 +394,29 @@ public:
 		imin = icur + 1;
 	}
 
-	return (!icmp) ? icur : 0;
+	ModuleIndex ret = { (!icmp) ? this : 0, (!icmp) ? icur : 0 };
+	return ret;
     }
 
-    inline Index idMethod(Index c, Index name) {
+    inline ModuleIndex findMethodName(const char *c, const char *m) {
+	ModuleIndex mni = idMethodName(m);
+	if (mni.index) return mni;
+
+	ModuleIndex cmi = findClass(c);
+	if (cmi.smoke && cmi.smoke != this) {
+	    return cmi.smoke->findMethodName(c, m);
+	} else if (cmi.smoke == this) {
+	    if (!classes[cmi.index].parents) return NullModuleIndex;
+	    for (Index p = classes[cmi.index].parents; inheritanceList[p]; p++) {
+		Index ci = inheritanceList[p];
+		ModuleIndex mi = classMap[className(ci)]->findMethodName(className(ci), m);
+		if (mi.index) return mi;
+	    }
+	}
+	return NullModuleIndex;
+    }
+
+    inline ModuleIndex idMethod(Index c, Index name) {
 	Index imax = numMethodMaps;
 	Index imin = 0;
 	Index icur = -1;
@@ -349,26 +434,58 @@ public:
 		imin = icur + 1;
 	}
 
-	return (!icmp) ? icur : 0;
+	ModuleIndex ret = { (!icmp) ? this : 0, (!icmp) ? icur : 0 };
+	return ret;
     }
 
-    inline Index findMethod(Index c, Index name) {
-	// TODO: If method is in a parent module, forward the call from here
-	if(!c || !name) return 0;
-	Index mid = idMethod(c, name);
-	if(mid) return mid;
-	if(!classes[c].parents) return 0;
-	for(int p = classes[c].parents; inheritanceList[p] ; p++) {
-	    mid = findMethod(inheritanceList[p], name);
-	    if(mid) return mid;
+    inline ModuleIndex findMethod(ModuleIndex c, ModuleIndex name) {
+	// Index is invalid
+	if(!c.index || !name.index) return NullModuleIndex;
+	// Is the method a direct member of the specified class?
+	ModuleIndex mid = idMethod(c.index, name.index);
+	if(mid.index) return mid;
+	// No, it isn't... Search in the parent classes for it
+	if(!classes[c.index].parents) return NullModuleIndex;
+	for(int p = classes[c.index].parents; inheritanceList[p] ; p++) {
+	    Index ci = inheritanceList[p];
+	    Smoke *s = classMap[className(ci)];
+	    ModuleIndex cmi = s->idClass(className(ci));
+	    ModuleIndex nmi = s->findMethodName(className(ci), name.smoke->methodNames[name.index]);
+	    ModuleIndex mi = s->findMethod(cmi, nmi);
+	    if (mi.index) return mi;
 	}
-	return 0;
+	return NullModuleIndex;
     }
 
-    inline Index findMethod(const char *c, const char *name) {
-	Index idc = idClass(c);
-	Index idname = idMethodName(name);
-	return findMethod(idc, idname);
+    inline ModuleIndex findMethod(const char *c, const char *name) {
+	ModuleIndex idc = findClass(c);
+	ModuleIndex idname = idc.smoke->findMethodName(c, name);
+	return idc.smoke->findMethod(idc, idname);
+    }
+
+    inline bool isDerivedFrom(Smoke *smoke, Index classId, Smoke *baseSmoke, Index baseId) {
+	if (!classId || !baseId || !smoke || !baseSmoke)
+	    return false;
+	if (smoke == baseSmoke && classId == baseId)
+	    return true;
+	
+	for(Index p = smoke->classes[classId].parents; smoke->inheritanceList[p]; p++) {
+	    Class& cur = smoke->classes[smoke->inheritanceList[p]];
+	    if (cur.external) {
+		ModuleIndex mi = findClass(cur.className);
+		if (!mi.index) return false;
+		return isDerivedFrom(mi.smoke, mi.index, baseSmoke, baseId);
+	    }
+	    if (isDerivedFrom(smoke, smoke->inheritanceList[p], baseSmoke, baseId))
+		return true;
+	}
+	return false;
+    }
+
+    inline bool isDerivedFromByName(const char *className, const char *baseClassName) {
+	ModuleIndex classId = findClass(className);
+	ModuleIndex baseId = findClass(baseClassName);
+	return isDerivedFrom(classId.smoke, classId.index, baseId.smoke, baseId.index);
     }
 };
 

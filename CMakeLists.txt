@@ -1,17 +1,23 @@
 OPTION(ENABLE_SMOKE "build Smoke" ON)
+OPTION(ENABLE_SMOKEQSCI "build SmokeQsci" ON)
 OPTION(ENABLE_SMOKEKDE "build SmokeKDE" ON)
 
 set(SMOKE_ENABLED "no")
-if(ENABLE_SMOKE OR ENABLE_SMOKEKDE)
+if(ENABLE_SMOKE OR ENABLE_SMOKEQSCI OR ENABLE_SMOKEKDE)
     add_subdirectory(qt)
+    set(SMOKE_ENABLED "yes - Qt")
+
+    if(ENABLE_SMOKEQSCI)
+        add_subdirectory(qsci)
+        set(SMOKE_ENABLED "${SMOKE_ENABLED}, QScintilla2")
+    endif(ENABLE_SMOKEQSCI)
+
     if(ENABLE_SMOKEKDE)
         add_subdirectory(kde)
-        set(SMOKE_ENABLED "yes - Qt and KDE")
-    else(ENABLE_SMOKEKDE)
-        set(SMOKE_ENABLED "yes - Qt only")
+        set(SMOKE_ENABLED "${SMOKE_ENABLED}, KDE")
     endif(ENABLE_SMOKEKDE)
 
-endif(ENABLE_SMOKE OR ENABLE_SMOKEKDE)
+endif(ENABLE_SMOKE OR ENABLE_SMOKEQSCI OR ENABLE_SMOKEKDE)
 
 message(STATUS "Build Smoke... " ${SMOKE_ENABLED})
 

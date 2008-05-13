@@ -1,25 +1,25 @@
-
-include(FindQScintilla)
-include(FindQwt5)
+# 
+# include(FindQScintilla)
+# include(FindQwt5)
 
 include_directories( ${QT_INCLUDES}  ${CMAKE_CURRENT_SOURCE_DIR}/../ )
 
-set(_smokeqt_optional_libs)
-if(QSCINTILLA_FOUND)
-    message(STATUS "Including QScintilla support into smokeqt")
-    include_directories( ${QSCINTILLA_INCLUDE_DIR} )
-    set(_smokeqt_optional_libs ${_smokeqt_optional_libs} ${QSCINTILLA_LIBRARIES})
-else(QSCINTILLA_FOUND)
-    message(STATUS "QScintilla not found, support disabled")
-endif(QSCINTILLA_FOUND)
-
-if(Qwt5_Qt4_FOUND)
-    message(STATUS "Including Qwt5 support into smokeqt")
-    include_directories( ${Qwt5_INCLUDE_DIR} )
-    set(_smokeqt_optional_libs ${_smokeqt_optional_libs} ${Qwt5_Qt4_LIBRARY})
-else(Qwt5_Qt4_FOUND)
-    message(STATUS "Qwt5 not found, support disabled")
-endif(Qwt5_Qt4_FOUND)
+# set(_smokeqt_optional_libs)
+# if(QSCINTILLA_FOUND)
+#     message(STATUS "Including QScintilla support into smokeqt")
+#     include_directories( ${QSCINTILLA_INCLUDE_DIR} )
+#     set(_smokeqt_optional_libs ${_smokeqt_optional_libs} ${QSCINTILLA_LIBRARIES})
+# else(QSCINTILLA_FOUND)
+#     message(STATUS "QScintilla not found, support disabled")
+# endif(QSCINTILLA_FOUND)
+# 
+# if(Qwt5_Qt4_FOUND)
+#     message(STATUS "Including Qwt5 support into smokeqt")
+#     include_directories( ${Qwt5_INCLUDE_DIR} )
+#     set(_smokeqt_optional_libs ${_smokeqt_optional_libs} ${Qwt5_Qt4_LIBRARY})
+# else(Qwt5_Qt4_FOUND)
+#     message(STATUS "Qwt5 not found, support disabled")
+# endif(Qwt5_Qt4_FOUND)
 
 IF(NOT PERL_FOUND)
     FIND_PACKAGE(PERL REQUIRED)
@@ -94,6 +94,10 @@ set(smokeqt_LIB_SRCS ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp
                 ${CMAKE_CURRENT_BINARY_DIR}/x_20.cpp
 )
 
+IF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
+    ADD_DEFINITIONS(-DGCC_VISIBILITY)
+ENDIF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
+
 # kde4_add_library(smokeqt SHARED ${smokeqt_LIB_SRCS})
 add_library(smokeqt SHARED ${smokeqt_LIB_SRCS})
 
@@ -133,14 +137,15 @@ target_link_libraries(smokeqt ${QT_QTCORE_LIBRARY}
                               ${QT_QTSVG_LIBRARY}
                               ${QT_QTUITOOLS_LIBRARY}
                               ${QT_QTXML_LIBRARY}
-                              ${QT_QTWEBKIT_LIBRARY}
-                              ${_smokeqt_optional_libs} )
+                              ${QT_QTWEBKIT_LIBRARY} )
+#                              ${_smokeqt_optional_libs} )
 
 set_target_properties(smokeqt PROPERTIES VERSION 2.0.0 SOVERSION 2 )
 
 # Don't use the KDE ${LIB_INSTALL_DIR} macro here as this file is
 # for Qt only installs
 install(TARGETS smokeqt DESTINATION ${CMAKE_INSTALL_PREFIX}/lib )
+install(FILES qt_smoke.h DESTINATION include/smoke/qt)
 
 configure_file(qtguess.pl.cmake ${CMAKE_CURRENT_BINARY_DIR}/qtguess.pl @ONLY)
 configure_file(generate.pl.cmake ${CMAKE_CURRENT_BINARY_DIR}/generate.pl @ONLY )

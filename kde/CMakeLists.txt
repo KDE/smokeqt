@@ -1,5 +1,5 @@
 
-include_directories( ${CMAKE_SOURCE_DIR}/smoke ${INCLUDE_INSTALL_DIR}/khexedit/ )
+include_directories( ${CMAKE_SOURCE_DIR}/smoke ${CMAKE_SOURCE_DIR}/smoke/qt ${INCLUDE_INSTALL_DIR}/khexedit/ )
 
 set(srcdir ${CMAKE_CURRENT_SOURCE_DIR})
 set(KDE_PREFIX ${CMAKE_INSTALL_PREFIX})
@@ -90,6 +90,9 @@ set(smokekde_LIB_SRCS ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp
 
 # Needed to make QSqlRelationalDelegate compile
 ADD_DEFINITIONS (-DQT_GUI_LIB)
+IF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
+    ADD_DEFINITIONS(-DGCC_VISIBILITY)
+ENDIF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
 
 INCLUDE(${QT_USE_FILE})
 # At this point, QT_LIBRARIES will contain a list of the found Qt Libs
@@ -132,7 +135,9 @@ target_link_libraries(smokekde
     ${KDE4_KDE3SUPPORT_LIBS}
     ${KDE4_KUTILS_LIBS}
     kmediaplayer
-    kntlm )
+    kntlm
+    smokeqt )
 
 set_target_properties(smokekde PROPERTIES VERSION 2.0.0 SOVERSION 2 )
 install(TARGETS smokekde DESTINATION ${LIB_INSTALL_DIR} )
+install(FILES kde_smoke.h DESTINATION include/smoke/kde)
