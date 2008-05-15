@@ -33,7 +33,7 @@ set(qt_test_threshold 10)
 endif (APPLE)
 
 # macro is defined in qt-copy/src/qbase.pri but couldn't be found by qtguess, so I append it manually
-file(APPEND ${CMAKE_CURRENT_BINARY_DIR}/qtdefines "QT_NO_CAST_TO_ASCII\n")
+file(APPEND ${CMAKE_CURRENT_BINARY_DIR}/../qtdefines "QT_NO_CAST_TO_ASCII\n")
 
 ########### next target ###############
 

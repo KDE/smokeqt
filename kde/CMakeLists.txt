@@ -17,19 +17,14 @@ macro_log_feature(Soprano_FOUND "Soprano" "Soprano Libraries" "kdesupport" FALSE
 
 # for qtguess.pl
 if (APPLE)
-set(qt_test_threshold 15)
 set(qtflags "-framework QtCore -framework QtGui")
 else (APPLE)
-set(qt_test_threshold 10)
 set(qtflags "-lQtCore -lQtGui")
 endif (APPLE)
 FOREACH(filename ${QT_INCLUDES})
     set(all_includes "-I${filename} ${all_includes}")
 ENDFOREACH(filename)
 
-
-# macro is defined in qt-copy/src/qbase.pri but couldn't be found by qtguess, so I append it manually
-file(APPEND ${CMAKE_CURRENT_BINARY_DIR}/qtdefines "QT_NO_CAST_TO_ASCII\n")
 
 ########### next target ###############
 
@@ -54,9 +49,6 @@ add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp
                 ${CMAKE_CURRENT_BINARY_DIR}/x_18.cpp
                 ${CMAKE_CURRENT_BINARY_DIR}/x_19.cpp
                 ${CMAKE_CURRENT_BINARY_DIR}/x_20.cpp
-
-                  COMMAND ${PERL_EXECUTABLE} ARGS ${CMAKE_CURRENT_BINARY_DIR}/qtguess.pl
-                  DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/qtguess.pl
 
                   COMMAND ${PERL_EXECUTABLE} ARGS ${CMAKE_CURRENT_BINARY_DIR}/generate.pl
                   DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/generate.pl
@@ -111,7 +103,6 @@ FOREACH(libname ${QT_LIBRARIES})
 ENDFOREACH(libname)
 
 configure_file(generate.pl.cmake ${CMAKE_CURRENT_BINARY_DIR}/generate.pl @ONLY )
-configure_file(qtguess.pl.cmake ${CMAKE_CURRENT_BINARY_DIR}/qtguess.pl @ONLY)
 
 kde4_add_library(smokekde SHARED ${smokekde_LIB_SRCS})
 

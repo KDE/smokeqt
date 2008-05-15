@@ -54,7 +54,7 @@ my($count, $used, $total);
 map{ $tests{$_}->[2]>=$threshold ? ($used++, $total++):$total++ } keys %tests;
 
 print "Number of defines to be tested : $used/$total\n\n" unless $opt_q;
-open( QTDEFS, ">>".($opt_o || "qtdefines") ) or die "Can't open output file: $!\n";
+open( QTDEFS, ">>".($opt_o || "../qtdefines") ) or die "Can't open output file: $!\n";
 
 grab_qglobal_symbols();
 preliminary_test();

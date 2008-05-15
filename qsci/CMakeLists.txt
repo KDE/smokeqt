@@ -6,12 +6,6 @@ IF(NOT PERL_FOUND)
     FIND_PACKAGE(PERL REQUIRED)
 ENDIF(NOT PERL_FOUND)
 
-# for qtguess.pl
-set(qt_test_threshold 10)
-
-# macro is defined in qt-copy/src/qbase.pri but couldn't be found by qtguess, so I append it manually
-file(APPEND ${CMAKE_CURRENT_BINARY_DIR}/qtdefines "QT_NO_CAST_TO_ASCII\n")
-
 ########### next target ###############
 
 add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp
@@ -86,5 +80,4 @@ FOREACH(incname ${QT_INCLUDES} ${QSCINTILLA_INCLUDE_DIR})
     SET(qt_incs "'${incname}', ${qt_incs}")
 ENDFOREACH(incname)
 
-configure_file(qtguess.pl.cmake ${CMAKE_CURRENT_BINARY_DIR}/qtguess.pl @ONLY)
 configure_file(generate.pl.cmake ${CMAKE_CURRENT_BINARY_DIR}/generate.pl @ONLY)

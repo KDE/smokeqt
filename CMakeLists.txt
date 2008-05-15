@@ -19,7 +19,15 @@ if(ENABLE_SMOKE OR ENABLE_SMOKEQSCI OR ENABLE_SMOKEKDE)
 
 endif(ENABLE_SMOKE OR ENABLE_SMOKEQSCI OR ENABLE_SMOKEKDE)
 
+# for qtguess.pl
+if (APPLE)
+set(qt_test_threshold 15)
+else (APPLE)
+set(qt_test_threshold 10)
+endif (APPLE)
+
 message(STATUS "Build Smoke... " ${SMOKE_ENABLED})
+
 
 ########### install files ###############
 

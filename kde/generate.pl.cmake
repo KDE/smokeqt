@@ -16,7 +16,7 @@ my $outdir = $here . "/generate.pl.tmpdir";
 my $finaloutdir = $here;
 my $defines = "qtdefines";
 my $headerlist = "@CMAKE_CURRENT_SOURCE_DIR@/header_list";
-my $definespath = "$here/$defines";
+my $definespath = "$here/../$defines";
 my $headerlistpath = "$headerlist";
 
 my $kdeheaderlist = "@CMAKE_CURRENT_SOURCE_DIR@/kde_header_list";
