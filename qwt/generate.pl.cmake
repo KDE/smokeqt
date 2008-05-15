@@ -18,15 +18,15 @@ my $defines = "qtdefines";
 my $headerlist = "@CMAKE_CURRENT_SOURCE_DIR@/header_list";
 my $definespath = "$here/../$defines";
 my $headerlistpath = "$headerlist";
-my $qscintilla_headerlist = "";
-my $qscintilla_headerlistpath = "";
+my $qwt_headerlist = "";
+my $qwt_headerlistpath = "";
 
-$qscintilla_headerlist = "@CMAKE_CURRENT_SOURCE_DIR@/qscintilla2_header_list";
-$qscintilla_headerlistpath = "$here/$qscintilla_headerlist";
+$qwt_headerlist = "@CMAKE_CURRENT_SOURCE_DIR@/qwt_header_list";
+$qwt_headerlistpath = "$here/$qwt_headerlist";
 
 ## If srcdir != builddir, use headerlist from src
 $headerlistpath = $headerlist if ($headerlist =~ /^\//);
-$qscintilla_headerlistpath = $qscintilla_headerlist if ($qscintilla_headerlist =~ /^\//);
+$qwt_headerlistpath = $qwt_headerlist if ($qwt_headerlist =~ /^\//);
 
 ## Note: outdir and finaloutdir should NOT be the same dir!
 
@@ -84,7 +84,7 @@ open(HEADERS, $headerlistpath) or die "Couldn't open $headerlistpath: $!\n";
 map { chomp ; $includes{$_} = 1 } <HEADERS>;
 close HEADERS;
 
-open(HEADERS, $qscintilla_headerlistpath) or die "Couldn't open $qscintilla_headerlistpath: $!\n";
+open(HEADERS, $qwt_headerlistpath) or die "Couldn't open $qwt_headerlistpath: $!\n";
 map { chomp ; $includes{$_} = 1 } <HEADERS>;
 close HEADERS;
 
@@ -142,8 +142,8 @@ find(
  );
 
 # Launch kalyptus
-chdir "../smoke/qsci";
-system "perl -I@kdebindings_SOURCE_DIR@/kalyptus @kdebindings_SOURCE_DIR@/kalyptus/kalyptus @ARGV --qt4 --globspace -fsmoke --name=qsci --classlist='@CMAKE_CURRENT_SOURCE_DIR@/classlist' --init-modules=qt $macros --no-cache --outputdir=$outdir @headers";
+chdir "../smoke/qwt";
+system "perl -I@kdebindings_SOURCE_DIR@/kalyptus @kdebindings_SOURCE_DIR@/kalyptus/kalyptus @ARGV --qt4 --globspace -fsmoke --name=qwt --classlist='@CMAKE_CURRENT_SOURCE_DIR@/classlist' --init-modules=qt $macros --no-cache --outputdir=$outdir @headers";
 my $exit = $? >> 8;
 exit $exit if ($exit);
 chdir "$kalyptusdir";
