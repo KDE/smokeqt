@@ -386,6 +386,3 @@ sonnet/configwidget.h
 sonnet/dialog.h
 sonnet/highlighter.h
 sonnet/speller.h
-soprano/literalvalue.h
-soprano/node.h
-soprano/statement.h

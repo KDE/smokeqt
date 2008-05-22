@@ -575,10 +575,6 @@ Sonnet::ConfigWidget
 Sonnet::Dialog
 Sonnet::Highlighter
 Sonnet::Speller
-Soprano
-Soprano::LiteralValue
-Soprano::Node
-Soprano::Statement
 WebCore
 khtml
 khtml::DrawContentsEvent
