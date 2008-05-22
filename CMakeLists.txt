@@ -1,3 +1,4 @@
+FIND_PACKAGE(QScintilla)
 OPTION(ENABLE_SMOKE "build Smoke" ON)
 OPTION(ENABLE_SMOKEQSCI "build SmokeQsci" ON)
 OPTION(ENABLE_SMOKEQWT "build SmokeQwt" OFF)
@@ -13,8 +14,12 @@ if(ENABLE_SMOKE OR ENABLE_SMOKEQSCI OR ENABLE_SMOKEQWT OR ENABLE_SMOKESOPRANO OR
     set(SMOKE_ENABLED "yes - Qt")
 
     if(ENABLE_SMOKEQSCI)
-        add_subdirectory(qsci)
-        set(SMOKE_ENABLED "${SMOKE_ENABLED}, QScintilla2")
+        if( QSCINTILLA_FOUND)
+           add_subdirectory(qsci)
+           set(SMOKE_ENABLED "${SMOKE_ENABLED}, QScintilla2")
+        else(QSCINTILLA_FOUND)
+           MESSAGE(STATUS "QScintilla was not found, SmokeQsci will not build")
+        endif(QSCINTILLA_FOUND)
     endif(ENABLE_SMOKEQSCI)
 
     if(ENABLE_SMOKEQWT)
