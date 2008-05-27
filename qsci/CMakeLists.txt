@@ -70,7 +70,7 @@ target_link_libraries(smokeqsci smokeqt ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIBRARY}
 
 set_target_properties(smokeqsci PROPERTIES VERSION 2.0.0 SOVERSION 2 )
 
-install(TARGETS smokeqsci DESTINATION ${CMAKE_INSTALL_PREFIX}/lib )
+install(TARGETS smokeqsci DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
 install(FILES qsci_smoke.h DESTINATION include/smoke/qsci)
 
 FOREACH(incname ${QT_INCLUDES} ${QSCINTILLA_INCLUDE_DIR})

@@ -70,7 +70,7 @@ target_link_libraries(smokeqwt smokeqt ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIBRARY} 
 
 set_target_properties(smokeqwt PROPERTIES VERSION 2.0.0 SOVERSION 2 )
 
-install(TARGETS smokeqwt DESTINATION ${CMAKE_INSTALL_PREFIX}/lib )
+install(TARGETS smokeqwt DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
 install(FILES qwt_smoke.h DESTINATION include/smoke/qwt)
 
 FOREACH(incname ${QT_INCLUDES} ${Qwt5_INCLUDE_DIR})

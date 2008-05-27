@@ -72,7 +72,7 @@ target_link_libraries(smokesoprano smokeqt ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIBRA
 
 set_target_properties(smokesoprano PROPERTIES VERSION 2.0.0 SOVERSION 2 )
 
-install(TARGETS smokesoprano DESTINATION ${CMAKE_INSTALL_PREFIX}/lib )
+install(TARGETS smokesoprano DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
 install(FILES soprano_smoke.h DESTINATION include/smoke/soprano)
 
 FOREACH(incname ${QT_INCLUDES} ${SOPRANO_INCLUDE_DIR})
