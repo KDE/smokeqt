@@ -9,12 +9,6 @@ qbytearray.h
 qbytearraymatcher.h
 qcache.h
 qchar.h
-qconfig-dist.h
-qconfig.h
-qconfig-large.h
-qconfig-medium.h
-qconfig-minimal.h
-qconfig-small.h
 qcoreapplication.h
 qcoreevent.h
 qdatastream.h
