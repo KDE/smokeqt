@@ -52,3 +52,7 @@ session.h
 standardactionmanager.h
 transactionjobs.h
 transactionsequence.h
+messagemodel.h
+messageparts.h
+messagethreaderproxymodel.h
+messagethreadingattribute.h

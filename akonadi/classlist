@@ -46,6 +46,9 @@ Akonadi::ItemSerializerPlugin
 Akonadi::ItemSync
 Akonadi::ItemView
 Akonadi::Job
+Akonadi::MessageModel
+Akonadi::MessageThreaderProxyModel
+Akonadi::MessageThreadingAttribute
 Akonadi::Monitor
 Akonadi::ResourceBase
 Akonadi::SearchCreateJob

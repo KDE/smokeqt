@@ -88,6 +88,7 @@ kde4_add_library(smokeakonadi SHARED ${smokeakonadi_LIB_SRCS})
 
 target_link_libraries(smokeakonadi 
     akonadi-kde
+    akonadi-kmime
     smokekde
     smokeqt )
 
