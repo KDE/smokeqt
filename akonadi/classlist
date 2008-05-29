@@ -26,6 +26,7 @@ Akonadi::CollectionPropertiesDialog
 Akonadi::CollectionPropertiesPage
 Akonadi::CollectionPropertiesPageFactory
 Akonadi::CollectionStatistics
+Akonadi::CollectionStatisticsDelegate
 Akonadi::CollectionStatisticsJob
 Akonadi::CollectionStatisticsModel
 Akonadi::CollectionView
