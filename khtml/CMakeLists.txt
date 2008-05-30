@@ -1,5 +1,5 @@
 
-include_directories( ${CMAKE_SOURCE_DIR}/smoke )
+include_directories( ${CMAKE_SOURCE_DIR}/smoke ${CMAKE_SOURCE_DIR}/smoke/qt ${CMAKE_SOURCE_DIR}/smoke/kde )
 
 set(srcdir ${CMAKE_CURRENT_SOURCE_DIR})
 set(KDE_PREFIX ${CMAKE_INSTALL_PREFIX})
@@ -11,10 +11,6 @@ else(OPENGL_FOUND AND OPENGL_GLU_FOUND)
    set(KDE_HAVE_GL "no")
 endif(OPENGL_FOUND AND OPENGL_GLU_FOUND)
 	
-set(SOPRANO_MIN_VERSION "2.0")
-macro_optional_find_package(Soprano)
-macro_log_feature(Soprano_FOUND "Soprano" "Soprano Libraries" "kdesupport" FALSE "" "Required to build Nepomuk.")
-
 # for qtguess.pl
 if (APPLE)
 set(qtflags "-framework QtCore -framework QtGui")
@@ -57,7 +53,7 @@ add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp
 macro_add_file_dependencies( ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp ${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp )
 
 
-set(smokekde_LIB_SRCS ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp  
+set(smokekhtml_LIB_SRCS ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp  
 		${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp 
 		${CMAKE_CURRENT_BINARY_DIR}/x_2.cpp
                 ${CMAKE_CURRENT_BINARY_DIR}/x_3.cpp
@@ -104,9 +100,9 @@ ENDFOREACH(libname)
 
 configure_file(generate.pl.cmake ${CMAKE_CURRENT_BINARY_DIR}/generate.pl @ONLY )
 
-kde4_add_library(smokekde SHARED ${smokekde_LIB_SRCS})
+kde4_add_library(smokekhtml SHARED ${smokekhtml_LIB_SRCS})
 
-target_link_libraries(smokekde 
+target_link_libraries(smokekhtml 
     ${QT_QTNETWORK_LIBRARY} 
     ${QT_QTSQL_LIBRARY} 
     ${QT_QTOPENGL_LIBRARY} 
@@ -118,15 +114,12 @@ target_link_libraries(smokekde
     ${KDE4_KDECORE_LIBS} 
     ${KDE4_KDEUI_LIBS}
     ${KDE4_KIO_LIBS} 
-    ${KDE4_KNOTIFYCONFIG_LIBS}
-    ${KDE4_KNEWSTUFF2_LIBS}
-    ${KDE4_KDNSSD_LIBS}
+    ${KDE4_KHTML_LIBS}
     ${KDE4_KDE3SUPPORT_LIBS}
     ${KDE4_KUTILS_LIBS}
-    kmediaplayer
-    kntlm
+    smokekde
     smokeqt )
 
-set_target_properties(smokekde PROPERTIES VERSION 2.0.0 SOVERSION 2 )
-install(TARGETS smokekde DESTINATION ${LIB_INSTALL_DIR} )
-install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/kde_smoke.h DESTINATION include/smoke)
+set_target_properties(smokekhtml PROPERTIES VERSION 2.0.0 SOVERSION 2 )
+install(TARGETS smokekhtml DESTINATION ${LIB_INSTALL_DIR} )
+install(FILES khtml_smoke.h DESTINATION include/smoke/khtml)
