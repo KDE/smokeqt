@@ -192,8 +192,6 @@ klockfile.h
 kmacroexpander.h
 kmainwindow.h
 kmanagerselection.h
-kmediaplayer/player.h
-kmediaplayer/view.h
 kmenubar.h
 kmenu.h
 kmessagebox.h
@@ -208,7 +206,6 @@ knewpassworddialog.h
 knfsshare.h
 knotification.h
 knotificationrestrictions.h
-knotifyconfigwidget.h
 knuminput.h
 knumvalidator.h
 kpagedialog.h
