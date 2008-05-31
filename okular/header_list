@@ -312,6 +312,7 @@ qsqltablemodel.h
 qgraphicssvgitem.h
 qsvgrenderer.h
 qsvgwidget.h
+quiloader.h
 qdom.h
 qxml.h
 qdbusabstractadaptor.h
