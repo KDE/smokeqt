@@ -5,9 +5,11 @@ qscidocument.h
 qsciglobal.h
 qscilexerbash.h
 qscilexerbatch.h
+qscilexercmake.h
 qscilexercpp.h
 qscilexercsharp.h
 qscilexercss.h
+qscilexerd.h
 qscilexerdiff.h
 qscilexer.h
 qscilexerhtml.h
@@ -23,8 +25,8 @@ qscilexerpython.h
 qscilexerruby.h
 qscilexersql.h
 qscilexertex.h
+qscilexervhdl.h
 qscimacro.h
-qscintilla2_header_list
 qsciprinter.h
 qsciscintillabase.h
 qsciscintilla.h

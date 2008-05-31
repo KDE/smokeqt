@@ -7,9 +7,11 @@ QsciLexer::StyleData
 QsciLexer::StyleDataMap
 QsciLexerBash
 QsciLexerBatch
+QsciLexerCMake
 QsciLexerCPP
 QsciLexerCSS
 QsciLexerCSharp
+QsciLexerD
 QsciLexerDiff
 QsciLexerHTML
 QsciLexerIDL
@@ -24,6 +26,7 @@ QsciLexerPython
 QsciLexerRuby
 QsciLexerSQL
 QsciLexerTeX
+QsciLexerVHDL
 QsciMacro
 QsciMacro::Macro
 QsciPrinter
