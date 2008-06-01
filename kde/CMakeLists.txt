@@ -112,8 +112,6 @@ target_link_libraries(smokekde
     ${QT_QTOPENGL_LIBRARY} 
     ${QT_QTXML_LIBRARY} 
     ${QT_QTSVG_LIBRARY} 
-    ${QT_QTUITOOLS_LIBRARY} 
-    ${QT_QTWEBKIT_LIBRARY} 
     ${QT_QT3SUPPORT_LIBRARY} 
     ${KDE4_KDECORE_LIBS} 
     ${KDE4_KDEUI_LIBS}
