@@ -1,0 +1,8 @@
+qwebframe.h
+qwebhistory.h
+qwebhistoryinterface.h
+qwebkitglobal.h
+qwebpage.h
+qwebpluginfactory.h
+qwebsettings.h
+qwebview.h

@@ -1,20 +1,26 @@
 
-include_directories( ${QT_INCLUDES}  ${CMAKE_CURRENT_SOURCE_DIR}/../ )
+include_directories( ${CMAKE_SOURCE_DIR}/smoke ${CMAKE_SOURCE_DIR}/smoke/qt ${CMAKE_SOURCE_DIR}/smoke/kde )
 
-
-IF(NOT PERL_FOUND)
-    FIND_PACKAGE(PERL REQUIRED)
-ENDIF(NOT PERL_FOUND)
-
+set(srcdir ${CMAKE_CURRENT_SOURCE_DIR})
+set(KDE_PREFIX ${CMAKE_INSTALL_PREFIX})
+set(qt_includes ${QT_INCLUDE_DIR})
+set(kde_includes ${KDE4_INCLUDE_DIR})
+if(OPENGL_FOUND AND OPENGL_GLU_FOUND)
+   set(KDE_HAVE_GL "yes")
+else(OPENGL_FOUND AND OPENGL_GLU_FOUND)
+   set(KDE_HAVE_GL "no")
+endif(OPENGL_FOUND AND OPENGL_GLU_FOUND)
+	
 # for qtguess.pl
 if (APPLE)
-set(qt_test_threshold 15)
+set(qtflags "-framework QtCore -framework QtGui")
 else (APPLE)
-set(qt_test_threshold 10)
+set(qtflags "-lQtCore -lQtGui")
 endif (APPLE)
+FOREACH(filename ${QT_INCLUDES})
+    set(all_includes "-I${filename} ${all_includes}")
+ENDFOREACH(filename)
 
-# macro is defined in qt-copy/src/qbase.pri but couldn't be found by qtguess, so I append it manually
-file(APPEND ${CMAKE_CURRENT_BINARY_DIR}/../qtdefines "QT_NO_CAST_TO_ASCII\n")
 
 ########### next target ###############
 
@@ -40,21 +46,16 @@ add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp
                 ${CMAKE_CURRENT_BINARY_DIR}/x_19.cpp
                 ${CMAKE_CURRENT_BINARY_DIR}/x_20.cpp
 
-                  COMMAND ${PERL_EXECUTABLE} ARGS ${CMAKE_CURRENT_BINARY_DIR}/qtguess.pl
-                  DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/qtguess.pl
-
                   COMMAND ${PERL_EXECUTABLE} ARGS ${CMAKE_CURRENT_BINARY_DIR}/generate.pl
                   DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/generate.pl
-
                   WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
 
 macro_add_file_dependencies( ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp ${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp )
 
-include_directories (${CMAKE_SOURCE_DIR}/smoke ${CMAKE_SOURCE_DIR}/smoke/qt  )
 
-set(smokeqt_LIB_SRCS ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp  
-                ${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp 
-                ${CMAKE_CURRENT_BINARY_DIR}/x_2.cpp
+set(smokektexteditor_LIB_SRCS ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp  
+		${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp 
+		${CMAKE_CURRENT_BINARY_DIR}/x_2.cpp
                 ${CMAKE_CURRENT_BINARY_DIR}/x_3.cpp
                 ${CMAKE_CURRENT_BINARY_DIR}/x_4.cpp
                 ${CMAKE_CURRENT_BINARY_DIR}/x_5.cpp
@@ -75,22 +76,11 @@ set(smokeqt_LIB_SRCS ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp
                 ${CMAKE_CURRENT_BINARY_DIR}/x_20.cpp
 )
 
+# Needed to make QSqlRelationalDelegate compile
+ADD_DEFINITIONS (-DQT_GUI_LIB)
 IF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
     ADD_DEFINITIONS(-DGCC_VISIBILITY)
 ENDIF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
-
-# kde4_add_library(smokeqt SHARED ${smokeqt_LIB_SRCS})
-add_library(smokeqt SHARED ${smokeqt_LIB_SRCS})
-
-SET(QT_USE_QTNETWORK ${QT_QTNETWORK_FOUND})
-SET(QT_USE_QTOPENGL ${QT_QTOPENGL_FOUND})
-SET(QT_USE_QTSQL ${QT_QTSQL_FOUND})
-SET(QT_USE_QTXML ${QT_QTXML_FOUND})
-SET(QT_USE_QTSVG ${QT_QTSVG_FOUND})
-SET(QT_USE_QTUITOOLS ${QT_QTUITOOLS_FOUND})
-SET(QT_USE_QT3SUPPORT ${QT_QT3SUPPORT_FOUND})
-#SET(QT_USE_QTDBUS ${QT_QTDBUS_FOUND)
-# The above line doesn't work with cmake 2.4.6, but should be fixed in later versions
 
 INCLUDE(${QT_USE_FILE})
 # At this point, QT_LIBRARIES will contain a list of the found Qt Libs
@@ -108,21 +98,26 @@ FOREACH(libname ${QT_LIBRARIES})
     set(all_libs "${libname} ${all_libs}")
 ENDFOREACH(libname)
 
-target_link_libraries(smokeqt ${QT_QTCORE_LIBRARY}
-                              ${QT_QTGUI_LIBRARY}
-                              ${QT_QTNETWORK_LIBRARY}
-                              ${QT_QTOPENGL_LIBRARY}
-                              ${QT_QTDBUS_LIBRARY}
-                              ${QT_QTSQL_LIBRARY}
-                              ${QT_QTSVG_LIBRARY}
-                              ${QT_QTXML_LIBRARY} )
-
-set_target_properties(smokeqt PROPERTIES VERSION 2.0.0 SOVERSION 2 )
-
-# Don't use the KDE ${LIB_INSTALL_DIR} macro here as this file is
-# for Qt only installs
-install(TARGETS smokeqt DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
-install(FILES qt_smoke.h DESTINATION include/smoke/qt)
-
-configure_file(qtguess.pl.cmake ${CMAKE_CURRENT_BINARY_DIR}/qtguess.pl @ONLY)
 configure_file(generate.pl.cmake ${CMAKE_CURRENT_BINARY_DIR}/generate.pl @ONLY )
+
+kde4_add_library(smokektexteditor SHARED ${smokektexteditor_LIB_SRCS})
+
+target_link_libraries(smokektexteditor 
+    ${QT_QTNETWORK_LIBRARY} 
+    ${QT_QTSQL_LIBRARY} 
+    ${QT_QTOPENGL_LIBRARY} 
+    ${QT_QTXML_LIBRARY} 
+    ${QT_QTSVG_LIBRARY} 
+    ${QT_QTUITOOLS_LIBRARY} 
+    ${QT_QT3SUPPORT_LIBRARY} 
+    ${KDE4_KDECORE_LIBS} 
+    ${KDE4_KDEUI_LIBS}
+    ${KDE4_KIO_LIBS} 
+    ${KDE4_KDE3SUPPORT_LIBS}
+    ${KDE4_KTEXTEDITOR_LIBS}
+    smokekde
+    smokeqt )
+
+set_target_properties(smokektexteditor PROPERTIES VERSION 2.0.0 SOVERSION 2 )
+install(TARGETS smokektexteditor DESTINATION ${LIB_INSTALL_DIR} )
+install(FILES ktexteditor_smoke.h DESTINATION include/smoke/ktexteditor)

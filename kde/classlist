@@ -42,6 +42,8 @@ KBookmarkOwner
 KBugReport
 KBuildSycocaProgressDialog
 KButtonGroup
+KCategorizedSortFilterProxyModel
+KCategorizedView
 KCModule
 KCModuleContainer
 KCModuleInfo

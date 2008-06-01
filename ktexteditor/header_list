@@ -312,6 +312,7 @@ qsqltablemodel.h
 qgraphicssvgitem.h
 qsvgrenderer.h
 qsvgwidget.h
+quiloader.h
 qdom.h
 qxml.h
 qdbusabstractadaptor.h
@@ -347,3 +348,10 @@ qsslkey.h
 qsslsocket.h
 qsvggenerator.h
 qxmlstream.h
+qwebframe.h
+qwebhistory.h
+qwebhistoryinterface.h
+qwebkitglobal.h
+qwebpage.h
+qwebsettings.h
+qwebview.h

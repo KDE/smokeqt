@@ -1,0 +1,9 @@
+QWebHitTestResult
+QWebFrame
+QWebHistoryItem
+QWebHistory
+QWebHistoryInterface
+QWebPage
+QWebPluginFactory
+QWebSettings
+QWebView
