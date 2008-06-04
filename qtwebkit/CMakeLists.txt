@@ -1,5 +1,5 @@
 
-include_directories( ${QT_INCLUDES} ${CMAKE_CURRENT_SOURCE_DIR}/../ ${CMAKE_CURRENT_SOURCE_DIR}/../qt )
+include_directories( ${QT_INCLUDES} ${CMAKE_SOURCE_DIR}/smoke  )
 
 IF(NOT PERL_FOUND)
     FIND_PACKAGE(PERL REQUIRED)
@@ -32,7 +32,7 @@ target_link_libraries(smokeqtwebkit smokeqt ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIBR
 set_target_properties(smokeqtwebkit PROPERTIES VERSION 2.0.0 SOVERSION 2 )
 
 install(TARGETS smokeqtwebkit DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
-install(FILES qtwebkit_smoke.h DESTINATION include/smoke/qtwebkit)
+install(FILES ${CMAKE_SOURCE_DIR}/smoke/qtwebkit_smoke.h DESTINATION include/smoke )
 
 FOREACH(incname ${QT_INCLUDES})
     SET(qt_incs "'${incname}', ${qt_incs}")

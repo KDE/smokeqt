@@ -1,5 +1,5 @@
 
-include_directories( ${QT_INCLUDES}  ${CMAKE_CURRENT_SOURCE_DIR}/../ )
+include_directories( ${QT_INCLUDES} ${CMAKE_SOURCE_DIR}/smoke )
 
 
 IF(NOT PERL_FOUND)
@@ -122,7 +122,7 @@ set_target_properties(smokeqt PROPERTIES VERSION 2.0.0 SOVERSION 2 )
 # Don't use the KDE ${LIB_INSTALL_DIR} macro here as this file is
 # for Qt only installs
 install(TARGETS smokeqt DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
-install(FILES qt_smoke.h DESTINATION include/smoke/qt)
+install(FILES ${CMAKE_SOURCE_DIR}/smoke/qt_smoke.h DESTINATION include/smoke)
 
 configure_file(qtguess.pl.cmake ${CMAKE_CURRENT_BINARY_DIR}/qtguess.pl @ONLY)
 configure_file(generate.pl.cmake ${CMAKE_CURRENT_BINARY_DIR}/generate.pl @ONLY )

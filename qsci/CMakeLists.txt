@@ -1,6 +1,6 @@
 FIND_PACKAGE(QScintilla REQUIRED)
 
-include_directories( ${QT_INCLUDES} ${QSCINTILLA_INCLUDE_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/../ ${CMAKE_CURRENT_SOURCE_DIR}/../qt )
+include_directories( ${QT_INCLUDES} ${QSCINTILLA_INCLUDE_DIR} )
 
 IF(NOT PERL_FOUND)
     FIND_PACKAGE(PERL REQUIRED)
@@ -71,7 +71,7 @@ target_link_libraries(smokeqsci smokeqt ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIBRARY}
 set_target_properties(smokeqsci PROPERTIES VERSION 2.0.0 SOVERSION 2 )
 
 install(TARGETS smokeqsci DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
-install(FILES qsci_smoke.h DESTINATION include/smoke/qsci)
+install(FILES ${CMAKE_SOURCE_DIR}/smoke/qsci_smoke.h DESTINATION include/smoke)
 
 FOREACH(incname ${QT_INCLUDES} ${QSCINTILLA_INCLUDE_DIR})
     SET(qt_incs "'${incname}', ${qt_incs}")

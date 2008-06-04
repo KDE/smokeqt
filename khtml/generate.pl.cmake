@@ -23,7 +23,7 @@ my $kdeheaderlist = "@CMAKE_CURRENT_SOURCE_DIR@/kde_header_list";
 my $kdeheaderlistpath = "$here/$kdeheaderlist";
 
 my $khtmlheaderlist = "@CMAKE_CURRENT_SOURCE_DIR@/khtml_header_list";
-my $khtmlheaderlistpath = "$here/$kdeheaderlist";
+my $khtmlheaderlistpath = "$here/$khtmlheaderlist";
 
 ## If srcdir != builddir, use headerlist from src
 $headerlistpath = $headerlist if ($headerlist =~ /^\//);

@@ -88,7 +88,7 @@ target_link_libraries(smokeplasma
 
 set_target_properties(smokeplasma PROPERTIES VERSION 2.0.0 SOVERSION 2 )
 install(TARGETS smokeplasma DESTINATION ${LIB_INSTALL_DIR} )
-install(FILES plasma_smoke.h DESTINATION include/smoke/plasma )
+install(FILES ${CMAKE_SOURCE_DIR}/smoke/plasma_smoke.h DESTINATION include/smoke )
 
 ########### install files ###############
 

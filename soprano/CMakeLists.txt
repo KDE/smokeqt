@@ -3,7 +3,7 @@ macro_optional_find_package(Soprano)
 macro_log_feature(Soprano_FOUND "Soprano" "Soprano Libraries" "kdesupport" FALSE "" "Required to build Nepomuk.")
 set(soprano_includes ${SOPRANO_INCLUDE_DIR})
 
-include_directories( ${QT_INCLUDES} ${SOPRANO_INCLUDE_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/../ ${CMAKE_CURRENT_SOURCE_DIR}/../qt )
+include_directories( ${QT_INCLUDES} ${SOPRANO_INCLUDE_DIR} )
 IF(NOT PERL_FOUND)
     FIND_PACKAGE(PERL REQUIRED)
 ENDIF(NOT PERL_FOUND)
@@ -73,7 +73,7 @@ target_link_libraries(smokesoprano smokeqt ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIBRA
 set_target_properties(smokesoprano PROPERTIES VERSION 2.0.0 SOVERSION 2 )
 
 install(TARGETS smokesoprano DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
-install(FILES soprano_smoke.h DESTINATION include/smoke/soprano)
+install(FILES ${CMAKE_SOURCE_DIR}/smoke/soprano_smoke.h DESTINATION include/smoke)
 
 FOREACH(incname ${QT_INCLUDES} ${SOPRANO_INCLUDE_DIR})
     SET(qt_incs "'${incname}', ${qt_incs}")

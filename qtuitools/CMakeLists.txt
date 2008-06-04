@@ -1,5 +1,5 @@
 
-include_directories( ${QT_INCLUDES} ${CMAKE_CURRENT_SOURCE_DIR}/../ ${CMAKE_CURRENT_SOURCE_DIR}/../qt )
+include_directories( ${QT_INCLUDES} ${CMAKE_SOURCE_DIR}/smoke  )
 
 IF(NOT PERL_FOUND)
     FIND_PACKAGE(PERL REQUIRED)
@@ -32,7 +32,7 @@ target_link_libraries(smokeqtuitools smokeqt ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIB
 set_target_properties(smokeqtuitools PROPERTIES VERSION 2.0.0 SOVERSION 2 )
 
 install(TARGETS smokeqtuitools DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
-install(FILES qtuitools_smoke.h DESTINATION include/smoke/qtuitools)
+install(FILES ${CMAKE_SOURCE_DIR}/smoke/qtuitools_smoke.h DESTINATION include/smoke)
 
 FOREACH(incname ${QT_INCLUDES})
     SET(qt_incs "'${incname}', ${qt_incs}")

@@ -1,5 +1,5 @@
 
-include_directories( ${CMAKE_SOURCE_DIR}/smoke ${CMAKE_SOURCE_DIR}/smoke/qt ${CMAKE_SOURCE_DIR}/smoke/kde )
+include_directories( ${CMAKE_SOURCE_DIR}/smoke )
 
 set(srcdir ${CMAKE_CURRENT_SOURCE_DIR})
 set(KDE_PREFIX ${CMAKE_INSTALL_PREFIX})
@@ -120,4 +120,4 @@ target_link_libraries(smokekhtml
 
 set_target_properties(smokekhtml PROPERTIES VERSION 2.0.0 SOVERSION 2 )
 install(TARGETS smokekhtml DESTINATION ${LIB_INSTALL_DIR} )
-install(FILES khtml_smoke.h DESTINATION include/smoke/khtml)
+install(FILES ${CMAKE_SOURCE_DIR}/smoke/khtml_smoke.h DESTINATION include/smoke)
