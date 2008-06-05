@@ -42,8 +42,7 @@ ADD_DEFINITIONS (-DQT_GUI_LIB)
 kde4_add_library(smokenepomuk SHARED ${smokenepomuk_LIB_SRCS})
 
 target_link_libraries(smokenepomuk 
-    soprano
-    nepomuk
+    ${NEPOMUK_LIBRARIES}
     smokesoprano
     smokekde
     smokeqt )
