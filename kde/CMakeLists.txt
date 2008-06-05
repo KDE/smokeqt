@@ -112,15 +112,12 @@ target_link_libraries(smokekde
     ${QT_QTOPENGL_LIBRARY} 
     ${QT_QTXML_LIBRARY} 
     ${QT_QTSVG_LIBRARY} 
-    ${QT_QT3SUPPORT_LIBRARY} 
     ${KDE4_KDECORE_LIBS} 
     ${KDE4_KDEUI_LIBS}
     ${KDE4_KIO_LIBS} 
     ${KDE4_KNEWSTUFF2_LIBS}
-    ${KDE4_KDNSSD_LIBS}
-    ${KDE4_KDE3SUPPORT_LIBS}
+    ${KDE4_KPTY_LIBS}
     ${KDE4_KUTILS_LIBS}
-    kntlm
     smokeqt )
 
 set_target_properties(smokekde PROPERTIES VERSION 2.0.0 SOVERSION 2 )
