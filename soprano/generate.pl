@@ -84,8 +84,9 @@ open(HEADERS, $headerlistpath) or die "Couldn't open $headerlistpath: $!\n";
 map { chomp ; $includes{$_} = 1 } <HEADERS>;
 close HEADERS;
 
+my $sopranoincludes;
 open(HEADERS, $soprano_headerlistpath) or die "Couldn't open $soprano_headerlistpath: $!\n";
-map { chomp ; $includes{$_} = 1 } <HEADERS>;
+map { chomp ; $sopranoincludes{$_} = 1 } <HEADERS>;
 close HEADERS;
 
 # Can we compile the OpenGl module ?
@@ -111,7 +112,6 @@ my @headers = ();
 my @qtinc= ('/home/rdale/kde/inst/kde4/include', '/home/rdale/kde/inst/kde4/include', '/home/rdale/kde/inst/kde4/mkspecs/default', '/home/rdale/kde/inst/kde4/include/Qt', '/home/rdale/kde/inst/kde4/include/QtCore', '/home/rdale/kde/inst/kde4/include/QtGui', '/home/rdale/kde/inst/kde4/include/Qt3Support', '/home/rdale/kde/inst/kde4/include/QtAssistant', '/home/rdale/kde/inst/kde4/include/QtDesigner', '/home/rdale/kde/inst/kde4/include/QtDesigner', '/home/rdale/kde/inst/kde4/include/QtNetwork', '/home/rdale/kde/inst/kde4/include/QtOpenGL', '/home/rdale/kde/inst/kde4/include/QtSql', '/home/rdale/kde/inst/kde4/include/QtXml', '/home/rdale/kde/inst/kde4/include/QtSvg', '/home/rdale/kde/inst/kde4/include/QtScript', '/home/rdale/kde/inst/kde4/include/QtUiTools', '/home/rdale/kde/inst/kde4/include/QtTest', '/home/rdale/kde/inst/kde4/include/QtDBus', '/home/rdale/kde/inst/kde4/include/QtAssistant', '/home/rdale/kde/inst/kde4/include/QtHelp', '/home/rdale/kde/inst/kde4/include/QtWebKit', );
 
 find(
-print $File::Find::name;
     {   wanted => sub {
 	    (-e || -l and !-d) and do {
 	        $f = $_;
@@ -142,9 +142,31 @@ print $File::Find::name;
     }, @qtinc
  );
 
+my @sopranoheaders = ();
+$kdeprefix = "";
+$sopranoinc= '/home/rdale/kde/inst/kde4/include';
+$sopranoinc =~ s/\${prefix}/$kdeprefix/; # Remove ${prefix} in src != build
+-d $sopranoinc or die "Couldn't process $sopranoinc: $!\n";
+
+find(
+    {   wanted => sub {
+	    (-e || -l and !-d) and do {
+	        $f = substr($_, 1 + length $sopranoinc);
+                push ( @sopranoheaders, $_ )
+	    	  if( $sopranoincludes{$f}        # Known header
+	    	     && /\.h$/);     # Not a backup file etc. Only headers.
+	    	undef $sopranoincludes{$f}   
+	     };
+	},
+	follow_fast => 1,
+	follow_skip => 2,
+	no_chdir => 1
+    }, $sopranoinc
+ );
+
 # Launch kalyptus
 chdir "../smoke/soprano";
-system "perl -I/home/rdale/kde/src/4/kdebindings/kalyptus /home/rdale/kde/src/4/kdebindings/kalyptus/kalyptus @ARGV --qt4 --globspace -fsmoke --name=soprano --classlist='/home/rdale/kde/src/4/kdebindings/smoke/soprano/classlist' --init-modules=qt $macros --no-cache --outputdir=$outdir @headers";
+system "perl -I/home/rdale/kde/src/4/kdebindings/kalyptus /home/rdale/kde/src/4/kdebindings/kalyptus/kalyptus @ARGV --qt4 --globspace -fsmoke --name=soprano --classlist='/home/rdale/kde/src/4/kdebindings/smoke/soprano/classlist' --init-modules=qt $macros --no-cache --outputdir=$outdir @headers @sopranoheaders";
 my $exit = $? >> 8;
 exit $exit if ($exit);
 chdir "$kalyptusdir";

@@ -1,3 +1,4 @@
+find_package(Phonon REQUIRED)
 
 include_directories( ${QT_INCLUDES} ${CMAKE_SOURCE_DIR}/smoke  )
 
@@ -66,7 +67,7 @@ IF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
 ENDIF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
 add_library(smokephonon SHARED ${smokephonon_LIB_SRCS})
 
-target_link_libraries(smokephonon smokeqt ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIBRARY} ${QT_QTDBUS_LIBRARY} ${QT_QTXML_LIBRARY} ${QT_PHONON_LIBRARY})
+target_link_libraries(smokephonon smokeqt ${PHONON_LIBS})
 
 set_target_properties(smokephonon PROPERTIES VERSION 2.0.0 SOVERSION 2 )
 
