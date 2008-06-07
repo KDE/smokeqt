@@ -314,6 +314,7 @@ qsvgrenderer.h
 qsvgwidget.h
 qdom.h
 qxml.h
+qxmlstream.h
 qdbusabstractadaptor.h
 qdbusabstractinterface.h
 qdbusargument.h
