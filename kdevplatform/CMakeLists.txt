@@ -124,7 +124,6 @@ target_link_libraries(smokekdevplatform
     ${KDE4_THREADWEAVER_LIBRARIES} 
     ${QT_QTDESIGNER_LIBRARY} 
     ${KDE4_THREADWEAVER_LIBRARIES}
-#    kdevplatformshell 
     sublime
     ${KDEVPLATFORM_INTERFACES_LIBRARY}
     ${KDEVPLATFORM_PROJECT_LIBRARY}

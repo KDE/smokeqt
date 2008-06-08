@@ -158,7 +158,7 @@ find(
 
 # Launch kalyptus
 chdir "../smoke/kde";
-system "perl -I@kdebindings_SOURCE_DIR@/kalyptus @kdebindings_SOURCE_DIR@/kalyptus/kalyptus @ARGV --qt4 --globspace -fsmoke --name=solid --init-modules=qt,kde --classlist=@CMAKE_CURRENT_SOURCE_DIR@/classlist $macros --no-cache --outputdir=$outdir @headers @kdeheaders";
+system "perl -I@kdebindings_SOURCE_DIR@/kalyptus @kdebindings_SOURCE_DIR@/kalyptus/kalyptus @ARGV --qt4 --globspace -fsmoke --name=solid --init-modules=qt --classlist=@CMAKE_CURRENT_SOURCE_DIR@/classlist $macros --no-cache --outputdir=$outdir @headers @kdeheaders";
 my $exit = $? >> 8;
 exit $exit if ($exit);
 chdir "$kalyptusdir";

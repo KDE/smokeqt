@@ -1,3 +1,4 @@
+# FIND_PACKAGE(Solid REQUIRED)
 
 include_directories( ${CMAKE_SOURCE_DIR}/smoke )
 
@@ -109,7 +110,6 @@ target_link_libraries(smokesolid
     ${QT_QTXML_LIBRARY} 
     ${QT_QTDBUS_LIBRARY} 
     ${KDE4_SOLID_LIBS}
-    smokekde
     smokeqt )
 
 set_target_properties(smokesolid PROPERTIES VERSION 2.0.0 SOVERSION 2 )
