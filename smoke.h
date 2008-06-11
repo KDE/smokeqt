@@ -459,6 +459,7 @@ public:
 
     inline ModuleIndex findMethod(const char *c, const char *name) {
 	ModuleIndex idc = findClass(c);
+	if (!idc.smoke || !idc.index) return NullModuleIndex;
 	ModuleIndex idname = idc.smoke->findMethodName(c, name);
 	return idc.smoke->findMethod(idc, idname);
     }
