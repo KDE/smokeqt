@@ -14,7 +14,7 @@ KTextEditor::ContainerInterface
 KTextEditor::Cursor
 KTextEditor::Document
 KTextEditor::Editor
-KTextEditor::EditorChooser:
+KTextEditor::EditorChooser
 KTextEditor::Factory
 KTextEditor::MarkInterface
 KTextEditor::MdiContainer

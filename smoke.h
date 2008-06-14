@@ -474,8 +474,8 @@ public:
 	    Class& cur = smoke->classes[smoke->inheritanceList[p]];
 	    if (cur.external) {
 		ModuleIndex mi = findClass(cur.className);
-		if (!mi.index) return false;
-		return isDerivedFrom(mi.smoke, mi.index, baseSmoke, baseId);
+		if (isDerivedFrom(mi.smoke, mi.index, baseSmoke, baseId))
+		    return true;
 	    }
 	    if (isDerivedFrom(smoke, smoke->inheritanceList[p], baseSmoke, baseId))
 		return true;
