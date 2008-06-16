@@ -1,4 +1,5 @@
 Plasma
+Plasma::AbstractRunner
 Plasma::AnimationDriver
 Plasma::Animator
 Plasma::Applet
@@ -30,12 +31,15 @@ Plasma::PackageStructure
 Plasma::PanelSvg
 Plasma::PlotColor
 Plasma::PushButton
+Plasma::QueryMatch
 Plasma::RadioButton
+Plasma::RunnerContext
+Plasma::RunnerManager
+Plasma::RunnerScript
 Plasma::ScriptEngine
 Plasma::SignalPlotter
 Plasma::Svg
 Plasma::TextEdit
 Plasma::Theme
-Plasma::UiLoader
 Plasma::View
 Plasma::WebContent

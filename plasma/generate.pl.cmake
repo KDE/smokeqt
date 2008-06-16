@@ -19,11 +19,15 @@ my $headerlist = "@CMAKE_CURRENT_SOURCE_DIR@/header_list";
 my $definespath = "$here/../$defines";
 my $headerlistpath = "$headerlist";
 
+my $kdeheaderlist = "@CMAKE_CURRENT_SOURCE_DIR@/kde_header_list";
+my $kdeheaderlistpath = "$here/$kdeheaderlist";
+
 my $plasmaheaderlist = "@CMAKE_CURRENT_SOURCE_DIR@/plasma_header_list";
 my $plasmaheaderlistpath = "$here/$plasmaheaderlist";
 
 ## If srcdir != builddir, use headerlist from src
 $headerlistpath = $headerlist if ($headerlist =~ /^\//);
+$kdeheaderlistpath = $kdeheaderlist if $kdeheaderlist =~ /^\//;
 $plasmaheaderlistpath = $plasmaheaderlist if $plasmaheaderlist =~ /^\//;
 
 ## Note: outdir and finaloutdir should NOT be the same dir!
@@ -47,19 +51,6 @@ chdir "$kalyptusdir" or die "Couldn't go to $kalyptusdir (edit script to change 
 # Find out which header files we need to parse
 # We don't want all of them - e.g. not template-based stuff
 my %excludes = (
-);
-
-# Some systems have a QTDIR = KDEDIR = PREFIX
-# We need a complete list
-
-my %includes;
-open(HEADERS, $headerlistpath) or die "Couldn't open $headerlistpath: $!\n";
-map { chomp ; $includes{$_} = 1 } <HEADERS>;
-close HEADERS;
-
-# Find out which header files we need to parse
-# We don't want all of them - e.g. not template-based stuff
-my %plasmaexcludes = (
 #   These headers don't look suitable for inclusion:
 	'kallocator.h' => 1,
 	'kbookmarkimporter_crash.h' => 1,
@@ -86,27 +77,23 @@ my %plasmaexcludes = (
 # Some systems have a QTDIR = KDEDIR = PREFIX
 # We need a complete list
 
-my %plasmaincludes;
-open(HEADERS, $plasmaheaderlistpath) or die "Couldn't open $plasmaheaderlistpath: $!\n";
-map { chomp ; $plasmaincludes{$_} = 1 unless /^\s*#/ } <HEADERS>;
+my %includes;
+open(HEADERS, $headerlistpath) or die "Couldn't open $headerlistpath: $!\n";
+map { chomp ; $includes{$_} = 1 } <HEADERS>;
 close HEADERS;
 
-# Can we compile the OpenGl module ?
-if("@KDE_HAVE_GL@" eq "yes")
-{
-    open(DEFS, $definespath);
-    my @defs = <DEFS>;
-    close DEFS;
-    if(!grep(/QT_NO_OPENGL/, @defs))
-    {
-      $excludes{'qgl.h'} = undef;
-      $excludes{'qglcolormap.h'} = undef;
-    }
-    else
-    {
-      print STDERR "Qt was not compiled with OpenGL support...\n Skipping QGL Classes.\n";
-    }
-}
+
+# Some systems have a QTDIR = KDEDIR = PREFIX
+# We need a complete list
+
+my %kdeincludes;
+open(HEADERS, $kdeheaderlistpath) or die "Couldn't open $kdeheaderlistpath: $!\n";
+map { chomp ; $kdeincludes{$_} = 1 unless /^\s*#/ } <HEADERS>;
+close HEADERS;
+
+open(HEADERS, $plasmaheaderlistpath) or die "Couldn't open $plasmaheaderlistpath: $!\n";
+map { chomp ; $kdeincludes{$_} = 1 unless /^\s*#/ } <HEADERS>;
+close HEADERS;
 
 # List Qt headers, and exclude the ones listed above
 my @headers = ();
@@ -146,7 +133,7 @@ find(
     }, @qtinc
 );
 
-my @plasmaheaders = ();
+my @kdeheaders = ();
 $kdeprefix = "@KDE_PREFIX@";
 $kdeinc= '@kde_includes@';
 $kdeinc =~ s/\${prefix}/$kdeprefix/; # Remove ${prefix} in src != build
@@ -156,11 +143,11 @@ find(
     {   wanted => sub {
 	    (-e || -l and !-d) and do {
 	        $f = substr($_, 1 + length $kdeinc);
-                push ( @plasmaheaders, $_ )
-	    	  if( !defined $plasmaexcludes{$f} # Not excluded
-	    	     && $plasmaincludes{$f}        # Known header
+                push ( @kdeheaders, $_ )
+	    	  if( !defined $kdeexcludes{$f} # Not excluded
+	    	     && $kdeincludes{$f}        # Known header
 	    	     && /\.h$/);     # Not a backup file etc. Only headers.
-	    	undef $plasmaincludes{$f}   
+	    	undef $kdeincludes{$f}   
 	     };
 	},
 	follow_fast => 1,
@@ -170,8 +157,8 @@ find(
  );
 
 # Launch kalyptus
-chdir "../smoke/plasma";
-system "perl -I@kdebindings_SOURCE_DIR@/kalyptus @kdebindings_SOURCE_DIR@/kalyptus/kalyptus @ARGV --qt4 --globspace -fsmoke --name=plasma --init-modules=kde $macros --classlist=@CMAKE_CURRENT_SOURCE_DIR@/classlist --no-cache --outputdir=$outdir @headers @plasmaheaders";
+chdir "../smoke/kde";
+system "perl -I@kdebindings_SOURCE_DIR@/kalyptus @kdebindings_SOURCE_DIR@/kalyptus/kalyptus @ARGV --qt4 --globspace -fsmoke --name=plasma --init-modules=qt,kde --classlist=@CMAKE_CURRENT_SOURCE_DIR@/classlist $macros --no-cache --outputdir=$outdir @headers @kdeheaders";
 my $exit = $? >> 8;
 exit $exit if ($exit);
 chdir "$kalyptusdir";
