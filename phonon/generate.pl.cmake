@@ -97,7 +97,7 @@ find(
 
 # Launch kalyptus
 chdir "../smoke/phonon";
-system "perl -I@kdebindings_SOURCE_DIR@/kalyptus @kdebindings_SOURCE_DIR@/kalyptus/kalyptus @ARGV --qt4 --globspace -fsmoke --name=phonon --classlist='@CMAKE_CURRENT_SOURCE_DIR@/classlist' --init-modules=qt $macros --no-cache --outputdir=$outdir @headers @phononheaders";
+system "perl -I@kdebindings_SOURCE_DIR@/kalyptus @kdebindings_SOURCE_DIR@/kalyptus/kalyptus @ARGV --qt4 --globspace -fsmoke --name=phonon --classlist='@CMAKE_CURRENT_SOURCE_DIR@/classlist' --init-modules=qt $macros --no-cache --outputdir=$outdir @headers";
 my $exit = $? >> 8;
 exit $exit if ($exit);
 chdir "$kalyptusdir";
