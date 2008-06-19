@@ -48,32 +48,6 @@ mkdir $kalyptusdir, 0777;
 # Need to cd to kalyptus's directory so that perl finds Ast.pm etc.
 chdir "$kalyptusdir" or die "Couldn't go to $kalyptusdir (edit script to change dir)\n";
 
-# Find out which header files we need to parse
-# We don't want all of them - e.g. not template-based stuff
-my %excludes = (
-#   These headers don't look suitable for inclusion:
-	'kallocator.h' => 1,
-	'kbookmarkimporter_crash.h' => 1,
-	'kbookmarkimporter_ie.h' => 1,
-	'kbookmarkimporter_opera.h' => 1,
-	'kbookmarkimporter_ns.h' => 1,
-	'kcrash.h' => 1,
-	'kdebug.h' => 1,
-	'kde_terminal_interface.h' => 1,
-
-#	These headers currently give problems
-	'kio/uiserver.h' => 1,
-	'kio/thumbcreator.h' => 1,
-	'kio/file.h' => 1,
-	'kio/chmodjob.h' => 1,
-	'kparts/genericfactory.h' => 1,
-	'kopenssl.h' => 1,
-	'kautomount.h' => 1,
-	'kimagefilepreview.h' => 1,
-	'kpropertiesdialog.h' => 1,
-	'knotifydialog.h' => 1,
-);
-
 # Some systems have a QTDIR = KDEDIR = PREFIX
 # We need a complete list
 
@@ -95,7 +69,7 @@ open(HEADERS, $okularheaderlistpath) or die "Couldn't open $okularheaderlistpath
 map { chomp ; $kdeincludes{$_} = 1 unless /^\s*#/ } <HEADERS>;
 close HEADERS;
 
-# List Qt headers, and exclude the ones listed above
+# List Qt headers
 my @headers = ();
 
 @qtinc= '@qt_includes@';
@@ -104,8 +78,7 @@ find(
     {   wanted => sub {
 	    (-e || -l and !-d) and do {
 	        $f = $_;
-                if( !defined $excludes{$f} # Not excluded
-                     && $includes{$f}        # Known header
+                if( $includes{$f}        # Known header
                      && /\.h$/)     # Not a backup file etc. Only headers.
                 {
                     my $header = $File::Find::name;
@@ -144,8 +117,7 @@ find(
 	    (-e || -l and !-d) and do {
 	        $f = substr($_, 1 + length $kdeinc);
                 push ( @kdeheaders, $_ )
-	    	  if( !defined $kdeexcludes{$f} # Not excluded
-	    	     && $kdeincludes{$f}        # Known header
+	    	  if( $kdeincludes{$f}        # Known header
 	    	     && /\.h$/);     # Not a backup file etc. Only headers.
 	    	undef $kdeincludes{$f}   
 	     };
