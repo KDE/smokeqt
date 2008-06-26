@@ -18,15 +18,13 @@ my $defines = "qtdefines";
 my $headerlist = "@CMAKE_CURRENT_SOURCE_DIR@/header_list";
 my $definespath = "$here/../$defines";
 my $headerlistpath = "$headerlist";
-my $phonon_headerlist = "";
-my $phonon_headerlistpath = "";
 
-$phonon_headerlist = "@CMAKE_CURRENT_SOURCE_DIR@/phonon_header_list";
-$phonon_headerlistpath = "$here/$phonon_headerlist";
+my $phononheaderlist = "@CMAKE_CURRENT_SOURCE_DIR@/phonon_header_list";
+my $phononheaderlistpath = "$here/$phononheaderlist";
 
 ## If srcdir != builddir, use headerlist from src
 $headerlistpath = $headerlist if ($headerlist =~ /^\//);
-$phonon_headerlistpath = $phonon_headerlist if ($phonon_headerlist =~ /^\//);
+$phononheaderlistpath = $phononheaderlist if $phononheaderlist =~ /^\//;
 
 ## Note: outdir and finaloutdir should NOT be the same dir!
 
@@ -47,6 +45,7 @@ mkdir $kalyptusdir, 0777;
 chdir "$kalyptusdir" or die "Couldn't go to $kalyptusdir (edit script to change dir)\n";
 
 
+
 # Some systems have a QTDIR = KDEDIR = PREFIX
 # We need a complete list
 
@@ -55,15 +54,20 @@ open(HEADERS, $headerlistpath) or die "Couldn't open $headerlistpath: $!\n";
 map { chomp ; $includes{$_} = 1 } <HEADERS>;
 close HEADERS;
 
-open(HEADERS, $phonon_headerlistpath) or die "Couldn't open $phonon_headerlistpath: $!\n";
-map { chomp ; $includes{$_} = 1 } <HEADERS>;
-close HEADERS;
 
+# Some systems have a QTDIR = KDEDIR = PREFIX
+# We need a complete list
+
+my %kdeincludes;
+
+open(HEADERS, $phononheaderlistpath) or die "Couldn't open $phononheaderlistpath: $!\n";
+map { chomp ; $kdeincludes{$_} = 1 unless /^\s*#/ } <HEADERS>;
+close HEADERS;
 
 # List Qt headers, and exclude the ones listed above
 my @headers = ();
 
-my @qtinc= (@qt_incs@);
+@qtinc= (@qt_incs@);
 
 find(
     {   wanted => sub {
@@ -73,18 +77,20 @@ find(
                      && /\.h$/)     # Not a backup file etc. Only headers.
                 {
                     my $header = $File::Find::name;
-                    open(FILE, $header);
-                    my @header_lines = <FILE>;
-                    if (@header_lines == 1) {
-                        $line = $header_lines[0];
-                        if ($line =~ /^#include "(.*)"/) {
-                            push ( @headers, $File::Find::dir . substr($1, 2) );
+                    if ( $header !~ /src/ ) {
+                        open(FILE, $header);
+                        my @header_lines = <FILE>;
+                        if (@header_lines == 1) {
+                            $line = $header_lines[0];
+                            if ($line =~ /^#include "(.*)"/) {
+                                push ( @headers, $File::Find::dir . substr($1, 2) );
+                            } else {
+                                push ( @headers, $header );
+                            }
                         } else {
                             push ( @headers, $header );
                         }
-                    } else {
-                        push ( @headers, $header );
-                    }
+					}
                 }
 	    	undef $includes{$f}   
 	     };
@@ -93,11 +99,33 @@ find(
 	follow_skip => 2,
 	no_chdir => 0
     }, @qtinc
+);
+
+my @kdeheaders = ();
+$kdeprefix = "@KDE_PREFIX@";
+$kdeinc= '@kde_includes@';
+$kdeinc =~ s/\${prefix}/$kdeprefix/; # Remove ${prefix} in src != build
+-d $kdeinc or die "Couldn't process $kdeinc: $!\n";
+
+find(
+    {   wanted => sub {
+	    (-e || -l and !-d) and do {
+	        $f = substr($_, 1 + length $kdeinc);
+                push ( @kdeheaders, $_ )
+	    	  if( $kdeincludes{$f}        # Known header
+	    	     && /\.h$/);     # Not a backup file etc. Only headers.
+	    	undef $kdeincludes{$f}   
+	     };
+	},
+	follow_fast => 1,
+	follow_skip => 2,
+	no_chdir => 1
+    }, $kdeinc
  );
 
 # Launch kalyptus
-chdir "../smoke/phonon";
-system "perl -I@kdebindings_SOURCE_DIR@/kalyptus @kdebindings_SOURCE_DIR@/kalyptus/kalyptus @ARGV --qt4 --globspace -fsmoke --name=phonon --classlist='@CMAKE_CURRENT_SOURCE_DIR@/classlist' --init-modules=qt $macros --no-cache --outputdir=$outdir @headers";
+chdir "../smoke/kde";
+system "perl -I@kdebindings_SOURCE_DIR@/kalyptus @kdebindings_SOURCE_DIR@/kalyptus/kalyptus @ARGV --qt4 --globspace -fsmoke --name=phonon --init-modules=qt --classlist=@CMAKE_CURRENT_SOURCE_DIR@/classlist $macros --no-cache --outputdir=$outdir @headers @kdeheaders";
 my $exit = $? >> 8;
 exit $exit if ($exit);
 chdir "$kalyptusdir";

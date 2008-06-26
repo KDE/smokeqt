@@ -1,6 +1,8 @@
 find_package(Phonon REQUIRED)
 
 include_directories( ${QT_INCLUDES} ${CMAKE_SOURCE_DIR}/smoke  )
+set(KDE_PREFIX ${CMAKE_INSTALL_PREFIX})
+set(kde_includes ${KDE4_INCLUDE_DIR})
 
 IF(NOT PERL_FOUND)
     FIND_PACKAGE(PERL REQUIRED)
