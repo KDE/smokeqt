@@ -103,11 +103,16 @@ kemailsettings.h
 kencodingfiledialog.h
 kfiledialog.h
 kfilefiltercombo.h
+kfile.h
+kfileitemdelegate.h
 kfileitem.h
 kfilemetainfo.h
+kfilemetainfoitem.h
+kfilesharedialog.h
+kfilesharedlg.h
 kfileshare.h
 kfiletreebranch.h
-kfileview.h
+kfilewriteplugin.h
 kfilterbase.h
 kfilterdev.h
 kfinddialog.h
