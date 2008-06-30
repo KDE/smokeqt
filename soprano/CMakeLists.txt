@@ -1,5 +1,3 @@
-set(SOPRANO_MIN_VERSION "2.0")
-macro_optional_find_package(Soprano)
 macro_log_feature(Soprano_FOUND "Soprano" "Soprano Libraries" "kdesupport" FALSE "" "Required to build Nepomuk.")
 set(soprano_includes ${SOPRANO_INCLUDE_DIR})
 

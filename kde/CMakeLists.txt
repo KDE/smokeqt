@@ -1,4 +1,3 @@
-
 include_directories( ${CMAKE_SOURCE_DIR}/smoke )
 
 set(srcdir ${CMAKE_CURRENT_SOURCE_DIR})
@@ -11,10 +10,6 @@ else(OPENGL_FOUND AND OPENGL_GLU_FOUND)
    set(KDE_HAVE_GL "no")
 endif(OPENGL_FOUND AND OPENGL_GLU_FOUND)
 	
-set(SOPRANO_MIN_VERSION "2.0")
-macro_optional_find_package(Soprano)
-macro_log_feature(Soprano_FOUND "Soprano" "Soprano Libraries" "kdesupport" FALSE "" "Required to build Nepomuk.")
-
 # for qtguess.pl
 if (APPLE)
 set(qtflags "-framework QtCore -framework QtGui")
