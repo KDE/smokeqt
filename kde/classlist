@@ -138,6 +138,7 @@ KEditListBox
 KEditListBox::CustomEditor
 KEditToolBar
 KEMailSettings
+KEncodingDetector
 KEncodingFileDialog
 KEncodingFileDialog::Result
 KFile
