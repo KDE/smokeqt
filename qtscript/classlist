@@ -1,0 +1,12 @@
+QScriptable
+QScriptClass
+QScriptClassPropertyIterator
+QScriptContext
+QScriptContextInfo
+QScriptEngineAgent
+QScriptEngine
+QScriptExtensionPlugin
+QScriptString
+QScriptValue
+QScriptValueIterator
+

@@ -1,5 +1,6 @@
 OPTION(ENABLE_SMOKE "build Smoke" ON)
 OPTION(ENABLE_QTWEBKIT_SMOKE "build QtWebKitSmoke" ON)
+OPTION(ENABLE_QTSCRIPT_SMOKE "build QtScriptSmoke" ON)
 OPTION(ENABLE_QTUITOOLS_SMOKE "build QtUiToolsSmoke" ON)
 OPTION(ENABLE_PHONON_SMOKE "build PhononSmoke" ON)
 OPTION(ENABLE_QSCI_SMOKE "build QsciSmoke" ON)
@@ -24,6 +25,11 @@ if(ENABLE_SMOKE)
         add_subdirectory(qtwebkit)
         set(SMOKE_ENABLED "${SMOKE_ENABLED}, QtWebKit")
     endif(ENABLE_QTWEBKIT_SMOKE)
+
+    if(ENABLE_QTSCRIPT_SMOKE)
+        add_subdirectory(qtscript)
+        set(SMOKE_ENABLED "${SMOKE_ENABLED}, QtScript")
+    endif(ENABLE_QTSCRIPT_SMOKE)
 
     if(ENABLE_QTUITOOLS_SMOKE)
         add_subdirectory(qtuitools)
