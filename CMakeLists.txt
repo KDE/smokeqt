@@ -96,10 +96,10 @@ if(ENABLE_SMOKE)
         set(SMOKE_ENABLED "${SMOKE_ENABLED}, Nepomuk")
     endif(ENABLE_NEPOMUK_SMOKE AND Nepomuk_FOUND)
 
-    if(ENABLE_OKULAR_SMOKE)
+    if(ENABLE_OKULAR_SMOKE AND OKULAR_FOUND)
         add_subdirectory(okular)
         set(SMOKE_ENABLED "${SMOKE_ENABLED}, Okular")
-    endif(ENABLE_OKULAR_SMOKE)
+    endif(ENABLE_OKULAR_SMOKE AND OKULAR_FOUND)
 
 endif(ENABLE_SMOKE)
 
