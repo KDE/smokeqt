@@ -71,10 +71,10 @@ if(ENABLE_SMOKE)
         set(SMOKE_ENABLED "${SMOKE_ENABLED}, Akonadi")
     endif(KDEPIMLIBS_FOUND AND Akonadi_FOUND)
 
-    if(ENABLE_KDEVPLATFORM_SMOKE)
+    if(KDEVPLATFORM_FOUND)
         add_subdirectory(kdevplatform)
         set(SMOKE_ENABLED "${SMOKE_ENABLED}, KDevPlatform")
-    endif(ENABLE_KDEVPLATFORM_SMOKE)
+    endif(KDEVPLATFORM_FOUND)
 
     if(ENABLE_KHTML_SMOKE)
         add_subdirectory(khtml)

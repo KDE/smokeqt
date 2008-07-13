@@ -1,4 +1,3 @@
-find_package(KDevPlatform REQUIRED)
 
 include_directories( ${CMAKE_SOURCE_DIR}/smoke 
     ${KDE4_INCLUDE_DIR}/threadweaver
