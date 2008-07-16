@@ -103,7 +103,7 @@ find(
 
 my @kdeheaders = ();
 $kdeprefix = "@KDE_PREFIX@";
-$kdeinc= '@kde_includes@';
+$kdeinc= ('@kde_includes@', '@PHONON_INCLUDE_DIR@' );
 $kdeinc =~ s/\${prefix}/$kdeprefix/; # Remove ${prefix} in src != build
 -d $kdeinc or die "Couldn't process $kdeinc: $!\n";
 
