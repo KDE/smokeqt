@@ -113,7 +113,7 @@ target_link_libraries(smokekde
     ${KDE4_KNEWSTUFF2_LIBS}
     ${KDE4_KPTY_LIBS}
     ${KDE4_KUTILS_LIBS}
-    ${KDE4_KPARTS_LIBS}
+#    ${KDE4_KPARTS_LIBS}
     smokeqt )
 
 set_target_properties(smokekde PROPERTIES VERSION 2.0.0 SOVERSION 2 )
