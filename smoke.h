@@ -263,9 +263,6 @@ public:
      */
     CastFn castFn;
 
-    // Not passed to constructor
-    SmokeBinding *binding;
-
     /**
      * Constructor
      */
@@ -288,9 +285,7 @@ public:
 		inheritanceList(_inheritanceList),
 		argumentList(_argumentList),
 		ambiguousMethodList(_ambiguousMethodList),
-		castFn(_castFn),
-
-		binding(0)
+		castFn(_castFn)
 		{
 		    NullModuleIndex.smoke = 0;
 		    NullModuleIndex.index = 0;
