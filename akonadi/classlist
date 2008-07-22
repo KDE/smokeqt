@@ -18,10 +18,12 @@ Akonadi::Collection
 Akonadi::CollectionCopyJob
 Akonadi::CollectionCreateJob
 Akonadi::CollectionDeleteJob
+Akonadi::CollectionDisplayAttribute
 Akonadi::CollectionFetchJob
 Akonadi::CollectionFilterProxyModel
 Akonadi::CollectionModel
 Akonadi::CollectionModifyJob
+Akonadi::CollectionPathResolver
 Akonadi::CollectionPropertiesDialog
 Akonadi::CollectionPropertiesPage
 Akonadi::CollectionPropertiesPageFactory

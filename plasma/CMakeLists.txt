@@ -86,6 +86,7 @@ ADD_DEFINITIONS (-DQT_GUI_LIB)
 kde4_add_library(smokeplasma SHARED ${smokeplasma_LIB_SRCS})
 
 target_link_libraries(smokeplasma 
+    ${KDE4_KDEUI_LIBS}
     ${PLASMA_LIBS}
     smokekde
     smokeqt )

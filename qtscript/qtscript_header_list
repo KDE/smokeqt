@@ -1,0 +1,13 @@
+qscriptable.h
+qscriptclass.h
+qscriptclasspropertyiterator.h
+qscriptcontext.h
+qscriptcontextinfo.h
+qscriptengineagent.h
+qscriptengine.h
+qscriptextensioninterface.h
+qscriptextensionplugin.h
+qscriptstring.h
+qscriptvalue.h
+qscriptvalueiterator.h
+

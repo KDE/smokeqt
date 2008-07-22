@@ -1,3 +1,4 @@
+KTextEditor
 KTextEditor::AnnotationInterface
 KTextEditor::AnnotationModel
 KTextEditor::AnnotationViewInterface

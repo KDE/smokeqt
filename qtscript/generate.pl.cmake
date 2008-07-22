@@ -18,17 +18,15 @@ my $defines = "qtdefines";
 my $headerlist = "@CMAKE_CURRENT_SOURCE_DIR@/header_list";
 my $definespath = "$here/../$defines";
 my $headerlistpath = "$headerlist";
+my $qtscript_headerlist = "";
+my $qtscript_headerlistpath = "";
 
-my $kdeheaderlist = "@CMAKE_CURRENT_SOURCE_DIR@/kde_header_list";
-my $kdeheaderlistpath = "$here/$kdeheaderlist";
-
-my $akonadiheaderlist = "@CMAKE_CURRENT_SOURCE_DIR@/akonadi_header_list";
-my $akonadiheaderlistpath = "$here/$akonadiheaderlist";
+$qtscript_headerlist = "@CMAKE_CURRENT_SOURCE_DIR@/qtscript_header_list";
+$qtscript_headerlistpath = "$here/$qtscript_headerlist";
 
 ## If srcdir != builddir, use headerlist from src
 $headerlistpath = $headerlist if ($headerlist =~ /^\//);
-$kdeheaderlistpath = $kdeheaderlist if $kdeheaderlist =~ /^\//;
-$akonadiheaderlistpath = $akonadiheaderlist if $akonadiheaderlist =~ /^\//;
+$qtscript_headerlistpath = $qtscript_headerlist if ($qtscript_headerlist =~ /^\//);
 
 ## Note: outdir and finaloutdir should NOT be the same dir!
 
@@ -48,6 +46,36 @@ mkdir $kalyptusdir, 0777;
 # Need to cd to kalyptus's directory so that perl finds Ast.pm etc.
 chdir "$kalyptusdir" or die "Couldn't go to $kalyptusdir (edit script to change dir)\n";
 
+# Find out which header files we need to parse
+# We don't want all of them - e.g. not template-based stuff
+my %excludes = (
+#    'qaccessible.h' => 1,  # Accessibility support is not compiled by defaut
+#    'qassistantclient.h' => 1, # Not part of Qt (introduced in Qt-3.1)
+#    'qmotif.h' => 1,       # 
+#    'qmotifwidget.h' => 1, # Motif extension (introduced in Qt-3.1)
+#    'qmotifdialog.h' => 1, #
+#    'qxt.h' => 1, # Xt
+#    'qxtwidget.h' => 1, # Xt
+#    'qdns.h' => 1, # internal
+#    'qgl.h' => 1, # OpenGL
+#    'qglcolormap.h' => 1, # OpenGL
+#    'qnp.h' => 1, # NSPlugin
+ #   'qttableview.h' => 1,  # Not in Qt anymore...
+#    'qtmultilineedit.h' => 1,  # Not in Qt anymore...
+#    'qwidgetfactory.h' => 1,  # Just an interface
+#    'qsharedmemory.h' => 1, # "not part of the Qt API" they say
+#    'qwindowsstyle.h' => 1, # Qt windowsstyle, plugin
+#    'qmotifstyle.h' => 1,
+#    'qcompactstyle.h' => 1,
+#    'qinterlacestyle.h' => 1,
+#    'qmotifplusstyle.h' => 1,
+#    'qsgistyle.h' => 1,
+#    'qplatinumstyle.h' => 1,
+#    'qcdestyle.h' => 1,
+#	 'qworkspace.h' => 1,
+#    'qwindowsxpstyle.h' => 1 # play on the safe side 
+);
+
 # Some systems have a QTDIR = KDEDIR = PREFIX
 # We need a complete list
 
@@ -56,46 +84,53 @@ open(HEADERS, $headerlistpath) or die "Couldn't open $headerlistpath: $!\n";
 map { chomp ; $includes{$_} = 1 } <HEADERS>;
 close HEADERS;
 
-
-# Some systems have a QTDIR = KDEDIR = PREFIX
-# We need a complete list
-
-my %kdeincludes;
-open(HEADERS, $kdeheaderlistpath) or die "Couldn't open $kdeheaderlistpath: $!\n";
-map { chomp ; $kdeincludes{$_} = 1 unless /^\s*#/ } <HEADERS>;
+open(HEADERS, $qtscript_headerlistpath) or die "Couldn't open $qtscript_headerlistpath: $!\n";
+map { chomp ; $includes{$_} = 1 } <HEADERS>;
 close HEADERS;
 
-open(HEADERS, $akonadiheaderlistpath) or die "Couldn't open $akonadiheaderlistpath: $!\n";
-map { chomp ; $kdeincludes{$_} = 1 unless /^\s*#/ } <HEADERS>;
-close HEADERS;
+# Can we compile the OpenGl module ?
+if("@QT_OPENGL_FOUND@" eq "YES")
+{
+    open(DEFS, $definespath);
+    my @defs = <DEFS>;
+    close DEFS;
+    if(!grep(/QT_NO_OPENGL/, @defs))
+    {
+      $excludes{'qgl.h'} = undef;
+      $excludes{'qglcolormap.h'} = undef;
+    }
+    else
+    {
+      print STDERR "Qt was not compiled with OpenGL support...\n Skipping QGL Classes.\n";
+    }
+}
 
-# List Qt headers
+# List Qt headers, and exclude the ones listed above
 my @headers = ();
 
-@qtinc= '@qt_includes@';
+my @qtinc= (@qt_incs@);
 
 find(
     {   wanted => sub {
 	    (-e || -l and !-d) and do {
 	        $f = $_;
-                if( $includes{$f}        # Known header
+                if( !defined $excludes{$f} # Not excluded
+                     && $includes{$f}        # Known header
                      && /\.h$/)     # Not a backup file etc. Only headers.
                 {
                     my $header = $File::Find::name;
-                    if ( $header !~ /src/ ) {
-                        open(FILE, $header);
-                        my @header_lines = <FILE>;
-                        if (@header_lines == 1) {
-                            $line = $header_lines[0];
-                            if ($line =~ /^#include "(.*)"/) {
-                                push ( @headers, $File::Find::dir . substr($1, 2) );
-                            } else {
-                                push ( @headers, $header );
-                            }
+                    open(FILE, $header);
+                    my @header_lines = <FILE>;
+                    if (@header_lines == 1) {
+                        $line = $header_lines[0];
+                        if ($line =~ /^#include "(.*)"/) {
+                            push ( @headers, $File::Find::dir . substr($1, 2) );
                         } else {
                             push ( @headers, $header );
                         }
-					}
+                    } else {
+                        push ( @headers, $header );
+                    }
                 }
 	    	undef $includes{$f}   
 	     };
@@ -104,33 +139,11 @@ find(
 	follow_skip => 2,
 	no_chdir => 0
     }, @qtinc
-);
-
-my @kdeheaders = ();
-$kdeprefix = "@KDE_PREFIX@";
-$kdeinc= '@kde_includes@';
-$kdeinc =~ s/\${prefix}/$kdeprefix/; # Remove ${prefix} in src != build
--d $kdeinc or die "Couldn't process $kdeinc: $!\n";
-
-find(
-    {   wanted => sub {
-	    (-e || -l and !-d) and do {
-	        $f = substr($_, 1 + length $kdeinc);
-                push ( @kdeheaders, $_ )
-	    	  if( $kdeincludes{$f}        # Known header
-	    	     && /\.h$/);     # Not a backup file etc. Only headers.
-	    	undef $kdeincludes{$f}   
-	     };
-	},
-	follow_fast => 1,
-	follow_skip => 2,
-	no_chdir => 1
-    }, $kdeinc
  );
 
 # Launch kalyptus
-chdir "../smoke/akonadi";
-system "perl -I@kdebindings_SOURCE_DIR@/kalyptus @kdebindings_SOURCE_DIR@/kalyptus/kalyptus @ARGV --qt4 --globspace -fsmoke --name=akonadi --init-modules=qt,kde --classlist=@CMAKE_CURRENT_SOURCE_DIR@/classlist $macros --no-cache --outputdir=$outdir @headers @kdeheaders";
+chdir "../smoke/qtscript";
+system "perl -I@kdebindings_SOURCE_DIR@/kalyptus @kdebindings_SOURCE_DIR@/kalyptus/kalyptus @ARGV --qt4 --globspace -fsmoke --name=qtscript --classlist='@CMAKE_CURRENT_SOURCE_DIR@/classlist' --init-modules=qt $macros --no-cache --outputdir=$outdir @headers";
 my $exit = $? >> 8;
 exit $exit if ($exit);
 chdir "$kalyptusdir";
