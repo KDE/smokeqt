@@ -27,7 +27,7 @@ my $akonadiheaderlistpath = "$here/$akonadiheaderlist";
 
 ## If srcdir != builddir, use headerlist from src
 $headerlistpath = $headerlist if ($headerlist =~ /^\//);
-$kdeheaderlistpath = $kdeheaderlist if ($headerlist =~ /^\//);
+$kdeheaderlistpath = $kdeheaderlist if $kdeheaderlist =~ /^\//;
 $akonadiheaderlistpath = $akonadiheaderlist if $akonadiheaderlist =~ /^\//;
 
 ## Note: outdir and finaloutdir should NOT be the same dir!
@@ -48,11 +48,6 @@ mkdir $kalyptusdir, 0777;
 # Need to cd to kalyptus's directory so that perl finds Ast.pm etc.
 chdir "$kalyptusdir" or die "Couldn't go to $kalyptusdir (edit script to change dir)\n";
 
-# Find out which header files we need to parse
-# We don't want all of them - e.g. not template-based stuff
-my %excludes = (
-);
-
 # Some systems have a QTDIR = KDEDIR = PREFIX
 # We need a complete list
 
@@ -61,33 +56,6 @@ open(HEADERS, $headerlistpath) or die "Couldn't open $headerlistpath: $!\n";
 map { chomp ; $includes{$_} = 1 } <HEADERS>;
 close HEADERS;
 
-# Find out which header files we need to parse
-# We don't want all of them - e.g. not template-based stuff
-my %kdeexcludes = (
-#   These headers don't look suitable for inclusion:
-	'kallocator.h' => 1,
-	'kbookmarkimporter_crash.h' => 1,
-	'kbookmarkimporter_ie.h' => 1,
-	'kbookmarkimporter_opera.h' => 1,
-	'kbookmarkimporter_ns.h' => 1,
-	'kcrash.h' => 1,
-	'kdebug.h' => 1,
-	'kde_terminal_interface.h' => 1,
-
-#	These headers currently give problems
-	'kio/uiserver.h' => 1,
-	'kio/thumbcreator.h' => 1,
-	'kio/file.h' => 1,
-	'kio/chmodjob.h' => 1,
-	'kparts/genericfactory.h' => 1,
-	'kopenssl.h' => 1,
-	'kautomount.h' => 1,
-	'kimagefilepreview.h' => 1,
-	'kpropertiesdialog.h' => 1,
-	'knotifydialog.h' => 1,
-);
-
-my %akonadiexcludes = ( );
 
 # Some systems have a QTDIR = KDEDIR = PREFIX
 # We need a complete list
@@ -97,29 +65,11 @@ open(HEADERS, $kdeheaderlistpath) or die "Couldn't open $kdeheaderlistpath: $!\n
 map { chomp ; $kdeincludes{$_} = 1 unless /^\s*#/ } <HEADERS>;
 close HEADERS;
 
-my %akonadiincludes;
 open(HEADERS, $akonadiheaderlistpath) or die "Couldn't open $akonadiheaderlistpath: $!\n";
-map { chomp ; $akonadiincludes{$_} = 1 unless /^\s*#/ } <HEADERS>;
+map { chomp ; $kdeincludes{$_} = 1 unless /^\s*#/ } <HEADERS>;
 close HEADERS;
 
-# Can we compile the OpenGl module ?
-if("@KDE_HAVE_GL@" eq "yes")
-{
-    open(DEFS, $definespath);
-    my @defs = <DEFS>;
-    close DEFS;
-    if(!grep(/QT_NO_OPENGL/, @defs))
-    {
-      $excludes{'qgl.h'} = undef;
-      $excludes{'qglcolormap.h'} = undef;
-    }
-    else
-    {
-      print STDERR "Qt was not compiled with OpenGL support...\n Skipping QGL Classes.\n";
-    }
-}
-
-# List Qt headers, and exclude the ones listed above
+# List Qt headers
 my @headers = ();
 
 @qtinc= '@qt_includes@';
@@ -128,8 +78,7 @@ find(
     {   wanted => sub {
 	    (-e || -l and !-d) and do {
 	        $f = $_;
-                if( !defined $excludes{$f} # Not excluded
-                     && $includes{$f}        # Known header
+                if( $includes{$f}        # Known header
                      && /\.h$/)     # Not a backup file etc. Only headers.
                 {
                     my $header = $File::Find::name;
@@ -168,8 +117,7 @@ find(
 	    (-e || -l and !-d) and do {
 	        $f = substr($_, 1 + length $kdeinc);
                 push ( @kdeheaders, $_ )
-	    	  if( !defined $kdeexcludes{$f} # Not excluded
-	    	     && $kdeincludes{$f}        # Known header
+	    	  if( $kdeincludes{$f}        # Known header
 	    	     && /\.h$/);     # Not a backup file etc. Only headers.
 	    	undef $kdeincludes{$f}   
 	     };
@@ -180,29 +128,9 @@ find(
     }, $kdeinc
  );
 
-my @akonadiheaders = ();
-$akonadiinc= '@akonadi_includes@';
-
-find(
-    {   wanted => sub {
-	    (-e || -l and !-d) and do {
-	        $f = fileparse($_);
-                push ( @akonadiheaders, $_ )
-	    	  if( !defined $akonadiexcludes{$f} # Not excluded
-	    	     && $akonadiincludes{$f}        # Known header
-	    	     && /\.h$/);     # Not a backup file etc. Only headers.
-	    	undef $akonadiincludes{$f}   
-	     };
-	},
-	follow_fast => 1,
-	follow_skip => 2,
-	no_chdir => 1
-    }, $akonadiinc
- );
-
 # Launch kalyptus
 chdir "../smoke/akonadi";
-system "perl -I@kdebindings_SOURCE_DIR@/kalyptus @kdebindings_SOURCE_DIR@/kalyptus/kalyptus @ARGV --qt4 --globspace -fsmoke --name=akonadi --init-modules=kde $macros --classlist=@CMAKE_CURRENT_SOURCE_DIR@/classlist --no-cache --outputdir=$outdir @headers @kdeheaders @akonadiheaders";
+system "perl -I@kdebindings_SOURCE_DIR@/kalyptus @kdebindings_SOURCE_DIR@/kalyptus/kalyptus @ARGV --qt4 --globspace -fsmoke --name=akonadi --init-modules=qt,kde --classlist=@CMAKE_CURRENT_SOURCE_DIR@/classlist $macros --no-cache --outputdir=$outdir @headers @kdeheaders";
 my $exit = $? >> 8;
 exit $exit if ($exit);
 chdir "$kalyptusdir";
