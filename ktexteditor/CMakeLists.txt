@@ -115,6 +115,7 @@ target_link_libraries(smokektexteditor
     ${KDE4_KIO_LIBS} 
     ${KDE4_KDE3SUPPORT_LIBS}
     ${KDE4_KTEXTEDITOR_LIBS}
+    ${KDE4_KPARTS_LIBS}
     smokekde
     smokeqt )
 
