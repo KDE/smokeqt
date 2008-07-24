@@ -17,6 +17,7 @@ KTextEditor::Document
 KTextEditor::Editor
 KTextEditor::EditorChooser
 KTextEditor::Factory
+KTextEditor::Mark
 KTextEditor::MarkInterface
 KTextEditor::MdiContainer
 KTextEditor::ModificationInterface
@@ -35,7 +36,3 @@ KTextEditor::TemplateInterface
 KTextEditor::TextHintInterface
 KTextEditor::VariableInterface
 KTextEditor::View
-KParts::Part
-KParts::PartBase
-KParts::ReadOnlyPart
-KParts::ReadWritePart
