@@ -2,11 +2,13 @@
 include_directories( ${CMAKE_SOURCE_DIR}/smoke 
     ${KDE4_INCLUDE_DIR}/threadweaver
     ${KDEVPLATFORM_INCLUDE_DIR}/interfaces
+    ${KDEVPLATFORM_INCLUDE_DIR}/shell
     ${KDEVPLATFORM_INCLUDE_DIR}
     ${KDEVPLATFORM_INCLUDE_DIR}/editor
     ${KDEVPLATFORM_INCLUDE_DIR}/project
     ${KDEVPLATFORM_INCLUDE_DIR}/project/interfaces
     ${KDEVPLATFORM_INCLUDE_DIR}/language
+    ${KDEVPLATFORM_INCLUDE_DIR}/language/editor
     ${KDEVPLATFORM_INCLUDE_DIR}/language/interfaces
     ${KDEVPLATFORM_INCLUDE_DIR}/language/backgroundparser
     ${KDEVPLATFORM_INCLUDE_DIR}/language/duchain
