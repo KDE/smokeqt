@@ -5,6 +5,7 @@ KDevelop::AbstractFunctionDeclaration
 KDevelop::AbstractItemRepository
 KDevelop::AbstractType
 KDevelop::AbstractTypeBuilder
+KDevelop::AbstractTypeFactory
 KDevelop::AbstractUseBuilder
 KDevelop::AliasDeclaration
 KDevelop::AliasDeclarationData
@@ -47,6 +48,7 @@ KDevelop::DUChain
 KDevelop::DUChainBase
 KDevelop::DUChainBaseData
 KDevelop::DUChainBaseFactory
+KDevelop::DUChainItemFactory
 KDevelop::DUChainItemRegistrator
 KDevelop::DUChainItemSystem
 KDevelop::DUChainLock
@@ -57,7 +59,6 @@ KDevelop::DUChainReadLocker
 KDevelop::DUChainUtils
 KDevelop::DUChainWriteLocker
 KDevelop::DUContext
-KDevelop::DUContextDynamicData
 KDevelop::DUContext::Import
 KDevelop::DUContext::SearchItem
 KDevelop::DumpChain
@@ -184,6 +185,7 @@ KDevelop::TemporaryDataManager
 KDevelop::TextDocument
 KDevelop::TextView
 KDevelop::TypeExchanger
+KDevelop::TypeFactory
 KDevelop::TypeIdentifier
 KDevelop::TypeRepository
 KDevelop::TypeSystemRegistrator
