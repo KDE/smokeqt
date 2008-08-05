@@ -19,6 +19,7 @@ Plasma::DataEngineScript
 Plasma::Delegate
 Plasma::Dialog
 Plasma::Flash
+Plasma::Frame
 Plasma::GLApplet
 Plasma::GroupBox
 Plasma::Icon
@@ -28,8 +29,10 @@ Plasma::Meter
 Plasma::Package
 Plasma::PackageMetadata
 Plasma::PackageStructure
+Plasma::PaintUtils
 Plasma::PanelSvg
 Plasma::PlotColor
+Plasma::PopupApplet
 Plasma::PushButton
 Plasma::QueryMatch
 Plasma::RadioButton
@@ -38,8 +41,13 @@ Plasma::RunnerManager
 Plasma::RunnerScript
 Plasma::ScriptEngine
 Plasma::SignalPlotter
+Plasma::Slider
 Plasma::Svg
+Plasma::TabBar
 Plasma::TextEdit
 Plasma::Theme
+Plasma::ToolTipManager
+Plasma::ToolTipManager::ToolTipContent
 Plasma::View
 Plasma::WebContent
+
