@@ -1,4 +1,5 @@
 soprano/asyncmodel.h
+soprano/asyncresult.h
 soprano/backend.h
 soprano/bindingset.h
 soprano/cluceneindex.h
