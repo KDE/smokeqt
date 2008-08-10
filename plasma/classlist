@@ -18,6 +18,8 @@ Plasma::DataEngineManager
 Plasma::DataEngineScript
 Plasma::Delegate
 Plasma::Dialog
+Plasma::Extender
+Plasma::ExtenderItem
 Plasma::Flash
 Plasma::Frame
 Plasma::GLApplet

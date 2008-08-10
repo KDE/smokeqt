@@ -11,6 +11,8 @@ plasma/dataengine.h
 plasma/dataenginemanager.h
 plasma/delegate.h
 plasma/dialog.h
+plasma/extender.h
+plasma/extenderitem.h
 plasma/glapplet.h
 plasma/package.h
 plasma/packagemetadata.h
