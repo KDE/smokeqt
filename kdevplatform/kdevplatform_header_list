@@ -51,10 +51,12 @@ kdevplatform/language/duchain/dumpchain.h
 kdevplatform/language/duchain/dumpdotgraph.h
 kdevplatform/language/duchain/forwarddeclaration.h
 kdevplatform/language/duchain/functiondeclaration.h
+kdevplatform/language/duchain/functiondefinition.h
 kdevplatform/language/duchain/identifier.h
 kdevplatform/language/duchain/indexedstring.h
 kdevplatform/language/duchain/namespacealiasdeclaration.h
 kdevplatform/language/duchain/parsingenvironment.h
+kdevplatform/language/duchain/persistentsymboltable.h
 kdevplatform/language/duchain/repositories/itemrepository.h
 kdevplatform/language/duchain/repositories/typerepository.h
 kdevplatform/language/duchain/smartconverter.h
@@ -139,7 +141,6 @@ kdevplatform/sublime/switcher.h
 kdevplatform/sublime/tooldocument.h
 kdevplatform/sublime/urldocument.h
 kdevplatform/sublime/view.h
-kdevplatform/sublime/viewwidgetcreator.h
 kdevplatform/util/commandexecutor.h
 kdevplatform/util/environmentgrouplist.h
 kdevplatform/util/environmentselectionwidget.h

@@ -73,7 +73,6 @@ KDevelop::ExampleRequestItem
 KDevelop::FileContext
 KDevelop::Filter
 KDevelop::ForwardDeclaration
-KDevelop::ForwardDeclarationData
 KDevelop::FunctionDeclaration
 KDevelop::FunctionType
 KDevelop::HashedString
@@ -141,6 +140,7 @@ KDevelop::ParsingEnvironment
 KDevelop::ParsingEnvironmentFile
 KDevelop::PartController
 KDevelop::PartDocument
+KDevelop::PersistentSymbolTable
 KDevelop::PluginController
 KDevelop::PointerType
 KDevelop::PointerTypeData

@@ -12,7 +12,8 @@ include_directories( ${CMAKE_SOURCE_DIR}/smoke
     ${KDEVPLATFORM_INCLUDE_DIR}/language/interfaces
     ${KDEVPLATFORM_INCLUDE_DIR}/language/backgroundparser
     ${KDEVPLATFORM_INCLUDE_DIR}/language/duchain
-    ${KDEVPLATFORM_INCLUDE_DIR}/language/duchain/viewer)
+    ${KDEVPLATFORM_INCLUDE_DIR}/language/duchain/viewer
+    ${KDEVPLATFORM_INCLUDE_DIR}/util)
 
 set(srcdir ${CMAKE_CURRENT_SOURCE_DIR})
 set(KDE_PREFIX ${CMAKE_INSTALL_PREFIX})
