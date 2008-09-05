@@ -13,8 +13,6 @@ OPTION(ENABLE_SOLID_SMOKE "build SolidSmoke" ON)
 
 set(SMOKE_ENABLED "no")
 if(ENABLE_SMOKE)
-    add_subdirectory(wt)
-    add_subdirectory(wtext)
     add_subdirectory(qt)
     set(SMOKE_ENABLED "yes - Qt")
 
