@@ -5,6 +5,7 @@ plasma/appletbrowser.h
 plasma/applet.h
 plasma/configxml.h
 plasma/containment.h
+plasma/context.h
 plasma/corona.h
 plasma/datacontainer.h
 plasma/dataengine.h
@@ -33,6 +34,7 @@ plasma/svg.h
 plasma/theme.h
 plasma/tooltipmanager.h
 plasma/view.h
+plasma/wallpaper.h
 plasma/widgets/checkbox.h
 plasma/widgets/combobox.h
 plasma/widgets/flash.h
@@ -44,8 +46,10 @@ plasma/widgets/lineedit.h
 plasma/widgets/meter.h
 plasma/widgets/pushbutton.h
 plasma/widgets/radiobutton.h
+plasma/widgets/scrollbar.h
 plasma/widgets/signalplotter.h
 plasma/widgets/slider.h
 plasma/widgets/tabbar.h
 plasma/widgets/textedit.h
+plasma/widgets/treeview.h
 plasma/widgets/webcontent.h

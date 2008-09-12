@@ -11,6 +11,7 @@ Plasma::ComboBox
 Plasma::ConfigXml
 Plasma::Containment
 Plasma::Containment::StyleOption
+Plasma::Context
 Plasma::Corona
 Plasma::DataContainer
 Plasma::DataEngine
@@ -42,6 +43,7 @@ Plasma::RunnerContext
 Plasma::RunnerManager
 Plasma::RunnerScript
 Plasma::ScriptEngine
+Plasma::ScrollBar
 Plasma::SignalPlotter
 Plasma::Slider
 Plasma::Svg
@@ -50,6 +52,7 @@ Plasma::TextEdit
 Plasma::Theme
 Plasma::ToolTipManager
 Plasma::ToolTipManager::ToolTipContent
+Plasma::TreeView
 Plasma::View
+Plasma::Wallpaper
 Plasma::WebContent
-
