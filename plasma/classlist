@@ -54,5 +54,4 @@ Plasma::ToolTipManager
 Plasma::ToolTipManager::ToolTipContent
 Plasma::TreeView
 Plasma::View
-Plasma::Wallpaper
 Plasma::WebContent
