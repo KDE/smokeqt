@@ -1,6 +1,5 @@
 Phonon
 Phonon::AbstractAudioOutput
-Phonon::AbstractMediaStream2
 Phonon::AbstractMediaStream
 Phonon::AbstractVideoOutput
 Phonon::AudioOutput
