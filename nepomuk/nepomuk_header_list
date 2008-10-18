@@ -20,6 +20,7 @@ nepomuk/property.h
 nepomuk/resource.h
 nepomuk/resourcemanager.h
 nepomuk/tag.h
+nepomuk/thing.h
 nepomuk/tools.h
 nepomuk/variant.h
 

@@ -24,5 +24,6 @@ Nepomuk::Service
 Nepomuk::Tag
 Nepomuk::TagCloud
 Nepomuk::TagWidget
+Nepomuk::Thing
 Nepomuk::Search::Term
 Nepomuk::Variant
