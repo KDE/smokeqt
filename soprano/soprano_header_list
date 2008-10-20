@@ -50,6 +50,7 @@ soprano/simplestatementiterator.h
 soprano/soprano_export.h
 soprano/soprano.h
 soprano/sopranotypes.h
+soprano/sparqlmodel.h
 soprano/statement.h
 soprano/statementiterator.h
 soprano/statementpattern.h

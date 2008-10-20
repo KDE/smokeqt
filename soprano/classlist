@@ -9,6 +9,7 @@ Soprano::Client::DBusNodeIterator
 Soprano::Client::DBusQueryResultIterator
 Soprano::Client::DBusStatementIterator
 Soprano::Client::LocalSocketClient
+Soprano::Client::SparqlModel
 Soprano::Client::TcpClient
 Soprano::Client::UnixSocketClient
 Soprano::Error
