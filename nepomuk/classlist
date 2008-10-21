@@ -1,14 +1,9 @@
 Nepomuk::AbstractResourceGuiItem
-Nepomuk::Class
-Nepomuk::Entity
 Nepomuk::GenericResourceGuiItem
 KRatingPainter
 KRatingWidget
 KTagCloudWidget
 KTagDisplayWidget
-Nepomuk::Literal
-Nepomuk::Ontology
-Nepomuk::Property
 Nepomuk::Search::QueryParser
 Nepomuk::Resource
 Nepomuk::ResourceDelegate
@@ -25,5 +20,11 @@ Nepomuk::Tag
 Nepomuk::TagCloud
 Nepomuk::TagWidget
 Nepomuk::Thing
+Nepomuk::Types
+Nepomuk::Types::Class
+Nepomuk::Types::Entity
+Nepomuk::Types::Literal
+Nepomuk::Types::Ontology
+Nepomuk::Types::Property
 Nepomuk::Search::Term
 Nepomuk::Variant
