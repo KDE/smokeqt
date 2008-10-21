@@ -47,6 +47,7 @@ Plasma::ScrollBar
 Plasma::SignalPlotter
 Plasma::Slider
 Plasma::Svg
+Plasma::SvgWidget
 Plasma::TabBar
 Plasma::TextEdit
 Plasma::Theme

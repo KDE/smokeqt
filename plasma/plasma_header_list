@@ -48,6 +48,7 @@ plasma/widgets/radiobutton.h
 plasma/widgets/scrollbar.h
 plasma/widgets/signalplotter.h
 plasma/widgets/slider.h
+plasma/widgets/svgwidget.h
 plasma/widgets/tabbar.h
 plasma/widgets/textedit.h
 plasma/widgets/treeview.h
