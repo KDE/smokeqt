@@ -3,8 +3,6 @@ Plasma::AbstractRunner
 Plasma::AnimationDriver
 Plasma::Animator
 Plasma::Applet
-Plasma::AppletBrowser
-Plasma::AppletBrowserWidget
 Plasma::AppletScript
 Plasma::CheckBox
 Plasma::ComboBox
