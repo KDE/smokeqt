@@ -120,6 +120,7 @@ kfinddialog.h
 kfind.h
 kfontaction.h
 kfontchooser.h
+kfontcombobox.h
 kfontdialog.h
 kfontrequester.h
 kfontsizeaction.h
@@ -132,6 +133,7 @@ khbox.h
 khelpmenu.h
 khistorycombobox.h
 khuesaturationselect.h
+kicondialog.h
 kiconeffect.h
 kicon.h
 kiconloader.h
@@ -247,6 +249,7 @@ kplugininfo.h
 kpluginloader.h
 kpluginselector.h
 kpreviewwidgetbase.h
+kprocess.h
 kprogressdialog.h
 kpropertiesdialog.h
 kpropsdlg.h
@@ -342,6 +345,7 @@ kurl.h
 kurllabel.h
 kurlpixmapprovider.h
 kurlrequesterdlg.h
+kurlrequesterdialog.h
 kurlrequester.h
 kuser.h
 kvbox.h
