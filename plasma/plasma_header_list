@@ -1,8 +1,8 @@
 plasma/abstractrunner.h
 plasma/animationdriver.h
 plasma/animator.h
-plasma/appletbrowser.h
 plasma/applet.h
+plasma/appletbrowser.h
 plasma/configloader.h
 plasma/containment.h
 plasma/context.h
@@ -19,9 +19,8 @@ plasma/package.h
 plasma/packagemetadata.h
 plasma/packagestructure.h
 plasma/paintutils.h
-plasma/panelsvg.h
-plasma/plasma_export.h
 plasma/plasma.h
+plasma/plasma_export.h
 plasma/popupapplet.h
 plasma/querymatch.h
 plasma/runnercontext.h
@@ -31,6 +30,7 @@ plasma/scripting/dataenginescript.h
 plasma/scripting/runnerscript.h
 plasma/scripting/scriptengine.h
 plasma/svg.h
+plasma/svgwidget.h
 plasma/theme.h
 plasma/tooltipmanager.h
 plasma/view.h

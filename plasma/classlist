@@ -31,7 +31,6 @@ Plasma::Package
 Plasma::PackageMetadata
 Plasma::PackageStructure
 Plasma::PaintUtils
-Plasma::PanelSvg
 Plasma::PlotColor
 Plasma::PopupApplet
 Plasma::PushButton
