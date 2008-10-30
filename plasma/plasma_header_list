@@ -3,7 +3,7 @@ plasma/animationdriver.h
 plasma/animator.h
 plasma/appletbrowser.h
 plasma/applet.h
-plasma/configxml.h
+plasma/configloader.h
 plasma/containment.h
 plasma/context.h
 plasma/corona.h
@@ -36,10 +36,10 @@ plasma/tooltipmanager.h
 plasma/view.h
 plasma/widgets/checkbox.h
 plasma/widgets/combobox.h
-plasma/widgets/flash.h
+plasma/widgets/flashinglabel.h
 plasma/widgets/frame.h
 plasma/widgets/groupbox.h
-plasma/widgets/icon.h
+plasma/widgets/iconwidget.h
 plasma/widgets/label.h
 plasma/widgets/lineedit.h
 plasma/widgets/meter.h
@@ -52,4 +52,4 @@ plasma/widgets/svgwidget.h
 plasma/widgets/tabbar.h
 plasma/widgets/textedit.h
 plasma/widgets/treeview.h
-plasma/widgets/webcontent.h
+plasma/widgets/webview.h

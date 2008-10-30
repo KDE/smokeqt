@@ -6,7 +6,7 @@ Plasma::Applet
 Plasma::AppletScript
 Plasma::CheckBox
 Plasma::ComboBox
-Plasma::ConfigXml
+Plasma::ConfigLoader
 Plasma::Containment
 Plasma::Containment::StyleOption
 Plasma::Context
@@ -19,11 +19,11 @@ Plasma::Delegate
 Plasma::Dialog
 Plasma::Extender
 Plasma::ExtenderItem
-Plasma::Flash
+Plasma::FlashingLabel
 Plasma::Frame
 Plasma::GLApplet
 Plasma::GroupBox
-Plasma::Icon
+Plasma::IconWidget
 Plasma::Label
 Plasma::LineEdit
 Plasma::Meter
@@ -53,4 +53,4 @@ Plasma::ToolTipManager
 Plasma::ToolTipManager::ToolTipContent
 Plasma::TreeView
 Plasma::View
-Plasma::WebContent
+Plasma::WebView
