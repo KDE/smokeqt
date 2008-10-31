@@ -350,7 +350,7 @@ public:
 
 	while(imax >= imin) {
 	    icur = (imin + imax) / 2;
-	    if(icur > 0)
+	    if(icur > 0 && icur < numClasses)
 		icmp = strcmp(classes[icur].className, c);
 	    else
 		icmp = -1;
