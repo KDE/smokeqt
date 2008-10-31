@@ -21,6 +21,7 @@ Plasma::Extender
 Plasma::ExtenderItem
 Plasma::FlashingLabel
 Plasma::Frame
+Plasma::FrameSvg
 Plasma::GLApplet
 Plasma::GroupBox
 Plasma::IconWidget
