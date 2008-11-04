@@ -4,6 +4,7 @@ Plasma::AnimationDriver
 Plasma::Animator
 Plasma::Applet
 Plasma::AppletScript
+Plasma::BusyWidget
 Plasma::CheckBox
 Plasma::ComboBox
 Plasma::ConfigLoader
@@ -50,7 +51,7 @@ Plasma::TabBar
 Plasma::TextEdit
 Plasma::Theme
 Plasma::ToolTipManager
-Plasma::ToolTipManager::ToolTipContent
+Plasma::ToolTipContent
 Plasma::TreeView
 Plasma::View
 Plasma::WebView

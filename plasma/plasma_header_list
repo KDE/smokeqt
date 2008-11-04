@@ -32,8 +32,10 @@ plasma/scripting/scriptengine.h
 plasma/svg.h
 plasma/framesvg.h
 plasma/theme.h
+plasma/tooltipcontent.h
 plasma/tooltipmanager.h
 plasma/view.h
+plasma/widgets/busywidget.h
 plasma/widgets/checkbox.h
 plasma/widgets/combobox.h
 plasma/widgets/flashinglabel.h
