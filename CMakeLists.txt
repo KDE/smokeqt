@@ -62,10 +62,8 @@ if(ENABLE_SMOKE)
         set(SMOKE_ENABLED "${SMOKE_ENABLED}, Soprano")
     endif(Soprano_FOUND)
 
-    if(PLASMA_FOUND)
-        add_subdirectory(plasma)
-        set(SMOKE_ENABLED "${SMOKE_ENABLED}, Plasma")
-    endif(PLASMA_FOUND)
+    add_subdirectory(plasma)
+    set(SMOKE_ENABLED "${SMOKE_ENABLED}, Plasma")
 
     if(ENABLE_KDE_SMOKE)
         add_subdirectory(kde)

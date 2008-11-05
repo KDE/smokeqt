@@ -1,6 +1,3 @@
-IF (NOT PLASMA_FOUND)
-	FIND_PACKAGE(Plasma REQUIRED)
-ENDIF (NOT PLASMA_FOUND)
 
 IF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
     ADD_DEFINITIONS(-DGCC_VISIBILITY)
@@ -87,7 +84,7 @@ kde4_add_library(smokeplasma SHARED ${smokeplasma_LIB_SRCS})
 
 target_link_libraries(smokeplasma 
     ${KDE4_KDEUI_LIBS}
-    ${PLASMA_LIBS}
+    ${KDE4_PLASMA_LIBS}
     smokekde
     smokeqt )
 
