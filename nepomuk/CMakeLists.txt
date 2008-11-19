@@ -84,8 +84,6 @@ kde4_add_library(smokenepomuk SHARED ${smokenepomuk_LIB_SRCS})
 
 target_link_libraries(smokenepomuk 
     ${NEPOMUK_LIBRARIES}
-    nepomukqueryclient
-    nepomukquery
     ${KDE4_KDECORE_LIBS}
     smokesoprano
     smokekde
