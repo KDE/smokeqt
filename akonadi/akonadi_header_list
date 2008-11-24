@@ -32,7 +32,6 @@ akonadi/collectionview.h
 akonadi/control.h
 akonadi/entity.h
 akonadi/entitydisplayattribute.h
-akonadi/entitytreemodel.h
 akonadi/item.h
 akonadi/itemcopyjob.h
 akonadi/itemcreatejob.h

@@ -35,7 +35,6 @@ Akonadi::ContactPart
 Akonadi::Control
 Akonadi::Entity
 Akonadi::EntityDisplayAttribute
-Akonadi::EntityTreeModel
 Akonadi::Item
 Akonadi::ItemCopyJob
 Akonadi::ItemCreateJob
