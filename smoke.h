@@ -327,6 +327,7 @@ public:
 
         while (imax >= imin) {
             icur = (imin + imax) / 2;
+            if (!icur) return 0;
             icmp = strcmp(types[icur].name, t);
             if (icmp == 0) {
                 return icur;
@@ -351,6 +352,7 @@ public:
 
         while (imax >= imin) {
             icur = (imin + imax) / 2;
+            if (!icur) return NullModuleIndex;
             icmp = strcmp(classes[icur].className, c);
             if (icmp == 0) {
                 if (classes[icur].external && !external) {
@@ -428,6 +430,7 @@ public:
 
         while (imax >= imin) {
             icur = (imin + imax) / 2;
+            if (!icur) return NullModuleIndex;
             icmp = leg(methodMaps[icur].classId, c);
             if (icmp == 0) {
                 icmp = leg(methodMaps[icur].name, name);
