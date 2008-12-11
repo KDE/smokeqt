@@ -319,15 +319,13 @@ public:
     }
 
     inline Index idType(const char *t) {
-        if (!t) return 0;
         Index imax = numTypes;
-        Index imin = 0;
+        Index imin = 1;
         Index icur = -1;
         int icmp = -1;
 
         while (imax >= imin) {
             icur = (imin + imax) / 2;
-            if (!icur) return 0;
             icmp = strcmp(types[icur].name, t);
             if (icmp == 0) {
                 return icur;
@@ -344,15 +342,13 @@ public:
     }
 
     inline ModuleIndex idClass(const char *c, bool external = false) {
-        if (!c) return NullModuleIndex;
         Index imax = numClasses;
-        Index imin = 0;
+        Index imin = 1;
         Index icur = -1;
         int icmp = -1;
 
         while (imax >= imin) {
             icur = (imin + imax) / 2;
-            if (!icur) return NullModuleIndex;
             icmp = strcmp(classes[icur].className, c);
             if (icmp == 0) {
                 if (classes[icur].external && !external) {
@@ -380,9 +376,8 @@ public:
     }
 
     inline ModuleIndex idMethodName(const char *m) {
-        if (!m) return NullModuleIndex;
         Index imax = numMethodNames;
-        Index imin = 0;
+        Index imin = 1;
         Index icur = -1;
         int icmp = -1;
 
@@ -424,13 +419,12 @@ public:
 
     inline ModuleIndex idMethod(Index c, Index name) {
         Index imax = numMethodMaps;
-        Index imin = 0;
+        Index imin = 1;
         Index icur = -1;
         int icmp = -1;
 
         while (imax >= imin) {
             icur = (imin + imax) / 2;
-            if (!icur) return NullModuleIndex;
             icmp = leg(methodMaps[icur].classId, c);
             if (icmp == 0) {
                 icmp = leg(methodMaps[icur].name, name);
