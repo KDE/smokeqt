@@ -5,6 +5,7 @@ IF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
 ENDIF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
 
 include_directories( ${CMAKE_SOURCE_DIR}/smoke )
+include_directories( ${AKONADI_INCLUDE_DIR}/akonadi )
 
 set(srcdir ${CMAKE_CURRENT_SOURCE_DIR})
 set(KDE_PREFIX ${CMAKE_INSTALL_PREFIX})
