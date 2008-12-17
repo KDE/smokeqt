@@ -87,8 +87,8 @@ include_directories( ${AKONADI_INCLUDE_DIR}/akonadi )
 kde4_add_library(smokeakonadi SHARED ${smokeakonadi_LIB_SRCS})
 
 target_link_libraries(smokeakonadi 
-    akonadi-kde
-    akonadi-kmime
+    ${KDEPIMLIBS_AKONADI_LIBS} 
+    ${KDEPIMLIBS_AKONADI_KMIME_LIBS}
     smokekde
     smokeqt )
 
