@@ -90,6 +90,7 @@ kde4_add_library(smokeakonadi SHARED ${smokeakonadi_LIB_SRCS})
 target_link_libraries(smokeakonadi 
     ${KDEPIMLIBS_AKONADI_LIBS} 
     ${KDEPIMLIBS_AKONADI_KMIME_LIBS}
+    kdecore kdeui
     smokekde
     smokeqt )
 
