@@ -29,6 +29,8 @@ plasma/scripting/appletscript.h
 plasma/scripting/dataenginescript.h
 plasma/scripting/runnerscript.h
 plasma/scripting/scriptengine.h
+plasma/service.h
+plasma/servicejob.h
 plasma/svg.h
 plasma/framesvg.h
 plasma/theme.h
