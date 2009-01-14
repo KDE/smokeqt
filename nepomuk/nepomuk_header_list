@@ -16,14 +16,9 @@ nepomuk/ontology.h
 nepomuk/ontologyloader.h
 nepomuk/ontologymanager.h
 nepomuk/property.h
-nepomuk/query.h
-nepomuk/queryparser.h
-nepomuk/queryserviceclient.h
 nepomuk/resource.h
 nepomuk/resourcemanager.h
-nepomuk/result.h
 nepomuk/tag.h
-nepomuk/term.h
 nepomuk/thing.h
 nepomuk/tools.h
 nepomuk/variant.h

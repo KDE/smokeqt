@@ -22,13 +22,6 @@ Nepomuk::ResourceDisplayWidget
 Nepomuk::ResourceGuiItemFactory
 Nepomuk::ResourceManager
 Nepomuk::ResourceModel
-Nepomuk::Search
-Nepomuk::Search::Query
-Nepomuk::Search::QueryParser
-Nepomuk::Search::QueryServiceClient
-Nepomuk::Search::Result
-Nepomuk::Search::SearchCore
-Nepomuk::Search::Term
 Nepomuk::SearchHitModel
 Nepomuk::SearchHitView
 Nepomuk::Service
