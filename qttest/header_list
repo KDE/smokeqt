@@ -261,7 +261,6 @@ qundostack.h
 qundoview.h
 qvalidator.h
 qvboxlayout.h
-qvfbhdr.h
 qwhatsthis.h
 qwidgetaction.h
 qwidget.h
