@@ -1,9 +1,11 @@
-QWebHitTestResult
+QWebDatabase
 QWebFrame
-QWebHistoryItem
 QWebHistory
 QWebHistoryInterface
+QWebHistoryItem
+QWebHitTestResult
 QWebPage
 QWebPluginFactory
+QWebSecurityOrigin
 QWebSettings
 QWebView
