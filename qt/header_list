@@ -319,6 +319,8 @@ qdbusabstractinterface.h
 qdbusargument.h
 qdbusconnection.h
 qdbusconnectioninterface.h
+qdbuspendingcall.h
+qdbuspendingreply.h
 qdbuserror.h
 qdbusextratypes.h
 qdbusinterface.h
