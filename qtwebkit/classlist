@@ -5,6 +5,10 @@ QWebHistoryInterface
 QWebHistoryItem
 QWebHitTestResult
 QWebPage
+QWebPage::ExtensionOption
+QWebPage::ExtensionReturn
+QWebPage::ChooseMultipleFilesExtensionOption
+QWebPage::ChooseMultipleFilesExtensionReturn
 QWebPluginFactory
 QWebSecurityOrigin
 QWebSettings

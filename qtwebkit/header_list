@@ -269,7 +269,6 @@ qwindowsstyle.h
 qwindowsxpstyle.h
 qwmatrix.h
 qworkspace.h
-qx11embed_x11.h
 qx11info_x11.h
 qabstractsocket.h
 qftp.h
@@ -313,6 +312,7 @@ qsvgrenderer.h
 qsvgwidget.h
 qdom.h
 qxml.h
+qxmlstream.h
 qdbusabstractadaptor.h
 qdbusabstractinterface.h
 qdbusargument.h
@@ -345,4 +345,5 @@ qsslerror.h
 qsslkey.h
 qsslsocket.h
 qsvggenerator.h
+qx11embed_x11.h
 qxmlstream.h

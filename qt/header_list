@@ -1,3 +1,5 @@
+qpixmapfilter.h
+qtextdocumentwriter.h
 qabstracteventdispatcher.h
 qabstractfileengine.h
 qabstractitemmodel.h
@@ -318,6 +320,7 @@ qdbusabstractinterface.h
 qdbusargument.h
 qdbusconnection.h
 qdbusconnectioninterface.h
+qdbuscontext.h
 qdbuspendingcall.h
 qdbuspendingreply.h
 qdbuserror.h
@@ -326,11 +329,12 @@ qdbusinterface.h
 qdbusmacros.h
 qdbusmessage.h
 qdbusmetatype.h
+qdbuspendingcall.h
+qdbuspendingreply.h
 qdbusreply.h
 qdbusserver.h
 qcryptographichash.h
 qdiriterator.h
-qdbuscontext.h
 qaccessible2.h
 qcolumnview.h
 qfileiconprovider.h
