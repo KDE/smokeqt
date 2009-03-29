@@ -41,6 +41,7 @@ Plasma::RadioButton
 Plasma::RunnerContext
 Plasma::RunnerManager
 Plasma::RunnerScript
+Plasma::RunnerSyntax
 Plasma::ScriptEngine
 Plasma::ScrollBar
 Plasma::Service

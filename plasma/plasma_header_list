@@ -25,6 +25,7 @@ plasma/popupapplet.h
 plasma/querymatch.h
 plasma/runnercontext.h
 plasma/runnermanager.h
+plasma/runnersyntax.h
 plasma/scripting/appletscript.h
 plasma/scripting/dataenginescript.h
 plasma/scripting/runnerscript.h
