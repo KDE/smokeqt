@@ -106,6 +106,28 @@ find(
     }, @qtinc
 );
 
+# List Qt headers
+my @pimheaders = ();
+
+
+$piminc= '@akonadi_includes@';
+print "HERE: $piminc";
+find(
+    {   wanted => sub {
+	    (-e || -l and !-d) and do {
+	        $f = substr($_, 1 + length $piminc);
+                push ( @pimheaders, $_ )
+	    	  if( $kdeincludes{$f}        # Known header
+	    	     && /\.h$/);     # Not a backup file etc. Only headers.
+	    	undef $kdeincludes{$f};
+             };
+        },
+	follow_fast => 1,
+	follow_skip => 2,
+	no_chdir => 1
+    }, $piminc
+ );
+
 my @kdeheaders = ();
 $kdeprefix = "@KDE_PREFIX@";
 $kdeinc= '@kde_includes@';
@@ -130,7 +152,7 @@ find(
 
 # Launch kalyptus
 chdir "../smoke/akonadi";
-system "perl -I@kdebindings_SOURCE_DIR@/kalyptus @kdebindings_SOURCE_DIR@/kalyptus/kalyptus @ARGV --qt4 --globspace -fsmoke --name=akonadi --init-modules=qt,kde --classlist=@CMAKE_CURRENT_SOURCE_DIR@/classlist $macros --no-cache --outputdir=$outdir @headers @kdeheaders";
+system "perl -I@kdebindings_SOURCE_DIR@/kalyptus @kdebindings_SOURCE_DIR@/kalyptus/kalyptus @ARGV --qt4 --globspace -fsmoke --name=akonadi --init-modules=qt,kde --classlist=@CMAKE_CURRENT_SOURCE_DIR@/classlist $macros --no-cache --outputdir=$outdir @headers @pimheaders @kdeheaders";
 my $exit = $? >> 8;
 exit $exit if ($exit);
 chdir "$kalyptusdir";

@@ -5,13 +5,12 @@ IF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
 ENDIF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
 
 include_directories( ${CMAKE_SOURCE_DIR}/smoke )
-include_directories( ${KDE4_INCLUDE_DIR}/akonadi )
 
 set(srcdir ${CMAKE_CURRENT_SOURCE_DIR})
 set(KDE_PREFIX ${CMAKE_INSTALL_PREFIX})
 set(qt_includes ${QT_INCLUDE_DIR})
 set(kde_includes ${KDE4_INCLUDE_DIR})
-set(akonadi_includes ${AKONADI_INCLUDE_DIR})
+set(akonadi_includes ${KDEPIMLIBS_INCLUDE_DIR})
 if(OPENGL_FOUND AND OPENGL_GLU_FOUND)
    set(KDE_HAVE_GL "yes")
 else(OPENGL_FOUND AND OPENGL_GLU_FOUND)
@@ -83,14 +82,16 @@ set(smokeakonadi_LIB_SRCS ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp
 # Needed to make QSqlRelationalDelegate compile
 ADD_DEFINITIONS (-DQT_GUI_LIB)
 
-include_directories( ${AKONADI_INCLUDE_DIR}/akonadi )
+include_directories( ${KDEPIMLIBS_INCLUDE_DIRS} )
+include_directories( ${KDEPIMLIBS_INCLUDE_DIR}/akonadi )
 
 kde4_add_library(smokeakonadi SHARED ${smokeakonadi_LIB_SRCS})
 
 target_link_libraries(smokeakonadi 
     ${KDEPIMLIBS_AKONADI_LIBS} 
     ${KDEPIMLIBS_AKONADI_KMIME_LIBS}
-    kdecore kdeui
+    ${KDE4_KDECORE_LIBS}
+    ${KDE4_KDEUI_LIBS}
     smokekde
     smokeqt )
 
