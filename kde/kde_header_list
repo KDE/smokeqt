@@ -133,6 +133,7 @@ khbox.h
 khelpmenu.h
 khistorycombobox.h
 khuesaturationselect.h
+kiconcache.h
 kicondialog.h
 kiconeffect.h
 kicon.h
@@ -239,6 +240,7 @@ kpassivepopup.h
 kpassivepopupmessagehandler.h
 kpassworddialog.h
 kpastetextaction.h
+kpixmapcache.h
 kpixmapprovider.h
 kplotaxis.h
 kplotobject.h

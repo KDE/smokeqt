@@ -215,6 +215,7 @@ KIO::TransferJob
 KIO::UDSEntry
 KIcon
 KIconButton
+KIconCache
 KIconEffect
 KIconLoader
 KIconTheme
@@ -306,6 +307,7 @@ KPassivePopup
 KPassivePopupMessageHandler
 KPasswordDialog
 KPasteTextAction
+KPixmapCache
 KPixmapProvider
 KPlotAxis
 KPlotObject
