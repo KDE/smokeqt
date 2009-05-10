@@ -21,6 +21,7 @@ soprano/inferenceruleparser.h
 soprano/inferenceruleset.h
 soprano/iteratorbackend.h
 soprano/iterator.h
+soprano/languagetag.h
 soprano/literalvalue.h
 soprano/localsocketclient.h
 soprano/locator.h
