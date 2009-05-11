@@ -69,7 +69,7 @@ IF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
 ENDIF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
 add_library(smokephonon SHARED ${smokephonon_LIB_SRCS})
 
-target_link_libraries(smokephonon smokeqt ${PHONON_LIBS})
+target_link_libraries(smokephonon smokeqt ${KDE4_PHONON_LIBS})
 
 set_target_properties(smokephonon PROPERTIES VERSION 2.0.0 SOVERSION 2 )
 
