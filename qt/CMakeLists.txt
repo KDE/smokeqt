@@ -13,8 +13,7 @@ else (APPLE)
 set(qt_test_threshold 10)
 endif (APPLE)
 
-# macro is defined in qt-copy/src/qbase.pri but couldn't be found by qtguess, so I append it manually
-file(APPEND ${CMAKE_CURRENT_BINARY_DIR}/../qtdefines "QT_NO_CAST_TO_ASCII\n")
+include(QtGuess.txt)
 
 ########### next target ###############
 
@@ -39,9 +38,6 @@ add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp
                 ${CMAKE_CURRENT_BINARY_DIR}/x_18.cpp
                 ${CMAKE_CURRENT_BINARY_DIR}/x_19.cpp
                 ${CMAKE_CURRENT_BINARY_DIR}/x_20.cpp
-
-                  COMMAND ${PERL_EXECUTABLE} ARGS ${CMAKE_CURRENT_BINARY_DIR}/qtguess.pl
-                  DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/qtguess.pl
 
                   COMMAND ${PERL_EXECUTABLE} ARGS ${CMAKE_CURRENT_BINARY_DIR}/generate.pl
                   DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/generate.pl
@@ -124,5 +120,5 @@ set_target_properties(smokeqt PROPERTIES VERSION 2.0.0 SOVERSION 2 )
 install(TARGETS smokeqt DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
 install(FILES ${CMAKE_SOURCE_DIR}/smoke/qt_smoke.h DESTINATION include/smoke)
 
-configure_file(qtguess.pl.cmake ${CMAKE_CURRENT_BINARY_DIR}/qtguess.pl @ONLY)
+# configure_file(qtguess.pl.cmake ${CMAKE_CURRENT_BINARY_DIR}/qtguess.pl @ONLY)
 configure_file(generate.pl.cmake ${CMAKE_CURRENT_BINARY_DIR}/generate.pl @ONLY )
