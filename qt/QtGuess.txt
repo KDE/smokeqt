@@ -1,3 +1,4 @@
+if(NOT QT_DEFINES_FOUND)
 #Threshold for tests
 set(QT_NO_ACCESSIBILITY 0)
 set(QT_NO_ACTION 5)
@@ -93,11 +94,6 @@ QT_NO_XML)
 # macro is defined in qt-copy/src/qbase.pri but couldn't be found by qtguess, so I append it manually
 list(APPEND qtdefines "QT_NO_CAST_TO_ASCII")
 
-# execute_process(
-#   COMMAND ${PERL_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qttests.pl ${qt_test_threshold}
-#   WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
-#   OUTPUT_VARIABLE test_targets)
-
 foreach(test_entry ${define_tests})
   if(${${test_entry}} GREATER ${qt_test_threshold})
     list(APPEND test_targets ${test_entry})
@@ -109,14 +105,12 @@ file(STRINGS "${QT_QTCORE_INCLUDE_DIR}/qconfig.h" qconfig_h NEWLINE_CONSUME)
 file(STRINGS "${QT_QTCORE_INCLUDE_DIR}/qfeatures.h" qfeatures_h NEWLINE_CONSUME)
 set(qtheaders "${qglobal_h}\n${qconfig_h}\n${qfeatures}")
 string(REGEX REPLACE "\n" ";" qtheaders "${qtheaders}")
-# string(REGEX MATCHALL "^#[ ]*define[ ]*QT_[A-Z_]+[ ]*$" qglobal_defines "${qglobal_h}")
-#funciona
-# string(REGEX MATCHALL "#[ ]*define[ ]+(QT_[A-Z_]+)[ ]*" qglobal_defines "${qglobal_h}")
 
 file(REMOVE_RECURSE ${CMAKE_CURRENT_BINARY_DIR}/qtdefines.cpp ${CMAKE_CURRENT_BINARY_DIR}/qtdefines)
 file(APPEND ${CMAKE_CURRENT_BINARY_DIR}/qtdefines.cpp "#include <cstdio>\n#include \"qglobal.h\"\nint main(int argc, char** argv)\n{\n")
 foreach( line ${qtheaders} )
   if(line MATCHES "^#[ ]*define[ ]+(QT_[A-Z_0-9]+)[ ]*$")
+    #ifdef DEF; printf "DEF"; #endif
     file(APPEND ${CMAKE_CURRENT_BINARY_DIR}/qtdefines.cpp "#ifdef ${CMAKE_MATCH_1}\n#ifdef QTDEF_MULTI\nprintf(\";\");\n#endif\n#ifndef QTDEF_MULTI\n#define QTDEF_MULTI\n#endif\nprintf(\"${CMAKE_MATCH_1}\");\n#endif\n")
   endif(line MATCHES "^#[ ]*define[ ]+(QT_[A-Z_0-9]+)[ ]*$")
 endforeach(line)
@@ -142,7 +136,6 @@ foreach(test_target ${test_targets})
     COMPILE_DEFINITIONS -DTEST_${test_target}
     CMAKE_FLAGS "-DINCLUDE_DIRECTORIES:STRING=${CMAKE_SYSTEM_INCLUDE_PATH};${QT_INCLUDE_DIR}"
     "-DLINK_LIBRARIES:STRING=${QT_QTCORE_LIBRARY};${QT_QTDBUS_LIBRARY};${QT_QTGUI_LIBRARY};${QT_QTNETWORK_LIBRARY};${QT_QTOPENGL_LIBRARY};${QT_QTXML_LIBRARY};${QT_QTSVG_LIBRARY}")
-#   message(STATUS Resultado:${test_result})
   if(test_result)
     message(STATUS "${test_target} *Undefined*")
   else(test_result)
@@ -157,3 +150,5 @@ file(REMOVE ${CMAKE_CURRENT_BINARY_DIR}/../qtdefines)
 foreach(definition ${qtdefines})
   file(APPEND ${CMAKE_CURRENT_BINARY_DIR}/../qtdefines "${definition}\n")
 endforeach(definition ${qtdefines})
+set(QT_DEFINES_FOUND true CACHE BOOL "Test results that describe how Qt was built")
+endif(NOT QT_DEFINES_FOUND)
