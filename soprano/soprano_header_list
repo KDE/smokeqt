@@ -13,6 +13,7 @@ soprano/dbusstatementiterator.h
 soprano/error.h
 soprano/filtermodel.h
 soprano/global.h
+soprano/graph.h
 soprano/indexfiltermodel.h
 soprano/indexqueryhit.h
 soprano/inferencemodel.h
@@ -21,6 +22,7 @@ soprano/inferenceruleparser.h
 soprano/inferenceruleset.h
 soprano/iteratorbackend.h
 soprano/iterator.h
+soprano/languagetag.h
 soprano/literalvalue.h
 soprano/localsocketclient.h
 soprano/locator.h
@@ -56,7 +58,6 @@ soprano/statementiterator.h
 soprano/statementpattern.h
 soprano/storagemodel.h
 soprano/tcpclient.h
-soprano/unixsocketclient.h
 soprano/version.h
 soprano/vocabulary.h
 soprano/xesam.h
