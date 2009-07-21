@@ -118,7 +118,3 @@ DOM::UIEvent
 KHTMLPart
 KHTMLSettings
 KHTMLView
-KParts::Event
-KParts::Part
-KParts::PartBase
-KParts::ReadOnlyPart
