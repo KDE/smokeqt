@@ -1,3 +1,13 @@
+#ifdef TEST_QT_NO_DEBUG
+#include "QtGui/qgraphicslinearlayout.h"
+
+int main(int argc, char ** argv)
+{
+  ((QGraphicsLinearLayout*)0)->dump();
+}
+
+#endif
+
 #ifdef TEST_QT_NO_ACCESSIBILITY
 #include "QtGui/qaccessible.h"
 
