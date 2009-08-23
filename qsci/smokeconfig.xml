@@ -1,0 +1,49 @@
+<config>
+    <moduleName>qsci</moduleName>
+    <parentModules>
+        <module>qt</module>
+    </parentModules>
+    <parts>10</parts>
+    <scalarTypes>
+        <!-- QString is a class, but represented as a scalar (#) in munged names -->
+        <typeName>QString</typeName>
+    </scalarTypes>
+    <voidpTypes>
+        <!-- both are classes, but they are represented as Smoke::t_voidp -->
+        <typeName>QStringList</typeName>
+        <typeName>QString</typeName>
+    </voidpTypes>
+    <classList>
+        <class>QsciAPIs</class>
+        <class>QsciCommand</class>
+        <class>QsciCommandSet</class>
+        <class>QsciDocument</class>
+        <class>QsciLexer</class>
+        <class>QsciLexerBash</class>
+        <class>QsciLexerBatch</class>
+        <class>QsciLexerCMake</class>
+        <class>QsciLexerCPP</class>
+        <class>QsciLexerCSS</class>
+        <class>QsciLexerCSharp</class>
+        <class>QsciLexerD</class>
+        <class>QsciLexerDiff</class>
+        <class>QsciLexerHTML</class>
+        <class>QsciLexerIDL</class>
+        <class>QsciLexerJava</class>
+        <class>QsciLexerJavaScript</class>
+        <class>QsciLexerLua</class>
+        <class>QsciLexerMakefile</class>
+        <class>QsciLexerPOV</class>
+        <class>QsciLexerPerl</class>
+        <class>QsciLexerProperties</class>
+        <class>QsciLexerPython</class>
+        <class>QsciLexerRuby</class>
+        <class>QsciLexerSQL</class>
+        <class>QsciLexerTeX</class>
+        <class>QsciLexerVHDL</class>
+        <class>QsciMacro</class>
+        <class>QsciPrinter</class>
+        <class>QsciScintilla</class>
+        <class>QsciScintillaBase</class>
+    </classList>
+</config>

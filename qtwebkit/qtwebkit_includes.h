@@ -1,0 +1,10 @@
+#include <qwebdatabase.h>
+#include <qwebframe.h>
+#include <qwebhistory.h>
+#include <qwebhistoryinterface.h>
+#include <qwebkitglobal.h>
+#include <qwebpage.h>
+#include <qwebpluginfactory.h>
+#include <qwebsecurityorigin.h>
+#include <qwebsettings.h>
+#include <qwebview.h>

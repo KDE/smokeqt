@@ -1,0 +1,33 @@
+<config>
+    <moduleName>qtscript</moduleName>
+    <parentModules>
+        <module>qt</module>
+    </parentModules>
+    <parts>1</parts>
+    <scalarTypes>
+        <!-- QString is a class, but represented as a scalar (#) in munged names -->
+        <typeName>QString</typeName>
+    </scalarTypes>
+    <voidpTypes>
+        <!-- both are classes, but they are represented as Smoke::t_voidp -->
+        <typeName>QStringList</typeName>
+        <typeName>QString</typeName>
+    </voidpTypes>
+    <functions>
+        <name>qScriptConnect</name>
+        <name>qScriptDisonnect</name>
+    </functions>
+    <classList>
+        <class>QScriptable</class>
+        <class>QScriptClass</class>
+        <class>QScriptClassPropertyIterator</class>
+        <class>QScriptContext</class>
+        <class>QScriptContextInfo</class>
+        <class>QScriptEngineAgent</class>
+        <class>QScriptEngine</class>
+        <class>QScriptExtensionPlugin</class>
+        <class>QScriptString</class>
+        <class>QScriptValue</class>
+        <class>QScriptValueIterator</class>
+    </classList>
+</config>

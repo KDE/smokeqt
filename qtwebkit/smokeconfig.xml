@@ -1,0 +1,29 @@
+<config>
+    <moduleName>qtwebkit</moduleName>
+    <parentModules>
+        <module>qt</module>
+    </parentModules>
+    <parts>1</parts>
+    <scalarTypes>
+        <!-- QString is a class, but represented as a scalar (#) in munged names -->
+        <typeName>QString</typeName>
+    </scalarTypes>
+    <voidpTypes>
+        <!-- both are classes, but they are represented as Smoke::t_voidp -->
+        <typeName>QStringList</typeName>
+        <typeName>QString</typeName>
+    </voidpTypes>
+    <classList>
+        <class>QWebDatabase</class>
+        <class>QWebFrame</class>
+        <class>QWebHistory</class>
+        <class>QWebHistoryInterface</class>
+        <class>QWebHistoryItem</class>
+        <class>QWebHitTestResult</class>
+        <class>QWebPage</class>
+        <class>QWebPluginFactory</class>
+        <class>QWebSecurityOrigin</class>
+        <class>QWebSettings</class>
+        <class>QWebView</class>
+    </classList>
+</config>
