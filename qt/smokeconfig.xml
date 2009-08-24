@@ -602,6 +602,7 @@
         <class>QVBoxLayout</class>
         <class>QValidator</class>
         <class>QVariant</class>
+        <class>QVariantComparisonHelper</class>
         <class>QVectorPath</class>
         <class>QWSRegionManager</class>
         <class>QWhatsThis</class>
