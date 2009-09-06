@@ -1,7 +1,3 @@
-IF(NOT PERL_FOUND)
-    FIND_PACKAGE(PERL REQUIRED)
-ENDIF(NOT PERL_FOUND)
-
 if (NOT QIMAGEBLITZ_FOUND)
     find_package(QImageBlitz REQUIRED)
 endif (NOT QIMAGEBLITZ_FOUND)
@@ -11,10 +7,10 @@ endif (NOT QIMAGEBLITZ_FOUND)
 add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp
 	${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp
 
-	COMMAND ${PERL_EXECUTABLE} ARGS ${CMAKE_CURRENT_BINARY_DIR}/generate.pl
-	DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/generate.pl
-
-	WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
+    COMMAND generator
+    ARGS -config "${CMAKE_CURRENT_BINARY_DIR}/../qt/config.xml" -smokeconfig "${CMAKE_CURRENT_SOURCE_DIR}/smokeconfig.xml"
+         -I ${QIMAGEBLITZ_INCLUDES} -dm QIMAGEBLITZ_EXPORT -- ${CMAKE_CURRENT_SOURCE_DIR}/qimageblitz_includes.h
+    WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
 
 macro_add_file_dependencies( ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp ${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp )
 
@@ -34,13 +30,3 @@ set_target_properties(smokeqimageblitz PROPERTIES VERSION 2.0.0 SOVERSION 2 )
 
 install(TARGETS smokeqimageblitz DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
 install(FILES ${CMAKE_SOURCE_DIR}/smoke/qimageblitz_smoke.h DESTINATION include/smoke )
-
-FOREACH(incname ${QT_INCLUDES})
-    SET(qt_incs "'${incname}', ${qt_incs}")
-ENDFOREACH(incname)
-
-FOREACH(incname ${QIMAGEBLITZ_INCLUDES})
-    SET(blitz_incs "'${incname}', ${blitz_incs}")
-ENDFOREACH(incname)
-
-configure_file(generate.pl.cmake ${CMAKE_CURRENT_BINARY_DIR}/generate.pl @ONLY)
