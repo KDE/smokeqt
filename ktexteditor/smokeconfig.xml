@@ -1,0 +1,80 @@
+<config>
+    <moduleName>ktexteditor</moduleName>
+    <parts>10</parts>
+    <parentModules>
+        <module>kde</module>
+    </parentModules>
+    <scalarTypes>
+        <!-- QString is a class, but represented as a scalar (#) in munged names -->
+        <typeName>QString</typeName>
+    </scalarTypes>
+    <voidpTypes>
+        <!-- both are classes, but they are represented as Smoke::t_voidp -->
+        <typeName>QStringList</typeName>
+        <typeName>QString</typeName>
+    </voidpTypes>
+    <exclude>
+        <!-- private stuff -->
+        <signature>.*::d</signature>
+        <signature>.*::d_ptr</signature>
+        <signature>.*::q_ptr</signature>
+        <signature>.*::q</signature>
+        <signature>.*QDebug.*</signature>
+        <signature>.*Q3.*</signature>
+        
+        <!-- unimplemented methods -->
+        <signature>.*KTextEditor::Attribute::changed\(.*</signature>
+        <signature>.*KTextEditor::Attribute::associateAction\(.*</signature>
+        <signature>.*KTextEditor::Attribute::dissociateAction\(.*</signature>
+        <signature>.*KTextEditor::Range::boundaryOnColumn\(int\).*</signature>
+        
+        <!-- unimplemented signals -->
+        <signature>.*KTextEditor::MarkInterface::markToolTipRequested\(.*</signature>
+        <signature>.*KTextEditor::MarkInterface::markContextMenuRequested\(.*</signature>
+        <signature>.*KTextEditor::MarkInterface::markClicked\(.*</signature>
+    </exclude>
+    <functions>
+        <!-- everything in that namespace.. -->
+        <name>KTextEditor::.*</name>
+    </functions>
+    <classList>
+        <class>KTextEditor</class>
+        <class>KTextEditor::AnnotationInterface</class>
+        <class>KTextEditor::AnnotationModel</class>
+        <class>KTextEditor::AnnotationViewInterface</class>
+        <class>KTextEditor::Attribute</class>
+        <class>KTextEditor::CodeCompletionInterface</class>
+        <class>KTextEditor::CodeCompletionModel</class>
+        <class>KTextEditor::CodeCompletionModel2</class>
+        <class>KTextEditor::Command</class>
+        <class>KTextEditor::CommandExtension</class>
+        <class>KTextEditor::CommandInterface</class>
+        <class>KTextEditor::ConfigInterface</class>
+        <class>KTextEditor::ConfigPage</class>
+        <class>KTextEditor::ContainerInterface</class>
+        <class>KTextEditor::Cursor</class>
+        <class>KTextEditor::Document</class>
+        <class>KTextEditor::Editor</class>
+        <class>KTextEditor::EditorChooser</class>
+        <class>KTextEditor::Factory</class>
+        <class>KTextEditor::Mark</class>
+        <class>KTextEditor::MarkInterface</class>
+        <class>KTextEditor::MdiContainer</class>
+        <class>KTextEditor::ModificationInterface</class>
+        <class>KTextEditor::Plugin</class>
+        <class>KTextEditor::Range</class>
+        <class>KTextEditor::SearchInterface</class>
+        <class>KTextEditor::SessionConfigInterface</class>
+        <class>KTextEditor::SmartCursor</class>
+        <class>KTextEditor::SmartCursorNotifier</class>
+        <class>KTextEditor::SmartCursorWatcher</class>
+        <class>KTextEditor::SmartInterface</class>
+        <class>KTextEditor::SmartRange</class>
+        <class>KTextEditor::SmartRangeNotifier</class>
+        <class>KTextEditor::SmartRangeWatcher</class>
+        <class>KTextEditor::TemplateInterface</class>
+        <class>KTextEditor::TextHintInterface</class>
+        <class>KTextEditor::VariableInterface</class>
+        <class>KTextEditor::View</class>
+    </classList>
+</config>
