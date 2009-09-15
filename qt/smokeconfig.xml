@@ -23,6 +23,8 @@
         <signature>.*QtConcurrent.*</signature>
         <!-- this doesn't link, internal stuff.. -->
         <signature>.*qFindString.*</signature>
+        <!-- windows internal helper functions -->
+        <signature>.*qFrom.*Endian_helper.*</signature>
     </exclude>
     <functions>
         <!-- include functions starting with 'q' -->
@@ -64,8 +66,6 @@
         <class>QAccessible2Interface</class>
         <class>QAccessibleApplication</class>
         <class>QAccessibleBridge</class>
-        <class>QAccessibleBridgeFactoryInterface</class>
-        <class>QAccessibleBridgePlugin</class>
         <class>QAccessibleEditableTextInterface</class>
         <class>QAccessibleEvent</class>
         <class>QAccessibleFactoryInterface</class>
