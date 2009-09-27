@@ -1,0 +1,105 @@
+<config>
+    <moduleName>plasma</moduleName>
+    <parentModules>
+        <module>kde</module>
+    </parentModules>
+    <parts>10</parts>
+    <scalarTypes>
+        <!-- QString is a class, but represented as a scalar (#) in munged names -->
+        <typeName>QString</typeName>
+    </scalarTypes>
+    <voidpTypes>
+        <!-- both are classes, but they are represented as Smoke::t_voidp -->
+        <typeName>QStringList</typeName>
+        <typeName>QString</typeName>
+    </voidpTypes>
+    <exclude>
+        <!-- private stuff -->
+        <signature>.*::d</signature>
+        <signature>.*::d_ptr</signature>
+        <signature>.*::q_ptr</signature>
+        <signature>.*::q</signature>
+        <signature>.*QDebug.*</signature>
+        <signature>.*Q3.*</signature>
+        
+        <!-- the Package::publish stuff doesn't seem to be implemented (or exported?) -->
+        <signature>.*Plasma::Package::(un|is)?[pP]ublish(ed)?\(.*</signature>
+        
+        <!-- Plasma::Credentials doesn't implement the ctor and dtor, so we can't return it by value -->
+        <signature>.*Plasma::ServiceJob::identity\(\).*</signature>
+        
+        <signature>.*Plasma::operator(&lt;&lt;|&gt;&gt;)\(QDataStream&amp;, (const\s)?Plasma::Credentials&amp;\).*</signature>
+    </exclude>
+    <functions>
+        <!-- everything in that namespace.. -->
+        <name>Plasma::.*</name>
+    </functions>
+    <classList>
+        <class>Plasma</class>
+        <class>Plasma::AbstractRunner</class>
+        <class>Plasma::AnimationDriver</class>
+        <class>Plasma::Animator</class>
+        <class>Plasma::Applet</class>
+        <class>Plasma::AppletScript</class>
+        <class>Plasma::BusyWidget</class>
+        <class>Plasma::CheckBox</class>
+        <class>Plasma::ComboBox</class>
+        <class>Plasma::ConfigLoader</class>
+        <class>Plasma::Containment</class>
+        <class>Plasma::Containment::StyleOption</class>
+        <class>Plasma::Context</class>
+        <class>Plasma::Corona</class>
+        <class>Plasma::DataContainer</class>
+        <class>Plasma::DataEngine</class>
+        <class>Plasma::DataEngineManager</class>
+        <class>Plasma::DataEngineScript</class>
+        <class>Plasma::Delegate</class>
+        <class>Plasma::Dialog</class>
+        <class>Plasma::Extender</class>
+        <class>Plasma::ExtenderGroup</class>
+        <class>Plasma::ExtenderItem</class>
+        <class>Plasma::FlashingLabel</class>
+        <class>Plasma::Frame</class>
+        <class>Plasma::FrameSvg</class>
+        <class>Plasma::GLApplet</class>
+        <class>Plasma::GroupBox</class>
+        <class>Plasma::IconWidget</class>
+        <class>Plasma::Label</class>
+        <class>Plasma::LineEdit</class>
+        <class>Plasma::Meter</class>
+        <class>Plasma::Package</class>
+        <class>Plasma::PackageMetadata</class>
+        <class>Plasma::PackageStructure</class>
+        <class>Plasma::PaintUtils</class>
+        <class>Plasma::PlotColor</class>
+        <class>Plasma::PopupApplet</class>
+        <class>Plasma::PushButton</class>
+        <class>Plasma::QueryMatch</class>
+        <class>Plasma::RadioButton</class>
+        <class>Plasma::RunnerContext</class>
+        <class>Plasma::RunnerManager</class>
+        <class>Plasma::RunnerScript</class>
+        <class>Plasma::RunnerSyntax</class>
+        <class>Plasma::ScriptEngine</class>
+        <class>Plasma::ScrollBar</class>
+        <class>Plasma::ScrollWidget</class>
+        <class>Plasma::Service</class>
+        <class>Plasma::ServiceJob</class>
+        <class>Plasma::SignalPlotter</class>
+        <class>Plasma::Slider</class>
+        <class>Plasma::SpinBox</class>
+        <class>Plasma::Svg</class>
+        <class>Plasma::SvgWidget</class>
+        <class>Plasma::TabBar</class>
+        <class>Plasma::TextBrowser</class>
+        <class>Plasma::TextEdit</class>
+        <class>Plasma::Theme</class>
+        <class>Plasma::ToolButton</class>
+        <class>Plasma::ToolTipContent</class>
+        <class>Plasma::ToolTipManager</class>
+        <class>Plasma::TreeView</class>
+        <class>Plasma::VideoWidget</class>
+        <class>Plasma::View</class>
+        <class>Plasma::WebView</class>
+    </classList>
+</config>
