@@ -36,6 +36,10 @@ set(smokektexteditor_LIB_SRCS ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp
     ${CMAKE_CURRENT_BINARY_DIR}/x_10.cpp
 )
 
+IF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
+    ADD_DEFINITIONS(-DGCC_VISIBILITY)
+ENDIF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
+
 kde4_add_library(smokektexteditor SHARED ${smokektexteditor_LIB_SRCS})
 
 target_link_libraries(smokektexteditor 
