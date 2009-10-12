@@ -1,0 +1,58 @@
+<config>
+    <moduleName>solid</moduleName>
+    <parts>10</parts>
+    <parentModules>
+        <module>qt</module>
+    </parentModules>
+    <scalarTypes>
+        <!-- QString is a class, but represented as a scalar (#) in munged names -->
+        <typeName>QString</typeName>
+    </scalarTypes>
+    <voidpTypes>
+        <!-- both are classes, but they are represented as Smoke::t_voidp -->
+        <typeName>QStringList</typeName>
+        <typeName>QString</typeName>
+    </voidpTypes>
+    <exclude>
+        <!-- private stuff -->
+        <signature>.*::d</signature>
+        <signature>.*::d_ptr</signature>
+        <signature>.*::q_ptr</signature>
+        <signature>.*::q</signature>
+        <signature>.*QDebug.*</signature>
+        <signature>.*Q3.*</signature>
+        
+        <!-- these symbols are hidden -->
+        <signature>.*Solid::Networking::(set)?([dD]is)?[cC]onnectPolicy\(.*\)</signature>
+    </exclude>
+    <functions>
+        <!-- everything in that namespace.. -->
+        <name>Solid::.*</name>
+    </functions>
+    <classList>
+        <class>Solid</class>
+        <class>Solid::AcAdapter</class>
+        <class>Solid::AudioInterface</class>
+        <class>Solid::Battery</class>
+        <class>Solid::Block</class>
+        <class>Solid::Button</class>
+        <class>Solid::Camera</class>
+        <class>Solid::Device</class>
+        <class>Solid::DeviceInterface</class>
+        <class>Solid::DeviceNotifier</class>
+        <class>Solid::DvbInterface</class>
+        <class>Solid::GenericInterface</class>
+        <class>Solid::NetworkInterface</class>
+        <class>Solid::Networking</class>
+        <class>Solid::OpticalDisc</class>
+        <class>Solid::OpticalDrive</class>
+        <class>Solid::PortableMediaPlayer</class>
+        <class>Solid::PowerManagement</class>
+        <class>Solid::Predicate</class>
+        <class>Solid::Processor</class>
+        <class>Solid::StorageAccess</class>
+        <class>Solid::StorageDrive</class>
+        <class>Solid::StorageVolume</class>
+        <class>Solid::Video</class>
+    </classList>
+</config>
