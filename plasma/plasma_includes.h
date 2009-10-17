@@ -4,6 +4,7 @@
 #include <plasma/applet.h>
 #include <plasma/configloader.h>
 #include <plasma/containment.h>
+#include <plasma/containmentactions.h>
 #include <plasma/containmentactionspluginsconfig.h>
 #include <plasma/context.h>
 #include <plasma/corona.h>

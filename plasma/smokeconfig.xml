@@ -46,6 +46,7 @@
         <class>Plasma::ComboBox</class>
         <class>Plasma::ConfigLoader</class>
         <class>Plasma::Containment</class>
+        <class>Plasma::ContainmentActions</class>
         <class>Plasma::ContainmentActionsPluginsConfig</class>
         <class>Plasma::Containment::StyleOption</class>
         <class>Plasma::Context</class>
