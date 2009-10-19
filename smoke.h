@@ -38,32 +38,38 @@
 */
 
 #ifdef WIN32
+  // Define this when building a smoke lib that doesn't have any parents - else Smoke::classMap is not exported.
+  #ifdef BASE_SMOKE_BUILDING
+    #define BASE_SMOKE_EXPORT __declspec(dllexport)
+  #else
+    #define BASE_SMOKE_EXPORT __declspec(dllimport)
+  #endif
+  // Define this when building a smoke lib.
+  #ifdef SMOKE_BUILDING
+    #define SMOKE_EXPORT __declspec(dllexport)
+  #else
+    #define SMOKE_EXPORT __declspec(dllimport)
+  #endif
   #define SMOKE_IMPORT __declspec(dllimport)
-  #define SMOKE_EXPORT __declspec(dllexport)
-  #define SMOKE_DLLLOCAL
-  #define SMOKE_DLLPUBLIC
 #else
   #ifdef GCC_VISIBILITY
-    #define SMOKE_IMPORT __attribute__ ((visibility("default")))
-    #define SMOKE_EXPORT __attribute__ ((visibility("default")))
-    #define SMOKE_DLLLOCAL __attribute__ ((visibility("hidden")))
-    #define SMOKE_DLLPUBLIC __attribute__ ((visibility("default")))
+    #define SMOKE_EXPORT __attribute__ ((visibility("default)))
+    #define BASE_SMOKE_EXPORT __attribute__ ((visibility("default)))
   #else
-    #define SMOKE_IMPORT
     #define SMOKE_EXPORT
-    #define SMOKE_DLLLOCAL
-    #define SMOKE_DLLPUBLIC
+    #define BASE_SMOKE_EXPORT
   #endif
+  #define SMOKE_IMPORT
 #endif
 
 class SmokeBinding;
 
-class SMOKE_EXPORT Smoke {
+class BASE_SMOKE_EXPORT Smoke {
 private:
     const char *module_name;
 
 public:
-    static SMOKE_EXPORT std::map<std::string, Smoke*> classMap;
+    static std::map<std::string, Smoke*> classMap;
 
     union StackItem; // defined below
     /**

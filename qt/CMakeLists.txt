@@ -72,6 +72,8 @@ IF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
     ADD_DEFINITIONS(-DGCC_VISIBILITY)
 ENDIF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
 
+add_definitions(-DBASE_SMOKE_BUILDING)
+
 # kde4_add_library(smokeqt SHARED ${smokeqt_LIB_SRCS})
 add_library(smokeqt SHARED ${smokeqt_LIB_SRCS})
 

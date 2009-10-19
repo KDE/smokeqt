@@ -16,6 +16,7 @@ OPTION(ENABLE_PLASMA_SMOKE "build PlasmaSmoke" ON)
 
 set(SMOKE_ENABLED "no")
 if(ENABLE_SMOKE)
+    add_definitions(-DSMOKE_BUILDING)
     add_subdirectory(qt)
     set(SMOKE_ENABLED "yes - Qt")
 
