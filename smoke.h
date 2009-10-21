@@ -53,8 +53,8 @@
   #define SMOKE_IMPORT __declspec(dllimport)
 #else
   #ifdef GCC_VISIBILITY
-    #define SMOKE_EXPORT __attribute__ ((visibility("default)))
-    #define BASE_SMOKE_EXPORT __attribute__ ((visibility("default)))
+    #define SMOKE_EXPORT __attribute__ ((visibility("default")))
+    #define BASE_SMOKE_EXPORT __attribute__ ((visibility("default")))
   #else
     #define SMOKE_EXPORT
     #define BASE_SMOKE_EXPORT
