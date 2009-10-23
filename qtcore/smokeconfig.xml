@@ -63,7 +63,6 @@
         <class>QDataStream</class>
         <class>QDate</class>
         <class>QDateTime</class>
-        <class>QDebug</class>
         <class>QDir</class>
         <class>QDirIterator</class>
         <class>QDynamicPropertyChangeEvent</class>
@@ -71,6 +70,8 @@
         <class>QEventLoop</class>
         <class>QFactoryInterface</class>
         <class>QFile</class>
+        <class>QFileExtension</class>
+        <class>QFileExtensionResult</class>
         <class>QFileInfo</class>
         <class>QFileSystemWatcher</class>
         <class>QFlag</class>
@@ -79,8 +80,6 @@
         <class>QFutureWatcherBase</class>
         <class>QGenericArgument</class>
         <class>QGenericReturnArgument</class>
-        <class>QGlobalSpace</class>
-        <class>QHashDummyValue</class>
         <class>QIncompatibleFlag</class>
         <class>QInternal</class>
         <class>QIODevice</class>
@@ -99,7 +98,6 @@
         <class>QMetaType</class>
         <class>QMimeData</class>
         <class>QModelIndex</class>
-        <class>QMutex</class>
         <class>QNoDebug</class>
         <class>QObject</class>
         <class>QObjectCleanupHandler</class>
@@ -126,7 +124,6 @@
         <class>QSizeF</class>
         <class>QSocketNotifier</class>
         <class>QStringMatcher</class>
-        <class>QString::Null</class>
         <class>QStringRef</class>
         <class>QSysInfo</class>
         <class>QSystemLocale</class>
@@ -139,14 +136,12 @@
         <class>QTextDecoder</class>
         <class>QTextEncoder</class>
         <class>QTextStream</class>
-        <class>QThread</class>
         <class>QTime</class>
         <class>QTimeLine</class>
         <class>QTimer</class>
         <class>QTimerEvent</class>
         <class>QTranslator</class>
         <class>QUrl</class>
-        <class>QUrlPrivate</class>
         <class>QUuid</class>
         <class>QVariant</class>
         <class>QVariantComparisonHelper</class>
@@ -161,6 +156,7 @@
         <class>QXmlStreamReader</class>
         <class>QXmlStreamStringRef</class>
         <class>QXmlStreamWriter</class>
+
 
         <!-- namespaces -->
         <class>Qt</class>
