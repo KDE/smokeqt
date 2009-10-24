@@ -11,10 +11,17 @@
     </voidpTypes>
     <exclude>
         <!-- we don't want private stuff in smoke.. -->
+        <signature>.*::d_ptr.*</signature>
+        <signature>.*::q_ptr.*</signature>
         <signature>.*QUuid::data.*</signature>
         <signature>.*\(.*Private.*\).*</signature>
-        <signature>.*QLocale::p.*</signature>
-        <signature>.*QLocale::v.*</signature>
+        <signature>.*QLocale::p</signature>
+        <signature>.*QLocale::v</signature>
+        <signature>.*QByteArrayMatcher::dummy</signature>
+        <signature>.*QByteArrayMatcher::p</signature>
+        <signature>.*QResource::QResource\(const QResource&amp;\).*</signature>
+        <signature>.*QStringMatcher::q_data</signature>
+        <signature>.*QStringMatcher::p</signature>
         <!-- why doesn't this work?! -->
         <signature>QTextCodec::DefaultConversion</signature>
         <signature>.*QTextCodec::ConverterState::state_data.*</signature>
