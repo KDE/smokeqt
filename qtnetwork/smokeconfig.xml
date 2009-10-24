@@ -15,6 +15,9 @@
     </voidpTypes>
     <exclude>
         <!-- we don't want private stuff in smoke.. -->
+        <signature>.*::d</signature>
+        <signature>.*::d_ptr</signature>
+        <signature>.*::q_ptr</signature>
         <signature>.*\(.*Private.*\).*</signature>
         <!-- Thread related stuff belongs to the bindings language -->
         <signature>.*QtConcurrent.*</signature>
