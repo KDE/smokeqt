@@ -13,6 +13,9 @@
         <typeName>QStringList</typeName>
         <typeName>QString</typeName>
     </voidpTypes>
+    <exclude>
+        <signature>QTest::QTouchEventSequence QTest::touchEvent.*</signature>
+    </exclude>
     <functions>
         <name>^QTest::.*</name>
     </functions>

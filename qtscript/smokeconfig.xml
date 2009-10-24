@@ -13,6 +13,9 @@
         <typeName>QStringList</typeName>
         <typeName>QString</typeName>
     </voidpTypes>
+    <exclude>
+        <signature>.*::d_ptr</signature>
+    </exclude>
     <functions>
         <name>qScriptConnect</name>
         <name>qScriptDisonnect</name>
