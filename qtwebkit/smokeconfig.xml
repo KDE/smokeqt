@@ -15,6 +15,7 @@
     </voidpTypes>
     <classList>
         <class>QWebDatabase</class>
+        <class>QWebElement</class>
         <class>QWebFrame</class>
         <class>QWebHistory</class>
         <class>QWebHistoryInterface</class>
