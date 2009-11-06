@@ -44,7 +44,7 @@ add_library(smokeqwt SHARED ${smokeqwt_LIB_SRCS})
 
 target_link_libraries(smokeqwt smokeqt ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIBRARY} ${Qwt5_Qt4_LIBRARY})
 
-set_target_properties(smokeqwt PROPERTIES VERSION 2.0.0 SOVERSION 2 )
+set_target_properties(smokeqwt PROPERTIES VERSION 2.1.0 SOVERSION 2.1 )
 
 install(TARGETS smokeqwt DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
 install(FILES ${CMAKE_SOURCE_DIR}/smoke/qwt_smoke.h DESTINATION include/smoke)

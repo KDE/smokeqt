@@ -1,7 +1,8 @@
 #ifndef SMOKE_H
 #define SMOKE_H
 
-#include <string.h>
+#include <cstddef>
+#include <cstring>
 #include <string>
 #include <map>
 
@@ -117,6 +118,7 @@ public:
 	ClassFn classFn;	// Calls any method in the class
 	EnumFn enumFn;		// Handles enum pointers
         unsigned short flags;   // ClassFlags
+        unsigned int size;
     };
 
     enum MethodFlags {
@@ -127,7 +129,9 @@ public:
         mf_enum = 0x10,   // An enum value
         mf_ctor = 0x20,
         mf_dtor = 0x40,
-        mf_protected = 0x80
+        mf_protected = 0x80,
+        mf_attribute = 0x100,
+        mf_property = 0x200
     };
     /**
      * Describe one method of one class.
@@ -137,7 +141,7 @@ public:
 	Index name;		// Index into methodNames; real name
 	Index args;		// Index into argumentList
 	unsigned char numArgs;	// Number of arguments
-	unsigned char flags;	// MethodFlags (const/static/etc...)
+	unsigned short flags;	// MethodFlags (const/static/etc...)
 	Index ret;		// Index into types for the return type
 	Index method;		// Passed to Class.classFn, to call method
     };

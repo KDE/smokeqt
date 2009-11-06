@@ -47,7 +47,7 @@ add_library(smokephonon SHARED ${smokephonon_LIB_SRCS})
 
 target_link_libraries(smokephonon smokeqt ${QT_QTCORE_LIBS} ${QT_QTGUI_LIBS} ${PHONON_LIBS})
 
-set_target_properties(smokephonon PROPERTIES VERSION 2.0.0 SOVERSION 2 )
+set_target_properties(smokephonon PROPERTIES VERSION 2.1.0 SOVERSION 2.1 )
 
 install(TARGETS smokephonon DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
 install(FILES ${CMAKE_SOURCE_DIR}/smoke/phonon_smoke.h DESTINATION include/smoke)

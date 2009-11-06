@@ -24,7 +24,7 @@ add_library(smokeqtuitools SHARED ${smokeqtuitools_LIB_SRCS})
 
 target_link_libraries(smokeqtuitools smokeqt ${QT_QTCORE_LIBRARY} ${QT_QTUITOOLS_LIBRARY} ${QT_QTGUI_LIBRARY})
 
-set_target_properties(smokeqtuitools PROPERTIES VERSION 2.0.0 SOVERSION 2 )
+set_target_properties(smokeqtuitools PROPERTIES VERSION 2.1.0 SOVERSION 2.1 )
 
 install(TARGETS smokeqtuitools DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
 install(FILES ${CMAKE_SOURCE_DIR}/smoke/qtuitools_smoke.h DESTINATION include/smoke)

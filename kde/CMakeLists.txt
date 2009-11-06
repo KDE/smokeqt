@@ -83,6 +83,6 @@ target_link_libraries(smokekde
     smokeqt
 )
 
-set_target_properties(smokekde PROPERTIES VERSION 2.0.0 SOVERSION 2 )
+set_target_properties(smokekde PROPERTIES VERSION 2.1.0 SOVERSION 2.1 )
 install(TARGETS smokekde DESTINATION ${LIB_INSTALL_DIR} )
 install(FILES ${CMAKE_SOURCE_DIR}/smoke/kde_smoke.h DESTINATION include/smoke)

@@ -4,8 +4,9 @@
 #include <smoke.h>
 
 // Defined in smokedata.cpp, initialized by init_kde_Smoke(), used by all .cpp files
-extern SMOKE_EXPORT Smoke* ktexteditor_Smoke;
-extern SMOKE_EXPORT void init_ktexteditor_Smoke();
+extern "C" SMOKE_EXPORT Smoke* ktexteditor_Smoke;
+extern "C" SMOKE_EXPORT void init_ktexteditor_Smoke();
+extern "C" SMOKE_EXPORT void delete_ktexteditor_Smoke();
 
 #ifndef QGLOBALSPACE_CLASS
 #define QGLOBALSPACE_CLASS

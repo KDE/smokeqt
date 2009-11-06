@@ -3,8 +3,9 @@
 
 #include <smoke.h>
 
-extern SMOKE_EXPORT Smoke* akonadi_Smoke;
-extern SMOKE_EXPORT void init_akonadi_Smoke();
+extern "C" SMOKE_EXPORT Smoke* akonadi_Smoke;
+extern "C" SMOKE_EXPORT void init_akonadi_Smoke();
+extern "C" SMOKE_EXPORT void delete_akonadi_Smoke();
 
 #ifndef QGLOBALSPACE_CLASS
 #define QGLOBALSPACE_CLASS
