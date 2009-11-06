@@ -420,7 +420,8 @@ public:
 	    if (!classes[cmi.index].parents) return NullModuleIndex;
 	    for (Index p = classes[cmi.index].parents; inheritanceList[p]; p++) {
 		Index ci = inheritanceList[p];
-		ModuleIndex mi = classMap[className(ci)]->findMethodName(className(ci), m);
+		const char* cName = className(ci);
+		ModuleIndex mi = classMap[cName]->findMethodName(cName, m);
 		if (mi.index) return mi;
 	    }
 	}
@@ -464,9 +465,12 @@ public:
 	if(!classes[c.index].parents) return NullModuleIndex;
 	for(int p = classes[c.index].parents; inheritanceList[p] ; p++) {
 	    Index ci = inheritanceList[p];
-	    Smoke *s = classMap[className(ci)];
-	    ModuleIndex cmi = s->idClass(className(ci));
-	    ModuleIndex nmi = s->findMethodName(className(ci), name.smoke->methodNames[name.index]);
+	    const char* cName = className(ci);
+	    Smoke *s = classMap[cName];
+	    if (!s)
+		return NullModuleIndex;
+	    ModuleIndex cmi = s->idClass(cName);
+	    ModuleIndex nmi = s->findMethodName(cName, name.smoke->methodNames[name.index]);
 	    ModuleIndex mi = s->findMethod(cmi, nmi);
 	    if (mi.index) return mi;
 	}
