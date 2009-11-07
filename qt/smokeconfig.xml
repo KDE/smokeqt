@@ -50,6 +50,10 @@
         <name>.*operator.*</name>
     </functions>
     <classList>
+        <class>QAbstractAnimation</class>
+        <class>QAbstractAudioDeviceInfo</class>
+        <class>QAbstractAudioInput</class>
+        <class>QAbstractAudioOutput</class>
         <class>QAbstractButton</class>
         <class>QAbstractEventDispatcher</class>
         <class>QAbstractFileEngine</class>
@@ -73,6 +77,8 @@
         <class>QAbstractSlider</class>
         <class>QAbstractSocket</class>
         <class>QAbstractSpinBox</class>
+        <class>QAbstractState</class>
+        <class>QAbstractTransition</class>
         <class>QAbstractTableModel</class>
         <class>QAbstractTextDocumentLayout</class>
         <class>QAbstractTextDocumentLayout::PaintContext</class>
@@ -99,6 +105,7 @@
         <class>QAction</class>
         <class>QActionEvent</class>
         <class>QActionGroup</class>
+        <class>QAnimationGroup</class>
         <class>QApplication</class>
         <class>QAtomicInt</class>
         <class>QAuthenticator</class>
@@ -198,6 +205,7 @@
         <class>QErrorMessage</class>
         <class>QEvent</class>
         <class>QEventLoop</class>
+        <class>QEventTransition</class>
         <class>QFSFileEngine</class>
         <class>QFactoryInterface</class>
         <class>QFile</class>
@@ -210,6 +218,7 @@
         <class>QFileOpenEvent</class>
         <class>QFileSystemModel</class>
         <class>QFileSystemWatcher</class>
+        <class>QFinalState</class>
         <class>QFlag</class>
         <class>QFocusEvent</class>
         <class>QFocusFrame</class>
@@ -231,14 +240,28 @@
         <class>QGLContext</class>
         <class>QGLFormat</class>
         <class>QGLFramebufferObject</class>
+        <class>QGLFramebufferObjectFormat</class>
         <class>QGLOverlayWidget</class>
         <class>QGLPixelBuffer</class>
+        <class>QGLScreen</class>
+        <class>QGLScreenSurfaceFunctions</class>
+        <class>QGLShader</class>
+        <class>QGLShaderProgram</class>
         <class>QGLWidget</class>
         <class>QGenericArgument</class>
         <class>QGenericReturnArgument</class>
         <class>QGlyphLayout</class>
         <class>QGradient</class>
+        <class>QGraphicsAnchor</class>
+        <class>QGraphicsAnchorLayout</class>
+        <class>QGraphicsBloomEffect</class>
+        <class>QGraphicsBlurEffect</class>
+        <class>QGraphicsColorizeEffect</class>
+        <class>QGraphicsDropShadowEffect</class>
+        <class>QGraphicsEffect</class>
+        <class>QGraphicsEffectSource</class>
         <class>QGraphicsEllipseItem</class>
+        <class>QGraphicsGrayscaleEffect</class>
         <class>QGraphicsGridLayout</class>
         <class>QGraphicsItem</class>
         <class>QGraphicsItemAnimation</class>
@@ -247,11 +270,16 @@
         <class>QGraphicsLayoutItem</class>
         <class>QGraphicsLineItem</class>
         <class>QGraphicsLinearLayout</class>
+        <class>QGraphicsObject</class>
+        <class>QGraphicsOpacityEffect</class>
         <class>QGraphicsPathItem</class>
+        <class>QGraphicsPixelizeEffect</class>
         <class>QGraphicsPixmapItem</class>
         <class>QGraphicsPolygonItem</class>
         <class>QGraphicsProxyWidget</class>
         <class>QGraphicsRectItem</class>
+        <class>QGraphicsRotation</class>
+        <class>QGraphicsScale</class>
         <class>QGraphicsScene</class>
         <class>QGraphicsSceneContextMenuEvent</class>
         <class>QGraphicsSceneDragDropEvent</class>
@@ -265,6 +293,7 @@
         <class>QGraphicsSimpleTextItem</class>
         <class>QGraphicsSvgItem</class>
         <class>QGraphicsTextItem</class>
+        <class>QGraphicsTransform</class>
         <class>QGraphicsView</class>
         <class>QGraphicsWidget</class>
         <class>QGridLayout</class>
@@ -273,6 +302,7 @@
         <class>QHeaderView</class>
         <class>QHelpEvent</class>
         <class>QHideEvent</class>
+        <class>QHistoryState</class>
         <class>QHostAddress</class>
         <class>QHostInfo</class>
         <class>QHoverEvent</class>
@@ -382,6 +412,9 @@
         <class>QPainterPath::Element</class>
         <class>QPainterPathStroker</class>
         <class>QPalette</class>
+        <class>QPanGesture</class>
+        <class>QParallelAnimationGroup</class>
+        <class>QPauseAnimation</class>
         <class>QPen</class>
         <class>QPersistentModelIndex</class>
         <class>QPicture</class>
@@ -408,6 +441,7 @@
         <class>QProcess</class>
         <class>QProgressBar</class>
         <class>QProgressDialog</class>
+        <class>QPropertyAnimation</class>
         <class>QProxyModel</class>
         <class>QPushButton</class>
         <class>QRadialGradient</class>
@@ -425,6 +459,7 @@
         <class>QRunnable</class>
         <class>QScrollArea</class>
         <class>QScrollBar</class>
+        <class>QSequentialAnimationGroup</class>
         <class>QSemaphore</class>
         <class>QSessionManager</class>
         <class>QSettings</class>
@@ -434,6 +469,7 @@
         <class>QShortcutEvent</class>
         <class>QShowEvent</class>
         <class>QSignalMapper</class>
+        <class>QSignalTransition</class>
         <class>QSize</class>
         <class>QSizeF</class>
         <class>QSizeGrip</class>
@@ -474,6 +510,8 @@
         <class>QStackedWidget</class>
         <class>QStandardItem</class>
         <class>QStandardItemModel</class>
+        <class>QState</class>
+        <class>QStateMachine</class>
         <class>QStatusBar</class>
         <class>QStatusTipEvent</class>
         <class>QStringListModel</class>
@@ -618,7 +656,11 @@
         <class>QVBoxLayout</class>
         <class>QValidator</class>
         <class>QVariant</class>
+        <class>QVariantAnimation</class>
         <class>QVariantComparisonHelper</class>
+        <class>QVector2D</class>
+        <class>QVector3D</class>
+        <class>QVector4D</class>
         <class>QVectorPath</class>
         <class>QWSRegionManager</class>
         <class>QWhatsThis</class>

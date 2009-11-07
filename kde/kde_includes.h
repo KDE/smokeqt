@@ -42,7 +42,6 @@
 #include <kcharsets.h>
 #include <kcmdlineargs.h>
 #include <kcmodulecontainer.h>
-#include <kdevplatform/project/projectkcmodule.h>
 #include <kcmodule.h>
 #include <kcmoduleinfo.h>
 #include <kcmoduleloader.h>

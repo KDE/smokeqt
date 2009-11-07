@@ -40,6 +40,7 @@
         <name>.*operator.*</name>
     </functions>
     <classList>
+        <class>QAbstractAnimation</class>
         <class>QAbstractEventDispatcher</class>
         <class>QAbstractFileEngine</class>
         <class>QAbstractFileEngine::ExtensionOption</class>
@@ -51,7 +52,10 @@
         <class>QAbstractFileEngine::UnMapExtensionOption</class>
         <class>QAbstractItemModel</class>
         <class>QAbstractListModel</class>
+        <class>QAbstractState</class>
+        <class>QAbstractTransition</class>
         <class>QAbstractTableModel</class>
+        <class>QAnimationGroup</class>
         <class>QAtomicInt</class>
         <class>QBasicAtomicInt</class>
         <class>QBasicTimer</class>
@@ -75,18 +79,21 @@
         <class>QDynamicPropertyChangeEvent</class>
         <class>QEvent</class>
         <class>QEventLoop</class>
+        <class>QEventTransition</class>
         <class>QFactoryInterface</class>
         <class>QFile</class>
         <class>QFileExtension</class>
         <class>QFileExtensionResult</class>
         <class>QFileInfo</class>
         <class>QFileSystemWatcher</class>
+        <class>QFinalState</class>
         <class>QFlag</class>
         <class>QFSFileEngine</class>
         <class>QFutureInterfaceBase</class>
         <class>QFutureWatcherBase</class>
         <class>QGenericArgument</class>
         <class>QGenericReturnArgument</class>
+        <class>QHistoryState</class>
         <class>QIncompatibleFlag</class>
         <class>QInternal</class>
         <class>QIODevice</class>
@@ -109,12 +116,15 @@
         <class>QObject</class>
         <class>QObjectCleanupHandler</class>
         <class>QObjectUserData</class>
+        <class>QParallelAnimationGroup</class>
+        <class>QPauseAnimation</class>
         <class>QPersistentModelIndex</class>
         <class>QPluginLoader</class>
         <class>QPoint</class>
         <class>QPointF</class>
         <class>QPostEventList</class>
         <class>QProcess</class>
+        <class>QPropertyAnimation</class>
         <class>QReadLocker</class>
         <class>QReadWriteLock</class>
         <class>QRect</class>
@@ -122,14 +132,18 @@
         <class>QRegExp</class>
         <class>QResource</class>
         <class>QRunnable</class>
+        <class>QSequentialAnimationGroup</class>
         <class>QSemaphore</class>
         <class>QSettings</class>
         <class>QSharedData</class>
         <class>QSharedMemory</class>
         <class>QSignalMapper</class>
+        <class>QSignalTransition</class>
         <class>QSize</class>
         <class>QSizeF</class>
         <class>QSocketNotifier</class>
+        <class>QState</class>
+        <class>QStateMachine</class>
         <class>QStringMatcher</class>
         <class>QStringRef</class>
         <class>QSysInfo</class>

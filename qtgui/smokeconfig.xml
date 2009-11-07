@@ -135,7 +135,16 @@
         <class>QFormLayout</class>                                                                                         
         <class>QFrame</class>                                                                                              
         <class>QGradient</class>                                                                                           
+        <class>QGraphicsAnchor</class>                                   
+        <class>QGraphicsAnchorLayout</class>                             
+        <class>QGraphicsBloomEffect</class>                              
+        <class>QGraphicsBlurEffect</class>                               
+        <class>QGraphicsColorizeEffect</class>                           
+        <class>QGraphicsDropShadowEffect</class>                         
+        <class>QGraphicsEffect</class>                                   
+        <class>QGraphicsEffectSource</class>
         <class>QGraphicsEllipseItem</class>                                                                                
+        <class>QGraphicsGrayscaleEffect</class>
         <class>QGraphicsGridLayout</class>                                                                                 
         <class>QGraphicsItemAnimation</class>                                                                              
         <class>QGraphicsItem</class>                                                                                       
@@ -143,12 +152,17 @@
         <class>QGraphicsLayout</class>                                                                                     
         <class>QGraphicsLayoutItem</class>                                                                                 
         <class>QGraphicsLinearLayout</class>                                                                               
+        <class>QGraphicsObject</class>
+        <class>QGraphicsOpacityEffect</class>
         <class>QGraphicsLineItem</class>                                                                                   
         <class>QGraphicsPathItem</class>                                                                                   
+        <class>QGraphicsPixelizeEffect</class>
         <class>QGraphicsPixmapItem</class>                                                                                 
         <class>QGraphicsPolygonItem</class>                                                                                
         <class>QGraphicsProxyWidget</class>                                                                                
         <class>QGraphicsRectItem</class>                                                                                   
+        <class>QGraphicsRotation</class>
+        <class>QGraphicsScale</class>
         <class>QGraphicsScene</class>                                                                                      
         <class>QGraphicsSceneContextMenuEvent</class>                                                                      
         <class>QGraphicsSceneDragDropEvent</class>                                                                         
@@ -161,6 +175,7 @@
         <class>QGraphicsSceneWheelEvent</class>                                                                            
         <class>QGraphicsSimpleTextItem</class>                                                                             
         <class>QGraphicsTextItem</class>                                                                                   
+        <class>QGraphicsTransform</class>
         <class>QGraphicsView</class>                                                                                       
         <class>QGraphicsWidget</class>                                                                                     
         <class>QGridLayout</class>                                                                                         
@@ -406,6 +421,9 @@
         <class>QUnixPrintWidget</class>
         <class>QValidator</class>
         <class>QVBoxLayout</class>
+        <class>QVector2D</class>
+        <class>QVector3D</class>
+        <class>QVector4D</class>
         <class>QVectorPath</class>                                                                                       
         <class>QWhatsThis</class>
         <class>QWhatsThisClickedEvent</class>
