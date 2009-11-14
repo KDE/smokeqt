@@ -1,0 +1,281 @@
+<config>
+    <moduleName>kdevplatform</moduleName>
+    <parentModules>
+        <module>kde</module>
+    </parentModules>
+    <parts>10</parts>
+    <scalarTypes>
+        <!-- QString is a class, but represented as a scalar (#) in munged names -->
+        <typeName>QString</typeName>
+    </scalarTypes>
+    <voidpTypes>
+        <!-- both are classes, but they are represented as Smoke::t_voidp -->
+        <typeName>QStringList</typeName>
+        <typeName>QString</typeName>
+    </voidpTypes>
+    <exclude>
+        <!-- private stuff -->
+        <signature>.*::d</signature>
+        <signature>.*::d_ptr</signature>
+        <signature>.*::q_ptr</signature>
+        <signature>.*::q</signature>
+        <signature>.*QDebug.*</signature>
+        <signature>.*Q3.*</signature>
+        
+        <signature>.*KDevelop::ItemRepositoryRegistry::ItemRepositoryRegistry\(const KDevelop::ItemRepositoryRegistry&amp;\)</signature>;
+        <signature>.*KDevelop::ParsingEnvironmentFile::ParsingEnvironmentFile\(const KDevelop::ParsingEnvironmentFile&amp;\)</signature>
+        
+        <signature>.*KDevelop::ClassFunctionDeclaration::setIsExternalDefinition\(bool\)</signature>
+        <signature>.*KDevelop::DUContext::scopeIdentifierInternal\(KDevelop::DUContext\*\) const</signature>
+        <signature>.*KDevelop::EditorIntegrator::documentLoaded\(KTextEditor::Document\*\)</signature>
+        <signature>.*KDevelop::EditorIntegrator::initialise\(\)</signature>
+        <signature>.*KDevelop::EditorIntegrator::createCursor\(const KDevelop::LockedSmartInterface&amp;, std::size_t, KDevelop::EditorIntegrator::Edge\)</signature>
+        <signature>.*KDevelop::DocumentRangeObject::setUrl\(const KDevelop::HashedString&amp;\)</signature>
+        <signature>.*KDevelop::DocumentRangeObject::url\(\) const</signature>
+        <signature>.*KDevelop::DocumentRangeObject::setRangeOwning\(KDevelop::DocumentRangeObject::RangeOwning\)</signature>
+        <signature>.*KDevelop::DocumentRangeObject::ownsRange\(\) const</signature>
+        <signature>.*KDevelop::DocumentController::documentType\(Sublime::Document\*\) const</signature>
+        <signature>.*KDevelop::IProjectFileManager::fileRenamed\(const KUrl&amp;, KDevelop::ProjectFileItem\*\)</signature>
+        <signature>.*KDevelop::IProjectFileManager::fileRemoved\(KDevelop::ProjectFileItem\*\)</signature>
+        <signature>.*KDevelop::IProjectFileManager::fileAdded\(KDevelop::ProjectFileItem\*\)</signature>
+        <signature>.*KDevelop::IProjectFileManager::folderRenamed\(const KUrl&amp;, KDevelop::ProjectFolderItem\*\)</signature>
+        <signature>.*KDevelop::IProjectFileManager::folderRemoved\(KDevelop::ProjectFolderItem\*\)</signature>
+        <signature>.*KDevelop::IProjectFileManager::folderAdded\(KDevelop::ProjectFolderItem\*\)</signature>
+        <signature>.*KDevelop::IProjectFileManager::projectItemConfigWidget\(const QList&lt; KDevelop::ProjectBaseItem\* &gt;&amp;, KDevelop::KDialogBase\*\)</signature>
+        <signature>.*KDevelop::IOutputView::toolViewRemoved\(int\)</signature>
+        <signature>.*KDevelop::IOutputView::outputRemoved\(int, int\)</signature>
+        <signature>.*KDevelop::IProjectBuilder::built\(KDevelop::ProjectBaseItem\*\)</signature>
+        <signature>.*KDevelop::IProjectBuilder::installed\(KDevelop::ProjectBaseItem\*\)</signature>
+        <signature>.*KDevelop::IProjectBuilder::cleaned\(KDevelop::ProjectBaseItem\*\)</signature>
+        <signature>.*KDevelop::IProjectBuilder::failed\(KDevelop::ProjectBaseItem\*\)</signature>
+        <signature>.*KDevelop::IProjectBuilder::configured\(KDevelop::IProject\*\)</signature>
+        <signature>.*KDevelop::IProjectBuilder::pruned\(KDevelop::IProject\*\)</signature>
+        <signature>.*KDevelop::UiController::defaultArea\(\)</signature>
+        <signature>.*KDevelop::TypeRepository::indexForType\(TypePtr&lt; KDevelop::AbstractType &gt;\)</signature>
+        <signature>.*KDevelop::TypeRepository::typeForIndex\(unsigned int\)</signature>
+        <signature>.*KDevelop::TypeRepository::increaseReferenceCount\(unsigned int\)</signature>
+        <signature>.*KDevelop::TypeRepository::decreaseReferenceCount\(unsigned int\)</signature>
+        <signature>.*KDevelop::TypeRepository::increaseReferenceCount\(unsigned int, KDevelop::ReferenceCountManager\*\)</signature>
+        <signature>.*KDevelop::TypeRepository::decreaseReferenceCount\(unsigned int, KDevelop::ReferenceCountManager\*\)</signature>
+        <signature>.*KDevelop::typeRepositoryManager\(\)</signature>
+        <signature>.*KDevelop::operator==\(const KDevelop::BuildItem&amp;, const KDevelop::BuildItem&amp;\)</signature>
+        <signature>.*KDevelop::temporaryHashUnsureTypeDatam_types\(\)</signature>
+    </exclude>
+    <functions>
+        <!-- everything in that namespace.. -->
+        <name>KDevelop::.*</name>
+        <name>Sublime::.*</name>
+    </functions>
+    <classList>
+        <class>KDevelop</class>
+        <class>KDevelop::AbstractContextBuilder</class>
+        <class>KDevelop::AbstractDeclarationBuilder</class>
+        <class>KDevelop::AbstractFunctionDeclaration</class>
+        <class>KDevelop::AbstractItemRepository</class>
+        <class>KDevelop::AbstractType</class>
+        <class>KDevelop::AbstractTypeBuilder</class>
+        <class>KDevelop::AbstractTypeFactory</class>
+        <class>KDevelop::AbstractUseBuilder</class>
+        <class>KDevelop::AliasDeclaration</class>
+        <class>KDevelop::AliasDeclarationData</class>
+        <class>KDevelop::AppendedListItemRequest</class>
+        <class>KDevelop::AreaParams</class>
+        <class>KDevelop::ArrayType</class>
+        <class>KDevelop::ArrayTypeData</class>
+        <class>KDevelop::BackgroundParser</class>
+        <class>KDevelop::Bucket</class>
+        <class>KDevelop::ClassFunctionDeclaration</class>
+        <class>KDevelop::ClassMemberDeclaration</class>
+        <class>KDevelop::CodeCompletion</class>
+        <class>KDevelop::CodeCompletionContext</class>
+        <class>KDevelop::CodeCompletionModel</class>
+        <class>KDevelop::CodeCompletionWorker</class>
+        <class>KDevelop::CodeContext</class>
+        <class>KDevelop::CommandExecutor</class>
+        <class>KDevelop::CommonClassTypes</class>
+        <class>KDevelop::CommonIntegralTypes</class>
+        <class>KDevelop::CommonModifiers</class>
+        <class>KDevelop::CompletionTreeElement</class>
+        <class>KDevelop::CompletionTreeItem</class>
+        <class>KDevelop::CompletionTreeNode</class>
+        <class>KDevelop::Context</class>
+        <class>KDevelop::ContextMenuExtension</class>
+        <class>KDevelop::Core</class>
+        <class>KDevelop::Declaration</class>
+        <class>KDevelop::DeclarationId</class>
+        <class>KDevelop::DelayedType</class>
+        <class>KDevelop::DelayedTypeData</class>
+        <class>KDevelop::DocumentChangeTracker</class>
+        <class>KDevelop::DocumentController</class>
+        <class>KDevelop::DocumentCursor</class>
+        <class>KDevelop::DocumentCursorObject</class>
+        <class>KDevelop::DocumentRange</class>
+        <class>KDevelop::DocumentRangeObject</class>
+        <class>KDevelop::DocumentRangeObjectData</class>
+        <class>KDevelop::DUChain</class>
+        <class>KDevelop::DUChainBase</class>
+        <class>KDevelop::DUChainBaseData</class>
+        <class>KDevelop::DUChainBaseFactory</class>
+        <class>KDevelop::DUChainItemFactory</class>
+        <class>KDevelop::DUChainItemRegistrator</class>
+        <class>KDevelop::DUChainItemSystem</class>
+        <class>KDevelop::DUChainLock</class>
+        <class>KDevelop::DUChainObserver</class>
+        <class>KDevelop::DUChainPointer</class>
+        <class>KDevelop::DUChainPointerData</class>
+        <class>KDevelop::DUChainReadLocker</class>
+        <class>KDevelop::DUChainUtils</class>
+        <class>KDevelop::DUChainWriteLocker</class>
+        <class>KDevelop::DUContext</class>
+        <class>KDevelop::DUContext::Import</class>
+        <class>KDevelop::DUContext::SearchItem</class>
+        <class>KDevelop::DumpChain</class>
+        <class>KDevelop::DumpDotGraph</class>
+        <class>KDevelop::EditorContext</class>
+        <class>KDevelop::EditorIntegrator</class>
+        <class>KDevelop::EditorRevisionTracker</class>
+        <class>KDevelop::EnvironmentGroupList</class>
+        <class>KDevelop::EnvironmentSelectionWidget</class>
+        <class>KDevelop::ExampleItem</class>
+        <class>KDevelop::ExampleRequestItem</class>
+        <class>KDevelop::FileContext</class>
+        <class>KDevelop::Filter</class>
+        <class>KDevelop::ForwardDeclaration</class>
+        <class>KDevelop::FunctionDeclaration</class>
+        <class>KDevelop::FunctionType</class>
+        <class>KDevelop::HashedString</class>
+        <class>KDevelop::IBuildSystemManager</class>
+        <class>KDevelop::ICodeHighlighting</class>
+        <class>KDevelop::ICore</class>
+        <class>KDevelop::IdentifiedType</class>
+        <class>KDevelop::IdentifiedTypeData</class>
+        <class>KDevelop::Identifier</class>
+        <class>KDevelop::IDocument</class>
+        <class>KDevelop::IDocumentController</class>
+        <class>KDevelop::IDocumentFactory</class>
+        <class>KDevelop::ILanguage</class>
+        <class>KDevelop::ILanguageController</class>
+        <class>KDevelop::ILanguageSupport</class>
+        <class>KDevelop::ImportProjectJob</class>
+        <class>KDevelop::ImportTraceItem</class>
+        <class>KDevelop::IndexedDeclaration</class>
+        <class>KDevelop::IndexedDUContext</class>
+        <class>KDevelop::IndexedIdentifier</class>
+        <class>KDevelop::IndexedQualifiedIdentifier</class>
+        <class>KDevelop::IndexedString</class>
+        <class>KDevelop::IndexedString::RunningHash</class>
+        <class>KDevelop::IndexedTopDUContext</class>
+        <class>KDevelop::IndexedType</class>
+        <class>KDevelop::IndexedTypeIdentifier</class>
+        <class>KDevelop::IntegralType</class>
+        <class>KDevelop::IntegralTypeData</class>
+        <class>KDevelop::IOutputView</class>
+        <class>KDevelop::IOutputViewModel</class>
+        <class>KDevelop::IPlugin</class>
+        <class>KDevelop::IPluginController</class>
+        <class>KDevelop::IProject</class>
+        <class>KDevelop::IProjectBuilder</class>
+        <class>KDevelop::IProjectController</class>
+        <class>KDevelop::IProjectFileManager</class>
+        <class>KDevelop::IQuickOpen</class>
+        <class>KDevelop::IRun</class>
+        <class>KDevelop::IRunController</class>
+        <class>KDevelop::IRunProvider</class>
+        <class>KDevelop::IStatus</class>
+        <class>KDevelop::ItemRepository</class>
+        <class>KDevelop::ItemRepositoryRegistry</class>
+        <class>KDevelop::IToolViewFactory</class>
+        <class>KDevelop::IUiController</class>
+        <class>KDevelop::Language</class>
+        <class>KDevelop::LanguageController</class>
+        <class>KDevelop::LocalIndexedDeclaration</class>
+        <class>KDevelop::LocalIndexedDUContext</class>
+        <class>KDevelop::LockedSmartInterface</class>
+        <class>KDevelop::Locker</class>
+        <class>KDevelop::MainWindow</class>
+        <class>KDevelop::MergeAbstractFunctionDeclaration</class>
+        <class>KDevelop::MergeIdentifiedType</class>
+        <class>KDevelop::MergeIdentifiedType::Data</class>
+        <class>KDevelop::ModificationRevision</class>
+        <class>KDevelop::NamespaceAliasDeclaration</class>
+        <class>KDevelop::NamespaceAliasDeclarationData</class>
+        <class>KDevelop::NoDynamicData</class>
+        <class>KDevelop::OutputJob</class>
+        <class>KDevelop::OutputModel</class>
+        <class>KDevelop::ParamIterator</class>
+        <class>KDevelop::ParseJob</class>
+        <class>KDevelop::ParsingEnvironment</class>
+        <class>KDevelop::ParsingEnvironmentFile</class>
+        <class>KDevelop::PartController</class>
+        <class>KDevelop::PartDocument</class>
+        <class>KDevelop::PersistentSymbolTable</class>
+        <class>KDevelop::PluginController</class>
+        <class>KDevelop::PointerType</class>
+        <class>KDevelop::PointerTypeData</class>
+        <class>KDevelop::Problem</class>
+        <class>KDevelop::ProcessLineMaker</class>
+        <class>KDevelop::Profile</class>
+        <class>KDevelop::ProfileEngine</class>
+        <class>KDevelop::Profile::Entry</class>
+        <class>KDevelop::ProfileListing</class>
+        <class>KDevelop::ProfileListingEx</class>
+        <class>KDevelop::Project</class>
+<!--         <class>KDevelop::ProjectBaseItem</class> -->
+        <class>KDevelop::ProjectBuildFolderItem</class>
+        <class>KDevelop::ProjectConfigSkeleton</class>
+        <class>KDevelop::ProjectController</class>
+        <class>KDevelop::ProjectExecutableTargetItem</class>
+        <class>KDevelop::ProjectFileItem</class>
+        <class>KDevelop::ProjectFolderItem</class>
+        <class>KDevelop::ProjectItemContext</class>
+        <class>KDevelop::ProjectLibraryTargetItem</class>
+        <class>KDevelop::ProjectModel</class>
+        <class>KDevelop::ProjectTargetItem</class>
+        <class>KDevelop::ProjectTestTargetItem</class>
+        <class>KDevelop::QtFunctionEnumContainer</class>
+        <class>KDevelop::QualifiedIdentifier</class>
+        <class>KDevelop::QuickOpenDataBase</class>
+        <class>KDevelop::QuickOpenDataProviderBase</class>
+        <class>KDevelop::QuickOpenEmbeddedWidgetInterface</class>
+        <class>KDevelop::QuickOpenFileSetInterface</class>
+        <class>KDevelop::ReferenceCounting</class>
+        <class>KDevelop::ReferenceType</class>
+        <class>KDevelop::ReferenceTypeData</class>
+        <class>KDevelop::ShellExtension</class>
+        <class>KDevelop::SimpleCursor</class>
+        <class>KDevelop::SimpleRange</class>
+        <class>KDevelop::SimpleTypeVisitor</class>
+        <class>KDevelop::SmartConverter</class>
+        <class>KDevelop::StructureType</class>
+        <class>KDevelop::StructureTypeData</class>
+        <class>KDevelop::SymbolTable</class>
+        <class>KDevelop::TemporaryDataManager</class>
+        <class>KDevelop::TextDocument</class>
+        <class>KDevelop::TextView</class>
+        <class>KDevelop::TypeExchanger</class>
+        <class>KDevelop::TypeFactory</class>
+        <class>KDevelop::TypeIdentifier</class>
+        <class>KDevelop::TypeRepository</class>
+        <class>KDevelop::TypeSystemRegistrator</class>
+        <class>KDevelop::TypeVisitor</class>
+        <class>KDevelop::UiController</class>
+        <class>KDevelop::Use</class>
+        <class>KDevelop::WorkspaceItem</class>
+        <class>Sublime</class>
+        <class>Sublime::Area</class>
+        <class>Sublime::AreaIndex</class>
+        <class>Sublime::Container</class>
+        <class>Sublime::Controller</class>
+        <class>Sublime::Document</class>
+        <class>Sublime::MainWindow</class>
+        <class>Sublime::MainWindowOperator</class>
+        <class>Sublime::RootAreaIndex</class>
+        <class>Sublime::SimpleToolWidgetFactory</class>
+        <class>Sublime::Switcher</class>
+        <class>Sublime::ToolDocument</class>
+        <class>Sublime::ToolFactory</class>
+        <class>Sublime::UrlDocument</class>
+        <class>Sublime::View</class>
+        <class>Sublime::ViewWidgetCreator</class>
+    </classList>
+</config>
