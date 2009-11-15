@@ -6,84 +6,46 @@ ENDIF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
 
 include_directories( ${CMAKE_SOURCE_DIR}/smoke )
 
-set(srcdir ${CMAKE_CURRENT_SOURCE_DIR})
-set(KDE_PREFIX ${CMAKE_INSTALL_PREFIX})
-set(qt_includes ${QT_INCLUDE_DIR})
-set(kde_includes ${KDE4_INCLUDE_DIR})
-if(OPENGL_FOUND AND OPENGL_GLU_FOUND)
-   set(KDE_HAVE_GL "yes")
-else(OPENGL_FOUND AND OPENGL_GLU_FOUND)
-   set(KDE_HAVE_GL "no")
-endif(OPENGL_FOUND AND OPENGL_GLU_FOUND)        
-
-set(qtflags "-lQtCore -lQtGui")
-FOREACH(filename ${QT_INCLUDES})
-    set(all_includes "-I${filename} ${all_includes}")
-ENDFOREACH(filename)
-
-configure_file(generate.pl.cmake ${CMAKE_CURRENT_BINARY_DIR}/generate.pl @ONLY )
-
 ########### next target ###############
 
 add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp 
-                ${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp 
-                ${CMAKE_CURRENT_BINARY_DIR}/x_2.cpp 
-                ${CMAKE_CURRENT_BINARY_DIR}/x_3.cpp 
-                ${CMAKE_CURRENT_BINARY_DIR}/x_4.cpp 
-                ${CMAKE_CURRENT_BINARY_DIR}/x_5.cpp 
-                ${CMAKE_CURRENT_BINARY_DIR}/x_6.cpp 
-                ${CMAKE_CURRENT_BINARY_DIR}/x_7.cpp 
-                ${CMAKE_CURRENT_BINARY_DIR}/x_8.cpp
-                ${CMAKE_CURRENT_BINARY_DIR}/x_9.cpp
-                ${CMAKE_CURRENT_BINARY_DIR}/x_10.cpp
-                ${CMAKE_CURRENT_BINARY_DIR}/x_11.cpp
-                ${CMAKE_CURRENT_BINARY_DIR}/x_12.cpp
-                ${CMAKE_CURRENT_BINARY_DIR}/x_13.cpp
-                ${CMAKE_CURRENT_BINARY_DIR}/x_14.cpp
-                ${CMAKE_CURRENT_BINARY_DIR}/x_15.cpp
-                ${CMAKE_CURRENT_BINARY_DIR}/x_16.cpp
-                ${CMAKE_CURRENT_BINARY_DIR}/x_17.cpp
-                ${CMAKE_CURRENT_BINARY_DIR}/x_18.cpp
-                ${CMAKE_CURRENT_BINARY_DIR}/x_19.cpp
-                ${CMAKE_CURRENT_BINARY_DIR}/x_20.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp 
+    ${CMAKE_CURRENT_BINARY_DIR}/x_2.cpp 
+    ${CMAKE_CURRENT_BINARY_DIR}/x_3.cpp 
+    ${CMAKE_CURRENT_BINARY_DIR}/x_4.cpp 
+    ${CMAKE_CURRENT_BINARY_DIR}/x_5.cpp 
+    ${CMAKE_CURRENT_BINARY_DIR}/x_6.cpp 
+    ${CMAKE_CURRENT_BINARY_DIR}/x_7.cpp 
+    ${CMAKE_CURRENT_BINARY_DIR}/x_8.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/x_9.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/x_10.cpp
 
-                  COMMAND ${PERL_EXECUTABLE} ARGS ${CMAKE_CURRENT_BINARY_DIR}/generate.pl
-                  DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/generate.pl
-                  WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
+    COMMAND generator
+    ARGS -config "${CMAKE_CURRENT_BINARY_DIR}/../kde/config.xml" -smokeconfig "${CMAKE_CURRENT_SOURCE_DIR}/smokeconfig.xml"
+         -- ${CMAKE_CURRENT_SOURCE_DIR}/nepomuk_includes.h
+    WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
 
 macro_add_file_dependencies( ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp ${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp )
 
-
 set(smokenepomuk_LIB_SRCS ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp  
-                ${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp 
-                ${CMAKE_CURRENT_BINARY_DIR}/x_2.cpp
-                ${CMAKE_CURRENT_BINARY_DIR}/x_3.cpp
-                ${CMAKE_CURRENT_BINARY_DIR}/x_4.cpp
-                ${CMAKE_CURRENT_BINARY_DIR}/x_5.cpp
-                ${CMAKE_CURRENT_BINARY_DIR}/x_6.cpp
-                ${CMAKE_CURRENT_BINARY_DIR}/x_7.cpp
-                ${CMAKE_CURRENT_BINARY_DIR}/x_8.cpp
-                ${CMAKE_CURRENT_BINARY_DIR}/x_9.cpp
-                ${CMAKE_CURRENT_BINARY_DIR}/x_10.cpp
-                ${CMAKE_CURRENT_BINARY_DIR}/x_11.cpp
-                ${CMAKE_CURRENT_BINARY_DIR}/x_12.cpp
-                ${CMAKE_CURRENT_BINARY_DIR}/x_13.cpp
-                ${CMAKE_CURRENT_BINARY_DIR}/x_14.cpp
-                ${CMAKE_CURRENT_BINARY_DIR}/x_15.cpp
-                ${CMAKE_CURRENT_BINARY_DIR}/x_16.cpp
-                ${CMAKE_CURRENT_BINARY_DIR}/x_17.cpp
-                ${CMAKE_CURRENT_BINARY_DIR}/x_18.cpp
-                ${CMAKE_CURRENT_BINARY_DIR}/x_19.cpp
-                ${CMAKE_CURRENT_BINARY_DIR}/x_20.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp 
+    ${CMAKE_CURRENT_BINARY_DIR}/x_2.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/x_3.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/x_4.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/x_5.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/x_6.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/x_7.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/x_8.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/x_9.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/x_10.cpp
 )
-
-# Needed to make QSqlRelationalDelegate compile
-ADD_DEFINITIONS (-DQT_GUI_LIB)
 
 kde4_add_library(smokenepomuk SHARED ${smokenepomuk_LIB_SRCS})
 
 target_link_libraries(smokenepomuk 
     ${NEPOMUK_LIBRARIES}
+    ${NEPOMUK_QUERY_LIBRARIES}
+    nepomukquery
     ${KDE4_KDECORE_LIBS}
     smokesoprano
     smokekde
@@ -94,7 +56,3 @@ install(TARGETS smokenepomuk DESTINATION ${LIB_INSTALL_DIR} )
 install(FILES ${CMAKE_SOURCE_DIR}/smoke/nepomuk_smoke.h DESTINATION include/smoke )
 
 ########### install files ###############
-
-
-
-
