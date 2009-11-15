@@ -2,7 +2,6 @@
     <moduleName>akonadi</moduleName>
     <parentModules>
         <module>kde</module>
-        <module>soprano</module>
     </parentModules>
     <parts>10</parts>
     <scalarTypes>
@@ -22,6 +21,10 @@
         <signature>.*::q</signature>
         <signature>.*QDebug.*</signature>
         <signature>.*Q3.*</signature>
+        
+        <signature>.*Akonadi::EntityMimeTypeFilterModel::contentMimeTypeInclusionFilters\(\) const</signature>
+        <signature>.*Akonadi::EntityMimeTypeFilterModel::addContentMimeTypeInclusionFilters\(const QStringList&amp;\)</signature>
+        <signature>.*Akonadi::EntityMimeTypeFilterModel::addContentMimeTypeInclusionFilter\(const QString&amp;\)</signature>
     </exclude>
     <functions>
         <!-- everything in that namespace.. -->
@@ -29,8 +32,6 @@
     </functions>
     <classList>
         <class>Akonadi::AddressAttribute</class>
-        <class>Akonadi::AddressBookComboBox</class>
-        <class>Akonadi::AddressBookSelectionDialog</class>
         <class>Akonadi::AgentBase</class>
         <class>Akonadi::AgentBase::Observer</class>
         <class>Akonadi::AgentBase::ObserverV2</class>
@@ -86,7 +87,6 @@
         <class>Akonadi::Control</class>
         <class>Akonadi::Entity</class>
         <class>Akonadi::EntityDisplayAttribute</class>
-        <class>Akonadi::EntityFilterProxyModel</class>
         <class>Akonadi::EntityHiddenAttribute</class>
         <class>Akonadi::EntityListView</class>
         <class>Akonadi::EntityMimeTypeFilterModel</class>
@@ -96,8 +96,6 @@
         <class>Akonadi::EntityTreeViewStateSaver</class>
         <class>Akonadi::Exception</class>
         <class>Akonadi::FavoriteCollectionsModel</class>
-        <class>Akonadi::FilterAction</class>
-        <class>Akonadi::FilterActionJob</class>
         <class>Akonadi::Item</class>
         <class>Akonadi::ItemCopyJob</class>
         <class>Akonadi::ItemCreateJob</class>
@@ -115,9 +113,6 @@
         <class>Akonadi::ItemView</class>
         <class>Akonadi::Job</class>
         <class>Akonadi::LinkJob</class>
-        <class>Akonadi::LocalFolderAttribute</class>
-        <class>Akonadi::LocalFolders</class>
-        <class>Akonadi::LocalFoldersRequestJob</class>
         <class>Akonadi::MessageFolderAttribute</class>
         <class>Akonadi::MessageModel</class>
         <class>Akonadi::MessageThreaderProxyModel</class>
@@ -138,14 +133,11 @@
         <class>Akonadi::SpecialCollectionsRequestJob</class>
         <class>Akonadi::StandardActionManager</class>
         <class>Akonadi::StatisticsProxyModel</class>
-        <class>Akonadi::StatisticsToolTipProxyModel</class>
         <class>Akonadi::TransactionBeginJob</class>
         <class>Akonadi::TransactionCommitJob</class>
         <class>Akonadi::TransactionRollbackJob</class>
         <class>Akonadi::TransactionSequence</class>
         <class>Akonadi::TransportResourceBase</class>
         <class>Akonadi::UnlinkJob</class>
-        <class>Akonadi::XmlDocument</class>
-        <class>Akonadi::XmlWriteJob</class>
     </classList>
 </config>

@@ -35,8 +35,6 @@
 #include <akonadi/collectionstatisticsjob.h>
 #include <akonadi/collectionstatisticsmodel.h>
 #include <akonadi/collectionview.h>
-#include <akonadi/contact/addressbookcombobox.h>
-#include <akonadi/contact/addressbookselectiondialog.h>
 #include <akonadi/contact/akonadi-contact_export.h>
 #include <akonadi/contact/contactdefaultactions.h>
 #include <akonadi/contact/contacteditor.h>
@@ -54,7 +52,6 @@
 #include <akonadi/control.h>
 #include <akonadi/entity.h>
 #include <akonadi/entitydisplayattribute.h>
-#include <akonadi/entityfilterproxymodel.h>
 #include <akonadi/entityhiddenattribute.h>
 #include <akonadi/entitylistview.h>
 #include <akonadi/entitymimetypefiltermodel.h>
@@ -64,7 +61,6 @@
 #include <akonadi/entitytreeviewstatesaver.h>
 #include <akonadi/exception.h>
 #include <akonadi/favoritecollectionsmodel.h>
-#include <akonadi/filteractionjob.h>
 #include <akonadi/item.h>
 #include <akonadi/itemcopyjob.h>
 #include <akonadi/itemcreatejob.h>
@@ -85,9 +81,6 @@
 #include <akonadi/kabc/contactparts.h>
 #include <akonadi/kmime/addressattribute.h>
 #include <akonadi/kmime/akonadi-kmime_export.h>
-#include <akonadi/kmime/localfolderattribute.h>
-#include <akonadi/kmime/localfolders.h>
-#include <akonadi/kmime/localfoldersrequestjob.h>
 #include <akonadi/kmime/messagefolderattribute.h>
 #include <akonadi/kmime/messagemodel.h>
 #include <akonadi/kmime/messageparts.h>
@@ -108,13 +101,7 @@
 #include <akonadi/session.h>
 #include <akonadi/standardactionmanager.h>
 #include <akonadi/statisticsproxymodel.h>
-#include <akonadi/statisticstooltipproxymodel.h>
 #include <akonadi/transactionjobs.h>
 #include <akonadi/transactionsequence.h>
 #include <akonadi/transportresourcebase.h>
 #include <akonadi/unlinkjob.h>
-#include <akonadi/xml/akonadi-xml_export.h>
-#include <akonadi/xml/xmldocument.h>
-#include <akonadi/xml/xmlreader.h>
-#include <akonadi/xml/xmlwritejob.h>
-#include <akonadi/xml/xmlwriter.h>
