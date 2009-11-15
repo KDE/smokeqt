@@ -1,10 +1,11 @@
 find_package(Nepomuk REQUIRED)
+find_package(NepomukQuery REQUIRED)
 
 IF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
     ADD_DEFINITIONS(-DGCC_VISIBILITY)
 ENDIF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
 
-include_directories( ${CMAKE_SOURCE_DIR}/smoke )
+include_directories( ${CMAKE_SOURCE_DIR}/smoke ${NEPOMUK_QUERY_INCLUDE_DIR} )
 
 ########### next target ###############
 
