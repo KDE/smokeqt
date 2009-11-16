@@ -18,6 +18,7 @@
     </functions>
     <exclude>
         <signature>.*QwtData::operator=\(const QwtData&amp;\).*</signature>
+        <signature>.*QwtSpline::d_data</signature>
     </exclude>
     <classList>
         <class>QwtAbstractScaleDraw</class>
