@@ -1,5 +1,4 @@
 find_package(Nepomuk REQUIRED)
-find_package(NepomukQuery REQUIRED)
 
 IF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
     ADD_DEFINITIONS(-DGCC_VISIBILITY)
