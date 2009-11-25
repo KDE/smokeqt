@@ -25,7 +25,7 @@ add_library(smokeqtscript SHARED ${smokeqtscript_LIB_SRCS})
 
 target_link_libraries(smokeqtscript smokeqt ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIBRARY} ${QT_QTNETWORK_LIBRARY} ${QT_QTSCRIPT_LIBRARY})
 
-set_target_properties(smokeqtscript PROPERTIES VERSION 2.1.0 SOVERSION 2.1 )
+set_target_properties(smokeqtscript PROPERTIES VERSION 2.1.0 SOVERSION 3 )
 
 install(TARGETS smokeqtscript DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
 install(FILES ${CMAKE_SOURCE_DIR}/smoke/qtscript_smoke.h DESTINATION include/smoke )

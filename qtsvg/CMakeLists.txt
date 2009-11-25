@@ -35,7 +35,7 @@ target_link_libraries(smokeqtsvg
                         ${QT_QTGUI_LIBRARY} 
                         ${QT_QTSVG_LIBRARY} )
 
-set_target_properties(smokeqtsvg PROPERTIES VERSION 2.1.0 SOVERSION 2.1 )
+set_target_properties(smokeqtsvg PROPERTIES VERSION 2.1.0 SOVERSION 3 )
 
 # Don't use the KDE ${LIB_INSTALL_DIR} macro here as this file is
 # for Qt only installs

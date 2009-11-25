@@ -61,6 +61,6 @@ target_link_libraries(smokeokular
     smokekde
     smokeqt )
 
-set_target_properties(smokeokular PROPERTIES VERSION 2.1.0 SOVERSION 2.1 )
+set_target_properties(smokeokular PROPERTIES VERSION 2.1.0 SOVERSION 3 )
 install(TARGETS smokeokular DESTINATION ${LIB_INSTALL_DIR} )
 install(FILES ${CMAKE_SOURCE_DIR}/smoke/okular_smoke.h DESTINATION include/smoke)

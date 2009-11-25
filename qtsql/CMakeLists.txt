@@ -33,7 +33,7 @@ target_link_libraries(smokeqtsql
                         ${QT_QTCORE_LIBRARY} 
                         ${QT_QTSQL_LIBRARY} )
 
-set_target_properties(smokeqtsql PROPERTIES VERSION 2.1.0 SOVERSION 2.1 )
+set_target_properties(smokeqtsql PROPERTIES VERSION 2.1.0 SOVERSION 3 )
 
 # Don't use the KDE ${LIB_INSTALL_DIR} macro here as this file is
 # for Qt only installs

@@ -45,7 +45,7 @@ add_library(smokesoprano SHARED ${smokesoprano_LIB_SRCS})
 
 target_link_libraries(smokesoprano smokeqt ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIBRARY} sopranoclient sopranoserver sopranoindex ${SOPRANO_LIBRARIES})
 
-set_target_properties(smokesoprano PROPERTIES VERSION 2.1.0 SOVERSION 2.1 )
+set_target_properties(smokesoprano PROPERTIES VERSION 2.1.0 SOVERSION 3 )
 
 install(TARGETS smokesoprano DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
 install(FILES ${CMAKE_SOURCE_DIR}/smoke/soprano_smoke.h DESTINATION include/smoke)

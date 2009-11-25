@@ -24,7 +24,7 @@ add_library(smokeqttest SHARED ${smokeqttest_LIB_SRCS})
 
 target_link_libraries(smokeqttest smokeqt ${QT_QTCORE_LIBRARY} ${QT_QTTEST_LIBRARY})
 
-set_target_properties(smokeqttest PROPERTIES VERSION 2.1.0 SOVERSION 2.1 )
+set_target_properties(smokeqttest PROPERTIES VERSION 2.1.0 SOVERSION 3 )
 
 install(TARGETS smokeqttest DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
 install(FILES ${CMAKE_SOURCE_DIR}/smoke/qttest_smoke.h DESTINATION include/smoke)

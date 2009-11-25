@@ -53,7 +53,7 @@ target_link_libraries(smokeakonadi
     smokekde
     smokeqt )
 
-set_target_properties(smokeakonadi PROPERTIES VERSION 2.1.0 SOVERSION 2.1 )
+set_target_properties(smokeakonadi PROPERTIES VERSION 2.1.0 SOVERSION 3 )
 install(TARGETS smokeakonadi DESTINATION ${LIB_INSTALL_DIR} )
 install(FILES ${CMAKE_SOURCE_DIR}/smoke/akonadi_smoke.h DESTINATION include/smoke )
 
