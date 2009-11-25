@@ -131,7 +131,9 @@ public:
         mf_dtor = 0x40,
         mf_protected = 0x80,
         mf_attribute = 0x100,
-        mf_property = 0x200
+        mf_property = 0x200,
+        mf_virtual = 0x400,
+        mf_purevirtual = 0x800
     };
     /**
      * Describe one method of one class.
