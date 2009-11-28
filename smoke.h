@@ -130,12 +130,12 @@ public:
         mf_ctor = 0x20,
         mf_dtor = 0x40,
         mf_protected = 0x80,
-        mf_attribute = 0x100,
-        mf_property = 0x200,
+        mf_attribute = 0x100,   // accessor method for a field
+        mf_property = 0x200,    // accessor method of a property
         mf_virtual = 0x400,
         mf_purevirtual = 0x800,
-        mf_signal = 0x1000,
-        mf_slot = 0x2000
+        mf_signal = 0x1000, // method is a signal
+        mf_slot = 0x2000   // method is a slot
     };
     /**
      * Describe one method of one class.
