@@ -133,7 +133,9 @@ public:
         mf_attribute = 0x100,
         mf_property = 0x200,
         mf_virtual = 0x400,
-        mf_purevirtual = 0x800
+        mf_purevirtual = 0x800,
+        mf_signal = 0x1000,
+        mf_slot = 0x2000
     };
     /**
      * Describe one method of one class.

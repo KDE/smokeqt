@@ -60,12 +60,12 @@ if(ENABLE_SMOKE)
     endif(ENABLE_QTSQL_SMOKE)
 
     if(ENABLE_QTXML_SMOKE)
-        add_subdirectory(qtxmlpatterns)
+        add_subdirectory(qtxml)
         set(SMOKE_ENABLED "${SMOKE_ENABLED}, QtXml")
     endif(ENABLE_QTXML_SMOKE)
 
     if(ENABLE_QTXMLPATTERNS_SMOKE)
-        add_subdirectory(qtxml)
+        add_subdirectory(qtxmlpatterns)
         set(SMOKE_ENABLED "${SMOKE_ENABLED}, QtXmlPatterns")
     endif(ENABLE_QTXMLPATTERNS_SMOKE)
 
