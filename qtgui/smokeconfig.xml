@@ -29,6 +29,7 @@
         <!-- windows internal helper functions -->
         <signature>.*qFrom.*Endian_helper.*</signature>
         <signature>.*QPixmapData.*</signature>
+        <signature>.*qt_x11_getX11InfoForWindow.*</signature>
    </exclude>
     <functions>
         <!-- include functions starting with 'q' -->
@@ -366,7 +367,6 @@
         <class>QTextBlock</class>                                                                                          
         <class>QTextBlockFormat</class>                                                                                    
         <class>QTextBlockGroup</class>                                                                                     
-        <class>QTextBlock::iterator</class>
         <class>QTextBlockUserData</class>                                                                                  
         <class>QTextBrowser</class>                                                                                        
         <class>QTextCharFormat</class>                                                                                     
@@ -382,7 +382,6 @@
         <class>QTextFragment</class>                                                                                       
         <class>QTextFrame</class>                                                                                          
         <class>QTextFrameFormat</class>                                                                                    
-        <class>QTextFrame::iterator</class>
         <class>QTextFrameLayoutData</class>                                                                                
         <class>QTextImageFormat</class>                                                                                    
         <class>QTextInlineObject</class>                                                                                   
@@ -439,6 +438,8 @@
         <class>QWorkspaceChild</class>
         <class>QWorkspace</class>
         <class>QX11Info</class>
+        <class>QX11EmbedContainer</class>
+        <class>QX11EmbedWidget</class>
 
      </classList>
 </config>
