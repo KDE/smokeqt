@@ -28,6 +28,8 @@
         <signature>.*QGraphicsSceneEvent::QGraphicsSceneEvent\(const QGraphicsSceneEvent&amp;\).*</signature>
         <signature>.*QGraphicsScene.*Event::QGraphicsScene.*Event\(const QGraphicsScene.*Event&amp;\).*</signature>
         <signature>.*QPainterPathStroker::QPainterPathStroker\(const QPainterPathStroker&amp;\)</signature>
+        <signature>.*qt_x11_getX11InfoForWindow.*</signature>
+
         
         <!-- why doesn't this work?! -->
         <signature>QTextCodec::DefaultConversion</signature>
@@ -678,6 +680,8 @@
         <class>QWorkspaceChild</class>
         <class>QWriteLocker</class>
         <class>QX11Info</class>
+        <class>QX11EmbedContainer</class>
+        <class>QX11EmbedWidget</class>
         <class>QXmlAttributes</class>
         <class>QXmlContentHandler</class>
         <class>QXmlDTDHandler</class>
