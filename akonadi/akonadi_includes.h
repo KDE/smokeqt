@@ -55,7 +55,6 @@
 #include <akonadi/entityhiddenattribute.h>
 #include <akonadi/entitylistview.h>
 #include <akonadi/entitymimetypefiltermodel.h>
-#include <akonadi/entityrightsfiltermodel.h>
 #include <akonadi/entitytreemodel.h>
 #include <akonadi/entitytreeview.h>
 #include <akonadi/entitytreeviewstatesaver.h>
