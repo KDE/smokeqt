@@ -85,8 +85,6 @@
 #include <akonadi/kmime/messageparts.h>
 #include <akonadi/kmime/messagethreaderproxymodel.h>
 #include <akonadi/kmime/messagethreadingattribute.h>
-#include <akonadi/kmime/specialcollections.h>
-#include <akonadi/kmime/specialcollectionsrequestjob.h>
 #include <akonadi/linkjob.h>
 #include <akonadi/mimetypechecker.h>
 #include <akonadi/monitor.h>
