@@ -74,6 +74,8 @@
         <class>QXmlNodeModelIndex</class>
         <class>QXmlQuery</class>
         <class>QXmlResultItems</class>
+        <class>QXmlSchema</class>
+        <class>QXmlSchemaValidator</class>
         <class>QXmlSerializer</class>
       </classList>
 </config>

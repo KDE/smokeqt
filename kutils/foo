@@ -1,0 +1,12 @@
+        <class>KCModuleContainer</class>
+        <class>KCModuleProxy</class>
+        <class>KCMultiDialog</class>
+        <class>KEmoticons</class>
+        <class>KEmoticonsProvider</class>
+        <class>KIdleTime</class>
+        <class>KPageDialogPrivate</class>
+        <class>KPluginSelector</class>
+        <class>KPrintPreview</class>
+        <class>KSettings::ComponentsDialog</class>
+        <class>KSettings::Dialog</class>
+        <class>KSettings::PluginPage</class>

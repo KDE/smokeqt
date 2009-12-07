@@ -1,0 +1,11 @@
+        <class>KAbstractFileWidget</class>
+        <class>KDirOperator</class>
+        <class>KDirSelectDialog</class>
+        <class>KDirSortFilterProxyModel</class>
+        <class>KFileFilterCombo</class>
+        <class>KFilePlacesModel</class>
+        <class>KFilePlacesView</class>
+        <class>KFilePreviewGenerator</class>
+        <class>KFileTreeView</class>
+        <class>KFileWidget</class>
+        <class>KUrlNavigator</class>

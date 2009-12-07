@@ -1,7 +1,8 @@
 <config>
-    <moduleName>qtdbus</moduleName>
+    <moduleName>qtmultimedia</moduleName>
     <parentModules>
         <module>qtcore</module>
+        <module>qtgui</module>
     </parentModules>
     <parts>1</parts>
     <scalarTypes>
@@ -21,7 +22,6 @@
         <signature>.*\(.*Private.*\).*</signature>
         <!-- Thread related stuff belongs to the bindings language -->
         <signature>.*QtConcurrent.*</signature>
-        <signature>.*QDomNode.*</signature>
         <!-- this doesn't link, internal stuff.. -->
         <signature>.*qFindString.*</signature>
         <!-- windows internal helper functions -->
@@ -35,24 +35,13 @@
         <name>.*operator.*</name>
     </functions>
     <classList>
-        <class>QDBusAbstractAdaptor</class>
-        <class>QDBusAbstractInterface</class>
-        <class>QDBusArgument</class>
-        <class>QDBusConnection</class>
-        <class>QDBusConnectionInterface</class>
-        <class>QDBusContext</class>
-        <class>QDBusDemarshaller</class>
-        <class>QDBusError</class>
-        <class>QDBusInterface</class>
-        <class>QDBusMarshaller</class>
-        <class>QDBusMessage</class>
-        <class>QDBusMetaType</class>
-        <class>QDBusPendingCall</class>
-        <class>QDBusPendingCallWatcher</class>
-        <class>QDBusServer</class>
-        <class>QDBusServiceWatcher</class>
-
-        <!-- namespaces -->
-        <class>QDBus</class>
+        <class>QAbstractVideoBuffer</class>
+        <class>QAbstractVideoSurface</class>
+        <class>QAudioDeviceInfo</class>
+        <class>QAudioFormat</class>
+        <class>QAudioInput</class>
+        <class>QAudioOutput</class>
+        <class>QVideoFrame</class>
+        <class>QVideoSurfaceFormat</class>
      </classList>
 </config>

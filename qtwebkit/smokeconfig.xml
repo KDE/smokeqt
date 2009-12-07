@@ -1,7 +1,9 @@
 <config>
     <moduleName>qtwebkit</moduleName>
     <parentModules>
-        <module>qt</module>
+        <module>qtcore</module>
+        <module>qtnetwork</module>
+        <module>qtgui</module>
     </parentModules>
     <parts>1</parts>
     <scalarTypes>
@@ -14,13 +16,16 @@
         <typeName>QString</typeName>
     </voidpTypes>
     <classList>
+        <class>QGraphicsWebView</class>
         <class>QWebDatabase</class>
         <class>QWebElement</class>
+        <class>QWebElementCollection</class>
         <class>QWebFrame</class>
         <class>QWebHistory</class>
         <class>QWebHistoryInterface</class>
         <class>QWebHistoryItem</class>
         <class>QWebHitTestResult</class>
+        <class>QWebInspector</class>
         <class>QWebPage</class>
         <class>QWebPluginFactory</class>
         <class>QWebSecurityOrigin</class>

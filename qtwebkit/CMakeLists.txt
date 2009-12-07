@@ -22,7 +22,14 @@ IF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
 ENDIF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
 add_library(smokeqtwebkit SHARED ${smokeqtwebkit_LIB_SRCS})
 
-target_link_libraries(smokeqtwebkit smokeqt ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIBRARY} ${QT_QTNETWORK_LIBRARY} ${QT_QTWEBKIT_LIBRARY})
+target_link_libraries(  smokeqtwebkit 
+                        smokeqtcore 
+                        smokeqtgui 
+                        smokeqtnetwork 
+                        ${QT_QTCORE_LIBRARY} 
+                        ${QT_QTGUI_LIBRARY} 
+                        ${QT_QTNETWORK_LIBRARY} 
+                        ${QT_QTWEBKIT_LIBRARY} )
 
 set_target_properties(smokeqtwebkit PROPERTIES VERSION 2.1.0 SOVERSION 3 )
 

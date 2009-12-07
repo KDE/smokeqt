@@ -1,5 +1,8 @@
 #include <plasma/abstractrunner.h>
 #include <plasma/animationdriver.h>
+#include <plasma/animations/animationgroup.h>
+#include <plasma/animations/animation.h>
+// #include <plasma/animations/rotationstacked.h>
 #include <plasma/animator.h>
 #include <plasma/applet.h>
 #include <plasma/configloader.h>
@@ -32,6 +35,7 @@
 #include <plasma/scripting/dataenginescript.h>
 #include <plasma/scripting/runnerscript.h>
 #include <plasma/scripting/scriptengine.h>
+#include <plasma/scripting/wallpaperscript.h>
 #include <plasma/service.h>
 #include <plasma/servicejob.h>
 #include <plasma/svg.h>
@@ -46,6 +50,7 @@
 #include <plasma/widgets/frame.h>
 #include <plasma/widgets/groupbox.h>
 #include <plasma/widgets/iconwidget.h>
+#include <plasma/widgets/itembackground.h>
 #include <plasma/widgets/label.h>
 #include <plasma/widgets/lineedit.h>
 #include <plasma/widgets/meter.h>
@@ -53,6 +58,7 @@
 #include <plasma/widgets/radiobutton.h>
 #include <plasma/widgets/scrollbar.h>
 #include <plasma/widgets/scrollwidget.h>
+#include <plasma/widgets/separator.h>
 #include <plasma/widgets/signalplotter.h>
 #include <plasma/widgets/slider.h>
 #include <plasma/widgets/spinbox.h>

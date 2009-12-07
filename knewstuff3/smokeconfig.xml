@@ -1,0 +1,55 @@
+<config>
+    <moduleName>knewstuff3</moduleName>
+    <parentModules>
+        <module>qtcore</module>
+        <module>qtxml</module>
+        <module>qtgui</module>
+        <module>kdecore</module>
+        <module>kdeui</module>
+        <module>kio</module>
+    </parentModules>
+    <parts>1</parts>
+    <scalarTypes>
+        <!-- QString is a class, but represented as a scalar (#) in munged names -->
+        <typeName>QString</typeName>
+    </scalarTypes>
+    <voidpTypes>
+        <!-- both are classes, but they are represented as Smoke::t_voidp -->
+        <typeName>QStringList</typeName>
+        <typeName>QString</typeName>
+    </voidpTypes>
+    <exclude>
+        <!-- private stuff -->
+        <signature>.*::d</signature>
+        <signature>.*::d_ptr</signature>
+        <signature>.*::q_ptr</signature>
+        <signature>.*::k_ptr</signature>
+        <signature>.*::q</signature>
+        <signature>.*::virtual_hook\(int, void\*\).*</signature>
+        <signature>.*QDebug.*</signature>
+        <signature>.*Q3.*</signature>
+
+        <signature>.*stat\*.*</signature>
+        <signature>.*utimbuf\*.*</signature>
+
+        <!-- operator(<<|>>)(QDataStream&, KDateTime*) - why are these operators not implemented/exported? -->
+        <signature>.*operator(&lt;&lt;|&gt;&gt;)\(QDataStream&amp;, (const\s)?KDateTime.*</signature>
+    </exclude>
+    <functions>
+        <!-- include functions starting with 'k' -->
+        <name>^k.*</name>
+        <name>.*::k.*</name>
+
+        <name>K.*::.*</name>
+        <!-- and operators -->
+        <name>.*operator.*</name>
+        <!-- and i18n functions -->
+        <name>.*i18n.*</name>
+    </functions>
+    <classList>
+        <class>KNS3::Button</class>
+        <class>KNS3::DownloadDialog</class>
+        <class>KNS3::Entry</class>
+        <class>KNS3::UploadDialog</class>
+    </classList>
+</config>
