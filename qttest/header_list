@@ -354,3 +354,4 @@ qwebkitglobal.h
 qwebpage.h
 qwebsettings.h
 qwebview.h
+qtestevent.h

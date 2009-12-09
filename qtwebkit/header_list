@@ -347,3 +347,5 @@ qsslkey.h
 qsslsocket.h
 qsvggenerator.h
 qxmlstream.h
+qwebframe.h
+qwebelement.h
