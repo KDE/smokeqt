@@ -70,8 +70,6 @@ private:
     const char *module_name;
 
 public:
-    static std::map<std::string, Smoke*> classMap;
-
     union StackItem; // defined below
     /**
      * A stack is an array of arguments, passed to a method when calling it.
@@ -94,13 +92,26 @@ public:
      * Describe one index in a given module.
      */
     struct ModuleIndex {
-	Smoke* smoke;
-	Index index;
+        Smoke* smoke;
+        Index index;
+        ModuleIndex() : smoke(0), index(0) {}
+        ModuleIndex(Smoke * s, Index i) : smoke(s), index(i) {}
+        
+        inline bool operator==(const Smoke::ModuleIndex& other) const {
+            return index == other.index && smoke == other.smoke;
+        }
+        
+        inline bool operator!=(const Smoke::ModuleIndex& other) const {
+            return index != other.index || smoke != other.smoke;
+        }
     };
     /**
      * A ModuleIndex with both fields set to 0.
      */
-    ModuleIndex NullModuleIndex; // initialized in constructor
+    ModuleIndex NullModuleIndex; 
+    
+    typedef std::map<std::string, ModuleIndex> ClassMap;
+    static ClassMap classMap;
 
     enum ClassFlags {
         cf_constructor = 0x01,  // has a constructor
@@ -300,15 +311,13 @@ public:
 		argumentList(_argumentList),
 		ambiguousMethodList(_ambiguousMethodList),
 		castFn(_castFn)
-		{
-		    NullModuleIndex.smoke = 0;
-		    NullModuleIndex.index = 0;
-
-		    for (Index i = 1; i <= numClasses; ++i) {
-			if (!classes[i].external)
-			    classMap[className(i)] = this;
-		    }
-		}
+        {
+            for (Index i = 1; i <= numClasses; ++i) {
+                if (!classes[i].external) {
+                    classMap[className(i)] = ModuleIndex(this, i);
+                }
+            }
+        }
 
     /**
      * Returns the name of the module (e.g. "qt" or "kde")
@@ -317,9 +326,22 @@ public:
 	return module_name;
     }
 
+    inline void *cast(void *ptr, const ModuleIndex& from, const ModuleIndex& to) {
+        if (castFn == 0) {
+            return ptr;
+        }
+        
+        if (from.smoke == to.smoke) {
+            return (*castFn)(ptr, from.index, to.index);
+        }
+        
+        const Smoke::Class &klass = to.smoke->classes[to.index];
+        return (*castFn)(ptr, from.index, idClass(klass.className, true).index);
+    }
+    
     inline void *cast(void *ptr, Index from, Index to) {
-	if(!castFn) return ptr;
-	return (*castFn)(ptr, from, to);
+    if(!castFn) return ptr;
+    return (*castFn)(ptr, from, to);
     }
 
     // return classname directly
@@ -368,8 +390,7 @@ public:
                 if (classes[icur].external && !external) {
                     return NullModuleIndex;
                 } else {
-                    ModuleIndex ret = { this, icur };
-                    return ret;
+                    return ModuleIndex(this, icur);
                 }
             }
 
@@ -384,9 +405,12 @@ public:
     }
 
     inline ModuleIndex findClass(const char *c) {
-	Smoke *s = classMap[c];
-	if (!s) return NullModuleIndex;
-	return s->idClass(c);
+        ClassMap::iterator i = classMap.find(c);
+        if (i == classMap.end()) {
+            return NullModuleIndex;
+        } else {
+            return i->second;
+        }
     }
 
     inline ModuleIndex idMethodName(const char *m) {
@@ -399,8 +423,7 @@ public:
             icur = (imin + imax) / 2;
             icmp = strcmp(methodNames[icur], m);
             if (icmp == 0) {
-                ModuleIndex ret = { this, icur };
-                return ret;
+                return ModuleIndex(this, icur);
             }
 
             if (icmp > 0) {
@@ -425,7 +448,7 @@ public:
 	    for (Index p = classes[cmi.index].parents; inheritanceList[p]; p++) {
 		Index ci = inheritanceList[p];
 		const char* cName = className(ci);
-		ModuleIndex mi = classMap[cName]->findMethodName(cName, m);
+		ModuleIndex mi = classMap[cName].smoke->findMethodName(cName, m);
 		if (mi.index) return mi;
 	    }
 	}
@@ -444,8 +467,7 @@ public:
             if (icmp == 0) {
                 icmp = leg(methodMaps[icur].name, name);
                 if (icmp == 0) {
-                    ModuleIndex ret = { this, icur };
-                    return ret;
+                    return ModuleIndex(this, icur);
                 }
             }
 
@@ -470,12 +492,13 @@ public:
 	for(int p = classes[c.index].parents; inheritanceList[p] ; p++) {
 	    Index ci = inheritanceList[p];
 	    const char* cName = className(ci);
-	    Smoke *s = classMap[cName];
-	    if (!s)
-		return NullModuleIndex;
-	    ModuleIndex cmi = s->idClass(cName);
-	    ModuleIndex nmi = s->findMethodName(cName, name.smoke->methodNames[name.index]);
-	    ModuleIndex mi = s->findMethod(cmi, nmi);
+        ClassMap::iterator i = classMap.find(cName);
+        if (i == classMap.end()) {
+            return NullModuleIndex;
+        }
+	    ModuleIndex cmi = i->second;
+	    ModuleIndex nmi = i->second.smoke->findMethodName(cName, name.smoke->methodNames[name.index]);
+	    ModuleIndex mi = i->second.smoke->findMethod(cmi, nmi);
 	    if (mi.index) return mi;
 	}
 	return NullModuleIndex;
@@ -488,6 +511,10 @@ public:
 	return idc.smoke->findMethod(idc, idname);
     }
 
+    inline bool isDerivedFrom(const ModuleIndex& classId, const ModuleIndex& baseClassId) {
+        return isDerivedFrom(classId.smoke, classId.index, baseClassId.smoke, baseClassId.index);
+    }
+    
     inline bool isDerivedFrom(Smoke *smoke, Index classId, Smoke *baseSmoke, Index baseId) {
 	if (!classId || !baseId || !smoke || !baseSmoke)
 	    return false;
