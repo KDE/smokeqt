@@ -1,6 +1,5 @@
 #include <plasma/abstractrunner.h>
 #include <plasma/animationdriver.h>
-#include <plasma/animations/animationgroup.h>
 #include <plasma/animations/animation.h>
 // #include <plasma/animations/rotationstacked.h>
 #include <plasma/animator.h>
