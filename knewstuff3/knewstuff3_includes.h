@@ -1,4 +1,3 @@
-#include <knewstuff3/author.h>
 #include <knewstuff3/downloaddialog.h>
 #include <knewstuff3/entry.h>
 #include <knewstuff3/knewstuff_export.h>
