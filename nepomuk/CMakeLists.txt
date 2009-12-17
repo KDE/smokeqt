@@ -48,8 +48,12 @@ target_link_libraries(smokenepomuk
     nepomukquery
     ${KDE4_KDECORE_LIBS}
     smokesoprano
-    smokekde
-    smokeqt )
+    smokeqtcore
+    smokeqtgui
+    smokekdecore
+    smokekdeui
+    smokekio 
+)
 
 set_target_properties(smokenepomuk PROPERTIES VERSION 2.1.0 SOVERSION 3 )
 install(TARGETS smokenepomuk DESTINATION ${LIB_INSTALL_DIR} )

@@ -135,6 +135,8 @@ if(ENABLE_SMOKE)
 
     if(Soprano_FOUND)
         add_subdirectory(soprano)
+        add_subdirectory(sopranoclient)
+        add_subdirectory(sopranoserver)
         set(SMOKE_ENABLED "${SMOKE_ENABLED}, Soprano")
     endif(Soprano_FOUND)
 

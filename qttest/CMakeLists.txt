@@ -22,7 +22,13 @@ IF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
 ENDIF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
 add_library(smokeqttest SHARED ${smokeqttest_LIB_SRCS})
 
-target_link_libraries(smokeqttest smokeqt ${QT_QTCORE_LIBRARY} ${QT_QTTEST_LIBRARY})
+target_link_libraries(  smokeqttest 
+                        smokeqtcore 
+                        smokeqtgui 
+                        ${QT_QTCORE_LIBRARY} 
+                        ${QT_QTGUI_LIBRARY} 
+                        ${QT_QTTEST_LIBRARY}
+)
 
 set_target_properties(smokeqttest PROPERTIES VERSION 2.1.0 SOVERSION 3 )
 

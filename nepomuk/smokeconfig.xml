@@ -2,7 +2,11 @@
     <moduleName>nepomuk</moduleName>
     <parts>10</parts>
     <parentModules>
-        <module>kde</module>
+        <module>qtcore</module>
+        <module>qtgui</module>
+        <module>kdecore</module>
+        <module>kdeui</module>
+        <module>kio</module>
         <module>soprano</module>
     </parentModules>
     <scalarTypes>

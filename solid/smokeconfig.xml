@@ -2,7 +2,8 @@
     <moduleName>solid</moduleName>
     <parts>10</parts>
     <parentModules>
-        <module>qt</module>
+        <module>qtcore</module>
+        <module>qtgui</module>
     </parentModules>
     <scalarTypes>
         <!-- QString is a class, but represented as a scalar (#) in munged names -->

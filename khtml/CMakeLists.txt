@@ -63,24 +63,21 @@ include_directories( ${QT_INCLUDES} ${KDE4_INCLUDES} ${CMAKE_CURRENT_SOURCE_DIR}
 
 kde4_add_library(smokekhtml SHARED ${smokekhtml_LIB_SRCS})
 
-add_dependencies(smokekhtml smokekde smokeqt)
+add_dependencies(smokekhtml smokeqtcore smokekdecore)
 
 target_link_libraries(smokekhtml 
-    ${QT_QTNETWORK_LIBRARY} 
-    ${QT_QTSQL_LIBRARY} 
-    ${QT_QTOPENGL_LIBRARY} 
-    ${QT_QTXML_LIBRARY} 
-    ${QT_QTSVG_LIBRARY} 
-    ${QT_QT3SUPPORT_LIBRARY} 
+    ${QT_QTCORE_LIBRARY} 
+    ${QT_QTGUI_LIBRARY}
     ${KDE4_KDECORE_LIBS} 
-    ${KDE4_KDEUI_LIBS}
-    ${KDE4_KIO_LIBS} 
-    ${KDE4_KHTML_LIBS}
-    ${KDE4_KDE3SUPPORT_LIBS}
-    ${KDE4_KUTILS_LIBS}
-    smokekde
-    smokeqt
+    ${KDE4_KHTML_LIBS} 
+    smokeqtcore
+    smokeqtgui
+    smokekdecore
+    smokekdeui
+    smokekio
+    smokekparts
 )
+
 set_target_properties(smokekhtml PROPERTIES VERSION 2.1.0 SOVERSION 3 )
 install(TARGETS smokekhtml DESTINATION ${LIB_INSTALL_DIR} )
 install(FILES ${CMAKE_SOURCE_DIR}/smoke/khtml_smoke.h DESTINATION include/smoke)

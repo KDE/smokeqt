@@ -44,8 +44,12 @@ kde4_add_library(smokeplasma SHARED ${smokeplasma_LIB_SRCS})
 target_link_libraries(smokeplasma 
     ${KDE4_KDEUI_LIBS}
     ${KDE4_PLASMA_LIBS}
-    smokekde
-    smokeqt )
+    smokeqtcore
+    smokeqtgui
+    smokeqtwebkit
+    smokekdecore
+    smokekdeui
+)
 
 set_target_properties(smokeplasma PROPERTIES VERSION 2.1.0 SOVERSION 3 )
 install(TARGETS smokeplasma DESTINATION ${LIB_INSTALL_DIR} )

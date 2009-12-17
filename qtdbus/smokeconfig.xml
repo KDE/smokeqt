@@ -7,11 +7,15 @@
     <scalarTypes>
         <!-- QString is a class, but represented as a scalar (#) in munged names -->
         <typeName>QString</typeName>
+        <typeName>QDBusObjectPath</typeName>
+        <typeName>QDBusSignature</typeName>
     </scalarTypes>
     <voidpTypes>
         <!-- both are classes, but they are represented as Smoke::t_voidp -->
         <typeName>QStringList</typeName>
         <typeName>QString</typeName>
+        <typeName>QDBusObjectPath</typeName>
+        <typeName>QDBusSignature</typeName>
     </voidpTypes>
     <exclude>
         <!-- we don't want private stuff in smoke.. -->

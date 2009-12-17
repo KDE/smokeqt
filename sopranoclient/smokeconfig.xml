@@ -1,0 +1,53 @@
+<config>
+    <moduleName>sopranoclient</moduleName>
+    <parentModules>
+        <module>qtcore</module>
+        <module>soprano</module>
+    </parentModules>
+    <parts>1</parts>
+    <scalarTypes>
+        <!-- QString is a class, but represented as a scalar (#) in munged names -->
+        <typeName>QString</typeName>
+    </scalarTypes>
+    <voidpTypes>
+        <!-- both are classes, but they are represented as Smoke::t_voidp -->
+        <typeName>QStringList</typeName>
+        <typeName>QString</typeName>
+    </voidpTypes>
+    <exclude>
+        <!-- exclude private stuff -->
+        <signature>.*Soprano::.*::d</signature>
+    </exclude>
+    <functions>
+    </functions>
+    <classList>
+        <class>Soprano::Client</class>
+        <class>Soprano::Client::ClientConnection</class>
+        <class>Soprano::Client::ClientModel</class>
+        <class>Soprano::Client::ClientNodeIteratorBackend</class>
+        <class>Soprano::Client::ClientQueryResultIteratorBackend</class>
+        <class>Soprano::Client::ClientStatementIteratorBackend</class>
+        <class>Soprano::Client::DBusAbstractInterface</class>
+        <class>Soprano::Client::DBusClient</class>
+        <class>Soprano::Client::DBusClientNodeIteratorBackend</class>
+        <class>Soprano::Client::DBusClientQueryResultIteratorBackend</class>
+        <class>Soprano::Client::DBusClientStatementIteratorBackend</class>
+        <class>Soprano::Client::DBusModel</class>
+        <class>Soprano::Client::DBusModelInterface</class>
+        <class>Soprano::Client::DBusNodeIterator</class>
+        <class>Soprano::Client::DBusNodeIteratorInterface</class>
+        <class>Soprano::Client::DBusQueryResultIterator</class>
+        <class>Soprano::Client::DBusQueryResultIteratorInterface</class>
+        <class>Soprano::Client::DBusServerInterface</class>
+        <class>Soprano::Client::DBusStatementIterator</class>
+        <class>Soprano::Client::DBusStatementIteratorInterface</class>
+        <class>Soprano::Client::LocalSocketClient</class>
+        <class>Soprano::Client::LocalSocketClientConnection</class>
+        <class>Soprano::Client::SocketHandler</class>
+        <class>Soprano::Client::SparqlModel</class>
+        <class>Soprano::Client::SparqlProtocol</class>
+        <class>Soprano::Client::SparqlQueryResult</class>
+        <class>Soprano::Client::TcpClient</class>
+        <class>Soprano::Client::TcpClientConnection</class>
+    </classList>
+</config>

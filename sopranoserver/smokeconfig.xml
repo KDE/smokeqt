@@ -1,0 +1,36 @@
+<config>
+    <moduleName>sopranoserver</moduleName>
+    <parentModules>
+        <module>qtcore</module>
+        <module>soprano</module>
+    </parentModules>
+    <parts>1</parts>
+    <scalarTypes>
+        <!-- QString is a class, but represented as a scalar (#) in munged names -->
+        <typeName>QString</typeName>
+    </scalarTypes>
+    <voidpTypes>
+        <!-- both are classes, but they are represented as Smoke::t_voidp -->
+        <typeName>QStringList</typeName>
+        <typeName>QString</typeName>
+    </voidpTypes>
+    <exclude>
+        <!-- exclude private stuff -->
+        <signature>.*Soprano::.*::d</signature>
+    </exclude>
+    <functions>
+    </functions>
+    <classList>
+        <class>Soprano::Server</class>
+        <class>Soprano::Server::DBusController</class>
+        <class>Soprano::Server::DBusExportIterator</class>
+        <class>Soprano::Server::DBusExportModel</class>
+        <class>Soprano::Server::DBusModelAdaptor</class>
+        <class>Soprano::Server::DBusNodeIteratorAdaptor</class>
+        <class>Soprano::Server::DBusQueryResultIteratorAdaptor</class>
+        <class>Soprano::Server::DBusServerAdaptor</class>
+        <class>Soprano::Server::DBusStatementIteratorAdaptor</class>
+        <class>Soprano::Server::ServerConnection</class>
+        <class>Soprano::Server::ServerCore</class>
+    </classList>
+</config>

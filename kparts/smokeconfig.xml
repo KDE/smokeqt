@@ -1,5 +1,5 @@
 <config>
-    <moduleName>kio</moduleName>
+    <moduleName>kparts</moduleName>
     <parentModules>
         <module>qtcore</module>
         <module>qtxml</module>

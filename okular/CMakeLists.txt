@@ -45,21 +45,18 @@ ENDIF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
 kde4_add_library(smokeokular SHARED ${smokeokular_LIB_SRCS})
 
 target_link_libraries(smokeokular 
-    ${QT_QTNETWORK_LIBRARY} 
-    ${QT_QTSQL_LIBRARY} 
-    ${QT_QTOPENGL_LIBRARY} 
-    ${QT_QTXML_LIBRARY} 
-    ${QT_QTSVG_LIBRARY} 
-    ${QT_QTUITOOLS_LIBRARY} 
-    ${QT_QTWEBKIT_LIBRARY} 
-    ${QT_QT3SUPPORT_LIBRARY} 
+    ${QT_CORE_LIBRARY} 
+    ${QT_GUI_LIBRARY} 
     ${KDE4_KDECORE_LIBS} 
     ${KDE4_KDEUI_LIBS}
     ${KDE4_KIO_LIBS} 
-    ${KDE4_KUTILS_LIBS}
     okularcore
-    smokekde
-    smokeqt )
+    smokeqtcore
+    smokeqtgui
+    smokekdecore
+    smokekdeui
+    smokekio 
+)
 
 set_target_properties(smokeokular PROPERTIES VERSION 2.1.0 SOVERSION 3 )
 install(TARGETS smokeokular DESTINATION ${LIB_INSTALL_DIR} )

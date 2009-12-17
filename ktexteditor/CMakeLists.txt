@@ -56,8 +56,13 @@ target_link_libraries(smokektexteditor
     ${KDE4_KDE3SUPPORT_LIBS}
     ${KDE4_KTEXTEDITOR_LIBS}
     ${KDE4_KPARTS_LIBS}
-    smokekde
-    smokeqt )
+    smokeqtcore
+    smokeqtgui
+    smokekdecore
+    smokekdeui
+    smokekio 
+)
+ 
 
 set_target_properties(smokektexteditor PROPERTIES VERSION 2.1.0 SOVERSION 3 )
 install(TARGETS smokektexteditor DESTINATION ${LIB_INSTALL_DIR} )

@@ -24,7 +24,7 @@ IF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
 ENDIF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
 add_library(smokeqimageblitz SHARED ${smokeqimageblitz_LIB_SRCS})
 
-target_link_libraries(smokeqimageblitz smokeqt ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIBRARY} ${QIMAGEBLITZ_LIBRARIES})
+target_link_libraries(smokeqimageblitz smokeqtcore smokeqtgui ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIBRARY} ${QIMAGEBLITZ_LIBRARIES})
 
 set_target_properties(smokeqimageblitz PROPERTIES VERSION 2.1.0 SOVERSION 3 )
 

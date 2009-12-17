@@ -1,7 +1,11 @@
 <config>
     <moduleName>plasma</moduleName>
     <parentModules>
-        <module>kde</module>
+        <module>qtcore</module>
+        <module>qtgui</module>
+        <module>qtwebkit</module>
+        <module>kdecore</module>
+        <module>kdeui</module>
     </parentModules>
     <parts>10</parts>
     <scalarTypes>
@@ -22,9 +26,9 @@
         <signature>.*QDebug.*</signature>
         <signature>.*Q3.*</signature>
         
-        <!-- These two cause the build to fail, and are deprecated anyway -->
-        <signature>.*Animator::animateItem.*</signature>
-        <signature>.*Animator::animateElement.*</signature>
+        <!-- These two cause the build to fail, and are deprecated anyway -->                                        
+        <signature>.*Animator::animateItem.*</signature>                                                             
+        <signature>.*Animator::animateElement.*</signature>                                                          
         
         <!-- the Package::publish stuff doesn't seem to be implemented (or exported?) -->
         <signature>.*Plasma::Package::(un|is)?[pP]ublish(ed)?\(.*</signature>
@@ -45,21 +49,18 @@
         <class>Plasma::AccessAppletJob</class>
         <class>Plasma::AccessManager</class>
         <class>Plasma::Animation</class>
-        <class>Plasma::AnimationGroup</class>
+        <class>Plasma::AnimationDriver</class>
         <class>Plasma::Animator</class>
         <class>Plasma::Applet</class>
         <class>Plasma::AppletScript</class>
-        <class>Plasma::AuthorizationInterface</class>
-        <class>Plasma::AuthorizationManager</class>
-        <class>Plasma::AuthorizationRule</class>
         <class>Plasma::BusyWidget</class>
         <class>Plasma::CheckBox</class>
         <class>Plasma::ClientPinRequest</class>
         <class>Plasma::ComboBox</class>
         <class>Plasma::ConfigLoader</class>
+        <class>Plasma::Containment</class>
         <class>Plasma::ContainmentActions</class>
         <class>Plasma::ContainmentActionsPluginsConfig</class>
-        <class>Plasma::Containment</class>
         <class>Plasma::Containment::StyleOption</class>
         <class>Plasma::Context</class>
         <class>Plasma::Corona</class>
@@ -85,7 +86,6 @@
         <class>Plasma::Package</class>
         <class>Plasma::PackageMetadata</class>
         <class>Plasma::PackageStructure</class>
-        <class>Plasma::PaintUtils</class>
         <class>Plasma::PlotColor</class>
         <class>Plasma::PopupApplet</class>
         <class>Plasma::PushButton</class>
@@ -99,8 +99,8 @@
         <class>Plasma::ScrollBar</class>
         <class>Plasma::ScrollWidget</class>
         <class>Plasma::Separator</class>
-        <class>Plasma::ServiceAccessJob</class>
         <class>Plasma::Service</class>
+        <class>Plasma::ServiceAccessJob</class>
         <class>Plasma::ServiceJob</class>
         <class>Plasma::SignalPlotter</class>
         <class>Plasma::Slider</class>
