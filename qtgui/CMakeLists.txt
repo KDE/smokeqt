@@ -68,7 +68,7 @@ add_library(smokeqtgui SHARED ${smokeqtgui_LIB_SRCS})
 
 target_link_libraries(smokeqtgui smokeqtcore ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIBRARY} )
 
-set_target_properties(smokeqtgui PROPERTIES VERSION 2.1.0 SOVERSION 3 )
+set_target_properties(smokeqtgui PROPERTIES VERSION 3.0.0 SOVERSION 3 )
 
 # Don't use the KDE ${LIB_INSTALL_DIR} macro here as this file is
 # for Qt only installs

@@ -86,7 +86,7 @@ target_link_libraries(smokeqt ${QT_QTCORE_LIBRARY}
                               ${QT_QTSVG_LIBRARY}
                               ${QT_QTXML_LIBRARY} )
 
-set_target_properties(smokeqt PROPERTIES VERSION 2.1.0 SOVERSION 3 )
+set_target_properties(smokeqt PROPERTIES VERSION 3.0.0 SOVERSION 3 )
 
 # Don't use the KDE ${LIB_INSTALL_DIR} macro here as this file is
 # for Qt only installs

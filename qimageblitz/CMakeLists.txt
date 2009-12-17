@@ -26,7 +26,7 @@ add_library(smokeqimageblitz SHARED ${smokeqimageblitz_LIB_SRCS})
 
 target_link_libraries(smokeqimageblitz smokeqtcore smokeqtgui ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIBRARY} ${QIMAGEBLITZ_LIBRARIES})
 
-set_target_properties(smokeqimageblitz PROPERTIES VERSION 2.1.0 SOVERSION 3 )
+set_target_properties(smokeqimageblitz PROPERTIES VERSION 3.0.0 SOVERSION 3 )
 
 install(TARGETS smokeqimageblitz DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
 install(FILES ${CMAKE_SOURCE_DIR}/smoke/qimageblitz_smoke.h DESTINATION include/smoke )

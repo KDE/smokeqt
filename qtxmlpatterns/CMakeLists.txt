@@ -35,7 +35,7 @@ target_link_libraries(smokeqtxmlpatterns
                         ${QT_QTNETWORK_LIBRARY} 
                         ${QT_QTXMLPATTERNS_LIBRARY} )
 
-set_target_properties(smokeqtxmlpatterns PROPERTIES VERSION 2.1.0 SOVERSION 3 )
+set_target_properties(smokeqtxmlpatterns PROPERTIES VERSION 3.0.0 SOVERSION 3 )
 
 # Don't use the KDE ${LIB_INSTALL_DIR} macro here as this file is
 # for Qt only installs

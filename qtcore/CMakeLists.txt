@@ -79,7 +79,7 @@ add_library(smokeqtcore SHARED ${smokeqtcore_LIB_SRCS})
 
 target_link_libraries(smokeqtcore ${QT_QTCORE_LIBRARY} )
 
-set_target_properties(smokeqtcore PROPERTIES VERSION 2.1.0 SOVERSION 3 )
+set_target_properties(smokeqtcore PROPERTIES VERSION 3.0.0 SOVERSION 3 )
 
 # Don't use the KDE ${LIB_INSTALL_DIR} macro here as this file is
 # for Qt only installs

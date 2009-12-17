@@ -83,6 +83,6 @@ target_link_libraries(smokekdevplatform
     smokektexteditor
     smokeqt )
 
-set_target_properties(smokekdevplatform PROPERTIES VERSION 2.1.0 SOVERSION 3 )
+set_target_properties(smokekdevplatform PROPERTIES VERSION 3.0.0 SOVERSION 3 )
 install(TARGETS smokekdevplatform DESTINATION ${LIB_INSTALL_DIR} )
 install(FILES ${CMAKE_SOURCE_DIR}/smoke/kdevplatform_smoke.h DESTINATION include/smoke)

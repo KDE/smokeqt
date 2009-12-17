@@ -82,6 +82,6 @@ target_link_libraries(smokekdeui
     smokekdecore
 )
 
-set_target_properties(smokekdeui PROPERTIES VERSION 2.1.0 SOVERSION 3 )
+set_target_properties(smokekdeui PROPERTIES VERSION 3.0.0 SOVERSION 3 )
 install(TARGETS smokekdeui DESTINATION ${LIB_INSTALL_DIR} )
 install(FILES ${CMAKE_SOURCE_DIR}/smoke/kdeui_smoke.h DESTINATION include/smoke)

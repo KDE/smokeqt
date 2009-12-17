@@ -44,6 +44,6 @@ target_link_libraries(smokeknewstuff2
     smokekio
 )
 
-set_target_properties(smokeknewstuff2 PROPERTIES VERSION 2.1.0 SOVERSION 3 )
+set_target_properties(smokeknewstuff2 PROPERTIES VERSION 3.0.0 SOVERSION 3 )
 install(TARGETS smokeknewstuff2 DESTINATION ${LIB_INSTALL_DIR} )
 install(FILES ${CMAKE_SOURCE_DIR}/smoke/knewstuff2_smoke.h DESTINATION include/smoke)
