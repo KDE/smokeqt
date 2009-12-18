@@ -1,7 +1,12 @@
 <config>
     <moduleName>kdevplatform</moduleName>
     <parentModules>
-        <module>kde</module>
+        <module>kdecore</module>
+        <module>kdeui</module>
+        <module>kparts</module>
+        <module>kio</module>
+        <module>kutils</module>
+        <module>kfile</module>
     </parentModules>
     <parts>10</parts>
     <scalarTypes>
