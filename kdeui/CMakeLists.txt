@@ -64,8 +64,6 @@ include_directories( ${QT_INCLUDES} ${KDE4_INCLUDES} ${CMAKE_CURRENT_SOURCE_DIR}
 
 kde4_add_library(smokekdeui SHARED ${smokekdeui_LIB_SRCS})
 
-add_dependencies(smokekdeui smokeqt)
-
 target_link_libraries(smokekdeui
     ${QT_QTCORE_LIBRARY}
     ${QT_QTNETWORK_LIBRARY}

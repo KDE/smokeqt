@@ -50,8 +50,9 @@ target_link_libraries(smokeakonadi
     ${KDEPIMLIBS_AKONADI_KMIME_LIBS}
     ${KDE4_KDECORE_LIBS}
     ${KDE4_KDEUI_LIBS}
-    smokekde
-    smokeqt )
+    smokekdecore
+    smokekdeui
+    smokeqtcore )
 
 set_target_properties(smokeakonadi PROPERTIES VERSION 3.0.0 SOVERSION 3 )
 install(TARGETS smokeakonadi DESTINATION ${LIB_INSTALL_DIR} )

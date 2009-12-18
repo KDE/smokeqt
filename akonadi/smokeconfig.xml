@@ -1,7 +1,8 @@
 <config>
     <moduleName>akonadi</moduleName>
     <parentModules>
-        <module>kde</module>
+        <module>kdecore</module>
+        <module>kdeui</module>
     </parentModules>
     <parts>10</parts>
     <scalarTypes>

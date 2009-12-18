@@ -1,7 +1,8 @@
 <config>
     <moduleName>qsci</moduleName>
     <parentModules>
-        <module>qt</module>
+        <module>qtcore</module>
+        <module>qtgui</module>
     </parentModules>
     <parts>10</parts>
     <scalarTypes>
