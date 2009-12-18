@@ -44,15 +44,13 @@ kde4_add_library(smokenepomuk SHARED ${smokenepomuk_LIB_SRCS})
 
 target_link_libraries(smokenepomuk 
     ${NEPOMUK_LIBRARIES}
-    ${NEPOMUK_QUERY_LIBRARIES}
-    nepomukquery
     ${KDE4_KDECORE_LIBS}
     smokesoprano
+    smokesopranoclient
     smokeqtcore
     smokeqtgui
     smokekdecore
     smokekdeui
-    smokekio 
 )
 
 set_target_properties(smokenepomuk PROPERTIES VERSION 3.0.0 SOVERSION 3 )

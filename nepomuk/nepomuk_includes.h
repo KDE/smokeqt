@@ -31,6 +31,7 @@
 #include <nepomuk/resource.h>
 #include <nepomuk/resourcemanager.h>
 #include <nepomuk/resourceterm.h>
+#include <nepomuk/resourcetypeterm.h>
 #include <nepomuk/result.h>
 #include <nepomuk/simpleterm.h>
 #include <nepomuk/tag.h>

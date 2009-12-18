@@ -1,0 +1,55 @@
+<config>
+    <moduleName>nepomukquery</moduleName>
+    <parts>1</parts>
+    <parentModules>
+        <module>qtcore</module>
+        <module>qtgui</module>
+        <module>kdecore</module>
+        <module>kdeui</module>
+        <module>soprano</module>
+        <module>nepomuk</module>
+    </parentModules>
+    <scalarTypes>
+        <!-- QString is a class, but represented as a scalar (#) in munged names -->
+        <typeName>QString</typeName>
+    </scalarTypes>
+    <voidpTypes>
+        <!-- both are classes, but they are represented as Smoke::t_voidp -->
+        <typeName>QStringList</typeName>
+        <typeName>QString</typeName>
+    </voidpTypes>
+    <exclude>
+        <!-- private stuff -->
+        <signature>.*::d</signature>
+        <signature>.*::d_ptr</signature>
+        <signature>.*::q_ptr</signature>
+        <signature>.*::q</signature>
+        <signature>.*QDebug.*</signature>
+        <signature>.*Q3.*</signature>
+        
+        <signature>.*Nepomuk::ResourceManager::allResources\(\).*</signature>
+    </exclude>
+    <functions>
+        <!-- everything in that namespace.. -->
+        <name>Nepomuk::.*</name>
+    </functions>
+    <classList>
+        <class>Nepomuk::Query::AndTerm</class>
+        <class>Nepomuk::Query</class>
+        <class>Nepomuk::Query::ComparisonTerm</class>
+        <class>Nepomuk::Query::FileQuery</class>
+        <class>Nepomuk::Query::GroupTerm</class>
+        <class>Nepomuk::Query::LiteralTerm</class>
+        <class>Nepomuk::Query::NegationTerm</class>
+        <class>Nepomuk::Query::OrTerm</class>
+        <class>Nepomuk::Query::Query</class>
+        <class>Nepomuk::Query::QueryParser</class>
+        <class>Nepomuk::Query::Query::RequestProperty</class>
+        <class>Nepomuk::Query::QueryServiceClient</class>
+        <class>Nepomuk::Query::ResourceTerm</class>
+        <class>Nepomuk::Query::ResourceTypeTerm</class>
+        <class>Nepomuk::Query::Result</class>
+        <class>Nepomuk::Query::SimpleTerm</class>
+        <class>Nepomuk::Query::Term</class>
+    </classList>
+</config>

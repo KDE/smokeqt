@@ -1,0 +1,50 @@
+<config>
+    <moduleName>attica</moduleName>
+    <parts>1</parts>
+    <parentModules>
+        <module>qtcore</module>
+        <module>qtnetwork</module>
+    </parentModules>
+    <scalarTypes>
+        <!-- QString is a class, but represented as a scalar (#) in munged names -->
+        <typeName>QString</typeName>
+    </scalarTypes>
+    <voidpTypes>
+        <!-- both are classes, but they are represented as Smoke::t_voidp -->
+        <typeName>QStringList</typeName>
+        <typeName>QString</typeName>
+    </voidpTypes>
+    <exclude>
+        <!-- private stuff -->
+        <signature>.*::d</signature>
+        <signature>.*::d_ptr</signature>
+        <signature>.*::q_ptr</signature>
+        <signature>.*::q</signature>
+        <signature>.*QDebug.*</signature>
+        <signature>.*Q3.*</signature>
+        
+        <!-- Implementations seem to be missing -->
+        <signature>.*Attica::BaseJob::setErrorString.*</signature>
+        <signature>.*Attica::BaseJob::setError.*</signature>
+    </exclude>
+    <functions>
+    </functions>
+    <classList>
+        <class>Attica::DownloadItem::Parser</class>
+        <class>Attica::AccountBalance::Parser</class>
+        <class>Attica::ProviderManager</class>
+        <class>Attica::PlatformDependent</class>
+        <class>Attica::KnowledgeBaseEntry::Parser</class>
+        <class>Attica::QtPlatformDependent</class>
+        <class>Attica::Event::Parser</class>
+        <class>Attica::Folder::Parser</class>
+        <class>Attica::GetJob</class>
+        <class>Attica::Person::Parser</class>
+        <class>Attica::BaseJob</class>
+        <class>Attica::Content::Parser</class>
+        <class>Attica::Message::Parser</class>
+        <class>Attica::PostJob</class>
+        <class>Attica::Activity::Parser</class>
+        <class>Attica::Category::Parser</class>
+    </classList>
+</config>
