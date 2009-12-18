@@ -55,7 +55,8 @@ target_link_libraries(smokeokular
     smokeqtgui
     smokekdecore
     smokekdeui
-    smokekio 
+    smokekio
+    smokekparts
 )
 
 set_target_properties(smokeokular PROPERTIES VERSION 3.0.0 SOVERSION 3 )

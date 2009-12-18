@@ -1,10 +1,11 @@
-find_package(Nepomuk REQUIRED)
+find_package(LibAttica REQUIRED)
 
 IF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
     ADD_DEFINITIONS(-DGCC_VISIBILITY)
 ENDIF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
 
-include_directories( ${CMAKE_SOURCE_DIR}/smoke ${NEPOMUK_QUERY_INCLUDE_DIR} )
+include_directories( ${CMAKE_SOURCE_DIR}/smoke ${LIBATTICA_INCLUDE_DIRS} )
+link_directories( ${LIBATTICA_LIBRARY_DIR} )
 
 ########### next target ###############
 
@@ -27,7 +28,7 @@ kde4_add_library(smokeattica SHARED ${smokeattica_LIB_SRCS})
 target_link_libraries(smokeattica 
     ${QT_QTCORE_LIBRARY}
     ${QT_QTNETWORK_LIBRARY}
-    attica
+    ${LIBATTICA_LIBRARIES}
     smokeqtcore
     smokeqtnetwork
 )
