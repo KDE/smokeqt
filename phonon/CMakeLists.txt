@@ -21,7 +21,7 @@ add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp
     COMMAND generator
     ARGS -config "${CMAKE_CURRENT_BINARY_DIR}/../qt/config.xml" -smokeconfig "${CMAKE_CURRENT_SOURCE_DIR}/smokeconfig.xml"
          -I "${PHONON_INCLUDE_DIR}" -dm PHONON_EXPORT -- ${CMAKE_CURRENT_SOURCE_DIR}/phonon_includes.h
-    WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
+    DEPENDS generator generator_smoke WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
 
 macro_add_file_dependencies( ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp ${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp )
 
