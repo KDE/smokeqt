@@ -23,7 +23,6 @@
         <signature>.*QStringMatcher::q_data</signature>
         <signature>.*QStringMatcher::p</signature>
         <!-- why doesn't this work?! -->
-        <signature>QTextCodec::DefaultConversion</signature>
         <signature>.*QTextCodec::ConverterState::state_data.*</signature>
         <!-- Thread related stuff belongs to the bindings language -->
         <signature>.*QtConcurrent.*</signature>
@@ -155,6 +154,7 @@
         <class>QTemporaryFile</class>
         <class>QTextBoundaryFinder</class>
         <class>QTextCodec</class>
+	<class>QTextCodec::ConverterState</class>
         <class>QTextCodecFactoryInterface</class>
         <class>QTextCodecPlugin</class>
         <class>QTextDecoder</class>
