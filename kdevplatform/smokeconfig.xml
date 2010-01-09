@@ -46,7 +46,7 @@
         <signature>.*KDevelop::IProjectFileManager::folderRenamed\(const KUrl&amp;, KDevelop::ProjectFolderItem\*\)</signature>
         <signature>.*KDevelop::IProjectFileManager::folderRemoved\(KDevelop::ProjectFolderItem\*\)</signature>
         <signature>.*KDevelop::IProjectFileManager::folderAdded\(KDevelop::ProjectFolderItem\*\)</signature>
-        <signature>.*KDevelop::IProjectFileManager::projectItemConfigWidget\(const QList&lt; KDevelop::ProjectBaseItem\* &gt;&amp;, KDevelop::KDialogBase\*\)</signature>
+        <signature>.*KDevelop::IProjectFileManager::projectItemConfigWidget\(const QList&lt;KDevelop::ProjectBaseItem\*&gt;&amp;, KDevelop::KDialogBase\*\)</signature>
         <signature>.*KDevelop::IOutputView::toolViewRemoved\(int\)</signature>
         <signature>.*KDevelop::IOutputView::outputRemoved\(int, int\)</signature>
         <signature>.*KDevelop::IProjectBuilder::built\(KDevelop::ProjectBaseItem\*\)</signature>
@@ -56,7 +56,7 @@
         <signature>.*KDevelop::IProjectBuilder::configured\(KDevelop::IProject\*\)</signature>
         <signature>.*KDevelop::IProjectBuilder::pruned\(KDevelop::IProject\*\)</signature>
         <signature>.*KDevelop::UiController::defaultArea\(\)</signature>
-        <signature>.*KDevelop::TypeRepository::indexForType\(TypePtr&lt; KDevelop::AbstractType &gt;\)</signature>
+        <signature>.*KDevelop::TypeRepository::indexForType\(TypePtr&lt;KDevelop::AbstractType&gt;\)</signature>
         <signature>.*KDevelop::TypeRepository::typeForIndex\(unsigned int\)</signature>
         <signature>.*KDevelop::TypeRepository::increaseReferenceCount\(unsigned int\)</signature>
         <signature>.*KDevelop::TypeRepository::decreaseReferenceCount\(unsigned int\)</signature>
