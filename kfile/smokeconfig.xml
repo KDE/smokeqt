@@ -25,7 +25,6 @@
         <signature>.*::q_ptr</signature>
         <signature>.*::k_ptr</signature>
         <signature>.*::q</signature>
-        <signature>.*::virtual_hook\(int, void\*\).*</signature>
         <signature>.*QDebug.*</signature>
         <signature>.*Q3.*</signature>
 
@@ -47,6 +46,7 @@
         <name>.*i18n.*</name>
     </functions>
     <classList>
+        <class>KAbstractFileWidget</class>
         <class>KDirOperator</class>
         <class>KDirSelectDialog</class>
         <class>KDirSortFilterProxyModel</class>
