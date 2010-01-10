@@ -1,9 +1,6 @@
 <config>
     <moduleName>plasma</moduleName>
     <parentModules>
-        <module>qtcore</module>
-        <module>qtgui</module>
-        <module>qtwebkit</module>
         <module>kdecore</module>
         <module>kdeui</module>
     </parentModules>

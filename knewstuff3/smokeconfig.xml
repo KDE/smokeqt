@@ -1,12 +1,7 @@
 <config>
     <moduleName>knewstuff3</moduleName>
     <parentModules>
-        <module>qtcore</module>
-        <module>qtxml</module>
-        <module>qtgui</module>
-        <module>kdecore</module>
         <module>kdeui</module>
-        <module>kio</module>
     </parentModules>
     <parts>1</parts>
     <scalarTypes>

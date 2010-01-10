@@ -2,7 +2,6 @@
     <moduleName>qtwebkit</moduleName>
     <parentModules>
         <module>qtcore</module>
-        <module>qtnetwork</module>
         <module>qtgui</module>
     </parentModules>
     <parts>1</parts>

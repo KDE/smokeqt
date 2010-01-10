@@ -1,12 +1,7 @@
 <config>
     <moduleName>kparts</moduleName>
     <parentModules>
-        <module>qtcore</module>
-        <module>qtxml</module>
-        <module>qtgui</module>
-        <module>kdecore</module>
-        <module>kdeui</module>
-        <module>kio</module>
+         <module>kio</module>
     </parentModules>
     <scalarTypes>
         <!-- QString is a class, but represented as a scalar (#) in munged names -->

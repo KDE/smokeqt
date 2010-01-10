@@ -3,7 +3,6 @@
     <parts>10</parts>
     <parentModules>
         <module>qtcore</module>
-        <module>qtgui</module>
     </parentModules>
     <scalarTypes>
         <!-- QString is a class, but represented as a scalar (#) in munged names -->

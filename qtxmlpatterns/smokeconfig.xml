@@ -2,7 +2,6 @@
     <moduleName>qtxmlpatterns</moduleName>
     <parentModules>
         <module>qtcore</module>
-        <module>qtnetwork</module>
     </parentModules>
     <parts>1</parts>
     <scalarTypes>

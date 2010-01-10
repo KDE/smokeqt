@@ -2,7 +2,6 @@
     <moduleName>qtmultimedia</moduleName>
     <parentModules>
         <module>qtcore</module>
-        <module>qtgui</module>
     </parentModules>
     <parts>1</parts>
     <scalarTypes>

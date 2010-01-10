@@ -3,11 +3,6 @@
     <parts>1</parts>
     <parentModules>
         <module>qtcore</module>
-        <module>qtgui</module>
-        <module>kdecore</module>
-        <module>kdeui</module>
-        <module>soprano</module>
-        <module>nepomuk</module>
     </parentModules>
     <scalarTypes>
         <!-- QString is a class, but represented as a scalar (#) in munged names -->

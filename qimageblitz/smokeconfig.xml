@@ -1,9 +1,5 @@
 <config>
     <moduleName>qimageblitz</moduleName>
-    <parentModules>
-        <module>qtcore</module>
-        <module>qtgui</module>
-    </parentModules>
     <parts>1</parts>
     <scalarTypes>
         <!-- QString is a class, but represented as a scalar (#) in munged names -->

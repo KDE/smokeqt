@@ -1,11 +1,7 @@
 <config>
     <moduleName>kdeui</moduleName>
     <parentModules>
-        <module>qtcore</module>
-        <module>qtnetwork</module>
-        <module>qtdbus</module>
-        <module>qtgui</module>
-        <module>qtxml</module>
+        <module>qtsvg</module>
         <module>kdecore</module>
     </parentModules>
     <scalarTypes>

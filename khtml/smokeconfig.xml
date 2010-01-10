@@ -1,11 +1,7 @@
 <config>
     <moduleName>khtml</moduleName>
     <parentModules>
-        <module>qtcore</module>
         <module>qtgui</module>
-        <module>kdecore</module>
-        <module>kdeui</module>
-        <module>kio</module>
         <module>kparts</module>
     </parentModules>
     <scalarTypes>
