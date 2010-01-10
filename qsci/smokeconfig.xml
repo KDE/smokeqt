@@ -15,6 +15,7 @@
         <typeName>QString</typeName>
     </voidpTypes>
     <classList>
+        <class>QsciAbstractAPIs</class>
         <class>QsciAPIs</class>
         <class>QsciCommand</class>
         <class>QsciCommandSet</class>
@@ -24,27 +25,37 @@
         <class>QsciLexerBatch</class>
         <class>QsciLexerCMake</class>
         <class>QsciLexerCPP</class>
-        <class>QsciLexerCSS</class>
         <class>QsciLexerCSharp</class>
+        <class>QsciLexerCSS</class>
+        <class>QsciLexerCustom</class>
         <class>QsciLexerD</class>
         <class>QsciLexerDiff</class>
+        <class>QsciLexerFortran</class>
+        <class>QsciLexerFortran77</class>
         <class>QsciLexerHTML</class>
         <class>QsciLexerIDL</class>
         <class>QsciLexerJava</class>
         <class>QsciLexerJavaScript</class>
         <class>QsciLexerLua</class>
         <class>QsciLexerMakefile</class>
-        <class>QsciLexerPOV</class>
+        <class>QsciLexerPascal</class>
         <class>QsciLexerPerl</class>
+        <class>QsciLexerPostScript</class>
+        <class>QsciLexerPOV</class>
         <class>QsciLexerProperties</class>
         <class>QsciLexerPython</class>
         <class>QsciLexerRuby</class>
         <class>QsciLexerSQL</class>
+        <class>QsciLexerTCL</class>
         <class>QsciLexerTeX</class>
         <class>QsciLexerVHDL</class>
+        <class>QsciLexerXML</class>
+        <class>QsciLexerYAML</class>
         <class>QsciMacro</class>
         <class>QsciPrinter</class>
         <class>QsciScintilla</class>
         <class>QsciScintillaBase</class>
+        <class>QsciStyle</class>
+        <class>QsciStyledText</class>
     </classList>
 </config>
