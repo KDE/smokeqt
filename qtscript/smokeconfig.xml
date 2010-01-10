@@ -29,6 +29,7 @@
         <class>QScriptEngineAgent</class>
         <class>QScriptEngine</class>
         <class>QScriptEngineDebugger</class>
+        <class>QScriptExtensionInterface</class>
         <class>QScriptExtensionPlugin</class>
         <class>QScriptString</class>
         <class>QScriptValue</class>
