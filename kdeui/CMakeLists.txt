@@ -72,12 +72,9 @@ target_link_libraries(smokekdeui
     ${QT_QTXML_LIBRARY}
     ${KDE4_KDECORE_LIBS}
     ${KDE4_KDEUI_LIBS}
-    smokeqtcore
-    smokeqtgui
-    smokeqtnetwork
-    smokeqtdbus
-    smokeqtxml
+    smokeqtsvg
     smokekdecore
+    smokeqtcore
 )
 
 set_target_properties(smokekdeui PROPERTIES VERSION 3.0.0 SOVERSION 3 )

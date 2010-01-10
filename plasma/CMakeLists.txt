@@ -44,11 +44,9 @@ kde4_add_library(smokeplasma SHARED ${smokeplasma_LIB_SRCS})
 target_link_libraries(smokeplasma 
     ${KDE4_KDEUI_LIBS}
     ${KDE4_PLASMA_LIBS}
-    smokeqtcore
-    smokeqtgui
-    smokeqtwebkit
     smokekdecore
     smokekdeui
+    smokeqtcore
 )
 
 set_target_properties(smokeplasma PROPERTIES VERSION 3.0.0 SOVERSION 3 )

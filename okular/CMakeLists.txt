@@ -52,11 +52,8 @@ target_link_libraries(smokeokular
     ${KDE4_KIO_LIBS} 
     okularcore
     smokeqtcore
-    smokeqtgui
-    smokekdecore
+    smokeqtxml
     smokekdeui
-    smokekio
-    smokekparts
 )
 
 set_target_properties(smokeokular PROPERTIES VERSION 3.0.0 SOVERSION 3 )

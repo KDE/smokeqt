@@ -1,3 +1,4 @@
+find_package(Soprano REQUIRED)
 find_package(Nepomuk REQUIRED)
 
 IF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
@@ -44,13 +45,10 @@ kde4_add_library(smokenepomuk SHARED ${smokenepomuk_LIB_SRCS})
 
 target_link_libraries(smokenepomuk 
     ${NEPOMUK_LIBRARIES}
+    ${SOPRANO_LIBRARIES}
     ${KDE4_KDECORE_LIBS}
-    smokesoprano
-    smokesopranoclient
-    smokeqtcore
     smokeqtgui
-    smokekdecore
-    smokekdeui
+    smokeqtcore
 )
 
 set_target_properties(smokenepomuk PROPERTIES VERSION 3.0.0 SOVERSION 3 )

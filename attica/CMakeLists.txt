@@ -30,7 +30,6 @@ target_link_libraries(smokeattica
     ${QT_QTNETWORK_LIBRARY}
     ${LIBATTICA_LIBRARIES}
     smokeqtcore
-    smokeqtnetwork
 )
 
 set_target_properties(smokeattica PROPERTIES VERSION 3.0.0 SOVERSION 3 )

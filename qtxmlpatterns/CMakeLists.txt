@@ -30,7 +30,6 @@ add_library(smokeqtxmlpatterns SHARED ${smokeqtxmlpatterns_LIB_SRCS})
 
 target_link_libraries(smokeqtxmlpatterns 
                         smokeqtcore 
-                        smokeqtnetwork 
                         ${QT_QTCORE_LIBRARY} 
                         ${QT_QTNETWORK_LIBRARY} 
                         ${QT_QTXMLPATTERNS_LIBRARY} )

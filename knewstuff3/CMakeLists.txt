@@ -36,12 +36,8 @@ target_link_libraries(smokeknewstuff3
     ${KDE4_KDEUI_LIBS}
     ${KDE4_KIO_LIBS}
     ${KDE4_KNEWSTUFF3_LIBS}
-    smokeqtcore
-    smokeqtgui
-    smokeqtxml
-    smokekdecore
     smokekdeui
-    smokekio
+    smokeqtcore
 )
 
 set_target_properties(smokeknewstuff3 PROPERTIES VERSION 3.0.0 SOVERSION 3 )

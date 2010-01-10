@@ -49,7 +49,6 @@ target_link_libraries(smokesolid
     ${QT_QTDBUS_LIBRARY} 
     ${KDE4_SOLID_LIBS}
     smokeqtcore
-    smokeqtgui 
 )
 
 set_target_properties(smokesolid PROPERTIES VERSION 3.0.0 SOVERSION 3 )

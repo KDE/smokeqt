@@ -75,11 +75,6 @@ target_link_libraries(smokekio
     ${KDE4_KDEUI_LIBS}
     ${KDE4_KIO_LIBS}
     smokeqtcore
-    smokeqtgui
-    smokeqtnetwork
-    smokeqtdbus
-    smokeqtxml
-    smokekdecore
     smokekdeui
 )
 

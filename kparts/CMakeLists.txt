@@ -74,12 +74,8 @@ target_link_libraries(smokekparts
     ${KDE4_KDEUI_LIBS}
     ${KDE4_KIO_LIBS}
     ${KDE4_KPARTS_LIBS}
-    smokeqtcore
-    smokeqtgui
-    smokeqtxml
-    smokekdecore
-    smokekdeui
     smokekio
+    smokeqtcore
 )
 
 set_target_properties(smokekparts PROPERTIES VERSION 3.0.0 SOVERSION 3 )

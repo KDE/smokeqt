@@ -79,13 +79,14 @@ target_link_libraries(smokekdevplatform
     ${KDEVPLATFORM_DEBUGGER_LIBRARIES}
     ${QT_QTCORE_LIBRARY} 
     ${QT_QTGUI_LIBRARY}
-    smokeqtcore
     smokekdecore
     smokekdeui
     smokekparts
     smokekio
     smokekutils
-    smokekfile)
+    smokekfile
+    smokeqtcore
+)
 
 set_target_properties(smokekdevplatform PROPERTIES VERSION 3.0.0 SOVERSION 3 )
 install(TARGETS smokekdevplatform DESTINATION ${LIB_INSTALL_DIR} )

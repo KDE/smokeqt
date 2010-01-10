@@ -70,11 +70,7 @@ target_link_libraries(smokekhtml
     ${QT_QTGUI_LIBRARY}
     ${KDE4_KDECORE_LIBS} 
     ${KDE4_KHTML_LIBS} 
-    smokeqtcore
     smokeqtgui
-    smokekdecore
-    smokekdeui
-    smokekio
     smokekparts
 )
 
