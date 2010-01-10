@@ -50,23 +50,31 @@
         <class>KTextEditor::CodeCompletionInterface</class>
         <class>KTextEditor::CodeCompletionModel</class>
         <class>KTextEditor::CodeCompletionModel2</class>
+        <class>KTextEditor::CodeCompletionModelControllerInterface</class>
+        <class>KTextEditor::CodeCompletionModelControllerInterface2</class>
         <class>KTextEditor::Command</class>
         <class>KTextEditor::CommandExtension</class>
         <class>KTextEditor::CommandInterface</class>
         <class>KTextEditor::ConfigInterface</class>
         <class>KTextEditor::ConfigPage</class>
         <class>KTextEditor::ContainerInterface</class>
+        <class>KTextEditor::CoordinatesToCursorInterface</class>
         <class>KTextEditor::Cursor</class>
         <class>KTextEditor::Document</class>
         <class>KTextEditor::Editor</class>
         <class>KTextEditor::EditorChooser</class>
         <class>KTextEditor::Factory</class>
+        <class>KTextEditor::HighlightInterface</class>
+        <class>KTextEditor::HighlightInterface::AttributeBlock</class>
+        <class>KTextEditor::LoadSaveFilterCheckPlugin</class>
         <class>KTextEditor::Mark</class>
         <class>KTextEditor::MarkInterface</class>
         <class>KTextEditor::MdiContainer</class>
         <class>KTextEditor::ModificationInterface</class>
+        <class>KTextEditor::ParameterizedSessionConfigInterface</class>
         <class>KTextEditor::Plugin</class>
         <class>KTextEditor::Range</class>
+        <class>KTextEditor::RangeCommand</class>
         <class>KTextEditor::SearchInterface</class>
         <class>KTextEditor::SessionConfigInterface</class>
         <class>KTextEditor::SmartCursor</class>
@@ -80,5 +88,6 @@
         <class>KTextEditor::TextHintInterface</class>
         <class>KTextEditor::VariableInterface</class>
         <class>KTextEditor::View</class>
+        <class>KTextEditor::ViewBarContainer</class>
     </classList>
 </config>
