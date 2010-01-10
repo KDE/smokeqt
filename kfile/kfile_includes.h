@@ -1,3 +1,4 @@
+#include <kabstractfilewidget.h>
 #include <kdiroperator.h>
 #include <kdirselectdialog.h>
 #include <kdirsortfilterproxymodel.h>
