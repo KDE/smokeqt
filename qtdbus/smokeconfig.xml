@@ -41,6 +41,7 @@
     <classList>
         <class>QDBusAbstractAdaptor</class>
         <class>QDBusAbstractInterface</class>
+        <class>QDBusAbstractInterfaceBase</class>
         <class>QDBusArgument</class>
         <class>QDBusConnection</class>
         <class>QDBusConnectionInterface</class>
