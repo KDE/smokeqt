@@ -1,11 +1,7 @@
 <config>
     <moduleName>kdeui</moduleName>
     <parentModules>
-        <module>qtcore</module>
-        <module>qtnetwork</module>
-        <module>qtdbus</module>
-        <module>qtgui</module>
-        <module>qtxml</module>
+        <module>qtsvg</module>
         <module>kdecore</module>
     </parentModules>
     <scalarTypes>
@@ -37,15 +33,6 @@
         <signature>.*operator(&lt;&lt;|&gt;&gt;)\(QDataStream&amp;, (const\s)?KDateTime.*</signature>
     </exclude>
     <functions>
-        <!-- include functions starting with 'k' -->
-        <name>^k.*</name>
-        <name>.*::k.*</name>
-
-        <name>K.*::.*</name>
-        <!-- and operators -->
-        <name>.*operator.*</name>
-        <!-- and i18n functions -->
-        <name>.*i18n.*</name>
     </functions>
     <classList>
         <class>KAboutApplicationDialog</class>

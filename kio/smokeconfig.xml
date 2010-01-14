@@ -1,12 +1,6 @@
 <config>
     <moduleName>kio</moduleName>
     <parentModules>
-        <module>qtcore</module>
-        <module>qtnetwork</module>
-        <module>qtdbus</module>
-        <module>qtgui</module>
-        <module>qtxml</module>
-        <module>kdecore</module>
         <module>kdeui</module>
     </parentModules>
     <scalarTypes>
@@ -40,15 +34,6 @@
         <signature>.*operator(&lt;&lt;|&gt;&gt;)\(QDataStream&amp;, (const\s)?KDateTime.*</signature>
     </exclude>
     <functions>
-        <!-- include functions starting with 'k' -->
-        <name>^k.*</name>
-        <name>.*::k.*</name>
-
-        <name>K.*::.*</name>
-        <!-- and operators -->
-        <name>.*operator.*</name>
-        <!-- and i18n functions -->
-        <name>.*i18n.*</name>
     </functions>
     <classList>
         <class>KAbstractFileModule</class>
@@ -81,6 +66,7 @@
         <class>KDirWatch</class>
         <class>KDiskFreeSpace</class>
         <class>KEncodingFileDialog</class>
+        <class>KEncodingFileDialog::Result</class>
         <class>KFileDialog</class>
         <class>KFileItemActions</class>
         <class>KFileItemDelegate</class>

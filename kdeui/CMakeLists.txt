@@ -72,11 +72,8 @@ target_link_libraries(smokekdeui
     ${QT_QTXML_LIBRARY}
     ${KDE4_KDECORE_LIBS}
     ${KDE4_KDEUI_LIBS}
+    smokeqtsvg
     smokeqtcore
-    smokeqtgui
-    smokeqtnetwork
-    smokeqtdbus
-    smokeqtxml
     smokekdecore
 )
 
