@@ -42,6 +42,7 @@ if(ENABLE_SMOKE)
     if(ENABLE_QTCORE_SMOKE)
         add_subdirectory(qtcore)
         add_subdirectory(deptool)
+        add_subdirectory(smokeapi)
         set(SMOKE_ENABLED "${SMOKE_ENABLED}, QtCore")
     endif(ENABLE_QTCORE_SMOKE)
 
