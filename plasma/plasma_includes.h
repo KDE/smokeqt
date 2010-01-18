@@ -1,15 +1,23 @@
 #include <plasma/abstractrunner.h>
+#include <plasma/abstracttoolbox.h>
+#include <plasma/accessappletjob.h>
+#include <plasma/accessmanager.h>
 #include <plasma/animationdriver.h>
+#include <plasma/animation.h>
 #include <plasma/animations/animation.h>
-// #include <plasma/animations/rotationstacked.h>
 #include <plasma/animator.h>
 #include <plasma/applet.h>
+#include <plasma/authorizationinterface.h>
+#include <plasma/authorizationmanager.h>
+#include <plasma/authorizationrule.h>
+#include <plasma/clientpinrequest.h>
 #include <plasma/configloader.h>
-#include <plasma/containment.h>
 #include <plasma/containmentactions.h>
 #include <plasma/containmentactionspluginsconfig.h>
+#include <plasma/containment.h>
 #include <plasma/context.h>
 #include <plasma/corona.h>
+#include <plasma/credentials.h>
 #include <plasma/datacontainer.h>
 #include <plasma/dataengine.h>
 #include <plasma/dataenginemanager.h>
@@ -35,6 +43,7 @@
 #include <plasma/scripting/runnerscript.h>
 #include <plasma/scripting/scriptengine.h>
 #include <plasma/scripting/wallpaperscript.h>
+#include <plasma/serviceaccessjob.h>
 #include <plasma/service.h>
 #include <plasma/servicejob.h>
 #include <plasma/svg.h>
@@ -42,6 +51,7 @@
 #include <plasma/tooltipcontent.h>
 #include <plasma/tooltipmanager.h>
 #include <plasma/view.h>
+#include <plasma/wallpaper.h>
 #include <plasma/widgets/busywidget.h>
 #include <plasma/widgets/checkbox.h>
 #include <plasma/widgets/combobox.h>
@@ -69,3 +79,4 @@
 #include <plasma/widgets/treeview.h>
 #include <plasma/widgets/videowidget.h>
 #include <plasma/widgets/webview.h>
+#include <plasma/windoweffects.h>
