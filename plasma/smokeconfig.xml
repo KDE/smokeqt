@@ -31,6 +31,7 @@
         <signature>.*Plasma::Package::(un|is)?[pP]ublish(ed)?\(.*</signature>
         
         <!-- Plasma::Credentials doesn't implement the ctor and dtor, so we can't return it by value -->
+        <signature>.*AuthorizationRule::credentials.*</signature>
         <signature>.*Plasma::ServiceJob::identity\(\).*</signature>
         
         <signature>.*Plasma::operator(&lt;&lt;|&gt;&gt;)\(QDataStream&amp;, (const\s)?Plasma::Credentials&amp;\).*</signature>
@@ -50,14 +51,17 @@
         <class>Plasma::Animator</class>
         <class>Plasma::Applet</class>
         <class>Plasma::AppletScript</class>
+        <class>Plasma::AuthorizationInterface</class>
+        <class>Plasma::AuthorizationManager</class>
+        <class>Plasma::AuthorizationRule</class>
         <class>Plasma::BusyWidget</class>
         <class>Plasma::CheckBox</class>
         <class>Plasma::ClientPinRequest</class>
         <class>Plasma::ComboBox</class>
         <class>Plasma::ConfigLoader</class>
-        <class>Plasma::Containment</class>
         <class>Plasma::ContainmentActions</class>
         <class>Plasma::ContainmentActionsPluginsConfig</class>
+        <class>Plasma::Containment</class>
         <class>Plasma::Containment::StyleOption</class>
         <class>Plasma::Context</class>
         <class>Plasma::Corona</class>
@@ -66,6 +70,7 @@
         <class>Plasma::DataEngineManager</class>
         <class>Plasma::DataEngineScript</class>
         <class>Plasma::Delegate</class>
+        <class>Plasma::DenyAllAuthorization</class>
         <class>Plasma::Dialog</class>
         <class>Plasma::Extender</class>
         <class>Plasma::ExtenderGroup</class>
@@ -83,6 +88,8 @@
         <class>Plasma::Package</class>
         <class>Plasma::PackageMetadata</class>
         <class>Plasma::PackageStructure</class>
+        <class>Plasma::PinPairingAuthorization</class>
+        <class>Plasma::PinPairingDialog</class>
         <class>Plasma::PlotColor</class>
         <class>Plasma::PopupApplet</class>
         <class>Plasma::PushButton</class>
@@ -96,8 +103,8 @@
         <class>Plasma::ScrollBar</class>
         <class>Plasma::ScrollWidget</class>
         <class>Plasma::Separator</class>
-        <class>Plasma::Service</class>
         <class>Plasma::ServiceAccessJob</class>
+        <class>Plasma::Service</class>
         <class>Plasma::ServiceJob</class>
         <class>Plasma::SignalPlotter</class>
         <class>Plasma::Slider</class>
@@ -112,6 +119,7 @@
         <class>Plasma::ToolTipContent</class>
         <class>Plasma::ToolTipManager</class>
         <class>Plasma::TreeView</class>
+        <class>Plasma::TrustedOnlyAuthorization</class>
         <class>Plasma::VideoWidget</class>
         <class>Plasma::View</class>
         <class>Plasma::Wallpaper</class>
