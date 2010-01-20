@@ -15,7 +15,6 @@
         <typeName>QString</typeName>
     </voidpTypes>
     <classList>
-        <class>QGraphicsWebView</class>
         <class>QWebDatabase</class>
         <class>QWebElement</class>
         <class>QWebElementCollection</class>

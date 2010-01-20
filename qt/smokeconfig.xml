@@ -73,7 +73,6 @@
         <class>QAbstractListModel</class>
         <class>QAbstractNetworkCache</class>
         <class>QAbstractPageSetupDialog</class>
-        <class>QAbstractPrintDialog</class>
         <class>QAbstractProxyModel</class>
         <class>QAbstractScrollArea</class>
         <class>QAbstractSlider</class>
