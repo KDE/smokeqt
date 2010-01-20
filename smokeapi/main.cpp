@@ -24,9 +24,12 @@
 #include <smoke.h>
 #include <qtcore_smoke.h>
 
+static QTextStream qOut(stdout);
+
 typedef void (*InitSmokeFn)();
 static QList<Smoke*> smokeModules;
 
+static bool showClassNamesOnly;
 static bool showParents;
 static bool matchPattern;
 static bool caseInsensitive;
@@ -141,8 +144,17 @@ getAllParents(const Smoke::ModuleIndex& classId)
 }
 
 static void
-listAllMethods(const Smoke::ModuleIndex& classId)
+showClass(const Smoke::ModuleIndex& classId)
 {
+    if (showClassNamesOnly) {
+        QString className = QString::fromLatin1(classId.smoke->classes[classId.index].className);    
+        if (!matchPattern || targetPattern.indexIn(className) != -1) {
+            qOut << className << "\n";
+        }
+        
+        return;
+    }
+    
     Smoke * smoke = classId.smoke;
     Smoke::Index imax = smoke->numMethodMaps;
     Smoke::Index imin = 0, icur = -1, methmin, methmax;
@@ -181,14 +193,14 @@ listAllMethods(const Smoke::ModuleIndex& classId)
             if (ix >= 0) {  // single match
                 QString method = methodToString(Smoke::ModuleIndex(smoke, ix));
                 if (!matchPattern || targetPattern.indexIn(method) != -1) {
-                    qWarning("%s", method.toLatin1().constData());
+                    qOut << method << "\n";
                 }
             } else {        // multiple match
                 ix = -ix;       // turn into ambiguousMethodList index
                 while (smoke->ambiguousMethodList[ix]) {
                     QString method = methodToString(Smoke::ModuleIndex(smoke, smoke->ambiguousMethodList[ix]));
                     if (!matchPattern || targetPattern.indexIn(method) != -1) {
-                        qWarning("%s", method.toLatin1().constData());
+                        qOut << method << "\n";
                     }
                     
                     ix++;
@@ -199,13 +211,14 @@ listAllMethods(const Smoke::ModuleIndex& classId)
 }
 
 #define PRINT_USAGE() \
-    qDebug() << "Usage:" << argv[0] << "-r <smoke lib> [-r more smoke libs..] [-p] [-m pattern] [-i] [<classname(s)>..]"
+    qDebug() << "Usage:" << argv[0] << "-r <smoke lib> [-r more smoke libs..] [-c] [-p] [-m pattern] [-i] [<classname(s)>..]"
 
 int main(int argc, char** argv)
 {
     QCoreApplication app(argc, argv);
     QStringList arguments = app.arguments();
     
+    showClassNamesOnly = false;
     showParents = false;
     caseInsensitive = false;
     matchPattern = false;
@@ -225,6 +238,9 @@ int main(int argc, char** argv)
             if (i < arguments.length()) {
                 smokeModules << loadSmokeModule(arguments[i]);
             }
+            i++;
+        } else if (arguments[i] == QLatin1String("-c") || arguments[i] == QLatin1String("--classes")) {
+            showClassNamesOnly = true;
             i++;
         } else if (arguments[i] == QLatin1String("-p") || arguments[i] == QLatin1String("--parents")) {
             showParents = true;
@@ -258,7 +274,7 @@ int main(int argc, char** argv)
             foreach (Smoke * smoke, smokeModules) {
                 for (int i = 1; i <= smoke->numClasses; i++) {
                     if (!smoke->classes[i].external) {
-                        listAllMethods(Smoke::ModuleIndex(smoke, i));
+                        showClass(Smoke::ModuleIndex(smoke, i));
                     }
                 }
             }
@@ -278,10 +294,10 @@ int main(int argc, char** argv)
         if (showParents) {
             QList<Smoke::ModuleIndex> parents = getAllParents(classId);
             foreach (Smoke::ModuleIndex parentId, parents) {
-                listAllMethods(parentId);
+                showClass(parentId);
             }
         } else {
-            listAllMethods(classId);
+            showClass(classId);
         }
         
         i++;
