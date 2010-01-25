@@ -202,5 +202,6 @@
 
         <!-- namespaces -->
         <class>KDE</class>
+        <class>KGlobal</class>
     </classList>
 </config>
