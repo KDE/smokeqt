@@ -27,6 +27,8 @@
 static QTextStream qOut(stdout);
 
 typedef void (*InitSmokeFn)();
+typedef QPair<Smoke::ModuleIndex,int> ClassEntry;
+
 static QList<Smoke*> smokeModules;
 
 static bool showClassNamesOnly;
@@ -124,11 +126,11 @@ methodToString(Smoke::ModuleIndex methodId)
     return result;
 }
 
-static QList<Smoke::ModuleIndex>
-getAllParents(const Smoke::ModuleIndex& classId)
+static QList<ClassEntry>
+getAllParents(const Smoke::ModuleIndex& classId, int indent)
 {
     Smoke* smoke = classId.smoke;
-    QList<Smoke::ModuleIndex> result;
+    QList<ClassEntry> result;
     
     for (   Smoke::Index * parent = smoke->inheritanceList + smoke->classes[classId.index].parents; 
             *parent != 0; 
@@ -136,19 +138,23 @@ getAllParents(const Smoke::ModuleIndex& classId)
     {
         Smoke::ModuleIndex parentId = Smoke::findClass(smoke->classes[*parent].className);
         Q_ASSERT(parentId != Smoke::NullModuleIndex);
-        result << getAllParents(parentId);
+        result << getAllParents(parentId, indent + 1);
     }
     
-    result << classId;
+    result << ClassEntry(classId, indent);
     return result;
 }
 
 static void
-showClass(const Smoke::ModuleIndex& classId)
+showClass(const Smoke::ModuleIndex& classId, int indent)
 {
     if (showClassNamesOnly) {
         QString className = QString::fromLatin1(classId.smoke->classes[classId.index].className);    
         if (!matchPattern || targetPattern.indexIn(className) != -1) {
+			while (indent > 0) {
+				qOut << "  ";
+				indent--;
+			}
             qOut << className << "\n";
         }
         
@@ -274,7 +280,7 @@ int main(int argc, char** argv)
             foreach (Smoke * smoke, smokeModules) {
                 for (int i = 1; i <= smoke->numClasses; i++) {
                     if (!smoke->classes[i].external) {
-                        showClass(Smoke::ModuleIndex(smoke, i));
+                        showClass(Smoke::ModuleIndex(smoke, i), 0);
                     }
                 }
             }
@@ -292,12 +298,12 @@ int main(int argc, char** argv)
         }
         
         if (showParents) {
-            QList<Smoke::ModuleIndex> parents = getAllParents(classId);
-            foreach (Smoke::ModuleIndex parentId, parents) {
-                showClass(parentId);
+            QList<ClassEntry> parents = getAllParents(classId, 0);
+            foreach (ClassEntry parent, parents) {
+                showClass(parent.first, parent.second);
             }
         } else {
-            showClass(classId);
+            showClass(classId, 0);
         }
         
         i++;
