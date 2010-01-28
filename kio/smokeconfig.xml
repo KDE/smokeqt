@@ -80,6 +80,7 @@
         <class>KIconCanvas</class>
         <class>KIconDialog</class>
         <class>KImageFilePreview</class>
+        <class>KIO</class>
         <class>KIO::AccessManager</class>
         <class>KIO::ChmodJob</class>
         <class>KIO::Connection</class>
