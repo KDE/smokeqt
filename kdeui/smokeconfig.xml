@@ -31,9 +31,12 @@
         <signature>.*KWallet::Wallet::Wallet\(const KWallet::Wallet&amp;\)</signature>
         <!-- operator(<<|>>)(QDataStream&, KDateTime*) - why are these operators not implemented/exported? -->
         <signature>.*operator(&lt;&lt;|&gt;&gt;)\(QDataStream&amp;, (const\s)?KDateTime.*</signature>
+
+        <signature>.*KStandardShortcut::insert\(\).*</signature>
     </exclude>
     <functions>
         <name>KStandardAction::.*</name>
+        <name>KStandardShortcut::.*</name>
     </functions>
     <classList>
         <class>KAboutApplicationDialog</class>
@@ -203,6 +206,7 @@
         <class>KSplashScreen</class>
         <class>KSqueezedTextLabel</class>
         <class>KStandardAction</class>
+        <class>KStandardShortcut</class>
         <class>KStartupInfo</class>
         <class>KStartupInfoData</class>
         <class>KStartupInfoId</class>
