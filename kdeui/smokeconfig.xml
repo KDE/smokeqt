@@ -33,6 +33,7 @@
         <signature>.*operator(&lt;&lt;|&gt;&gt;)\(QDataStream&amp;, (const\s)?KDateTime.*</signature>
     </exclude>
     <functions>
+        <name>KStandardAction::.*</name>
     </functions>
     <classList>
         <class>KAboutApplicationDialog</class>
@@ -201,6 +202,7 @@
         <class>KShortcutWidget</class>
         <class>KSplashScreen</class>
         <class>KSqueezedTextLabel</class>
+        <class>KStandardAction</class>
         <class>KStartupInfo</class>
         <class>KStartupInfoData</class>
         <class>KStartupInfoId</class>
