@@ -13,6 +13,7 @@
         <!-- both are classes, but they are represented as Smoke::t_voidp -->
         <typeName>QStringList</typeName>
         <typeName>QString</typeName>
+        <typeName>KUrl::List</typeName>
     </voidpTypes>
     <exclude>
         <!-- private stuff -->

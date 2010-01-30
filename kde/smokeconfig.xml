@@ -10,6 +10,7 @@
     <voidpTypes>
         <!-- both are classes, but they are represented as Smoke::t_voidp -->
         <typeName>QStringList</typeName>
+        <typeName>KUrl::List</typeName>
         <typeName>QString</typeName>
     </voidpTypes>
     <exclude>
