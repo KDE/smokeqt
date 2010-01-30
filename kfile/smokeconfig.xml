@@ -50,6 +50,7 @@
         <class>KDirOperator</class>
         <class>KDirSelectDialog</class>
         <class>KDirSortFilterProxyModel</class>
+        <class>KFile</class>
         <class>KFileFilterCombo</class>
         <class>KFilePlacesModel</class>
         <class>KFilePlacesView</class>
