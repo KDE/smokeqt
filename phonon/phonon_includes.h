@@ -1,3 +1,5 @@
+#define PHONON_EXPORT
+
 #include <phonon/abstractaudiooutput.h>
 #include <phonon/abstractmediastream.h>
 #include <phonon/abstractvideooutput.h>
