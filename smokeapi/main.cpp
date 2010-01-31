@@ -91,7 +91,9 @@ methodToString(Smoke::ModuleIndex methodId)
         result.append("virtual ");
     }
     
-    if ((methodRef.flags & Smoke::mf_static) != 0) {
+    if (	(methodRef.flags & Smoke::mf_static) != 0
+            && (smoke->classes[methodRef.classId].flags & Smoke::cf_namespace) == 0 )
+    {
         result.append("static ");
     }
     
