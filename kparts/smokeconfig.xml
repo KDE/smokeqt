@@ -58,6 +58,7 @@
         <class>KParts::HistoryProvider</class>
         <class>KParts::LiveConnectExtension</class>
         <class>KParts::MainWindow</class>
+        <class>KParts::OpenUrlArguments</class>
         <class>KParts::OpenUrlEvent</class>
         <class>KParts::PartActivateEvent</class>
         <class>KParts::PartBase</class>
