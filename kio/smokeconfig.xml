@@ -125,6 +125,7 @@
         <class>KIO::StoredTransferJob</class>
         <class>KIO::TCPSlaveBase</class>
         <class>KIO::TransferJob</class>
+        <class>KIO::UDSEntry</class>
         <class>KMimeTypeChooser</class>
         <class>KMimeTypeChooserDialog</class>
         <class>KMimeTypeResolver</class>
