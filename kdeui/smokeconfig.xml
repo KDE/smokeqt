@@ -207,6 +207,7 @@
         <class>KSplashScreen</class>
         <class>KSqueezedTextLabel</class>
         <class>KStandardAction</class>
+        <class>KStandardGuiItem</class>
         <class>KStandardShortcut</class>
         <class>KStartupInfo</class>
         <class>KStartupInfoData</class>
