@@ -53,6 +53,8 @@
         <class>KAboutPerson</class>
         <class>KAuth::Action</class>
         <class>KAuth::ActionWatcher</class>
+        <class>KAuth</class>
+        <class>KAuthorized</class>
         <class>KAutoSaveFile</class>
         <class>KAutostart</class>
         <class>KCalendarSystem</class>
@@ -60,6 +62,7 @@
         <class>KCharsets</class>
         <class>KCmdLineArgs</class>
         <class>KCmdLineOptions</class>
+        <class>KCodecs</class>
         <class>KComponentData</class>
         <class>KCompositeJob</class>
         <class>KCompositeJobPrivate</class>
@@ -105,6 +108,7 @@
         <class>KFilterDev</class>
         <class>KFolderMimeType</class>
         <class>KGzipFilter</class>
+        <class>KIDNA</class>
         <class>KJob</class>
         <class>KJobPrivate</class>
         <class>KJobTrackerInterface</class>
@@ -117,13 +121,16 @@
         <class>KLocalSocketServer</class>
         <class>KLockFile</class>
         <class>KMacroExpanderBase</class>
+        <class>KMacroExpander</class>
         <class>KMD5</class>
         <class>KMemFile</class>
+        <class>KMessage</class>
         <class>KMessageHandler</class>
         <class>KMimeType</class>
         <class>KMimeTypeFactory</class>
         <class>KMimeTypeTrader</class>
         <class>kndbgstream</class>
+        <class>KNetwork</class>
         <class>KNetwork::KActiveSocketBase</class>
         <class>KNetwork::KBufferedSocket</class>
         <class>KNetwork::KClientSocketBase</class>
@@ -151,6 +158,7 @@
         <class>KProtocolInfo</class>
         <class>KProtocolInfo::ExtraField</class>
         <class>KProtocolInfoFactory</class>
+        <class>KRandom</class>
         <class>KRandomSequence</class>
         <class>KSaveFile</class>
         <class>KServiceAction</class>
@@ -162,11 +170,14 @@
         <class>KServiceTypeFactory</class>
         <class>KServiceTypeTrader</class>
         <class>KSharedConfig</class>
+        <class>KShell</class>
+        <class>KSocketFactory</class>
         <class>KSslCipher</class>
         <class>KSslError</class>
         <class>KSslErrorUiData</class>
         <class>KSslKey</class>
         <class>KStandardDirs</class>
+        <class>KStringHandler</class>
         <class>KSycoca</class>
         <class>KSycocaEntry</class>
         <class>KSycocaFactory</class>
@@ -186,15 +197,18 @@
         <class>KTimeZoneSource</class>
         <class>KTimeZone::Transition</class>
         <class>KToolInvocation</class>
+        <class>KTraderParse</class>
         <class>KTzfileTimeZoneBackend</class>
         <class>KTzfileTimeZone</class>
         <class>KTzfileTimeZoneSource</class>
+        <class>KuitFormats</class>
         <class>KUrl</class>
         <class>KUser</class>
         <class>KUserGroup</class>
         <class>KWordMacroExpander</class>
         <class>OrgKdeKLauncherInterface</class>
         <class>Sonnet::BackgroundChecker</class>
+        <class>Sonnet</class>
         <class>Sonnet::Client</class>
         <class>Sonnet::Filter</class>
         <class>Sonnet::Loader</class>

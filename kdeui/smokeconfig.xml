@@ -43,6 +43,7 @@
         <class>KAboutApplicationDialog</class>
         <class>KAbstractWidgetJobTracker</class>
         <class>KAcceleratorManager</class>
+        <class>KAccelGen</class>
         <class>KActionCategory</class>
         <class>KAction</class>
         <class>KActionCollection</class>
@@ -52,6 +53,7 @@
         <class>KApplication</class>
         <class>KArrowButton</class>
         <class>KAssistantDialog</class>
+        <class>KAuth</class>
         <class>KBugReport</class>
         <class>KButtonGroup</class>
         <class>KCapacityBar</class>
@@ -68,8 +70,11 @@
         <class>KColorCollection</class>
         <class>KColorCombo</class>
         <class>KColorDialog</class>
+        <class>KColorMimeData</class>
         <class>KColorPatch</class>
         <class>KColorScheme</class>
+        <class>KColorSpaces</class>
+        <class>KColorUtils</class>
         <class>KColorValueSelector</class>
         <class>KComboBox</class>
         <class>KCompletionBase</class>
@@ -91,6 +96,7 @@
         <class>KDateTimeWidget</class>
         <class>KDateValidator</class>
         <class>KDateWidget</class>
+        <class>KdePrint</class>
         <class>KdeUiProxyStyle</class>
         <class>KDialogButtonBox</class>
         <class>KDialog</class>
@@ -127,11 +133,13 @@
         <class>KIconEffect</class>
         <class>KIconLoader</class>
         <class>KIconTheme</class>
+        <class>KInputDialog</class>
         <class>KIntNumInput</class>
         <class>KIntSpinBox</class>
         <class>KIntValidator</class>
         <class>KKeySequenceWidget</class>
         <class>KKeySequenceWidget:</class>
+        <class>KKeyServer</class>
         <class>KLanguageButton</class>
         <class>KLed</class>
         <class>KLineEdit</class>
@@ -252,14 +260,17 @@
         <class>KWordWrap</class>
         <class>KXMessages</class>
         <class>KXMLGUIBuilder</class>
+        <class>KXMLGUI</class>
         <class>KXMLGUIClient</class>
         <class>KXMLGUIFactory</class>
         <class>KXmlGuiWindow</class>
+        <class>KXUtils</class>
         <class>KXYSelector</class>
         <class>NET</class>
         <class>NETRootInfo</class>
         <class>NETWinInfo2</class>
         <class>NETWinInfo</class>
+        <class>Sonnet</class>
         <class>Sonnet::ConfigDialog</class>
         <class>Sonnet::ConfigWidget</class>
         <class>Sonnet::Dialog</class>
