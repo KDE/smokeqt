@@ -2,6 +2,7 @@
 include_directories( ${QT_INCLUDES} ${CMAKE_SOURCE_DIR}/smoke )
 
 configure_file(config.xml.cmake ${CMAKE_CURRENT_BINARY_DIR}/config.xml @ONLY)
+configure_file(qt-config.xml.cmake ${CMAKE_CURRENT_BINARY_DIR}/qt-config.xml @ONLY)
 
 # for QtGuess.txt
 if (APPLE)
@@ -85,3 +86,5 @@ set_target_properties(smokeqtcore PROPERTIES VERSION 3.0.0 SOVERSION 3 )
 # for Qt only installs
 install(TARGETS smokeqtcore DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
 install(FILES ${CMAKE_SOURCE_DIR}/smoke/qtcore_smoke.h DESTINATION include/smoke)
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/qt-config.xml DESTINATION share/smokegen)
+install(FILES ${CMAKE_BINARY_DIR}/smoke/qtdefines DESTINATION share/smokegen)
