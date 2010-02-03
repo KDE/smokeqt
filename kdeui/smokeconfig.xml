@@ -36,8 +36,12 @@
         <signature>.*KStandardShortcut::insert\(\).*</signature>
     </exclude>
     <functions>
-        <name>KStandardAction::.*</name>
-        <name>KStandardShortcut::.*</name>
+        <name>BarIcon.*</name>
+        <name>DesktopIcon.*</name>
+        <name>IconSize.*</name>
+        <name>MainBarIcon.*</name>
+        <name>SmallIcon.*</name>
+        <name>UserIcon.*</name>
     </functions>
     <classList>
         <class>KAboutApplicationDialog</class>
