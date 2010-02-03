@@ -12,10 +12,10 @@ link_directories( ${LIBATTICA_LIBRARY_DIR} )
 add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp 
     ${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp 
 
-    COMMAND generator
+    COMMAND smokegen
     ARGS -config "${CMAKE_CURRENT_BINARY_DIR}/../kdecore/config.xml" -smokeconfig "${CMAKE_CURRENT_SOURCE_DIR}/smokeconfig.xml"
          -- ${CMAKE_CURRENT_SOURCE_DIR}/attica_includes.h
-    DEPENDS generator generator_smoke WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
+    DEPENDS smokegen generator_smoke WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
 
 macro_add_file_dependencies( ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp ${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp )
 
