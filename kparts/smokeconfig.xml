@@ -64,5 +64,7 @@
         <class>KParts::ReadOnlyPart</class>
         <class>KParts::ReadWritePart</class>
         <class>KParts::StatusBarExtension</class>
+        <class>TerminalInterface</class>
+        <class>TerminalInterfaceV2</class>
     </classList>
 </config>

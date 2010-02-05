@@ -13,3 +13,6 @@
 #include <kparts/browserrun.h>
 #include <kparts/statusbarextension.h>
 #include <kparts/browseropenorsavequestion.h>
+
+#include <kde_terminal_interface.h>
+#include <kde_terminal_interface_v2.h>
