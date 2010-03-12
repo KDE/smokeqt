@@ -23,6 +23,7 @@
     <classList>
         <class>Soprano</class>
         <class>Soprano::Backend</class>
+        <class>Soprano::BackendSetting</class>
         <class>Soprano::DesktopFile</class>
         <class>Soprano::Error::ErrorCache</class>
         <class>Soprano::Error::Error</class>
