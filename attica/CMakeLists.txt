@@ -1,11 +1,10 @@
 find_package(LibAttica REQUIRED)
 
-IF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
-    ADD_DEFINITIONS(-DGCC_VISIBILITY)
-ENDIF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
+if(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
+    add_definitions(-DGCC_VISIBILITY)
+endif(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
 
-include_directories( ${CMAKE_SOURCE_DIR}/smoke ${LIBATTICA_INCLUDE_DIRS} )
-link_directories( ${LIBATTICA_LIBRARY_DIR} )
+include_directories( ${CMAKE_SOURCE_DIR}/smoke ${LIBATTICA_INCLUDE_DIR} )
 
 ########### next target ###############
 
