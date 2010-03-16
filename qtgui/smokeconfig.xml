@@ -54,12 +54,16 @@
         <class>QAbstractTextDocumentLayout::Selection</class>
         <class>QAbstractUndoItem</class>
         <class>QAccessible2Interface</class>
+        <class>QAccessibleActionInterface</class>
         <class>QAccessibleApplication</class>
         <class>QAccessibleBridge</class>
+        <class>QAccessibleBridgeFactoryInterface</class>
+        <class>QAccessibleBridgePlugin</class>
         <class>QAccessible</class>
         <class>QAccessibleEditableTextInterface</class>
         <class>QAccessibleEvent</class>
         <class>QAccessibleFactoryInterface</class>
+        <class>QAccessibleImageInterface</class>
         <class>QAccessibleInterface</class>
         <class>QAccessibleInterfaceEx</class>
         <class>QAccessibleObject</class>
@@ -117,8 +121,10 @@
         <class>QDragResponseEvent</class>
         <class>QDropEvent</class>
         <class>QErrorMessage</class>
+        <class>QFactoryInterface</class>
         <class>QFileDialogArgs</class>
         <class>QFileDialog</class>
+        <class>QFileDialog::Options</class>
         <class>QFileIconProvider</class>
         <class>QFileOpenEvent</class>
         <class>QFileSystemModel</class>
@@ -238,6 +244,7 @@
         <class>QMainWindow</class>
         <class>QMargins</class>
         <class>QMatrix</class>
+        <class>QMatrix4x4</class>
         <class>QMdiArea</class>
         <class>QMdi::ControlContainer</class>
         <class>QMdiSubWindow</class>
@@ -269,6 +276,7 @@
         <class>QPictureIO</class>
         <class>QPinchGesture</class>
         <class>QPixmapCache</class>
+        <class>QPixmapCache::Key</class>
         <class>QPixmap</class>
         <class>QPlainTextDocumentLayout</class>
         <class>QPlainTextEdit</class>
@@ -354,6 +362,7 @@
         <class>QStyleOptionTabV2</class>
         <class>QStyleOptionTabV3</class>
         <class>QStyleOptionTabWidgetFrame</class>
+        <class>QStyleOptionTabWidgetFrameV2</class>
         <class>QStyleOptionTitleBar</class>
         <class>QStyleOptionToolBar</class>
         <class>QStyleOptionToolBox</class>
@@ -382,6 +391,7 @@
         <class>QTapAndHoldGesture</class>
         <class>QTapGesture</class>
         <class>QTextBlock</class>
+        <class>QTextBlock::iterator</class>
         <class>QTextBlockFormat</class>
         <class>QTextBlockGroup</class>
         <class>QTextBlockUserData</class>
@@ -398,6 +408,7 @@
         <class>QTextFormatCollection</class>
         <class>QTextFragment</class>
         <class>QTextFrame</class>
+        <class>QTextFrame::iterator</class>
         <class>QTextFrameFormat</class>
         <class>QTextFrameLayoutData</class>
         <class>QTextImageFormat</class>
@@ -426,6 +437,7 @@
         <class>QToolButton</class>
         <class>QToolTip</class>
         <class>QTouchEvent</class>
+        <class>QTouchEvent::TouchPoint</class>
         <class>QTransform</class>
         <class>QTreeModel</class>
         <class>QTreeView</class>
