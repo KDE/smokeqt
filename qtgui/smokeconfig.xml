@@ -53,6 +53,7 @@
         <class>QAbstractTextDocumentLayout::PaintContext</class>
         <class>QAbstractTextDocumentLayout::Selection</class>
         <class>QAbstractUndoItem</class>
+        <class>QAccessible2</class>
         <class>QAccessible2Interface</class>
         <class>QAccessibleActionInterface</class>
         <class>QAccessibleApplication</class>
@@ -471,6 +472,5 @@
         <class>QX11EmbedContainer</class>
         <class>QX11EmbedWidget</class>
         <class>QX11Info</class>
-
      </classList>
 </config>
