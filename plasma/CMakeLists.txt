@@ -3,14 +3,14 @@ include_directories( ${CMAKE_SOURCE_DIR}/smoke )
 
 ########### next target ###############
 
-add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp 
-    ${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp 
-    ${CMAKE_CURRENT_BINARY_DIR}/x_2.cpp 
-    ${CMAKE_CURRENT_BINARY_DIR}/x_3.cpp 
-    ${CMAKE_CURRENT_BINARY_DIR}/x_4.cpp 
-    ${CMAKE_CURRENT_BINARY_DIR}/x_5.cpp 
-    ${CMAKE_CURRENT_BINARY_DIR}/x_6.cpp 
-    ${CMAKE_CURRENT_BINARY_DIR}/x_7.cpp 
+add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/x_2.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/x_3.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/x_4.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/x_5.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/x_6.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/x_7.cpp
     ${CMAKE_CURRENT_BINARY_DIR}/x_8.cpp
     ${CMAKE_CURRENT_BINARY_DIR}/x_9.cpp
     ${CMAKE_CURRENT_BINARY_DIR}/x_10.cpp
@@ -22,8 +22,8 @@ add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp
 
 macro_add_file_dependencies( ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp ${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp )
 
-set(smokeplasma_LIB_SRCS ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp  
-                ${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp 
+set(smokeplasma_LIB_SRCS ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp
+                ${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp
                 ${CMAKE_CURRENT_BINARY_DIR}/x_2.cpp
                 ${CMAKE_CURRENT_BINARY_DIR}/x_3.cpp
                 ${CMAKE_CURRENT_BINARY_DIR}/x_4.cpp
@@ -41,12 +41,11 @@ ENDIF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
 
 kde4_add_library(smokeplasma SHARED ${smokeplasma_LIB_SRCS})
 
-target_link_libraries(smokeplasma 
+target_link_libraries(smokeplasma
     ${KDE4_KDEUI_LIBS}
     ${KDE4_PLASMA_LIBS}
     smokeqtcore
     smokeqtgui
-    smokeqtwebkit
     smokekdecore
     smokekdeui
 )
