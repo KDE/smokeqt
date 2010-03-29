@@ -17,6 +17,7 @@
     <exclude>
         <!-- private stuff -->
         <signature>.*Phonon::.*::k_ptr</signature>
+        <signature>.*Phonon::.*::d_ptr</signature>
         <signature>.*Phonon::.*::d</signature>
     </exclude>
     <classList>
