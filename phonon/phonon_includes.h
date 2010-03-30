@@ -1,4 +1,6 @@
-#define PHONON_EXPORT
+#ifdef __SMOKEGEN_RUN__
+#  define PHONON_EXPORT
+#endif
 
 #include <phonon/abstractaudiooutput.h>
 #include <phonon/abstractmediastream.h>
