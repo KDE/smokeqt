@@ -1,12 +1,10 @@
 add_definitions(-DSMOKE_BUILDING)
-add_subdirectory(qt)
-set(SMOKE_ENABLED "yes - Qt")
+set(SMOKE_ENABLED "yes - QtCore")
 
 add_subdirectory(qtcore)
 add_subdirectory(deptool)
 add_subdirectory(smokeapi)
 
-set(SMOKE_ENABLED "${SMOKE_ENABLED}, QtCore")
 add_subdirectory(qtnetwork)
 set(SMOKE_ENABLED "${SMOKE_ENABLED}, QtNetwork")
 add_subdirectory(qtdbus)
@@ -55,9 +53,6 @@ if(QIMAGEBLITZ_FOUND)
 endif(QIMAGEBLITZ_FOUND)
 
 if(KDE4_FOUND)
-    add_subdirectory(kde)
-    set(SMOKE_ENABLED "${SMOKE_ENABLED}, KDE")
-
     add_subdirectory(kdecore)
     set(SMOKE_ENABLED "${SMOKE_ENABLED}, KDECore")
 
