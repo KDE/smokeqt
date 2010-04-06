@@ -243,7 +243,6 @@
         <class>QListWidget</class>
         <class>QListWidgetItem</class>
         <class>QMainWindow</class>
-        <class>QMargins</class>
         <class>QMatrix</class>
         <class>QMatrix4x4</class>
         <class>QMdiArea</class>
