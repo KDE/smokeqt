@@ -18,6 +18,8 @@
         <class>QWebDatabase</class>
         <class>QWebElement</class>
         <class>QWebElementCollection</class>
+        <class>QWebElementCollection::iterator</class>
+        <class>QWebElementCollection::const_iterator</class>
         <class>QWebFrame</class>
         <class>QWebHistory</class>
         <class>QWebHistoryInterface</class>
@@ -25,7 +27,17 @@
         <class>QWebHitTestResult</class>
         <class>QWebInspector</class>
         <class>QWebPage</class>
+        <class>QWebPage::ChooseMultipleFilesExtensionOption</class>
+        <class>QWebPage::ChooseMultipleFilesExtensionReturn</class>
+        <class>QWebPage::ErrorPageExtensionOption</class>
+        <class>QWebPage::ErrorPageExtensionReturn</class>
+        <class>QWebPage::ExtensionOption</class>
+        <class>QWebPage::ExtensionReturn</class>
         <class>QWebPluginFactory</class>
+        <class>QWebPluginFactory::ExtensionOption</class>
+        <class>QWebPluginFactory::ExtensionReturn</class>
+        <class>QWebPluginFactory::MimeType</class>
+        <class>QWebPluginFactory::Plugin</class>
         <class>QWebSecurityOrigin</class>
         <class>QWebSettings</class>
         <class>QWebView</class>
