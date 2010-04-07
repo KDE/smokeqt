@@ -42,5 +42,8 @@
         <class>QAudioOutput</class>
         <class>QVideoFrame</class>
         <class>QVideoSurfaceFormat</class>
+        
+        <!-- namespaces -->
+        <class>QAudio</class>
      </classList>
 </config>
