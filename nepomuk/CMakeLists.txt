@@ -7,7 +7,7 @@ ENDIF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
 
 include_directories( ${CMAKE_SOURCE_DIR}/smoke ${SOPRANO_INCLUDE_DIR} ${NEPOMUK_QUERY_INCLUDE_DIR} )
 
-########### next target ###############
+configure_file(config.xml.cmake ${CMAKE_CURRENT_BINARY_DIR}/config.xml @ONLY)
 
 add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp 
     ${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp 
@@ -22,7 +22,7 @@ add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp
     ${CMAKE_CURRENT_BINARY_DIR}/x_10.cpp
 
     COMMAND smokegen
-    ARGS -config "${CMAKE_CURRENT_BINARY_DIR}/../kde/config.xml" -smokeconfig "${CMAKE_CURRENT_SOURCE_DIR}/smokeconfig.xml"
+    ARGS -config "${CMAKE_CURRENT_BINARY_DIR}/config.xml" -smokeconfig "${CMAKE_CURRENT_SOURCE_DIR}/smokeconfig.xml"
          -- ${CMAKE_CURRENT_SOURCE_DIR}/nepomuk_includes.h
     DEPENDS smokegen generator_smoke WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
 

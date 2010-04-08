@@ -3,7 +3,7 @@ set(soprano_includes ${SOPRANO_INCLUDE_DIR})
 
 include_directories( ${QT_INCLUDES} ${SOPRANO_INCLUDE_DIR} )
 
-########### next target ###############
+configure_file(config.xml.cmake ${CMAKE_CURRENT_BINARY_DIR}/config.xml @ONLY)
 
 add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp
 	${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp
@@ -18,7 +18,7 @@ add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp
 	${CMAKE_CURRENT_BINARY_DIR}/x_10.cpp
 
     COMMAND smokegen
-    ARGS -config "${CMAKE_CURRENT_BINARY_DIR}/../qt/config.xml" -smokeconfig "${CMAKE_CURRENT_SOURCE_DIR}/smokeconfig.xml"
+    ARGS -config "${CMAKE_CURRENT_BINARY_DIR}/config.xml" -smokeconfig "${CMAKE_CURRENT_SOURCE_DIR}/smokeconfig.xml"
          -I "${SOPRANO_INCLUDE_DIR}" -- ${CMAKE_CURRENT_SOURCE_DIR}/soprano_includes.h
     DEPENDS smokegen generator_smoke WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
 
