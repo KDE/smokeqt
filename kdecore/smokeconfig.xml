@@ -28,6 +28,7 @@
         <signature>.*stat\*.*</signature>
         <signature>.*utimbuf\*.*</signature>
         
+        <signature>.*KAuth::ActionReply::setType\(KAuth::ActionReply::Type\)</signature>
         
         <!-- For some reason kconfiggroup.h includes conversion_check.h which in turn includes QtGui -->
         <signature>.*QColor*.*</signature>
@@ -51,9 +52,19 @@
         <class>KAboutData</class>
         <class>KAboutLicense</class>
         <class>KAboutPerson</class>
-        <class>KAuth::Action</class>
-        <class>KAuth::ActionWatcher</class>
         <class>KAuth</class>
+        <class>KAuth::Action</class>
+        <class>KAuth::ActionReply</class>
+        <class>KAuth::ActionWatcher</class>
+        <class>KAuth::AuthBackend</class>
+        <class>KAuth::AuthServicesBackend</class>
+        <class>KAuth::BackendsManager</class>
+        <class>KAuth::DBusHelperProxy</class>
+        <class>KAuth::FakeBackend</class>
+        <class>KAuth::FakeHelperProxy</class>
+        <class>KAuth::HelperProxy</class>
+        <class>KAuth::PolicyKitBackend</class>
+        <class>KAuth::Polkit1Backend</class>
         <class>KAuthorized</class>
         <class>KAutoSaveFile</class>
         <class>KAutostart</class>
