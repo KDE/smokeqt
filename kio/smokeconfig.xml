@@ -34,7 +34,7 @@
         <!-- operator(<<|>>)(QDataStream&, KDateTime*) - why are these operators not implemented/exported? -->
         <signature>.*operator(&lt;&lt;|&gt;&gt;)\(QDataStream&amp;, (const\s)?KDateTime.*</signature>
 
-        <signature>.*KIO::file_move\(const KUrl&amp;, const KUrl&amp;, KIO::JobFlags.*</signature>
+        <signature>.*KIO::file_move\(const KUrl&amp;, const KUrl&amp;, QFlags&lt;KIO::JobFlag&gt;.*</signature>
         <signature>.*KIO::buildHTMLErrorString\(.*</signature>
     </exclude>
     <functions>
