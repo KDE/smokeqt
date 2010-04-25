@@ -22,6 +22,7 @@
         <signature>.*::q</signature>
         <signature>.*QDebug.*</signature>
         <signature>.*Q3.*</signature>
+        <signature>.*PlatformDependent.*</signature>
         
         <!-- Implementations seem to be missing -->
         <signature>.*Attica::BaseJob::setErrorString.*</signature>
