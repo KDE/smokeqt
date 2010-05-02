@@ -125,6 +125,7 @@
         <class>KFontSizeAction</class>
         <class>KGlobalAccel</class>
         <class>KGlobalSettings</class>
+        <class>KGlobalSettings::KMouseSettings</class>
         <class>KGlobalShortcutInfo</class>
         <class>KGradientSelector</class>
         <class>KGuiItem</class>
@@ -236,6 +237,7 @@
         <class>KTabWidget</class>
         <class>KTextBrowser</class>
         <class>KTextEdit</class>
+        <class>KTextEditSpellInterface</class>
         <class>KTimeZoneWidget</class>
         <class>KTipDatabase</class>
         <class>KTipDialog</class>
@@ -266,12 +268,20 @@
         <class>KXMLGUIBuilder</class>
         <class>KXMLGUI</class>
         <class>KXMLGUIClient</class>
+        <class>KXMLGUIClient::StateChange</class>
         <class>KXMLGUIFactory</class>
         <class>KXmlGuiWindow</class>
         <class>KXUtils</class>
         <class>KXYSelector</class>
         <class>NET</class>
+        <class>NETExtendedStrut</class>
+        <class>NETFullscreenMonitors</class>
+        <class>NETIcon</class>
+        <class>NETPoint</class>
+        <class>NETRect</class>
         <class>NETRootInfo</class>
+        <class>NETSize</class>
+        <class>NETStrut</class>
         <class>NETWinInfo2</class>
         <class>NETWinInfo</class>
         <class>Sonnet</class>
