@@ -20,7 +20,6 @@
         <signature>.*::q_ptr</signature>
         <signature>.*::k_ptr</signature>
         <signature>.*::q</signature>
-        <signature>.*::virtual_hook\(int, void\*\).*</signature>
         <signature>.*QDebug.*</signature>
         <signature>.*Q3.*</signature>
 
@@ -36,12 +35,21 @@
 
         <signature>.*KIO::file_move\(const KUrl&amp;, const KUrl&amp;, QFlags&lt;KIO::JobFlag&gt;.*</signature>
         <signature>.*KIO::buildHTMLErrorString\(.*</signature>
+        <signature>.*KFileMetaInfo::groups\(\).*</signature>
+        <signature>.*KFileMetaInfoGroup::keys\(\).*</signature>
+        <signature>.*KFileMetaInfoGroup::KFileMetaInfoGroup\(\).*</signature>
+        <signature>.*KFileMetaInfoGroup::operator=\(const KFileMetaInfoGroup&amp;\).*</signature>
+
+        <signature>.*PredicateProperties::key\(\).*</signature>
+        <signature>.*PredicateProperties::description\(\).*</signature>
+        <signature>.*PredicateProperties::unit\(\).*</signature>
     </exclude>
     <functions>
     </functions>
     <classList>
         <class>KAbstractFileModule</class>
         <class>KAbstractFileWidget</class>
+        <class>KAbstractViewAdapter</class>
         <class>KACL</class>
         <class>KArchive</class>
         <class>KArchiveDirectory</class>
@@ -65,6 +73,7 @@
         <class>KBuildSycocaProgressDialog</class>
         <class>KCrashBookmarkImporter</class>
         <class>KDataToolAction</class>
+        <class>KDataToolInfo</class>
         <class>KDataTool</class>
         <class>KDBusServiceStarter</class>
         <class>KDeviceListModel</class>
@@ -79,6 +88,9 @@
         <class>KFileItemActions</class>
         <class>KFileItemDelegate</class>
         <class>KFileItemListProperties</class>
+        <class>KFileMetaInfo</class>
+        <class>KFileMetaInfoItem</class>
+        <class>KFileMetaInfoGroup</class>
         <class>KFileMetaInfoWidget</class>
         <class>KFileMetaPreview</class>
         <class>KFileMetaPropsPlugin</class>
@@ -94,6 +106,7 @@
         <class>KIO::ChmodJob</class>
         <class>KIO::Connection</class>
         <class>KIO::ConnectionServer</class>
+        <class>KIO::CopyInfo</class>
         <class>KIO::CopyJob</class>
         <class>KIO::DavJob</class>
         <class>KIO::DefaultViewAdapter</class>
@@ -117,6 +130,7 @@
         <class>KIO::PreviewJob</class>
         <class>KIO::RenameDialog</class>
         <class>KIO::RenameDialogPlugin</class>
+        <class>KIO::RenameDialogPlugin::FileItem</class>
         <class>KIO::Scheduler</class>
         <class>KIO::SessionData</class>
         <class>KIO::SimpleJob</class>
@@ -165,6 +179,7 @@
         <class>KZip</class>
         <class>KZipFileEntry</class>
         <class>OrgKdeKDirNotifyInterface</class>
+        <class>PredicateProperties</class>
         <class>ThumbCreator</class>
 
     </classList>
