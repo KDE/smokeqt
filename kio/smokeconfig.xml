@@ -117,7 +117,7 @@
         <class>KIO::FileUndoManager</class>
         <class>KIO::FileUndoManager::UiInterface</class>
         <class>KIO::ForwardingSlaveBase</class>
-<!--         <class>KIO::Integration::CookieJar</class> -->
+        <class>KIO::Integration::CookieJar</class>
         <class>KIO::Job</class>
         <class>KIO::JobUiDelegate</class>
         <class>KIO::ListJob</class>
