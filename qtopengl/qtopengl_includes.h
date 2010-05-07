@@ -1,3 +1,3 @@
-#include <QtCore/QtCore>
-#include <QtGui/QtGui>
-#include <QtOpenGL/QtOpenGL>
+#include <QtCore>
+#include <QtGui>
+#include <QtOpenGL>

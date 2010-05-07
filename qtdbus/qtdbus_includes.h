@@ -1,2 +1,2 @@
-#include <QtCore/QtCore>
-#include <QtDBus/QtDBus>
+#include <QtCore>
+#include <QtDBus>

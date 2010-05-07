@@ -1,5 +1,5 @@
-#include <QtCore/QtCore>
-#include <QtGui/QtGui>
+#include <QtCore>
+#include <QtGui>
 
 #ifdef Q_WS_X11
 #include <QtGui/qx11info_x11.h>

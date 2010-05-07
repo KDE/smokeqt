@@ -1,2 +1,2 @@
-#include <QtCore/QtCore>
-#include <QtNetwork/QtNetwork>
+#include <QtCore>
+#include <QtNetwork>

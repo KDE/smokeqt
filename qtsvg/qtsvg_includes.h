@@ -1,3 +1,3 @@
-#include <QtCore/QtCore>
-#include <QtGui/QtGui>
-#include <QtSvg/QtSvg>
+#include <QtCore>
+#include <QtGui>
+#include <QtSvg>

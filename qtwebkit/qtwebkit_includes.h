@@ -1,1 +1,1 @@
-#include <QtWebKit/QtWebKit>
+#include <QtWebKit>

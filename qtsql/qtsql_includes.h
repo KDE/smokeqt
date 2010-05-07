@@ -1,2 +1,2 @@
-#include <QtCore/QtCore>
-#include <QtSql/QtSql>
+#include <QtCore>
+#include <QtSql>

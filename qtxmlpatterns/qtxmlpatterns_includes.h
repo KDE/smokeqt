@@ -1,3 +1,3 @@
-#include <QtCore/QtCore>
-#include <QtNetwork/QtNetwork>
-#include <QtXmlPatterns/QtXmlPatterns>
+#include <QtCore>
+#include <QtNetwork>
+#include <QtXmlPatterns>

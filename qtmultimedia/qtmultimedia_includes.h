@@ -1,3 +1,3 @@
-#include <QtCore/QtCore>
-#include <QtGui/QtGui>
-#include <QtMultimedia/QtMultimedia>
+#include <QtCore>
+#include <QtGui>
+#include <QtMultimedia>

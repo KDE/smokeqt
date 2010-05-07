@@ -1,2 +1,2 @@
-#include <QtCore/QtCore>
-#include <QtXml/QtXml>
+#include <QtCore>
+#include <QtXml>
