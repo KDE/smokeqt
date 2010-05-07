@@ -61,9 +61,11 @@
         <class>KParts::PartManager</class>
         <class>KParts::PartSelectEvent</class>
         <class>KParts::Plugin</class>
+        <class>KParts::Plugin::PluginInfo</class>
         <class>KParts::ReadOnlyPart</class>
         <class>KParts::ReadWritePart</class>
         <class>KParts::StatusBarExtension</class>
+        <class>KParts::WindowArgs</class>
         <class>TerminalInterface</class>
         <class>TerminalInterfaceV2</class>
     </classList>
