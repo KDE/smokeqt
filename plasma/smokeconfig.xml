@@ -43,6 +43,7 @@
     </functions>
     <classList>
         <class>Plasma</class>
+        <class>Plasma::AbstractDialogManager</class>
         <class>Plasma::AbstractRunner</class>
         <class>Plasma::AbstractToolBox</class>
         <class>Plasma::AccessAppletJob</class>

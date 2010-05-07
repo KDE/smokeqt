@@ -1,3 +1,4 @@
+#include <plasma/abstractdialogmanager.h>
 #include <plasma/abstractrunner.h>
 #include <plasma/abstracttoolbox.h>
 #include <plasma/accessappletjob.h>
