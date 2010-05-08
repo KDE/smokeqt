@@ -11,6 +11,7 @@
 #include <attica/getjob.h>
 #include <attica/itemjob.h>
 #include <attica/knowledgebaseentry.h>
+#include <attica/license.h>
 #include <attica/listjob.h>
 #include <attica/message.h>
 #include <attica/metadata.h>

@@ -28,25 +28,30 @@
         <!-- Implementations seem to be missing -->
         <signature>.*Attica::BaseJob::setErrorString.*</signature>
         <signature>.*Attica::BaseJob::setError.*</signature>
+        <signature>.*Attica::Provider::postFriendInvitation.*</signature>
+        <signature>.*Attica::Provider::setDownloadFile\(const QString&amp;, const QString&amp;, QIODevice\*\).*</signature>
     </exclude>
     <functions>
     </functions>
     <classList>
-        <class>Attica::DownloadItem::Parser</class>
-        <class>Attica::AccountBalance::Parser</class>
-        <class>Attica::ProviderManager</class>
-        <class>Attica::PlatformDependent</class>
-        <class>Attica::KnowledgeBaseEntry::Parser</class>
-        <class>Attica::QtPlatformDependent</class>
-        <class>Attica::Event::Parser</class>
-        <class>Attica::Folder::Parser</class>
-        <class>Attica::GetJob</class>
-        <class>Attica::Person::Parser</class>
+        <class>Attica::AccountBalance</class>
+        <class>Attica::Activity</class>
         <class>Attica::BaseJob</class>
-        <class>Attica::Content::Parser</class>
-        <class>Attica::Message::Parser</class>
+        <class>Attica::Category</class>
+        <class>Attica::Content</class>
+        <class>Attica::DownloadDescription</class>
+        <class>Attica::DownloadItem</class>
+        <class>Attica::Event</class>
+        <class>Attica::Folder</class>
+        <class>Attica::GetJob</class>
+        <class>Attica::KnowledgeBaseEntry</class>
+        <class>Attica::License</class>
+        <class>Attica::Message</class>
+        <class>Attica::Metadata</class>
+        <class>Attica::Person</class>
+        <class>Attica::PlatformDependent</class>
         <class>Attica::PostJob</class>
-        <class>Attica::Activity::Parser</class>
-        <class>Attica::Category::Parser</class>
+        <class>Attica::Provider</class>
+        <class>Attica::ProviderManager</class>
     </classList>
 </config>
