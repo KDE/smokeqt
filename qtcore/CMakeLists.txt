@@ -73,12 +73,10 @@ IF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
     ADD_DEFINITIONS(-DGCC_VISIBILITY)
 ENDIF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
 
-add_definitions(-DBASE_SMOKE_BUILDING)
-
 # kde4_add_library(smokeqtcore SHARED ${smokeqtcore_LIB_SRCS})
 add_library(smokeqtcore SHARED ${smokeqtcore_LIB_SRCS})
 
-target_link_libraries(smokeqtcore ${QT_QTCORE_LIBRARY} )
+target_link_libraries(smokeqtcore ${QT_QTCORE_LIBRARY} smokebase )
 
 set_target_properties(smokeqtcore PROPERTIES VERSION 3.0.0 SOVERSION 3 )
 

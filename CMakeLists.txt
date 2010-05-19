@@ -2,6 +2,7 @@ project(SMOKE)
 
 add_definitions(-DSMOKE_BUILDING)
 
+add_subdirectory(smokebase)
 add_subdirectory(qtcore)
 add_subdirectory(deptool)
 add_subdirectory(smokeapi)

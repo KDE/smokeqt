@@ -22,7 +22,6 @@
 #include <QtDebug>
 
 #include <smoke.h>
-#include <qtcore_smoke.h>
 
 static QTextStream qOut(stdout);
 
@@ -41,11 +40,6 @@ static Smoke*
 loadSmokeModule(QString moduleName) {
     QFileInfo file(QString("libsmoke") + moduleName);
     QLibrary lib(file.filePath());
-
-    if (moduleName == "qtcore") {
-        init_qtcore_Smoke();
-        return qtcore_Smoke;
-    }
 
     QString init_name = "init_" + moduleName + "_Smoke";
     InitSmokeFn init = (InitSmokeFn) lib.resolve(init_name.toLatin1());

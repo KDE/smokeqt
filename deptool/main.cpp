@@ -21,7 +21,6 @@
 #include <QtDebug>
 
 #include <smoke.h>
-#include <qtcore_smoke.h>
 
 typedef void (*InitSmokeFn)();
 
@@ -29,10 +28,6 @@ Smoke* loadSmokeModule(QFileInfo file) {
     QLibrary lib(file.filePath());
 
     QString moduleName = file.baseName().replace(QRegExp("^libsmoke"), QString());
-    if (moduleName == "qtcore") {
-        init_qtcore_Smoke();
-        return qtcore_Smoke;
-    }
 
     QString init_name = "init_" + moduleName + "_Smoke";
     InitSmokeFn init = (InitSmokeFn) lib.resolve(init_name.toLatin1());
