@@ -37,6 +37,7 @@
         <class>Nepomuk::Query::GroupTerm</class>
         <class>Nepomuk::Query::LiteralTerm</class>
         <class>Nepomuk::Query::NegationTerm</class>
+        <class>Nepomuk::Query::OptionalTerm</class>
         <class>Nepomuk::Query::OrTerm</class>
         <class>Nepomuk::Query::Query</class>
         <class>Nepomuk::Query::QueryParser</class>
