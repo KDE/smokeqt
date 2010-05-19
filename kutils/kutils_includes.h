@@ -4,7 +4,6 @@
 #include <kemoticons.h>
 #include <kemoticonstheme.h>
 #include <kemoticonsprovider.h>
-#include <kutils_export.h>
 #include <kcmoduleinfo.h>
 #include <kcmoduleloader.h>
 #include <kcmultidialog.h>
