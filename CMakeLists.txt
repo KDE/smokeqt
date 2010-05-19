@@ -51,8 +51,6 @@ else(KDEPIMLIBS_FOUND AND Akonadi_FOUND)
 endif(KDEPIMLIBS_FOUND AND Akonadi_FOUND)
 macro_optional_add_bindings(BUILD_Akonadi "Akonadi" akonadi)
 
-macro_optional_add_bindings(KDEVPLATFORM_FOUND "KDevPlatform" kdevplatform)
-
 macro_optional_add_bindings(LIBATTICA_FOUND "Attica" attica)
 
 macro_optional_add_bindings(Nepomuk_FOUND "Nepomuk" nepomuk nepomukquery)
