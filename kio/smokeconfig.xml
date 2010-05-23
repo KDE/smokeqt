@@ -33,7 +33,10 @@
         <!-- operator(<<|>>)(QDataStream&, KDateTime*) - why are these operators not implemented/exported? -->
         <signature>.*operator(&lt;&lt;|&gt;&gt;)\(QDataStream&amp;, (const\s)?KDateTime.*</signature>
 
+        <!-- TODO readd those two when implemented in kdelibs -->
+        <signature>.*KIO::file_copy\(const KUrl&amp;, const KUrl&amp;, QFlags&lt;KIO::JobFlag&gt;.*</signature>
         <signature>.*KIO::file_move\(const KUrl&amp;, const KUrl&amp;, QFlags&lt;KIO::JobFlag&gt;.*</signature>
+
         <signature>.*KIO::buildHTMLErrorString\(.*</signature>
         <signature>.*KFileMetaInfo::groups\(\).*</signature>
         <signature>.*KFileMetaInfoGroup::keys\(\).*</signature>
