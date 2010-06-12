@@ -21,14 +21,17 @@
         <signature>.*::q</signature>
         <signature>.*QDebug.*</signature>
         <signature>.*Q3.*</signature>
+        <signature>.*\bDOM::.*Impl\b.*</signature>
         
         <!-- unimplemented public API.. yay -->
         <signature>.*DOM::Element::(set)?(c|C)ontentEditable\(.*</signature>
         <signature>.*DOM::TextEvent::data\(\).*</signature>
+        <signature>.*khtml::applyRule\(DOM::CSSProperty\*\).*</signature>
     </exclude>
     <functions>
         <!-- everything in that namespace.. -->
         <name>DOM::.*</name>
+        <name>khtml::.*</name>
     </functions>
     <classList>
         <class>DOM</class>
@@ -148,6 +151,13 @@
         <class>DOM::TextEvent</class>
         <class>DOM::TreeWalker</class>
         <class>DOM::UIEvent</class>
+        <class>khtml</class>
+        <class>khtml::DrawContentsEvent</class>
+        <class>khtml::MouseDoubleClickEvent</class>
+        <class>khtml::MouseEvent</class>
+        <class>khtml::MouseMoveEvent</class>
+        <class>khtml::MousePressEvent</class>
+        <class>khtml::MouseReleaseEvent</class>
         <class>KHTMLPart</class>
         <class>KHTMLSettings</class>
         <class>KHTMLView</class>
