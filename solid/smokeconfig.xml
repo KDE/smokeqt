@@ -21,9 +21,6 @@
         <signature>.*::q</signature>
         <signature>.*QDebug.*</signature>
         <signature>.*Q3.*</signature>
-        
-        <!-- these symbols are hidden -->
-        <signature>.*Solid::Networking::(set)?([dD]is)?[cC]onnectPolicy\(.*\)</signature>
     </exclude>
     <functions>
         <!-- everything in that namespace.. -->
@@ -42,12 +39,14 @@
         <class>Solid::DeviceNotifier</class>
         <class>Solid::DvbInterface</class>
         <class>Solid::GenericInterface</class>
-        <class>Solid::NetworkInterface</class>
         <class>Solid::Networking</class>
+        <class>Solid::Networking::Notifier</class>
+        <class>Solid::NetworkInterface</class>
         <class>Solid::OpticalDisc</class>
         <class>Solid::OpticalDrive</class>
         <class>Solid::PortableMediaPlayer</class>
         <class>Solid::PowerManagement</class>
+        <class>Solid::PowerManagement::Notifier</class>
         <class>Solid::Predicate</class>
         <class>Solid::Processor</class>
         <class>Solid::StorageAccess</class>
