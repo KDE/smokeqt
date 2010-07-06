@@ -1,0 +1,55 @@
+<config>
+    <moduleName>kate</moduleName>
+    <parentModules>
+         <module>kdeui</module>
+         <module>kparts</module>
+         <module>ktexteditor</module>
+    </parentModules>
+    <parts>10</parts>
+    <scalarTypes>
+        <!-- QString is a class, but represented as a scalar (#) in munged names -->
+        <typeName>QString</typeName>
+    </scalarTypes>
+    <voidpTypes>
+        <!-- both are classes, but they are represented as Smoke::t_voidp -->
+        <typeName>QStringList</typeName>
+        <typeName>QString</typeName>
+        <typeName>KUrl::List</typeName>
+    </voidpTypes>
+    <exclude>
+        <!-- private stuff -->
+        <signature>.*::d</signature>
+        <signature>.*::d_ptr</signature>
+        <signature>.*::q_ptr</signature>
+        <signature>.*::k_ptr</signature>
+        <signature>.*::q</signature>
+        <signature>.*::virtual_hook\(int, void\*\).*</signature>
+        <signature>.*QDebug.*</signature>
+        <signature>.*Q3.*</signature>
+
+        <signature>.*stat\*.*</signature>
+        <signature>.*utimbuf\*.*</signature>
+
+        <signature>.*Kate::PluginConfigPage::PluginConfigPage(const Kate::PluginConfigPage&amp;).*</signature>
+
+        <!-- operator(<<|>>)(QDataStream&, KDateTime*) - why are these operators not implemented/exported? -->
+        <signature>.*operator(&lt;&lt;|&gt;&gt;)\(QDataStream&amp;, (const\s)?KDateTime.*</signature>
+    </exclude>
+    <functions>
+        <!-- include functions starting with 'k' -->
+        <name>Kate::.*</name>
+        <!-- and operators -->
+        <name>.*operator.*</name>
+    </functions>
+    <classList>
+        <class>Kate::Application</class>
+        <class>Kate::DocumentManager</class>
+        <class>Kate::MainWindow</class>
+        <class>Kate::Plugin</class>
+        <class>Kate::PluginConfigPage</class>
+        <class>Kate::PluginConfigPageInterface</class>
+        <class>Kate::PluginManager</class>
+        <class>Kate::PluginView</class>
+        <class>Kate::XMLGUIClient</class>
+    </classList>
+</config>
