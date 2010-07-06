@@ -57,6 +57,11 @@ macro_optional_add_bindings(Nepomuk_FOUND "Nepomuk" nepomuk nepomukquery)
 
 macro_optional_add_bindings(OKULAR_FOUND "Okular" okular)
 
+find_library(KATEINTERFACES_LIBRARY kateinterfaces HINTS ${KDE4_LIB_DIR})
+find_path(KATE_INCLUDE_DIR kate/plugin.h HINTS ${KDE4_INCLUDE_DIR})
+
+macro_optional_add_bindings(KATE_INCLUDE_DIR "Kate" kate)
+
 # for qtguess.pl
 if (APPLE)
 set(qt_test_threshold 15)
