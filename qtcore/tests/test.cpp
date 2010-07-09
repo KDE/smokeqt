@@ -611,6 +611,16 @@ int main(int argc, char ** argv)
 
 #endif
 
+#ifdef TEST_QT_NO_STYLE_S60
+#include "QtGui/qs60style.h"
+
+int main(int argc, char ** argv)
+{
+  QS60Style foo;
+}
+
+#endif
+
 #ifdef TEST_QT_NO_STYLE_WINDOWSXP
 #include "QtGui/qwindowsxpstyle.h"
 
