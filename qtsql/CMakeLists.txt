@@ -21,6 +21,8 @@ set(smokeqtsql_LIB_SRCS ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp
                 ${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp 
 )
 
+ADD_DEFINITIONS(-DQT_GUI_LIB)
+
 IF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
     ADD_DEFINITIONS(-DGCC_VISIBILITY)
 ENDIF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
@@ -31,6 +33,7 @@ add_library(smokeqtsql SHARED ${smokeqtsql_LIB_SRCS})
 target_link_libraries(smokeqtsql 
                         smokeqtcore 
                         ${QT_QTCORE_LIBRARY} 
+                        ${QT_QTGUI_LIBRARY} 
                         ${QT_QTSQL_LIBRARY} )
 
 set_target_properties(smokeqtsql PROPERTIES VERSION 3.0.0 SOVERSION 3 )
