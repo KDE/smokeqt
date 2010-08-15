@@ -32,6 +32,7 @@ add_library(smokeqtsql SHARED ${smokeqtsql_LIB_SRCS})
 
 target_link_libraries(smokeqtsql 
                         smokeqtcore 
+                        smokeqtgui 
                         ${QT_QTCORE_LIBRARY} 
                         ${QT_QTGUI_LIBRARY} 
                         ${QT_QTSQL_LIBRARY} )
