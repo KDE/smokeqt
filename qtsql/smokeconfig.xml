@@ -2,7 +2,7 @@
     <moduleName>qtsql</moduleName>
     <parentModules>
         <module>qtcore</module>
-        <module>qtsql</module>
+        <module>qtgui</module>
     </parentModules>
     <parts>1</parts>
     <scalarTypes>
