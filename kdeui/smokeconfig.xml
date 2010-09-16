@@ -193,7 +193,8 @@
         <class>KPlotWidget</class>
         <class>KPopupFrame</class>
         <class>KProgressDialog</class>
-        <class>KPushButton</class>
+	<class>KPushButton</class>
+	<class>KRatingWidget</class>
         <class>KRecentFilesAction</class>
         <class>KReplace</class>
         <class>KReplaceDialog</class>

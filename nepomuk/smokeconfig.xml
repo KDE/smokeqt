@@ -29,7 +29,6 @@
         <name>Nepomuk::.*</name>
     </functions>
     <classList>
-        <class>KRatingWidget</class>
         <class>KTagCloudWidget</class>
         <class>KTagDisplayWidget</class>
         <class>Nepomuk</class>
