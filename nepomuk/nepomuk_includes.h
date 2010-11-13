@@ -1,3 +1,5 @@
+#include <kdeversion.h>
+
 #include <nepomuk/andterm.h>
 #include <nepomuk/class.h>
 #include <nepomuk/comparisonterm.h>
@@ -5,7 +7,6 @@
 #include <nepomuk/entity.h>
 #include <nepomuk/fileontologyloader.h>
 #include <nepomuk/filequery.h>
-#include <nepomuk/file.h>
 #include <nepomuk/global.h>
 #include <nepomuk/groupterm.h>
 #include <nepomuk/kmetadatatagcloud.h>
@@ -42,3 +43,7 @@
 #include <nepomuk/variant.h>
 
 #include <qicon.h>
+
+#if KDE_VERSION >= 0x40600
+#include <nepomuk/file.h>
+#endif
