@@ -7,6 +7,7 @@
 #include <nepomuk/entity.h>
 #include <nepomuk/fileontologyloader.h>
 #include <nepomuk/filequery.h>
+#include <nepomuk/file.h>
 #include <nepomuk/global.h>
 #include <nepomuk/groupterm.h>
 #include <nepomuk/kmetadatatagcloud.h>

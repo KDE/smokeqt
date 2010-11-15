@@ -36,6 +36,7 @@
         <class>Nepomuk::DesktopOntologyLoader</class>
         <class>Nepomuk::Entity</class>
         <class>Nepomuk::FileOntologyLoader</class>
+        <class>Nepomuk::File</class>
         <class>Nepomuk::Literal</class>
         <class>Nepomuk::NepomukOntologyLoader</class>
         <class>Nepomuk::Ontology</class>
