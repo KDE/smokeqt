@@ -42,4 +42,4 @@ set_target_properties(smokeqthelp PROPERTIES VERSION 3.0.0 SOVERSION 3 )
 # Don't use the KDE ${LIB_INSTALL_DIR} macro here as this file is
 # for Qt only installs
 install(TARGETS smokeqthelp DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
-install(FILES ${CMAKE_SOURCE_DIR}/smoke/qthelp_smoke.h DESTINATION include/smoke)
+install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../qthelp_smoke.h DESTINATION include/smoke)

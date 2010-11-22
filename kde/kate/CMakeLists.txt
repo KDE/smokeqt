@@ -58,4 +58,4 @@ target_link_libraries(smokekate
 
 set_target_properties(smokekate PROPERTIES VERSION 3.0.0 SOVERSION 3 )
 install(TARGETS smokekate DESTINATION ${LIB_INSTALL_DIR} )
-install(FILES ${CMAKE_SOURCE_DIR}/smoke/kate_smoke.h DESTINATION include/smoke)
+install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../kate_smoke.h DESTINATION include/smoke)

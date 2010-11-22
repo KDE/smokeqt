@@ -42,4 +42,4 @@ set_target_properties(smokeqtdeclarative PROPERTIES VERSION 3.0.0 SOVERSION 3 )
 # Don't use the KDE ${LIB_INSTALL_DIR} macro here as this file is
 # for Qt only installs
 install(TARGETS smokeqtdeclarative DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
-install(FILES ${CMAKE_SOURCE_DIR}/smoke/qtdeclarative_smoke.h DESTINATION include/smoke)
+install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../qtdeclarative_smoke.h DESTINATION include/smoke)

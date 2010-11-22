@@ -47,4 +47,4 @@ target_link_libraries(smokeqwt smokeqtcore smokeqtgui ${QT_QTCORE_LIBRARY} ${QT_
 set_target_properties(smokeqwt PROPERTIES VERSION 3.0.0 SOVERSION 3 )
 
 install(TARGETS smokeqwt DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
-install(FILES ${CMAKE_SOURCE_DIR}/smoke/qwt_smoke.h DESTINATION include/smoke)
+install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../qwt_smoke.h DESTINATION include/smoke)

@@ -42,4 +42,4 @@ target_link_libraries(smokekutils
 
 set_target_properties(smokekutils PROPERTIES VERSION 3.0.0 SOVERSION 3 )
 install(TARGETS smokekutils DESTINATION ${LIB_INSTALL_DIR} )
-install(FILES ${CMAKE_SOURCE_DIR}/smoke/kutils_smoke.h DESTINATION include/smoke)
+install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../kutils_smoke.h DESTINATION include/smoke)

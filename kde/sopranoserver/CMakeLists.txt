@@ -35,4 +35,4 @@ target_link_libraries(  smokesopranoserver
 set_target_properties(smokesopranoserver PROPERTIES VERSION 3.0.0 SOVERSION 3 )
 
 install(TARGETS smokesopranoserver DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
-install(FILES ${CMAKE_SOURCE_DIR}/smoke/sopranoserver_smoke.h DESTINATION include/smoke)
+install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../sopranoserver_smoke.h DESTINATION include/smoke)

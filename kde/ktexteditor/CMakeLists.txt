@@ -63,4 +63,4 @@ target_link_libraries(smokektexteditor
 
 set_target_properties(smokektexteditor PROPERTIES VERSION 3.0.0 SOVERSION 3 )
 install(TARGETS smokektexteditor DESTINATION ${LIB_INSTALL_DIR} )
-install(FILES ${CMAKE_SOURCE_DIR}/smoke/ktexteditor_smoke.h DESTINATION include/smoke )
+install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../ktexteditor_smoke.h DESTINATION include/smoke )

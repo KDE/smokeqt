@@ -53,4 +53,4 @@ target_link_libraries(smokesolid
 
 set_target_properties(smokesolid PROPERTIES VERSION 3.0.0 SOVERSION 3 )
 install(TARGETS smokesolid DESTINATION ${LIB_INSTALL_DIR} )
-install(FILES ${CMAKE_SOURCE_DIR}/smoke/solid_smoke.h DESTINATION include/smoke)
+install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../solid_smoke.h DESTINATION include/smoke)

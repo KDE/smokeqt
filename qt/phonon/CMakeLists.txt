@@ -50,4 +50,4 @@ target_link_libraries(smokephonon smokeqtcore smokeqtgui ${QT_QTCORE_LIBS} ${QT_
 set_target_properties(smokephonon PROPERTIES VERSION 3.0.0 SOVERSION 3 )
 
 install(TARGETS smokephonon DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
-install(FILES ${CMAKE_SOURCE_DIR}/smoke/phonon_smoke.h DESTINATION include/smoke)
+install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../phonon_smoke.h DESTINATION include/smoke)

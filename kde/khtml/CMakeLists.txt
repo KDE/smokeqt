@@ -76,4 +76,4 @@ target_link_libraries(smokekhtml
 
 set_target_properties(smokekhtml PROPERTIES VERSION 3.0.0 SOVERSION 3 )
 install(TARGETS smokekhtml DESTINATION ${LIB_INSTALL_DIR} )
-install(FILES ${CMAKE_SOURCE_DIR}/smoke/khtml_smoke.h DESTINATION include/smoke)
+install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../khtml_smoke.h DESTINATION include/smoke)

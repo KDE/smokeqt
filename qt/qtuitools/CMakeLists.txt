@@ -27,4 +27,4 @@ target_link_libraries(smokeqtuitools smokeqtcore smokeqtgui ${QT_QTCORE_LIBRARY}
 set_target_properties(smokeqtuitools PROPERTIES VERSION 3.0.0 SOVERSION 3 )
 
 install(TARGETS smokeqtuitools DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
-install(FILES ${CMAKE_SOURCE_DIR}/smoke/qtuitools_smoke.h DESTINATION include/smoke)
+install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../qtuitools_smoke.h DESTINATION include/smoke)

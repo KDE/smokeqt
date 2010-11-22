@@ -33,6 +33,6 @@ target_link_libraries(smokeattica
 
 set_target_properties(smokeattica PROPERTIES VERSION 3.0.0 SOVERSION 3 )
 install(TARGETS smokeattica DESTINATION ${LIB_INSTALL_DIR} )
-install(FILES ${CMAKE_SOURCE_DIR}/smoke/attica_smoke.h DESTINATION include/smoke )
+install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../attica_smoke.h DESTINATION include/smoke )
 
 ########### install files ###############

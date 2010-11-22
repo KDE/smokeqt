@@ -43,4 +43,4 @@ target_link_libraries(smokekfile
 
 set_target_properties(smokekfile PROPERTIES VERSION 3.0.0 SOVERSION 3 )
 install(TARGETS smokekfile DESTINATION ${LIB_INSTALL_DIR} )
-install(FILES ${CMAKE_SOURCE_DIR}/smoke/kfile_smoke.h DESTINATION include/smoke)
+install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../kfile_smoke.h DESTINATION include/smoke)

@@ -53,6 +53,6 @@ target_link_libraries(smokenepomuk
 
 set_target_properties(smokenepomuk PROPERTIES VERSION 3.0.0 SOVERSION 3 )
 install(TARGETS smokenepomuk DESTINATION ${LIB_INSTALL_DIR} )
-install(FILES ${CMAKE_SOURCE_DIR}/smoke/nepomuk_smoke.h DESTINATION include/smoke )
+install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../nepomuk_smoke.h DESTINATION include/smoke )
 
 ########### install files ###############

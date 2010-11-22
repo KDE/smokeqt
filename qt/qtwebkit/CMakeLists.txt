@@ -33,4 +33,4 @@ target_link_libraries(  smokeqtwebkit
 set_target_properties(smokeqtwebkit PROPERTIES VERSION 3.0.0 SOVERSION 3 )
 
 install(TARGETS smokeqtwebkit DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
-install(FILES ${CMAKE_SOURCE_DIR}/smoke/qtwebkit_smoke.h DESTINATION include/smoke )
+install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../qtwebkit_smoke.h DESTINATION include/smoke )

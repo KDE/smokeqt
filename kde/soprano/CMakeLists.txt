@@ -48,4 +48,4 @@ target_link_libraries(smokesoprano smokeqtcore ${QT_QTCORE_LIBRARY} ${SOPRANO_LI
 set_target_properties(smokesoprano PROPERTIES VERSION 3.0.0 SOVERSION 3 )
 
 install(TARGETS smokesoprano DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
-install(FILES ${CMAKE_SOURCE_DIR}/smoke/soprano_smoke.h DESTINATION include/smoke)
+install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../soprano_smoke.h DESTINATION include/smoke)

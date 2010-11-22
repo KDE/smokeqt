@@ -40,4 +40,4 @@ set_target_properties(smokeqtopengl PROPERTIES VERSION 3.0.0 SOVERSION 3 )
 # Don't use the KDE ${LIB_INSTALL_DIR} macro here as this file is
 # for Qt only installs
 install(TARGETS smokeqtopengl DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
-install(FILES ${CMAKE_SOURCE_DIR}/smoke/qtopengl_smoke.h DESTINATION include/smoke)
+install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../qtopengl_smoke.h DESTINATION include/smoke)

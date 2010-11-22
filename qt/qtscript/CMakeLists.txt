@@ -28,4 +28,4 @@ target_link_libraries(smokeqtscript smokeqtcore ${QT_QTCORE_LIBRARY} ${QT_QTGUI_
 set_target_properties(smokeqtscript PROPERTIES VERSION 3.0.0 SOVERSION 3 )
 
 install(TARGETS smokeqtscript DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
-install(FILES ${CMAKE_SOURCE_DIR}/smoke/qtscript_smoke.h DESTINATION include/smoke )
+install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../qtscript_smoke.h DESTINATION include/smoke )
