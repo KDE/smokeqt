@@ -160,6 +160,11 @@ foreach(test_target ${test_targets})
   endif(test_result)
 endforeach(test_target ${test_targets})
 
+set(WITH_QT3_SUPPORT OFF CACHE BOOL "Include Qt3 Support members in QtCore and QtGui smoke modules")
+if(WITH_QT3_SUPPORT)
+    list(APPEND qtdefines "QT3_SUPPORT")
+endif(WITH_QT3_SUPPORT)
+
 # string(REGEX REPLACE ";" "\n" qtdefines ${qtdefines})
 # file(WRITE ${CMAKE_CURRENT_BINARY_DIR}/../qtdefines-ng ${qtdefines})
 file(REMOVE ${CMAKE_CURRENT_BINARY_DIR}/../qtdefines)
