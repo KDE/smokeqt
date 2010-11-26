@@ -2,7 +2,7 @@ project(SMOKEQT4)
 
 add_definitions(-DSMOKE_BUILDING)
 
-include_directories(${CMAKE_CURRENT_SOURCE_DIR})
+include_directories(${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_SOURCE_DIR}/generator)
 
 macro_optional_find_package(LibAttica)
 macro_log_feature(LIBATTICA_FOUND "libattica" "LibAttica" "http://www.kde.org" FALSE "" "Needed to compile libattica bindings")
