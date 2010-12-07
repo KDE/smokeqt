@@ -1,6 +1,4 @@
 #include <soprano/asyncmodel.h>
-#include <soprano/asyncquery.h>
-#include <soprano/asyncresult.h>
 #include <soprano/backend.h>
 #include <soprano/bindingset.h>
 #include <soprano/dbusclient.h>
@@ -14,14 +12,12 @@
 #include <soprano/error.h>
 #include <soprano/filtermodel.h>
 #include <soprano/global.h>
-#include <soprano/graph.h>
 #include <soprano/inferencemodel.h>
 #include <soprano/inferencerule.h>
 #include <soprano/inferenceruleparser.h>
 #include <soprano/inferenceruleset.h>
 #include <soprano/iteratorbackend.h>
 #include <soprano/iterator.h>
-#include <soprano/languagetag.h>
 #include <soprano/literalvalue.h>
 #include <soprano/localsocketclient.h>
 #include <soprano/locator.h>
@@ -50,9 +46,7 @@
 #include <soprano/simplestatementiterator.h>
 #include <soprano/soprano_export.h>
 #include <soprano/soprano.h>
-#include <soprano/sopranomacros.h>
 #include <soprano/sopranotypes.h>
-#include <soprano/sparqlmodel.h>
 #include <soprano/statement.h>
 #include <soprano/statementiterator.h>
 #include <soprano/statementpattern.h>
@@ -62,3 +56,15 @@
 #include <soprano/vocabulary.h>
 #include <soprano/xesam.h>
 #include <soprano/xsd.h>
+
+#if SOPRANO_VERSION >= 0x020300
+#include <soprano/asyncresult.h>
+#include <soprano/graph.h>
+#include <soprano/languagetag.h>
+#include <soprano/sopranomacros.h>
+#endif
+
+#if SOPRANO_VERSION >= 0x020401
+#include <soprano/asyncquery.h>
+#include <soprano/sparqlmodel.h>
+#endif

@@ -12,7 +12,13 @@
 #include <kparts/componentfactory.h>
 #include <kparts/browserrun.h>
 #include <kparts/statusbarextension.h>
-#include <kparts/browseropenorsavequestion.h>
 
 #include <kde_terminal_interface.h>
+
+#if KDE_VERSION >= 0x040300
 #include <kde_terminal_interface_v2.h>
+#endif
+
+#if KDE_VERSION >= 0x040400
+#include <kparts/browseropenorsavequestion.h>
+#endif

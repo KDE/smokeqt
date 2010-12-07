@@ -34,12 +34,6 @@
 #include <ktoolinvocation.h>     
 #include <klocalsocket.h>           
 #include <ksocketfactory.h>         
-#include <ktcpsocket.h>             
-#include <kauthaction.h>            
-#include <kauthactionreply.h>       
-#include <kauthactionwatcher.h>     
-#include <kauthhelpersupport.h>     
-#include <kauth.h>                  
 #include <kmimetype.h>              
 #include <kmimetypetrader.h>        
 #include <kservice.h>               
@@ -50,9 +44,7 @@
 #include <kservicetypetrader.h>     
 #include <kplugininfo.h>            
 #include <kcharsets.h>              
-#include <kcurrencycode.h>          
 #include <kencodingdetector.h>      
-#include <kencodingprober.h>        
 #include <klocale.h>                
 #include <klocalizedstring.h>       
 #include <kprotocolinfo.h>          
@@ -86,5 +78,20 @@
 #include <kdeversion.h>
 #include <sonnet/backgroundchecker.h>
 #include <sonnet/speller.h>
-#include <sonnet/globals.h>
 
+#if KDE_VERSION >= 0x040200
+#include <sonnet/globals.h>
+#endif
+
+#if KDE_VERSION >= 0x040202
+#include <kencodingprober.h>        
+#endif
+
+#if KDE_VERSION >= 0x040400
+#include <kauthaction.h>            
+#include <kauthactionreply.h>       
+#include <kauthactionwatcher.h>     
+#include <kauthhelpersupport.h>     
+#include <kauth.h>                  
+#include <kcurrencycode.h>          
+#endif

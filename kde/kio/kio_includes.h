@@ -1,5 +1,4 @@
 #include <kio/kio_export.h>
-#include <kio/accessmanager.h>
 #include <kio/connection.h>
 #include <kio/slaveinterface.h>
 #include <kio/slave.h>
@@ -26,7 +25,6 @@
 #include <kio/http_slave_defaults.h>
 #include <kio/previewjob.h>
 #include <kio/thumbcreator.h>
-#include <kio/thumbsequencecreator.h>
 #include <kio/metainfojob.h>
 #include <kio/davjob.h>
 #include <kio/directorysizejob.h>
@@ -34,7 +32,6 @@
 #include <kio/renamedialogplugin.h>
 #include <kio/skipdialog.h>
 #include <kio/udsentry.h>
-#include <kio/sslui.h>
 #include <kfilesharedialog.h>
 #include <kacl.h>
 #include <kar.h>
@@ -50,8 +47,6 @@
 #include <kdirwatch.h>
 #include <kemailsettings.h>
 #include <kfileitem.h>
-#include <kfileitemlistproperties.h>
-#include <kfileitemactions.h>
 #include <kfileitemdelegate.h>
 #include <kfilemetainfo.h>
 #include <kfilemetainfoitem.h>
@@ -79,7 +74,6 @@
 #include <kabstractfilewidget.h>
 #include <kdevicelistmodel.h>
 #include <kdiskfreespace.h>
-#include <kdiskfreespaceinfo.h>
 #include <kencodingfiledialog.h>
 #include <kfile.h>
 #include <kfiledialog.h>
@@ -107,3 +101,12 @@
 #include <kbookmarkdialog.h>
 #include <kio/kntlm_export.h>
 #include <kio/kntlm.h>
+
+#if KDE_VERSION >= 0x040300
+#include <kio/accessmanager.h>
+#include <kio/thumbsequencecreator.h>
+#include <kio/sslui.h>
+#include <kfileitemlistproperties.h>
+#include <kfileitemactions.h>
+#include <kdiskfreespaceinfo.h>
+#endif

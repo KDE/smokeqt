@@ -1,7 +1,6 @@
 #include <ktexteditor/annotationinterface.h>
 #include <ktexteditor/attribute.h>
 #include <ktexteditor/codecompletioninterface.h>
-#include <ktexteditor/codecompletionmodelcontrollerinterface.h>
 #include <ktexteditor/codecompletionmodel.h>
 #include <ktexteditor/commandinterface.h>
 #include <ktexteditor/configinterface.h>
@@ -13,9 +12,7 @@
 #include <ktexteditor/editorchooser.h>
 #include <ktexteditor/editor.h>
 #include <ktexteditor/factory.h>
-#include <ktexteditor/highlightinterface.h>
 #include <ktexteditor/ktexteditor_export.h>
-#include <ktexteditor/loadsavefiltercheckplugin.h>
 #include <ktexteditor/markinterface.h>
 #include <ktexteditor/modificationinterface.h>
 #include <ktexteditor/plugin.h>
@@ -24,13 +21,22 @@
 #include <ktexteditor/searchinterface.h>
 #include <ktexteditor/sessionconfiginterface.h>
 #include <ktexteditor/smartcursor.h>
-#include <ktexteditor/smartcursornotifier.h>
-#include <ktexteditor/smartcursorwatcher.h>
 #include <ktexteditor/smartinterface.h>
 #include <ktexteditor/smartrange.h>
-#include <ktexteditor/smartrangenotifier.h>
-#include <ktexteditor/smartrangewatcher.h>
 #include <ktexteditor/templateinterface.h>
 #include <ktexteditor/texthintinterface.h>
 #include <ktexteditor/variableinterface.h>
 #include <ktexteditor/view.h>
+
+#if KDE_VERSION >= 0x040200
+#include <ktexteditor/codecompletionmodelcontrollerinterface.h>
+#include <ktexteditor/loadsavefiltercheckplugin.h>
+#endif
+
+#if KDE_VERSION >= 0x040400
+#include <ktexteditor/highlightinterface.h>
+#include <ktexteditor/smartcursornotifier.h>
+#include <ktexteditor/smartcursorwatcher.h>
+#include <ktexteditor/smartrangenotifier.h>
+#include <ktexteditor/smartrangewatcher.h>
+#endif

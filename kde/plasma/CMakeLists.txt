@@ -49,6 +49,13 @@ target_link_libraries(smokeplasma
     smokeqtcore
 )
 
+if(KDE_VERSION VERSION_LESS "4.2.0")
+    target_link_libraries(smokeplasma 
+        ${PLASMA_LIBS}
+    )
+endif(KDE_VERSION VERSION_LESS "4.2.0")
+
+
 set_target_properties(smokeplasma PROPERTIES VERSION 3.0.0 SOVERSION 3 )
 install(TARGETS smokeplasma DESTINATION ${LIB_INSTALL_DIR} )
 install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../plasma_smoke.h DESTINATION include/smoke )

@@ -4,7 +4,6 @@
 #include <kkeyserver_x11.h>
 #include <kdeui_export.h>
 #include <kactioncollection.h>
-#include <kactioncategory.h>
 #include <kaction.h>
 #include <kactionmenu.h>
 #include <kcodecaction.h>
@@ -67,13 +66,11 @@
 #include <klistwidget.h>
 #include <klistwidgetsearchline.h>
 #include <ktreewidgetsearchline.h>
-#include <kfilterproxysearchline.h>
 #include <kextendableitemdelegate.h>
 #include <kcategorizedsortfilterproxymodel.h>
 #include <kcategorizedview.h>
 #include <kcategorydrawer.h>
 #include <kwidgetitemdelegate.h>
-#include <kselectionproxymodel.h>
 #include <kdialogjobuidelegate.h>
 #include <kabstractwidgetjobtracker.h>
 #include <kwidgetjobtracker.h>
@@ -85,7 +82,6 @@
 #include <kstyle.h>
 #include <kstartupinfo.h>
 #include <kglobalsettings.h>
-#include <kstatusnotifieritem.h>
 #include <ksystemtrayicon.h>
 #include <knotification.h>
 #include <knotificationrestrictions.h>
@@ -101,8 +97,6 @@
 #include <kshortcut.h>
 #include <kstandardshortcut.h>
 #include <kglobalaccel.h>
-#include <kglobalshortcutinfo.h>
-#include <kglobalshortcutinfo_p.h>
 #include <kacceleratormanager.h>
 #include <kgesture.h>
 #include <kaccelgen.h>
@@ -112,7 +106,6 @@
 #include <kguiitem.h>
 #include <kkeyserver.h>
 #include <kmanagerselection.h>
-#include <kmodifierkeyinfo.h>
 #include <knumvalidator.h>
 #include <kpassivepopup.h>
 #include <kpassivepopupmessagehandler.h>
@@ -126,14 +119,10 @@
 #include <kxutils.h>
 #include <kxmessages.h>
 #include <kundostack.h>
-#include <kpixmapsequence.h>
-#include <kpixmapsequenceoverlaypainter.h>
-#include <kpixmapsequencewidget.h>
 #include <kactionselector.h>
 #include <kanimatedbutton.h>
 #include <karrowbutton.h>
 #include <kdatepicker.h>
-#include <kcapacitybar.h>
 #include <kcmodule.h>
 #include <kcombobox.h>
 #include <kcompletionbox.h>
@@ -191,4 +180,24 @@
 #include <sonnet/highlighter.h>
 #include <sonnet/configdialog.h>
 #include <sonnet/configwidget.h>
+
+#if KDE_VERSION >= 0x040200
+#include <kactioncategory.h>
+#include <kfilterproxysearchline.h>
+#include <kglobalshortcutinfo.h>
+#include <kglobalshortcutinfo_p.h>
+#include <kcapacitybar.h>
 #include <sonnet/dictionarycombobox.h>
+#endif
+
+#if KDE_VERSION >= 0x040300
+#include <kmodifierkeyinfo.h>
+#endif
+
+#if KDE_VERSION >= 0x040400
+#include <kselectionproxymodel.h>
+#include <kstatusnotifieritem.h>
+#include <kpixmapsequence.h>
+#include <kpixmapsequenceoverlaypainter.h>
+#include <kpixmapsequencewidget.h>
+#endif

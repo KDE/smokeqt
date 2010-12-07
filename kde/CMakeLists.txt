@@ -1,6 +1,9 @@
 project(Korundum)
 
 find_package(KDE4 REQUIRED)
+if(KDE_VERSION VERSION_LESS "4.2.0")
+    find_package(Plasma)
+endif(KDE_VERSION VERSION_LESS "4.2.0")
 include(KDE4Defaults)
 include(MacroLibrary)
 include(MacroOptionalAddBindings)
