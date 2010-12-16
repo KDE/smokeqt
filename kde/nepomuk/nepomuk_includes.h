@@ -50,6 +50,6 @@
 #include <nepomuk/term.h>
 #endif
 
-#if KDE_VERSION >= 0x40600
+#if KDE_VERSION >= 0x40550
 #include <nepomuk/file.h>
 #endif
