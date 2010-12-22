@@ -1,35 +1,13 @@
-project(Korundum)
+project(SmokeKDE)
 
-find_package(KDE4 REQUIRED)
 if(KDE_VERSION VERSION_LESS "4.2.0")
     find_package(Plasma)
 endif(KDE_VERSION VERSION_LESS "4.2.0")
-include(KDE4Defaults)
-include(MacroLibrary)
-include(MacroOptionalAddBindings)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_SOURCE_DIR}/generator)
 
 add_definitions (${QT_DEFINITIONS} ${KDE4_DEFINITIONS} -DQT3_SUPPORT)
 include_directories (${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR} ${KDE4_INCLUDES} )
-
-macro_optional_find_package(LibAttica)
-macro_log_feature(LIBATTICA_FOUND "libattica" "LibAttica" "http://www.kde.org" FALSE "" "Needed to compile libattica bindings")
-
-macro_optional_find_package(Soprano)
-macro_log_feature(SOPRANO_FOUND "Soprano" "Soprano libraries" "http://soprano.sourceforge.net" FALSE "" "Needed to compile Soprano bindings")
-
-macro_optional_find_package(Nepomuk)
-macro_log_feature(NEPOMUK_FOUND "Nepomuk" "Nepomuk libraries" "http://www.kde.org" FALSE "" "Needed to compile Nepomuk bindings")
-
-macro_optional_find_package(KdepimLibs)
-macro_log_feature(KDEPIMLIBS_FOUND "kdepimlibs" "KDE PIM libraries" "http://www.kde.org" FALSE "" "Needed to compile Akonadi bindings")
-
-macro_optional_find_package(Akonadi)
-macro_log_feature(AKONADI_FOUND "Akonadi" "Akonadi libraries" "http://www.kde.org" FALSE "" "Needed to compile Akonadi bindings")
-
-macro_optional_find_package(Okular)
-macro_log_feature(OKULAR_FOUND "Okular" "Okular libraries" "http://www.kde.org" FALSE "" "Needed to compile Okular bindings")
 
 macro_optional_add_bindings(KDE4_FOUND "KDECore" kdecore)
 macro_optional_add_bindings(KDE4_FOUND "KDEUi" kdeui)
@@ -64,3 +42,4 @@ find_path(KATE_INCLUDE_DIR kate/plugin.h HINTS ${KDE4_INCLUDE_DIR})
 
 macro_optional_add_bindings(KATE_INCLUDE_DIR "Kate" kate)
 
+macro_display_bindings_log()
