@@ -61,6 +61,7 @@
 #include <kremoteencoding.h>
 #include <krun.h>
 #include <ksambashare.h>
+#include <ksambasharedata.h>
 #include <kscan.h>
 #include <kshellcompletion.h>
 #include <kstatusbarofflineindicator.h>
