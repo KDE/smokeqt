@@ -111,6 +111,6 @@
 #include <kdiskfreespaceinfo.h>
 #endif
 
-#if KDE_VERSION >= 0x040700
+#if KDE_VERSION >= 0x040640
 #include <ksambasharedata.h>
 #endif
