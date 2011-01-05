@@ -61,7 +61,6 @@
 #include <kremoteencoding.h>
 #include <krun.h>
 #include <ksambashare.h>
-#include <ksambasharedata.h>
 #include <kscan.h>
 #include <kshellcompletion.h>
 #include <kstatusbarofflineindicator.h>
@@ -110,4 +109,8 @@
 #include <kfileitemlistproperties.h>
 #include <kfileitemactions.h>
 #include <kdiskfreespaceinfo.h>
+#endif
+
+#if KDE_VERSION >= 0x040700
+#include <ksambasharedata.h>
 #endif
