@@ -15,10 +15,10 @@ add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp
     ${CMAKE_CURRENT_BINARY_DIR}/x_9.cpp
     ${CMAKE_CURRENT_BINARY_DIR}/x_10.cpp
 
-    COMMAND smokegen
+    COMMAND ${SMOKE_GEN_BIN}
     ARGS -config "${CMAKE_CURRENT_BINARY_DIR}/config.xml" -smokeconfig "${CMAKE_CURRENT_SOURCE_DIR}/smokeconfig.xml"
          -- ${CMAKE_CURRENT_SOURCE_DIR}/plasma_includes.h
-    DEPENDS smokegen generator_smoke WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
+    DEPENDS ${SMOKE_GEN_BIN} WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
 
 macro_add_file_dependencies( ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp ${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp )
 
@@ -46,7 +46,8 @@ target_link_libraries(smokeplasma
     ${KDE4_PLASMA_LIBS}
     smokekdecore
     smokekdeui
-    smokeqtcore
+    ${SMOKE_QTCORE_LIBRARY}
+    ${SMOKE_BASE_LIBRARY}
 )
 
 if(KDE_VERSION VERSION_LESS "4.2.0")

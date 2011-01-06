@@ -8,10 +8,10 @@ include_directories( ${QT_INCLUDES} ${SOPRANO_INCLUDE_DIR} )
 add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp
 	${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp
 
-    COMMAND smokegen
+    COMMAND ${SMOKE_GEN_BIN}
     ARGS -config "${CMAKE_CURRENT_BINARY_DIR}/../soprano/config.xml" -smokeconfig "${CMAKE_CURRENT_SOURCE_DIR}/smokeconfig.xml"
          -I "${SOPRANO_INCLUDE_DIR}" -- ${CMAKE_CURRENT_SOURCE_DIR}/soprano_includes.h
-    DEPENDS smokegen generator_smoke WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
+    DEPENDS ${SMOKE_GEN_BIN} WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
 
 macro_add_file_dependencies( ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp ${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp )
 
@@ -26,12 +26,13 @@ ENDIF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
 add_library(smokesopranoclient SHARED ${smokesopranoclient_LIB_SRCS})
 
 target_link_libraries(  smokesopranoclient 
-                            smokeqtcore 
+                            ${SMOKE_QTCORE_LIBRARY} 
                             smokesoprano 
                             ${QT_QTCORE_LIBRARY} 
                             ${QT_QTNETWORK_LIBRARY} 
                             sopranoclient 
                             ${SOPRANO_LIBRARIES}
+                            ${SMOKE_BASE_LIBRARY}
 )
 
 set_target_properties(smokesopranoclient PROPERTIES VERSION 3.0.0 SOVERSION 3 )

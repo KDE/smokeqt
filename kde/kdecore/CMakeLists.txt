@@ -27,10 +27,10 @@ add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp
     ${CMAKE_CURRENT_BINARY_DIR}/x_19.cpp
     ${CMAKE_CURRENT_BINARY_DIR}/x_20.cpp
 
-    COMMAND smokegen
+    COMMAND ${SMOKE_GEN_BIN}
     ARGS -config "${CMAKE_CURRENT_BINARY_DIR}/config.xml" -smokeconfig "${CMAKE_CURRENT_SOURCE_DIR}/smokeconfig.xml"
          -- ${CMAKE_CURRENT_SOURCE_DIR}/kdecore_includes.h
-    DEPENDS smokegen generator_smoke WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
+    DEPENDS ${SMOKE_GEN_BIN} WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
 
 macro_add_file_dependencies( ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp ${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp )
 
@@ -71,12 +71,13 @@ target_link_libraries(smokekdecore
     ${QT_QTDBUS_LIBRARY}
     ${QT_QTXML_LIBRARY}
     ${KDE4_KDECORE_LIBS}
-    smokeqtcore
-    smokeqtnetwork
-    smokeqtdbus
+    ${SMOKE_QTCORE_LIBRARY}
+    ${SMOKE_QTNETWORK_LIBRARY}
+    ${SMOKE_QTDBUS_LIBRARY}
+    ${SMOKE_BASE_LIBRARY}
 )
 
 set_target_properties(smokekdecore PROPERTIES VERSION 3.0.0 SOVERSION 3 )
 install(TARGETS smokekdecore DESTINATION ${LIB_INSTALL_DIR} )
 install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../kdecore_smoke.h DESTINATION include/smoke)
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/kde-config.xml DESTINATION share/smokegen)
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/kde-config.xml DESTINATION share/${SMOKE_GEN_BIN})

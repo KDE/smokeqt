@@ -1,3 +1,5 @@
+# needs QTDEFINES_FILE set to work correctly.
+
 if(NOT QT_DEFINES_FOUND)
 #Threshold for tests
 set(QT_NO_DEBUG 16)
@@ -167,9 +169,9 @@ endif(WITH_QT3_SUPPORT)
 
 # string(REGEX REPLACE ";" "\n" qtdefines ${qtdefines})
 # file(WRITE ${CMAKE_CURRENT_BINARY_DIR}/../qtdefines-ng ${qtdefines})
-file(REMOVE ${CMAKE_CURRENT_BINARY_DIR}/../../qtdefines)
+file(REMOVE "${QTDEFINES_FILE}")
 foreach(definition ${qtdefines})
-  file(APPEND ${CMAKE_CURRENT_BINARY_DIR}/../../qtdefines "${definition}\n")
+  file(APPEND "${QTDEFINES_FILE}" "${definition}\n")
 endforeach(definition ${qtdefines})
 set(QT_DEFINES_FOUND true CACHE BOOL "Test results that describe how Qt was built")
 endif(NOT QT_DEFINES_FOUND)

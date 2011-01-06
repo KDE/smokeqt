@@ -1,14 +1,21 @@
-project(Korundum)
+project(SmokeKDE)
 
 find_package(KDE4 REQUIRED)
 if(KDE_VERSION VERSION_LESS "4.2.0")
     find_package(Plasma)
 endif(KDE_VERSION VERSION_LESS "4.2.0")
 include(KDE4Defaults)
+find_package(Smoke COMPONENTS QtCore QtGui QtXml QtOpenGl QtSql QtNetwork QtDbus QtSvg)
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${SMOKE_CMAKE_MODULE_DIR})
 include(MacroLibrary)
 include(MacroOptionalAddBindings)
 
-include_directories(${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_SOURCE_DIR}/generator)
+set(QTDEFINES_FILE ${SMOKE_GEN_SHARED}/qtdefines CACHE FILEPATH "Path to the qtdefines file")
+if(NOT EXISTS ${QTDEFINES_FILE})
+    message(FATAL_ERROR "${QTDEFINES_FILE} doesn't exist. Please adjust the path manually")
+endif(NOT EXISTS ${QTDEFINES_FILE})
+
+include_directories(${CMAKE_CURRENT_SOURCE_DIR} ${SMOKE_INCLUDE_DIR})
 
 add_definitions (${QT_DEFINITIONS} ${KDE4_DEFINITIONS} -DQT3_SUPPORT)
 include_directories (${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR} ${KDE4_INCLUDES} )
@@ -64,3 +71,5 @@ find_path(KATE_INCLUDE_DIR kate/plugin.h HINTS ${KDE4_INCLUDE_DIR})
 
 macro_optional_add_bindings(KATE_INCLUDE_DIR "Kate" kate)
 
+macro_display_bindings_log()
+macro_display_feature_log()

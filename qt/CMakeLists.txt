@@ -1,8 +1,17 @@
 project(SMOKEQT4)
 
+cmake_minimum_required(VERSION 2.6)
+
 add_definitions(-DSMOKE_BUILDING)
 
-include_directories(${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_SOURCE_DIR}/generator)
+find_package(Qt4 REQUIRED)
+find_package(Smoke)
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${SMOKE_CMAKE_MODULE_DIR})
+include(MacroOptionalFindPackage)
+include(MacroOptionalAddBindings)
+include(MacroLogFeature)
+
+include_directories(${CMAKE_CURRENT_SOURCE_DIR} ${SMOKE_INCLUDE_DIR})
 
 macro_optional_find_package(QImageBlitz)
 macro_log_feature(QIMAGEBLITZ_FOUND "QImageBlitz" "QImageBlitz library" "http://www.kde.org" FALSE "" "Needed to compile QImageBlitz bindings")
@@ -15,6 +24,8 @@ macro_log_feature(PHONON_FOUND "Phonon" "Phonon multimedia framework" "http://ww
 
 macro_optional_find_package(QScintilla)
 macro_log_feature(QSCINTILLA_FOUND "QScintilla2" "QScintilla2 libraries" "http://www.riverbankcomputing.co.uk/software/qscintilla/intro" FALSE "" "Needed to compile QScintilla2 bindings")
+
+set(QTDEFINES_FILE ${CMAKE_CURRENT_BINARY_DIR}/qtdefines)
 
 add_subdirectory(qtcore)
 macro_optional_add_bindings(QT_QTNETWORK_FOUND "QtNetwork" qtnetwork)
@@ -53,3 +64,4 @@ set(qt_test_threshold 10)
 endif (APPLE)
 
 macro_display_bindings_log()
+macro_display_feature_log()
