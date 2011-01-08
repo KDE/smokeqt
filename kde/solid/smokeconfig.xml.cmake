@@ -21,6 +21,10 @@
         <signature>.*::q</signature>
         <signature>.*QDebug.*</signature>
         <signature>.*Q3.*</signature>
+
+        @BEGIN_BROKEN_EXPORT@
+        <signature>.*Solid::Networking::(set)?([dD]is)?[cC]onnectPolicy\(.*\)</signature>
+        @END_BROKEN_EXPORT@
     </exclude>
     <functions>
         <!-- everything in that namespace.. -->
@@ -40,13 +44,17 @@
         <class>Solid::DvbInterface</class>
         <class>Solid::GenericInterface</class>
         <class>Solid::Networking</class>
+        @BEGIN_BROKEN_EXPORT@
         <class>Solid::Networking::Notifier</class>
+        @END_BROKEN_EXPORT@
         <class>Solid::NetworkInterface</class>
         <class>Solid::OpticalDisc</class>
         <class>Solid::OpticalDrive</class>
         <class>Solid::PortableMediaPlayer</class>
         <class>Solid::PowerManagement</class>
+        @BEGIN_BROKEN_EXPORT@
         <class>Solid::PowerManagement::Notifier</class>
+        @END_BROKEN_EXPORT@
         <class>Solid::Predicate</class>
         <class>Solid::Processor</class>
         <class>Solid::StorageAccess</class>

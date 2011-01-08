@@ -3,6 +3,14 @@ include_directories( ${CMAKE_SOURCE_DIR}/smoke )
 
 configure_file(config.xml.cmake ${CMAKE_CURRENT_BINARY_DIR}/config.xml @ONLY)
 
+if (KDE_VERSION VERSION_LESS "4.4.85")
+    # comment out the stuff that wasn't exported before
+    set(BEGIN_BROKEN_EXPORT "<!--")
+    set(END_BROKEN_EXPORT "-->")
+endif (KDE_VERSION VERSION_LESS "4.4.85")
+
+configure_file(smokeconfig.xml.cmake ${CMAKE_CURRENT_BINARY_DIR}/smokeconfig.xml @ONLY)
+
 add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp 
     ${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp 
     ${CMAKE_CURRENT_BINARY_DIR}/x_2.cpp 
@@ -16,7 +24,7 @@ add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp
     ${CMAKE_CURRENT_BINARY_DIR}/x_10.cpp
 
     COMMAND ${SMOKE_GEN_BIN}
-    ARGS -config "${CMAKE_CURRENT_BINARY_DIR}/config.xml" -smokeconfig "${CMAKE_CURRENT_SOURCE_DIR}/smokeconfig.xml"
+    ARGS -config "${CMAKE_CURRENT_BINARY_DIR}/config.xml" -smokeconfig "${CMAKE_CURRENT_BINARY_DIR}/smokeconfig.xml"
          -- ${CMAKE_CURRENT_SOURCE_DIR}/solid_includes.h
     DEPENDS ${SMOKE_GEN_BIN} WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
 
