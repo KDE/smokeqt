@@ -12,6 +12,6 @@
 #include <kcmodulecontainer.h>
 #include <kprintpreview.h>
 
-#if KDE_VERSION >= 0x040400
+#if KDE_IS_VERSION(4, 4, 0)
 #include <kidletime.h>
 #endif

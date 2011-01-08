@@ -102,7 +102,7 @@
 #include <kio/kntlm_export.h>
 #include <kio/kntlm.h>
 
-#if KDE_VERSION >= 0x040300
+#if KDE_IS_VERSION(4, 3, 0)
 #include <kio/accessmanager.h>
 #include <kio/thumbsequencecreator.h>
 #include <kio/sslui.h>
@@ -111,6 +111,6 @@
 #include <kdiskfreespaceinfo.h>
 #endif
 
-#if KDE_VERSION >= 0x040640
+#if KDE_IS_VERSION(4, 6, 40)
 #include <ksambasharedata.h>
 #endif

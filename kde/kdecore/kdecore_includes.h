@@ -79,15 +79,15 @@
 #include <sonnet/backgroundchecker.h>
 #include <sonnet/speller.h>
 
-#if KDE_VERSION >= 0x040200
+#if KDE_IS_VERSION(4, 2, 0)
 #include <sonnet/globals.h>
 #endif
 
-#if KDE_VERSION >= 0x040202
+#if KDE_IS_VERSION(4, 2, 2)
 #include <kencodingprober.h>        
 #endif
 
-#if KDE_VERSION >= 0x040400
+#if KDE_IS_VERSION(4, 4, 0)
 #include <kauthaction.h>            
 #include <kauthactionreply.h>       
 #include <kauthactionwatcher.h>     

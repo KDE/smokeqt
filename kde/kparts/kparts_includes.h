@@ -15,10 +15,10 @@
 
 #include <kde_terminal_interface.h>
 
-#if KDE_VERSION >= 0x040300
+#if KDE_IS_VERSION(4, 3, 0)
 #include <kde_terminal_interface_v2.h>
 #endif
 
-#if KDE_VERSION >= 0x040400
+#if KDE_IS_VERSION(4, 4, 0)
 #include <kparts/browseropenorsavequestion.h>
 #endif

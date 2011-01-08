@@ -1,5 +1,5 @@
 #include <kdeversion.h>
-#if KDE_VERSION >= 0x040400
+#if KDE_IS_VERSION(4, 4, 0)
 #include <knewstuff3/downloaddialog.h>
 #include <knewstuff3/entry.h>
 #include <knewstuff3/knewstuff_export.h>

@@ -181,7 +181,7 @@
 #include <sonnet/configdialog.h>
 #include <sonnet/configwidget.h>
 
-#if KDE_VERSION >= 0x040200
+#if KDE_IS_VERSION(4, 2, 0)
 #include <kactioncategory.h>
 #include <kfilterproxysearchline.h>
 #include <kglobalshortcutinfo.h>
@@ -190,11 +190,11 @@
 #include <sonnet/dictionarycombobox.h>
 #endif
 
-#if KDE_VERSION >= 0x040300
+#if KDE_IS_VERSION(4, 3, 0)
 #include <kmodifierkeyinfo.h>
 #endif
 
-#if KDE_VERSION >= 0x040400
+#if KDE_IS_VERSION(4, 4, 0)
 #include <kselectionproxymodel.h>
 #include <kstatusnotifieritem.h>
 #include <kpixmapsequence.h>

@@ -27,11 +27,11 @@
 
 #include <qicon.h>
 
-#if KDE_VERSION >= 0x040200
+#if KDE_IS_VERSION(4, 2, 0)
 #include <nepomuk/thing.h>
 #endif
 
-#if KDE_VERSION >= 0x040400
+#if KDE_IS_VERSION(4, 4, 0)
 #include <nepomuk/andterm.h>
 #include <nepomuk/comparisonterm.h>
 #include <nepomuk/filequery.h>
@@ -50,6 +50,6 @@
 #include <nepomuk/term.h>
 #endif
 
-#if KDE_VERSION >= 0x40550
+#if KDE_IS_VERSION(4, 5, 50)
 #include <nepomuk/file.h>
 #endif

@@ -3,7 +3,7 @@
 
 #include <qicon.h>
 
-#if KDE_VERSION >= 0x040400
+#if KDE_IS_VERSION(4, 4, 0)
 #include <nepomuk/term.h>
 #include <nepomuk/negationterm.h>
 #include <nepomuk/orterm.h>
@@ -21,7 +21,7 @@
 #include <nepomuk/queryparser.h>
 #endif
 
-#if KDE_VERSION >= 0x040500
+#if KDE_IS_VERSION(4, 5, 0)
 #include <nepomuk/optionalterm.h>
 #endif
 

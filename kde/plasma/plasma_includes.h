@@ -41,7 +41,7 @@
 #include <plasma/widgets/signalplotter.h>
 #include <plasma/widgets/textedit.h>
 
-#if KDE_VERSION >= 0x040200
+#if KDE_IS_VERSION(4, 2, 0)
 #include <plasma/configloader.h>
 #include <plasma/context.h>
 #include <plasma/extender.h>
@@ -61,7 +61,7 @@
 #include <plasma/widgets/webview.h>
 #endif
 
-#if KDE_VERSION >= 0x040300
+#if KDE_IS_VERSION(4, 3, 0)
 #include <plasma/extendergroup.h>
 #include <plasma/runnersyntax.h>
 #include <plasma/widgets/scrollwidget.h>
@@ -70,7 +70,7 @@
 #include <plasma/widgets/videowidget.h>
 #endif
 
-#if KDE_VERSION >= 0x040400
+#if KDE_IS_VERSION(4, 4, 0)
 #include <plasma/abstracttoolbox.h>
 #include <plasma/accessappletjob.h>
 #include <plasma/accessmanager.h>
@@ -90,6 +90,6 @@
 #include <plasma/windoweffects.h>
 #endif
 
-#if KDE_VERSION >= 0x040500
+#if KDE_IS_VERSION(4, 5, 0)
 #include <plasma/abstractdialogmanager.h>
 #endif

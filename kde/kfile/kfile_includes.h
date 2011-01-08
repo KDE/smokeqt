@@ -11,6 +11,6 @@
 #include <kfile_export.h>
 
 #include <kdeversion.h>
-#if KDE_VERSION >= 0x040200
+#if KDE_IS_VERSION(4, 2, 0)
 #include <kfilepreviewgenerator.h>
 #endif

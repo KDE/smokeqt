@@ -28,12 +28,12 @@
 #include <ktexteditor/variableinterface.h>
 #include <ktexteditor/view.h>
 
-#if KDE_VERSION >= 0x040200
+#if KDE_IS_VERSION(4, 2, 0)
 #include <ktexteditor/codecompletionmodelcontrollerinterface.h>
 #include <ktexteditor/loadsavefiltercheckplugin.h>
 #endif
 
-#if KDE_VERSION >= 0x040400
+#if KDE_IS_VERSION(4, 4, 0)
 #include <ktexteditor/highlightinterface.h>
 #include <ktexteditor/smartcursornotifier.h>
 #include <ktexteditor/smartcursorwatcher.h>
