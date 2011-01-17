@@ -1,6 +1,6 @@
 find_package(Phonon REQUIRED)
 
-include_directories( ${QT_INCLUDES} ${PHONON_INCLUDES} ${CMAKE_CURRENT_SOURCE_DIR} )
+include_directories( ${PHONON_INCLUDES} ${QT_INCLUDES} ${CMAKE_CURRENT_SOURCE_DIR} )
 
 ########### next target ###############
 
