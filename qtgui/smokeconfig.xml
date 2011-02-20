@@ -30,6 +30,9 @@
         <signature>.*qFrom.*Endian_helper.*</signature>
         <signature>.*QPixmapData.*</signature>
         <signature>.*qt_x11_getX11InfoForWindow.*</signature>
+        <!-- OS X internal stuff -->
+        <signature>.*qt_mac_set_cursor.*</signature>
+        <signature>.*QMenu::macMenu\(.*</signature>
    </exclude>
     <functions>
         <!-- include functions starting with 'q' -->
