@@ -20,6 +20,8 @@
     <exclude>
         <signature>.*QwtData::operator=\(const QwtData&amp;\).*</signature>
         <signature>.*QwtSpline::d_data</signature>
+        <!-- OS X internal stuff -->
+        <signature>.*qt_mac_set_cursor.*</signature>
     </exclude>
     <classList>
         <class>QwtAbstractScaleDraw</class>

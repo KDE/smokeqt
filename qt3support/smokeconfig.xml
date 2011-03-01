@@ -30,6 +30,8 @@
         <!-- windows internal helper functions -->
         <signature>.*qFrom.*Endian_helper.*</signature>
         <signature>.*QIPv6Address::c.*</signature>
+        <!-- OS X internal stuff -->
+        <signature>.*qt_mac_set_cursor.*</signature>
    </exclude>
     <functions>
         <!-- include functions starting with 'q' -->
