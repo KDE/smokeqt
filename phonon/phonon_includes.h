@@ -37,4 +37,4 @@
 #include <phonon/volumefaderinterface.h>
 #include <phonon/volumeslider.h>
 
-#include <qurl.h>
+#include <QtCore/qurl.h>
