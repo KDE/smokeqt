@@ -27,6 +27,10 @@ macro_log_feature(QSCINTILLA_FOUND "QScintilla2" "QScintilla2 libraries" "http:/
 
 set(QTDEFINES_FILE ${CMAKE_CURRENT_BINARY_DIR}/qtdefines)
 
+if(WITH_QT3_SUPPORT)
+    add_definitions(-DQT3_SUPPORT)
+endif(WITH_QT3_SUPPORT)
+
 add_subdirectory(qtcore)
 macro_optional_add_bindings(QT_QTNETWORK_FOUND "QtNetwork" qtnetwork)
 macro_optional_add_bindings(QT_QTDBUS_FOUND "QtDBus" qtdbus)

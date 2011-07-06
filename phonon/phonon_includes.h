@@ -1,6 +1,7 @@
 #ifdef __SMOKEGEN_RUN__
 #  define PHONON_EXPORT
 #  define PHONON_DEPRECATED
+#  define PHONON_EXPORT_DEPRECATED
 #endif
 
 #include <phonon/abstractaudiooutput.h>
