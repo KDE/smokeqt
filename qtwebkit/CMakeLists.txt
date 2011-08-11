@@ -27,7 +27,6 @@ target_link_libraries(  smokeqtwebkit
                         smokeqtgui 
                         ${QT_QTCORE_LIBRARY} 
                         ${QT_QTGUI_LIBRARY} 
-                        ${QT_QTNETWORK_LIBRARY} 
                         ${QT_QTWEBKIT_LIBRARY} )
 
 set_target_properties(smokeqtwebkit PROPERTIES VERSION 3.0.0 SOVERSION 3 )
