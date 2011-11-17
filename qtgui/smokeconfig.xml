@@ -266,6 +266,7 @@
         <class>QPaintEngine</class>
         <class>QPaintEngineState</class>
         <class>QPainter</class>
+        <class>QPainter::PixmapFragment</class>
         <class>QPainterPath</class>
         <class>QPainterPath::Element</class>
         <class>QPainterPathStroker</class>
@@ -329,6 +330,7 @@
         <class>QStackedWidget</class>
         <class>QStandardItem</class>
         <class>QStandardItemModel</class>
+        <class>QStaticText</class>
         <class>QStatusBar</class>
         <class>QStatusTipEvent</class>
         <class>QStringListModel</class>
