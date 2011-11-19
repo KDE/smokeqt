@@ -125,7 +125,6 @@
         <class>QDragResponseEvent</class>
         <class>QDropEvent</class>
         <class>QErrorMessage</class>
-        <class>QFactoryInterface</class>
         <class>QFileDialogArgs</class>
         <class>QFileDialog</class>
         <class>QFileDialog::Options</class>
