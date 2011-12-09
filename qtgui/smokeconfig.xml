@@ -75,6 +75,7 @@
         <class>QAccessiblePlugin</class>
         <class>QAccessibleSimpleEditableTextInterface</class>
         <class>QAccessibleTableInterface</class>
+        <class>QAccessibleTable2Interface</class>
         <class>QAccessibleTextInterface</class>
         <class>QAccessibleValueInterface</class>
         <class>QAccessibleWidget</class>
@@ -147,6 +148,7 @@
         <class>QGesture</class>
         <class>QGestureEvent</class>
         <class>QGestureRecognizer</class>
+        <class>QGlyphRun</class>
         <class>QGradient</class>
         <class>QGraphicsAnchor</class>
         <class>QGraphicsAnchorLayout</class>

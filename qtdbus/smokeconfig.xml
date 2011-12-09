@@ -48,6 +48,7 @@
         <class>QDBusContext</class>
         <class>QDBusDemarshaller</class>
         <class>QDBusError</class>
+        <class>QDBusUnixFileDescriptor</class>
         <class>QDBusInterface</class>
         <class>QDBusMarshaller</class>
         <class>QDBusMessage</class>
@@ -56,6 +57,7 @@
         <class>QDBusPendingCallWatcher</class>
         <class>QDBusServer</class>
         <class>QDBusServiceWatcher</class>
+        <class>QDBusVirtualObject</class>
 
         <!-- namespaces -->
         <class>QDBus</class>
