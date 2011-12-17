@@ -10,7 +10,8 @@ add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp
     COMMAND ${SMOKE_GEN_BIN}
     ARGS -config "${CMAKE_CURRENT_BINARY_DIR}/../qtcore/config.xml" -smokeconfig "${CMAKE_CURRENT_SOURCE_DIR}/smokeconfig.xml"
          -I ${QIMAGEBLITZ_INCLUDES} -- ${CMAKE_CURRENT_SOURCE_DIR}/qimageblitz_includes.h
-    DEPENDS ${SMOKE_GEN_BIN}  WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
+    DEPENDS ${SMOKE_GEN_BIN} "${CMAKE_CURRENT_SOURCE_DIR}/smokeconfig.xml"
+    WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
 
 macro_add_file_dependencies( ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp ${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp )
 
@@ -28,5 +29,12 @@ target_link_libraries(smokeqimageblitz smokeqtcore ${QT_QTCORE_LIBRARY} ${QT_QTG
 
 set_target_properties(smokeqimageblitz PROPERTIES VERSION 3.0.0 SOVERSION 3 )
 
-install(TARGETS smokeqimageblitz DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
+install(TARGETS smokeqimageblitz
+ LIBRARY DESTINATION ${LIB_INSTALL_DIR}
+    ARCHIVE DESTINATION ${LIB_INSTALL_DIR}
+    RUNTIME DESTINATION bin)
+if (WIN32)
+    # Get rid of the "lib" prefix on archives/DLLs in Windows.
+    set_target_properties(smokeqimageblitz PROPERTIES PREFIX "" IMPORT_PREFIX "")
+endif (WIN32)
 install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../qimageblitz_smoke.h DESTINATION include/smoke )

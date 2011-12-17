@@ -48,7 +48,6 @@
         <class>QDBusContext</class>
         <class>QDBusDemarshaller</class>
         <class>QDBusError</class>
-        <class>QDBusUnixFileDescriptor</class>
         <class>QDBusInterface</class>
         <class>QDBusMarshaller</class>
         <class>QDBusMessage</class>

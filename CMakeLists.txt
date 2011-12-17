@@ -6,12 +6,17 @@ add_definitions(-DSMOKE_BUILDING)
 
 find_package(Qt4 REQUIRED)
 find_package(Smoke)
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${SMOKE_CMAKE_MODULE_DIR})
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${SMOKE_CMAKE_MODULE_DIR}")
 include(MacroOptionalFindPackage)
 include(MacroOptionalAddBindings)
 include(MacroLogFeature)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR} ${SMOKE_INCLUDE_DIR})
+
+# Set LIB_INSTALL_DIR if it's not set already.
+if (NOT LIB_INSTALL_DIR)
+    set (LIB_INSTALL_DIR ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX})
+endif (NOT LIB_INSTALL_DIR)
 
 macro_optional_find_package(QImageBlitz)
 macro_log_feature(QIMAGEBLITZ_FOUND "QImageBlitz" "QImageBlitz library" "http://www.kde.org" FALSE "" "Needed to compile QImageBlitz bindings")
