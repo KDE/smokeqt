@@ -39,3 +39,4 @@ if (WIN32)
 endif (WIN32)
 
 install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../qtuitools_smoke.h DESTINATION include/smoke)
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/qtuitools.argnames.txt DESTINATION share/smoke)

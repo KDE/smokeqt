@@ -47,3 +47,4 @@ if (WIN32)
 endif (WIN32)
 
 install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../qtxml_smoke.h DESTINATION include/smoke)
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/qtxml.argnames.txt DESTINATION share/smoke)

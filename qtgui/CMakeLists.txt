@@ -82,3 +82,4 @@ if (WIN32)
 endif (WIN32)
 
 install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../qtgui_smoke.h DESTINATION include/smoke)
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/qtgui.argnames.txt DESTINATION share/smoke)

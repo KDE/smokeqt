@@ -49,3 +49,4 @@ if (WIN32)
 endif (WIN32)
 
 install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../qtsvg_smoke.h DESTINATION include/smoke)
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/qtsvg.argnames.txt DESTINATION share/smoke)

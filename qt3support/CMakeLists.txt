@@ -96,3 +96,4 @@ if (WIN32)
 endif (WIN32)
 
 install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../qt3support_smoke.h DESTINATION include/smoke)
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/qt3support.argnames.txt DESTINATION share/smoke)
