@@ -89,8 +89,11 @@ install(TARGETS smokeqt3support
     ARCHIVE DESTINATION ${LIB_INSTALL_DIR}
     RUNTIME DESTINATION bin)
 
-# Get rid of the "lib" prefix on archives/DLLs in Windows.
 if (WIN32)
+	# Realign the stack, for compatibility with an older ABI.
+	set_target_properties (smokeqt3support PROPERTIES COMPILE_FLAGS -mstackrealign)
+
+	# Get rid of the "lib" prefix on archives/DLLs in Windows.
     set_target_properties(smokeqt3support
         PROPERTIES PREFIX "" IMPORT_PREFIX "")
 endif (WIN32)

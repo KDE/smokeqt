@@ -50,6 +50,9 @@ install(TARGETS smokeqwt LIBRARY DESTINATION ${LIB_INSTALL_DIR}
     RUNTIME DESTINATION bin)
 
 if (WIN32)
+	# Realign the stack, for compatibility with an older ABI.
+	set_target_properties (smokeqwt PROPERTIES COMPILE_FLAGS -mstackrealign)
+
     # Get rid of the "lib" prefix on archives/DLLs in Windows.
     set_target_properties(smokeqwt
         PROPERTIES PREFIX "" IMPORT_PREFIX "")

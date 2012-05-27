@@ -10,4 +10,10 @@ include_directories(${QT_INCLUDES})
 # message(STATUS "Target test: ${test}")
 # add_definitions(-DTEST_${test})
 add_executable( target_test test.cpp )
+
+if (WIN32)
+	# Realign the stack, for compatibility with an older ABI.
+	set_target_properties (target_test PROPERTIES COMPILE_FLAGS -mstackrealign)
+endif (WIN32)
+
 target_link_libraries( target_test ${QT_LIBRARIES} )
