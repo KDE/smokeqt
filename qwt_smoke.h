@@ -5,7 +5,7 @@
 
 // Defined in smokedata.cpp, initialized by init_qsci_Smoke(), used by all .cpp files
 extern "C" SMOKE_EXPORT Smoke* qwt_Smoke;
-extern "C" SMOKE_EXPORT void init_qwt_Smoke();
+extern "C" SMOKE_EXPORT Smoke* init_qwt_Smoke();
 extern "C" SMOKE_EXPORT void delete_qwt_Smoke();
 
 #ifndef QGLOBALSPACE_CLASS

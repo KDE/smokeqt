@@ -5,7 +5,7 @@
 
 // Defined in smokedata.cpp, initialized by init_qimageblitz_Smoke(), used by all .cpp files
 extern "C" SMOKE_EXPORT Smoke* qimageblitz_Smoke;
-extern "C" SMOKE_EXPORT void init_qimageblitz_Smoke();
+extern "C" SMOKE_EXPORT Smoke* init_qimageblitz_Smoke();
 extern "C" SMOKE_EXPORT void delete_qimageblitz_Smoke();
 
 #ifndef QGLOBALSPACE_CLASS

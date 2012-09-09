@@ -5,7 +5,7 @@
 
 // Defined in smokedata.cpp, initialized by init_qtmultimedia_Smoke(), used by all .cpp files
 extern "C" SMOKE_EXPORT Smoke* qtmultimedia_Smoke;
-extern "C" SMOKE_EXPORT void init_qtmultimedia_Smoke();
+extern "C" SMOKE_EXPORT Smoke* init_qtmultimedia_Smoke();
 extern "C" SMOKE_EXPORT void delete_qtmultimedia_Smoke();
 
 #ifndef QGLOBALSPACE_CLASS
