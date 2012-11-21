@@ -13,7 +13,9 @@ add_executable( target_test test.cpp )
 
 if (WIN32)
 	# Realign the stack, for compatibility with an older ABI.
-	set_target_properties (target_test PROPERTIES COMPILE_FLAGS -mstackrealign)
+	if(CMAKE_COMPILER_IS_GNUCXX)
+		set_target_properties(target_test PROPERTIES COMPILE_FLAGS -mstackrealign)
+	endif()
 endif (WIN32)
 
 target_link_libraries( target_test ${QT_LIBRARIES} )
