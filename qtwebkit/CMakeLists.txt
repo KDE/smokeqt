@@ -47,3 +47,4 @@ endif (WIN32)
 
 install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../qtwebkit_smoke.h DESTINATION include/smoke )
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/qtwebkit.argnames.txt DESTINATION share/smoke)
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/qtwebkit.typedefs.txt DESTINATION share/smoke)

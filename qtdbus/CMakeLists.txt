@@ -50,3 +50,4 @@ endif (WIN32)
 
 install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../qtdbus_smoke.h DESTINATION include/smoke)
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/qtdbus.argnames.txt DESTINATION share/smoke)
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/qtdbus.typedefs.txt DESTINATION share/smoke)

@@ -55,3 +55,4 @@ endif (WIN32)
 
 install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../qtmultimedia_smoke.h DESTINATION include/smoke)
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/qtmultimedia.argnames.txt DESTINATION share/smoke)
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/qtmultimedia.typedefs.txt DESTINATION share/smoke)

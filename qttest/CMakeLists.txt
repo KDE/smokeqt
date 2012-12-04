@@ -49,3 +49,4 @@ endif (WIN32)
 
 install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../qttest_smoke.h DESTINATION include/smoke)
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/qttest.argnames.txt DESTINATION share/smoke)
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/qttest.typedefs.txt DESTINATION share/smoke)

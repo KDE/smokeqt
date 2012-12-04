@@ -100,3 +100,4 @@ install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../qtcore_smoke.h DESTINATION include/
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/qt-config.xml DESTINATION share/smokegen)
 install(FILES ${QTDEFINES_FILE} DESTINATION share/smokegen)
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/qtcore.argnames.txt DESTINATION share/smoke)
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/qtcore.typedefs.txt DESTINATION share/smoke)
