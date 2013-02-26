@@ -20,7 +20,7 @@ endif (NOT LIB_INSTALL_DIR)
 
 ## disable deprecation waringins
 if(CMAKE_COMPILER_IS_GNUCXX)
-    set(CMAKE_CXX_FLAGS "-Wno-deprecated-declarations")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-deprecated-declarations")
 endif()
 
 macro_optional_find_package(QImageBlitz)
