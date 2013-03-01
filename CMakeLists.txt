@@ -6,6 +6,12 @@ add_definitions(-DSMOKE_BUILDING)
 
 find_package(Qt4 REQUIRED)
 find_package(Smoke)
+
+if(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
+set(CMAKE_INSTALL_PREFIX ${SMOKE_INSTALL_PREFIX}
+    CACHE PATH "Install prefix" FORCE)
+endif(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
+
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${SMOKE_CMAKE_MODULE_DIR}")
 include(MacroOptionalFindPackage)
 include(MacroOptionalAddBindings)
