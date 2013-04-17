@@ -1,0 +1,202 @@
+<config>
+    <moduleName>qtgui</moduleName>
+    <parentModules>
+        <module>qtcore</module>
+    </parentModules>
+    <parts>20</parts>
+    <scalarTypes>
+        <!-- QString is a class, but represented as a scalar (#) in munged names -->
+        <typeName>QString</typeName>
+    </scalarTypes>
+    <voidpTypes>
+        <!-- both are classes, but they are represented as Smoke::t_voidp -->
+        <typeName>QStringList</typeName>
+        <typeName>QString</typeName>
+    </voidpTypes>
+    <exclude>
+        <!-- we don't want private stuff in smoke.. -->
+        <signature>.*\(.*Private.*\).*</signature>
+        <signature>.*::d_ptr</signature>
+        <signature>.*::q_ptr</signature>
+        <signature>.*QGraphicsLayoutItem::QGraphicsLayoutItem\(const QGraphicsLayoutItem&amp;\).*</signature>
+        <signature>.*QGraphicsSceneEvent::QGraphicsSceneEvent\(const QGraphicsSceneEvent&amp;\).*</signature>
+        <signature>.*QGraphicsScene.*Event::QGraphicsScene.*Event\(const QGraphicsScene.*Event&amp;\).*</signature>
+        <signature>.*QPainterPathStroker::QPainterPathStroker\(const QPainterPathStroker&amp;\)</signature>
+        <!-- Thread related stuff belongs to the bindings language -->
+        <signature>.*QtConcurrent.*</signature>
+        <!-- this doesn't link, internal stuff.. -->
+        <signature>.*qFindString.*</signature>
+        <!-- windows internal helper functions -->
+        <signature>.*qFrom.*Endian_helper.*</signature>
+        <signature>.*QPixmapData.*</signature>
+        <signature>.*qt_x11_getX11InfoForWindow.*</signature>
+        <signature>.*qt_win_display_dc.*</signature>
+        <!-- OS X internal stuff -->
+        <signature>.*qt_mac_set_cursor.*</signature>
+        <signature>.*QMenu::macMenu\(.*</signature>
+   </exclude>
+    <functions>
+        <!-- include functions starting with 'q' -->
+        <name>^q.*</name>
+        <name>.*::q.*</name>
+        <!-- and operators -->
+        <name>.*operator.*</name>
+    </functions>
+    <classList>
+        <class>QInputMethodEvent::Attribute</class>
+        <class>QIconEngine::AvailableSizesArgument</class>
+        <class>QPainterPath::Element</class>
+        <class>QTextLayout::FormatRange</class>
+        <class>QPixmapCache::Key</class>
+        <class>QAbstractTextDocumentLayout::PaintContext</class>
+        <class>QPainter::PixmapFragment</class>
+        <class>QAbstractTextDocumentLayout</class>
+        <class>QActionEvent</class>
+        <!-- <class>QBackingStore</class> -->
+        <class>QBitmap</class>
+        <class>QBrush</class>
+        <class>QClipboard</class>
+        <class>QCloseEvent</class>
+        <class>QColor</class>
+        <class>QConicalGradient</class>
+        <class>QContextMenuEvent</class>
+        <class>QCursor</class>
+        <class>QDesktopServices</class>
+        <class>QDoubleValidator</class>
+        <class>QDrag</class>
+        <class>QDragEnterEvent</class>
+        <class>QDragLeaveEvent</class>
+        <class>QDragMoveEvent</class>
+        <class>QDropEvent</class>
+        <class>QEnterEvent</class>
+        <class>QExposeEvent</class>
+        <class>QFileOpenEvent</class>
+        <class>QFocusEvent</class>
+        <class>QFont</class>
+        <class>QFontDatabase</class>
+        <class>QFontInfo</class>
+        <class>QFontMetrics</class>
+        <class>QFontMetricsF</class>
+        <class>QGenericMatrix</class>
+        <class>QGenericPlugin</class>
+        <class>QGenericPluginFactory</class>
+        <class>QGlyphRun</class>
+        <class>QGradient</class>
+        <class>QGuiApplication</class>
+        <class>QHelpEvent</class>
+        <class>QHideEvent</class>
+        <class>QHoverEvent</class>
+        <class>QIcon</class>
+        <class>QIconDragEvent</class>
+        <class>QIconEngine</class>
+        <class>QIconEnginePlugin</class>
+        <!-- <class>QImage</class> -->
+        <class>QImageIOHandler</class>
+        <class>QImageIOPlugin</class>
+        <class>QImageReader</class>
+        <class>QImageWriter</class>
+        <class>QInputEvent</class>
+        <class>QInputMethod</class>
+        <class>QInputMethodEvent</class>
+        <class>QInputMethodQueryEvent</class>
+        <class>QIntValidator</class>
+        <class>QKeyEvent</class>
+        <class>QKeySequence</class>
+        <class>QLinearGradient</class>
+        <class>QMatrix4x4</class>
+        <class>QMouseEvent</class>
+        <class>QMoveEvent</class>
+        <class>QMovie</class>
+        <class>QOpenGLBuffer</class>
+        <class>QOpenGLContext</class>
+        <class>QOpenGLContextGroup</class>
+        <class>QOpenGLFramebufferObject</class>
+        <class>QOpenGLFramebufferObjectFormat</class>
+        <!-- <class>QOpenGLFunctions</class> -->
+        <!-- <class>QOpenGLPaintDevice</class> -->
+        <class>QOpenGLShader</class>
+        <class>QOpenGLShaderProgram</class>
+        <class>QPagedPaintDevice</class>
+        <class>QPaintDevice</class>
+        <class>QPaintEngine</class>
+        <class>QPaintEngineState</class>
+        <class>QPaintEvent</class>
+        <class>QPainter</class>
+        <class>QPainterPath</class>
+        <class>QPainterPathStroker</class>
+        <class>QPalette</class>
+        <class>QPdfWriter</class>
+        <class>QPen</class>
+        <class>QPicture</class>
+        <class>QPixmap</class>
+        <class>QPixmapCache</class>
+        <class>QPlatformSystemTrayIcon</class>
+        <class>QPolygon</class>
+        <class>QPolygonF</class>
+        <class>QQuaternion</class>
+        <class>QRadialGradient</class>
+        <class>QRasterPaintEngine</class>
+        <class>QRawFont</class>
+        <class>QRegExpValidator</class>
+        <class>QRegion</class>
+        <class>QResizeEvent</class>
+        <class>QScreen</class>
+        <class>QScrollEvent</class>
+        <class>QScrollPrepareEvent</class>
+        <class>QShortcutEvent</class>
+        <class>QShowEvent</class>
+        <class>QStandardItem</class>
+        <class>QStandardItemModel</class>
+        <class>QStaticText</class>
+        <class>QStatusTipEvent</class>
+        <class>QStyleHints</class>
+        <class>QSupportedWritingSystems</class>
+        <class>QSurface</class>
+        <class>QSurfaceFormat</class>
+        <class>QSyntaxHighlighter</class>
+        <class>QTabletEvent</class>
+        <class>QTextBlock</class>
+        <class>QTextBlockFormat</class>
+        <class>QTextBlockGroup</class>
+        <class>QTextBlockUserData</class>
+        <class>QTextCharFormat</class>
+        <class>QTextCursor</class>
+        <class>QTextDocument</class>
+        <class>QTextDocumentFragment</class>
+        <class>QTextDocumentWriter</class>
+        <class>QTextFormat</class>
+        <class>QTextFragment</class>
+        <class>QTextFrame</class>
+        <class>QTextFrameFormat</class>
+        <class>QTextImageFormat</class>
+        <class>QTextInlineObject</class>
+        <class>QTextItem</class>
+        <class>QTextLayout</class>
+        <class>QTextLength</class>
+        <class>QTextLine</class>
+        <class>QTextList</class>
+        <class>QTextListFormat</class>
+        <class>QTextObject</class>
+        <class>QTextObjectInterface</class>
+        <class>QTextOption</class>
+        <class>QTextTable</class>
+        <class>QTextTableCell</class>
+        <class>QTextTableCellFormat</class>
+        <class>QTextTableFormat</class>
+        <class>QTouchDevice</class>
+        <class>QTouchEvent</class>
+        <class>QTransform</class>
+        <class>QValidator</class>
+        <class>QVector2D</class>
+        <class>QVector3D</class>
+        <class>QVector4D</class>
+        <class>QWhatsThisClickedEvent</class>
+        <class>QWheelEvent</class>
+        <class>QWindow</class>
+        <class>QWindowStateChangeEvent</class>
+        <class>QAbstractTextDocumentLayout::Selection</class>
+        <class>QTextOption::Tab</class>
+        <class>QTouchEvent::TouchPoint</class>
+        <class>QTextBlock::iterator</class>
+     </classList>
+</config>

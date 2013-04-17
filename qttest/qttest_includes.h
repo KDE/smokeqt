@@ -1,7 +1,7 @@
 #include <qsignalspy.h>
 #include <qtest.h>
 #include <qtest_global.h>
-#include <qtest_gui.h>
+#include <qtest_widgets.h>
 #include <qtestaccessible.h>
 #include <qtestassert.h>
 #include <qtestcase.h>
