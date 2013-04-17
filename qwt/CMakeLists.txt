@@ -17,7 +17,7 @@ add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp
 	${CMAKE_CURRENT_BINARY_DIR}/x_10.cpp
 
     COMMAND ${SMOKE_GEN_BIN}
-    ARGS -config "${CMAKE_CURRENT_BINARY_DIR}/../qtgui/config.xml" -smokeconfig "${CMAKE_CURRENT_SOURCE_DIR}/smokeconfig.xml"
+    ARGS -config "${CMAKE_CURRENT_BINARY_DIR}/../qtwidgets/config.xml" -smokeconfig "${CMAKE_CURRENT_SOURCE_DIR}/smokeconfig.xml"
          -I "${Qwt5_INCLUDE_DIR}" -- ${CMAKE_CURRENT_SOURCE_DIR}/qwt_includes.h
     DEPENDS ${SMOKE_GEN_BIN} "${CMAKE_CURRENT_SOURCE_DIR}/smokeconfig.xml"
     WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
@@ -41,7 +41,7 @@ IF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
 ENDIF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
 add_library(smokeqwt SHARED ${smokeqwt_LIB_SRCS})
 
-target_link_libraries(smokeqwt smokeqtcore smokeqtgui ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIBRARY} ${Qwt5_Qt4_LIBRARY})
+target_link_libraries(smokeqwt smokeqtcore smokeqtwidgets ${QT_QTCORE_LIBRARY} ${QT_QTWIDGETS_LIBRARY} ${Qwt5_Qt4_LIBRARY})
 
 set_target_properties(smokeqwt PROPERTIES VERSION 3.0.0 SOVERSION 3 )
 

@@ -2,7 +2,7 @@
     <moduleName>phonon</moduleName>
     <parentModules>
         <module>qtcore</module>
-        <module>qtgui</module>
+        <module>qtwidgets</module>
     </parentModules>
     <parts>10</parts>
     <scalarTypes>

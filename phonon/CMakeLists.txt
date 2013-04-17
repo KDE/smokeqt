@@ -19,7 +19,7 @@ add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp
                 ${CMAKE_CURRENT_BINARY_DIR}/x_10.cpp
 
     COMMAND ${SMOKE_GEN_BIN}
-    ARGS -config "${CMAKE_CURRENT_BINARY_DIR}/../qtgui/config.xml" -smokeconfig "${CMAKE_CURRENT_SOURCE_DIR}/smokeconfig.xml"
+    ARGS -config "${CMAKE_CURRENT_BINARY_DIR}/../qtwidgets/config.xml" -smokeconfig "${CMAKE_CURRENT_SOURCE_DIR}/smokeconfig.xml"
          -I "${PHONON_INCLUDE_DIR}" -- ${CMAKE_CURRENT_SOURCE_DIR}/phonon_includes.h
     DEPENDS ${SMOKE_GEN_BIN} "${CMAKE_CURRENT_SOURCE_DIR}/smokeconfig.xml"
     WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
@@ -46,7 +46,7 @@ IF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
 ENDIF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
 add_library(smokephonon SHARED ${smokephonon_LIB_SRCS})
 
-target_link_libraries(smokephonon smokeqtcore smokeqtgui ${QT_QTCORE_LIBS} ${QT_QTGUI_LIBS} ${PHONON_LIBS})
+target_link_libraries(smokephonon smokeqtcore smokeqtwidgets ${QT_QTCORE_LIBS} ${QT_QTWIDGETS_LIBS} ${PHONON_LIBS})
 
 set_target_properties(smokephonon PROPERTIES VERSION 3.0.0 SOVERSION 3 )
 

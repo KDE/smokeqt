@@ -29,15 +29,15 @@ add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp
 
     COMMAND ${SMOKE_GEN_BIN}
     ARGS -config "${CMAKE_CURRENT_BINARY_DIR}/config.xml" -smokeconfig "${CMAKE_CURRENT_SOURCE_DIR}/smokeconfig.xml"
-         -- ${CMAKE_CURRENT_SOURCE_DIR}/qtgui_includes.h
+         -- ${CMAKE_CURRENT_SOURCE_DIR}/qtwidgets_includes.h
     DEPENDS ${SMOKE_GEN_BIN} "${CMAKE_CURRENT_SOURCE_DIR}/smokeconfig.xml"
     WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
 
 macro_add_file_dependencies( ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp ${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp )
 
-include_directories (${CMAKE_SOURCE_DIR}/smoke ${CMAKE_SOURCE_DIR}/smoke/qtgui  )
+include_directories (${CMAKE_SOURCE_DIR}/smoke ${CMAKE_SOURCE_DIR}/smoke/qtwidgets  )
 
-set(smokeqtgui_LIB_SRCS ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp  
+set(smokeqtwidgets_LIB_SRCS ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp  
                 ${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp 
                 ${CMAKE_CURRENT_BINARY_DIR}/x_2.cpp
                 ${CMAKE_CURRENT_BINARY_DIR}/x_3.cpp
@@ -64,28 +64,28 @@ IF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
     ADD_DEFINITIONS(-DGCC_VISIBILITY)
 ENDIF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
 
-# kde4_add_library(smokeqtgui SHARED ${smokeqtgui_LIB_SRCS})
-add_library(smokeqtgui SHARED ${smokeqtgui_LIB_SRCS})
+# kde4_add_library(smokeqtwidgets SHARED ${smokeqtwidgets_LIB_SRCS})
+add_library(smokeqtwidgets SHARED ${smokeqtwidgets_LIB_SRCS})
 
-target_link_libraries(smokeqtgui smokeqtcore ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIBRARY} )
+target_link_libraries(smokeqtwidgets smokeqtcore ${QT_QTCORE_LIBRARY} ${QT_QTWIDGETS_LIBRARY} )
 
-set_target_properties(smokeqtgui PROPERTIES VERSION 3.0.0 SOVERSION 3 )
+set_target_properties(smokeqtwidgets PROPERTIES VERSION 3.0.0 SOVERSION 3 )
 
-install(TARGETS smokeqtgui LIBRARY DESTINATION ${LIB_INSTALL_DIR}
+install(TARGETS smokeqtwidgets LIBRARY DESTINATION ${LIB_INSTALL_DIR}
     ARCHIVE DESTINATION ${LIB_INSTALL_DIR}
     RUNTIME DESTINATION bin)
 
 if (WIN32)
 	# Realign the stack, for compatibility with an older ABI.
 	if(CMAKE_COMPILER_IS_GNUCXX)
-		set_target_properties(smokeqtgui PROPERTIES COMPILE_FLAGS -mstackrealign)
+		set_target_properties(smokeqtwidgets PROPERTIES COMPILE_FLAGS -mstackrealign)
 	endif()
 
     # Get rid of the "lib" prefix on archives/DLLs in Windows.
-    set_target_properties(smokeqtgui
+    set_target_properties(smokeqtwidgets
         PROPERTIES PREFIX "" IMPORT_PREFIX "")
 endif (WIN32)
 
-install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../qtgui_smoke.h DESTINATION include/smoke)
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/qtgui.argnames.txt DESTINATION share/smoke)
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/qtgui.typedefs.txt DESTINATION share/smoke)
+install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../qtwidgets_smoke.h DESTINATION include/smoke)
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/qtwidgets.argnames.txt DESTINATION share/smoke)
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/qtwidgets.typedefs.txt DESTINATION share/smoke)

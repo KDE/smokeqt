@@ -25,9 +25,9 @@ add_library(smokeqtwebkit SHARED ${smokeqtwebkit_LIB_SRCS})
 
 target_link_libraries(  smokeqtwebkit 
                         smokeqtcore 
-                        smokeqtgui 
+                        smokeqtwidgets 
                         ${QT_QTCORE_LIBRARY} 
-                        ${QT_QTGUI_LIBRARY} 
+                        ${QT_QTWIDGETS_LIBRARY} 
                         ${QT_QTWEBKIT_LIBRARY} )
 
 set_target_properties(smokeqtwebkit PROPERTIES VERSION 3.0.0 SOVERSION 3 )

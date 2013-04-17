@@ -31,9 +31,9 @@ add_library(smokeqtsvg SHARED ${smokeqtsvg_LIB_SRCS})
 
 target_link_libraries(smokeqtsvg 
                         smokeqtcore 
-                        smokeqtgui 
+                        smokeqtwidgets 
                         ${QT_QTCORE_LIBRARY} 
-                        ${QT_QTGUI_LIBRARY} 
+                        ${QT_QTWIDGETS_LIBRARY} 
                         ${QT_QTSVG_LIBRARY} )
 
 set_target_properties(smokeqtsvg PROPERTIES VERSION 3.0.0 SOVERSION 3 )

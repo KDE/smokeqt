@@ -2,7 +2,7 @@
     <moduleName>qthelp</moduleName>
     <parentModules>
         <module>qtcore</module>
-        <module>qtgui</module>
+        <module>qtwidgets</module>
         <module>qtsql</module>
     </parentModules>
     <parts>1</parts>

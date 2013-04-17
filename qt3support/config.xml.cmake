@@ -6,7 +6,7 @@
     <includeDirs>
         <dir>@QT_HEADERS_DIR@</dir>
         <dir>@QT_QTCORE_INCLUDE_DIR@</dir>
-        <dir>@QT_QTGUI_INCLUDE_DIR@</dir>
+        <dir>@QT_QTWIDGETS_INCLUDE_DIR@</dir>
         <dir>@QT_QTNETWORK_INCLUDE_DIR@</dir>
         <dir>@QT_QTSQL_INCLUDE_DIR@</dir>
         <dir>@QT_QTXML_INCLUDE_DIR@</dir>

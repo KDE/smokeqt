@@ -30,9 +30,9 @@ add_library(smokeqtopengl SHARED ${smokeqtopengl_LIB_SRCS})
 
 target_link_libraries(smokeqtopengl 
                         smokeqtcore 
-                        smokeqtgui 
+                        smokeqtwidgets 
                         ${QT_QTCORE_LIBRARY} 
-                        ${QT_QTGUI_LIBRARY}
+                        ${QT_QTWIDGETS_LIBRARY}
                         ${QT_QTOPENGL_LIBRARY} )
 
 set_target_properties(smokeqtopengl PROPERTIES VERSION 3.0.0 SOVERSION 3 )

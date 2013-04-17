@@ -2,7 +2,7 @@
     <moduleName>qt3support</moduleName>
     <parentModules>
         <module>qtcore</module>
-        <module>qtgui</module>
+        <module>qtwidgets</module>
         <module>qtsql</module>
         <module>qtxml</module>
         <module>qtnetwork</module>

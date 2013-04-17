@@ -1,5 +1,5 @@
 <config>
-    <moduleName>qtgui</moduleName>
+    <moduleName>qtwidgets</moduleName>
     <parentModules>
         <module>qtcore</module>
     </parentModules>

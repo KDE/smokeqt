@@ -31,10 +31,10 @@ add_library(smokeqthelp SHARED ${smokeqthelp_LIB_SRCS})
 
 target_link_libraries(smokeqthelp 
                         smokeqtcore 
-                        smokeqtgui 
+                        smokeqtwidgets 
                         smokeqtsql
                         ${QT_QTCORE_LIBRARY} 
-                        ${QT_QTGUI_LIBRARY} 
+                        ${QT_QTWIDGETS_LIBRARY} 
                         ${QT_QTSQL_LIBRARY} 
                         ${QT_QTHELP_LIBRARY} )
 

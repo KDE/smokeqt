@@ -32,7 +32,7 @@ add_library(smokeqtmultimedia SHARED ${smokeqtmultimedia_LIB_SRCS})
 target_link_libraries(  smokeqtmultimedia 
                         smokeqtcore 
                         ${QT_QTCORE_LIBRARY} 
-                        ${QT_QTGUI_LIBRARY} 
+                        ${QT_QTWIDGETS_LIBRARY} 
                         ${QT_QTMULTIMEDIA_LIBRARY} )
 
 set_target_properties(smokeqtmultimedia PROPERTIES VERSION 3.0.0 SOVERSION 3 )

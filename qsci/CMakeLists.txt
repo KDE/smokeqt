@@ -17,7 +17,7 @@ add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp
 	${CMAKE_CURRENT_BINARY_DIR}/x_10.cpp
 
     COMMAND ${SMOKE_GEN_BIN}
-    ARGS -config "${CMAKE_CURRENT_BINARY_DIR}/../qtgui/config.xml" -smokeconfig "${CMAKE_CURRENT_SOURCE_DIR}/smokeconfig.xml"
+    ARGS -config "${CMAKE_CURRENT_BINARY_DIR}/../qtwidgets/config.xml" -smokeconfig "${CMAKE_CURRENT_SOURCE_DIR}/smokeconfig.xml"
          -I "${QSCINTILLA_INCLUDE_DIR}" -- ${CMAKE_CURRENT_SOURCE_DIR}/qscintilla2_includes.h
     DEPENDS ${SMOKE_GEN_BIN} "${CMAKE_CURRENT_SOURCE_DIR}/smokeconfig.xml"
     WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
@@ -41,7 +41,7 @@ IF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
 ENDIF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
 add_library(smokeqsci SHARED ${smokeqsci_LIB_SRCS})
 
-target_link_libraries(smokeqsci smokeqtcore smokeqtgui ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIBRARY} ${QSCINTILLA_LIBRARIES})
+target_link_libraries(smokeqsci smokeqtcore smokeqtwidgets ${QT_QTCORE_LIBRARY} ${QT_QTWIDGETS_LIBRARY} ${QSCINTILLA_LIBRARIES})
 
 set_target_properties(smokeqsci PROPERTIES VERSION 3.0.0 SOVERSION 3 )
 

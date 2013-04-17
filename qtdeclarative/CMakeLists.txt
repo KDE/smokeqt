@@ -31,9 +31,9 @@ add_library(smokeqtdeclarative SHARED ${smokeqtdeclarative_LIB_SRCS})
 
 target_link_libraries(  smokeqtdeclarative 
                         smokeqtcore 
-                        smokeqtgui 
+                        smokeqtwidgets 
                         ${QT_QTCORE_LIBRARY} 
-                        ${QT_QTGUI_LIBRARY} 
+                        ${QT_QTWIDGETS_LIBRARY} 
                         ${QT_QTNETWORK_LIBRARY} 
                         ${QT_QTSCRIPT_LIBRARY} 
                         ${QT_QTDECLARATIVE_LIBRARY} )
