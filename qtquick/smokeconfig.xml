@@ -1,0 +1,51 @@
+<config>
+    <moduleName>qtquick</moduleName>
+    <parentModules>
+        <module>qtcore</module>
+        <module>qtgui</module>
+        <module>qtqml</module>
+    </parentModules>
+    <parts>1</parts>
+    <scalarTypes>
+        <!-- QString is a class, but represented as a scalar (#) in munged names -->
+        <typeName>QString</typeName>
+    </scalarTypes>
+    <voidpTypes>
+        <!-- both are classes, but they are represented as Smoke::t_voidp -->
+        <typeName>QStringList</typeName>
+        <typeName>QString</typeName>
+    </voidpTypes>
+    <classList>
+        <class>QSGGeometry::Attribute</class>
+        <class>QSGGeometry::AttributeSet</class>
+        <class>QSGGeometry::ColoredPoint2D</class>
+        <class>QQuickItem::ItemChangeData</class>
+        <class>QSGGeometry::Point2D</class>
+        <class>QQuickImageProvider</class>
+        <class>QQuickItem</class>
+        <class>QQuickPaintedItem</class>
+        <class>QQuickTextureFactory</class>
+        <class>QQuickView</class>
+        <class>QQuickWindow</class>
+        <class>QSGBasicGeometryNode</class>
+        <class>QSGClipNode</class>
+        <class>QSGDynamicTexture</class>
+        <class>QSGFlatColorMaterial</class>
+        <class>QSGGeometry</class>
+        <class>QSGGeometryNode</class>
+        <class>QSGMaterial</class>
+        <class>QSGMaterialShader</class>
+        <class>QSGMaterialType</class>
+        <class>QSGNode</class>
+        <class>QSGOpacityNode</class>
+        <class>QSGOpaqueTextureMaterial</class>
+        <class>QSGSimpleMaterial</class>
+        <class>QSGSimpleMaterialShader</class>
+        <class>QSGSimpleTextureNode</class>
+        <class>QSGTexture</class>
+        <class>QSGTextureMaterial</class>
+        <class>QSGTransformNode</class>
+        <class>QSGVertexColorMaterial</class>
+        <class>QSGGeometry::TexturedPoint2D</class>
+    </classList>
+</config>
