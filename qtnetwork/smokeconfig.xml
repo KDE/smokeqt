@@ -38,25 +38,25 @@
         <class>QAbstractNetworkCache</class>
         <class>QAbstractSocket</class>
         <class>QAuthenticator</class>
-        <class>QFtp</class>
+        <class>QDnsDomainNameRecord</class>
+        <class>QDnsHostAddressRecord</class>
+        <class>QDnsLookup</class>
+        <class>QDnsMailExchangeRecord</class>
+        <class>QDnsServiceRecord</class>
+        <class>QDnsTextRecord</class>
         <class>QHostAddress</class>
         <class>QHostInfo</class>
-        <class>QHttp</class>
-        <class>QHttpHeader</class>
         <class>QHttpMultiPart</class>
         <class>QHttpPart</class>
-        <class>QHttpRequestHeader</class>
-        <class>QHttpResponseHeader</class>
-        <class>QIPv6Address</class>
         <class>QLocalServer</class>
         <class>QLocalSocket</class>
         <class>QNetworkAccessManager</class>
         <class>QNetworkAddressEntry</class>
         <class>QNetworkCacheMetaData</class>
-        <class>QNetworkCookie</class>
-        <class>QNetworkCookieJar</class>
         <class>QNetworkConfiguration</class>
         <class>QNetworkConfigurationManager</class>
+        <class>QNetworkCookie</class>
+        <class>QNetworkCookieJar</class>
         <class>QNetworkDiskCache</class>
         <class>QNetworkInterface</class>
         <class>QNetworkProxy</class>
@@ -66,6 +66,7 @@
         <class>QNetworkRequest</class>
         <class>QNetworkSession</class>
         <class>QSslCertificate</class>
+        <class>QSslCertificateExtension</class>
         <class>QSslCipher</class>
         <class>QSslConfiguration</class>
         <class>QSslError</class>
@@ -74,7 +75,6 @@
         <class>QTcpServer</class>
         <class>QTcpSocket</class>
         <class>QUdpSocket</class>
-        <class>QUrlInfo</class>
         <!-- namespaces -->
         <class>QSsl</class>
      </classList>
