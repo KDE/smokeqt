@@ -19,6 +19,7 @@
         <signature>.*\(.*Private.*\).*</signature>
         <signature>.*QLocale::p</signature>
         <signature>.*QLocale::v</signature>
+        <signature>.*QMimeType::d</signature>
         <signature>.*QByteArrayMatcher::dummy</signature>
         <signature>.*QByteArrayMatcher::p</signature>
         <signature>.*QResource::QResource\(const QResource&amp;\).*</signature>
@@ -119,7 +120,6 @@
         <class>QMap</class>
         <class>QMapIterator</class>
         <class>QMargins</class>
-        <!-- <class>QMessageLogContext</class> -->
         <class>QMessageLogger</class>
         <class>QMetaClassInfo</class>
         <class>QMetaEnum</class>
@@ -129,7 +129,7 @@
         <class>QMetaType</class>
         <class>QMimeData</class>
         <class>QMimeDatabase</class>
-        <!-- <class>QMimeType</class> -->
+        <class>QMimeType</class>
         <class>QModelIndex</class>
         <class>QMultiHash</class>
         <class>QMultiMap</class>
