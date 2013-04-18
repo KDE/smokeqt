@@ -40,8 +40,8 @@
     <classList>
         <class>QSqlDatabase</class>
         <class>QSqlDriver</class>
+        <class>QSqlDriverCreator</class>
         <class>QSqlDriverCreatorBase</class>
-        <class>QSqlDriverFactoryInterface</class>
         <class>QSqlDriverPlugin</class>
         <class>QSqlError</class>
         <class>QSqlField</class>
