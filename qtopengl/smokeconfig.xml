@@ -38,18 +38,8 @@
         <name>.*operator.*</name>
     </functions>
     <classList>
-        <class>QGLColormap</class>
         <class>QGLContext</class>
-        <class>QGLBuffer</class>
         <class>QGLFormat</class>
-        <class>QGLFramebufferObject</class>
-        <class>QGLFramebufferObjectFormat</class>
-        <class>QGLOverlayWidget</class>
-        <class>QGLPixelBuffer</class>
-        <class>QGLScreen</class>
-        <class>QGLScreenSurfaceFunctions</class>
-        <class>QGLShader</class>
-        <class>QGLShaderProgram</class>
         <class>QGLWidget</class>
 
         <!-- namespaces -->
