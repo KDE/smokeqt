@@ -50,7 +50,7 @@
         <class>QDomNodeList</class>
         <class>QDomNotation</class>
         <class>QDomProcessingInstruction</class>
-        <class>QDomText</class>        
+        <class>QDomText</class>
         <class>QXmlAttributes</class>
         <class>QXmlContentHandler</class>
         <class>QXmlDTDHandler</class>
@@ -65,6 +65,5 @@
         <class>QXmlParseException</class>
         <class>QXmlReader</class>
         <class>QXmlSimpleReader</class>
-        <class>QXmlStreamWriter</class>
      </classList>
 </config>
