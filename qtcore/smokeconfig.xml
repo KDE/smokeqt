@@ -43,33 +43,25 @@
     <classList>
         <class>QAbstractAnimation</class>
         <class>QAbstractEventDispatcher</class>
-        <class>QAbstractFileEngine</class>
-        <class>QAbstractFileEngine::ExtensionOption</class>
-        <class>QAbstractFileEngine::ExtensionReturn</class>
-        <class>QAbstractFileEngineHandler</class>
-        <class>QAbstractFileEngineIterator</class>
-        <class>QAbstractFileEngine::MapExtensionOption</class>
-        <class>QAbstractFileEngine::MapExtensionReturn</class>
-        <class>QAbstractFileEngine::UnMapExtensionOption</class>
         <class>QAbstractItemModel</class>
         <class>QAbstractListModel</class>
+        <class>QAbstractNativeEventFilter</class>
+        <class>QAbstractProxyModel</class>
         <class>QAbstractState</class>
         <class>QAbstractTableModel</class>
         <class>QAbstractTransition</class>
         <class>QAnimationGroup</class>
         <class>QAtomicInt</class>
-        <class>QBasicAtomicInt</class>
+        <class>QAtomicPointer</class>
         <class>QBasicTimer</class>
         <class>QBitArray</class>
-        <class>QBitRef</class>
-        <class>QBool</class>
         <class>QBuffer</class>
         <class>QByteArray</class>
         <class>QByteArrayMatcher</class>
-        <class>QByteRef</class>
+        <class>QCache</class>
         <class>QChar</class>
-        <class>QCharRef</class>
         <class>QChildEvent</class>
+        <class>QContiguousCache</class>
         <class>QCoreApplication</class>
         <class>QCryptographicHash</class>
         <class>QDataStream</class>
@@ -83,33 +75,52 @@
         <class>QElapsedTimer</class>
         <class>QEvent</class>
         <class>QEventLoop</class>
+        <class>QEventLoopLocker</class>
         <class>QEventTransition</class>
-        <class>QFactoryInterface</class>
+        <class>QException</class>
+        <class>QExplicitlySharedDataPointer</class>
         <class>QFile</class>
-        <class>QFileExtension</class>
-        <class>QFileExtensionResult</class>
+        <class>QFileDevice</class>
         <class>QFileInfo</class>
         <class>QFileSystemWatcher</class>
         <class>QFinalState</class>
         <class>QFlag</class>
-        <class>QFSFileEngine</class>
-        <class>QFutureInterfaceBase</class>
-        <class>QFutureWatcherBase</class>
+        <class>QFlags</class>
+        <class>QFuture</class>
+        <class>QFutureIterator</class>
+        <class>QFutureSynchronizer</class>
+        <class>QFutureWatcher</class>
         <class>QGenericArgument</class>
         <class>QGenericReturnArgument</class>
+        <class>QHash</class>
+        <class>QHashIterator</class>
         <class>QHistoryState</class>
-        <class>QIncompatibleFlag</class>
-        <class>QInternal</class>
         <class>QIODevice</class>
+        <class>QIdentityProxyModel</class>
+        <class>QItemSelection</class>
+        <class>QItemSelectionModel</class>
+        <class>QItemSelectionRange</class>
+        <class>QJsonArray</class>
+        <class>QJsonDocument</class>
+        <class>QJsonObject</class>
+        <class>QJsonParseError</class>
+        <class>QJsonValue</class>
         <class>QLatin1Char</class>
         <class>QLatin1String</class>
         <class>QLibrary</class>
         <class>QLibraryInfo</class>
         <class>QLine</class>
         <class>QLineF</class>
+        <class>QLinkedList</class>
+        <class>QLinkedListIterator</class>
+        <class>QList</class>
+        <class>QListIterator</class>
         <class>QLocale</class>
+        <class>QMap</class>
+        <class>QMapIterator</class>
         <class>QMargins</class>
-        <class>QMatrix4x4</class>
+        <!-- <class>QMessageLogContext</class> -->
+        <class>QMessageLogger</class>
         <class>QMetaClassInfo</class>
         <class>QMetaEnum</class>
         <class>QMetaMethod</class>
@@ -117,65 +128,99 @@
         <class>QMetaProperty</class>
         <class>QMetaType</class>
         <class>QMimeData</class>
+        <class>QMimeDatabase</class>
+        <!-- <class>QMimeType</class> -->
         <class>QModelIndex</class>
-        <class>QNoDebug</class>
+        <class>QMultiHash</class>
+        <class>QMultiMap</class>
+        <class>QMutableHashIterator</class>
+        <class>QMutableLinkedListIterator</class>
+        <class>QMutableListIterator</class>
+        <class>QMutableMapIterator</class>
+        <class>QMutableSetIterator</class>
+        <class>QMutableVectorIterator</class>
+        <class>QMutex</class>
+        <class>QMutexLocker</class>
         <class>QObject</class>
         <class>QObjectCleanupHandler</class>
-        <class>QObjectUserData</class>
+        <class>QPair</class>
         <class>QParallelAnimationGroup</class>
         <class>QPauseAnimation</class>
         <class>QPersistentModelIndex</class>
         <class>QPluginLoader</class>
         <class>QPoint</class>
         <class>QPointF</class>
-        <class>QPostEventList</class>
+        <class>QPointer</class>
         <class>QProcess</class>
         <class>QProcessEnvironment</class>
         <class>QPropertyAnimation</class>
+        <class>QQueue</class>
         <class>QReadLocker</class>
         <class>QReadWriteLock</class>
         <class>QRect</class>
         <class>QRectF</class>
         <class>QRegExp</class>
+        <class>QRegularExpression</class>
+        <class>QRegularExpressionMatch</class>
+        <class>QRegularExpressionMatchIterator</class>
         <class>QResource</class>
         <class>QRunnable</class>
+        <class>QScopedArrayPointer</class>
+        <class>QScopedPointer</class>
+        <class>QScopedValueRollback</class>
         <class>QSemaphore</class>
         <class>QSequentialAnimationGroup</class>
+        <class>QSet</class>
+        <class>QSetIterator</class>
         <class>QSettings</class>
         <class>QSharedData</class>
+        <class>QSharedDataPointer</class>
         <class>QSharedMemory</class>
+        <class>QSharedPointer</class>
         <class>QSignalMapper</class>
         <class>QSignalTransition</class>
         <class>QSize</class>
         <class>QSizeF</class>
         <class>QSocketNotifier</class>
+        <class>QSortFilterProxyModel</class>
+        <class>QStack</class>
+        <class>QStandardPaths</class>
         <class>QState</class>
         <class>QStateMachine</class>
+        <class>QString</class>
+        <class>QStringList</class>
+        <class>QStringListModel</class>
         <class>QStringMatcher</class>
         <class>QStringRef</class>
         <class>QSysInfo</class>
-        <class>QSystemLocale</class>
         <class>QSystemSemaphore</class>
+        <class>QTemporaryDir</class>
         <class>QTemporaryFile</class>
         <class>QTextBoundaryFinder</class>
         <class>QTextCodec</class>
-        <class>QTextCodec::ConverterState</class>
-        <class>QTextCodecFactoryInterface</class>
-        <class>QTextCodecPlugin</class>
         <class>QTextDecoder</class>
         <class>QTextEncoder</class>
         <class>QTextStream</class>
+        <class>QThread</class>
+        <class>QThreadPool</class>
+        <class>QThreadStorage</class>
         <class>QTime</class>
         <class>QTimeLine</class>
         <class>QTimer</class>
         <class>QTimerEvent</class>
         <class>QTranslator</class>
+        <class>QUnhandledException</class>
         <class>QUrl</class>
+        <class>QUrlQuery</class>
         <class>QUuid</class>
-        <class>QVariantAnimation</class>
+        <class>QVarLengthArray</class>
         <class>QVariant</class>
-        <class>QVariantComparisonHelper</class>
-        <class>QWidget</class>
+        <class>QVariantAnimation</class>
+        <class>QVector</class>
+        <class>QVectorIterator</class>
+        <class>QWaitCondition</class>
+        <class>QWeakPointer</class>
+        <class>QWinEventNotifier</class>
         <class>QWriteLocker</class>
         <class>QXmlStreamAttribute</class>
         <class>QXmlStreamAttributes</class>
@@ -184,8 +229,12 @@
         <class>QXmlStreamNamespaceDeclaration</class>
         <class>QXmlStreamNotationDeclaration</class>
         <class>QXmlStreamReader</class>
-        <class>QXmlStreamStringRef</class>
         <class>QXmlStreamWriter</class>
+        <class>QStateMachine::SignalEvent</class>
+        <class>QAbstractEventDispatcher::TimerInfo</class>
+        <class>QStateMachine::WrappedEvent</class>
+        <class>QSet::const_iterator</class>
+        <class>QSet::iterator</class>
 
         <!-- namespaces -->
         <class>Qt</class>
