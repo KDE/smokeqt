@@ -21,19 +21,18 @@
         <name>qScriptDisonnect</name>
     </functions>
     <classList>
+        <class>QScriptEngineDebugger</class>
         <class>QScriptable</class>
         <class>QScriptClass</class>
         <class>QScriptClassPropertyIterator</class>
         <class>QScriptContext</class>
         <class>QScriptContextInfo</class>
-        <class>QScriptEngineAgent</class>
         <class>QScriptEngine</class>
-        <class>QScriptEngineDebugger</class>
-        <class>QScriptExtensionInterface</class>
-        <class>QScriptExtensionPlugin</class>
+        <class>QScriptSyntaxCheckResult</class>
+        <class>QScriptEngineAgent</class>
+        <class>QScriptProgram</class>
         <class>QScriptString</class>
         <class>QScriptValue</class>
         <class>QScriptValueIterator</class>
-        <class>QScriptSyntaxCheckResult</class>
     </classList>
 </config>
