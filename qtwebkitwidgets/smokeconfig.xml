@@ -1,0 +1,42 @@
+<config>
+    <moduleName>qtwebkitwidgets</moduleName>
+    <parentModules>
+        <module>qtcore</module>
+        <module>qtgui</module>
+    </parentModules>
+    <parts>1</parts>
+    <scalarTypes>
+        <!-- QString is a class, but represented as a scalar (#) in munged names -->
+        <typeName>QString</typeName>
+    </scalarTypes>
+    <voidpTypes>
+        <!-- both are classes, but they are represented as Smoke::t_voidp -->
+        <typeName>QStringList</typeName>
+        <typeName>QString</typeName>
+    </voidpTypes>
+    <classList>
+        <class>QGraphicsWebView</class>
+        <class>QWebPage::ChooseMultipleFilesExtensionOption</class>
+        <class>QWebPage::ChooseMultipleFilesExtensionReturn</class>
+        <class>QWebPage::ErrorPageExtensionOption</class>
+        <class>QWebPage::ErrorPageExtensionReturn</class>
+        <class>QWebPage::ExtensionOption</class>
+        <class>QWebPage::ExtensionReturn</class>
+        <class>QWebPluginFactory::MimeType</class>
+        <class>QWebPluginFactory::Plugin</class>
+        <class>QWebDatabase</class>
+        <class>QWebElement</class>
+        <class>QWebFrame</class>
+        <class>QWebHistory</class>
+        <class>QWebHistoryInterface</class>
+        <class>QWebHistoryItem</class>
+        <class>QWebHitTestResult</class>
+        <class>QWebInspector</class>
+        <class>QWebPage</class>
+        <class>QWebPluginFactory</class>
+        <class>QWebSecurityOrigin</class>
+        <class>QWebSettings</class>
+        <class>QWebView</class>
+        <class>QWebPage::ViewportAttributes</class>
+    </classList>
+</config>

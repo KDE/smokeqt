@@ -1,0 +1,2 @@
+#include <QGraphicsWebView>
+#include <QtWebKitWidgets>
