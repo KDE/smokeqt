@@ -1,4 +1,4 @@
-project(SMOKEQT4)
+project(SMOKEQT5)
 
 cmake_minimum_required(VERSION 2.8.11)
 
@@ -47,6 +47,7 @@ macro_optional_add_bindings(QT_QTDBUS_FOUND "QtDBus" qtdbus)
 macro_optional_add_bindings(QT_QTGUI_FOUND "QtGui" qtgui)
 #macro_optional_add_bindings(QT_QTDECLARATIVE_FOUND "QtDeclarative" qtdeclarative)
 macro_optional_add_bindings(QT_QTWIDGETS_FOUND "QtWidgets" qtwidgets)
+macro_optional_add_bindings(QT_QTPRINTSUPPORT_FOUND "QtPrintSupport" qtprintsupport)
 macro_optional_add_bindings(QT_QTSVG_FOUND "QtSvg" qtsvg)
 macro_optional_add_bindings(QT_QTSQL_FOUND "QtSql" qtsql)
 macro_optional_add_bindings(QT_QTXML_FOUND "QtXml" qtxml)
