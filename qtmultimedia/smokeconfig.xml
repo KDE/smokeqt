@@ -38,13 +38,81 @@
     <classList>
         <class>QAbstractVideoBuffer</class>
         <class>QAbstractVideoSurface</class>
+        <class>QAudioBuffer</class>
+        <class>QAudioDecoder</class>
+        <class>QAudioDecoderControl</class>
         <class>QAudioDeviceInfo</class>
+        <class>QAudioEncoderSettings</class>
+        <class>QAudioEncoderSettingsControl</class>
         <class>QAudioFormat</class>
         <class>QAudioInput</class>
+        <class>QAudioInputSelectorControl</class>
         <class>QAudioOutput</class>
+        <class>QAudioOutputSelectorControl</class>
+        <class>QAudioProbe</class>
+        <class>QAudioRecorder</class>
+        <class>QCamera</class>
+        <class>QCameraCaptureBufferFormatControl</class>
+        <class>QCameraCaptureDestinationControl</class>
+        <class>QCameraControl</class>
+        <class>QCameraExposure</class>
+        <class>QCameraExposureControl</class>
+        <class>QCameraFeedbackControl</class>
+        <class>QCameraFlashControl</class>
+        <class>QCameraFocus</class>
+        <class>QCameraFocusControl</class>
+        <class>QCameraFocusZone</class>
+        <class>QCameraImageCapture</class>
+        <class>QCameraImageCaptureControl</class>
+        <class>QCameraImageProcessing</class>
+        <class>QCameraImageProcessingControl</class>
+        <class>QCameraLocksControl</class>
+        <class>QCameraViewfinderSettingsControl</class>
+        <class>QCameraZoomControl</class>
+        <class>QImageEncoderControl</class>
+        <class>QImageEncoderSettings</class>
+        <class>QMediaAudioProbeControl</class>
+        <class>QMediaAvailabilityControl</class>
+        <class>QMediaBindableInterface</class>
+        <class>QMediaContainerControl</class>
+        <class>QMediaContent</class>
+        <class>QMediaControl</class>
+        <class>QMediaGaplessPlaybackControl</class>
+        <class>QMediaNetworkAccessControl</class>
+        <class>QMediaObject</class>
+        <class>QMediaPlayer</class>
+        <class>QMediaPlayerControl</class>
+        <class>QMediaPlaylist</class>
+        <class>QMediaRecorder</class>
+        <class>QMediaRecorderControl</class>
+        <class>QMediaResource</class>
+        <class>QMediaService</class>
+        <class>QMediaServiceFeaturesInterface</class>
+        <class>QMediaServiceProviderPlugin</class>
+        <class>QMediaServiceSupportedDevicesInterface</class>
+        <class>QMediaServiceSupportedFormatsInterface</class>
+        <class>QMediaStreamsControl</class>
+        <class>QMediaTimeInterval</class>
+        <class>QMediaTimeRange</class>
+        <class>QMediaVideoProbeControl</class>
+        <class>QMetaDataReaderControl</class>
+        <class>QMetaDataWriterControl</class>
+        <class>QRadioData</class>
+        <class>QRadioDataControl</class>
+        <class>QRadioTuner</class>
+        <class>QRadioTunerControl</class>
+        <class>QSound</class>
+        <class>QSoundEffect</class>
+        <class>QVideoDeviceSelectorControl</class>
+        <class>QVideoEncoderSettings</class>
+        <class>QVideoEncoderSettingsControl</class>
         <class>QVideoFrame</class>
+        <class>QVideoProbe</class>
+        <class>QVideoRendererControl</class>
         <class>QVideoSurfaceFormat</class>
-        
+        <class>QVideoWindowControl</class>
+        <class>QAudioBuffer::StereoFrame</class>
+
         <!-- namespaces -->
         <class>QAudio</class>
      </classList>
