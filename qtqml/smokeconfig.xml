@@ -1,0 +1,38 @@
+<config>
+    <moduleName>qtqml</moduleName>
+    <parentModules>
+        <module>qtcore</module>
+    </parentModules>
+    <parts>1</parts>
+    <scalarTypes>
+        <!-- QString is a class, but represented as a scalar (#) in munged names -->
+        <typeName>QString</typeName>
+    </scalarTypes>
+    <voidpTypes>
+        <!-- both are classes, but they are represented as Smoke::t_voidp -->
+        <typeName>QStringList</typeName>
+        <typeName>QString</typeName>
+    </voidpTypes>
+    <classList>
+        <class>QJSEngine</class>
+        <class>QJSValue</class>
+        <class>QJSValueIterator</class>
+        <class>QQmlComponent</class>
+        <class>QQmlContext</class>
+        <class>QQmlEngine</class>
+        <class>QQmlError</class>
+        <class>QQmlExpression</class>
+        <class>QQmlExtensionPlugin</class>
+        <class>QQmlImageProviderBase</class>
+        <class>QQmlIncubationController</class>
+        <class>QQmlIncubator</class>
+        <class>QQmlListProperty</class>
+        <class>QQmlListReference</class>
+        <class>QQmlNetworkAccessManagerFactory</class>
+        <class>QQmlParserStatus</class>
+        <class>QQmlProperty</class>
+        <class>QQmlPropertyMap</class>
+        <class>QQmlPropertyValueSource</class>
+        <class>QQmlScriptString</class>
+    </classList>
+</config>
