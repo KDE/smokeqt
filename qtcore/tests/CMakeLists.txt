@@ -1,7 +1,7 @@
-cmake_minimum_required(VERSION 2.6)
+cmake_minimum_required(VERSION 2.8.11)
 project(target_test)
 enable_language(CXX)
-find_package(Qt4)
+include(${CMAKE_ROOT}/Modules/FindQt5Transitional.cmake)
 include(${QT_USE_FILE})
 include_directories(${QT_INCLUDES})
 

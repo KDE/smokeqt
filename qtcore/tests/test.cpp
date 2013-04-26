@@ -433,7 +433,7 @@ int main(int argc, char ** argv)
 #endif
 
 #ifdef TEST_QT_NO_PRINTER
-#include "QtWidgets/qprinter.h"
+#include "QtPrintSupport/qprinter.h"
 
 int main(int argc, char ** argv)
 {
@@ -443,7 +443,7 @@ int main(int argc, char ** argv)
 #endif
 
 #ifdef TEST_QT_NO_PRINTDIALOG
-#include "QtWidgets/qprintdialog.h"
+#include "QtPrintSupport/qprintdialog.h"
 
 int main(int argc, char ** argv)
 {
