@@ -19,6 +19,7 @@
         <signature>.*\(.*Private.*\).*</signature>
         <signature>.*::d_ptr</signature>
         <signature>.*::q_ptr</signature>
+        <signature>.*QScrollerProperties::d</signature>
         <signature>.*QGraphicsLayoutItem::QGraphicsLayoutItem\(const QGraphicsLayoutItem&amp;\).*</signature>
         <signature>.*QGraphicsSceneEvent::QGraphicsSceneEvent\(const QGraphicsSceneEvent&amp;\).*</signature>
         <signature>.*QGraphicsScene.*Event::QGraphicsScene.*Event\(const QGraphicsScene.*Event&amp;\).*</signature>
