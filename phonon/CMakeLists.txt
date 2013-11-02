@@ -46,7 +46,7 @@ IF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
 ENDIF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
 add_library(smokephonon SHARED ${smokephonon_LIB_SRCS})
 
-target_link_libraries(smokephonon smokeqtcore smokeqtgui ${QT_QTCORE_LIBS} ${QT_QTGUI_LIBS} ${PHONON_LIBS})
+target_link_libraries(smokephonon smokeqtcore smokeqtgui ${QT_QTCORE_LIBS} ${QT_QTGUI_LIBS} ${PHONON_LIBRARIES})
 
 set_target_properties(smokephonon PROPERTIES VERSION 3.0.0 SOVERSION 3 )
 
