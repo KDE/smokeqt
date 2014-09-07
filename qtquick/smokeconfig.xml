@@ -20,12 +20,16 @@
       <signature>.*\(.*Private.*\).*</signature>
       <signature>.*QSGMaterialShader::QSGMaterialShader\(const QSGMaterialShader&amp;\).*</signature>
       <signature>.*QSGSimpleTextureNode::QSGSimpleTextureNode\(const QSGSimpleTextureNode&amp;\).*</signature>
+      <signature>.*QQuickItem::ItemChangeData.*</signature>
+      <signature>.*QQuickItem::item.*</signature>
+      <signature>.*QQuickItem::boolValue.*</signature>
+      <signature>.*QQuickItem::window.*</signature>
+      <signature>.*QQuickItem::realValue.*</signature>
     </exclude>
     <classList>
         <class>QSGGeometry::Attribute</class>
         <class>QSGGeometry::AttributeSet</class>
         <class>QSGGeometry::ColoredPoint2D</class>
-        <class>QQuickItem::ItemChangeData</class>
         <class>QSGGeometry::Point2D</class>
         <class>QQuickImageProvider</class>
         <class>QQuickItem</class>

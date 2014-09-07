@@ -4,8 +4,8 @@
     <generator>smoke</generator>
     <definesList>@QTDEFINES_FILE@</definesList>
     <includeDirs>
-        <dir>@QT_HEADERS_DIR@</dir>
-        <dir>@QT_QTCORE_INCLUDE_DIR@</dir>
-        <dir>@QT_QTDBUS_INCLUDE_DIR@</dir>
+        <dir>@Qt5_INCLUDE_DIR@</dir>
+        <dir>@Qt5Core_INCLUDE_DIR@</dir>
+        <dir>@Qt5DBus_INCLUDE_DIR@</dir>
     </includeDirs>
 </config>

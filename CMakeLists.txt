@@ -9,14 +9,26 @@ list(GET Qt5Core_INCLUDE_DIRS 1 Qt5_INCLUDE_DIR)
 find_package(Qt5Network)
 list(GET Qt5Network_INCLUDE_DIRS 0 Qt5Network_INCLUDE_DIR)
 
+find_package(Qt5Sql)
+list(GET Qt5Sql_INCLUDE_DIRS 0 Qt5Sql_INCLUDE_DIR)
+
+find_package(Qt5DBus)
+list(GET Qt5DBus_INCLUDE_DIRS 0 Qt5DBus_INCLUDE_DIR)
+
 find_package(Qt5Gui)
 list(GET Qt5Gui_INCLUDE_DIRS 0 Qt5Gui_INCLUDE_DIR)
 
 find_package(Qt5Widgets)
 list(GET Qt5Widgets_INCLUDE_DIRS 0 Qt5Widgets_INCLUDE_DIR)
 
+find_package(Qt5OpenGL)
+list(GET Qt5OpenGL_INCLUDE_DIRS 0 Qt5OpenGL_INCLUDE_DIR)
+
 find_package(Qt5Qml)
 list(GET Qt5Qml_INCLUDE_DIRS 0 Qt5Qml_INCLUDE_DIR)
+
+find_package(Qt5Quick)
+list(GET Qt5Quick_INCLUDE_DIRS 0 Qt5Quick_INCLUDE_DIR)
 
 add_definitions(-DSMOKE_BUILDING)
 
@@ -42,9 +54,13 @@ set(QTDEFINES_FILE ${CMAKE_CURRENT_BINARY_DIR}/qtdefines)
 
 add_subdirectory(qtcore)
 add_subdirectory(qtnetwork)
+add_subdirectory(qtsql)
+add_subdirectory(qtdbus)
 add_subdirectory(qtgui)
 add_subdirectory(qtwidgets)
+add_subdirectory(qtopengl)
 add_subdirectory(qtqml)
+add_subdirectory(qtquick)
 macro_optional_add_bindings(QT_QTNETWORK_FOUND "QtNetwork" qtnetwork)
 macro_optional_add_bindings(QT_QTDBUS_FOUND "QtDBus" qtdbus)
 macro_optional_add_bindings(QT_QTGUI_FOUND "QtGui" qtgui)
