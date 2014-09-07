@@ -1,7 +1,4 @@
 
-find_package(Qt5Widgets)
-list(GET Qt5Widgets_INCLUDE_DIRS 0 Qt5Widgets_INCLUDE_DIR)
-
 include_directories( ${Qt5Widgets_INCLUDE_DIRS} ${CMAKE_CURRENT_SOURCE_DIR} )
 
 configure_file(config.xml.cmake ${CMAKE_CURRENT_BINARY_DIR}/config.xml @ONLY)
@@ -71,7 +68,7 @@ ENDIF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
 # kde4_add_library(smokeqt5widgets SHARED ${smokeqt5widgets_LIB_SRCS})
 add_library(smokeqt5widgets SHARED ${smokeqt5widgets_LIB_SRCS})
 
-target_link_libraries(smokeqt5widgets smokeqtcore smokeqtgui ${QT_QTCORE_LIBRARY} ${QT_QTWIDGETS_LIBRARY} )
+target_link_libraries(smokeqt5widgets smokeqt5core smokeqt5gui Qt5::Core Qt5::Gui Qt5::Widgets ${QT_QTWIDGETS_LIBRARY} )
 
 set_target_properties(smokeqt5widgets PROPERTIES VERSION 3.0.0 SOVERSION 3 )
 

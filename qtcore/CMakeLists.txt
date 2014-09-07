@@ -1,5 +1,3 @@
-
-
 include_directories( ${Qt5Core_INCLUDE_DIRS} ${CMAKE_CURRENT_SOURCE_DIR} )
 
 configure_file(config.xml.cmake ${CMAKE_CURRENT_BINARY_DIR}/config.xml @ONLY)

@@ -6,6 +6,7 @@
     <includeDirs>
         <dir>@Qt5_INCLUDE_DIR@</dir>
         <dir>@Qt5Core_INCLUDE_DIR@</dir>
+        <dir>@Qt5Gui_INCLUDE_DIR@</dir>
         <dir>@Qt5Widgets_INCLUDE_DIR@</dir>
     </includeDirs>
 </config>
