@@ -111,11 +111,12 @@ foreach(test_entry ${define_tests})
   endif(${${test_entry}} GREATER ${qt_test_threshold})
 endforeach(test_entry ${define_tests})
 
-file(STRINGS "${QT_QTCORE_INCLUDE_DIR}/qglobal.h" qglobal_h NEWLINE_CONSUME)
-file(STRINGS "${QT_QTCORE_INCLUDE_DIR}/qconfig.h" qconfig_h NEWLINE_CONSUME)
-file(STRINGS "${QT_QTCORE_INCLUDE_DIR}/qfeatures.h" qfeatures_h NEWLINE_CONSUME)
+file(STRINGS "${Qt5Core_INCLUDE_DIR}/qglobal.h" qglobal_h NEWLINE_CONSUME)
+file(STRINGS "${Qt5Core_INCLUDE_DIR}/qconfig.h" qconfig_h NEWLINE_CONSUME)
+file(STRINGS "${Qt5Core_INCLUDE_DIR}/qfeatures.h" qfeatures_h NEWLINE_CONSUME)
 set(qtheaders "${qglobal_h}\n${qconfig_h}\n${qfeatures}")
 string(REGEX REPLACE "\n" ";" qtheaders "${qtheaders}")
+
 
 file(REMOVE_RECURSE ${CMAKE_CURRENT_BINARY_DIR}/qtdefines.cpp ${CMAKE_CURRENT_BINARY_DIR}/qtdefines)
 file(APPEND ${CMAKE_CURRENT_BINARY_DIR}/qtdefines.cpp "#include <cstdio>\n#include \"qglobal.h\"\nint main(int argc, char** argv)\n{\n")
@@ -129,8 +130,11 @@ file(APPEND ${CMAKE_CURRENT_BINARY_DIR}/qtdefines.cpp "return 0;\n}\n")
 
 try_run(qtdefines_run qtdefines_compile ${CMAKE_CURRENT_BINARY_DIR}/qtdefines
   ${CMAKE_CURRENT_BINARY_DIR}/qtdefines.cpp
-  CMAKE_FLAGS "-DINCLUDE_DIRECTORIES:STRING=${QT_INCLUDE_DIR};${QT_QTCORE_INCLUDE_DIR};${CMAKE_SYSTEM_INCLUDE_PATH}"
+  CMAKE_FLAGS "-DINCLUDE_DIRECTORIES:STRING=${Qt5Core_INCLUDE_DIRS};${CMAKE_SYSTEM_INCLUDE_PATH}"
+  COMPILE_DEFINITIONS -fPIC
+  COMPILE_OUTPUT_VARIABLE qtdefines_compile
   RUN_OUTPUT_VARIABLE qtdefines_output)
+
 if(${qtdefines_run} EQUAL 0)
   list(REMOVE_DUPLICATES qtdefines_output)
   list(REMOVE_ITEM qtdefines_output "QT_DEBUG")
@@ -146,7 +150,9 @@ message(STATUS "Threshold is set to ${qt_test_threshold}")
 
 include (HandleImportedTargetsInCMakeRequiredLibraries)
 set(CMAKE_REQUIRED_INCLUDES ${CMAKE_SYSTEM_INCLUDE_PATH} ${QT_INCLUDE_DIR})
-set(CMAKE_REQUIRED_LIBRARIES ${QT_QTCORE_LIBRARY} ${QT_QTDBUS_LIBRARY} ${QT_QTPRINTSUPPORT_LIBRARY} ${QT_QTWIDGETS_LIBRARY} ${QT_QTNETWORK_LIBRARY} ${QT_QTOPENGL_LIBRARY} ${QT_QTXML_LIBRARY} ${QT_QTSVG_LIBRARY})
+set(CMAKE_REQUIRED_LIBRARIES Qt5::Core Qt::Widgets Qt::Network Qt::OpenGL Qt::Xml Qt::Svg)
+
+# ${QT_QTDBUS_LIBRARY} ${QT_QTPRINTSUPPORT_LIBRARY} ${QT_QTWIDGETS_LIBRARY} ${QT_QTNETWORK_LIBRARY} ${QT_QTOPENGL_LIBRARY} ${QT_QTXML_LIBRARY} ${QT_QTSVG_LIBRARY})
 
 foreach(test_target ${test_targets})
   file(REMOVE_RECURSE ${CMAKE_CURRENT_BINARY_DIR}/test-${test_target})
@@ -163,11 +169,6 @@ foreach(test_target ${test_targets})
     list(APPEND qtdefines ${test_target})
   endif(test_result)
 endforeach(test_target ${test_targets})
-
-set(WITH_QT3_SUPPORT OFF CACHE BOOL "Include Qt3 Support members in QtCore and QtWidgets smoke modules")
-if(WITH_QT3_SUPPORT)
-    list(APPEND qtdefines "QT3_SUPPORT")
-endif(WITH_QT3_SUPPORT)
 
 # string(REGEX REPLACE ";" "\n" qtdefines ${qtdefines})
 # file(WRITE ${CMAKE_CURRENT_BINARY_DIR}/../qtdefines-ng ${qtdefines})

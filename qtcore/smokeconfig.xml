@@ -126,7 +126,6 @@
         <class>QMetaMethod</class>
         <class>QMetaObject</class>
         <class>QMetaProperty</class>
-        <class>QMetaType</class>
         <class>QMimeData</class>
         <class>QMimeDatabase</class>
         <class>QMimeType</class>

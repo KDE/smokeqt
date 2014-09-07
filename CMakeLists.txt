@@ -2,9 +2,14 @@ project(SMOKEQT5)
 
 cmake_minimum_required(VERSION 2.8.11)
 
+find_package(Qt5Core)
+list(GET Qt5Core_INCLUDE_DIRS 0 Qt5Core_INCLUDE_DIR)
+list(GET Qt5Core_INCLUDE_DIRS 1 Qt5_INCLUDE_DIR)
+
+include_directories( ${Qt5Core_INCLUDE_DIRS} ${CMAKE_CURRENT_SOURCE_DIR} )
+
 add_definitions(-DSMOKE_BUILDING)
 
-include(${CMAKE_ROOT}/Modules/FindQt5Transitional.cmake)
 find_package(Smoke)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${SMOKE_CMAKE_MODULE_DIR}")
 include(MacroOptionalFindPackage)
@@ -23,25 +28,10 @@ if(CMAKE_COMPILER_IS_GNUCXX)
     set(CMAKE_CXX_FLAGS "-Wno-deprecated-declarations")
 endif()
 
-#macro_optional_find_package(QImageBlitz)
-#macro_log_feature(QIMAGEBLITZ_FOUND "QImageBlitz" "QImageBlitz library" "http://www.kde.org" FALSE "" "Needed to compile QImageBlitz bindings")
-
-#macro_optional_find_package(Qwt5)
-#macro_log_feature(Qwt5_Qt4_FOUND "Qwt5 for Qt4" "Qwt5 libraries for Qt4" "http://qwt.sourceforge.net" FALSE "" "Needed to compile Qwt5 bindings")
-
-#macro_optional_find_package(Phonon)
-#macro_log_feature(PHONON_FOUND "Phonon" "Phonon multimedia framework" "http://www.kde.org" FALSE "" "Needed to compile Phonon bindings")
-
-#macro_optional_find_package(QScintilla)
-#macro_log_feature(QSCINTILLA_FOUND "QScintilla2" "QScintilla2 libraries" "http://www.riverbankcomputing.co.uk/software/qscintilla/intro" FALSE "" "Needed to compile QScintilla2 bindings")
-
 set(QTDEFINES_FILE ${CMAKE_CURRENT_BINARY_DIR}/qtdefines)
 
-if(WITH_QT3_SUPPORT)
-    add_definitions(-DQT3_SUPPORT)
-endif(WITH_QT3_SUPPORT)
-
 add_subdirectory(qtcore)
+add_subdirectory(qtwidgets)
 macro_optional_add_bindings(QT_QTNETWORK_FOUND "QtNetwork" qtnetwork)
 macro_optional_add_bindings(QT_QTDBUS_FOUND "QtDBus" qtdbus)
 macro_optional_add_bindings(QT_QTGUI_FOUND "QtGui" qtgui)
@@ -62,16 +52,9 @@ macro_optional_add_bindings(QT_QTSCRIPTTOOLS_FOUND "QtScriptTools" qtscripttools
 macro_optional_add_bindings(QT_QTUITOOLS_FOUND "QtUiTools" qtuitools)
 #macro_optional_add_bindings(QT_QTTEST_FOUND "QtTest" qttest)
 macro_optional_add_bindings(QT_QTMULTIMEDIA_FOUND "QtMultimedia" qtmultimedia)
-macro_optional_add_bindings(QT_QT3SUPPORT_FOUND "Qt3Support" qt3support)
 macro_optional_add_bindings(QT_QTHELP_FOUND "QtHelp" qthelp)
 
 macro_optional_add_bindings(PHONON_FOUND "Phonon" phonon)
-
-macro_optional_add_bindings(QSCINTILLA_FOUND "QScintilla" qsci)
-
-macro_optional_add_bindings(Qwt5_Qt4_FOUND "Qwt" qwt)
-
-macro_optional_add_bindings(QIMAGEBLITZ_FOUND "QImageBlitz" qimageblitz)
 
 
 
