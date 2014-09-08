@@ -30,6 +30,9 @@ list(GET Qt5Qml_INCLUDE_DIRS 0 Qt5Qml_INCLUDE_DIR)
 find_package(Qt5Quick)
 list(GET Qt5Quick_INCLUDE_DIRS 0 Qt5Quick_INCLUDE_DIR)
 
+find_package(Qt5Location)
+list(GET Qt5Location_INCLUDE_DIRS 0 Qt5Location_INCLUDE_DIR)
+
 add_definitions(-DSMOKE_BUILDING)
 
 find_package(Smoke)
@@ -61,6 +64,7 @@ add_subdirectory(qtwidgets)
 add_subdirectory(qtopengl)
 add_subdirectory(qtqml)
 add_subdirectory(qtquick)
+add_subdirectory(qtlocation)
 macro_optional_add_bindings(QT_QTNETWORK_FOUND "QtNetwork" qtnetwork)
 macro_optional_add_bindings(QT_QTDBUS_FOUND "QtDBus" qtdbus)
 macro_optional_add_bindings(QT_QTGUI_FOUND "QtGui" qtgui)

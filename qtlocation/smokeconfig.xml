@@ -1,0 +1,97 @@
+<config>
+    <moduleName>qtlocation</moduleName>
+    <parentModules>
+        <module>qtcore</module>
+        <module>qtwidgets</module>
+    </parentModules>
+    <parts>1</parts>
+    <scalarTypes>
+        <!-- QString is a class, but represented as a scalar (#) in munged names -->
+        <typeName>QString</typeName>
+    </scalarTypes>
+    <voidpTypes>
+        <!-- both are classes, but they are represented as Smoke::t_voidp -->
+        <typeName>QStringList</typeName>
+        <typeName>QString</typeName>
+    </voidpTypes>
+    <exclude>
+        <!-- we don't want private stuff in smoke.. -->
+        <signature>.*::d</signature>
+        <signature>.*::d_ptr</signature>
+        <signature>.*::q_ptr</signature>
+        <signature>.*\(.*Private.*\).*</signature>
+        <!-- Thread related stuff belongs to the bindings language -->
+        <signature>.*QtConcurrent.*</signature>
+        <signature>.*QDomNode.*</signature>
+        <!-- this doesn't link, internal stuff.. -->
+        <signature>.*qFindString.*</signature>
+        <!-- windows internal helper functions -->
+        <signature>.*qFrom.*Endian_helper.*</signature>
+        <!-- OS X internal stuff -->
+        <signature>.*qt_mac_set_cursor.*</signature>
+   </exclude>
+    <functions>
+        <!-- include functions starting with 'q' -->
+        <name>^q.*</name>
+        <name>.*::q.*</name>
+        <!-- and operators -->
+        <name>.*operator.*</name>
+    </functions>
+    <classList>
+        <class>QGeoAddress</class>
+        <class>QGeoAreaMonitor</class>
+        <class>QGeoCircle</class>
+        <class>QGeocodeReply</class>
+        <class>QGeocodingManager</class>
+        <class>QGeocodingManagerEngine</class>
+        <class>QGeoCoordinate</class>
+        <class>QGeoLocation</class>
+        <class>QGeoManeuver</class>
+        <class>QGeoPositionInfo</class>
+        <class>QGeoPositionInfoSource</class>
+        <class>QGeoPositionInfoSourceFactory</class>
+        <class>QGeoRectangle</class>
+        <class>QGeoRoute</class>
+        <class>QGeoRouteReply</class>
+        <class>QGeoRouteRequest</class>
+        <class>QGeoRouteSegment</class>
+        <class>QGeoRoutingManager</class>
+        <class>QGeoRoutingManagerEngine</class>
+        <class>QGeoSatelliteInfo</class>
+        <class>QGeoSatelliteInfoSource</class>
+        <class>QGeoServiceProvider</class>
+        <class>QGeoServiceProviderFactory</class>
+        <class>QGeoShape</class>
+        <class>QLocation</class>
+        <class>QNmeaPositionInfoSource</class>
+        <class>QPlace</class>
+        <class>QPlaceAttribute</class>
+        <class>QPlaceCategory</class>
+        <class>QPlaceContactDetail</class>
+        <class>QPlaceContent</class>
+        <class>QPlaceContentReply</class>
+        <class>QPlaceContentRequest</class>
+        <class>QPlaceDetailsReply</class>
+        <class>QPlaceEditorial</class>
+        <class>QPlaceIcon</class>
+        <class>QPlaceIdReply</class>
+        <class>QPlaceImage</class>
+        <class>QPlaceManager</class>
+        <class>QPlaceManagerEngine</class>
+        <class>QPlaceMatchReply</class>
+        <class>QPlaceMatchRequest</class>
+        <class>QPlaceRatings</class>
+        <class>QPlaceReply</class>
+        <class>QPlaceResult</class>
+        <class>QPlaceReview</class>
+        <class>QPlaceSearchReply</class>
+        <class>QPlaceSearchRequest</class>
+        <class>QPlaceSearchResult</class>
+        <class>QPlaceSearchSuggestionReply</class>
+        <class>QPlaceSupplier</class>
+        <class>QPlaceUser</class>
+        <class>QProposedSearchResult</class>
+        <!-- namespaces -->
+        <class>QLocation</class>
+     </classList>
+</config>
