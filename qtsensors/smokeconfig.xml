@@ -1,0 +1,103 @@
+<config>
+    <moduleName>qtsensors</moduleName>
+    <parentModules>
+        <module>qtcore</module>
+    </parentModules>
+    <parts>1</parts>
+    <scalarTypes>
+        <!-- QString is a class, but represented as a scalar (#) in munged names -->
+        <typeName>QString</typeName>
+    </scalarTypes>
+    <voidpTypes>
+        <!-- both are classes, but they are represented as Smoke::t_voidp -->
+        <typeName>QStringList</typeName>
+        <typeName>QString</typeName>
+    </voidpTypes>
+    <exclude>
+        <!-- we don't want private stuff in smoke.. -->
+        <signature>.*::d</signature>
+        <signature>.*::d_ptr</signature>
+        <signature>.*::q_ptr</signature>
+        <signature>.*\(.*Private.*\).*</signature>
+        <!-- Thread related stuff belongs to the bindings language -->
+        <signature>.*QtConcurrent.*</signature>
+        <signature>.*QDomNode.*</signature>
+        <!-- this doesn't link, internal stuff.. -->
+        <signature>.*qFindString.*</signature>
+        <!-- windows internal helper functions -->
+        <signature>.*qFrom.*Endian_helper.*</signature>
+        <!-- OS X internal stuff -->
+        <signature>.*qt_mac_set_cursor.*</signature>
+        <signature>.*::type</signature>
+   </exclude>
+    <functions>
+        <!-- include functions starting with 'q' -->
+        <name>^q.*</name>
+        <name>.*::q.*</name>
+        <!-- and operators -->
+        <name>.*operator.*</name>
+    </functions>
+    <classList>
+        <class>QAccelerometer</class>
+        <class>QAccelerometerFilter</class>
+        <class>QAccelerometerReading</class>
+        <class>QAltimeter</class>
+        <class>QAltimeterFilter</class>
+        <class>QAltimeterReading</class>
+        <class>QAmbientLightFilter</class>
+        <class>QAmbientLightReading</class>
+        <class>QAmbientLightSensor</class>
+        <class>QAmbientTemperatureFilter</class>
+        <class>QAmbientTemperatureReading</class>
+        <class>QAmbientTemperatureSensor</class>
+        <class>QCompass</class>
+        <class>QCompassFilter</class>
+        <class>QCompassReading</class>
+        <class>QGyroscope</class>
+        <class>QGyroscopeFilter</class>
+        <class>QGyroscopeReading</class>
+        <class>QHolsterFilter</class>
+        <class>QHolsterReading</class>
+        <class>QHolsterSensor</class>
+        <class>QIRProximityFilter</class>
+        <class>QIRProximityReading</class>
+        <class>QIRProximitySensor</class>
+        <class>QLightFilter</class>
+        <class>QLightReading</class>
+        <class>QLightSensor</class>
+        <class>QMagnetometer</class>
+        <class>QMagnetometerFilter</class>
+        <class>QMagnetometerReading</class>
+        <class>QOrientationFilter</class>
+        <class>QOrientationReading</class>
+        <class>QOrientationSensor</class>
+        <class>QPressureFilter</class>
+        <class>QPressureReading</class>
+        <class>QPressureSensor</class>
+        <class>QProximityFilter</class>
+        <class>QProximityReading</class>
+        <class>QProximitySensor</class>
+        <class>QRotationFilter</class>
+        <class>QRotationReading</class>
+        <class>QRotationSensor</class>
+        <class>QSensorBackend</class>
+        <class>QSensorBackendFactory</class>
+        <class>QSensorChangesInterface</class>
+        <class>QSensorFilter</class>
+        <class>QSensorGesture</class>
+        <class>QSensorGestureManager</class>
+        <class>QSensorGesturePluginInterface</class>
+        <class>QSensorGestureRecognizer</class>
+        <class>QSensorManager</class>
+        <class>QSensorPluginInterface</class>
+        <class>QSensorReading</class>
+        <class>QTapFilter</class>
+        <class>QTapReading</class>
+        <class>QTapSensor</class>
+        <class>QTiltFilter</class>
+        <class>QTiltReading</class>
+        <class>QTiltSensor</class>
+        <!-- namespaces -->
+        <class>QSensor</class>
+     </classList>
+</config>
