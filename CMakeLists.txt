@@ -42,6 +42,12 @@ list(GET Qt5WebKit_INCLUDE_DIRS 0 Qt5WebKit_INCLUDE_DIR)
 find_package(Qt5WebKitWidgets)
 list(GET Qt5WebKitWidgets_INCLUDE_DIRS 0 Qt5WebKitWidgets_INCLUDE_DIR)
 
+find_package(Qt5Test)
+list(GET Qt5Test_INCLUDE_DIRS 0 Qt5Test_INCLUDE_DIR)
+
+find_package(Qt5Xml)
+list(GET Qt5Xml_INCLUDE_DIRS 0 Qt5Xml_INCLUDE_DIR)
+
 add_definitions(-DSMOKE_BUILDING)
 
 find_package(Smoke)
@@ -77,6 +83,8 @@ add_subdirectory(qtlocation)
 add_subdirectory(qtsensors)
 add_subdirectory(qtwebkit)
 add_subdirectory(qtwebkitwidgets)
+add_subdirectory(qttest)
+add_subdirectory(qtxml)
 macro_optional_add_bindings(QT_QTNETWORK_FOUND "QtNetwork" qtnetwork)
 macro_optional_add_bindings(QT_QTDBUS_FOUND "QtDBus" qtdbus)
 macro_optional_add_bindings(QT_QTGUI_FOUND "QtGui" qtgui)

@@ -15,22 +15,27 @@
     </voidpTypes>
     <exclude>
         <signature>QTest::QTouchEventSequence QTest::touchEvent.*</signature>
+        <signature>.*qWaitForWindowExposed.*</signature>
+        <signature>.*qWaitForWindowActive.*</signature>
     </exclude>
     <functions>
         <name>^QTest::.*</name>
     </functions>
     <classList>
+        <class>QEventSizeOfChecker</class>
         <class>QSignalSpy</class>
+        <class>QSpontaneKeyEvent</class>
         <class>QTest</class>
         <class>QTestAccessibility</class>
-        <class>QTestAccessibilityEvent</class>
         <class>QTestData</class>
         <class>QTestDelayEvent</class>
-        <class>QTestEvent</class>
-        <class>QTestEventList</class>
         <class>QTestEventLoop</class>
         <class>QTestKeyClicksEvent</class>
         <class>QTestKeyEvent</class>
         <class>QTestMouseEvent</class>
+        <class>QtTest</class>
+        <class>QtTestGui</class>
+        <class>QtTestVersion</class>
+        <class>QtTestWidgets</class>
     </classList>
 </config>
