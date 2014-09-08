@@ -15,7 +15,23 @@
         <typeName>QString</typeName>
     </voidpTypes>
     <classList>
-        <class>WebView</class>
-        <class>WebLoadRequest</class>
+        <class>QWebDatabase</class>
+        <class>QWebElement</class>
+        <class>QWebElementCollection</class>
+        <class>QWebFullScreenVideoHandler</class>
+        <class>QWebHapticFeedbackPlayer</class>
+        <class>QWebHistory</class>
+        <class>QWebHistoryInterface</class>
+        <class>QWebHistoryItem</class>
+        <class>QWebKitPlatformPlugin</class>
+        <class>QWebNotificationData</class>
+        <class>QWebNotificationPresenter</class>
+        <class>QWebPluginFactory</class>
+        <class>QWebSecurityOrigin</class>
+        <class>QWebSelectData</class>
+        <class>QWebSelectMethod</class>
+        <class>QWebSettings</class>
+        <class>QWebSpellChecker</class>
+        <class>QWebTouchModifier</class>
     </classList>
 </config>
