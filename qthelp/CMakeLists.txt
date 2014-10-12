@@ -30,9 +30,9 @@ ENDIF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
 add_library(smokeqthelp SHARED ${smokeqthelp_LIB_SRCS})
 
 target_link_libraries(smokeqthelp 
-                        smokeqtcore 
-                        smokeqtwidgets 
-                        smokeqtsql
+                        smokeqt5core 
+                        smokeqt5widgets 
+                        smokeqt5sql
                         ${QT_QTCORE_LIBRARY} 
                         ${QT_QTWIDGETS_LIBRARY} 
                         ${QT_QTSQL_LIBRARY} 

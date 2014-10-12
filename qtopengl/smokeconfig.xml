@@ -29,6 +29,7 @@
         <signature>.*qFrom.*Endian_helper.*</signature>
         <!-- OS X internal stuff -->
         <signature>.*qt_mac_set_cursor.*</signature>
+        <signature>.*qPopulationCount.*</signature>
    </exclude>
     <functions>
         <!-- include functions starting with 'q' -->

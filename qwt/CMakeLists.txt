@@ -41,7 +41,7 @@ IF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
 ENDIF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
 add_library(smokeqwt SHARED ${smokeqwt_LIB_SRCS})
 
-target_link_libraries(smokeqwt smokeqtcore smokeqtwidgets ${QT_QTCORE_LIBRARY} ${QT_QTWIDGETS_LIBRARY} ${Qwt5_Qt4_LIBRARY})
+target_link_libraries(smokeqwt smokeqt5core smokeqt5widgets ${QT_QTCORE_LIBRARY} ${QT_QTWIDGETS_LIBRARY} ${Qwt5_Qt4_LIBRARY})
 
 set_target_properties(smokeqwt PROPERTIES VERSION 3.0.0 SOVERSION 3 )
 

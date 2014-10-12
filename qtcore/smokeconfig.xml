@@ -33,6 +33,7 @@
         <signature>.*qFindString.*</signature>
         <!-- windows internal helper functions -->
         <signature>.*qFrom.*Endian_helper.*</signature>
+        <signature>.*qPopulationCount.*</signature>
     </exclude>
     <functions>
         <!-- include functions starting with 'q' -->
@@ -42,7 +43,6 @@
         <name>.*operator.*</name>
     </functions>
     <classList>
-        <class>QAbstractAnimation</class>
         <class>QAbstractEventDispatcher</class>
         <class>QAbstractItemModel</class>
         <class>QAbstractListModel</class>

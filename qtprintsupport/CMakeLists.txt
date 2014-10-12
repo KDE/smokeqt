@@ -23,7 +23,7 @@ IF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
 ENDIF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
 add_library(smokeqtprintsupport SHARED ${smokeqtprintsupport_LIB_SRCS})
 
-target_link_libraries(smokeqtprintsupport smokeqtcore smokeqtgui smokeqtwidgets ${QT_QTCORE_LIBRARY} ${QT_QTPRINTSUPPORT_LIBRARY} ${QT_QTWIDGETS_LIBRARY})
+target_link_libraries(smokeqt5printsupport smokeqt5core smokeqt5gui smokeqt5widgets ${QT_QTCORE_LIBRARY} ${QT_QTPRINTSUPPORT_LIBRARY} ${QT_QTWIDGETS_LIBRARY})
 
 set_target_properties(smokeqtprintsupport PROPERTIES VERSION 3.0.0 SOVERSION 3 )
 

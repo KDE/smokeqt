@@ -29,8 +29,8 @@ ENDIF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
 # kde4_add_library(smokeqtmultimedia SHARED ${smokeqtmultimedia_LIB_SRCS})
 add_library(smokeqtmultimedia SHARED ${smokeqtmultimedia_LIB_SRCS})
 
-target_link_libraries(  smokeqtmultimedia 
-                        smokeqtcore 
+target_link_libraries(  smokeqt5multimedia 
+                        smokeqt5core 
                         ${QT_QTCORE_LIBRARY} 
                         ${QT_QTWIDGETS_LIBRARY} 
                         ${QT_QTMULTIMEDIA_LIBRARY} )

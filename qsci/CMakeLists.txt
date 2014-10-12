@@ -41,7 +41,7 @@ IF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
 ENDIF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
 add_library(smokeqsci SHARED ${smokeqsci_LIB_SRCS})
 
-target_link_libraries(smokeqsci smokeqtcore smokeqtwidgets ${QT_QTCORE_LIBRARY} ${QT_QTWIDGETS_LIBRARY} ${QSCINTILLA_LIBRARIES})
+target_link_libraries(smokeqsci smokeqt5core smokeqt5widgets ${QT_QTCORE_LIBRARY} ${QT_QTWIDGETS_LIBRARY} ${QSCINTILLA_LIBRARIES})
 
 set_target_properties(smokeqsci PROPERTIES VERSION 3.0.0 SOVERSION 3 )
 

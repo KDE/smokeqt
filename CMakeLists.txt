@@ -3,8 +3,8 @@ project(SMOKEQT5)
 cmake_minimum_required(VERSION 2.8.11)
 
 find_package(Qt5Core)
-list(GET Qt5Core_INCLUDE_DIRS 0 Qt5Core_INCLUDE_DIR)
-list(GET Qt5Core_INCLUDE_DIRS 1 Qt5_INCLUDE_DIR)
+list(GET Qt5Core_INCLUDE_DIRS 1 Qt5Core_INCLUDE_DIR)
+list(GET Qt5Core_INCLUDE_DIRS 0 Qt5_INCLUDE_DIR)
 
 find_package(Qt5Network)
 list(GET Qt5Network_INCLUDE_DIRS 0 Qt5Network_INCLUDE_DIR)

@@ -24,8 +24,8 @@ ENDIF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
 add_library(smokeqtscripttools SHARED ${smokeqtscripttools_LIB_SRCS})
 
 target_link_libraries(  smokeqtscripttools 
-                        smokeqtcore 
-                        smokeqtgui 
+                        smokeqt5core 
+                        smokeqt5gui 
                         ${QT_QTCORE_LIBRARY}
                         ${QT_QTSCRIPTTOOLS_LIBRARY} )
 

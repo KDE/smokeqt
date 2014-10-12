@@ -1,3 +1,4 @@
+        <signature>.*qPopulationCount.*</signature>
 <config>
     <moduleName>qtnetwork</moduleName>
     <parentModules>
@@ -25,7 +26,8 @@
         <signature>.*qFindString.*</signature>
         <!-- windows internal helper functions -->
         <signature>.*qFrom.*Endian_helper.*</signature>
-         <signature>.*QIPv6Address::c.*</signature>
+        <signature>.*QIPv6Address::c.*</signature>
+        <signature>.*qPopulationCount.*</signature>
    </exclude>
     <functions>
         <!-- include functions starting with 'q' -->

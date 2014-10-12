@@ -29,6 +29,7 @@
         <!-- OS X internal stuff -->
         <signature>.*qt_mac_set_cursor.*</signature>
         <signature>.*::type</signature>
+        <signature>.*qPopulationCount.*</signature>
    </exclude>
     <functions>
         <!-- include functions starting with 'q' -->

@@ -4,8 +4,8 @@ configure_file(config.xml.cmake ${CMAKE_CURRENT_BINARY_DIR}/config.xml @ONLY)
 
 ########### next target ###############
 
-add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp 
-    ${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp 
+add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp
 
     COMMAND ${SMOKE_GEN_BIN}
     ARGS -config "${CMAKE_CURRENT_BINARY_DIR}/config.xml" -smokeconfig "${CMAKE_CURRENT_SOURCE_DIR}/smokeconfig.xml"
@@ -18,8 +18,8 @@ add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp
 
 include_directories (${CMAKE_SOURCE_DIR}/smoke ${CMAKE_SOURCE_DIR}/smoke/qtnetwork  )
 
-set(smokeqt5network_LIB_SRCS ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp  
-                ${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp 
+set(smokeqt5network_LIB_SRCS ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp
+                ${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp
 )
 
 IF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
@@ -29,7 +29,7 @@ ENDIF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
 # kde4_add_library(smokeqt5network SHARED ${smokeqt5network_LIB_SRCS})
 add_library(smokeqt5network SHARED ${smokeqt5network_LIB_SRCS})
 
-target_link_libraries(smokeqt5network smokeqtcore Qt5::Core Qt5::Network )
+target_link_libraries(smokeqt5network smokeqt5core Qt5::Core Qt5::Network )
 
 set_target_properties(smokeqt5network PROPERTIES VERSION 3.0.0 SOVERSION 3 )
 
