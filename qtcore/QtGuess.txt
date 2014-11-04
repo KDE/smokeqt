@@ -111,15 +111,21 @@ foreach(test_entry ${define_tests})
   endif(${${test_entry}} GREATER ${qt_test_threshold})
 endforeach(test_entry ${define_tests})
 
-find_path (qglobal_h NAMES qglobal.h PATHS "${Qt5Core_INCLUDE_DIRS}")
-find_path (qconfig_h NAMES qconfig.h PATHS "${Qt5Core_INCLUDE_DIRS}")
-find_path (qfeatures_h NAMES qfeatures.h PATHS "${Qt5Core_INCLUDE_DIRS}")
+message(STATUS "Qt5Core_INCLUDE_DIRS: ${Qt5Core_INCLUDE_DIRS}")
+
+find_path (qglobal_h NAMES qglobal.h PATHS ${Qt5Core_INCLUDE_DIRS})
+find_path (qconfig_h NAMES qconfig.h PATHS ${Qt5Core_INCLUDE_DIRS})
+find_path (qfeatures_h NAMES qfeatures.h PATHS ${Qt5Core_INCLUDE_DIRS})
+
+message(STATUS "qglobal_h: ${qglobal_h}")
 
 # file(STRINGS "${Qt5Core_INCLUDE_DIR}/qglobal.h" qglobal_h NEWLINE_CONSUME)
 # file(STRINGS "${Qt5Core_INCLUDE_DIR}/qconfig.h" qconfig_h NEWLINE_CONSUME)
 # file(STRINGS "${Qt5Core_INCLUDE_DIR}/qfeatures.h" qfeatures_h NEWLINE_CONSUME)
-set(qtheaders "${qglobal_h}\n${qconfig_h}\n${qfeatures}")
+set(qtheaders "${qglobal_h}/qglobal.h\n${qconfig_h}/qconfig.h\n${qfeatures_h}/qfeatures.h")
 string(REGEX REPLACE "\n" ";" qtheaders "${qtheaders}")
+
+message(STATUS "qtheaders: ${qtheaders}")
 
 
 file(REMOVE_RECURSE ${CMAKE_CURRENT_BINARY_DIR}/qtdefines.cpp ${CMAKE_CURRENT_BINARY_DIR}/qtdefines)

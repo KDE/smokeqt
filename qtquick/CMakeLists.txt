@@ -2,8 +2,8 @@ include_directories( ${Qt5Quick_INCLUDE_DIRS} ${CMAKE_CURRENT_SOURCE_DIR} )
 
 configure_file(config.xml.cmake ${CMAKE_CURRENT_BINARY_DIR}/config.xml @ONLY)
 
-add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp 
-    ${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp 
+add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp
 
     COMMAND ${SMOKE_GEN_BIN}
     ARGS -config "${CMAKE_CURRENT_BINARY_DIR}/config.xml" -smokeconfig "${CMAKE_CURRENT_SOURCE_DIR}/smokeconfig.xml"
@@ -24,10 +24,10 @@ IF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
 ENDIF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
 add_library(smokeqt5quick SHARED ${smokeqt5quick_LIB_SRCS})
 
-target_link_libraries(smokeqt5quick 
-                      smokeqt5core 
-                      smokeqt5network 
-                      smokeqt5gui 
+target_link_libraries(smokeqt5quick
+                      smokeqt5core
+                      smokeqt5network
+                      smokeqt5gui
                       smokeqt5qml
                       Qt5::Core
                       Qt5::Quick

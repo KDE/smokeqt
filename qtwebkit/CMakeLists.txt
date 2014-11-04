@@ -24,9 +24,9 @@ IF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
 ENDIF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
 add_library(smokeqt5webkit SHARED ${smokeqt5webkit_LIB_SRCS})
 
-target_link_libraries(  smokeqt5webkit 
-                        smokeqt5core 
-                        smokeqt5widgets 
+target_link_libraries(  smokeqt5webkit
+                        smokeqt5core
+                        smokeqt5widgets
                         Qt5::Core
                         Qt5::Widgets
                         Qt5::WebKit )

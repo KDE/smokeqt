@@ -3,50 +3,64 @@ project(SMOKEQT5)
 cmake_minimum_required(VERSION 2.8.11)
 
 find_package(Qt5Core)
-list(GET Qt5Core_INCLUDE_DIRS 1 Qt5Core_INCLUDE_DIR)
-list(GET Qt5Core_INCLUDE_DIRS 0 Qt5_INCLUDE_DIR)
+find_path (Qt5_INCLUDE_DIR NAMES QtCore PATHS ${Qt5Core_INCLUDE_DIRS})
+set(Qt5Core_INCLUDE_DIR "${Qt5_INCLUDE_DIR}/QtCore")
 
 find_package(Qt5Network)
-list(GET Qt5Network_INCLUDE_DIRS 0 Qt5Network_INCLUDE_DIR)
+find_path (Qt5Network_PATH NAMES QtNetwork PATHS ${Qt5Network_INCLUDE_DIRS})
+set(Qt5Network_INCLUDE_DIR "${Qt5Network_PATH}/QtNetwork")
 
 find_package(Qt5Sql)
-list(GET Qt5Sql_INCLUDE_DIRS 0 Qt5Sql_INCLUDE_DIR)
+find_path (Qt5Sql_PATH NAMES QtSql PATHS ${Qt5Sql_INCLUDE_DIRS})
+set(Qt5Sql_INCLUDE_DIR "${Qt5Sql_PATH}/QtSql")
 
 find_package(Qt5DBus)
-list(GET Qt5DBus_INCLUDE_DIRS 0 Qt5DBus_INCLUDE_DIR)
+find_path (Qt5DBus_PATH NAMES QtDBus PATHS ${Qt5DBus_INCLUDE_DIRS})
+set(Qt5DBus_INCLUDE_DIR "${Qt5DBus_PATH}/QtDBus")
 
 find_package(Qt5Gui)
-list(GET Qt5Gui_INCLUDE_DIRS 0 Qt5Gui_INCLUDE_DIR)
+find_path (Qt5Gui_PATH NAMES QtGui PATHS ${Qt5Gui_INCLUDE_DIRS})
+set(Qt5Gui_INCLUDE_DIR "${Qt5Gui_PATH}/QtGui")
 
 find_package(Qt5Widgets)
-list(GET Qt5Widgets_INCLUDE_DIRS 0 Qt5Widgets_INCLUDE_DIR)
+find_path (Qt5Widgets_PATH NAMES QtWidgets PATHS ${Qt5Widgets_INCLUDE_DIRS})
+set(Qt5Widgets_INCLUDE_DIR "${Qt5Widgets_PATH}/QtWidgets")
 
 find_package(Qt5OpenGL)
-list(GET Qt5OpenGL_INCLUDE_DIRS 0 Qt5OpenGL_INCLUDE_DIR)
+find_path (Qt5OpenGL_PATH NAMES QtOpenGL PATHS ${Qt5OpenGL_INCLUDE_DIRS})
+set(Qt5OpenGL_INCLUDE_DIR "${Qt5OpenGL_PATH}/QtOpenGL")
 
 find_package(Qt5Qml)
-list(GET Qt5Qml_INCLUDE_DIRS 0 Qt5Qml_INCLUDE_DIR)
+find_path (Qt5Qml_PATH NAMES QtQml PATHS ${Qt5Qml_INCLUDE_DIRS})
+set(Qt5Qml_INCLUDE_DIR "${Qt5Qml_PATH}/QtQml")
 
 find_package(Qt5Quick)
-list(GET Qt5Quick_INCLUDE_DIRS 0 Qt5Quick_INCLUDE_DIR)
+find_path (Qt5Quick_PATH NAMES QtQuick PATHS ${Qt5Quick_INCLUDE_DIRS})
+set(Qt5Quick_INCLUDE_DIR "${Qt5Quick_PATH}/QtQuick")
 
 find_package(Qt5Location)
-list(GET Qt5Location_INCLUDE_DIRS 0 Qt5Location_INCLUDE_DIR)
+find_path (Qt5Location_PATH NAMES QtLocation PATHS ${Qt5Location_INCLUDE_DIRS})
+set(Qt5Location_INCLUDE_DIR "${Qt5Location_PATH}/QtLocation")
 
 find_package(Qt5Sensors)
-list(GET Qt5Sensors_INCLUDE_DIRS 0 Qt5Sensors_INCLUDE_DIR)
+find_path (Qt5Sensors_PATH NAMES QtSensors PATHS ${Qt5Sensors_INCLUDE_DIRS})
+set(Qt5Sensors_INCLUDE_DIR "${Qt5Sensors_PATH}/QtSensors")
 
 find_package(Qt5WebKit)
-list(GET Qt5WebKit_INCLUDE_DIRS 0 Qt5WebKit_INCLUDE_DIR)
+find_path (Qt5WebKit_PATH NAMES QtWebKit PATHS ${Qt5WebKit_INCLUDE_DIRS})
+set(Qt5WebKit_INCLUDE_DIR "${Qt5WebKit_PATH}/QtWebKit")
 
 find_package(Qt5WebKitWidgets)
-list(GET Qt5WebKitWidgets_INCLUDE_DIRS 0 Qt5WebKitWidgets_INCLUDE_DIR)
+find_path (Qt5WebKitWidgets_PATH NAMES QtWebKitWidgets PATHS ${Qt5WebKitWidgets_INCLUDE_DIRS})
+set(Qt5WebKitWidgets_INCLUDE_DIR "${Qt5WebKitWidgets_PATH}/QtWebKitWidgets")
 
 find_package(Qt5Test)
-list(GET Qt5Test_INCLUDE_DIRS 0 Qt5Test_INCLUDE_DIR)
+find_path (Qt5Test_PATH NAMES QtTest PATHS ${Qt5Test_INCLUDE_DIRS})
+set(Qt5Test_INCLUDE_DIR "${Qt5Test_PATH}/QtTest")
 
 find_package(Qt5Xml)
-list(GET Qt5Xml_INCLUDE_DIRS 0 Qt5Xml_INCLUDE_DIR)
+find_path (Qt5Xml_PATH NAMES QtXml PATHS ${Qt5Xml_INCLUDE_DIRS})
+set(Qt5Xml_INCLUDE_DIR "${Qt5Xml_PATH}/QtXml")
 
 add_definitions(-DSMOKE_BUILDING)
 

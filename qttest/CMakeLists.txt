@@ -24,8 +24,8 @@ IF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
 ENDIF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
 add_library(smokeqt5test SHARED ${smokeqt5test_LIB_SRCS})
 
-target_link_libraries(  smokeqt5test 
-                        smokeqt5core 
+target_link_libraries(  smokeqt5test
+                        smokeqt5core
                         Qt5::Core
                         Qt5::Test)
 

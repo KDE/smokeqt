@@ -5,14 +5,14 @@ configure_file(config.xml.cmake ${CMAKE_CURRENT_BINARY_DIR}/config.xml @ONLY)
 
 ########### next target ###############
 
-add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp 
-    ${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp 
-    ${CMAKE_CURRENT_BINARY_DIR}/x_2.cpp 
-    ${CMAKE_CURRENT_BINARY_DIR}/x_3.cpp 
-    ${CMAKE_CURRENT_BINARY_DIR}/x_4.cpp 
-    ${CMAKE_CURRENT_BINARY_DIR}/x_5.cpp 
-    ${CMAKE_CURRENT_BINARY_DIR}/x_6.cpp 
-    ${CMAKE_CURRENT_BINARY_DIR}/x_7.cpp 
+add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/x_2.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/x_3.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/x_4.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/x_5.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/x_6.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/x_7.cpp
     ${CMAKE_CURRENT_BINARY_DIR}/x_8.cpp
     ${CMAKE_CURRENT_BINARY_DIR}/x_9.cpp
     ${CMAKE_CURRENT_BINARY_DIR}/x_10.cpp
@@ -38,8 +38,8 @@ add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp
 
 include_directories (${CMAKE_SOURCE_DIR}/smoke ${CMAKE_SOURCE_DIR}/smoke/qtwidgets  )
 
-set(smokeqt5widgets_LIB_SRCS ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp  
-                ${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp 
+set(smokeqt5widgets_LIB_SRCS ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp
+                ${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp
                 ${CMAKE_CURRENT_BINARY_DIR}/x_2.cpp
                 ${CMAKE_CURRENT_BINARY_DIR}/x_3.cpp
                 ${CMAKE_CURRENT_BINARY_DIR}/x_4.cpp

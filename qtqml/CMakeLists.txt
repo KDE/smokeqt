@@ -2,8 +2,8 @@ include_directories( ${Qt5Qml_INCLUDE_DIRS} ${CMAKE_CURRENT_SOURCE_DIR} )
 
 configure_file(config.xml.cmake ${CMAKE_CURRENT_BINARY_DIR}/config.xml @ONLY)
 
-add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp 
-    ${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp 
+add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp
 
     COMMAND ${SMOKE_GEN_BIN}
     ARGS -config "${CMAKE_CURRENT_BINARY_DIR}/config.xml" -smokeconfig "${CMAKE_CURRENT_SOURCE_DIR}/smokeconfig.xml"

@@ -35,6 +35,8 @@
         <signature>.*qt_mac_set_cursor.*</signature>
         <signature>.*QMenu::macMenu\(.*</signature>
         <signature>.*qPopulationCount.*</signature>
+        <signature>.*QPalette::data.*</signature>
+        <signature>.*QPalette::for_faster_swapping_dont_use.*</signature>
    </exclude>
     <functions>
         <!-- include functions starting with 'q' -->

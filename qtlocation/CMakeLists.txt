@@ -4,8 +4,8 @@ configure_file(config.xml.cmake ${CMAKE_CURRENT_BINARY_DIR}/config.xml @ONLY)
 
 ########### next target ###############
 
-add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp 
-    ${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp 
+add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp
 
     COMMAND ${SMOKE_GEN_BIN}
     ARGS -config "${CMAKE_CURRENT_BINARY_DIR}/config.xml" -smokeconfig "${CMAKE_CURRENT_SOURCE_DIR}/smokeconfig.xml"
@@ -18,8 +18,8 @@ add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp
 
 include_directories (${CMAKE_SOURCE_DIR}/smoke ${CMAKE_SOURCE_DIR}/smoke/qtlocation  )
 
-set(smokeqt5location_LIB_SRCS ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp  
-                ${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp 
+set(smokeqt5location_LIB_SRCS ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp
+                ${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp
 )
 
 ADD_DEFINITIONS(-DQT_GUI_LIB)
@@ -31,8 +31,8 @@ ENDIF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
 # kde4_add_library(smokeqt5location SHARED ${smokeqt5location_LIB_SRCS})
 add_library(smokeqt5location SHARED ${smokeqt5location_LIB_SRCS})
 
-target_link_libraries(smokeqt5location 
-                        smokeqt5core 
+target_link_libraries(smokeqt5location
+                        smokeqt5core
                         smokeqt5network
                         smokeqt5gui
                         smokeqt5widgets
