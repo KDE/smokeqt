@@ -1,6 +1,8 @@
 include(FindQwt5)
 
-include_directories( ${QT_INCLUDES} ${Qwt5_INCLUDE_DIR} ${CMAKE_CURRENT_SOURCE_DIR})
+include_directories( ${QT_INCLUDES} ${QT_QTOPENGL_INCLUDES} ${Qwt5_INCLUDE_DIR} ${CMAKE_CURRENT_SOURCE_DIR})
+
+configure_file(config.xml.cmake ${CMAKE_CURRENT_BINARY_DIR}/config.xml @ONLY)
 
 ########### next target ###############
 
@@ -17,7 +19,7 @@ add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp
 	${CMAKE_CURRENT_BINARY_DIR}/x_10.cpp
 
     COMMAND ${SMOKE_GEN_BIN}
-    ARGS -config "${CMAKE_CURRENT_BINARY_DIR}/../qtgui/config.xml" -smokeconfig "${CMAKE_CURRENT_SOURCE_DIR}/smokeconfig.xml"
+    ARGS -config "${CMAKE_CURRENT_BINARY_DIR}/config.xml" -smokeconfig "${CMAKE_CURRENT_SOURCE_DIR}/smokeconfig.xml"
          -I "${Qwt5_INCLUDE_DIR}" -L "${CMAKE_BINARY_DIR}" -- ${CMAKE_CURRENT_SOURCE_DIR}/qwt_includes.h
     DEPENDS ${SMOKE_GEN_BIN} "${CMAKE_CURRENT_SOURCE_DIR}/smokeconfig.xml"
     WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
