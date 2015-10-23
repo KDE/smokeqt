@@ -14,27 +14,15 @@
         <signature>.*::d_ptr.*</signature>
         <signature>.*::q_ptr.*</signature>
         <signature>.*\(.*Private.*\).*</signature>
-        <!-- <signature>.*QUuid::data.*</signature> -->
-        <!-- <signature>.*QBitArray::data_ptr.*</signature> -->
-        <!-- <signature>.*QByteArray::data_ptr.*</signature> -->
-        <!-- <signature>.*QLocale::p</signature> -->
-        <!-- <signature>.*QLocale::v</signature> -->
-        <!-- <signature>.*QByteArrayMatcher::dummy</signature> -->
-        <!-- <signature>.*QByteArrayMatcher::p</signature> -->
-        <!-- <signature>.*QResource::QResource\(const QResource&amp;\).*</signature> -->
-        <!-- <signature>.*QStringMatcher::q_data</signature> -->
-        <!-- <signature>.*QStringMatcher::p</signature> -->
-             <!-- why doesn't this work?! -->
-        <!-- <signature>.*QTextCodec::ConverterState::state_data.*</signature> -->
-             <!-- Thread related stuff belongs to the bindings language -->
-        <!-- <signature>.*QtConcurrent.*</signature> -->
-             <!-- this doesn't link, internal stuff.. -->
-        <!-- <signature>.*qFindString.*</signature> -->
-             <!-- windows internal helper functions -->
-        <!-- <signature>.*qFrom.*Endian_helper.*</signature> -->
-             <!-- friend functions with no defining prototype -->
-        <!-- <signature>^int q(R|Unr)egisterGuiVariant\(\)$</signature> -->
-        <!-- <signature>^bool qt_sendSpontaneousEvent\(.*\)$</signature> -->
+        <signature>.*Q(ByteArray|String)::(from|to)Std(W)?String.*</signature>
+        <signature>^QSharedDataPointer&lt;QCollatorSortKeyPrivate&gt; QCollatorSortKey::d$</signature>
+        <signature>^static int QMetaType::registerNormalizedType(|def)\(.*</signature>
+        <signature>^static int QMetaType::type\(const QByteArray.*\)$</signature>
+        <signature>^QExplicitlySharedDataPointer&lt;QMimeTypePrivate&gt; QMimeType::d$</signature>
+        <signature>^QResource\* QResource::QResource\(const QResource&amp;\)</signature>
+        <signature>.*QString::v(a)?sprintf.*</signature>
+        <signature>.*QUuid::data4.*</signature>
+        <signature>^bool qt_sendSpontaneousEvent\(.*\)$</signature>
     </exclude>
     <functions>
         <!-- include functions starting with 'q' -->
@@ -89,7 +77,7 @@
         <class>QEventLoop</class>
         <class>QEventLoopLocker</class>
         <class>QEventTransition</class>
-        <class>QException</class>
+        <!-- <class>QException</class> Thread-related -->
         <class>QExplicitlySharedDataPointer</class>
         <class>QFile</class>
         <class>QFileDevice</class>
@@ -238,7 +226,7 @@
         <class>QTimer</class>
         <class>QTimerEvent</class>
         <class>QTranslator</class>
-        <class>QUnhandledException</class>
+        <!-- <class>QUnhandledException</class> -->
         <class>QUrl</class>
         <class>QUrlQuery</class>
         <class>QUuid</class>
