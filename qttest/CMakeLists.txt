@@ -18,6 +18,10 @@ include_directories (${CMAKE_SOURCE_DIR}/smoke ${CMAKE_SOURCE_DIR}/smoke/qttest 
 set(smokeqttest_LIB_SRCS ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp
 	${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp)
 
+if(QT_QTGUI_FOUND)
+    add_definitions(-DQT_GUI_LIB)
+endif(QT_QTGUI_FOUND)
+
 IF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
     ADD_DEFINITIONS(-DGCC_VISIBILITY)
 ENDIF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")

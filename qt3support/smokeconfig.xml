@@ -32,6 +32,10 @@
         <signature>.*QIPv6Address::c.*</signature>
         <!-- OS X internal stuff -->
         <signature>.*qt_mac_set_cursor.*</signature>
+        <!-- friend functions with no defining prototype -->
+        <signature>^int q(R|Unr)egisterGuiVariant\(\)$</signature>
+        <signature>^bool qt_sendSpontaneousEvent\(.*\)$</signature>
+        <signature>^void qt_format_text\(.*\)$</signature>
    </exclude>
     <functions>
         <!-- include functions starting with 'q' -->

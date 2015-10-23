@@ -25,6 +25,9 @@
         <signature>.*qFindString.*</signature>
         <!-- windows internal helper functions -->
         <signature>.*qFrom.*Endian_helper.*</signature>
+        <!-- friend functions with no defining prototype -->
+        <signature>^int q(R|Unr)egisterGuiVariant\(\)$</signature>
+        <signature>^bool qt_sendSpontaneousEvent\(.*\)$</signature>
    </exclude>
     <functions>
         <!-- include functions starting with 'q' -->

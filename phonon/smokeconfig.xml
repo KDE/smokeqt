@@ -19,6 +19,9 @@
         <signature>.*Phonon::.*::k_ptr</signature>
         <signature>.*Phonon::.*::d_ptr</signature>
         <signature>.*Phonon::.*::d</signature>
+        <!-- friend functions with no defining prototype -->
+        <signature>^int q(R|Unr)egisterGuiVariant\(\)$</signature>
+        <signature>^bool qt_sendSpontaneousEvent\(.*\)$</signature>
     </exclude>
     <classList>
         <class>Phonon</class>
