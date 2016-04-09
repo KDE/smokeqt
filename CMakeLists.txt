@@ -2,6 +2,7 @@ project(SMOKEQT5)
 
 cmake_minimum_required(VERSION 2.8.11)
 
+set(REQUIRED_QT_VERSION 5.4.0)
 find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Core Network Sql DBus Gui Widgets OpenGL Qml Quick Location Sensors WebKit WebKitWidgets Xml Test)
 
 #find_package(Qt5Core)
