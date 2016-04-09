@@ -160,7 +160,7 @@ message(STATUS "Threshold is set to ${qt_test_threshold}")
 
 include (HandleImportedTargetsInCMakeRequiredLibraries)
 set(CMAKE_REQUIRED_INCLUDES ${CMAKE_SYSTEM_INCLUDE_PATH} ${QT_INCLUDE_DIR})
-set(CMAKE_REQUIRED_LIBRARIES Qt5::Core Qt::Widgets Qt::Network Qt::OpenGL Qt::Xml Qt::Svg)
+set(CMAKE_REQUIRED_LIBRARIES Qt5::Core Qt5::Widgets Qt5::Network Qt5::OpenGL Qt5::Xml Qt5::Svg)
 
 # ${QT_QTDBUS_LIBRARY} ${QT_QTPRINTSUPPORT_LIBRARY} ${QT_QTWIDGETS_LIBRARY} ${QT_QTNETWORK_LIBRARY} ${QT_QTOPENGL_LIBRARY} ${QT_QTXML_LIBRARY} ${QT_QTSVG_LIBRARY})
 
