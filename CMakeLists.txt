@@ -2,6 +2,8 @@ project(SMOKEQT5)
 
 cmake_minimum_required(VERSION 2.8.11)
 
+find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Core Network Sql DBus Gui Widgets OpenGL Qml Quick Location Sensors WebKit WebKitWidgets Xml Test)
+
 find_package(Qt5Core)
 find_path (Qt5_INCLUDE_DIR NAMES QtCore PATHS ${Qt5Core_INCLUDE_DIRS})
 set(Qt5Core_INCLUDE_DIR "${Qt5_INCLUDE_DIR}/QtCore")
