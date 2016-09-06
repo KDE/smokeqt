@@ -5,7 +5,7 @@ project(SMOKEQT5)
 add_definitions(-DSMOKE_BUILDING)
 
 find_package(Qt5 COMPONENTS Core REQUIRED)
-find_package(Qt5 COMPONENTS Gui)
+find_package(Qt5 COMPONENTS Gui Widgets)
 find_package(Smoke)
 
 if(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
@@ -50,6 +50,7 @@ endif(WITH_QT3_SUPPORT)
 
 add_subdirectory(qtcore)
 macro_optional_add_bindings(Qt5Gui_FOUND "QtGui" qtgui)
+macro_optional_add_bindings(Qt5Widgets_FOUND "QtWidgets" qtwidgets)
 #macro_optional_add_bindings(QT_QTNETWORK_FOUND "QtNetwork" qtnetwork)
 #macro_optional_add_bindings(QT_QTDBUS_FOUND "QtDBus" qtdbus)
 #macro_optional_add_bindings(QT_QTDECLARATIVE_FOUND "QtDeclarative" qtdeclarative)
