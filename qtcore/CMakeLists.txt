@@ -10,15 +10,6 @@ configure_file(config.xml.cmake ${CMAKE_CURRENT_BINARY_DIR}/config.xml @ONLY)
 configure_file(qt-config.xml.cmake ${CMAKE_CURRENT_BINARY_DIR}/qt-config.xml @ONLY)
 unset(qt_dirs)
 
-# for QtGuess.txt
-if (APPLE)
-set(qt_test_threshold 15)
-else (APPLE)
-set(qt_test_threshold 10)
-endif (APPLE)
-
-include(QtGuess.txt)
-
 ########### next target ###############
 
 add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp 
@@ -104,6 +95,5 @@ endif (WIN32)
 
 install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../qtcore_smoke.h DESTINATION include/smoke)
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/qt-config.xml DESTINATION share/smokegen)
-install(FILES ${QTDEFINES_FILE} DESTINATION share/smokegen)
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/qtcore.argnames.txt DESTINATION share/smoke)
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/qtcore.typedefs.txt DESTINATION share/smoke)
