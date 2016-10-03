@@ -20,6 +20,13 @@ include(MacroLogFeature)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR} ${SMOKE_INCLUDE_DIR})
 
+# the RPATH to be used when installing, but only if it's not a system directory
+GET_FILENAME_COMPONENT(SMOKE_LIB_DIR ${SMOKE_BASE_LIBRARY} PATH)
+LIST(FIND CMAKE_PLATFORM_IMPLICIT_LINK_DIRECTORIES ${SMOKE_LIB_DIR} isSystemDir)
+IF("${isSystemDir}" STREQUAL "-1")
+   SET(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_RPATH}:${SMOKE_LIB_DIR}")
+ENDIF("${isSystemDir}" STREQUAL "-1")
+
 # Set LIB_INSTALL_DIR if it's not set already.
 if (NOT LIB_INSTALL_DIR)
     set (LIB_INSTALL_DIR ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX})
