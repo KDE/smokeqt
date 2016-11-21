@@ -20,9 +20,15 @@
         <signature>^static int QMetaType::type\(const QByteArray.*\)$</signature>
         <signature>^QExplicitlySharedDataPointer&lt;QMimeTypePrivate&gt; QMimeType::d$</signature>
         <signature>^QResource\* QResource::QResource\(const QResource&amp;\)</signature>
-        <signature>.*QString::v(a)?sprintf.*</signature>
+        <signature>.*QString::v?a?sprintf.*</signature>
         <signature>.*QUuid::data4.*</signature>
         <signature>^bool qt_sendSpontaneousEvent\(.*\)$</signature>
+        <signature>^std::reverse_iterator.*</signature>
+        <signature>^QDebug.*&amp;.*operator&lt;&lt;.*\(.*nullptr.*\)$</signature>
+        <signature>^static QString QString::fromStdU16String\(.*\)$</signature>
+        <signature>.*QString::toStdU16String\(.*\) const$</signature>
+        <signature>^static QString QString::fromStdU32String\(.*\)$</signature>
+        <signature>.*QString::toStdU32String\(.*\) const$</signature>
     </exclude>
     <functions>
         <!-- include functions starting with 'q' -->
