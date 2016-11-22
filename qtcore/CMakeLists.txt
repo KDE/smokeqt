@@ -76,7 +76,12 @@ add_library(smokeqtcore SHARED ${smokeqtcore_LIB_SRCS})
 
 target_link_libraries(smokeqtcore Qt5::Core ${SMOKE_BASE_LIBRARY} )
 
-set_target_properties(smokeqtcore PROPERTIES VERSION 3.0.0 SOVERSION 3 )
+set_target_properties(smokeqtcore
+    PROPERTIES
+    VERSION 3.0.0
+    SOVERSION 3
+    CXX_STANDARD 11
+)
 
 install(TARGETS smokeqtcore LIBRARY DESTINATION ${LIB_INSTALL_DIR}
     ARCHIVE DESTINATION ${LIB_INSTALL_DIR}

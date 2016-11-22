@@ -74,7 +74,12 @@ add_library(smokeqtgui SHARED ${smokeqtgui_LIB_SRCS})
 
 target_link_libraries(smokeqtgui smokeqtcore Qt5::Core Qt5::Gui)
 
-set_target_properties(smokeqtgui PROPERTIES VERSION 3.0.0 SOVERSION 3 )
+set_target_properties(smokeqtgui
+    PROPERTIES
+    VERSION 3.0.0
+    SOVERSION 3
+    CXX_STANDARD 11
+)
 
 install(TARGETS smokeqtgui LIBRARY DESTINATION ${LIB_INSTALL_DIR}
     ARCHIVE DESTINATION ${LIB_INSTALL_DIR}

@@ -80,7 +80,12 @@ target_link_libraries(smokeqtwidgets
     Qt5::Widgets
 )
 
-set_target_properties(smokeqtwidgets PROPERTIES VERSION 3.0.0 SOVERSION 3 )
+set_target_properties(smokeqtwidgets
+    PROPERTIES
+    VERSION 3.0.0
+    SOVERSION 3
+    CXX_STANDARD 11
+)
 
 install(TARGETS smokeqtwidgets LIBRARY DESTINATION ${LIB_INSTALL_DIR}
     ARCHIVE DESTINATION ${LIB_INSTALL_DIR}
