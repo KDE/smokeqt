@@ -5,7 +5,7 @@ project(SMOKEQT5)
 add_definitions(-DSMOKE_BUILDING)
 
 find_package(Qt5 COMPONENTS Core REQUIRED)
-find_package(Qt5 COMPONENTS Gui Widgets)
+find_package(Qt5 COMPONENTS Gui Widgets QUIET)
 find_package(Smoke)
 
 if(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
