@@ -4,6 +4,10 @@ project(SMOKEQT5)
 
 add_definitions(-DSMOKE_BUILDING)
 
+if(MSVC)
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /MP")
+endif()
+
 find_package(Qt5 COMPONENTS Core REQUIRED)
 find_package(Qt5 COMPONENTS Gui Widgets QUIET)
 find_package(Smoke)
