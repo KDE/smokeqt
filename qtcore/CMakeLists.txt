@@ -12,15 +12,23 @@ unset(qt_dirs)
 
 ########### next target ###############
 
+set(clangOptions "-clangOptions")
 string(FIND "${Qt5Core_EXECUTABLE_COMPILE_FLAGS}" -fPIC fPIC_SET)
 if(fPIC_SET GREATER -1)
-    set(fPIC "-fPIC;")
-else()
-    set(fPIC "")
+    list(APPEND clangOptions  "-fPIC")
+endif()
+
+if(MSVC AND MSVC_VERSION GREATER 1600)
+    # The features that clang reports and the features that Qt will detect at
+    # compile time must match.  MSVC2015 supports c++14, but does not support
+    # only the c++11 subset that clang would turn on with -std=c++11.  When
+    # running inside smokegen, Qt's compiler detection sees the compiler as
+    # clang under msvc.
+    list(APPEND clangOptions "-std=c++14")
 endif()
 
 set(smokegenArgs -config "${CMAKE_CURRENT_BINARY_DIR}/config.xml" -smokeconfig "${CMAKE_CURRENT_SOURCE_DIR}/smokeconfig.xml"
-    -L "${CMAKE_BINARY_DIR}" ${fPIC} -- ${CMAKE_CURRENT_SOURCE_DIR}/qtcore_includes.h)
+    -L "${CMAKE_BINARY_DIR}" ${clangOptions} -- ${CMAKE_CURRENT_SOURCE_DIR}/qtcore_includes.h)
 
 add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp 
     ${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp 
