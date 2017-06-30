@@ -10,6 +10,16 @@ configure_file(config.xml.cmake ${CMAKE_CURRENT_BINARY_DIR}/config.xml @ONLY)
 
 ########### next target ###############
 
+string(FIND "${Qt5Core_EXECUTABLE_COMPILE_FLAGS}" -fPIC fPIC_SET)
+if(fPIC_SET GREATER -1)
+    set(fPIC "-fPIC;")
+else()
+    set(fPIC "")
+endif()
+
+set(smokegenArgs -config "${CMAKE_CURRENT_BINARY_DIR}/config.xml" -smokeconfig "${CMAKE_CURRENT_SOURCE_DIR}/smokeconfig.xml"
+    -L "${CMAKE_BINARY_DIR}" ${fPIC} -- ${CMAKE_CURRENT_SOURCE_DIR}/qtgui_includes.h)
+
 add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp 
     ${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp 
     ${CMAKE_CURRENT_BINARY_DIR}/x_2.cpp 
@@ -33,8 +43,7 @@ add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp
     ${CMAKE_CURRENT_BINARY_DIR}/x_20.cpp
 
     COMMAND ${SMOKE_GEN_BIN}
-    ARGS -config "${CMAKE_CURRENT_BINARY_DIR}/config.xml" -smokeconfig "${CMAKE_CURRENT_SOURCE_DIR}/smokeconfig.xml"
-         -L "${CMAKE_BINARY_DIR}" -- ${CMAKE_CURRENT_SOURCE_DIR}/qtgui_includes.h
+    ARGS ${smokegenArgs}
     DEPENDS ${SMOKE_GEN_BIN} "${CMAKE_CURRENT_SOURCE_DIR}/smokeconfig.xml"
     WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
 
