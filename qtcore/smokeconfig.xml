@@ -10,6 +10,12 @@
         <typeName>QString</typeName>
     </voidpTypes>
     <exclude>
+        <!-- Avoid including any functions that start with "q" thar are not
+             part of Qt -->
+        <signature>.*void quick_exit\(int\).*$</signature>
+        <signature>.*void qsort(_r)?\(void\*, unsigned long, unsigned long.*</signature>
+        <signature>.*(int|char\*) q(e|f|g)cvt(_r)?\(.*</signature>
+
         <!-- we don't want private stuff in smoke.. -->
         <signature>.*::d_ptr.*</signature>
         <signature>.*::q_ptr.*</signature>
@@ -29,6 +35,12 @@
         <signature>.*QString::toStdU16String\(.*\) const$</signature>
         <signature>^static QString QString::fromStdU32String\(.*\)$</signature>
         <signature>.*QString::toStdU32String\(.*\) const$</signature>
+        <signature>^void QTimer::setInterval\(std::chrono::duration.*\)$</signature>
+        <signature>^std::chrono::duration.*QTimer::intervalAsDuration\(\) const$</signature>
+        <signature>^std::chrono::duration.*QTimer::remainingTimeAsDuration\(\) const$</signature>
+        <signature>^static void QTimer::singleShot\(std::chrono::duration.*, const QObject\*, const char\*\)$</signature>
+        <signature>^void QTimer::start\(std::chrono::duration.*\)$</signature>
+        <signature>^void QMessageLogContext::copy\(const QMessageLogContext&amp;\)$</signature>
     </exclude>
     <functions>
         <!-- include functions starting with 'q' -->
