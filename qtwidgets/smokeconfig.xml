@@ -15,6 +15,12 @@
         <typeName>QString</typeName>
     </voidpTypes>
     <exclude>
+        <!-- Avoid including any functions that start with "q" thar are not
+             part of Qt -->
+        <signature>.*void quick_exit\(int\).*$</signature>
+        <signature>.*void qsort(_r)?\(void\*, unsigned long, unsigned long.*</signature>
+        <signature>.*(int|char\*) q(e|f|g)cvt(_r)?\(.*</signature>
+
         <!-- we don't want private stuff in smoke.. -->
         <signature>.*::d_ptr</signature>
         <signature>.*::q_ptr</signature>
@@ -24,7 +30,14 @@
 
         <signature>^bool qt_sendSpontaneousEvent\(.*\)$</signature>
         <signature>^void qt_format_text\(.*\)$</signature>
-   </exclude>
+
+        <!-- these next four functions are delcaraed as friend functions, but
+             are not exposed externally -->
+        <signature>^bool qt_closestLeaf\(const QGraphicsItem\*, const QGraphicsItem\*\)$</signature>
+        <signature>^bool qt_closestItemFirst\(const QGraphicsItem\*, const QGraphicsItem\*\)$</signature>
+        <signature>^void qt_mac_emit_menuSignals\(QMenu\*, bool\)$</signature>
+        <signature>^void qt_mac_menu_emit_hovered\(QMenu\*, QAction\*\)$</signature>
+    </exclude>
     <functions>
         <!-- include functions starting with 'q' -->
         <name>^q.*</name>

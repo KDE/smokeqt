@@ -26,6 +26,12 @@
         <signature>^QImage\* QImage::QImage\(.*void\(\*\)\(void\*\).*\)$</signature>
         <signature>^bool qt_sendSpontaneousEvent\(.*\)$</signature>
         <signature>^void qt_format_text\(.*\)$</signature>
+
+        <!-- smokegen does not have full support for rvalue references -->
+        <signature>^QImage&amp;+ QImage::mirrored\(bool, bool\)$</signature>
+        <signature>^QImage&amp;+ QImage::rgbSwapped\(\)$</signature>
+
+        <signature>.*HDC.*\* qt_win_display_dc\(\)$</signature>
    </exclude>
     <functions>
         <!-- include functions starting with 'q' -->
