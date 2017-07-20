@@ -11,9 +11,8 @@ configure_file(config.xml.cmake ${CMAKE_CURRENT_BINARY_DIR}/config.xml @ONLY)
 ########### next target ###############
 
 set(clangOptions "-clangOptions")
-string(FIND "${Qt5Core_EXECUTABLE_COMPILE_FLAGS}" -fPIC fPIC_SET)
-if(fPIC_SET GREATER -1)
-    list(APPEND clangOptions  "-fPIC")
+if(NOT WIN32)
+    list(APPEND clangOptions "-fPIC")
 endif()
 
 if(MSVC AND MSVC_VERSION GREATER 1600)

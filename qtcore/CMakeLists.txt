@@ -13,8 +13,7 @@ unset(qt_dirs)
 ########### next target ###############
 
 set(clangOptions "-clangOptions")
-string(FIND "${Qt5Core_EXECUTABLE_COMPILE_FLAGS}" -fPIC fPIC_SET)
-if(fPIC_SET GREATER -1)
+if(NOT WIN32)
     list(APPEND clangOptions  "-fPIC")
 endif()
 
