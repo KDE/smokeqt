@@ -1,85 +1,10 @@
 
-include_directories( ${CMAKE_CURRENT_SOURCE_DIR} )
+include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
-set(qt_dirs)
-foreach(filename ${Qt5Core_INCLUDE_DIRS} ${Qt5Gui_INCLUDE_DIRS})
-    set(qt_dirs "${qt_dirs}        <dir>${filename}</dir>\n")
-endforeach(filename)
-
-configure_file(config.xml.cmake ${CMAKE_CURRENT_BINARY_DIR}/config.xml @ONLY)
-
-########### next target ###############
-
-set(clangOptions "-clangOptions")
-if(NOT WIN32)
-    list(APPEND clangOptions "-fPIC")
-endif()
-
-if(MSVC AND MSVC_VERSION GREATER 1600)
-    # The features that clang reports and the features that Qt will detect at
-    # compile time must match.  MSVC2015 supports c++14, but does not support
-    # only the c++11 subset that clang would turn on with -std=c++11.  When
-    # running inside smokegen, Qt's compiler detection sees the compiler as
-    # clang under msvc.
-    list(APPEND clangOptions "-std=c++14")
-endif()
-
-set(smokegenArgs -config "${CMAKE_CURRENT_BINARY_DIR}/config.xml" -smokeconfig "${CMAKE_CURRENT_SOURCE_DIR}/smokeconfig.xml"
-    -L "${CMAKE_BINARY_DIR}" ${clangOptions} -- ${CMAKE_CURRENT_SOURCE_DIR}/qtgui_includes.h)
-
-add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp 
-    ${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp 
-    ${CMAKE_CURRENT_BINARY_DIR}/x_2.cpp 
-    ${CMAKE_CURRENT_BINARY_DIR}/x_3.cpp 
-    ${CMAKE_CURRENT_BINARY_DIR}/x_4.cpp 
-    ${CMAKE_CURRENT_BINARY_DIR}/x_5.cpp 
-    ${CMAKE_CURRENT_BINARY_DIR}/x_6.cpp 
-    ${CMAKE_CURRENT_BINARY_DIR}/x_7.cpp 
-    ${CMAKE_CURRENT_BINARY_DIR}/x_8.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/x_9.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/x_10.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/x_11.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/x_12.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/x_13.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/x_14.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/x_15.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/x_16.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/x_17.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/x_18.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/x_19.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/x_20.cpp
-
-    COMMAND ${SMOKE_GEN_BIN}
-    ARGS ${smokegenArgs}
-    DEPENDS ${SMOKE_GEN_BIN} "${CMAKE_CURRENT_SOURCE_DIR}/smokeconfig.xml"
-    WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
-
-set_property(SOURCE ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp APPEND PROPERTY OBJECT_DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp)
-
-include_directories (${CMAKE_SOURCE_DIR}/smoke ${CMAKE_SOURCE_DIR}/smoke/qtgui  )
-
-set(smokeqtgui_LIB_SRCS ${CMAKE_CURRENT_BINARY_DIR}/smokedata.cpp  
-                ${CMAKE_CURRENT_BINARY_DIR}/x_1.cpp 
-                ${CMAKE_CURRENT_BINARY_DIR}/x_2.cpp
-                ${CMAKE_CURRENT_BINARY_DIR}/x_3.cpp
-                ${CMAKE_CURRENT_BINARY_DIR}/x_4.cpp
-                ${CMAKE_CURRENT_BINARY_DIR}/x_5.cpp
-                ${CMAKE_CURRENT_BINARY_DIR}/x_6.cpp
-                ${CMAKE_CURRENT_BINARY_DIR}/x_7.cpp
-                ${CMAKE_CURRENT_BINARY_DIR}/x_8.cpp
-                ${CMAKE_CURRENT_BINARY_DIR}/x_9.cpp
-                ${CMAKE_CURRENT_BINARY_DIR}/x_10.cpp
-                ${CMAKE_CURRENT_BINARY_DIR}/x_11.cpp
-                ${CMAKE_CURRENT_BINARY_DIR}/x_12.cpp
-                ${CMAKE_CURRENT_BINARY_DIR}/x_13.cpp
-                ${CMAKE_CURRENT_BINARY_DIR}/x_14.cpp
-                ${CMAKE_CURRENT_BINARY_DIR}/x_15.cpp
-                ${CMAKE_CURRENT_BINARY_DIR}/x_16.cpp
-                ${CMAKE_CURRENT_BINARY_DIR}/x_17.cpp
-                ${CMAKE_CURRENT_BINARY_DIR}/x_18.cpp
-                ${CMAKE_CURRENT_BINARY_DIR}/x_19.cpp
-                ${CMAKE_CURRENT_BINARY_DIR}/x_20.cpp
-)
+create_configure_files("${Qt5Core_INCLUDE_DIRS};${Qt5Gui_INCLUDE_DIRS}")
+get_smokegen_args(smokegenArgs qtgui)
+run_smokegen(20 "${smokegenArgs}")
+get_smokegen_output_files(smokeqtgui_LIB_SRCS 20)
 
 IF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
     ADD_DEFINITIONS(-DGCC_VISIBILITY)
@@ -88,7 +13,11 @@ ENDIF(CMAKE_CXX_FLAGS MATCHES "-fvisibility")
 # kde4_add_library(smokeqtgui SHARED ${smokeqtgui_LIB_SRCS})
 add_library(smokeqtgui SHARED ${smokeqtgui_LIB_SRCS})
 
-target_link_libraries(smokeqtgui smokeqtcore Qt5::Core Qt5::Gui)
+target_link_libraries(smokeqtgui
+    smokeqtcore
+    Qt5::Core
+    Qt5::Gui
+)
 
 set_target_properties(smokeqtgui
     PROPERTIES

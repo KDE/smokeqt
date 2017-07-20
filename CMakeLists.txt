@@ -1,6 +1,48 @@
 cmake_minimum_required(VERSION 2.8.11)
 project(SMOKEQT5)
 
+function(get_smokegen_args RESULT_NAME moduleName)
+    set(clangOptions "-clangOptions")
+    if(NOT WIN32)
+        list(APPEND clangOptions  "-fPIC")
+    endif()
+
+    if(MSVC AND MSVC_VERSION GREATER 1600)
+        # The features that clang reports and the features that Qt will detect at
+        # compile time must match.  MSVC2015 supports c++14, but does not support
+        # only the c++11 subset that clang would turn on with -std=c++11.  When
+        # running inside smokegen, Qt's compiler detection sees the compiler as
+        # clang under msvc.
+        list(APPEND clangOptions "-std=c++14")
+    elseif(${Qt5Core_VERSION} VERSION_GREATER 5.6.99)
+        # Qt >=5.7.0 requires c++11
+        list(APPEND clangOptions "-std=c++11")
+    endif()
+
+    set(smokegenArgs
+        -config "${CMAKE_CURRENT_BINARY_DIR}/config.xml"
+        -smokeconfig "${CMAKE_CURRENT_SOURCE_DIR}/smokeconfig.xml"
+        -L "${CMAKE_BINARY_DIR}"
+        ${clangOptions}
+        -- ${CMAKE_CURRENT_SOURCE_DIR}/${moduleName}_includes.h
+    )
+    set(${RESULT_NAME} ${smokegenArgs} PARENT_SCOPE)
+    
+endfunction()
+
+function(create_configure_files dirs)
+    set(qt_dirs)
+    foreach(filename ${dirs})
+        set(qt_dirs "${qt_dirs}        <dir>${filename}</dir>\n")
+    endforeach(filename)
+
+    if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/config.xml.cmake)
+        configure_file(${CMAKE_CURRENT_SOURCE_DIR}/config.xml.cmake ${CMAKE_CURRENT_BINARY_DIR}/config.xml @ONLY)
+    endif()
+    if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/qt-config.xml.cmake)
+        configure_file(${CMAKE_CURRENT_SOURCE_DIR}/qt-config.xml.cmake ${CMAKE_CURRENT_BINARY_DIR}/qt-config.xml @ONLY)
+    endif()
+endfunction()
 
 add_definitions(-DSMOKE_BUILDING)
 
