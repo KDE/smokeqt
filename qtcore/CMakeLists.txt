@@ -24,6 +24,9 @@ if(MSVC AND MSVC_VERSION GREATER 1600)
     # running inside smokegen, Qt's compiler detection sees the compiler as
     # clang under msvc.
     list(APPEND clangOptions "-std=c++14")
+elseif(${Qt5Core_VERSION} VERSION_GREATER 5.6.99)
+    # Qt >=5.7.0 requires c++11
+    list(APPEND clangOptions "-std=c++11")
 endif()
 
 set(smokegenArgs -config "${CMAKE_CURRENT_BINARY_DIR}/config.xml" -smokeconfig "${CMAKE_CURRENT_SOURCE_DIR}/smokeconfig.xml"
