@@ -85,6 +85,7 @@
         <class>QFontComboBox</class>
         <class>QFontDialog</class>
         <class>QFormLayout</class>
+        <class>QFormLayout::TakeRowResult</class>
         <class>QFrame</class>
         <class>QGesture</class>
         <class>QGestureEvent</class>

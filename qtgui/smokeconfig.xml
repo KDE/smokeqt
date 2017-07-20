@@ -14,6 +14,12 @@
         <typeName>QString</typeName>
     </voidpTypes>
     <exclude>
+        <!-- Avoid including any functions that start with "q" thar are not
+             part of Qt -->
+        <signature>.*void quick_exit\(int\).*$</signature>
+        <signature>.*void qsort(_r)?\(void\*, unsigned long, unsigned long.*</signature>
+        <signature>.*(int|char\*) q(e|f|g)cvt(_r)?\(.*</signature>
+
         <!-- we don't want private stuff in smoke.. -->
         <signature>.*::d_ptr</signature>
         <signature>.*::q_ptr</signature>
@@ -32,7 +38,7 @@
         <signature>^QImage&amp;+ QImage::rgbSwapped\(\)$</signature>
 
         <signature>.*HDC.*\* qt_win_display_dc\(\)$</signature>
-   </exclude>
+    </exclude>
     <functions>
         <!-- include functions starting with 'q' -->
         <name>^q.*</name>
@@ -102,6 +108,7 @@
         <class>QIconDragEvent</class>
         <class>QIconEngine</class>
         <class>QIconEngine::AvailableSizesArgument</class>
+        <class>QIconEngine::ScaledPixmapArgument</class>
         <class>QIconEnginePlugin</class>
         <class>QImage</class>
         <class>QImageIOHandler</class>
@@ -163,6 +170,7 @@
         <class>QOpenGLShader</class>
         <class>QOpenGLShaderProgram</class>
         <class>QOpenGLTexture</class>
+        <class>QOpenGLTextureBlitter</class>
         <class>QOpenGLTimeMonitor</class>
         <class>QOpenGLTimerQuery</class>
         <class>QOpenGLVersionProfile</class>
@@ -193,6 +201,7 @@
         <class>QPlatformGraphicsBuffer</class>
         <class>QPlatformSurfaceEvent</class>
         <class>QPlatformSystemTrayIcon</class>
+        <class>QPointingDeviceUniqueId</class>
         <class>QPolygon</class>
         <class>QPolygonF</class>
         <class>QQuaternion</class>

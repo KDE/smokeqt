@@ -41,6 +41,11 @@
         <signature>^static void QTimer::singleShot\(std::chrono::duration.*, const QObject\*, const char\*\)$</signature>
         <signature>^void QTimer::start\(std::chrono::duration.*\)$</signature>
         <signature>^void QMessageLogContext::copy\(const QMessageLogContext&amp;\)$</signature>
+        <signature>.*std::chrono::.*QDeadlineTimer::remainingTimeAsDuration\(\) const$</signature>
+
+        <!-- Smoke does not have complete rvalue reference support -->
+        <signature>^QSignalBlocker\*.*QSignalBlocker::QSignalBlocker\(QSignalBlocker.*\).*</signature>
+        <signature>^QSignalBlocker.*&amp;.*QSignalBlocker::operator=\(QSignalBlocker.*&amp;.*\).*</signature>
     </exclude>
     <functions>
         <!-- include functions starting with 'q' -->
@@ -84,7 +89,9 @@
         <class>QDataStream</class>
         <class>QDate</class>
         <class>QDateTime</class>
+        <class>QDeadlineTimer</class>
         <class>QDebug</class>
+        <class>QDebugStateSaver</class>
         <class>QDir</class>
         <class>QDirIterator</class>
         <class>QDynamicPropertyChangeEvent</class>
@@ -139,6 +146,7 @@
         <class>QLockFile</class>
         <class>QLoggingCategory</class>
         <class>QMap</class>
+        <!-- <class>QMap::key_iterator</class> -->
         <class>QMapIterator</class>
         <class>QMargins</class>
         <class>QMarginsF</class>
@@ -168,6 +176,7 @@
         <class>QMutexLocker</class>
         <class>QObject</class>
         <class>QObjectCleanupHandler</class>
+        <class>QOperatingSystemVersion</class>
         <class>QPair</class>
         <class>QParallelAnimationGroup</class>
         <class>QPauseAnimation</class>
@@ -206,6 +215,7 @@
         <class>QSharedDataPointer</class>
         <class>QSharedMemory</class>
         <class>QSharedPointer</class>
+        <class>QSignalBlocker</class>
         <class>QSignalMapper</class>
         <class>QSignalTransition</class>
         <class>QSize</class>
@@ -218,6 +228,7 @@
         <class>QStateMachine</class>
         <class>QStateMachine::SignalEvent</class>
         <class>QStateMachine::WrappedEvent</class>
+        <class>QStaticByteArrayMatcher</class>
         <class>QStaticPlugin</class>
         <class>QStorageInfo</class>
         <class>QString</class>
@@ -253,6 +264,7 @@
         <class>QVariantAnimation</class>
         <class>QVector</class>
         <class>QVectorIterator</class>
+        <class>QVersionNumber</class>
         <class>QWaitCondition</class>
         <class>QWeakPointer</class>
         <class>QWinEventNotifier</class>
