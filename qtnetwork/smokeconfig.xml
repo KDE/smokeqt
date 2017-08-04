@@ -14,22 +14,25 @@
         <typeName>QString</typeName>
     </voidpTypes>
     <exclude>
+        <!-- Avoid including any functions that start with "q" thar are not
+             part of Qt -->
+        <signature>.*void quick_exit\(int\).*$</signature>
+        <signature>.*void qsort(_r)?\(void\*, unsigned long, unsigned long.*</signature>
+        <signature>.*(int|char\*) q(e|f|g)cvt(_r)?\(.*</signature>
+
         <!-- we don't want private stuff in smoke.. -->
-        <signature>.*::d</signature>
-        <signature>.*::d_ptr</signature>
-        <signature>.*::q_ptr</signature>
+        <signature>.*::d_ptr.*</signature>
+        <signature>.*::q_ptr.*</signature>
         <signature>.*\(.*Private.*\).*</signature>
-        <!-- Thread related stuff belongs to the bindings language -->
-        <signature>.*QtConcurrent.*</signature>
-        <!-- this doesn't link, internal stuff.. -->
-        <signature>.*qFindString.*</signature>
-        <!-- windows internal helper functions -->
-        <signature>.*qFrom.*Endian_helper.*</signature>
-         <signature>.*QIPv6Address::c.*</signature>
-        <!-- friend functions with no defining prototype -->
-        <signature>^int q(R|Unr)egisterGuiVariant\(\)$</signature>
+        <signature>.*QScopedPointer&lt;QHostAddressPrivate.*</signature>
+        <signature>.*QExplicitlySharedDataPointer&lt;QHostAddressPrivate&gt;.*</signature>
+
+        <signature>.*QSslConfiguration::ALPNProtocolHTTP2.*</signature>
+        <signature>.*QSslConfiguration::NextProtocolSpdy3_0.*</signature>
+        <signature>.*QSslConfiguration::NextProtocolHttp1_1.*</signature>
+
         <signature>^bool qt_sendSpontaneousEvent\(.*\)$</signature>
-   </exclude>
+    </exclude>
     <functions>
         <!-- include functions starting with 'q' -->
         <name>^q.*</name>
@@ -41,25 +44,27 @@
         <class>QAbstractNetworkCache</class>
         <class>QAbstractSocket</class>
         <class>QAuthenticator</class>
-        <class>QFtp</class>
+        <class>QDnsDomainNameRecord</class>
+        <class>QDnsHostAddressRecord</class>
+        <class>QDnsLookup</class>
+        <class>QDnsMailExchangeRecord</class>
+        <class>QDnsServiceRecord</class>
+        <class>QDnsTextRecord</class>
         <class>QHostAddress</class>
         <class>QHostInfo</class>
-        <class>QHttp</class>
-        <class>QHttpHeader</class>
+        <class>QHstsPolicy</class>
         <class>QHttpMultiPart</class>
         <class>QHttpPart</class>
-        <class>QHttpRequestHeader</class>
-        <class>QHttpResponseHeader</class>
-        <class>QIPv6Address</class>
         <class>QLocalServer</class>
         <class>QLocalSocket</class>
         <class>QNetworkAccessManager</class>
         <class>QNetworkAddressEntry</class>
         <class>QNetworkCacheMetaData</class>
-        <class>QNetworkCookie</class>
-        <class>QNetworkCookieJar</class>
         <class>QNetworkConfiguration</class>
         <class>QNetworkConfigurationManager</class>
+        <class>QNetworkCookie</class>
+        <class>QNetworkCookieJar</class>
+        <class>QNetworkDatagram</class>
         <class>QNetworkDiskCache</class>
         <class>QNetworkInterface</class>
         <class>QNetworkProxy</class>
@@ -68,17 +73,21 @@
         <class>QNetworkReply</class>
         <class>QNetworkRequest</class>
         <class>QNetworkSession</class>
+        <class>QSctpServer</class>
+        <class>QSctpSocket</class>
         <class>QSslCertificate</class>
+        <class>QSslCertificateExtension</class>
         <class>QSslCipher</class>
         <class>QSslConfiguration</class>
+        <class>QSslDiffieHellmanParameters</class>
+        <class>QSslEllipticCurve</class>
         <class>QSslError</class>
         <class>QSslKey</class>
+        <class>QSslPreSharedKeyAuthenticator</class>
         <class>QSslSocket</class>
         <class>QTcpServer</class>
         <class>QTcpSocket</class>
         <class>QUdpSocket</class>
-        <class>QUrlInfo</class>
-        <!-- namespaces -->
         <class>QSsl</class>
-     </classList>
+    </classList>
 </config>

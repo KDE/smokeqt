@@ -55,6 +55,7 @@ find_package(Qt5
     COMPONENTS
     Gui
     Multimedia
+    Network
     Widgets
     QUIET
 )
@@ -110,8 +111,8 @@ endif(WITH_QT3_SUPPORT)
 add_subdirectory(qtcore)
 macro_optional_add_bindings(Qt5Gui_FOUND "QtGui" qtgui)
 macro_optional_add_bindings(Qt5Multimedia_FOUND "QtMultimedia" qtmultimedia)
+macro_optional_add_bindings(Qt5Network_FOUND "QtNetwork" qtnetwork)
 macro_optional_add_bindings(Qt5Widgets_FOUND "QtWidgets" qtwidgets)
-#macro_optional_add_bindings(QT_QTNETWORK_FOUND "QtNetwork" qtnetwork)
 #macro_optional_add_bindings(QT_QTDBUS_FOUND "QtDBus" qtdbus)
 #macro_optional_add_bindings(QT_QTDECLARATIVE_FOUND "QtDeclarative" qtdeclarative)
 #macro_optional_add_bindings(QT_QTSVG_FOUND "QtSvg" qtsvg)
