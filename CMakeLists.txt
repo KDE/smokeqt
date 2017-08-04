@@ -51,7 +51,13 @@ if(MSVC)
 endif()
 
 find_package(Qt5 COMPONENTS Core REQUIRED)
-find_package(Qt5 COMPONENTS Gui Widgets QUIET)
+find_package(Qt5
+    COMPONENTS
+    Gui
+    Multimedia
+    Widgets
+    QUIET
+)
 find_package(Smoke)
 
 if(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
@@ -103,6 +109,7 @@ endif(WITH_QT3_SUPPORT)
 
 add_subdirectory(qtcore)
 macro_optional_add_bindings(Qt5Gui_FOUND "QtGui" qtgui)
+macro_optional_add_bindings(Qt5Multimedia_FOUND "QtMultimedia" qtmultimedia)
 macro_optional_add_bindings(Qt5Widgets_FOUND "QtWidgets" qtwidgets)
 #macro_optional_add_bindings(QT_QTNETWORK_FOUND "QtNetwork" qtnetwork)
 #macro_optional_add_bindings(QT_QTDBUS_FOUND "QtDBus" qtdbus)
@@ -116,7 +123,6 @@ macro_optional_add_bindings(Qt5Widgets_FOUND "QtWidgets" qtwidgets)
 #macro_optional_add_bindings(QT_QTSCRIPT_FOUND "QtScript" qtscript)
 #macro_optional_add_bindings(QT_QTUITOOLS_FOUND "QtUiTools" qtuitools)
 #macro_optional_add_bindings(QT_QTTEST_FOUND "QtTest" qttest)
-#macro_optional_add_bindings(QT_QTMULTIMEDIA_FOUND "QtMultimedia" qtmultimedia)
 #macro_optional_add_bindings(QT_QTHELP_FOUND "QtHelp" qthelp)
 #
 #macro_optional_add_bindings(PHONON_FOUND "Phonon" phonon)

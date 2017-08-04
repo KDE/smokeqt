@@ -2,8 +2,9 @@
     <moduleName>qtmultimedia</moduleName>
     <parentModules>
         <module>qtcore</module>
+        <module>qtgui</module>
     </parentModules>
-    <parts>1</parts>
+    <parts>10</parts>
     <scalarTypes>
         <!-- QString is a class, but represented as a scalar (#) in munged names -->
         <typeName>QString</typeName>
@@ -14,24 +15,21 @@
         <typeName>QString</typeName>
     </voidpTypes>
     <exclude>
+        <!-- Avoid including any functions that start with "q" thar are not
+             part of Qt -->
+        <signature>.*void quick_exit\(int\).*$</signature>
+        <signature>.*void qsort(_r)?\(void\*, unsigned long, unsigned long.*</signature>
+        <signature>.*(int|char\*) q(e|f|g)cvt(_r)?\(.*</signature>
+
         <!-- we don't want private stuff in smoke.. -->
         <signature>.*::d</signature>
         <signature>.*::d_ptr</signature>
         <signature>.*::q_ptr</signature>
         <signature>.*\(.*Private.*\).*</signature>
-        <!-- Thread related stuff belongs to the bindings language -->
-        <signature>.*QtConcurrent.*</signature>
-        <!-- this doesn't link, internal stuff.. -->
-        <signature>.*qFindString.*</signature>
-        <!-- windows internal helper functions -->
-        <signature>.*qFrom.*Endian_helper.*</signature>
-        <!-- OS X internal stuff -->
-        <signature>.*qt_mac_set_cursor.*</signature>
-        <!-- friend functions with no defining prototype -->
-        <signature>^int q(R|Unr)egisterGuiVariant\(\)$</signature>
+
         <signature>^bool qt_sendSpontaneousEvent\(.*\)$</signature>
         <signature>^void qt_format_text\(.*\)$</signature>
-   </exclude>
+    </exclude>
     <functions>
         <!-- include functions starting with 'q' -->
         <name>^q.*</name>
@@ -40,16 +38,101 @@
         <name>.*operator.*</name>
     </functions>
     <classList>
+        <class>QAbstractAudioDeviceInfo</class>
+        <class>QAbstractAudioInput</class>
+        <class>QAbstractAudioOutput</class>
+        <class>QAbstractPlanarVideoBuffer</class>
         <class>QAbstractVideoBuffer</class>
+        <class>QAbstractVideoFilter</class>
         <class>QAbstractVideoSurface</class>
+        <class>QAudioBuffer</class>
+        <class>QAudioBuffer::StereoFrame</class>
+        <class>QAudioDecoder</class>
+        <class>QAudioDecoderControl</class>
         <class>QAudioDeviceInfo</class>
+        <class>QAudioEncoderSettings</class>
+        <class>QAudioEncoderSettingsControl</class>
         <class>QAudioFormat</class>
         <class>QAudioInput</class>
+        <class>QAudioInputSelectorControl</class>
         <class>QAudioOutput</class>
+        <class>QAudioOutputSelectorControl</class>
+        <class>QAudioProbe</class>
+        <class>QAudioRecorder</class>
+        <class>QAudioRoleControl</class>
+        <class>QAudioSystemPlugin</class>
+        <class>QCamera</class>
+        <class>QCamera::FrameRateRange</class>
+        <class>QCameraCaptureBufferFormatControl</class>
+        <class>QCameraCaptureDestinationControl</class>
+        <class>QCameraControl</class>
+        <class>QCameraExposure</class>
+        <class>QCameraExposureControl</class>
+        <class>QCameraFeedbackControl</class>
+        <class>QCameraFlashControl</class>
+        <class>QCameraFocus</class>
+        <class>QCameraFocusControl</class>
+        <class>QCameraFocusZone</class>
+        <class>QCameraImageCapture</class>
+        <class>QCameraImageCaptureControl</class>
+        <class>QCameraImageProcessing</class>
+        <class>QCameraImageProcessingControl</class>
+        <class>QCameraInfo</class>
+        <class>QCameraInfoControl</class>
+        <class>QCameraLocksControl</class>
+        <class>QCameraViewfinderSettings</class>
+        <class>QCameraViewfinderSettingsControl</class>
+        <class>QCameraViewfinderSettingsControl2</class>
+        <class>QCameraZoomControl</class>
+        <class>QImageEncoderControl</class>
+        <class>QImageEncoderSettings</class>
+        <class>QMediaAudioProbeControl</class>
+        <class>QMediaAvailabilityControl</class>
+        <class>QMediaBindableInterface</class>
+        <class>QMediaContainerControl</class>
+        <class>QMediaContent</class>
+        <class>QMediaControl</class>
+        <class>QMediaGaplessPlaybackControl</class>
+        <class>QMediaNetworkAccessControl</class>
+        <class>QMediaObject</class>
+        <class>QMediaPlayer</class>
+        <class>QMediaPlayerControl</class>
+        <class>QMediaPlaylist</class>
+        <class>QMediaRecorder</class>
+        <class>QMediaRecorderControl</class>
+        <class>QMediaResource</class>
+        <class>QMediaService</class>
+        <class>QMediaServiceCameraInfoInterface</class>
+        <class>QMediaServiceDefaultDeviceInterface</class>
+        <class>QMediaServiceFeaturesInterface</class>
+        <class>QMediaServiceProviderPlugin</class>
+        <class>QMediaServiceSupportedDevicesInterface</class>
+        <class>QMediaServiceSupportedFormatsInterface</class>
+        <class>QMediaStreamsControl</class>
+        <class>QMediaTimeInterval</class>
+        <class>QMediaTimeRange</class>
+        <class>QMediaVideoProbeControl</class>
+        <class>QMetaDataReaderControl</class>
+        <class>QMetaDataWriterControl</class>
+        <class>QRadioData</class>
+        <class>QRadioDataControl</class>
+        <class>QRadioTuner</class>
+        <class>QRadioTunerControl</class>
+        <class>QSound</class>
+        <class>QSoundEffect</class>
+        <class>QVideoDeviceSelectorControl</class>
+        <class>QVideoEncoderSettings</class>
+        <class>QVideoEncoderSettingsControl</class>
+        <class>QVideoFilterRunnable</class>
         <class>QVideoFrame</class>
+        <class>QVideoProbe</class>
+        <class>QVideoRendererControl</class>
         <class>QVideoSurfaceFormat</class>
-        
+        <class>QVideoWindowControl</class>
+
         <!-- namespaces -->
         <class>QAudio</class>
+        <class>QMediaMetaData</class>
+        <class>QMultimedia</class>
      </classList>
 </config>
