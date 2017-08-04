@@ -20,6 +20,7 @@
         <signature>.*::d_ptr.*</signature>
         <signature>.*::q_ptr.*</signature>
         <signature>.*\(.*Private.*\).*</signature>
+        <signature>.*QExplicitlySharedDataPointer&lt;QCollatorSortKeyPrivate&gt;.*</signature>
         <signature>.*Q(ByteArray|String)::(from|to)Std(W)?String.*</signature>
         <signature>^QSharedDataPointer&lt;QCollatorSortKeyPrivate&gt; QCollatorSortKey::d$</signature>
         <signature>^static int QMetaType::registerNormalizedType(|def)\(.*</signature>
@@ -35,13 +36,10 @@
         <signature>.*QString::toStdU16String\(.*\) const$</signature>
         <signature>^static QString QString::fromStdU32String\(.*\)$</signature>
         <signature>.*QString::toStdU32String\(.*\) const$</signature>
-        <signature>^void QTimer::setInterval\(std::chrono::duration.*\)$</signature>
-        <signature>^std::chrono::duration.*QTimer::intervalAsDuration\(\) const$</signature>
-        <signature>^std::chrono::duration.*QTimer::remainingTimeAsDuration\(\) const$</signature>
-        <signature>^static void QTimer::singleShot\(std::chrono::duration.*, const QObject\*, const char\*\)$</signature>
-        <signature>^void QTimer::start\(std::chrono::duration.*\)$</signature>
+        <signature>.*std::chrono::duration.*</signature>
         <signature>^void QMessageLogContext::copy\(const QMessageLogContext&amp;\)$</signature>
         <signature>.*std::chrono::.*QDeadlineTimer::remainingTimeAsDuration\(\) const$</signature>
+        <signature>.*QDataStream::operator...*qfloat16.*</signature>
 
         <!-- Smoke does not have complete rvalue reference support -->
         <signature>^QSignalBlocker\*.*QSignalBlocker::QSignalBlocker\(QSignalBlocker.*\).*</signature>
