@@ -57,6 +57,7 @@ find_package(Qt5
     Multimedia
     Network
     Qml
+    Quick
     Sql
     Test
     Widgets
@@ -116,6 +117,7 @@ macro_optional_add_bindings(Qt5Gui_FOUND "QtGui" qtgui)
 macro_optional_add_bindings(Qt5Multimedia_FOUND "QtMultimedia" qtmultimedia)
 macro_optional_add_bindings(Qt5Network_FOUND "QtNetwork" qtnetwork)
 macro_optional_add_bindings(Qt5Qml_FOUND "QtQml" qtqml)
+macro_optional_add_bindings(Qt5Quick_FOUND "QtQuick" qtquick)
 macro_optional_add_bindings(Qt5Sql_FOUND "QtSql" qtsql)
 macro_optional_add_bindings(Qt5Test_FOUND "QtTest" qttest)
 macro_optional_add_bindings(Qt5Widgets_FOUND "QtWidgets" qtwidgets)

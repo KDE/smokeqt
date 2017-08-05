@@ -1,0 +1,95 @@
+<config>
+    <moduleName>qtquick</moduleName>
+    <parentModules>
+        <module>qtcore</module>
+        <module>qtgui</module>
+        <module>qtnetwork</module>
+        <module>qtqml</module>
+    </parentModules>
+    <parts>10</parts>
+    <scalarTypes>
+        <!-- QString is a class, but represented as a scalar (#) in munged names -->
+        <typeName>QString</typeName>
+    </scalarTypes>
+    <voidpTypes>
+        <!-- both are classes, but they are represented as Smoke::t_voidp -->
+        <typeName>QStringList</typeName>
+        <typeName>QString</typeName>
+    </voidpTypes>
+    <exclude>
+        <!-- Avoid including any functions that start with "q" thar are not
+             part of Qt -->
+        <signature>.*void quick_exit\(int\).*$</signature>
+        <signature>.*void qsort(_r)?\(void\*, unsigned long, unsigned long.*</signature>
+        <signature>.*(int|char\*) q(e|f|g)cvt(_r)?\(.*</signature>
+
+        <!-- we don't want private stuff in smoke.. -->
+        <signature>.*::d_ptr</signature>
+        <signature>.*::q_ptr</signature>
+        <signature>.*\(.*Private.*\).*</signature>
+
+        <signature>^bool qt_sendSpontaneousEvent\(.*\)$</signature>
+        <signature>^void qt_format_text\(.*\)$</signature>
+
+        <signature>.*QSharedPointer.*grabToImage\(.*\).*</signature>
+    </exclude>
+    <functions>
+        <!-- include functions starting with 'q' -->
+        <name>^q.*</name>
+        <name>.*::q.*</name>
+        <!-- and operators -->
+        <name>.*operator.*</name>
+    </functions>
+    <classList>
+        <!--
+        Many classes are disabled due to deficiencies in the current smokegen.
+        smokegen does not know that a class is not copyable if any of its
+        member variables are of non-copyable types.
+        -->
+        <class>QQuickAsyncImageProvider</class>
+        <class>QQuickFramebufferObject::Renderer</class>
+        <class>QQuickFramebufferObject</class>
+        <class>QQuickImageProvider</class>
+        <class>QQuickImageResponse</class>
+        <!--<class>QQuickItem::ItemChangeData</class> This is a union, not a class-->
+        <class>QQuickItem</class>
+        <class>QQuickItemGrabResult</class>
+        <class>QQuickPaintedItem</class>
+        <class>QQuickRenderControl</class>
+        <class>QQuickTextDocument</class>
+        <class>QQuickTextureFactory</class>
+        <class>QQuickView</class>
+        <class>QQuickWindow</class>
+        <class>QSGAbstractRenderer</class>
+        <!--<class>QSGBasicGeometryNode</class>-->
+        <!--<class>QSGClipNode</class>-->
+        <class>QSGDynamicTexture</class>
+        <class>QSGEngine</class>
+        <class>QSGFlatColorMaterial</class>
+        <class>QSGGeometry::Attribute</class>
+        <class>QSGGeometry::AttributeSet</class>
+        <class>QSGGeometry::ColoredPoint2D</class>
+        <class>QSGGeometry::Point2D</class>
+        <class>QSGGeometry::TexturedPoint2D</class>
+        <class>QSGGeometry</class>
+        <!--<class>QSGGeometryNode</class>-->
+        <!--<class>QSGImageNode</class>-->
+        <class>QSGMaterial</class>
+        <class>QSGMaterialShader::RenderState</class>
+        <!--<class>QSGMaterialShader</class>-->
+        <class>QSGMaterialType</class>
+        <!--<class>QSGNode</class>-->
+        <!--<class>QSGOpacityNode</class>-->
+        <class>QSGOpaqueTextureMaterial</class>
+        <!--<class>QSGRectangleNode</class>-->
+        <!--<class>QSGRenderNode</class>-->
+        <class>QSGRendererInterface</class>
+        <class>QSGSimpleMaterial</class>
+        <class>QSGSimpleMaterialShader</class>
+        <class>QSGTexture</class>
+        <class>QSGTextureMaterial</class>
+        <class>QSGTextureProvider</class>
+        <!--<class>QSGTransformNode</class>-->
+        <class>QSGVertexColorMaterial</class>
+    </classList>
+</config>
