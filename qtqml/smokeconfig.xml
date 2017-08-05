@@ -1,0 +1,63 @@
+<config>
+    <moduleName>qtqml</moduleName>
+    <parentModules>
+        <module>qtcore</module>
+        <module>qtnetwork</module>
+    </parentModules>
+    <parts>1</parts>
+    <scalarTypes>
+        <!-- QString is a class, but represented as a scalar (#) in munged names -->
+        <typeName>QString</typeName>
+    </scalarTypes>
+    <voidpTypes>
+        <!-- both are classes, but they are represented as Smoke::t_voidp -->
+        <typeName>QStringList</typeName>
+        <typeName>QString</typeName>
+    </voidpTypes>
+    <exclude>
+        <!-- Avoid including any functions that start with "q" thar are not
+             part of Qt -->
+        <signature>.*void quick_exit\(int\).*$</signature>
+        <signature>.*void qsort(_r)?\(void\*, unsigned long, unsigned long.*</signature>
+        <signature>.*(int|char\*) q(e|f|g)cvt(_r)?\(.*</signature>
+
+        <!-- we don't want private stuff in smoke.. -->
+        <signature>.*::d_ptr</signature>
+        <signature>.*::q_ptr</signature>
+        <signature>.*\(.*Private.*\).*</signature>
+
+        <signature>^bool qt_sendSpontaneousEvent\(.*\)$</signature>
+    </exclude>
+    <functions>
+        <!-- include functions starting with 'q' -->
+        <name>^q.*</name>
+        <name>.*::q.*</name>
+        <!-- and operators -->
+        <name>.*operator.*</name>
+    </functions>
+    <classList>
+        <class>QJSEngine</class>
+        <class>QJSValue</class>
+        <class>QJSValueIterator</class>
+        <class>QQmlAbstractUrlInterceptor</class>
+        <class>QQmlApplicationEngine</class>
+        <class>QQmlComponent</class>
+        <class>QQmlContext</class>
+        <class>QQmlEngine</class>
+        <class>QQmlImageProviderBase</class>
+        <class>QQmlError</class>
+        <class>QQmlExpression</class>
+        <class>QQmlExtensionPlugin</class>
+        <class>QQmlFileSelector</class>
+        <class>QQmlIncubationController</class>
+        <class>QQmlIncubator</class>
+        <class>QQmlListProperty</class>
+        <class>QQmlListReference</class>
+        <class>QQmlNetworkAccessManagerFactory</class>
+        <class>QQmlParserStatus</class>
+        <class>QQmlProperty</class>
+        <class>QQmlPropertyValueSource</class>
+        <class>QQmlScriptString</class>
+        <class>QQmlPropertyMap</class>
+    </classList>
+</config>
