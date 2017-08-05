@@ -2,6 +2,7 @@
     <moduleName>qttest</moduleName>
     <parentModules>
         <module>qtcore</module>
+        <module>qtgui</module>
     </parentModules>
     <parts>1</parts>
     <scalarTypes>
@@ -14,16 +15,30 @@
         <typeName>QString</typeName>
     </voidpTypes>
     <exclude>
-        <signature>QTest::QTouchEventSequence QTest::touchEvent.*</signature>
+        <!-- Avoid including any functions that start with "q" thar are not
+             part of Qt -->
+        <signature>.*void quick_exit\(int\).*$</signature>
+        <signature>.*void qsort(_r)?\(void\*, unsigned long, unsigned long.*</signature>
+        <signature>.*(int|char\*) q(e|f|g)cvt(_r)?\(.*</signature>
+
+        <signature>.*QSharedPointer.*qExtractTestData\(.*\)</signature>
+
+        <signature>^bool qt_sendSpontaneousEvent\(.*\)$</signature>
     </exclude>
+
     <functions>
+        <!-- include functions starting with 'q' -->
+        <name>^q.*</name>
+        <name>.*::q.*</name>
+        <!-- and operators -->
+        <name>.*operator.*</name>
+
         <name>^QTest::.*</name>
     </functions>
     <classList>
         <class>QSignalSpy</class>
-        <class>QTest</class>
-        <class>QTestAccessibility</class>
-        <class>QTestAccessibilityEvent</class>
+        <class>QSpontaneKeyEvent</class>
+        <class>QTest::QTouchEventSequence</class>
         <class>QTestData</class>
         <class>QTestDelayEvent</class>
         <class>QTestEvent</class>
@@ -32,5 +47,8 @@
         <class>QTestKeyClicksEvent</class>
         <class>QTestKeyEvent</class>
         <class>QTestMouseEvent</class>
+
+        <!-- namespaces -->
+        <class>QTest</class>
     </classList>
 </config>

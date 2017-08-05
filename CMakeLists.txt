@@ -57,6 +57,7 @@ find_package(Qt5
     Multimedia
     Network
     Sql
+    Test
     Widgets
     QUIET
 )
@@ -114,6 +115,7 @@ macro_optional_add_bindings(Qt5Gui_FOUND "QtGui" qtgui)
 macro_optional_add_bindings(Qt5Multimedia_FOUND "QtMultimedia" qtmultimedia)
 macro_optional_add_bindings(Qt5Network_FOUND "QtNetwork" qtnetwork)
 macro_optional_add_bindings(Qt5Sql_FOUND "QtSql" qtsql)
+macro_optional_add_bindings(Qt5Test_FOUND "QtTest" qttest)
 macro_optional_add_bindings(Qt5Widgets_FOUND "QtWidgets" qtwidgets)
 #macro_optional_add_bindings(QT_QTDBUS_FOUND "QtDBus" qtdbus)
 #macro_optional_add_bindings(QT_QTDECLARATIVE_FOUND "QtDeclarative" qtdeclarative)
@@ -124,7 +126,6 @@ macro_optional_add_bindings(Qt5Widgets_FOUND "QtWidgets" qtwidgets)
 #macro_optional_add_bindings(QT_QTWEBKIT_FOUND "QtWebKit" qtwebkit)
 #macro_optional_add_bindings(QT_QTSCRIPT_FOUND "QtScript" qtscript)
 #macro_optional_add_bindings(QT_QTUITOOLS_FOUND "QtUiTools" qtuitools)
-#macro_optional_add_bindings(QT_QTTEST_FOUND "QtTest" qttest)
 #macro_optional_add_bindings(QT_QTHELP_FOUND "QtHelp" qthelp)
 #
 #macro_optional_add_bindings(PHONON_FOUND "Phonon" phonon)
