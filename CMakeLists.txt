@@ -55,6 +55,7 @@ find_package(Qt5
     COMPONENTS
     Gui
     Multimedia
+    MultimediaWidgets
     Network
     OpenGL
     Qml
@@ -116,6 +117,7 @@ endif(WITH_QT3_SUPPORT)
 add_subdirectory(qtcore)
 macro_optional_add_bindings(Qt5Gui_FOUND "QtGui" qtgui)
 macro_optional_add_bindings(Qt5Multimedia_FOUND "QtMultimedia" qtmultimedia)
+macro_optional_add_bindings(Qt5MultimediaWidgets_FOUND "QtMultimediaWidgets" qtmultimediawidgets)
 macro_optional_add_bindings(Qt5Network_FOUND "QtNetwork" qtnetwork)
 macro_optional_add_bindings(Qt5OpenGL_FOUND "QtOpenGL" qtopengl)
 macro_optional_add_bindings(Qt5Qml_FOUND "QtQml" qtqml)

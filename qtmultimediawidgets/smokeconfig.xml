@@ -1,0 +1,59 @@
+<config>
+    <moduleName>qtmultimediawidgets</moduleName>
+    <parentModules>
+        <module>qtcore</module>
+        <module>qtgui</module>
+        <module>qtwidgets</module>
+        <module>qtnetwork</module>
+        <module>qtmultimedia</module>
+        <module>qtopengl</module>
+    </parentModules>
+    <parts>1</parts>
+    <scalarTypes>
+        <!-- QString is a class, but represented as a scalar (#) in munged names -->
+        <typeName>QString</typeName>
+    </scalarTypes>
+    <voidpTypes>
+        <!-- both are classes, but they are represented as Smoke::t_voidp -->
+        <typeName>QStringList</typeName>
+        <typeName>QString</typeName>
+    </voidpTypes>
+    <exclude>
+        <!-- Avoid including any functions that start with "q" thar are not
+             part of Qt -->
+        <signature>.*void quick_exit\(int\).*$</signature>
+        <signature>.*void qsort(_r)?\(void\*, unsigned long, unsigned long.*</signature>
+        <signature>.*(int|char\*) q(e|f|g)cvt(_r)?\(.*</signature>
+
+        <!-- we don't want private stuff in smoke.. -->
+        <signature>.*::d_ptr</signature>
+        <signature>.*::q_ptr</signature>
+        <signature>.*\(.*Private.*\).*</signature>
+        <signature>^QGraphicsLayoutItem\* QGraphicsLayoutItem::QGraphicsLayoutItem\(const QGraphicsLayoutItem&amp;\)$</signature>
+        <signature>^QScopedPointer.*QScrollerProperties::d$</signature>
+
+        <signature>^bool qt_sendSpontaneousEvent\(.*\)$</signature>
+        <signature>^void qt_format_text\(.*\)$</signature>
+
+        <!-- these next four functions are delcaraed as friend functions, but
+             are not exposed externally -->
+        <signature>^bool qt_closestLeaf\(const QGraphicsItem\*, const QGraphicsItem\*\)$</signature>
+        <signature>^bool qt_closestItemFirst\(const QGraphicsItem\*, const QGraphicsItem\*\)$</signature>
+        <signature>^void qt_mac_emit_menuSignals\(QMenu\*, bool\)$</signature>
+        <signature>^void qt_mac_menu_emit_hovered\(QMenu\*, QAction\*\)$</signature>
+    </exclude>
+    <functions>
+        <!-- include functions starting with 'q' -->
+        <name>^q.*</name>
+        <name>.*::q.*</name>
+        <!-- and operators -->
+        <name>.*operator.*</name>
+    </functions>
+    <classList>
+        <class>QCameraViewfinder</class>
+        <class>QGraphicsVideoItem</class>
+        <class>QVideoWidget</class>
+        <class>QVideoWidgetControl</class>
+    </classList>
+</config>
+
