@@ -3,6 +3,7 @@
     <parentModules>
         <module>qtcore</module>
         <module>qtgui</module>
+        <module>qtwidgets</module>
     </parentModules>
     <parts>1</parts>
     <scalarTypes>
@@ -15,25 +16,26 @@
         <typeName>QString</typeName>
     </voidpTypes>
     <exclude>
+        <!-- Avoid including any functions that start with "q" thar are not
+             part of Qt -->
+        <signature>.*void quick_exit\(int\).*$</signature>
+        <signature>.*void qsort(_r)?\(void\*, unsigned long, unsigned long.*</signature>
+        <signature>.*(int|char\*) q(e|f|g)cvt(_r)?\(.*</signature>
+
         <!-- we don't want private stuff in smoke.. -->
         <signature>.*::d</signature>
         <signature>.*::d_ptr</signature>
         <signature>.*::q_ptr</signature>
         <signature>.*\(.*Private.*\).*</signature>
-        <!-- Thread related stuff belongs to the bindings language -->
-        <signature>.*QtConcurrent.*</signature>
-        <signature>.*QDomNode.*</signature>
-        <!-- this doesn't link, internal stuff.. -->
-        <signature>.*qFindString.*</signature>
-        <!-- windows internal helper functions -->
-        <signature>.*qFrom.*Endian_helper.*</signature>
-        <!-- OS X internal stuff -->
-        <signature>.*qt_mac_set_cursor.*</signature>
-        <!-- friend functions with no defining prototype -->
-        <signature>^int q(R|Unr)egisterGuiVariant\(\)$</signature>
+
         <signature>^bool qt_sendSpontaneousEvent\(.*\)$</signature>
         <signature>^void qt_format_text\(.*\)$</signature>
-   </exclude>
+
+        <signature>^bool qt_closestLeaf\(const QGraphicsItem\*, const QGraphicsItem\*\)$</signature>
+        <signature>^bool qt_closestItemFirst\(const QGraphicsItem\*, const QGraphicsItem\*\)$</signature>
+        <signature>^void qt_mac_emit_menuSignals\(QMenu\*, bool\)$</signature>
+        <signature>^void qt_mac_menu_emit_hovered\(QMenu\*, QAction\*\)$</signature>
+    </exclude>
     <functions>
         <!-- include functions starting with 'q' -->
         <name>^q.*</name>
@@ -58,5 +60,5 @@
 
         <!-- namespaces -->
         <class>QGL</class>
-     </classList>
+    </classList>
 </config>
