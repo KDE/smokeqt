@@ -1,2 +1,1 @@
-#include <QtCore>
 #include <QtXml>
