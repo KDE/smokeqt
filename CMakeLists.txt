@@ -62,6 +62,7 @@ find_package(Qt5
     Qml
     Quick
     Sql
+    Svg
     Test
     Widgets
     QUIET
@@ -121,9 +122,9 @@ macro_optional_add_bindings(Qt5OpenGL_FOUND "QtOpenGL" qtopengl)
 macro_optional_add_bindings(Qt5Qml_FOUND "QtQml" qtqml)
 macro_optional_add_bindings(Qt5Quick_FOUND "QtQuick" qtquick)
 macro_optional_add_bindings(Qt5Sql_FOUND "QtSql" qtsql)
+macro_optional_add_bindings(Qt5Svg_FOUND "QtSvg" qtsvg)
 macro_optional_add_bindings(Qt5Test_FOUND "QtTest" qttest)
 macro_optional_add_bindings(Qt5Widgets_FOUND "QtWidgets" qtwidgets)
-#macro_optional_add_bindings(QT_QTSVG_FOUND "QtSvg" qtsvg)
 #macro_optional_add_bindings(QT_QTXML_FOUND "QtXml" qtxml)
 #macro_optional_add_bindings(QT_QTXMLPATTERNS_FOUND "QtXmlPatterns" qtxmlpatterns)
 #macro_optional_add_bindings(QT_QTWEBKIT_FOUND "QtWebKit" qtwebkit)
