@@ -66,6 +66,7 @@ find_package(Qt5
     Test
     Widgets
     Xml
+    XmlPatterns
     QUIET
 )
 find_package(Smoke)
@@ -127,7 +128,7 @@ macro_optional_add_bindings(Qt5Svg_FOUND "QtSvg" qtsvg)
 macro_optional_add_bindings(Qt5Test_FOUND "QtTest" qttest)
 macro_optional_add_bindings(Qt5Widgets_FOUND "QtWidgets" qtwidgets)
 macro_optional_add_bindings(Qt5Xml_FOUND "QtXml" qtxml)
-#macro_optional_add_bindings(QT_QTXMLPATTERNS_FOUND "QtXmlPatterns" qtxmlpatterns)
+macro_optional_add_bindings(Qt5XmlPatterns_FOUND "QtXmlPatterns" qtxmlpatterns)
 #macro_optional_add_bindings(QT_QTWEBKIT_FOUND "QtWebKit" qtwebkit)
 #macro_optional_add_bindings(QT_QTSCRIPT_FOUND "QtScript" qtscript)
 #macro_optional_add_bindings(QT_QTUITOOLS_FOUND "QtUiTools" qtuitools)
