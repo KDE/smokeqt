@@ -53,6 +53,7 @@ endif()
 find_package(Qt5 COMPONENTS Core REQUIRED)
 find_package(Qt5
     COMPONENTS
+    DBus
     Gui
     Multimedia
     MultimediaWidgets
@@ -111,6 +112,7 @@ endif()
 set(QTDEFINES_FILE ${CMAKE_CURRENT_BINARY_DIR}/qtdefines)
 
 add_subdirectory(qtcore)
+macro_optional_add_bindings(Qt5DBus_FOUND "QtDBus" qtdbus)
 macro_optional_add_bindings(Qt5Gui_FOUND "QtGui" qtgui)
 macro_optional_add_bindings(Qt5Multimedia_FOUND "QtMultimedia" qtmultimedia)
 macro_optional_add_bindings(Qt5MultimediaWidgets_FOUND "QtMultimediaWidgets" qtmultimediawidgets)
@@ -121,7 +123,6 @@ macro_optional_add_bindings(Qt5Quick_FOUND "QtQuick" qtquick)
 macro_optional_add_bindings(Qt5Sql_FOUND "QtSql" qtsql)
 macro_optional_add_bindings(Qt5Test_FOUND "QtTest" qttest)
 macro_optional_add_bindings(Qt5Widgets_FOUND "QtWidgets" qtwidgets)
-#macro_optional_add_bindings(QT_QTDBUS_FOUND "QtDBus" qtdbus)
 #macro_optional_add_bindings(QT_QTSVG_FOUND "QtSvg" qtsvg)
 #macro_optional_add_bindings(QT_QTXML_FOUND "QtXml" qtxml)
 #macro_optional_add_bindings(QT_QTXMLPATTERNS_FOUND "QtXmlPatterns" qtxmlpatterns)
