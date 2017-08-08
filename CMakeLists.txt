@@ -55,6 +55,7 @@ find_package(Qt5
     COMPONENTS
     DBus
     Gui
+    Help
     Multimedia
     MultimediaWidgets
     Network
@@ -118,6 +119,7 @@ set(QTDEFINES_FILE ${CMAKE_CURRENT_BINARY_DIR}/qtdefines)
 add_subdirectory(qtcore)
 macro_optional_add_bindings(Qt5DBus_FOUND "QtDBus" qtdbus)
 macro_optional_add_bindings(Qt5Gui_FOUND "QtGui" qtgui)
+macro_optional_add_bindings(Qt5Help_FOUND "QtHelp" qthelp)
 macro_optional_add_bindings(Qt5Multimedia_FOUND "QtMultimedia" qtmultimedia)
 macro_optional_add_bindings(Qt5MultimediaWidgets_FOUND "QtMultimediaWidgets" qtmultimediawidgets)
 macro_optional_add_bindings(Qt5Network_FOUND "QtNetwork" qtnetwork)
@@ -133,7 +135,6 @@ macro_optional_add_bindings(Qt5Xml_FOUND "QtXml" qtxml)
 macro_optional_add_bindings(Qt5XmlPatterns_FOUND "QtXmlPatterns" qtxmlpatterns)
 #macro_optional_add_bindings(QT_QTWEBKIT_FOUND "QtWebKit" qtwebkit)
 #macro_optional_add_bindings(QT_QTUITOOLS_FOUND "QtUiTools" qtuitools)
-#macro_optional_add_bindings(QT_QTHELP_FOUND "QtHelp" qthelp)
 #
 #macro_optional_add_bindings(PHONON_FOUND "Phonon" phonon)
 #
