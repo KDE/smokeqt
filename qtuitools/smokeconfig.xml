@@ -3,6 +3,7 @@
     <parentModules>
         <module>qtcore</module>
         <module>qtgui</module>
+        <module>qtwidgets</module>
     </parentModules>
     <parts>1</parts>
     <scalarTypes>
