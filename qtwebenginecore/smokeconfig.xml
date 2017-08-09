@@ -1,0 +1,27 @@
+<config>
+    <moduleName>qtwebenginecore</moduleName>
+    <parentModules>
+        <module>qtcore</module>
+        <module>qtgui</module>
+        <module>qtquick</module>
+        <module>qtnetwork</module>
+    </parentModules>
+    <parts>1</parts>
+    <scalarTypes>
+        <!-- QString is a class, but represented as a scalar (#) in munged names -->
+        <typeName>QString</typeName>
+    </scalarTypes>
+    <voidpTypes>
+        <!-- both are classes, but they are represented as Smoke::t_voidp -->
+        <typeName>QStringList</typeName>
+        <typeName>QString</typeName>
+    </voidpTypes>
+    <classList>
+        <class>QWebEngineCookieStore</class>
+        <class>QWebEngineHttpRequest</class>
+        <class>QWebEngineUrlRequestInfo</class>
+        <class>QWebEngineUrlRequestInterceptor</class>
+        <class>QWebEngineUrlRequestJob</class>
+        <class>QWebEngineUrlSchemeHandler</class>
+    </classList>
+</config>
