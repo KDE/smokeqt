@@ -1,0 +1,37 @@
+<config>
+    <moduleName>qtwebenginewidgets</moduleName>
+    <parentModules>
+        <module>qtcore</module>
+        <module>qtgui</module>
+        <module>qtquick</module>
+        <module>qtnetwork</module>
+        <module>qtwebenginecore</module>
+    </parentModules>
+    <parts>1</parts>
+    <scalarTypes>
+        <!-- QString is a class, but represented as a scalar (#) in munged names -->
+        <typeName>QString</typeName>
+    </scalarTypes>
+    <voidpTypes>
+        <!-- both are classes, but they are represented as Smoke::t_voidp -->
+        <typeName>QStringList</typeName>
+        <typeName>QString</typeName>
+    </voidpTypes>
+    <exclude>
+        <signature>.*QWebEngineCallback.*</signature>
+    </exclude>
+    <classList>
+        <class>QWebEngineCertificateError</class>
+        <class>QWebEngineContextMenuData</class>
+        <class>QWebEngineDownloadItem</class>
+        <class>QWebEngineFullScreenRequest</class>
+        <class>QWebEngineHistory</class>
+        <class>QWebEngineHistoryItem</class>
+        <class>QWebEnginePage</class>
+        <class>QWebEngineProfile</class>
+        <class>QWebEngineScript</class>
+        <class>QWebEngineScriptCollection</class>
+        <class>QWebEngineSettings</class>
+        <class>QWebEngineView</class>
+    </classList>
+</config>

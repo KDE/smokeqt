@@ -68,6 +68,7 @@ find_package(Qt5
     Test
     UiTools
     WebEngineCore
+    WebEngineWidgets
     Widgets
     Xml
     XmlPatterns
@@ -134,6 +135,7 @@ macro_optional_add_bindings(Qt5Svg_FOUND "QtSvg" qtsvg)
 macro_optional_add_bindings(Qt5Test_FOUND "QtTest" qttest)
 macro_optional_add_bindings(Qt5UiTools_FOUND "QtUiTools" qtuitools)
 macro_optional_add_bindings(Qt5WebEngineCore_FOUND "QtWebEngineCore" qtwebenginecore)
+macro_optional_add_bindings(Qt5WebEngineWidgets_FOUND "QtWebEngineWidgets" qtwebenginewidgets)
 macro_optional_add_bindings(Qt5Widgets_FOUND "QtWidgets" qtwidgets)
 macro_optional_add_bindings(Qt5Xml_FOUND "QtXml" qtxml)
 macro_optional_add_bindings(Qt5XmlPatterns_FOUND "QtXmlPatterns" qtxmlpatterns)
