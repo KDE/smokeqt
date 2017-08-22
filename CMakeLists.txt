@@ -64,6 +64,7 @@ find_package(Qt5
     PrintSupport
     Qml
     Quick
+    QuickWidgets
     Script
     Sql
     Svg
@@ -134,6 +135,7 @@ macro_optional_add_bindings(Qt5Positioning_FOUND "QtPositioning" qtpositioning)
 macro_optional_add_bindings(Qt5PrintSupport_FOUND "QtPrintSupport" qtprintsupport)
 macro_optional_add_bindings(Qt5Qml_FOUND "QtQml" qtqml)
 macro_optional_add_bindings(Qt5Quick_FOUND "QtQuick" qtquick)
+macro_optional_add_bindings(Qt5QuickWidgets_FOUND "QtQuickWidgets" qtquickwidgets)
 macro_optional_add_bindings(Qt5Script_FOUND "QtScript" qtscript)
 macro_optional_add_bindings(Qt5Sql_FOUND "QtSql" qtsql)
 macro_optional_add_bindings(Qt5Svg_FOUND "QtSvg" qtsvg)
