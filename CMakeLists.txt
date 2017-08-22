@@ -61,6 +61,7 @@ find_package(Qt5
     Network
     OpenGL
     Positioning
+    PrintSupport
     Qml
     Quick
     Script
@@ -130,6 +131,7 @@ macro_optional_add_bindings(Qt5MultimediaWidgets_FOUND "QtMultimediaWidgets" qtm
 macro_optional_add_bindings(Qt5Network_FOUND "QtNetwork" qtnetwork)
 macro_optional_add_bindings(Qt5OpenGL_FOUND "QtOpenGL" qtopengl)
 macro_optional_add_bindings(Qt5Positioning_FOUND "QtPositioning" qtpositioning)
+macro_optional_add_bindings(Qt5PrintSupport_FOUND "QtPrintSupport" qtprintsupport)
 macro_optional_add_bindings(Qt5Qml_FOUND "QtQml" qtqml)
 macro_optional_add_bindings(Qt5Quick_FOUND "QtQuick" qtquick)
 macro_optional_add_bindings(Qt5Script_FOUND "QtScript" qtscript)

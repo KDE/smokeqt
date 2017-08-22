@@ -1,0 +1,28 @@
+<config>
+    <moduleName>qtprintsupport</moduleName>
+    <parentModules>
+        <module>qtcore</module>
+        <module>qtgui</module>
+        <module>qtwidgets</module>
+    </parentModules>
+    <parts>1</parts>
+    <scalarTypes>
+        <!-- QString is a class, but represented as a scalar (#) in munged names -->
+        <typeName>QString</typeName>
+    </scalarTypes>
+    <voidpTypes>
+        <!-- both are classes, but they are represented as Smoke::t_voidp -->
+        <typeName>QStringList</typeName>
+        <typeName>QString</typeName>
+    </voidpTypes>
+    <classList>
+        <class>QAbstractPrintDialog</class>
+        <class>QPageSetupDialog</class>
+        <class>QPrintDialog</class>
+        <class>QPrintPreviewDialog</class>
+        <class>QPrintEngine</class>
+        <class>QPrinter</class>
+        <class>QPrinterInfo</class>
+        <class>QPrintPreviewWidget</class>
+    </classList>
+</config>
