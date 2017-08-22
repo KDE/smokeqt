@@ -1,0 +1,36 @@
+<config>
+    <moduleName>qtpositioning</moduleName>
+    <parentModules>
+        <module>qtcore</module>
+    </parentModules>
+    <parts>1</parts>
+    <scalarTypes>
+        <!-- QString is a class, but represented as a scalar (#) in munged names -->
+        <typeName>QString</typeName>
+    </scalarTypes>
+    <voidpTypes>
+        <!-- both are classes, but they are represented as Smoke::t_voidp -->
+        <typeName>QStringList</typeName>
+        <typeName>QString</typeName>
+    </voidpTypes>
+    <exclude>
+        <signature>.*QGeoShapePrivate.*</signature>
+    </exclude>
+    <classList>
+        <class>QGeoAddress</class>
+        <class>QGeoAreaMonitorInfo</class>
+        <class>QGeoAreaMonitorSource</class>
+        <class>QGeoCircle</class>
+        <class>QGeoCoordinate</class>
+        <class>QGeoLocation</class>
+        <class>QGeoPath</class>
+        <class>QGeoPositionInfo</class>
+        <class>QGeoPositionInfoSource</class>
+        <class>QGeoPositionInfoSourceFactory</class>
+        <class>QGeoRectangle</class>
+        <class>QGeoSatelliteInfo</class>
+        <class>QGeoSatelliteInfoSource</class>
+        <class>QGeoShape</class>
+        <class>QNmeaPositionInfoSource</class>
+    </classList>
+</config>

@@ -60,6 +60,7 @@ find_package(Qt5
     MultimediaWidgets
     Network
     OpenGL
+    Positioning
     Qml
     Quick
     Script
@@ -127,6 +128,7 @@ macro_optional_add_bindings(Qt5Multimedia_FOUND "QtMultimedia" qtmultimedia)
 macro_optional_add_bindings(Qt5MultimediaWidgets_FOUND "QtMultimediaWidgets" qtmultimediawidgets)
 macro_optional_add_bindings(Qt5Network_FOUND "QtNetwork" qtnetwork)
 macro_optional_add_bindings(Qt5OpenGL_FOUND "QtOpenGL" qtopengl)
+macro_optional_add_bindings(Qt5Positioning_FOUND "QtPositioning" qtpositioning)
 macro_optional_add_bindings(Qt5Qml_FOUND "QtQml" qtqml)
 macro_optional_add_bindings(Qt5Quick_FOUND "QtQuick" qtquick)
 macro_optional_add_bindings(Qt5Script_FOUND "QtScript" qtscript)
