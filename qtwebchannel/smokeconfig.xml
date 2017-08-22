@@ -1,0 +1,21 @@
+<config>
+    <moduleName>qtwebchannel</moduleName>
+    <parentModules>
+        <module>qtcore</module>
+        <module>qtqml</module>
+    </parentModules>
+    <parts>1</parts>
+    <scalarTypes>
+        <!-- QString is a class, but represented as a scalar (#) in munged names -->
+        <typeName>QString</typeName>
+    </scalarTypes>
+    <voidpTypes>
+        <!-- both are classes, but they are represented as Smoke::t_voidp -->
+        <typeName>QStringList</typeName>
+        <typeName>QString</typeName>
+    </voidpTypes>
+    <classList>
+        <class>QWebChannel</class>
+        <class>QWebChannelAbstractTransport</class>
+    </classList>
+</config>

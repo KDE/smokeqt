@@ -68,6 +68,7 @@ find_package(Qt5
     Svg
     Test
     UiTools
+    WebChannel
     WebEngineCore
     WebEngineWidgets
     Widgets
@@ -136,6 +137,7 @@ macro_optional_add_bindings(Qt5Sql_FOUND "QtSql" qtsql)
 macro_optional_add_bindings(Qt5Svg_FOUND "QtSvg" qtsvg)
 macro_optional_add_bindings(Qt5Test_FOUND "QtTest" qttest)
 macro_optional_add_bindings(Qt5UiTools_FOUND "QtUiTools" qtuitools)
+macro_optional_add_bindings(Qt5WebChannel_FOUND "QtWebChannel" qtwebchannel)
 macro_optional_add_bindings(Qt5WebEngineCore_FOUND "QtWebEngineCore" qtwebenginecore)
 macro_optional_add_bindings(Qt5WebEngineWidgets_FOUND "QtWebEngineWidgets" qtwebenginewidgets)
 macro_optional_add_bindings(Qt5Widgets_FOUND "QtWidgets" qtwidgets)
