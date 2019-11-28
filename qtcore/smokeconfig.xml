@@ -44,6 +44,9 @@
         <!-- Smoke does not have complete rvalue reference support -->
         <signature>^QSignalBlocker\*.*QSignalBlocker::QSignalBlocker\(QSignalBlocker.*\).*</signature>
         <signature>^QSignalBlocker.*&amp;.*QSignalBlocker::operator=\(QSignalBlocker.*&amp;.*\).*</signature>
+	<!-- PTZ191127 enum class not properly integrated ?!  is -qt enables Qt-mode (special treatment of QFlags) needed ? -->
+	<signature>QAbstractItemModel::(NoOption|IndexIsValid|DoNotUseParent|ParentIsInvalid)</signature>
+
     </exclude>
     <functions>
         <!-- include functions starting with 'q' -->
@@ -57,6 +60,7 @@
         <class>QAbstractEventDispatcher</class>
         <class>QAbstractEventDispatcher::TimerInfo</class>
         <class>QAbstractItemModel</class>
+        <class>QAbstractItemModel::CheckIndexOption</class>
         <class>QAbstractListModel</class>
         <class>QAbstractNativeEventFilter</class>
         <class>QAbstractProxyModel</class>
