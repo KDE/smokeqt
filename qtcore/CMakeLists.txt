@@ -1,6 +1,11 @@
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
-
+list(PREPEND Qt5Core_INCLUDE_DIRS
+  /usr/local/include
+  /usr/include
+  ${CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES}
+  ${CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES}
+  )
 create_configure_files("${Qt5Core_INCLUDE_DIRS}")
 get_smokegen_args(smokegenArgs qtcore)
 run_smokegen(20 "${smokegenArgs}")
